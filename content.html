@@ -52,6 +52,7 @@
     <script src="js/lib.js"></script>
     <script src="js/mobilelib.js"></script>
     <script src="js/stories.js"></script>
+    <script src="js/customlib.js"></script>
     <script src="components/scorm/SCORM_12_APIWrapper.js"> </script>
     <script src="components/scorm/scorm_api.js"> </script>
 
@@ -81,14 +82,19 @@
     </style>
 
 </head>
-<body class="loading" data-debug="true" data-model="scorm" data-display-mode="onlypages" data-approve-limit="70" data-activities-percentaje="60" data-mobile-mode="512">
+<body class="loading" data-debug="true" data-model="scorm" data-display-mode="slides" data-approve-limit="70" data-activities-percentaje="60" data-mobile-mode="512">
     <div id="body" class="not_print">
         <div id="not_scorm_msg" style="display: none;"></div>
-
-        <header>
+        <header class="header">
+            <div class="client-logo">
+                <img src="./img/logo_epm.png" alt="Logo EPM">
+            </div>
+            <div class="banner">
+                <h1>Sistemas de información asociados a la prestación del <br><span>servicio de acueducto y alcantarillado</span></h1>
+            </div>
             <!-- <h1>Ejemplos de controles a soportar en el documento</h1>
             <h2>Plantilla de producción de contenidos interactivos</h2> -->
-            <nav label="Principal" class="horizontal main" data-offset="true">
+            <!-- <nav label="Principal" class="horizontal main" data-offset="true">
                 <menu>
                     <menuitem label="Contextualización" data-page="pag-inicio"></menuitem>
                     <menuitem label="Esquema" data-page="pag-esquema"></menuitem>
@@ -103,22 +109,24 @@
                     </menuitem>
                     <menuitem label="Maquetación" data-page="pag-maquetacion"></menuitem>
                 </menu>
-            </nav>
+            </nav> -->
             <nav label="Características globales" class="globals">
                 <menu>
-                    <menuitem data-page="pag-biblio"><div class="biblio"><span>Bibliografía</span></div></menuitem>
-                    <menuitem data-page="pag-creditos"><div class="credits"><span>Créditos</span></div></menuitem>
-                    <menuitem data-global-id="results"><div class="progress"><span>Progreso</span></div></menuitem>
-                    <menuitem data-global-id="return"><div class="return"><span>Maximizar</span></div></menuitem>
-                    <menuitem data-global-id="close_all"><div class="home"><span>Regresar</span></div></menuitem>
+                    <menuitem data-page="pag-help"><div class="help"></div></menuitem>
+                    <menuitem data-global-id="menu"><div class="credits"></div></menuitem>
+                    <menuitem data-global-id="results"><div class="progress"></div></menuitem>
+                    <menuitem data-global-id="return"><div class="return"></div></menuitem>
+                    <menuitem data-global-id="close_all"><div class="home"></div></menuitem>
+                    <menuitem data-global-id="play-pause" id="play-pause-button"><div class="play"></div></menuitem>
                 </menu>
             </nav>
             
-            <h2 class="page-title"></h2>
+           
         </header>
 
         <main style="display: none;">
-
+            <h2 class="page-title"></h2>
+            <button  aria-label="Play or Pause Reading" data-global-id="play-pause-voice" id="play-pause-voice-button"><div class="play"><span>Play</span></div></button>
             <section id="pag-inicio" ptitle="Contextualización">
 
                 <div class="subpage">
@@ -4036,11 +4044,9 @@
             </section>
 
             <!--Bibliografía-->
-            <section id="pag-biblio" ptitle="Bibliografía">
-                <div class="subpage" id="biblio_subpage">
-                    <ul class="data_list">
-                        <li></li>
-                    </ul>
+            <section id="pag-help" ptitle="Ayuda">
+                <div class="subpage" id="help_subpage">
+                    
                 </div>
             </section>
 
@@ -4116,9 +4122,12 @@
                     </p>
                 </div>
             </section>
-
         </main>
-
+        <div id="subpages_menu">
+            <div class="button" previous-page></div>
+            <ul class="button" subpages-menu></ul>
+            <div class="button" next-page></div>
+        </div>
         <footer class="not_print">
             <div class="measuring-progress" data-type="horizontal"></div>
 
@@ -4133,13 +4142,7 @@
                 </menu>
             </nav> -->
 
-            <div id="subpages_menu">
-                <div class="button" previous-page></div>
-                <ul class="button" subpages-menu></ul>
-                <div class="button" next-page></div>
-            </div>
-
-            <div id="page_number"></div>
+            <!-- <div id="page_number"></div> -->
         </footer>
 
     </div>
@@ -4152,6 +4155,25 @@
         <br class="clear" />
         <h3>Actividades de aprendizaje</h3>
         <div id="results_page_activities"></div>
+    </div>
+
+    <div id="menu_page" style="display:none;">
+        <nav label="Principal" class="menu" data-offset="true">
+                <menu>
+                    <menuitem label="Contextualización" data-page="pag-inicio"></menuitem>
+                    <menuitem label="Esquema" data-page="pag-esquema"></menuitem>
+                    <menuitem label="Componentes">
+                        <menu>
+                            <menuitem label="1. Textos especiales" data-page="pag-textos"></menuitem>
+                            <menuitem label="2. Multimedia" data-page="pag-media"></menuitem>
+                            <menuitem label="3. Formato de contenido" data-page="pag-contenidointeractivo"></menuitem>
+                            <menuitem label="4. Actividades" data-page="pag-actividades"></menuitem>
+                            <menuitem label="5. Referencias" data-page="pag-referencias"></menuitem>
+                        </menu>
+                    </menuitem>
+                    <menuitem label="Maquetación" data-page="pag-maquetacion"></menuitem>
+                </menu>
+            </nav>
     </div>
 
     <div id="printent_content" style="display:none;">

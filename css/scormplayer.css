@@ -1,10 +1,45 @@
 @charset "utf-8";
 /* CSS Document */
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@font-face {
+    font-family: VAG Rounded;
+    font-weight: bold;
+    src: url(../content/fonts/VAGRounded-Bold.otf);
+}
+
+@font-face {
+    font-family: VAG Rounded;
+    font-weight: normal;
+    src: url(../content/fonts/VAGRoundedBT-Regular.otf);
+}
+
+@font-face {
+    font-family: Calibri;
+    font-weight: normal;
+    src: url(../content/fonts/calibri-regular.ttf);
+}
+
+@font-face {
+    font-family: Calibri;
+    font-weight: bold;
+    src: url(../content/fonts/calibri-bold.ttf);
+}
+
+@font-face {
+    font-family: Calibri;
+    font-style: italic;
+    src: url(../content/fonts/calibri-italic.ttf);
+}
+
+@font-face {
+    font-family: Calibri;
+    font-style: italic;
+    font-weight: bold;
+    src: url(../content/fonts/calibri-bold-italic.ttf);
+}
 
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Calibri', sans-serif;
     font-size: 12px;
     color: #2B2D63;
     margin: 0;
@@ -12,26 +47,35 @@ body {
     width: 100%;
     height: 100%;
     background-color: #f0f0ec;
-}
-
-body:before {
-    content: "";
-    background-color: #4e52b6;
-    top: 0;
-    width: 100%;
-    height: 10px;
-    position: fixed;
-    z-index: 1;
+    background-image: url(../img/background.png);
+    background-size: cover;
 }
 
 body:after {
     content: "";
+    display: block;
+    position: absolute;
     bottom: 0;
-    width: 100%;
-    height: 40px;
-    position: fixed;
-    background: #43479c url(../img/logo_uvirtual.png) no-repeat center bottom;
-    background-size: 100px;
+    left: 0%;
+    background-image: url(../img/left-bottom-asset.svg);
+    background-repeat: no-repeat;
+    width: 300px;
+    height: 300px;
+    z-index: -1;
+}
+
+body::before {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-image: url(../img/right-asset.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 152px;
+    height: 553px;
+    z-index: -1;
 }
 
 #body {
@@ -98,21 +142,16 @@ button.general.active, button.general:hover {
 }
 
 #content {
-    padding: 50px 100px;
+    padding: 20px 100px 45px;
     border-radius: 50px;
     background-color: #fff;
     position: relative;
-}
-
-#content:after {
-    position: absolute;
-    content: "";
-    bottom: -40px;
-    right: -10px;
-    width: 25%;
-    padding-top: 19%;
-    background: url(../img/index.png) no-repeat;
-    background-size: 100%;
+    height: 485px;
+    width: 989px;
+    box-sizing: border-box;
+    display: block;
+    margin: 0 auto;
+    overflow: hidden;
 }
 
 #play_scorm {

@@ -693,3 +693,8 @@
     height: 27.3%;
     border-radius: 50% 0;
 }
+
+.ui-widget.ui-widget-content {
+    border: 1px solid rgb(197, 197, 197);
+    border-radius: 25px;
+}

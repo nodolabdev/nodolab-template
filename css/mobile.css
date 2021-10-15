@@ -562,7 +562,7 @@ footer {
 }
 
 #page_number {
-    background-color: #00CAD9;
+    background-color: #02b802;
     width: 40px;
     height: 40px;
     text-align: center;
@@ -675,7 +675,6 @@ footer {
 .box-text.connection {
     background-color: #ffffff;
     border-top: 2px;
-    border-top-style: 
 }
 
 .box-text.connection:before {
@@ -1560,14 +1559,14 @@ sup.tooltip {
 }
 .jpit_activities_quiz_question_option_answer label:hover, .jpit_activities_quiz_question_option_answer_selected label  {
     background-color: #ffffff;
-    color: #00cad9;
+    color: #02b802;
 }
 
 .jpit_activities_quiz_question_option_answer_selected {
     border: none;
     color: #fff;
     font-weight: bold;
-    background-color: #00cad9;
+    background-color: #02b802;
     border-radius: 20px;
     display: table;
     margin: 2px 0;
@@ -2255,7 +2254,7 @@ sup.tooltip {
     border-radius: 15px;
     bottom: 25px;
     left: -15px;
-    background-color: #00CAD9;
+    background-color: #02b802;
     color: #fff;
     box-shadow: 2.1px 2.1px 0.8px 0px rgb(0 0 0 / 25%);
 }
