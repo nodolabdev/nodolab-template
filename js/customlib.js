@@ -5,7 +5,8 @@
  */
 (function (app) {
   function onAppLoaded() {
-    const mainTrack = new Audio("../content/sounds/main_track.mp3");
+    const mainTrack = new Audio("content/sounds/main_track.mp3");
+    mainTrack.load();
     /**
      * To handle when an activity has been completed.
      * @param {event} event
@@ -58,7 +59,7 @@
 
     // Register application event handlers.
     $(app).on("jpit:activity:completed", onActivityCompleted);
-    // $(window).one("click", playPauseMainTrack);
+    $(window).one("click", playPauseMainTrack);
     $('[data-global="play-pause"]').click(playPauseMainTrack);
   }
 
