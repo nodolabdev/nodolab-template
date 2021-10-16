@@ -35,6 +35,10 @@
       }
     }
 
+    function pageChanged(i, v) {
+      console.log("Hola mundo")
+    }
+
     //Menu control.
     var $menu_modal = $("#menu_page").dialog({
       moda: true,
@@ -60,7 +64,14 @@
     $(app).on("jpit:activity:completed", onActivityCompleted);
     // $(window).one("click", playPauseMainTrack);
     $('[data-global="play-pause"]').click(playPauseMainTrack);
+    $(app).on('afterPageChange', console.log("Cambié de pagina"));
+
+    $.each(app.actions.afterChangePage, function(i, v){
+      console.log("Hola mundo")
+    });
   }
+
+  
 
   $(window).on("load", onAppLoaded);
 })(dhbgApp);

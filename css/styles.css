@@ -6,6 +6,7 @@ CSS Variables
 :root {
     --primary-color: #02b802;
     --secondary-color:  #01785f;
+    --tertiary-color: #a2d40d;  
   }
 
 /* CSS Document */
@@ -176,6 +177,19 @@ p {
 img {
     border: 0;
     max-width: 100%;
+}
+
+.page-title {
+    color: #fff;
+    background-color: var(--tertiary-color);
+    border-radius: 45px;
+    width: fit-content;
+    padding: 5px 15px;
+    line-height: 21px;
+    box-shadow: 0px 7px 11px -6px rgba(0,0,0,0.75);
+    position: absolute;
+    left: 25px;
+    top: 0;
 }
 
 br.clear, div.clear {
@@ -398,8 +412,10 @@ main {
     display: block;
     margin: 0 auto;
     overflow: hidden;
-    box-shadow: 0px 0px 10px 0px rgba(#5c5c5b,0.75);
-
+    box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.52);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 
