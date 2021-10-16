@@ -1827,6 +1827,9 @@ dhbgApp.standard.load_operations = function() {
 
             // Actions in change page.
             $.each(dhbgApp.actions.afterChangePage, function(i, v){
+                const pageTitle = $('.page-title');
+                if(pageTitle.text()==='') pageTitle.hide();
+                else pageTitle.show();
                 v($new_subpage);
             });
             

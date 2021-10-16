@@ -46,6 +46,10 @@
       $(':root').css('font-size', currentSize + amount);
     }
 
+    function pageChanged(i, v) {
+      console.log("Hola mundo")
+    }
+
     //Menu control.
     var $menu_modal = $("#menu_page").dialog({
       modal: true,
@@ -76,7 +80,15 @@
       var increase = $(this).attr('data-change-font') === 'increase';
       changeFontSize(increase);
     });
+
+    $(app).on('afterPageChange', console.log("Cambié de pagina"));
+
+    $.each(app.actions.afterChangePage, function(i, v){
+      console.log("Hola mundo")
+    });
   }
+
+  
 
   $(window).on("load", onAppLoaded);
 })(dhbgApp);
