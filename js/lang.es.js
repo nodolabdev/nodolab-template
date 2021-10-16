@@ -40,7 +40,7 @@ dhbgApp.strings = {
 
     'before': 'Antes',
 
-    'click_to_open': 'Haga clic acá para abrir el documento de estudio',
+    'click_to_open': 'Iniciar',
 
     'cloze_required': 'Por favor, llene todos los espacios en blanco para continuar.',
 
