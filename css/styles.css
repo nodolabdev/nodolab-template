@@ -172,6 +172,7 @@ em {
 
 p {
     line-height: 20px;
+    font-size: 18px;
 }
 
 img {
@@ -402,7 +403,7 @@ img.animation, img.play-animation, .animation_image .label {
 /* CONTENT AREA
 /********************************************************************************/
 main {
-    padding: 20px 100px 45px;
+    padding: 60px 100px 45px;
     border-radius: 50px;
     background-color: rgba(255, 255, 255, 0.5);
     position: relative;

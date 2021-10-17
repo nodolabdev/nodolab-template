@@ -709,9 +709,7 @@
     display: flex;
 }
 
-.flex-half {
-    flex: 0 0 50%;
-}
+.flex-half {flex: 0 0 50%;}
 
 .mr-15 {
     margin-right: 15px;
@@ -740,6 +738,8 @@
     color: #5c5c5b;
 }
 
+.fw-regular {font-weight: normal;}
+.fw-bold {font-weight: bold;}
 .fs-30 {font-size: 30px;}
 .fs-24 {font-size: 24px;}
 .fs-14 {font-size: 14px;}
@@ -747,6 +747,9 @@
 .fs-18 {font-size: 18px;}
 .black {color: #000;}
 .w-80 {width: 80%;}
+.w-60 {width: 60%;}
+
+
 
 .center {
     margin: 0 auto;
@@ -808,20 +811,7 @@
 .p2-container .help-button-7 {top: 140px;right: -120px; animation: load 3s forwards 3s;}
 .p2-container .help-button-8 {top: 35px;right: 0; animation: load 3s forwards 3.5s;}
 
-#pag-mod-1 p{
-    font-size: 18px;
-    font-weight: bold;
-}
-#pag-mod-1 p{
-    font-size: 18px;
-    font-weight: bold;
-    margin-right: 20px;
-}
-/* #pag-mod-1 .img-container {
-    flex-basis: 350%;
-} */
-
-#pag-mod-1 .modal-sim {
+#pag-mod-1-2 .modal-sim {
     bottom: 50%;
     left: 50px;
     transform: translateY(50%);
@@ -831,6 +821,19 @@
     max-width: 400px;
     padding: 10px 20px;
 }
+
+.list-icon {
+    width: 60px;
+}
+
+.appear-2-0 {opacity: 0; animation: load 2s forwards;}
+.appear-2-2 {opacity: 0; animation: load 2s forwards 2s;}
+.appear-2-4 {opacity: 0; animation: load 2s forwards 4s;}
+
+ul li p {
+    margin: 0;
+}
+
 
 /* ANIMATIONS */
 

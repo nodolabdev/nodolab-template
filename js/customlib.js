@@ -59,11 +59,9 @@
       $menu_modal.dialog('open');
     })
 
-
-
     // Register application event handlers.
     $(app).on("jpit:activity:completed", onActivityCompleted);
-    $(window).one("click", playPauseMainTrack);
+    // $(window).one("click", playPauseMainTrack);
     $('[data-global="play-pause"]').click(playPauseMainTrack);
     $(app).on('afterPageChange', console.log("Cambié de pagina"));
 
