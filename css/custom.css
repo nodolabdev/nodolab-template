@@ -740,16 +740,14 @@
 
 .fw-regular {font-weight: normal;}
 .fw-bold {font-weight: bold;}
-.fs-30 {font-size: 30px;}
-.fs-24 {font-size: 24px;}
-.fs-14 {font-size: 14px;}
-.fs-16 {font-size: 16px;}
-.fs-18 {font-size: 18px;}
+.fs-30 {font-size: 1.875rem;}
+.fs-24 {font-size: 1.5rem;}
+.fs-14 {font-size: .875rem;}
+.fs-16 {font-size: 1rem;}
+.fs-18 {font-size: 1.125rem;}
 .black {color: #000;}
 .w-80 {width: 80%;}
 .w-60 {width: 60%;}
-
-
 
 .center {
     margin: 0 auto;
@@ -811,6 +809,19 @@
 .p2-container .help-button-7 {top: 140px;right: -120px; animation: load 3s forwards 3s;}
 .p2-container .help-button-8 {top: 35px;right: 0; animation: load 3s forwards 3.5s;}
 
+#pag-mod-1 p{
+    font-size: 1.125rem;
+    font-weight: bold;
+}
+#pag-mod-1 p{
+    font-size: 1.125rem;
+    font-weight: bold;
+    margin-right: 20px;
+}
+/* #pag-mod-1 .img-container {
+    flex-basis: 350%;
+} */
+
 #pag-mod-1-2 .modal-sim {
     bottom: 50%;
     left: 50px;
@@ -825,15 +836,6 @@
 .list-icon {
     width: 60px;
 }
-
-.appear-2-0 {opacity: 0; animation: load 2s forwards;}
-.appear-2-2 {opacity: 0; animation: load 2s forwards 2s;}
-.appear-2-4 {opacity: 0; animation: load 2s forwards 4s;}
-
-ul li p {
-    margin: 0;
-}
-
 
 /* ANIMATIONS */
 

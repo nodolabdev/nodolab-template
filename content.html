@@ -1,10 +1,9 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="es">
 <head>
     <meta charset="utf-8">
     <link rel="shortcut icon" href="img/icon.svg">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, user-scalable=yes">
     <title>Ejemplo de elementos para los cursos</title>
     <link href="components/jquery/css/custom/jquery-ui.min.css" rel="stylesheet" type="text/css">
     <link href="components/ionicons/css/ionicons.min.css" rel="stylesheet" type="text/css">
@@ -89,29 +88,35 @@
         <div id="not_scorm_msg" style="display: none;"></div>
         <header class="header">
             <div class="client-logo">
-                <img src="./img/logo_epm.png" alt="Logo EPM">
+                <img src="./img/logo_epm.png" alt="" role="presentation">
             </div>
             <div class="banner">
                 <h1>Sistemas de información asociados a la prestación del <br><span>servicio de acueducto y
                         alcantarillado</span></h1>
             </div>
-            <nav label="Características globales" class="globals">
+            <nav label="Características globales" class="globals" role="navigation">
                 <menu>
                     <menuitem data-page="pag-help">
-                    <div class="help"></div>
+                     <a href="#" arial-label="Ayuda" role="button" class="help"></a>
                     </menuitem>
                     <menuitem data-global-id="menu">
-                    <div class="credits"></div>
+                      <a href="#" arial-label="Menú" role="button" class="credits"></a>
                     </menuitem>
                     <menuitem data-global-id="results">
-                    <div class="progress"></div>
+                        <a href="#" arial-label="Logros" role="button" class="progress"></a>
                     </menuitem>
                     <menuitem data-global-id="return">
-                    <div class="return"></div>
+                       <a href="#" arial-label="Volver" role="button" class="return"></a>
                     </menuitem>
-                    <!-- <menuitem data-global-id="close_all"><div class="home"></div></menuitem> -->
+                    <!-- <menuitem data-global-id="close_all"><a href="#" arial-label="" role="button" class="home"></a></menuitem> -->
                     <menuitem data-global-id="play-pause" id="play-pause-button">
-                    <div class="play"></div>
+                       <a href="#" arial-label="Activar o desactivar pista musical" role="button" class="play"></a>
+                    </menuitem>
+                    <menuitem>
+                      <a data-change-font='increase' href="#" aria-label="Aumentar tamaño de letra" class="help" role="button"></a>
+                    </menuitem>
+                    <menuitem>
+                       <a data-change-font='decrease' href="#" aria-label="Disminuir tamaño de letra" class="help" role="button"></a>
                     </menuitem>
                 </menu>
             </nav>
@@ -120,11 +125,12 @@
         </header>
 
         <main style="display: none;">
-            <h2 class="page-title"></h2>
-            <button aria-label="Play or Pause Reading" data-global-id="play-pause-voice" id="play-pause-voice-button">
+            <h2 class="page-title" tabindex="-1"></h2>
+            <button  aria-label="Reproducir audio del contenido" data-global-id="play-pause-voice" id="play-pause-voice-button">
                 <div class="play"><span>Play</span></div>
             </button>
             <section id="pag-inicio" ptitle="Recomendaciones">
+
                 <div class="subpage">
                     <h2 class="fs-30 center">Recomendaciones</h2>
                     <h2 class="fs-24 black center w-80">Te damos algunas recomendaciones que te ayudarán a desarrollar
@@ -520,9 +526,9 @@
             </section>
         </main>
         <div id="subpages_menu">
-            <div class="button" previous-page></div>
+            <button class="button" previous-page aria-label="botón anterior"></button>
             <ul class="button" subpages-menu></ul>
-            <div class="button" next-page></div>
+            <button class="button" next-page aria-label="botón siguiente"></button>
         </div>
         <footer class="not_print">
             <div class="measuring-progress" data-type="horizontal"></div>
