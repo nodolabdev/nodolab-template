@@ -38,12 +38,12 @@ dhbgApp.standard.start = function() {
         var $nav = $this.parent();
 
         var $more_class = $this.attr('type') ? $this.attr('type') : 'horizontal';
-        var $menu = $('<ul class="menu ' + $more_class + '" role="menu"></ul>');
+        var $menu = $('<ul class="menu ' + $more_class + '"></ul>');
 
         var f_builditem;
 
         var f_buildsubmenu = function($sub) {
-            var $submenu = $('<ul class="submenu" role="menu"></ul>');
+            var $submenu = $('<ul class="submenu"></ul>');
             $sub.find('> menuitem').each(function(){
                 var $item = f_builditem($(this));
                 $submenu.append($item);
@@ -58,7 +58,8 @@ dhbgApp.standard.start = function() {
             var $item = $('<li class="button"></li>');
 
             if ($li.attr('label')) {
-                $item.html($li.attr('label'));
+                var html = `<a href="#">${$li.attr('label')}</a>`;
+                $item.html(html);
             }
             else {
                 var $children = $li.children();
@@ -78,6 +79,10 @@ dhbgApp.standard.start = function() {
 
             if ($withsub) {
                 $item.addClass('withsubitems');
+                
+                var $itemLinkTag = $item.children('a');
+                $itemLinkTag && $itemLinkTag.attr('aria-haspopup', 'true');
+                $itemLinkTag && $itemLinkTag.attr('aria-expanded', 'true');
             }
 
             if ($li.attr('data-page')) {
@@ -101,6 +106,10 @@ dhbgApp.standard.start = function() {
 
         $nav.empty();
         $nav.append($menu);
+
+        $nav.find('[data-page], [data-global]').each(function () {
+            preventDefaultNavLink($(this));
+        });
     });
 
     // ==============================================================================================
@@ -198,6 +207,9 @@ dhbgApp.standard.start = function() {
 
     $('[data-page]').on('click', function () {
         var $this = $(this);
+
+        preventDefaultNavLink($(this));
+
         dhbgApp.loadPageN($this.attr('data-page'));
 
         if ($this.attr('data-section')) {
@@ -1613,6 +1625,19 @@ dhbgApp.standard.start = function() {
     }
 };
 
+//=========================================================================
+// Reusable functions used to implement accessibility
+//=========================================================================
+
+function preventDefaultNavLink($element) {
+    var $this = $element;
+    var $childLink = $this.children("a");
+    if ($childLink) {
+        $childLink.click(function (event) {
+            event.preventDefault();
+        });
+    }
+}
 
 //=========================================================================
 // Init functions
@@ -1804,6 +1829,14 @@ dhbgApp.standard.load_operations = function() {
             $.each(dhbgApp.actions.afterChangePage, function(i, v){
                 v($new_subpage);
             });
+            
+            var anyDialogOpened = $('.ui-dialog').filter(function () {
+                return $(this).css('display') == 'block'
+            }).length;
+
+            if(!anyDialogOpened) {
+                $('.page-title').focus();
+            }
         }
 
         dhbgApp.printNumberPage(npage, nsubpage);

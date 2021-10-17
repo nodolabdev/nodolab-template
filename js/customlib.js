@@ -35,9 +35,20 @@
       }
     }
 
+    function changeFontSize(increase) {
+      var maxVal = 24;
+      var minVal = 16;
+      var currentSize = parseInt($(':root').css('font-size'));
+      if ((currentSize === maxVal && increase) || (currentSize === minVal && !increase)) {
+        return;
+      }
+      var amount = increase ? 2 : -2;
+      $(':root').css('font-size', currentSize + amount);
+    }
+
     //Menu control.
     var $menu_modal = $("#menu_page").dialog({
-      moda: true,
+      modal: true,
       autoOpen: false,
       width: 500,
       height: 300,
@@ -60,6 +71,11 @@
     $(app).on("jpit:activity:completed", onActivityCompleted);
     // $(window).one("click", playPauseMainTrack);
     $('[data-global="play-pause"]').click(playPauseMainTrack);
+
+    $('[data-change-font]').on('click', function () {
+      var increase = $(this).attr('data-change-font') === 'increase';
+      changeFontSize(increase);
+    });
   }
 
   $(window).on("load", onAppLoaded);
