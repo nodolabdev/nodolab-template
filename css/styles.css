@@ -6,7 +6,8 @@ CSS Variables
 :root {
     --primary-color: #02b802;
     --secondary-color:  #01785f;
-    --tertiary-color: #a2d40d;  
+    --tertiary-color: #a2d40d;
+    font-size: 16px;
   }
 
 /* CSS Document */
@@ -889,7 +890,7 @@ footer {
 }
 
 .box-text > .title {
-    font-size: 18px;
+    font-size: 1.125rem;
     margin: 0 0 5px 0;
     font-weight: bold;
     text-align: center;
@@ -1111,7 +1112,7 @@ footer {
 
 /*.note_pointer_left, .note_pointer_right {
     background: url(../img/sprite.png) no-repeat;
-    font-size: 18px;
+    font-size: 1.125rem;
     font-weight: bold;
     border: none;
     width: 43px;
@@ -1122,7 +1123,7 @@ footer {
 }*/
 
 .note_pointer_left, .note_pointer_right {
-    font-size: 18px;
+    font-size: 1.125rem;
     font-weight: bold;
     border: none;
     min-width: 43px;
