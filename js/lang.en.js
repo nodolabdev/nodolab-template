@@ -94,6 +94,8 @@ dhbgApp.strings = {
 
     'scorm_not': 'This document is in read-only mode.  Therefore, the information you input will not be saved.  If you require to store the follow up, please, close this page and try again later.',
 
+    'select_an_option': 'Select an option',
+
     'selected_required': 'You need to select a word from the list to continue',
 
     'start_activity': 'Start the activity',
