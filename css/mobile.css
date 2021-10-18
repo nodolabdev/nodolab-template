@@ -532,14 +532,6 @@ nav.globals li.active, nav.globals li.current {
     background-size: 1250%;
 }
 
-#subpages_menu div[previous-page].active {
-    filter: grayscale(1);
-}
-
-#subpages_menu div[next-page].active {
-    filter: grayscale(1);
-}
-
 #subpages_menu #select-choice {
     float: left;
     margin-top: 5px;
@@ -1649,7 +1641,7 @@ sup.tooltip {
 
 .jpit_activities_quiz_question_feedback_false:after {
     content: "";
-    background: url(../img/sprite.png) no-repeat -1280px -50px;
+    background: url(../img/course-images/semaforo.png) no-repeat;
     position: absolute;
     right: 0;
     width: 30px;
