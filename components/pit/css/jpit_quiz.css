@@ -4,6 +4,18 @@ ul.jpit_activities_quiz_question_answers {
     margin: 0;
 }
 
+.jpit_activities_quiz_question_simplechoice .jpit_activities_quiz_question_answers,
+.jpit_activities_quiz_question_multichoice .jpit_activities_quiz_question_answers {
+    display: inline-flex;
+    flex-direction: column;
+}
+
+.jpit_activities_quiz_question_option {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
 .jpit_activities_quiz_question_option_control {
     float: left;
     clear: both;
