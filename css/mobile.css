@@ -57,7 +57,7 @@ h2 {
 
 h3 {
     font-weight: normal;
-    font-size: 18px;
+    font-size: 1.125rem;
     color: #4f69cc;
 }
 
@@ -606,7 +606,7 @@ footer {
 }
 
 .box-text > .title {
-    font-size: 18px;
+    font-size: 1.125rem;
     margin: 0 0 5px 0;
     font-weight: bold;
     text-align: center;
@@ -825,7 +825,7 @@ footer {
 }
 
 .note_pointer_left, .note_pointer_right {
-    font-size: 18px;
+    font-size: 1.125rem;
     font-weight: bold;
     border: none;
     min-width: 43px;
@@ -2260,7 +2260,7 @@ sup.tooltip {
 }
 
 .measuring-progress.horizontal label {
-    font-size: 18px;
+    font-size: 1.125rem;
     font-weight: bold;
 }
 

@@ -36,9 +36,24 @@
       }
     }
 
+    function changeFontSize(increase) {
+      var maxVal = 24;
+      var minVal = 16;
+      var currentSize = parseInt($(':root').css('font-size'));
+      if ((currentSize === maxVal && increase) || (currentSize === minVal && !increase)) {
+        return;
+      }
+      var amount = increase ? 2 : -2;
+      $(':root').css('font-size', currentSize + amount);
+    }
+
+    function pageChanged(i, v) {
+      console.log("Hola mundo")
+    }
+
     //Menu control.
     var $menu_modal = $("#menu_page").dialog({
-      moda: true,
+      modal: true,
       autoOpen: false,
       width: 500,
       height: 300,
@@ -61,7 +76,20 @@
     $(app).on("jpit:activity:completed", onActivityCompleted);
     $(window).one("click", playPauseMainTrack);
     $('[data-global="play-pause"]').click(playPauseMainTrack);
+
+    $('[data-change-font]').on('click', function () {
+      var increase = $(this).attr('data-change-font') === 'increase';
+      changeFontSize(increase);
+    });
+
+    $(app).on('afterPageChange', console.log("Cambié de pagina"));
+
+    $.each(app.actions.afterChangePage, function(i, v){
+      console.log("Hola mundo")
+    });
   }
+
+  
 
   $(window).on("load", onAppLoaded);
 })(dhbgApp);

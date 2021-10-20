@@ -6,6 +6,8 @@ CSS Variables
 :root {
     --primary-color: #02b802;
     --secondary-color:  #01785f;
+    --tertiary-color: #a2d40d;
+    font-size: 16px;
   }
 
 /* CSS Document */
@@ -57,11 +59,12 @@ CSS Variables
 html {
     width: 100%;
     height: 100%;
+    font-size: 16px;
 }
 
 body {
     font-family: 'Calibri', sans-serif;
-    font-size: 12px;
+    font-size: 1rem;
     color: #000;
     margin: 0;
     padding: 0;
@@ -112,21 +115,21 @@ body.dhbgapp_fullview {
 
 h1 {
     font-weight: bold;
-    font-size: 36px;
+    font-size: 2.25rem;
     color: var(--secondary-color);
     font-family: VAG Rounded;
 }
 
 h2 {
     font-weight: bold;
-    font-size: 21px;
+    font-size: 1.31rem;
     color: var(--secondary-color);
     font-family: VAG Rounded;
 }
 
 h3 {
     font-weight: normal;
-    font-size: 18px;
+    font-size: 1.125rem;
     color: var(--secondary-color);
     font-family: VAG Rounded;
 }
@@ -176,6 +179,19 @@ p {
 img {
     border: 0;
     max-width: 100%;
+}
+
+.page-title {
+    color: #fff;
+    background-color: var(--tertiary-color);
+    border-radius: 45px;
+    width: fit-content;
+    padding: 5px 15px;
+    line-height: 21px;
+    box-shadow: 0px 7px 11px -6px rgba(0,0,0,0.75);
+    position: absolute;
+    left: 25px;
+    top: 0;
 }
 
 br.clear, div.clear {
@@ -398,8 +414,10 @@ main {
     display: block;
     margin: 0 auto;
     overflow: hidden;
-    box-shadow: 0px 0px 10px 0px rgba(#5c5c5b,0.75);
-
+    box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.52);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 
@@ -441,12 +459,12 @@ main {
 .header .banner h1 {
     color: var(--secondary-color);
     text-align: center;
-    font-size: 18px;
+    font-size: 1.125rem;
 }
 
 .header .banner h1 span {
     color: var(--primary-color);
-    font-size: 28px;
+    font-size: 1.75rem;
 }
 
 /*--------------------------*/
@@ -457,7 +475,7 @@ nav.globals {
     z-index: 99;
     border-radius: 5px;
     display: inline-block;
-    flex-basis: 300px;
+    flex-basis: 360px;
     flex-grow: 0;
     flex-shrink: 0;
 }
@@ -489,8 +507,9 @@ nav.globals li.active, nav.globals li.current {
     color: #333;
 }
 
-.globals div {
+.globals li.button > * {
     margin: 0 3px;
+    display: block;
 }
 
 .globals .progress {
@@ -571,15 +590,15 @@ nav.globals li.active, nav.globals li.current {
     height: 50px;
 }
 
-.globals div {
+.globals li {
     transition: filter 0.2s ease-in-out;
 }
 
-.globals div:hover {
+.globals li:hover {
     filter: grayscale(1);
 }
 
-.globals div span {
+.globals li span {
     font-size: 9px;
     color: #2B2D63;
     position: absolute;
@@ -781,30 +800,33 @@ nav.horizontal ul.submenu > li.active, nav.horizontal ul.submenu > li.current {
     background: #fff;
 }
 
-#subpages_menu div.button {
+#subpages_menu .button {
     width: 130px;
     height: 50px;
     margin: 0 2px;
     float: left;
     transition: all 0.2s ease-in-out;
+    background-repeat: no-repeat;
+    padding: 0;
+    border: 0;
 }
 
-#subpages_menu div[previous-page] {
+#subpages_menu [previous-page] {
     background: url(../img/prev-button.png);
     background-size: cover;
     margin-right: 10px;
 }
 
-#subpages_menu div[next-page] {
+#subpages_menu [next-page] {
     background: url(../img/next-button.png);
     background-size: cover;
 }
 
-#subpages_menu div[previous-page].active {
+#subpages_menu [previous-page].active {
     filter: grayscale(1);
 }
 
-#subpages_menu div[next-page].active {
+#subpages_menu [next-page].active {
     filter: grayscale(1);
 }
 
@@ -868,7 +890,7 @@ footer {
 }
 
 .box-text > .title {
-    font-size: 18px;
+    font-size: 1.125rem;
     margin: 0 0 5px 0;
     font-weight: bold;
     text-align: center;
@@ -1090,7 +1112,7 @@ footer {
 
 /*.note_pointer_left, .note_pointer_right {
     background: url(../img/sprite.png) no-repeat;
-    font-size: 18px;
+    font-size: 1.125rem;
     font-weight: bold;
     border: none;
     width: 43px;
@@ -1101,7 +1123,7 @@ footer {
 }*/
 
 .note_pointer_left, .note_pointer_right {
-    font-size: 18px;
+    font-size: 1.125rem;
     font-weight: bold;
     border: none;
     min-width: 43px;
@@ -1886,6 +1908,10 @@ sup.tooltip {
 .jpit_activities_quiz_question_multisetchoice .jpit_activities_quiz_question_option_control {
     display: none;
 }
+.jpit_activities_quiz_question_simplechoice .jpit_activities_quiz_question_option_control,
+.jpit_activities_quiz_question_multichoice .jpit_activities_quiz_question_option_control {
+    display: inline;
+}
 
 .jpit_activities_quiz_question_option_answer label {
     background-color: var(--secondary-color);
@@ -1907,7 +1933,6 @@ sup.tooltip {
     font-weight: bold;
     background-color: var(--primary-color);
     border-radius: 20px;
-    display: table;
     margin: 2px 0;
     padding-right: 20px;
 }
