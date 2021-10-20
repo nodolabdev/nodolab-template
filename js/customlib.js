@@ -74,7 +74,7 @@
 
     // Register application event handlers.
     $(app).on("jpit:activity:completed", onActivityCompleted);
-    $(window).one("click", playPauseMainTrack);
+    // $(window).one("click", playPauseMainTrack);
     $('[data-global="play-pause"]').click(playPauseMainTrack);
 
     $('[data-change-font]').on('click', function () {

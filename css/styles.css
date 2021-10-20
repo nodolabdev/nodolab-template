@@ -1655,7 +1655,7 @@ sup.tooltip {
 /* SPECIAL CONTENT: Data tables
 /********************************************************************************/
 .datatable {
-    border: 1px solid #3E698F;
+    border: 1px solid var(--primary-color);
     border-spacing: 0;
     border-collapse: none;
     margin-bottom: 10px;
@@ -1673,8 +1673,8 @@ sup.tooltip {
 .datatable th {
     padding: 5px;
     text-align: center;
-    background-color: #5abaca;
-    border: 1px solid #3e698f;
+    background-color: var(--secondary-color);
+    border: 1px solid var(--primary-color);
     border-top-width: 0;
     color: #ffffff;
     font-weight: bold;
@@ -1684,8 +1684,8 @@ sup.tooltip {
 .datatable td {
     color: var(--secondary-color);
     padding: 5px;
-    border-right: 1px solid #3e698f;
-    border-left: 1px solid #3e698f;
+    border-right: 1px solid var(--primary-color);
+    border-left: 1px solid var(--primary-color);
     border-top-width: 0;
     empty-cells: show;
 }

@@ -180,7 +180,8 @@ button.general.active, button.general:hover {
 #content {
     padding: 20px 100px 45px;
     border-radius: 50px;
-    background-color: rgba(255, 255, 255, 0.5);
+    background: url(../img/welcome_page.png);
+    background-size: cover;
     position: relative;
     height: 485px;
     width: 989px;
@@ -189,8 +190,12 @@ button.general.active, button.general:hover {
     margin: 0 auto;
     overflow: hidden;
     box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.52);
-    display: flex;
-    align-items: center;
+}
+
+.intro-text {
+    width: 600px;
+    position: absolute;
+    right: 6%;
 }
 
 .ui-state-error, .ui-state-highlight {
