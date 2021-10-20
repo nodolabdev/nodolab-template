@@ -97,7 +97,7 @@
             </div>
             <nav label="Características globales" class="globals" role="navigation">
                 <menu>
-                    <menuitem data-page="pag-help">
+                    <menuitem data-global-id="help">
                     <a href="#" aria-label="Ayuda" role="button" class="help"></a>
                     </menuitem>
                     <menuitem data-global-id="menu">
@@ -111,7 +111,7 @@
                     </menuitem>
                     <!-- <menuitem data-global-id="close_all"><a href="#" aria-label="" role="button" class="home"></a></menuitem> -->
                     <menuitem data-global-id="play-pause" id="play-pause-button">
-                    <a href="#" aria-label="Activar o desactivar pista musical" role="button" class="play"></a>
+                    <a href="#" aria-label="Activar o desactivar pista musical" role="button" class="pause"></a>
                     </menuitem>
                     <menuitem>
                     <a data-change-font='increase' href="#" aria-label="Aumentar tamaño de letra" class="more"
@@ -2153,6 +2153,32 @@
                 <menuitem label="Actividades" data-page="pag-actividades">
             </menu>
         </nav>
+    </div>
+
+    <div id="help_page" style="display:none;">
+        <div class="subpage" id="help_subpage">
+            <audio controls class="screen-reader" aria-label='Controles para reproducir el audio de ésta página'>
+                <source src="content/sounds/Pantalla3_Indicaciones.mp3" type="audio/mp3">
+                Su navegador no soporta el componente de audio
+            </audio>    
+            <div class="p2-container">
+                <img class="img" src="./content/7.png" alt="Conoce nuestros botones">
+                <div class="help-button help-button-1">Video <img src="./content/15.png"
+                        alt="Icono de video verde"></div>
+                <div class="help-button help-button-2"><img src="./img/prev-button.png" alt="Boton de anterior">
+                </div>
+                <div class="help-button help-button-3"><img src="./content/13.png" alt="Boton de Iniciar"></div>
+                <div class="help-button help-button-4">Salir <img src="./content/12.png" alt="Botón de salir">
+                </div>
+                <div class="help-button help-button-5"><img src="./content/11.png" alt="Icono de imagen verde">
+                    Imagen</div>
+                <div class="help-button help-button-6"><img src="./content/10.png" alt="Botón de PDF"> PDF</div>
+                <div class="help-button help-button-7"><img src="./img/next-button.png"
+                        alt="Boton de siguiente"></div>
+                <div class="help-button help-button-8"><img src="./content/8.png" alt="Icono de audio verde">
+                    Audio</div>
+            </div>
+        </div>
     </div>
 
     <div id="printent_content" style="display:none;">

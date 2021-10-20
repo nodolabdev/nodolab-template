@@ -1829,6 +1829,8 @@ dhbgApp.standard.load_operations = function() {
             $.each(dhbgApp.actions.afterChangePage, function(i, v){
                 const sounds = document.getElementsByTagName('audio');
                 for(let i=0; i<sounds.length; i++) sounds[i].pause();
+                const videos = document.getElementsByTagName('video');
+                for(let i=0; i<videos.length; i++) videos[i].pause();
                 v($new_subpage);
             });
             

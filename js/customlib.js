@@ -5,7 +5,7 @@
  */
 (function (app) {
   function onAppLoaded() {
-    const mainTrack = new Audio("content/sounds/main_track.mp3");
+    const mainTrack = new Audio("content/sounds/main_track.mp4");
     mainTrack.load();
     /**
      * To handle when an activity has been completed.
@@ -65,9 +65,28 @@
       },
     });
 
+    //Menu control.
+    var $help_modal = $("#help_page").dialog({
+      modal: true,
+      autoOpen: false,
+      width: 989,
+      height: 485,
+      classes: {
+        "ui-dialog": "help_page_dialog",
+      },
+      close: function () {
+        $("body").removeClass("dhbgapp_fullview");
+      },
+    });
+
     $('[data-global="menu"]').on('click', function () {
       var $dialog = $('#menu_page');
       $menu_modal.dialog('open');
+    })
+
+    $('[data-global="help"]').on('click', function () {
+      var $dialog = $('#help_page');
+      $help_modal.dialog('open');
     })
 
     // Register application event handlers.

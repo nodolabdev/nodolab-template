@@ -947,6 +947,12 @@ ul li p {
     height: 400px;
 }
 
+#help_page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 /* ANIMATIONS */
 
 @keyframes load {
