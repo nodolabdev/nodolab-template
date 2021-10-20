@@ -216,7 +216,7 @@
     height: auto;
 }
 
-.jpit_activities_quiz_question_answers { height: 150px; overflow: auto; }
+.jpit_activities_quiz_question_answers { overflow: auto; }
 .jpit_activities_quiz_board { height: 220px; }
 
 /********************************************************************************/
@@ -865,10 +865,10 @@
 #pag-car-pins .subpage.car-bg::before {
     content: "";
     position: absolute;
-    width: 92%;
-    height: 65%;
-    top: -1%;
-    left: 15%;
+    width: 62%;
+    height: 42%;
+    top: 18%;
+    left: 27%;
     background-image: url(../img/course-images/pins.svg);
     background-repeat: no-repeat;
 }
@@ -1206,6 +1206,42 @@ section[ptitle="Contextualización"] h2 {
     top: 27%;
 }
 
+.subpage.page-columns .intro-text {
+    position: absolute;
+    top: -21%;
+    left: 6%;
+    width: 80%;
+    height: auto;
+}
+
+.subpage.active.page-columns:after{
+    position: absolute;
+    content: "";
+    top: 113px;
+    left: 4px;
+    width: 177px;
+    height: 107px;
+    background-image: url(../img/course-images/column-hover.svg);
+    background-repeat: no-repeat;
+}
+.subpage.active.page-columns#active-2:after{
+    top: 113px;
+    left: 204px;
+}
+
+.subpage.active.page-columns#active-3:after{
+    top: 113px;
+    left: 404px;
+}
+.subpage.active.page-columns#active-4:after{
+    top: 113px;
+    left: 604px;
+}
+.subpage.active.page-columns#active-5:after{
+    top: 113px;
+    left: 804px;
+}
+
 .current-column {
     background-color: white;
     position: absolute;
@@ -1222,6 +1258,10 @@ section[ptitle="Contextualización"] h2 {
     grid-template-columns: 70% 30%;
     grid-gap: 30px;
     align-items: center;
+}
+
+.politics-pesv-container img {
+    min-width: 300px;
 }
 
 .subpage.security-button-hover:before{
@@ -1270,7 +1310,19 @@ section[ptitle="Contextualización"] h2 {
     background-repeat: no-repeat;
 }
 
-.subpage.security-plan::before{
+.subpage.security-plan#security-plan-0 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-image: url(../img/course-images/buttons-sec.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.subpage.security-plan:not(#security-plan-0)::before{
     position: absolute;
     content: "";
     width: 100%;
@@ -1283,7 +1335,7 @@ section[ptitle="Contextualización"] h2 {
     background-repeat: no-repeat;
 }
 
-.subpage.security-plan::after{
+.subpage.security-plan:not(#security-plan-0)::after{
     position: absolute;
     content: "";
     width: 96px;
@@ -1455,9 +1507,110 @@ section[ptitle="Contextualización"] h2 {
 
 .jpit_activities_quiz_question_feedback{
     position: absolute;
+    left: unset;
+    right: unset;
+    bottom: -10%;
+}
+
+#help_page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.evolution-box{
+    height: 240px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-gap: 5px;
+}
+
+.evolution-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.evolution-item.icon{
+    display: grid;
+    grid-template-columns: 1fr 3.5fr;
+    grid-gap: 5px;
+    justify-content: center;
+    align-items: center;
+}
+
+.subpage#pag-who-can .screen-reader{
+    top: 55px;
+}
+
+.chequeo-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+}
+
+.chequeo-box .evolution-item.icon {
+    display: grid;
+    grid-template-columns: 6% 94%;
+    grid-gap: 5px;
+    margin-bottom: 7px;
+    justify-content: center;
+    align-items: center;
+}
+
+.subpage#drugs .politics-pesv-container{
+    grid-template-columns: 60% 40%;
+}
+
+.subpage#speed .politics-pesv-container {
+    grid-template-columns: 65% 35%;
+}
+
+.anexos-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+}
+
+.anexos-box .evolution-item.icon {
+    grid-template-columns: 5% 95%;
+    margin-bottom: 5px;
+}
+
+.jpit_activities_quiz_question_feedback {
+    position: absolute;
+    top: 50%;
+    left: calc(50% - 422px/2);
+}
+
+.box_end{
+    position: absolute;
+    bottom: -5%;
     left: 0;
     right: 0;
-    bottom: -10%;
+}
+
+.subpage.car-bg:not(#first-car):after{
+    position: absolute;
+    top: 52%;
+    left: 40%;
+    width: 400px;
+    height: 158px;
+    content: "";
+    background-image: url(../img/course-images/globe-car.svg);
+    background-repeat: no-repeat;
+}
+
+.subpage.car-bg:not(#first-car) p {
+    top: 56%;
+    left: 45%;
+    width: 300px;
+    height: 90px;
+    position: absolute;
+    z-index: 1;
 }
 
 /* ANIMATIONS */

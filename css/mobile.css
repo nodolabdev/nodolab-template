@@ -1654,9 +1654,9 @@ sup.tooltip {
     padding-top: 10px;
     text-align: center;
     position: absolute;
+    width: auto;
     bottom: 5px;
-    left: 0;
-    right: 0;
+    left: calc(50% - 130px/2);
     z-index: 1;
 }
 

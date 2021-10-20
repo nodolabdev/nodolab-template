@@ -95,7 +95,7 @@
             </div>
             <nav label="Características globales" class="globals" role="navigation">
                 <menu>
-                    <menuitem data-page="pag-help">
+                    <menuitem data-global-id="help">
                      <a href="#" aria-label="Ayuda" role="button" class="help">Ayuda</a>
                     </menuitem>
                     <menuitem data-global-id="menu">
@@ -177,7 +177,7 @@
                     <h2 class="fs-30 center" tabindex="-1">Conoce nuestros botones</h2>
                     <div class="p2-container">
                         <div class="help-button help-button-1">
-                            <img src="./img/course-images/pdf.svg" alt="Ícono de pdf verde">
+                            <img src="./img/course-images/pdf.svg" alt="Ícono de pdf">
                             <h4 class="fs-14">PDF</h4>
                             <p class="center fs-14">Cuando encuentres este icono podrás profundizar en las temáticas abordadas.</p>
                         </div>
@@ -221,7 +221,7 @@
             </section>
 
             <section id="pag-esquema">
-                <div class="subpage car-bg" >
+                <div class="subpage car-bg" id="first-car">
                     <audio controls class="screen-reader" aria-label='Controles para la reproducción del audio del contenido'>
                         <source src="content/audios/PANTALLA 4.mp3" type="audio/mp3">
                         Su navegador no soporta el componente de audio
@@ -236,6 +236,7 @@
 
             <section id="pag-car-pins" ptitle="Ruta del viaje" >
                 <div class="subpage car-bg">
+                    <p class="fs-16 bold">Esta es la ruta que deberás seguir. Haz algunas paradas para recibir información importante sobre tu viaje.</p>
                     <audio controls class="screen-reader" aria-label='Controles para la reproducción del audio del contenido'>
                         <source src="content/audios/PANTALLA 5.mp3" type="audio/mp3">
                         Su navegador no soporta el componente de audio
@@ -243,15 +244,21 @@
                 </div>
             </section>
 
-            <section ptitle="Contexto de la seguridad vial" id="pag-context">
+            <section ptitle="Comienza tu recorrido" id="pag-context">
                 <div class="subpage">
-                    <iframe class="genially" style="border: none;" src="genially/pantalla6/index.html" frameborder="0"></iframe>                   
+                    <video width="100%" height="100%" controls class="genially">
+                        <source src="./content/videos/Pantallla 6.mp4" type="video/mp4">
+                        Su navegador no soporta el componente de audio
+                    </video>                 
                 </div>
             </section>
 
             <section id="pag-adv-1">
                 <div class="subpage">
-                    <iframe class="genially" style="border: none;" src="genially/pantalla7/index.html" frameborder="0"></iframe>                   
+                    <video width="100%" height="100%" controls class="genially">
+                        <source src="./content/videos/Pantallla 7.mp4" type="video/mp4">
+                        Su navegador no soporta el componente de audio
+                    </video>                  
                 </div>
             </section>
 
@@ -277,8 +284,8 @@
                     <h2 class="page-title">Principales causas de la accidentalidad vial</h2>
                     <img src="./img/course-images/tacometro.png" alt="Imagen de un tacómetro">
                     <div class="fake-pop-up b-white br-10 green-border shadow-default ">
-                        <img src="./img/course-images/taco-1.svg" alt="Imagen de un velocímetro indicando alta velocidad">
-                        <p class="fs-24 center">1. Exceso de velocidad</p>
+                        <img src="./img/course-images/taco-1.svg" alt="Imagen de un velocímetro indicando alta velocidad" aria-hidden="true">
+                        <p class="fs-24 center" aria-hidden="true">1. Exceso de velocidad</p>
                     </div>
                 </div>
             </section>
@@ -291,8 +298,8 @@
                     </audio>
                     <img src="./img/course-images/tacometro.png" alt="Imagen de un tacómetro">
                     <div class="fake-pop-up b-white br-10 green-border shadow-default ">
-                        <img src="./img/course-images/taco-2.svg" alt="Imagen de un agente de tránsito molesto">
-                        <p class="fs-24 center">2. Desobedecer señales de tránsito.</p>
+                        <img src="./img/course-images/taco-2.svg" alt="Imagen de un agente de tránsito molesto" aria-hidden="true">
+                        <p class="fs-24 center" aria-hidden="true">2. Desobedecer señales de tránsito.</p>
                     </div>
                 </div>
             </section>
@@ -305,8 +312,8 @@
                     </audio>
                     <img src="./img/course-images/tacometro.png" alt="Imagen de un tacómetro">
                     <div class="fake-pop-up b-white br-10 green-border shadow-default ">
-                        <img src="./img/course-images/taco-3.svg" alt="Imagen de alcohól y sustancias psicoactivas">
-                        <p class="fs-24 center">3. Embriaguez (alcohólica y no alcohólica).</p>
+                        <img src="./img/course-images/taco-3.svg" alt="Imagen de alcohól y sustancias psicoactivas" aria-hidden="true">
+                        <p class="fs-24 center" aria-hidden="true">3. Embriaguez (alcohólica y no alcohólica).</p>
                     </div>
                 </div>
             </section>
@@ -319,8 +326,8 @@
                     </audio>
                     <img src="./img/course-images/tacometro.png" alt="Imagen de un tacómetro">
                     <div class="fake-pop-up b-white br-10 green-border shadow-default ">
-                        <img src="./img/course-images/taco-4.svg" alt="Imagen que indica falla mecánicas">
-                        <p class="fs-24 center">4. Posibles fallas mecánicas.</p>
+                        <img src="./img/course-images/taco-4.svg" alt="Imagen que indica falla mecánicas" aria-hidden="true">
+                        <p class="fs-24 center" aria-hidden="true">4. Posibles fallas mecánicas.</p>
                     </div>
                 </div>
             </section>
@@ -333,8 +340,8 @@
                     </audio>
                     <img src="./img/course-images/tacometro.png" alt="Imagen de un tacómetro">
                     <div class="fake-pop-up b-white br-10 green-border shadow-default ">
-                        <img src="./img/course-images/taco-5.svg" alt="Imagen mostrando malas condiciones en la vía">
-                        <p class="fs-24 center">5. Malas condiciones de la vía.</p>
+                        <img src="./img/course-images/taco-5.svg" alt="Imagen mostrando malas condiciones en la vía" aria-hidden="true">
+                        <p class="fs-24 center" aria-hidden="true">5. Malas condiciones de la vía.</p>
                     </div>
                 </div>
             </section>
@@ -347,8 +354,8 @@
                     </audio>
                     <img src="./img/course-images/tacometro.png" alt="Imagen de un tacómetro">
                     <div class="fake-pop-up b-white br-10 green-border shadow-default ">
-                        <img src="./img/course-images/taco-6.svg" alt="Imagen que muestra una señal de tránsito que prohíbe andar en cierto sentido">
-                        <p class="fs-24 center">6. Contravía.</p>
+                        <img src="./img/course-images/taco-6.svg" alt="Imagen que muestra una señal de tránsito que prohíbe andar en cierto sentido" aria-hidden="true">
+                        <p class="fs-24 center" aria-hidden="true">6. Contravía.</p>
                     </div>
                 </div>
             </section>
@@ -361,8 +368,8 @@
                     </audio>
                     <img src="./img/course-images/tacometro.png" alt="Imagen de un tacómetro">
                     <div class="fake-pop-up b-white br-10 green-border shadow-default ">
-                        <img src="./img/course-images/taco-7.svg" alt="Imagen que muestra malas condiciones climáticas">
-                        <p class="fs-24 center">7. Malas condiciones climáticas.</p>
+                        <img src="./img/course-images/taco-7.svg" alt="Imagen que muestra malas condiciones climáticas" aria-hidden="true">
+                        <p class="fs-24 center" aria-hidden="true">7. Malas condiciones climáticas.</p>
                     </div>
                 </div>
             </section>
@@ -375,8 +382,8 @@
                     </audio>
                     <img src="./img/course-images/tacometro.png" alt="Imagen de un tacómetro">
                     <div class="fake-pop-up b-white br-10 green-border shadow-default ">
-                        <img src="./img/course-images/taco-8.svg" alt="Imagen de un semáforo con luz roja encendida">
-                        <p class="fs-24 center">8. Pasar el semáforo en rojo.</p>
+                        <img src="./img/course-images/taco-8.svg" alt="Imagen de un semáforo con luz roja encendida" aria-hidden="true">
+                        <p class="fs-24 center" aria-hidden="true">8. Pasar el semáforo en rojo.</p>
                     </div>
                 </div>
             </section>
@@ -395,8 +402,11 @@
             </section>
 
             <section ptitle="Gestión de los riesgos viales en las organizaciones" id="page-context-organizations">
-                <div class="subpage">
-                    <iframe class="genially" style="border: none;" src="genially/pantalla11/index.html" frameborder="0"></iframe>                   
+                <div class="subpage"> 
+                    <video width="100%" height="100%" controls class="genially">
+                        <source src="./content/videos/Pantallla 11.mp4" type="video/mp4">
+                        Su navegador no soporta el componente de audio
+                    </video>                 
                 </div>
             </section>
 
@@ -460,8 +470,12 @@
                     </div>
                 </div>
             </section>
-
             <section ptitle="Conceptos y definiciones preliminares" id="definitions">
+                <div class="subpage security-plan" id="security-plan-0">
+                </div>
+            </section>
+
+            <section ptitle="Conceptos y definiciones preliminares">
                 <div class="subpage security-plan" id="security-plan-1">
                     <audio controls class="screen-reader" aria-label='Controles para la reproducción del audio del contenido'>
                         <source src="content/audios/PANTALLA 14_1.mp3" type="audio/mp3">
@@ -575,28 +589,52 @@
                 </div>
             </section>
 
-            <section id="pag-plan-pdf">
+            <section id="pag-plan-pdf" ptitle="Plan Estratégico de Seguridad Vial">
                 <div class="subpage pdfs-security-plan">
                     <audio controls class="screen-reader" aria-label='Controles para la reproducción del audio del contenido'>
                         <source src="content/audios/PANTALLA 15.mp3" type="audio/mp3">
                         Su navegador no soporta el componente de audio
                     </audio>
-                    <h2>Plan Estratégico de Seguridad Vial</h2>
                     <p class="fs-16">Es el instrumento de planificación que, oficialmente consignado en un documento, contiene acciones, mecanismos, estrategias y medidas que deberán adoptar las diferentes entidades, organizaciones o empresas del sector público y privado, existentes en Colombia, encaminadas a alcanzar la seguridad vial como algo inherente al ser humano y así evitar, o reducir, la accidentalidad vial de los integrantes de sus compañías u organizaciones y disminuir los efectos que puedan generar los accidentes de tránsito.</p>
-                    <h4>Evolución del marco legal</h4>
-                    <ul>
-                        <li ><a target="_blank" href="./pdfs/_Ley 1503 de 2011.pdf" class="fs-16 green"> Ley 1503 de 2011</a></li>
-                        <li ><a target="_blank" href="./pdfs/_Decreto 2851 de 2013.pdf" class="fs-16 green">Decreto 2851 de 2013</a></li>
-                        <li ><a target="_blank" href="./pdfs/_Resolucion 0001565 de 2014.pdf" class="fs-16 green">Resolución 1565 de 2014</a></li>
-                        <li class="fs-16">Decreto 1079 de 2015</li>
-                        <li class="fs-16">Resolución 1231 de 2016</li>
-                        <li class="fs-16">Decreto 1310 de 2016</li>
-                        <li class="fs-16">Circular 068 de 2017</li>
-                        <li class="fs-16">Resolución 0312 de 2019</li>
-                        <li class="fs-16">Decreto 2106 de 2019</li>
-                        <li class="fs-16">Resolución 202030400007495 de 2020</li>
-                        <li ><a target="_blank" href="./pdfs/_Ley 2050 de 2020.pdf" class="fs-16 green">Ley 2050 de 2020</a></li>
-                    </ul>
+                    <h2 class="fs-16">Evolución del marco legal</h2>
+                    <div class="evolution-box">
+                        <div class="evolution-item icon">
+                            <img src="./img/course-images/pdf.svg" alt="Ícono de pdf">
+                            <a target="_blank" href="./pdfs/_Ley 1503 de 2011.pdf" class="fs-16 green"> Ley 1503 de 2011</a>
+                        </div>
+                        <div class="evolution-item icon">
+                            <img src="./img/course-images/pdf.svg" alt="Ícono de pdf">
+                            <a target="_blank" href="./pdfs/_Decreto 2851 de 2013.pdf" class="fs-16 green">Decreto 2851 de 2013</a>
+                        </div>
+                        <div class="evolution-item icon">
+                            <img src="./img/course-images/pdf.svg" alt="Ícono de pdf">
+                            <a target="_blank" href="./pdfs/_Resolucion 0001565 de 2014.pdf" class="fs-16 green">Resolución 1565 de 2014</a>
+                        </div>
+                        <div class="evolution-item">
+                            <p class="fs-16">Decreto 1079 de 2015</p></div>
+                            <div class="evolution-item">
+                                <p class="fs-16">Resolución 1231 de 2016</p>
+                            </div>
+                            <div class="evolution-item">
+                                <p class="fs-16">Decreto 1310 de 2016</p>
+                            </div>
+                            <div class="evolution-item">
+                                <p class="fs-16">Circular 068 de 2017</p>
+                            </div>
+                            <div class="evolution-item">
+                                <p class="fs-16">Resolución 0312 de 2019</p>
+                            </div>
+                            <div class="evolution-item">
+                                <p class="fs-16">Decreto 2106 de 2019</p>
+                            </div>
+                            <div class="evolution-item">
+                                <p class="fs-16">Resolución 202030400007495 de 2020</p>
+                            </div>
+                            <div class="evolution-item icon">
+                                <img src="./img/course-images/pdf.svg" alt="Ícono de pdf">
+                                <a target="_blank" href="./pdfs/_Ley 2050 de 2020.pdf" class="fs-16 green">Ley 2050 de 2020</a>
+                            </div>
+                    </div>
                 </div>
             </section>
 
@@ -614,7 +652,10 @@
 
             <section ptitle="Diseñar e implementar el PESV" id="pag-design-pesv">
                 <div class="subpage">
-                    <iframe class="genially" style="border: none;" src="genially/pantalla17/index.html" frameborder="0"></iframe>                   
+                    <video width="100%" height="100%" controls class="genially">
+                        <source src="./content/videos/Pantallla 17.mp4" type="video/mp4">
+                        Su navegador no soporta el componente de audio
+                    </video>                   
                 </div>>
             </section>
             <section>
@@ -623,35 +664,34 @@
                         <source src="content/audios/PANTALLA 18.mp3" type="audio/mp3">
                         Su navegador no soporta el componente de audio
                     </audio>
-                    <h2>¿Quiénes están obligados a diseñar e implementar el PESV?</h2>
-                    <p class="fs-14">El artículo 12 de La ley 1503 de 2011 en su capítulo III, “Lineamientos para el sector privado en seguridad vial”, establece que:</p>
-                    <p class="fs-14"><i>“Toda entidad, organización o empresa del sector público o privado” </i></p>
+                    <p class="fs-14" aria-hidden="true">El artículo 12 de La ley 1503 de 2011 en su capítulo III, “Lineamientos para el sector privado en seguridad vial”, establece que:</p>
+                    <p class="fs-14" aria-hidden="true"><i>“Toda entidad, organización o empresa del sector público o privado” </i></p>
                     <div class="graph-box">
-                        <p>Para el cumplimiento de sus fines misionales o en desarrollo de sus actividades</p>
+                        <p aria-hidden="true">Para el cumplimiento de sus fines misionales o en desarrollo de sus actividades</p>
                     </div>
                     <div class="graph-box">
                         <ol>
-                            <li>Posea</li>
-                            <li>Fabrique</li>
-                            <li>Ensabmble</li>
-                            <li>Comercialice</li>
-                            <li>Contrate</li>
-                            <li>Administre</li>
+                            <li aria-hidden="true">Posea</li>
+                            <li aria-hidden="true">Fabrique</li>
+                            <li aria-hidden="true">Ensabmble</li>
+                            <li aria-hidden="true">Comercialice</li>
+                            <li aria-hidden="true">Contrate</li>
+                            <li aria-hidden="true">Administre</li>
                         </ol>
                     </div>
                     <div class="graph-box">
-                        <p>Vehículos automotores y no automotores (superior a 10 Unidades)</p>
+                        <p aria-hidden="true">Vehículos automotores y no automotores (superior a 10 Unidades)</p>
                     </div>
                     <div class="graph-box">
                         <ol>
-                            <li>Contrate</li>
-                            <li>Administre</li>
+                            <li aria-hidden="true">Contrate</li>
+                            <li aria-hidden="true">Administre</li>
                         </ol>
                     </div>
                     <div class="graph-box">
-                        <p>Conductores (más de 2)</p>
+                        <p aria-hidden="true">Conductores (más de 2)</p>
                     </div>
-                    <div class="graph-box"><p>Deberá diseñar e implementar el PESV </p></div>
+                    <div class="graph-box"><p aria-hidden="true">Deberá diseñar e implementar el PESV </p></div>
                 </div>
             </section>
 
@@ -787,18 +827,21 @@
             </section>
 
             <section ptitle="¿Cómo se constituyó el Comité de Seguridad Vial? " id="page-how">
-                <div class="subpage">
-                    <iframe class="genially" style="border: none;" src="genially/pantalla22/index.html" frameborder="0"></iframe>                   
+                <div class="subpage"> 
+                    <video width="100%" height="100%" controls class="genially">
+                        <source src="./content/videos/Pantallla 22.mp4" type="video/mp4">
+                        Su navegador no soporta el componente de audio
+                    </video>                 
                 </div>>
             </section>
 
-            <section ptitle="¿Quiénes integran el Comité de Seguridad Vial de EPM y cuál es su objetivo?">
-                <div class="subpage">
+            <section ptitle="¿Quiénes integran el Comité de Seguridad Vial de EPM y cuál es su objetivo?" >
+                <div class="subpage" id="pag-who-can">
                     <audio controls class="screen-reader" aria-label='Controles para la reproducción del audio del contenido'>
                         <source src="content/audios/PANTALLA 23_VP.mp3" type="audio/mp3">
                         Su navegador no soporta el componente de audio
                     </audio>
-                    <p class="justify fs-20">Está conformado por un representante de cada una de las siguientes vicepresidencias (VP):</p>
+                    <p class="justify fs-20" >Está conformado por un representante de cada una de las siguientes vicepresidencias (VP):</p>
 
                     <ul>
                         <li class="fs-20">VP Transmisión y Distribución Energía</li>
@@ -818,7 +861,37 @@
             <section ptitle="Pilares del PESV" id="page-pilars">
                 
                 <div class="subpage page-columns">
+                    
                     <div class="p-container center">
+                        <p class="fs-14">Fortalecimiento de la gestión institucional</p>
+                    </div>
+                    <div class="p-container center">
+                        <p class="fs-14">Comportamiento humano</p>
+                    </div>
+                    <div class="p-container center">
+                        <p class="fs-14">Vehículos seguros</p>
+                    </div>
+                    <div class="p-container center">
+                        <p class="fs-14">Infraestructura segura</p>
+                    </div>
+                    <div class="p-container center">
+                        <p class="fs-14">Atención a víctimas</p>
+                    </div>
+                    <audio controls class="screen-reader" aria-label='Controles para la reproducción del audio del contenido'>
+                        <source src="content/audios/PANTALLA 24_0.mp3" type="audio/mp3">
+                        Su navegador no soporta el componente de audio
+                    </audio>
+                    <div class="intro-text">
+                        <p class="fs-20">El Plan Estratégico de Seguridad Vial (PESV) esta conformado por cinco pilares o líneas de acción, definidos en la Resolución 1565 de 2014 expedida por el Ministerio de Transporte.
+                        </p>
+                        <p class="fs-20">Conoce cuáles son estos pilares y su alcance</p>
+                    </div>
+                </div>
+            </section>
+            <section ptitle="Pilares del PESV">
+                
+                <div class="subpage active page-columns" id="active-1">
+                    <div class="p-container center active">
                         <p class="fs-14">Fortalecimiento de la gestión institucional</p>
                     </div>
                     <div class="p-container center">
@@ -845,7 +918,7 @@
             </section>
 
             <section ptitle="Pilares del PESV">
-                <div class="subpage page-columns">
+                <div class="subpage active page-columns" id="active-2">
                     
                     <div class="p-container center">
                         <p class="fs-14">Fortalecimiento de la gestión institucional</p>
@@ -875,7 +948,7 @@
             </section>
 
             <section ptitle="Pilares del PESV">
-                <div class="subpage page-columns">
+                <div class="subpage active page-columns" id="active-3">
                     
                     <div class="p-container center">
                         <p class="fs-14">Fortalecimiento de la gestión institucional</p>
@@ -904,7 +977,7 @@
             </section>
 
             <section ptitle="Pilares del PESV">
-                <div class="subpage page-columns">
+                <div class="subpage active page-columns" id="active-4">
                     
                     <div class="p-container center">
                         <p class="fs-14">Fortalecimiento de la gestión institucional</p>
@@ -933,7 +1006,7 @@
             </section>
 
             <section ptitle="Pilares del PESV">
-                <div class="subpage page-columns">
+                <div class="subpage page-columns active" id="active-5">
                     
                     <div class="p-container center">
                         <p class="fs-14">Fortalecimiento de la gestión institucional</p>
@@ -961,7 +1034,7 @@
                 </div>
             </section>
 
-            <section ptitle="CHEQUEO PREOPERACIONAL – ¿QUÉ ES Y CUÁL ES SU IMPORTANCIA? ">
+            <section ptitle="Chequeo preoperacional – ¿qué es y cuál es su importancia?">
                 <div class="subpage">
                     <audio controls class="screen-reader" aria-label='Controles para la reproducción del audio del contenido'>
                         <source src="content/audios/PANTALLA 25.mp3" type="audio/mp3">
@@ -973,23 +1046,38 @@
                 </div>
             </section>
 
-            <section ptitle="CHEQUEO PREOPERACIONAL – ¿QUÉ ES Y CUÁL ES SU IMPORTANCIA? " id="pag-chequeo">
+            <section ptitle="Chequeo preoperacional – ¿qué es y cuál es su importancia?" id="pag-chequeo">
                 <div class="subpage">
                     <p class="fs-16">En los siguientes documentos encontrarás los formatos definidos desde el Comité de Seguridad Vial para el diligenciamiento del chequeo preoperacional y los respectivos instructivos para su correcto diligenciamiento.</p>
-                    <ul>
-                        <li ><a target="_blank" href="./pdfs/_Formato chequeo preoperacional de motos.pdf" class="fs-16 green">Formato chequeo preoperacional de motos.pdf</a></li>
-                        <li ><a target="_blank" href="./pdfs/_Formato chequeo preoperacional de vehículos.pdf" class="fs-16 green">Formato chequeo preoperacional de vehículos.pdf</a></li>
-                        <li ><a target="_blank" href="./pdfs/_Instructivo para el diligenciamiento del chequeo preoperacional de motocicletas.pdf" class="fs-16 green">Instructivo para el diligenciamiento del chequeo preoperacional de motocicletas.pdf</a></li>
-                        <li ><a target="_blank" href="./pdfs/_Instructivo para el diligenciamiento del chequeo preoperacional de vehiculos.pdf" class="fs-16 green">Instructivo para el diligenciamiento del chequeo preoperacional de vehiculos.pdf</a></li>
-                    </ul>
+                    <div class="chequeo-box">
+                        <div class="evolution-item icon">
+                            <img src="./img/course-images/pdf.svg" alt="Ícono de pdf">
+                            <a target="_blank" href="./pdfs/_Formato chequeo preoperacional de motos.pdf" class="fs-16 green">Formato chequeo preoperacional de motos.pdf</a>
+                        </div>
+                        <div class="evolution-item icon">
+                            <img src="./img/course-images/pdf.svg" alt="Ícono de pdf">
+                            <a target="_blank" href="./pdfs/_Formato chequeo preoperacional de vehículos.pdf" class="fs-16 green">Formato chequeo preoperacional de vehículos.pdf</a>
+                        </div>
+                        <div class="evolution-item icon">
+                            <img src="./img/course-images/pdf.svg" alt="Ícono de pdf">
+                            <a target="_blank" href="./pdfs/_Instructivo para el diligenciamiento del chequeo preoperacional de motocicletas.pdf" class="fs-16 green">Instructivo para el diligenciamiento del chequeo preoperacional de motocicletas.pdf</a>
+                        </div>
+                        <div class="evolution-item icon">
+                            <img src="./img/course-images/pdf.svg" alt="Ícono de pdf">
+                            <a target="_blank" href="./pdfs/_Instructivo para el diligenciamiento del chequeo preoperacional de vehiculos.pdf" class="fs-16 green">Instructivo para el diligenciamiento del chequeo preoperacional de vehiculos.pdf</a>
+                        </div>
+                    </div>
                     <p class="fs-16">Así mismo en la REGLA DE NEGOCIO 2021-RN-170 “Reglas de negocio del servicio de transporte terrestre, gestión parque automotor EPM, seguridad vial y otras disposiciones”, encontrarás responsabilidades adicionales que tienes como conductor o servidor autorizado para conducir vehículos de EPM.
                     </p>
                 </div>
             </section>
 
             <section ptitle="Otras políticas de regulación solicitadas en el PESV">
-                <div class="subpage">
-                    <iframe class="genially" style="border: none;" src="genially/pantalla27/index.html" frameborder="0"></iframe>                   
+                <div class="subpage">    
+                    <video width="100%" height="100%" controls class="genially">
+                        <source src="./content/videos/Pantallla 27.mp4" type="video/mp4">
+                        Su navegador no soporta el componente de audio
+                    </video>              
                 </div>>
             </section>
 
@@ -1015,7 +1103,7 @@
             </section>
 
             <section ptitle="Regulación de velocidad">
-                <div class="subpage">
+                <div class="subpage" id="speed">
                     <audio controls class="screen-reader" aria-label='Controles para la reproducción del audio del contenido'>
                         <source src="content/audios/PANTALLA 29_REGULACION.mp3" type="audio/mp3">
                         Su navegador no soporta el componente de audio
@@ -1073,7 +1161,7 @@
             </section>
 
             <section ptitle="Control de alcohol y drogas.">
-                <div class="subpage">
+                <div class="subpage" id="drugs">
                     <audio controls class="screen-reader" aria-label='Controles para la reproducción del audio del contenido'>
                         <source src="content/audios/PANTALLA 32_CONTROLALCOHOL.mp3" type="audio/mp3">
                         Su navegador no soporta el componente de audio
@@ -1084,7 +1172,7 @@
                                 Los conductores de EPM, no podrán conducir vehículos bajo los efectos del alcohol, drogas, narcóticos o medicamentos que puedan afectar la habilidad del conductor para conducir de manera segura.
                             </p>
                         </div>
-                        <img src="./img/course-images/drugs.svg" alt="Imagen que muestra un hombre drogas y sustancias psicoactivas y un hombre rehusándose a consumirlas.">
+                        <img src="./img/course-images/drugs.svg" alt="Imagen que muestra un  drogas y sustancias psicoactivas y un hombre rehusándose a consumirlas.">
                     </div>
                 </div>
             </section>
@@ -1097,10 +1185,16 @@
                     </audio>
                     <p class="fs-24 lh-30">Alineado con el modelo normativo de EPM, el equivalente a las políticas exigidas en la normatividad del Ministerio de Transporte que rige el Plan Estratégico de Seguridad Vial son las siguientes reglas de negocio.</p>
                     <h2>Anexos</h2>
-                    <ul>
-                        <li ><a target="_blank" href="./pdfs/Regla de negocio 2021-RN-170.pdf" class="fs-24 green">REGLA DE NEGOCIO 2021-RN-170</a></li>
-                        <li ><a target="_blank" href="./pdfs/Regla de negocio-2018-RN-59.pdf" class="fs-24 green">REGLA DE NEGOCIO 2018-RN-59</a></li>
-                    </ul>
+                    <div class="anexos-box">
+                        <div class="evolution-item icon">
+                            <img src="./img/course-images/pdf.svg" alt="Ícono de pdf">
+                            <a target="_blank" href="./pdfs/Regla de negocio 2021-RN-170.pdf" class="fs-24 green">Regla de negocio 2021-RN-170</a>
+                        </div>
+                        <div class="evolution-item icon">
+                            <img src="./img/course-images/pdf.svg" alt="Ícono de pdf">
+                            <a target="_blank" href="./pdfs/Regla de negocio-2018-RN-59.pdf" class="fs-24 green">Regla de negocio 2018-RN-59</a>
+                        </div>
+                    </div>
                 </div>
             </section>
 
@@ -1132,7 +1226,7 @@
             <section ptitle="Lineamiento de seguridad vial">
                 <div class="subpage security-button-hover" id="sec-button-1">
                     <audio controls class="screen-reader" aria-label='Controles para la reproducción del audio del contenido'>
-                        <source src="content/audios/PANTALLA 35.1 y 35.2.mp3" type="audio/mp3">
+                        <source src="content/audios/Pantalla 35.1 y 35.2 P1.mp3" type="audio/mp3">
                         Su navegador no soporta el componente de audio
                     </audio>
                     <p class="fs-24 lh-30">La educación y formación vial en todos sus servidores como instrumento para fomentar conductas seguras, el cumplimiento de las normas de tránsito y el respeto a los demás usuarios de la vía.</p>
@@ -1143,7 +1237,7 @@
             <section ptitle="Lineamiento de seguridad vial">
                 <div class="subpage security-button-hover" id="sec-button-2">
                     <audio controls class="screen-reader" aria-label='Controles para la reproducción del audio del contenido'>
-                        <source src="content/audios/PANTALLA 35.1 y 35.2.mp3" type="audio/mp3">
+                        <source src="content/audios/Pantalla 35.1 y 35.2 P2.mp3" type="audio/mp3">
                         Su navegador no soporta el componente de audio
                     </audio>
                     <p class="fs-24 lh-30">El cumplimiento de los planes de mantenimiento preventivo del parque automotor de la empresa, para garantizar óptimas condiciones de funcionamiento.</p>
@@ -1153,7 +1247,7 @@
             <section ptitle="Lineamiento de seguridad vial">
                 <div class="subpage security-button-hover" id="sec-button-3">
                     <audio controls class="screen-reader" aria-label='Controles para la reproducción del audio del contenido'>
-                        <source src="content/audios/PANTALLA 35.3_35.4_35.5.mp3" type="audio/mp3">
+                        <source src="content/audios/Pantalla 35.3 35.4 y 35.5 P1.mp3" type="audio/mp3">
                         Su navegador no soporta el componente de audio
                     </audio>
                     <p class="fs-24 lh-30">La disponibilidad y el buen estado de la infraestructura necesaria para la adecuada administración y conservación del parque automotor propio, y la mejora continua a partir del seguimiento de indicadores del PESV.</p>
@@ -1426,7 +1520,7 @@
                 </menuitem>
                 <menuitem label="Esquema" data-page="pag-car-pins">
                 </menuitem>
-                <menuitem label="Contexto de la seguridad vial" data-page="pag-context">
+                <menuitem label="Comienza tu recorrido" data-page="pag-context">
                 </menuitem>
                 <menuitem label="Principales causas de la accidentalidad vial" data-page="page-accidental-causes"></menuitem>
                 <menuitem label="Gestión de los riesgos viales en las organizaciones" data-page="page-context-organizations"></menuitem>
@@ -1441,6 +1535,58 @@
                 <menuitem label="Actividades" data-page="pag-actividades"></menuitem>
             </menu>
         </nav>
+    </div>
+
+    <div id="help_page" style="display:none;">
+        <div class="subpage" id="help_subpage">
+            <audio controls class="screen-reader" aria-label='Controles para la reproducción del audio del contenido'>
+                <source src="content/audios/PANTALLA 3.mp3" type="audio/mp3">
+                Su navegador no soporta el componente de audio
+            </audio>
+            <h2 class="fs-30 center" tabindex="-1">Conoce nuestros botones</h2>
+            <div class="p2-container">
+                <div class="help-button help-button-1">
+                    <img src="./img/course-images/pdf.svg" alt="Ícono de pdf verde">
+                    <h4 class="fs-14">PDF</h4>
+                    <p class="center fs-14">Cuando encuentres este icono podrás profundizar en las temáticas abordadas.</p>
+                </div>
+                <div class="help-button help-button-1">
+                    <img src="./img/course-images/menu.svg" alt="Ícono de una casa indicando el menú principal">
+                    <h4>Menú</h4>
+                    <p class="center fs-14">Para conocer las temáticas que vas a explorar haz clic aquí.</p>
+                </div>
+                <div class="help-button help-button-1">
+                    <img src="./img/course-images/ayuda.svg" alt="Ícono de ayuda">
+                    <h4>Ayuda</h4>
+                    <p class="center fs-14">Si quieres recordar el uso de los botones haz clic aquí.</p>
+                </div>
+                <div class="help-button help-button-1">
+                    <img src="./img/course-images/logro.svg" alt="Ícono de logro">
+                    <h4>Logros</h4>
+                    <p class="center fs-14">Si quieres recordar el uso de los botones haz clic aquí.</p>
+                </div>
+                <div class="help-button help-button-1">
+                    <img src="./img/course-images/sonido.svg" alt="Ícono de sonido">
+                    <h4>Audio</h4>
+                    <p class="center fs-14">Cuando encuentres este icono podrás activar la voz en off y escuchar el contenido en caso de que así lo requieras.</p>
+                </div>
+                <div class="help-button help-button-1">
+                    <img src="./img/course-images/salir.svg" alt="Ícono de salir">
+                    <h4>Salir</h4>
+                    <p class="center fs-14">Para salir del curso haz clic aquí.</p>
+                </div>
+                <div class="help-button help-button-1">
+                    <img src="./img/next-button.svg" alt="Ícono de siguiente">
+                    <h4>Siguiente</h4>
+                    <p class="center fs-14">Si quieres avanzar haz clic aquí.</p>
+                </div>
+                <div class="help-button help-button-1">
+                    <img src="./img/prev-button.svg" alt="Ícono de anterior">
+                    <h4>Anterior</h4>
+                    <p class="center fs-14">Para regresar a la pantalla anterior haz clic aquí.</p>
+                </div>
+            </div>
+        </div>
     </div>
 
     <div id="printent_content" style="display:none;">

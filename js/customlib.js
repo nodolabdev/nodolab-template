@@ -5,7 +5,8 @@
  */
 (function (app) {
   function onAppLoaded() {
-    const mainTrack = new Audio("../content/sounds/main_track.mp3");
+    const mainTrack = new Audio("content/sounds/main_track.mp3");
+    mainTrack.load();
     /**
      * To handle when an activity has been completed.
      * @param {event} event
@@ -64,12 +65,30 @@
       },
     });
 
+    //Menu control.
+    var $help_modal = $("#help_page").dialog({
+      modal: true,
+      autoOpen: false,
+      width: 989,
+      height: 485,
+      top: 20,
+      classes: {
+        "ui-dialog": "help_page_dialog",
+      },
+      close: function () {
+        $("body").removeClass("dhbgapp_fullview");
+      },
+    });
+
     $('[data-global="menu"]').on('click', function () {
       var $dialog = $('#menu_page');
       $menu_modal.dialog('open');
     })
 
-
+    $('[data-global="help"]').on('click', function () {
+      var $dialog = $('#help_page');
+      $help_modal.dialog('open');
+    })
 
     // Register application event handlers.
     $(app).on("jpit:activity:completed", onActivityCompleted);
@@ -79,12 +98,6 @@
     $('[data-change-font]').on('click', function () {
       var increase = $(this).attr('data-change-font') === 'increase';
       changeFontSize(increase);
-    });
-
-    $(app).on('afterPageChange', console.log("Cambié de pagina"));
-
-    $.each(app.actions.afterChangePage, function(i, v){
-      console.log("Hola mundo")
     });
   }
 
