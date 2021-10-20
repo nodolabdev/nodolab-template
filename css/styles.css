@@ -1914,6 +1914,10 @@ sup.tooltip {
 .jpit_activities_quiz_question_multisetchoice .jpit_activities_quiz_question_option_control {
     display: none;
 }
+.jpit_activities_quiz_question_simplechoice .jpit_activities_quiz_question_option_control,
+.jpit_activities_quiz_question_multichoice .jpit_activities_quiz_question_option_control {
+    display: inline;
+}
 
 .jpit_activities_quiz_question_option_answer label {
     background-color: var(--secondary-color);
@@ -1935,7 +1939,6 @@ sup.tooltip {
     font-weight: bold;
     background-color: var(--primary-color);
     border-radius: 20px;
-    display: table;
     margin: 2px 0;
     padding-right: 20px;
 }

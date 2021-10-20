@@ -2079,6 +2079,7 @@ dhbgApp.standard.load_operations = function() {
                 dhbgApp.actions.activityQuiz($this, options);
                 dhbgApp.actions.autoLoadSounds($this);
                 $this.data('clock') && $this.data('clock').restart();
+                $this.find('input, select').get(0).focus();
             });
             $box_end.append($button_again);
         }

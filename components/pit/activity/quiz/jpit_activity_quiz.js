@@ -491,12 +491,17 @@ jpit.activities.quiz.question.simplechoice = function (statement, possibles, cor
 
                 prefix = prefix != null && prefix != '' ? '<label>' + prefix + '</label> ' : '';
 
+                var labelId = `${this.getUniqueId()}_answer_${position}`;
+
                 option = $('<li class="'+this.getUniqueId()+'_list jpit_activities_quiz_question_option"></li>');
-                option.append($('<input type="radio" class="' + this.getUniqueId() + ' jpit_activities_quiz_question_option_control" name="' + this.getUniqueId() + '[]" value="' + position + '" />').click(function() {
+                option.append($('<input type="radio" class="' + this.getUniqueId() + ' jpit_activities_quiz_question_option_control" name="' + this.getUniqueId() + '[]" value="' + position + '" aria-labelledby="' + labelId + '" />').click(function() {
                     $('#' + this.className + '_true').hide();
                     $('#' + this.className + '_false').hide();
                 } ));
-                option.append($('<div class="jpit_activities_quiz_question_option_answer"></div>').html(prefix + this.possibleAnswers[position]));
+
+                var optionInnerHtml = `${prefix}<span id="${labelId}">${this.possibleAnswers[position]}</span>`;
+
+                option.append($('<div class="jpit_activities_quiz_question_option_answer"></div>').html(optionInnerHtml));
 
                 option.find('input').bind('change',function(){
                     var $ul = $(this).parent().parent();
@@ -538,7 +543,7 @@ jpit.activities.quiz.question.simplechoice = function (statement, possibles, cor
         },
 
         "getFeedbackControl" : function () {
-            var control = $('<div class="jpit_activities_quiz_question_feedback"></div>');
+            var control = $(`<div class="jpit_activities_quiz_question_feedback" id="${this.getUniqueId()}_feedback"></div>`);
             control.append($('<div id="' + this.getUniqueId() + '_true" class="jpit_activities_quiz_question_feedback_true" style="display: none;"></div>').html(this.feedbackIfTrue));
             control.append($('<div id="' + this.getUniqueId() + '_false" class="jpit_activities_quiz_question_feedback_false" style="display: none;"></div>').html(this.feedbackIfFalse));
             control.append($('<div id="' + this.getUniqueId() + '_all" class="jpit_activities_quiz_question_feedback_all" style="display: none;"></div>').html(this.feedbackAll));
@@ -628,10 +633,12 @@ jpit.activities.quiz.question.simplechoice = function (statement, possibles, cor
                 if (this.feedbackAll != '') {
                     $('#' + this.getUniqueId() + '_all').show();
                 }
+                $(`#${this.getUniqueId()}_feedback`).attr('tabindex', '0').focus();
             }
         },
 
-        "hideFeedback" : function () {
+        "hideFeedback": function () {
+            $(`#${this.getUniqueId()}_feedback`).removeAttr('tabindex');
             $('#' + this.getUniqueId() + '_true').hide();
             $('#' + this.getUniqueId() + '_false').hide();
         },
@@ -724,13 +731,18 @@ jpit.activities.quiz.question.multichoice = function (statement, possibles, corr
                     prefix = '<label>' + jpit.activities.quiz.prefixes.getText(this.prefixType, i + 1) + '</label> ';
                 }
 
+                var labelId = `${this.getUniqueId()}_answer_${position}`;
+
                 option = $('<li class="jpit_activities_quiz_question_option"></li>');
 
-                option.append($('<input type="checkbox" class="' + this.getUniqueId() + ' jpit_activities_quiz_question_option_control" name="' + this.getUniqueId() + '[]" value="' + position + '" />').click(function() {
+                option.append($('<input type="checkbox" class="' + this.getUniqueId() + ' jpit_activities_quiz_question_option_control" name="' + this.getUniqueId() + '[]" value="' + position + '" aria-labelledby="' + labelId + '"/>').click(function() {
                     $('#' + this.className + '_true').hide();
                     $('#' + this.className + '_false').hide();
                 } ));
-                option.append($('<div class="jpit_activities_quiz_question_option_answer"></div>').html(prefix + this.possibleAnswers[position]));
+
+                var optionInnerHtml = `${prefix}<span id="${labelId}">${this.possibleAnswers[position]}</span>`;
+
+                option.append($('<div class="jpit_activities_quiz_question_option_answer"></div>').html(optionInnerHtml));
 
                 option.find('input').bind('change',function(){
                     $(this).parent('li').removeClass("jpit_activities_quiz_question_option_answer_selected");
@@ -773,7 +785,7 @@ jpit.activities.quiz.question.multichoice = function (statement, possibles, corr
         },
 
         "getFeedbackControl" : function () {
-            var control = $('<div class="jpit_activities_quiz_question_feedback"></div>');
+            var control = $(`<div class="jpit_activities_quiz_question_feedback" id="${this.getUniqueId()}_feedback"></div>`);
             control.append($('<div id="' + this.getUniqueId() + '_true" class="jpit_activities_quiz_question_feedback_true" style="display: none;"></div>').html(this.feedbackIfTrue));
             control.append($('<div id="' + this.getUniqueId() + '_false" class="jpit_activities_quiz_question_feedback_false" style="display: none;"></div>').html(this.feedbackIfFalse));
             control.append($('<div id="' + this.getUniqueId() + '_all" class="jpit_activities_quiz_question_feedback_all" style="display: none;"></div>').html(this.feedbackAll));
@@ -868,10 +880,12 @@ jpit.activities.quiz.question.multichoice = function (statement, possibles, corr
                 if (this.feedbackAll != '') {
                     $('#' + this.getUniqueId() + '_all').show();
                 }
+                $(`#${this.getUniqueId()}_feedback`).attr('tabindex', '0').focus();
             }
         },
 
         "hideFeedback" : function () {
+            $(`#${this.getUniqueId()}_feedback`).removeAttr('tabindex');
             $('#' + this.getUniqueId() + '_true').hide();
             $('#' + this.getUniqueId() + '_false').hide();
         },
@@ -2228,9 +2242,12 @@ jpit.activities.quiz.question.complete = function (statement, $paragraph, correc
 
             obj.paragraph.find('select').each(function() {
                 var $list = $(this);
+                
+                $list.attr('aria-label', `${dhbgApp.s('select_an_option')}`);
+
                 $list.prop('disabled', false);
 
-                var $empty = $('<option class="no-chosen" selected="selected" value="1"></option>');
+                var $empty = $('<option class="no-chosen" selected="selected" value="" disabled></option>');
                 $list.prepend($empty);
                 $list.find('option').each(function () {
                     var $option = $(this);
@@ -2259,7 +2276,7 @@ jpit.activities.quiz.question.complete = function (statement, $paragraph, correc
         },
 
         "getFeedbackControl" : function () {
-            var control = $('<div class="jpit_activities_quiz_question_feedback"></div>');
+            var control = $(`<div class="jpit_activities_quiz_question_feedback" id="${this.getUniqueId()}_feedback"></div>`);
             control.append($('<div id="' + this.getUniqueId() + '_true" class="jpit_activities_quiz_question_feedback_true" style="display: none;"></div>').html(this.feedbackIfTrue));
             control.append($('<div id="' + this.getUniqueId() + '_false" class="jpit_activities_quiz_question_feedback_false" style="display: none;"></div>').html(this.feedbackIfFalse));
             return control;
@@ -2386,10 +2403,12 @@ jpit.activities.quiz.question.complete = function (statement, $paragraph, correc
                 else if (this.feedbackIfFalse != '') {
                     $('#' + this.getUniqueId() + '_false').show();
                 }
+                $(`#${this.getUniqueId()}_feedback`).attr('tabindex', '0').focus();
             }
         },
 
-        "hideFeedback" : function () {
+        "hideFeedback": function () {
+            $(`#${this.getUniqueId()}_feedback`).removeAttr('tabindex');
             $('#' + this.getUniqueId() + '_true').hide();
             $('#' + this.getUniqueId() + '_false').hide();
         },
