@@ -957,3 +957,7 @@ ul li p {
       opacity: 1;
     }
   }
+
+.screen-reader {
+    top: 2%;
+}
