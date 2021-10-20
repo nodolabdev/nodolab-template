@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="utf-8">
     <link rel="shortcut icon" href="img/icon.svg">
@@ -97,26 +98,28 @@
             <nav label="Características globales" class="globals" role="navigation">
                 <menu>
                     <menuitem data-page="pag-help">
-                     <a href="#" arial-label="Ayuda" role="button" class="help"></a>
+                    <a href="#" arial-label="Ayuda" role="button" class="help"></a>
                     </menuitem>
                     <menuitem data-global-id="menu">
-                      <a href="#" arial-label="Menú" role="button" class="credits"></a>
+                    <a href="#" arial-label="Menú" role="button" class="credits"></a>
                     </menuitem>
                     <menuitem data-global-id="results">
-                        <a href="#" arial-label="Logros" role="button" class="progress"></a>
+                    <a href="#" arial-label="Logros" role="button" class="progress"></a>
                     </menuitem>
                     <menuitem data-global-id="return">
-                       <a href="#" arial-label="Volver" role="button" class="return"></a>
+                    <a href="#" arial-label="Volver" role="button" class="return"></a>
                     </menuitem>
                     <!-- <menuitem data-global-id="close_all"><a href="#" arial-label="" role="button" class="home"></a></menuitem> -->
                     <menuitem data-global-id="play-pause" id="play-pause-button">
-                       <a href="#" arial-label="Activar o desactivar pista musical" role="button" class="play"></a>
+                    <a href="#" arial-label="Activar o desactivar pista musical" role="button" class="play"></a>
                     </menuitem>
                     <menuitem>
-                      <a data-change-font='increase' href="#" aria-label="Aumentar tamaño de letra" class="help" role="button"></a>
+                    <a data-change-font='increase' href="#" aria-label="Aumentar tamaño de letra" class="help"
+                        role="button"></a>
                     </menuitem>
                     <menuitem>
-                       <a data-change-font='decrease' href="#" aria-label="Disminuir tamaño de letra" class="help" role="button"></a>
+                    <a data-change-font='decrease' href="#" aria-label="Disminuir tamaño de letra" class="help"
+                        role="button"></a>
                     </menuitem>
                 </menu>
             </nav>
@@ -126,11 +129,15 @@
 
         <main style="display: none;">
             <h2 class="page-title" tabindex="-1"></h2>
-            <button  aria-label="Reproducir audio del contenido" data-global-id="play-pause-voice" id="play-pause-voice-button">
+            <!-- <button aria-label="Reproducir audio del contenido" data-global-id="play-pause-voice"
+                id="play-pause-voice-button">
                 <div class="play"><span>Play</span></div>
-            </button>
+            </button> -->
             <section id="pag-inicio" ptitle="Recomendaciones">
-
+                <audio controls class="screen-reader">
+                    <source src="content/sounds/Pantalla2_recomendaciones.mp3" type="audio/mp3">
+                    Su navegador no soporta el componente de audio
+                </audio>    
                 <div class="subpage">
                     <h2 class="fs-30 center">Recomendaciones</h2>
                     <h2 class="fs-24 black center w-80">Te damos algunas recomendaciones que te ayudarán a desarrollar
@@ -150,6 +157,10 @@
             <!--Pagina de Ayuda-->
             <section id="pag-help">
                 <div class="subpage" id="help_subpage">
+                    <audio controls class="screen-reader">
+                        <source src="content/sounds/Pantalla3_Indicaciones.mp3" type="audio/mp3">
+                        Su navegador no soporta el componente de audio
+                    </audio>    
                     <div class="p2-container">
                         <img class="img" src="./content/7.png" alt="Conoce nuestros botones">
                         <div class="help-button help-button-1">Video <img src="./content/15.png"
@@ -173,15 +184,27 @@
             <!--Modulo 1-->
             <section id="pag-mod-1-1" ptitle="Módulo 1 - Sistema Hidro">
                 <div class="subpage" id="pag-mod-1-1">
-                    <h2>Módulo 1 - Sistema Hidro</h2>
-                    <!-- ESPACIO PARA COMIC -->
+                    <!-- <h2>Módulo 1 - Sistema Hidro</h2> -->
+                    <audio controls class="screen-reader">
+                        <source src="content/sounds/Pantalla4_Contextualizacion.mp3" type="audio/mp3">
+                        Su navegador no soporta el componente de audio
+                    </audio>   
+                    <iframe class="genially center" style="border: none;" src="content/genially/p4/index.html"></iframe>
                 </div>
                 <div class="subpage" id="pag-mod-1-2">
-                    <!-- ESPACIO PARA COMIC -->
+                    <audio controls class="screen-reader" aria-label='Controles para la reproducción del audio del contenido'>
+                        <source src="content/sounds/Pantalla5.mp3" type="audio/mp3">
+                        Su navegador no soporta el componente de audio
+                    </audio>   
+                    <iframe class="genially center" style="border: none;" src="content/genially/p5/index.html"></iframe>
                 </div>
             </section>
             <section id="pag-mod-1-2" ptitle="Módulo 1 - Sistema Hidro">
                 <div class="subpage" id="pag-mod-1-3">
+                    <audio controls class="screen-reader" aria-label='Controles para la reproducción del audio del contenido'>
+                        <source src="content/sounds/Pantalla6.mp3" type="audio/mp3">
+                        Su navegador no soporta el componente de audio
+                    </audio>  
                     <div class="flex items-center">
                         <p class="justify flex-half fw-bold">El Sistema Hidro soporta de forma óptima todos los procesos
                             de información,
@@ -198,6 +221,10 @@
                     </div>
                 </div>
                 <div class="subpage" id="pag-mod-1-4">
+                    <audio controls class="screen-reader" aria-label='Controles para la reproducción del audio del contenido'>
+                        <source src="content/sounds/Pantalla7.mp3" type="audio/mp3">
+                        Su navegador no soporta el componente de audio
+                    </audio>  
                     <div class="flex items-center">
                         <p class="justify transparent flex-half">
                         </p>
@@ -225,6 +252,10 @@
                     </div>
                 </div>
                 <div class="subpage" id="pag-mod-1-5">
+                    <audio controls class="screen-reader" aria-label='Controles para la reproducción del audio del contenido'>
+                        <source src="content/sounds/Pantalla8.mp3" type="audio/mp3">
+                        Su navegador no soporta el componente de audio
+                    </audio>  
                     <div class="flex items-center">
                         <p class="justify transparent flex-half">
                         </p>
@@ -250,6 +281,10 @@
                     </div>
                 </div>
                 <div class="subpage" id="pag-mod-1-6">
+                    <audio controls class="screen-reader" aria-label='Controles para la reproducción del audio del contenido'>
+                        <source src="content/sounds/Pantalla9.mp3" type="audio/mp3">
+                        Su navegador no soporta el componente de audio
+                    </audio>  
                     <div class="flex items-center">
                         <p class="justify transparent flex-half">
                         </p>
@@ -280,9 +315,17 @@
             </section>
             <section id="pag-mod-1-3" ptitle="Módulo 1 - Sistema Hidro">
                 <div class="subpage" id="pag-mod-1-7">
-                    <!-- ESPACIO PARA COMIC -->
+                    <audio controls class="screen-reader" aria-label='Controles para la reproducción del audio del contenido'>
+                        <source src="content/sounds/pantalla10.mp3" type="audio/mp3">
+                        Su navegador no soporta el componente de audio
+                    </audio>  
+                    <iframe class="genially center" style="border: none;" src="content/genially/p10/index.html"></iframe>
                 </div>
                 <div class="subpage" id="pag-mod-1-8">
+                    <audio controls class="screen-reader" aria-label='Controles para la reproducción del audio del contenido'>
+                        <source src="content/sounds/Pantalla11.mp3" type="audio/mp3">
+                        Su navegador no soporta el componente de audio
+                    </audio>  
                     <h2 class="fs-30 center">Módulos</h2>
                     <h2 class="fs-24 black center w-80">La plataforma cuenta con nueve módulos, que explicamos a
                         continuación:</h2>
@@ -307,6 +350,10 @@
                     </div>
                 </div>
                 <div class="subpage" id="pag-mod-1-9">
+                    <audio controls class="screen-reader" aria-label='Controles para la reproducción del audio del contenido'>
+                        <source src="content/sounds/Pantalla12.mp3" type="audio/mp3">
+                        Su navegador no soporta el componente de audio
+                    </audio> 
                     <h2 class="fs-30 center">Módulos</h2>
                     <h2 class="fs-24 black center w-80">La plataforma cuenta con nueve módulos, que explicamos a
                         continuación:</h2>
@@ -332,6 +379,10 @@
                     </div>
                 </div>
                 <div class="subpage" id="pag-mod-1-10">
+                    <audio controls class="screen-reader" aria-label='Controles para la reproducción del audio del contenido'>
+                        <source src="content/sounds/Pantalla13.mp3" type="audio/mp3">
+                        Su navegador no soporta el componente de audio
+                    </audio> 
                     <h2 class="fs-30 center">Módulos</h2>
                     <h2 class="fs-24 black center w-80">La plataforma cuenta con nueve módulos, que explicamos a
                         continuación:</h2>
@@ -361,9 +412,17 @@
             </section>
             <section id="pag-mod-1-4" ptitle="Módulo 1 - Sistema Hidro">
                 <div class="subpage" id="pag-mod-1-11">
-                    <!-- ESPACIO PARA COMIC -->
+                    <audio controls class="screen-reader" aria-label='Controles para la reproducción del audio del contenido'>
+                        <source src="content/sounds/pantalla14.mp3" type="audio/mp3">
+                        Su navegador no soporta el componente de audio
+                    </audio> 
+                    <iframe class="genially center" style="border: none;" src="content/genially/p14/index.html"></iframe>
                 </div>
                 <div class="subpage" id="pag-mod-1-12">
+                    <audio controls class="screen-reader" aria-label='Controles para la reproducción del audio del contenido'>
+                        <source src="content/sounds/Pantalla15_Como funciona el aplicativo.mp3" type="audio/mp3">
+                        Su navegador no soporta el componente de audio
+                    </audio> 
                     <h2 class="fs-30 center">¿Cómo funciona el aplicativo?</h2>
                     <h2 class="fs-24 black center w-80">En este flujo de proceso puedes observar cómo funciona Hidro:
                     </h2>
@@ -465,7 +524,10 @@
                                     <p>Máximo</p>
                                 </li>
                             </ul>
-                            <p class="fw-bold">Algunos son al ingreso de la transacción  cómo Dynamics CRM y Marcopolo; y otros al finalizar la transacción como el aplicativo Open o la herramienta de inteligencia de negocios utilizada en la Vicepresidencia  Agua y Saneamiento llamada Gesta.
+                            <p class="fw-bold">Algunos son al ingreso de la transacción cómo Dynamics CRM y Marcopolo; y
+                                otros al finalizar la transacción como el aplicativo Open o la herramienta de
+                                inteligencia de negocios utilizada en la Vicepresidencia Agua y Saneamiento llamada
+                                Gesta.
                             </p>
                         </div>
                         <div class="img-container">
@@ -475,10 +537,14 @@
                 </div>
                 <div class="subpage" id="pag-mod-1-16">
                     <h2>Filiales que utilizan el aplicativo</h2>
-                    <p class="fw-bold">Las filiales del negocio aguas que actualmente utilizan el aplicativo Hidro son:</p>
+                    <p class="fw-bold">Las filiales del negocio aguas que actualmente utilizan el aplicativo Hidro son:
+                    </p>
                     <div class="img-container">
-                        <img src="./content/61.png" class="img jpit-resources-zoom" alt="Infográfico sobre las filiales que usan el aplicativo. Reproducir sonido para mayor claridad"  data-magnification="3" data-magnifier-size="200">
-                        <div class="instruction"><i class="ion-help-circled"></i>Pase el mouse por la imagen para ampliarla</div>
+                        <img src="./content/61.png" class="img jpit-resources-zoom"
+                            alt="Infográfico sobre las filiales que usan el aplicativo. Reproducir sonido para mayor claridad"
+                            data-magnification="3" data-magnifier-size="200">
+                        <div class="instruction"><i class="ion-help-circled"></i>Pase el mouse por la imagen para
+                            ampliarla</div>
                     </div>
                 </div>
             </section>
@@ -501,14 +567,16 @@
                                     <p>Intuitiva</p>
                                 </li>
                                 <li>
-                                    <p>Al ser una aplicación WEB, permite realizar en línea el soporte a las  necesidades de mercados distantes</p>
+                                    <p>Al ser una aplicación WEB, permite realizar en línea el soporte a las necesidades
+                                        de mercados distantes</p>
                                 </li>
                                 <li>
-                                    <p>Visualización geográfica (Con ayuda de Mapa y sitios de interés) 
+                                    <p>Visualización geográfica (Con ayuda de Mapa y sitios de interés)
                                     </p>
                                 </li>
                                 <li>
-                                    <p>Control de acceso integrado al directorio activo por lo que no requiere el uso de una contraseña adicional</p>
+                                    <p>Control de acceso integrado al directorio activo por lo que no requiere el uso de
+                                        una contraseña adicional</p>
                                 </li>
                                 <li>
                                     <p>Soporte documental (Documentos adjuntos a solicitudes y OT)</p>
@@ -524,6 +592,1202 @@
                     </div>
                 </div>
             </section>
+            <section id="pag-mod-2-1" ptitle="Módulo 2 - SCADA">
+                <div class="subpage">
+                    <!-- ESPACIO PARA COMIC -->
+                </div>
+            </section>
+            <section id="pag-mod-2-2" ptitle="Módulo 2 - SCADA">
+                <div class="subpage">
+                    <h2 class="fs-24 black center w-80">Sistema de supervisión, control y adquisición de datos en tiempo
+                        real</h2>
+                    <div class="flex items-center">
+                        <div class="flex-halfplus mr-15">
+                            <p class="fw-bold">El SCADA es un software especializado que utilizan las empresas para
+                                supervisar y controlar sus procesos remotos en forma centralizada. Permite supervisar
+                                los medidores e instrumentos y dar comandos de apertura o cierre, arranque o paro de
+                                equipos que están lejanos, directamente desde el teclado del computador. </p>
+                        </div>
+                        <div class="img-container"> <img src="./content/72.png"
+                                alt="Uso en empresas petroleras, nucleares y de Gas">
+                        </div>
+                    </div>
+                </div>
+                <div class="subpage">
+                    <h2 class="fs-24 black center w-80">Sistema de supervisión, control y adquisición de datos en tiempo
+                        real</h2>
+
+                    <div class="flex items-center">
+                        <div class="flex-halfplus mr-15">
+                            <p class="fw-bold">Los tiempos de actualización de la información en las pantallas
+                                (despliegues operativos) de los operadores pueden estar entre segundos y minutos
+                                dependiendo del medio de comunicación y la red de Controladores. Cualquier falla que se
+                                presente en los equipos remotos generan las alarmas directamente en los despliegues de
+                                los operadores.</p>
+                        </div>
+                        <div class="img-container"> <img src="./content/73.png"
+                                alt="Uso en empresas de transporte de mercancías que conectan los vehículos al Centro de Control.">
+                        </div>
+                    </div>
+                </div>
+                <div class="subpage">
+                    <h2 class="fs-24 black center w-80">Sistema de supervisión, control y adquisición de datos en tiempo
+                        real</h2>
+
+                    <div class="flex items-center">
+                        <div class="flex-halfplus mr-15">
+                            <p class="fw-bold">Por ser un sistema tan crítico para las empresas, éstas deben tener
+                                implementado un sistema de redundancia que se activa en línea por si fallan algunos de
+                                sus componentes como: equipos informáticos, redes de información, sistemas de energía,
+                                aires acondicionados entre otros. También, se deben tener implementados sistemas de
+                                contingencia para normalizar en el menor tiempo posible la falla presentada. Finalmente,
+                                debe contar con unos lineamientos de ciberseguridad para mitigar ataques informáticos
+                                por personas no autorizadas.
+                            </p>
+                        </div>
+                        <div class="img-container"> <img src="./content/74.png"
+                                alt="Uso en redes de semaforización, cámaras de vigilancia y sistemas de  iluminación">
+                        </div>
+                    </div>
+                </div>
+                <div class="subpage">
+                    <h2 class="fs-24 black center w-80">Sistema de supervisión, control y adquisición de datos en tiempo
+                        real</h2>
+
+                    <div class="flex items-center">
+                        <div class="flex-halfplus mr-15">
+                            <p class="fw-bold">Con los adelantos tecnológicos hoy en día, es posible supervisar y
+                                controlar un sistema de acueducto, eléctrico o petrolero ubicado en Dubái desde
+                                cualquier parte del mundo, desde un computador, tablet o celular smartphone, claro está,
+                                conociendo las claves de acceso al SCADA y la infraestructura del proceso.
+                            </p>
+                        </div>
+                        <div class="img-container"> <img src="./content/75.png"
+                                alt="Uso en empresas de gaseosos, cerveceras, calderas u otros procesos industriales">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="pag-mod-2-3" ptitle="Módulo 2 - SCADA">
+                <div class="subpage">
+                    <!-- ESPACIO PARA COMIC -->
+                </div>
+                <div class="subpage">
+                    <h2 class="fs-30 center">Componentes</h2>
+                    <h2 class="fs-24 black center w-80">Los Sistemas SCADA están conformados por los siguientes
+                        componentes:</h2>
+                    <div class="text">
+                        <h3>Sistema central:</h3>
+                        <p class="bold fs-16 mr-15">están los equipos informáticos, el software SCADA con los
+                            despliegues y tendencias operativas, y la Base de Datos (DATACENTER). Generalmente, están
+                            ubicados en el Centro de Control con personal las 24 horas del día supervisando y
+                            controlando el proceso. Desde allí se toman las decisiones operativas.</p>
+                    </div>
+                    <div class="learn-more">
+                        <div class="learn-more-title fs-24">
+                            <h2>Aprendamos más</h2>
+                        </div>
+                        <div class="learn-more-body fs-18">
+                            <p>Consulta este recurso para conocer más información acerca de este componente</p>
+                            <button class="learn-more-download-button" aria-label="Descargar el pdf del elemento">
+                                <img src="./content/81_2.png" alt="Icono de PDF para descarga">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="subpage">
+                    <h2 class="fs-30 center">Componentes</h2>
+                    <h2 class="fs-24 black center w-80">Los Sistemas SCADA están conformados por los siguientes
+                        componentes:</h2>
+                    <div class="text">
+                        <h3>Sistema de comunicaciones:</h3>
+                        <p class="bold fs-16 mr-15">es el medio de comunicación utilizado para conectar el sistema
+                            central con la red de controladores en los sitios remotos. En la actualidad existen desde
+                            medios físicos, como cables, hasta inalámbricos, como radios, celulares y satélites. El
+                            medio a utilizar se define dependiendo de la criticidad del proceso a supervisar y controlar
+                            y del presupuesto disponible. <br><br>
+                            Existen herramientas que permiten identificar si un sitio es apto para comunicarlo por un
+                            tipo de enlace o se debe implementar otra clase de tecnología.
+                        </p>
+                    </div>
+                    <div class="learn-more">
+                        <div class="learn-more-title fs-24">
+                            <h2>Aprendamos más</h2>
+                        </div>
+                        <div class="learn-more-body fs-18">
+                            <p>Consulta este recurso para conocer más información acerca de este componente</p>
+                            <button class="learn-more-download-button" aria-label="Descargar el pdf del elemento">
+                                <img src="./content/81_2.png" alt="Icono de PDF para descarga">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="subpage">
+                    <h2 class="fs-30 center">Componentes</h2>
+                    <h2 class="fs-24 black center w-80">Los Sistemas SCADA están conformados por los siguientes
+                        componentes:</h2>
+                    <div class="text">
+                        <h3>Redes de Controladores:</h3>
+                        <p class="bold fs-16 mr-15">son los equipos instalados en los sitios remotos que se requieren
+                            supervisar. Los controladores <b>son equipos muy rápidos</b> similares a un computador,
+                            poseen memoria RAM, ROM y SD, procesador, puertos de comunicación, tarjetas I/O para
+                            conectar la instrumentación, sensores, medidores y equipos. A estos controladores se les
+                            conectan todos los dispositivos sobre los que se requiere tener control en forma remota.
+                        </p>
+                    </div>
+                    <div class="learn-more">
+                        <div class="learn-more-title fs-24">
+                            <h2>Aprendamos más</h2>
+                        </div>
+                        <div class="learn-more-body fs-18">
+                            <p>Consulta este recurso para conocer más información acerca de este componente</p>
+                            <button class="learn-more-download-button" aria-label="Descargar el pdf del elemento">
+                                <img src="./content/81_2.png" alt="Icono de PDF para descarga">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="pag-mod-2-4" ptitle="Módulo 2 - SCADA">
+                <h2 class="fs-24 black center w-80">¿Cómo funciona el SCADA de aguas?</h2>
+                <div class="videobox w-80 center">
+                    <video controls>
+                        <source src="content/videos/como-funciona-scada.MP4" type="video/mp4">
+                        El reproductor de video no es soportado por el navegador
+                    </video>
+                </div>
+            </section>
+            <section id="pag-mod-3-1" ptitle="Módulo 3 - G/Net Viewer">
+                <!-- ESPACIO PARA COMIC -->
+                <div class="subpage">
+                    <h2 class="fs-24 black center w-80">G/Net Viewer</h2>
+                    <div class="flex items-center">
+                        <div class="flex-halfplus fs-16 mr-15">
+                            <p class="bold">La organización está llamada a convivir con el cambio permanente por el
+                                crecimiento del Grupo EPM y la evolución en sus procesos dentro de su Cadena de Valor.
+                                <br><br>Es por ello que el Sistema de Información Geográfica “SIG”, donde se implementó
+                                el modelo digital de aguas, hoy cuenta con datos georreferenciados y atributos
+                                alfanuméricos de los sistemas de acueducto y alcantarillado operados por la casa matriz
+                                o por las filiales del negocio de aguas en diferentes territorios.
+                            </p>
+                        </div>
+                        <div class="img-container"> <img src="./content/87.png"
+                                alt="Sistema de información geográfico, mapa con pines de ubicación sobre el.">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="pag-mod-3-2" ptitle="Módulo 3 - G/Net Viewer">
+                <div class="subpage">
+                    <h2 class="fs-24 black center w-80">¿Qué es un SIG?</h2>
+                    <div class="flex items-center">
+                        <div class="flex-halfplus fs-16 mr-15">
+                            <p class="bold">En un SIG, las características geográficas se expresan con frecuencia como
+                                vectores, manteniendo las características geométricas de las figuras, y se pueden
+                                representar por medio de puntos, líneas o polígonos (áreas). <br><br>Para la gestión
+                                eficaz de la información referenciada de las redes de servicio, el Grupo EPM actualmente
+                                utiliza el software Intergraph G/Technology desarrollado por Hexagon y la base de datos
+                                GAGU PROD.</p>
+                        </div>
+                        <div class="img-container"> <img src="./content/88.png"
+                                alt="Pantalla demostrativa de Intergraph G/Technology DataBrowser">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="pag-mod-3-3" ptitle="Módulo 3 - G/Net Viewer">
+                <div class="subpage">
+                    <h2 class="fs-24 black center w-80">G/Net Viewer</h2>
+                    <p class="bold">Provee una vista de solo lectura a la información contenida en la base de datos (no
+                        puede realizar actualización o edición de elementos), a ella se puede acceder usando Internet
+                        Explorer; la información a la que se accede es en tiempo real.</p>
+                    <p class="bold">Algunas de las funcionalidades de G/Net Viewer son:</p>
+                    <ul>
+                        <li>
+                            <p>Mostrar una vista geográfica del conjunto de datos del modelo de la red.</p>
+                        </li>
+                        <li>
+                            <p>Controlar los datos que se muestran en pantalla a partir de las leyendas</p>
+                        </li>
+                        <li>
+                            <p>Ajustar la vista en pantalla a través de diferentes opciones de zoom y de paneo</p>
+                        </li>
+                        <li>
+                            <p>Presentar vistas de detalle</p>
+                        </li>
+                        <li>
+                            <p>Observar un Job o Trabajo específico</p>
+                        </li>
+                        <li>
+                            <p>Observar todos los atributos asociados con un elemento que se seleccione en pantalla</p>
+                        </li>
+                        <li>
+                            <p>Buscar elementos o valores específicos de atributos usando consultas o queries
+                                predefinidos</p>
+                        </li>
+                        <li>
+                            <p>Revisar las relaciones entre elementos</p>
+                        </li>
+                        <li>
+                            <p>Generar reportes</p>
+                        </li>
+                        <li>
+                            <p>Medir distancias y áreas</p>
+                        </li>
+                        <li>
+                            <p>Usar herramientas de análisis como los seguimientos o Traces</p>
+                        </li>
+                    </ul>
+                </div>
+
+            </section>
+            <section id="pag-mod-3-4" ptitle="Módulo 3 - G/Net Viewer">
+                <div class="subpage">
+                    <div class="flex items-center">
+                        <p class="bold flex-45">En la pantalla de la aplicación se pueden identificar las siguientes
+                            áreas</p>
+                        <div class="img-container w-80">
+                            <img src="./content/89.png" alt="Interfaz de usuario para G/Net Viewer">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="pag-mod-3-5" ptitle="Módulo 3 - G/Net Viewer">
+                <div class="subpage">
+                    <div class="flex items-center">
+                        <p class="bold flex-45">En la pantalla de la aplicación se pueden identificar las siguientes
+                            áreas</p>
+                        <div class="img-container w-80">
+                            <img src="./content/90.png"
+                                alt="Interfaz de usuario para G/Net Viewer - Área de funcionalidades resaltada">
+                        </div>
+                    </div>
+                </div>
+                <div class="subpage">
+                    <div class="flex items-center">
+                        <p class="bold flex-45">En la pantalla de la aplicación se pueden identificar las siguientes
+                            áreas</p>
+                        <div class="img-container w-80">
+                            <img src="./content/90.png"
+                                alt="Interfaz de usuario para G/Net Viewer - Área de funcionalidades resaltada">
+                        </div>
+                    </div>
+                    <div class="absolute modal-sim w-full">
+                        <div class="flex items-center">
+                            <div class="text flex-half">
+                                <h3>Área de funcionalidades</h3>
+                                <p class="bold fs-16 mr-15">
+                                    Con esta herramienta el usuario podrá definir por medio del control de visualización
+                                    (display control), qué elementos serán visibles en pantalla, qué elementos serán
+                                    localizables y a qué escala comenzará su visualización.
+                                </p>
+                            </div>
+                            <div class="img-container"> <img src="./content/91_2.png" class="jpit-resources-zoom"
+                                    alt="Interfaz de usuario para G/Net Viewer - Área de funcionalidades"
+                                    data-magnification="3" data-magnifier-size="200">
+                                <div class="instruction"><i class="ion-help-circled"></i>Pase el mouse por la imagen
+                                    para
+                                    ampliarla</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="pag-mod-3-6" ptitle="Módulo 3 - G/Net Viewer">
+                <div class="subpage">
+                    <div class="flex items-center">
+                        <p class="bold flex-45">En la pantalla de la aplicación se pueden identificar las siguientes
+                            áreas</p>
+                        <div class="img-container w-80">
+                            <img src="./content/92.png"
+                                alt="Interfaz de usuario para G/Net Viewer - Área de funcionalidades resaltada">
+                        </div>
+                    </div>
+                </div>
+                <div class="subpage">
+                    <div class="flex items-center">
+                        <p class="bold flex-45">En la pantalla de la aplicación se pueden identificar las siguientes
+                            áreas</p>
+                        <div class="img-container w-80">
+                            <img src="./content/92.png"
+                                alt="Interfaz de usuario para G/Net Viewer - Barra de herramientas resaltada">
+                        </div>
+                    </div>
+                    <div class="absolute modal-sim w-full">
+                        <h3>Barra Herramientas</h3>
+                        <p class="bold fs-16 mr-15">
+                            Esta barra dispone de un control de visualización y permite al usuario personalizar la
+                            herramienta y definir cómo se interpretarán las coordenadas.
+                        </p>
+                        <div class="img-container"> <img src="./content/93.png" class="jpit-resources-zoom"
+                                alt="Barra de Herramientas de G/Net Viewer" data-magnification="3"
+                                data-magnifier-size="200">
+                            <div class="instruction"><i class="ion-help-circled"></i>Pase el mouse por la imagen
+                                para
+                                ampliarla</div>
+                        </div>
+                        <div class="learn-more">
+                            <div class="learn-more-title fs-24">
+                                <h2>Aprendamos más</h2>
+                            </div>
+                            <div class="learn-more-body fs-18">
+                                <p>Consulta este recurso para conocer más información acerca de este componente</p>
+                                <button class="learn-more-download-button" aria-label="Descargar el pdf del elemento">
+                                    <img src="./content/81_2.png" alt="Icono de PDF para descarga">
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="pag-mod-3-7" ptitle="Módulo 3 - G/Net Viewer">
+                <div class="subpage">
+                    <div class="flex items-center">
+                        <p class="bold flex-45">En la pantalla de la aplicación se pueden identificar las siguientes
+                            áreas</p>
+                        <div class="img-container w-80">
+                            <img src="./content/94.png"
+                                alt="Interfaz de usuario para G/Net Viewer - Área de funcionalidades resaltada">
+                        </div>
+                    </div>
+                </div>
+                <div class="subpage">
+                    <div class="flex items-center">
+                        <p class="bold flex-45">En la pantalla de la aplicación se pueden identificar las siguientes
+                            áreas</p>
+                        <div class="img-container w-80">
+                            <img src="./content/94.png" alt="Interfaz de usuario para G/Net Viewer - Barra de Redlines">
+                        </div>
+                    </div>
+                    <div class="absolute modal-sim w-full">
+                        <h3>Barra Redlines</h3>
+                        <p class="bold fs-16 mr-15">
+                            G/Net Viewer permite colocar una serie de anotaciones o Redlines como líneas, símbolos,
+                            textos entre otros sobre el mapa con el fin de resaltar elementos o cualquier otra necesidad
+                            del usuario. <br><br> Las anotaciones son marcas temporales de información que son
+                            sobrepuestas sobre la información de las redes.
+                        </p>
+                        <div class="learn-more">
+                            <div class="learn-more-title fs-24">
+                                <h2>Aprendamos más</h2>
+                            </div>
+                            <div class="learn-more-body fs-18">
+                                <p>Consulta este recurso para conocer más información acerca de este componente</p>
+                                <button class="learn-more-download-button" aria-label="Descargar el pdf del elemento">
+                                    <img src="./content/81_2.png" alt="Icono de PDF para descarga">
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="pag-mod-3-8" ptitle="Módulo 3 - G/Net Viewer">
+                <div class="subpage">
+                    <div class="flex items-center">
+                        <p class="bold flex-45">En la pantalla de la aplicación se pueden identificar las siguientes
+                            áreas</p>
+                        <div class="img-container w-80">
+                            <img src="./content/95.png"
+                                alt="Interfaz de usuario para G/Net Viewer - Zona de localización de resultados resaltada">
+                        </div>
+                    </div>
+                </div>
+                <div class="subpage">
+                    <div class="flex items-center">
+                        <p class="bold flex-45">En la pantalla de la aplicación se pueden identificar las siguientes
+                            áreas</p>
+                        <div class="img-container w-80">
+                            <img src="./content/95.png"
+                                alt="Interfaz de usuario para G/Net Viewer - Zona de localización de resultados">
+                        </div>
+                    </div>
+                    <div class="absolute modal-sim w-full">
+                        <h3>Zona de localización de resultados</h3>
+                        <p class="bold fs-16 mr-15">
+                            G/TECHNOLOGY NET VIEWER le presenta al usuario una vista geográfica de los elementos,
+                            atributos y detalles de los datos que se encuentran almacenados en la base de datos; el
+                            usuario no solo tiene la posibilidad de observar los elementos si no que tiene la
+                            posibilidad de seleccionar un elemento y mostrar sus atributos en un panel denominado
+                            Explorador de elementos (Feature Explorer).
+                        </p>
+                        <div class="learn-more">
+                            <div class="learn-more-title fs-24">
+                                <h2>Aprendamos más</h2>
+                            </div>
+                            <div class="learn-more-body fs-18">
+                                <p>Consulta este recurso para conocer más información acerca de este componente</p>
+                                <button class="learn-more-download-button" aria-label="Descargar el pdf del elemento">
+                                    <img src="./content/81_2.png" alt="Icono de PDF para descarga">
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="pag-mod-3-9" ptitle="Módulo 3 - G/Net Viewer">
+                <div class="subpage">
+                    <h2 class="fs-30 center">Modelo Digital de Aguas</h2>
+                    <p class="bold fs-16">Contiene datos georreferenciados, además de la información alfanumérica de los
+                        elementos con características genéricas y operativas comunes a ellas, donde se definen
+                        agrupamientos atendiendo los procesos, se identifican las relaciones entre los elementos, se
+                        define estados que muestran en qué punto del proceso técnico, operativo y administrativo se
+                        encuentra un elemento de la red y de igual manera se definen las transiciones de estado que se
+                        aplican a los mismos elementos durante su ciclo de vida.</p>
+                    <div class="learn-more">
+                        <div class="learn-more-title fs-24">
+                            <h2>Aprendamos más</h2>
+                        </div>
+                        <div class="learn-more-body fs-18">
+                            <p>Consulta este recurso para conocer más información acerca de este componente</p>
+                            <button class="learn-more-download-button" aria-label="Descargar el pdf del elemento">
+                                <img src="./content/81_2.png" alt="Icono de PDF para descarga">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="pag-mod-4-1" ptitle="Módulo 4 - Power Monitoring Expert">
+                <div class="subpage">
+                    <!-- ESPACIO PARA COMIC -->
+                </div>
+                <div class="subpage">
+                    <h2 class="fs-30 center">Módulo 4 - Power Monitoring Expert</h2>
+                    <h2 class="fs-24 black center w-80">Sistema de monitoreo en línea para la gestión energética en el
+                        acueducto EPM</h2>
+                    <div class="flex items-center">
+                        <p class="justify flex-halfplus fw-bold">Gestión Energética Acueducto y Alcantarillado <br><br>
+                            La Vicepresidencia Agua y Saneamiento de EPM trabaja en el desarrollo de un <b>modelo de
+                                administración energética</b> que conlleve a la creación de cultura de uso racional del
+                            recurso energético (URE), y a la realización de una gestión integral de la energía que
+                            aporte a la optimización técnico - operativa del día a día, en cada uno de los procesos y
+                            procedimientos que desarrolla, mediante la continua evaluación de alternativas que permitan
+                            reducir el consumo sin afectar la calidad y continuidad del servicio en pro de mejorar la
+                            competitividad, la imagen corporativa y la responsabilidad social empresarial.
+                        </p>
+                        <div class="img-container"> <img src="./content/101.png"
+                                alt="Hombre trabajador en campo junto a páneles solares">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="pag-mod-4-2" ptitle="Módulo 4 - Power Monitoring Expert">
+                <div class="subpage">
+                    <!-- ESPACIO PARA COMIC -->
+                </div>
+                <div class="subpage">
+                    <h3 class="bold">¿Cómo lo hace?</h3>
+                    <div class="flex items-center">
+                        <p class="justify flex-halfplus fw-bold">En la ejecución de los nuevos proyectos, sean estos
+                            bombeos o plantas, la VP Agua y Saneamiento dispone de una plataforma para la gestión
+                            energética de sus instalaciones, la cual opera desde el año 2011 y es conocida como Power
+                            Monitoring Expert. <br><br>Esta herramienta permite el análisis, diagnóstico y gestión de
+                            los consumos de energía en las instalaciones del sistema de acueducto y alcantarillado,
+                            permitiendo la optimización de la cadena productiva del negocio de aguas.</p>
+                        <div class="img-container"> <img src="./content/102.png"
+                                alt="Monitor con captura de pantalla del software Power Monitoring Expert.">
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+            <section id="pag-mod-4-3" ptitle="Módulo 4 - Power Monitoring Expert">
+                <div class="subpage">
+                    <h3 class="bold">Este sistema está en 59 instalaciones de acueducto</h3>
+                    <div class="flex items-center">
+                        <div class="justify flex-halfplus fw-bold">
+                            <p>La plataforma y el sistema de monitoreo en línea se implementaron inicialmente en la
+                                planta de tratamiento de aguas residuales de San Fernando, y mediante ampliaciones se ha
+                                extendido a:
+                            </p>
+                            <ul>
+                                <li>
+                                    <p>37 Bombeos de distribución primaria</p>
+                                </li>
+                                <li>
+                                    <p>12 plantas de potabilización</p>
+                                </li>
+                                <li>
+                                    <p>4 bombeos de captació</p>
+                                </li>
+                                <li>
+                                    <p>5 micro centrales</p>
+                                </li>
+                                <li>
+                                    <p>1 planta de agua residual (San Fernando)</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="img-container"> <img src="./content/103.png"
+                                alt="Puntos de instalación geolocalizados en mapa" class="jpit-resources-zoom"
+                                data-magnification="3" data-magnifier-size="200">
+                            <div class="instruction"><i class="ion-help-circled"></i>Pase el mouse por la imagen para
+                                ampliarla</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="pag-mod-4-4" ptitle="Módulo 4 - Power Monitoring Expert">
+                <div class="subpage">
+                    <h3 class="bold">¿Qué usos se le dan a este sistema?</h3>
+                    <div class="flex items-center">
+                        <div class="flex-half">
+                            <div class="flex items-center">
+                                <img class="mr-15 list-icon-40" src="./content/104.svg" alt="Icono de gota de agua">
+                                <p class="fw-regular fw-bold m-15">Análisis de la calidad de energía de las
+                                    instalaciones</p>
+                            </div>
+                            <div class="flex items-center">
+                                <img class="mr-15 list-icon-40" src="./content/105.svg" alt="Icono de gota de agua">
+                                <p class="fw-regular fw-bold m-15">Optimización de la operación de los grupos de bombeo
+                                </p>
+                            </div>
+                            <div class="flex items-center">
+                                <img class="mr-15 list-icon-40" src="./content/106.svg" alt="Icono de gota de agua">
+                                <p class="fw-regular fw-bold m-15">Correcto dimensionamiento de equipos para
+                                    modernizaciones</p>
+                            </div>
+                            <div class="flex items-center">
+                                <img class="mr-15 list-icon-40" src="./content/107.svg" alt="Icono de gota de agua">
+                                <p class="fw-regular fw-bold m-15">Proyecciones ajustadas del presupuesto operativo
+                                    destinado al pago del consumo de energía de las instalaciones.</p>
+                            </div>
+                            <div class="flex items-center">
+                                <img class="mr-15 list-icon-40" src="./content/109.svg" alt="Icono de gota de agua">
+                                <p class="fw-regular fw-bold m-15">Revisión del consumo de energía <em>reactiva</em></p>
+                            </div>
+                        </div>
+                        <div class="flex-half">
+                            <div class="flex items-center">
+                                <img class="mr-15 list-icon-40" src="./content/110.svg" alt="Icono de gota de agua">
+                                <p class="fw-regular fw-bold m-15 m-15">Pruebas de eficiencia (mantenimiento Predictivo)
+                                </p>
+                            </div>
+                            <div class="flex items-center">
+                                <img class="mr-15 list-icon-40" src="./content/111.svg" alt="Icono de gota de agua">
+                                <p class="fw-regular fw-bold m-15">Análisis dinámico motores de inducción (mantenimiento
+                                    Predictivo)</p>
+                            </div>
+                            <div class="flex items-center">
+                                <img class="mr-15 list-icon-40" src="./content/112.svg" alt="Icono de gota de agua">
+                                <p class="fw-regular fw-bold m-15">Análisis de fallas (mantenimiento proactivo)</p>
+                            </div>
+                            <div class="flex items-center">
+                                <img class="mr-15 list-icon-40" src="./content/113.svg" alt="Icono de gota de agua">
+                                <p class="fw-regular fw-bold m-15">Ajuste y coordinación de protecciones</p>
+                            </div>
+                            <div class="flex items-center">
+                                <img class="mr-15 list-icon-40" src="./content/114.svg" alt="Icono de gota de agua">
+                                <p class="fw-regular fw-bold m-15">Insumo para diseño de nuevas instalaciones</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="pag-mod-5-1" ptitle="Módulo 5 - Sample Manager">
+                <div class="subpage">
+                    <!-- ESPACIO PARA COMIC -->
+                </div>
+                <div class="subpage">
+                    <h2 class="fs-30 center">Módulo 5 - Sample manager</h2>
+                    <h2 class="fs-24 black center w-80">Normalización y laboratorios</h2>
+                    <div class="flex items-center">
+                        <div class="justify flex-halfplus fw-bold mr-15">
+                            <p>EPM en calidad de prestador del servicio de acueducto y alcantarillado, debe cumplir con
+                                las normas que rigen la prestación de estos servicios, entre ellas:</p>
+                            <ul>
+                                <li>
+                                    <p>Decreto 1575 y Resolución 2115 de 2007, agua potable</p>
+                                </li>
+                                <li>
+                                    <p>Resolución 4716 de 2010, agua cruda y potable
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>Decreto 3930 de 2010, agua cruda y residual
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>Resolución 0631 de 2015, agua cruda y residual
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>Algunos artículos del Decreto 1594 de 1984
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>Requerimientos de las entidades ambientales y sanitarias competentes.
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="img-container center"> <img class="w-60" src="./content/121.png"
+                                alt="Hombre manipulando documentos">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="pag-mod-5-2" ptitle="Módulo 5 - Sample Manager">
+                <div class="subpage">
+                    <h3 class="bold">Normalización y laboratorios</h3>
+                    <div class="flex items-center mr-15">
+                        <p class="justify flex-halfplus fw-bold mr-15">Para cumplir con las mismas, se debe registrar la
+                            información y hacer seguimiento a la calidad del agua en toda la cadena de valor, desde las
+                            fuentes de abastecimiento de las plantas de potabilización (PTAP) hasta las descargas de las
+                            plantas de tratamiento de aguas residuales (PTAR), garantizando la trazabilidad y resguardo
+                            de la información, de acuerdo con la norma ISO 17025. En nuestros laboratorios acreditados
+                            por la norma referida, contamos con la aplicación informática <em>SampleManager</em>. </p>
+                        <div class="img-container"> <img src="./content/122.png"
+                                alt="Captura de pantalla inicial del software SampleManager">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="pag-mod-5-3" ptitle="Módulo 5 - Sample Manager">
+                <div class="subpage">
+                    <h3 class="bold">¿Qué permite hacer esta herramienta?</h3>
+                    <div class="flex items-start">
+                        <div class="text justify fs-16 flex-half">
+                            <p class="bold">Creación y gestión de muestras</p>
+                            <ul>
+                                <li>
+                                    <p>Programación de muestreos</p>
+                                </li>
+                                <li>
+                                    <p>Recepción de muestras, registro de resultados de análisis y seguimiento</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="text justify fs-16">
+                            <p class="bold">Informes de resultados y consultas</p>
+                            <ul>
+                                <li>
+                                    <p>Individuales o consolidados de los resultados de los análisis</p>
+                                </li>
+                                <li>
+                                    <p>Consultas y consolidados de los resultados de los análisis</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <p class="justify fs-16 bold">
+                        Adicionalmente, para toda la gestión del laboratorio, esta aplicación tiene un módulo de
+                        administración (de personas y recursos) y otro de gestión de inventarios (de instrumentos y
+                        equipos)
+                    </p>
+                    <div class="learn-more">
+                        <div class="learn-more-title fs-24">
+                            <h2>Aprendamos más</h2>
+                        </div>
+                        <div class="learn-more-body fs-18">
+                            <p>Consulta este recurso para conocer más información acerca de este componente</p>
+                            <button class="learn-more-download-button" aria-label="Descargar el pdf del elemento">
+                                <img src="./content/81_2.png" alt="Icono de PDF para descarga">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="pag-mod-5-4" ptitle="Módulo 5 - Sample Manager">
+                <div class="subpage">
+                    <h3 class="bold">Vertimientos</h3>
+                    <p class="bold fs-16 mr-15">
+                        EPM en calidad de prestador del servicio de alcantarillado público, está obligado a cumplir con
+                        las normas que rigen la prestación de dicho servicio ante la autoridad ambiental competente. La
+                        normatividad asociada corresponde a:
+                    </p>
+                    <div class="border-box">
+                        <ul>
+                            <li class="m-15">Resolución 1433 de 2004, por la cual se reglamenta el artículo 12 del
+                                Decreto 3100 de 2003, sobre planes de saneamiento y manejo de vertimientos, PSMV.</li>
+                            <li class="m-15">Decreto 3930 de 2010, compilado en el Decreto 10 76 de 2015: obliga al
+                                prestador del servicio público de alcantarillado a exigir a sus clientes cumplimiento de
+                                la norma ambiental y reportar el cumplimiento, con un control periódico de las descargas
+                                y el manejo de expedientes de sus clientes.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="subpage">
+                    <h3 class="bold">Vertimientos</h3>
+                    <p class="bold fs-16 mr-15">
+                        EPM en calidad de prestador del servicio de alcantarillado público, está obligado a cumplir con
+                        las normas que rigen la prestación de dicho servicio ante la autoridad ambiental competente. La
+                        normatividad asociada corresponde a:
+                    </p>
+                    <div class="border-box">
+                        <ul>
+                            <li class="m-15">Resolución 0631 de 2015, establece los parámetros y los valores máximos
+                                permisibles en vertimientos puntuales a cuerpos de agua superficiales y a los sistemas
+                                de alcantarillado público, además cataloga la industria en 73 actividades productivas
+                                diferentes, con parámetros y límites distintos.</li>
+                            <li class="m-15">Ley 1955 de 2019 – Plan Nacional de Desarrollo, En el artículo 14, habilita
+                                a los prestadores de servicios que tengan capacidad en infraestructura y tecnología para
+                                tratar las Aguas Residuales no Domésticas – ARnD, pueden realizar acuerdos económicos
+                                para dicho tratamiento.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="subpage">
+                    <h3 class="bold">Vertimientos</h3>
+                    <p class="bold fs-16 mr-15">
+                        EPM en calidad de prestador del servicio de alcantarillado público, está obligado a cumplir con
+                        las normas que rigen la prestación de dicho servicio ante la autoridad ambiental competente. La
+                        normatividad asociada corresponde a:
+                    </p>
+                    <div class="border-box">
+                        <ul>
+                            <li class="m-15">Resolución AMVA 1583 de junio de 2019, establece los lineamientos para la
+                                prestación del servicio de tratamiento a terceros de las ARnD en el Área Metropolitana
+                                del Valle de Aburrá, con esta resolución se reglamente la prestación del servicio de
+                                Tratamiento ARnD.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="subpage">
+                    <h3 class="bold">Vertimientos</h3>
+                    <p class="bold fs-16 mr-15">
+                        Por lo anterior se adquirió una solución informática que facilitará la gestión de los clientes
+                        y/o usuarios que generen ARnD en los vertimientos al sistema de alcantarillado público. <br>Esta
+                        herramienta contiene expedientes para la gestión de los clientes, sus autodeclaraciones de
+                        vertimientos, el monitoreo de los parámetros de calidad que circulan por las redes de
+                        alcantarillado con el objeto de realizar seguimiento en las PTAR, la liquidación de la tasa
+                        retributiva para la autoridad ambiental, reporte del estado de cumplimiento de los vertimientos
+                        de los clientes y/o usuarios del sistema de alcantarillado y la investigación de casos o
+                        siniestros ambientales. <br>En este aplicativo se tienen categorizados los clientes y/o usuarios
+                        por la carga contaminante que generan a la red de alcantarillado, con esto se define la forma de
+                        actuar; mientras más carga contaminante vierta, mayor es el control que se realiza.
+                    </p>
+                    <div class="learn-more">
+                        <div class="learn-more-title fs-24">
+                            <h2>Aprendamos más</h2>
+                        </div>
+                        <div class="learn-more-body fs-18">
+                            <p>Consulta este recurso para conocer más información acerca de este componente</p>
+                            <button class="learn-more-download-button" aria-label="Descargar el pdf del elemento">
+                                <img src="./content/81_2.png" alt="Icono de PDF para descarga">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="pag-mod-6-1" ptitle="Módulo 6 - FSM">
+                <div class="subpage">
+                    <!-- ESPACIO PARA COMIC -->
+                </div>
+            </section>
+            <section id="pag-mod-6-2" ptitle="Módulo 6 - FSM">
+                <div class="subpage">
+                    <h3 class="bold">Componentes del FSM</h3>
+                    <div class="flex items-center">
+                        <div class="justify flex-half fw-bold mr-15">
+                            <p><b><i>ClickSchedule: </i></b>
+                                es la versión de escritorio que incluye un grupo de metodologías de planificación y
+                                procesos de trabajo que apoyan la organización y gestión del trabajo en campo. </p>
+                            <p>A través de ésta herramienta podrás realizar acciones como:</p>
+                            <ul>
+                                <li>
+                                    <p>Monitorear la organización y planes del trabajo.</p>
+                                </li>
+                                <li>
+                                    <p>Asegurar la asignación de los recursos correctos para ejecución de las tareas</p>
+                                </li>
+                                <li>
+                                    <p>Gestionar tareas en riesgo</p>
+                                </li>
+                                <li>
+                                    <p>Realizar asignación manual de tareas</p>
+                                </li>
+                            </ul>
+
+                        </div>
+                        <div class="img-container"> <img src="./content/134.png"
+                                alt="Captura de pantalla de FSM ClickSchedule">
+                        </div>
+                    </div>
+                </div>
+                <div class="subpage">
+                    <h3 class="bold">Componentes del FSM</h3>
+                    <div class="flex items-center">
+                        <div class="justify flex-half fw-bold mr-15">
+                            <p><b><i>ClickMobile: </i></b>
+                                es la versión móvil disponible en las terminales de las cuadrillas, e incluye un
+                                conjunto de funcionalidades que apoyan la organización y gestión del trabajo en campo.
+                            </p>
+                            <p>A través de ésta herramienta podrás realizar acciones como:</p>
+                            <ul>
+                                <li>
+                                    <p>Capturar información en el momento de ejecución de la OT.</p>
+                                </li>
+                                <li>
+                                    <p>Cargar datos en línea a través de la terminal.</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="img-container"> <img src="./content/135.png"
+                                alt="Captura de pantalla de FSM ClickMobile">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="pag-mod-6-3" ptitle="Módulo 6 - FSM">
+                <div class="subpage">
+                    <h3 class="bold">¿Cómo funciona la solución?</h3>
+                    <div class="img-container center">
+                        <img src="./content/136.png"
+                            alt="Infográfico de funcionamiento del la solución. Escuchar el audio para la explicación"
+                            class="w-70">
+                    </div>
+                </div>
+                <div class="subpage">
+                    <h3 class="bold">¿Cómo funciona la solución?</h3>
+                    <div class="flex items-center">
+                        <div class="flex-30"></div>
+                        <div class="img-container center">
+                            <img src="./content/137.png"
+                                alt="Infográfico de funcionamiento del la solución, equipos móviles resaltados. Escuchar el audio para la explicación">
+                        </div>
+                    </div>
+                    <div class="absolute modal-sim">
+                        <ul>
+                            <li>
+                                <p>Clase de servicio</p>
+                            </li>
+                            <li>
+                                <p>Tipo de cuadrilla</p>
+                            </li>
+                            <li>
+                                <p>Calendario de Trabajo</p>
+                            </li>
+                            <li>
+                                <p>Habilidades</p>
+                            </li>
+                            <li>
+                                <p>Herramientas</p>
+                            </li>
+                            <li>
+                                <p>Materiales</p>
+                            </li>
+                            <li>
+                                <p>Área de trabajo</p>
+                            </li>
+                            <li>
+                                <p>Posición geográfica</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="subpage">
+                    <h3 class="bold">¿Cómo funciona la solución?</h3>
+                    <div class="flex items-center">
+                        <div class="flex-30"></div>
+                        <div class="img-container center">
+                            <img src="./content/138.png"
+                                alt="Infográfico de funcionamiento del la solución, planes de trabajo resaltados. Escuchar el audio para la explicación">
+                        </div>
+                    </div>
+                    <div class="absolute modal-sim">
+                        <ul>
+                            <li>
+                                <p>Seguimiento en tiempo real</p>
+                            </li>
+                            <li>
+                                <p>Visualización gráfica para fácil interpretación</p>
+                            </li>
+                            <li>
+                                <p>Mecanismos de alerta para detectar desvíos y riesgos</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="subpage">
+                    <h3 class="bold">¿Cómo funciona la solución?</h3>
+                    <div class="flex items-center">
+                        <div class="flex-30"></div>
+                        <div class="img-container center">
+                            <img src="./content/138.png"
+                                alt="Infográfico de funcionamiento del la solución, OT's resaltados. Escuchar el audio para la explicación">
+                        </div>
+                    </div>
+                    <div class="absolute modal-sim">
+                        <ul>
+                            <li>
+                                <p>Clase de servicio</p>
+                            </li>
+                            <li>
+                                <p>Tipo de tarea</p>
+                            </li>
+                            <li>
+                                <p>Localización geográfica</p>
+                            </li>
+                            <li>
+                                <p>Duración promedio</p>
+                            </li>
+                            <li>
+                                <p>Prioridad de ejecución</p>
+                            </li>
+                            <li>
+                                <p>Habilidades requeridas</p>
+                            </li>
+                            <li>
+                                <p>Herramientas necesarias</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section id="pag-mod-6-4" ptitle="Módulo 6 - FSM">
+                <div class="subpage">
+                    <!-- ESPACIO PARA COMIC -->
+                </div>
+                <div class="subpage">
+                    <h3 class="bold">Beneficios</h3>
+                    <div class="flex items-center">
+                        <div class="flex-half mr-15">
+                            <p class="bold justify">Equipos de despacho</p>
+                            <ul>
+                                <li>
+                                    <p>Foco en la <b>Foco en la gestión del plan y su cumplimiento</b></p>
+                                </li>
+                                <li>
+                                    <p><b>Visibilidad</b> de las cuadrillas y recursos en campo</p>
+                                </li>
+                                <li>
+                                    <p>Mayor <b>agilidad en la asignación</b> de tareas (automática, semiautomática, manual) e implementación de la programación centralizada.
+                                    </p>
+                                </li>
+                                <li>
+                                    <p><b>Información más precisa</b> sobre la ejecución de tareas (tiempos, recursos, materiales).
+                                    </p>
+                                </li>
+                                <li>
+                                    <p><b>Gestión de riesgos</b></p>
+                                </li>
+                                <li>
+                                    <p>Generación de <b>reportes</b> e información necesaria para operación de la próxima jornada.
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="img-container center">
+                            <img src="./content/145.png" alt="Infográfico de beneficios. Escucha el audio para más detalle.">
+                        </div>
+                    </div>
+                </div>
+                <div class="subpage">
+                    <h3 class="bold">Beneficios</h3>
+                    <div class="flex items-center">
+                        
+                        <div class="img-container center mr-15">
+                            <img src="./content/145.png" alt="Infográfico de beneficios. Escucha el audio para más detalle.">
+                        </div>
+                        <div class="flex-half">
+                            <p class="bold justify">Equipos móviles</p>
+                            <ul>
+                                <li>
+                                    <p><b>Disminución de los tiempos de desplazamiento</b> – optimización de recorridos.</p>
+                                </li>
+                                <li>
+                                    <p><b>Captura de información</b> en el momento de ejecución de la tarea.</p>
+                                </li>
+                                <li>
+                                    <p>Reducción del uso de papel - <b>carga de datos en línea</b> a través de la terminal, reduciendo reprocesos.
+                                    </p>
+                                </li>
+                                <li>
+                                    <p><b>Comunicación</b> de la cuadrilla con el despacho en todo momento
+                                    </p>
+                                </li>
+                                <li>
+                                    <p><b>Asignación de tareas</b> a partir de un plan optimizado, reduciendo visitas fallidas y otros reprocesos.
+                                    </p>
+                                </li>
+                                <li>
+                                    <p><b>Profesionalización</b> de la labor del personal en campo.
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="pag-actividades" ptitle="Actividades">
+                <div class="subpage">
+                    <!-- ESPACIO PARA COMIC -->
+                </div>
+                <div class="subpage">
+                    <h3>Pregunta 1</h3>
+                    <p class="bold fs-18">Identifica los sistemas que abordamos en esta sesión, según las descripciones:</p>
+                    <div class="jpit-activities-cloze" data-parent-mark-selector="span">
+                        <ul>
+                            <li>
+                                <p>Sistema que soporta los procesos de información, distribución, recolección y operación, así como  el registro de transacciones de la operación de agua potable, cruda y residual. <span>
+                                    <select>
+                                        <option data-response="true">Hidro</option>
+                                        <option>Scada</option>
+                                        <option>G/Net Viewer</option>
+                                        <option>Power monitoring expert</option>
+                                        <option>Sample manager</option>
+                                        <option>FSM</option>
+                                    </select>
+                                </span></p>
+                            </li>
+                            <li>
+                                <p>Software que permite supervisar y controlar procesos remotos en forma centralizada.<span>
+                                    <select>
+                                        <option>Hidro</option>
+                                        <option data-response="true">Scada</option>
+                                        <option>G/Net Viewer</option>
+                                        <option>Power monitoring expert</option>
+                                        <option>Sample manager</option>
+                                        <option>FSM</option>
+                                    </select>
+                                </span></p>
+                            </li>
+                            <li>
+                                <p>Herramienta que provee una vista de solo lectura de información contenida en un conjunto de datos del modelo de la red sobre un sistema de información geográfica en tiempo real.<span>
+                                    <select>
+                                        <option>Hidro</option>
+                                        <option>Scada</option>
+                                        <option data-response="true">G/Net Viewer</option>
+                                        <option>Power monitoring expert</option>
+                                        <option>Sample manager</option>
+                                        <option>FSM</option>
+                                    </select>
+                                </span></p>
+                            </li>
+                        </ul>
+                        <div class="box_end"></div>
+                    </div>
+                </div>
+                <div class="subpage">
+                    <h3>Pregunta 1</h3>
+                    <p class="bold fs-18">Identifica los sistemas que abordamos en esta sesión, según las descripciones:</p>
+                    <div class="jpit-activities-cloze" data-parent-mark-selector="span">
+                        <ul>
+                            <li>
+                                <p>Herramienta de análisis, diagnóstico y gestión de los consumos de energía en las instalaciones del sistema de acueducto y alcantarillado.<span>
+                                    <select>
+                                        <option>Hidro</option>
+                                        <option>Scada</option>
+                                        <option>G/Net Viewer</option>
+                                        <option data-response="true">Power monitoring expert</option>
+                                        <option>Sample manager</option>
+                                        <option>FSM</option>
+                                    </select>
+                                </span></p>
+                            </li>
+                            <li>
+                                <p>Aplicación informática que permite registrar la información y hacer seguimiento a la calidad del agua en toda la cadena de valor mediante la gestión de muestras, registro de resultados de análisis y seguimiento en laboratorio.<span>
+                                    <select>
+                                        <option>Hidro</option>
+                                        <option>Scada</option>
+                                        <option>G/Net Viewer</option>
+                                        <option>Power monitoring expert</option>
+                                        <option data-response="true">Sample manager</option>
+                                        <option>FSM</option>
+                                    </select>
+                                </span></p>
+                            </li>
+                            <li>
+                                <p>Solución tecnológica para gestionar la fuerza de trabajo en la asignación y atención de órdenes de trabajo en campo.<span>
+                                    <select>
+                                        <option>Hidro</option>
+                                        <option>Scada</option>
+                                        <option>G/Net Viewer</option>
+                                        <option>Power monitoring expert</option>
+                                        <option>Sample manager</option>
+                                        <option data-response="true">FSM</option>
+                                    </select>
+                                </span></p>
+                            </li>
+                        </ul>
+                        <div class="box_end"></div>
+                    </div>
+                </div>
+                <div class="subpage">
+                    <h3>Pregunta 2</h3>
+                    <p class="bold fs-18">Entre otros, los servicios que se soportan en Hidro son:</p>
+                    <div class="jpit-activities-quiz" data-act-title="Cuestionario" data-act-id="1_cuestionario">
+                        <question type="multichoice">
+                            <description><p>Selecciona las respuestas correctas</p></description>
+                            <ul>
+                                <li data-response="true">Agua cruda</li>
+                                <li data-response="true">Agua potable</li>
+                                <li data-response="true">Agua residual</li>
+                                <li>Gas</li>
+                                <li>Energía</li>
+                                <li>Gestión geográfica</li>
+                            </ul>
+                            <feedback>
+                                <correct>Así es, hay más tipos de preguntas.</correct>
+                            </feedback>                    
+                        </question>
+                    </div>
+                </div>
+                <div class="subpage">
+                    <h3>Pregunta 3</h3>
+                    <p class="bold fs-18">G/Net Viewer permite editar los datos de un SIG:</p>
+                    <div class="jpit-activities-quiz" data-act-title="Cuestionario" data-act-id="1_cuestionario">
+                        <question type="simplechoice">
+                            <description><p>Selecciona la respuesta correcta</p></description>
+                            <ul>
+                                <li>Verdadero</li>
+                                <li data-response="true">Falso</li>
+                            </ul>
+                        </question>
+                    </div>
+                </div>
+                <div class="subpage">
+                    <h3>Pregunta 4</h3>
+                    <p class="bold fs-18">Scada tiene instrumentación y sensores conectados en la infraestructura del acueducto en todos los municipios, menos en el oriente</p>
+                    <div class="jpit-activities-quiz" data-act-title="Cuestionario" data-act-id="1_cuestionario">
+                        <question type="simplechoice">
+                            <description><p>Selecciona la respuesta correcta</p></description>
+                            <ul>
+                                <li>Verdadero</li>
+                                <li data-response="true">Falso</li>
+                            </ul>
+                        </question>
+                    </div>
+                </div>
+                <div class="subpage">
+                    <h3>Pregunta 5</h3>
+                    <p class="bold fs-18">Actualmente Power monitoring expert es utilizada solo por la VP Agua y Saneamiento</p>
+                    <div class="jpit-activities-quiz" data-act-title="El cuestionario" data-act-id="1_cuestionario">
+                        <question type="simplechoice">
+                            <description><p>Selecciona la respuesta correcta</p></description>
+                            <ul>
+                                <li>Verdadero</li>
+                                <li data-response="true">Falso</li>
+                            </ul>
+                        </question>
+                    </div>
+                </div>
+                <div class="subpage">
+                    <h3>Pregunta 6</h3>
+                    <p class="bold fs-18">Identifica las características de los componentes FSM</p>
+                    <div class="jpit-activities-cloze" data-parent-mark-selector="span">
+                        <ul>
+                            <li>
+                                <p>Versión de que incluye metodologías de planificación y procesos de trabajo para apoyar la organización y gestión del trabajo en campo.<span>
+                                    <select>
+                                        <option data-response="true">ClickSchedule</option>
+                                        <option>ClickMobile</option>
+                                    </select>
+                                </span></p>
+                            </li>
+                            <li>
+                                <p>Versión disponible en las terminales de las cuadrillas con funcionalidades que apoyan la organización y gestión del trabajo en campo.<span>
+                                    <select>
+                                        <option>ClickSchedule</option>
+                                        <option data-response="true">ClickMobile</option>
+                                    </select>
+                                </span></p>
+                            </li>
+                        </ul>
+                        <div class="box_end"></div>
+                    </div>
+                </div>
+            </section>
         </main>
         <div id="subpages_menu">
             <button class="button" previous-page aria-label="botón anterior"></button>
@@ -532,19 +1796,6 @@
         </div>
         <footer class="not_print">
             <div class="measuring-progress" data-type="horizontal"></div>
-
-            <!-- <nav label="Características globales" class="globals">
-                <menu>
-                    <menuitem data-global-id="results"><i title="Progreso" class="ion-clipboard tooltip" data-position-at="top"></i></menuitem>
-                    <menuitem data-global-id="return">
-                        <i title="Maximizar" class="ion-arrow-expand tooltip maximize" data-position-at="top"></i>
-                        <i title="Minimizar" class="ion-arrow-shrink tooltip minimize" data-position-at="top"></i>
-                    </menuitem>
-                    <menuitem data-global-id="close_all"><i title="Regresar" class="ion-reply tooltip" data-position-at="top"></i></menuitem>
-                </menu>
-            </nav> -->
-
-            <!-- <div id="page_number"></div> -->
         </footer>
 
     </div>
@@ -582,6 +1833,78 @@
                     </menuitem>
                 </menu>
                 </menuitem>
+                <menuitem label="Modulo 2 - SCADA">
+                <menu>
+                    <menuitem label="1. Introducción" data-page="pag-mod-2-1">
+                    </menuitem>
+                    <menuitem label="2. SCADA" data-page="pag-mod-2-2">
+                    </menuitem>
+                    <menuitem label="3. Componentes" data-page="pag-mod-2-3">
+                    </menuitem>
+                    <menuitem label="4. Como funciona el SCADA de aguas" data-page="pag-mod-2-4">
+                    </menuitem>
+                </menu>
+                </menuitem>
+                <menuitem label="Modulo 3 - G/Net Viewer">
+                <menu>
+                    <menuitem label="1. Introducción" data-page="pag-mod-3-1">
+                    </menuitem>
+                    <menuitem label="2. ¿Qué es un SIG?" data-page="pag-mod-3-2">
+                    </menuitem>
+                    <menuitem label="3. G/Net Viewer" data-page="pag-mod-3-3">
+                    </menuitem>
+                    <menuitem label="4. Interfaz de Usuario" data-page="pag-mod-3-4">
+                    </menuitem>
+                    <menuitem label="4.1 Área de funcionalidades" data-page="pag-mod-3-5">
+                    </menuitem>
+                    <menuitem label="4.2 Barra de herramientas" data-page="pag-mod-3-6">
+                    </menuitem>
+                    <menuitem label="4.3 Barra de Redlines" data-page="pag-mod-3-7">
+                    </menuitem>
+                    <menuitem label="4.3 Zona de Localización de Resultados" data-page="pag-mod-3-8">
+                    </menuitem>
+                    <menuitem label="5. Modelo Digital de Aguas" data-page="pag-mod-3-9">
+                    </menuitem>
+                </menu>
+                </menuitem>
+                <menuitem label="Modulo 4 - Power Monitoring Expert">
+                <menu>
+                    <menuitem label="1. Introducción" data-page="pag-mod-4-1">
+                    </menuitem>
+                    <menuitem label="2. ¿Cómo lo hace?" data-page="pag-mod-4-2">
+                    </menuitem>
+                    <menuitem label="3. Instalaciones" data-page="pag-mod-4-3">
+                    </menuitem>
+                    <menuitem label="4. Uso" data-page="pag-mod-4-4">
+                    </menuitem>
+
+                </menu>
+                </menuitem>
+                <menuitem label="Módulo 5 - Sample manager">
+                <menu>
+                    <menuitem label="1. Introducción" data-page="pag-mod-5-1">
+                    </menuitem>
+                    <menuitem label="2. Normalización y laboratorios" data-page="pag-mod-5-2">
+                    </menuitem>
+                    <menuitem label="3. ¿Qué permite hacer la herramienta?" data-page="pag-mod-5-3">
+                    </menuitem>
+                    <menuitem label="4. Vertimientos" data-page="pag-mod-5-4">
+                    </menuitem>
+                </menu>
+                </menuitem>
+                <menuitem label="Módulo 6 - FSM">
+                <menu>
+                    <menuitem label="1. Introducción" data-page="pag-mod-6-1">
+                    </menuitem>
+                    <menuitem label="2. Componentes del FSM" data-page="pag-mod-6-2">
+                    </menuitem>
+                    <menuitem label="3. ¿Cómo funciona la solución?" data-page="pag-mod-6-3">
+                    </menuitem>
+                    <menuitem label="4. Beneficios" data-page="pag-mod-6-4">
+                    </menuitem>
+                </menu>
+                </menuitem>
+                <menuitem label="Actividades" data-page="pag-actividades">
             </menu>
         </nav>
     </div>

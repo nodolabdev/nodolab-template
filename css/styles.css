@@ -1209,8 +1209,14 @@ audio {
 div.iconsound, button.iconsound {
     width: 61px;
     height: 61px;
-    background: url(../img/sprite_botones.png) no-repeat 83.2% center;
-    background-size: 1600%;
+    background: url(../img/audio-icon.png) no-repeat;
+}
+
+.screen-reader {
+    position: absolute;
+    right: 5%;
+    top: 5%;
+    z-index: 1;
 }
 
 div.iconsound {
@@ -1816,37 +1822,36 @@ sup.tooltip {
     font-weight: bold;
     position: relative;
     min-height: 35px;
-    box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.16);
-}
-
-.box_end .correct:before, .box_end .wrong:before {
-    content: "";
-    background: url(../img/sprite_iconos.png) no-repeat;
-    background-size: 600%;
-    width: 50px;
-    top: 0;
-    bottom: 0;
-    left: -55px;
-    position: absolute;
+    box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.52);
 }
 
 .box_end .correct {
-    color: #27d368;
-    border-left: 70px solid #27d368;
+    color: var(--primary-color);
 }
 
 .box_end .correct:before {
-    background-position: 75% center;
+    content: '';
+    position: absolute;
+    background-image: url(../img/correct.svg);
+    width: 50px;
+    height: 50px;
+    top: 0;
+    left: -55px;
 }
 
 .box_end .wrong:before {
-    background-position: 99% center;
+    content: '';
+    position: absolute;
+    background-image: url(../img/wrong.svg);
+    width: 50px;
+    height: 50px;
+    top: 0;
+    left: -55px;
 }
 
 
 .box_end .wrong {
     color: #FF2706;
-    border-left: 70px solid #FF2706;
 }
 
 .saving .activity_modal {
@@ -1990,10 +1995,13 @@ sup.tooltip {
     margin: auto;
     border-radius: 20px;
     font-weight: bold;
-    text-align: center;
     position: relative;
     min-height: 35px;
-    box-shadow: 0px 0px 2px 0px rgb(0 0 0 / 16%);
+    box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.52);
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .jpit_activities_quiz_question_feedback_true {
@@ -2007,23 +2015,25 @@ sup.tooltip {
 }
 
 .jpit_activities_quiz_question_feedback_true:after {
-    background: url(../img/sprite.png) no-repeat -1280px 0;
+    content: '';
+    background: url(../img/correct.svg) no-repeat;
     position: absolute;
     right: 0;
-    width: 40px;
-    height: 30px;
+    width: 50px;
+    height: 50px;
     content: "";
     top: 0;
     z-index: 2;
 }
 
 .jpit_activities_quiz_question_feedback_false:after {
-    content: "";
-    background: url(../img/sprite.png) no-repeat -1280px -50px;
+    content: '';
+    background: url(../img/wrong.svg) no-repeat;
     position: absolute;
     right: 0;
-    width: 30px;
-    height: 30px;
+    width: 50px;
+    height: 50px;
+    content: "";
     top: 0;
     z-index: 2;
 }
