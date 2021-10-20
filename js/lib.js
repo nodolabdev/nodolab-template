@@ -1806,6 +1806,15 @@ dhbgApp.standard.load_operations = function() {
                 for(let i=0; i<sounds.length; i++) sounds[i].pause();
                 v($new_subpage);
             });
+
+            var anyDialogOpened = $('.ui-dialog').filter(function () {
+                return $(this).css('display') == 'block'
+            }).length;
+
+            if(!anyDialogOpened) {
+                $('.page-title').focus();
+            }
+
         }
 
         dhbgApp.printNumberPage(npage, nsubpage);
