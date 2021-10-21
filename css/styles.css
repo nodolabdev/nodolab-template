@@ -567,6 +567,22 @@ nav.globals li.active, nav.globals li.current {
         height: 60px;
 }
 
+.globals .more {
+    background: url(../img/sprite_menu.png) no-repeat;
+    background-size: 800%;
+    background-position: 102% center;
+    width: 45px;
+        height: 60px;
+}
+
+.globals .less {
+    background: url(../img/sprite_menu.png) no-repeat;
+    background-size: 800%;
+    background-position: 87.5% center;
+    width: 45px;
+        height: 60px;
+}
+
 #play-pause-voice-button {
     border: 0px;
     background-color: transparent;
