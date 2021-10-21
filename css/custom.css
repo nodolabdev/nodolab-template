@@ -965,3 +965,17 @@
     50%  { transform: translate(0, 15px); }
     100%   { transform: translate(0, -0px); }   
 }
+
+.genially {
+    width: 800px;
+    height: 400px;
+}
+
+.col-2 .genially {
+    width: 500px;
+    height: 300px;
+}
+
+.row {
+    align-items: center;
+}
