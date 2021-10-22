@@ -475,7 +475,7 @@ nav.globals {
     z-index: 99;
     border-radius: 5px;
     display: inline-block;
-    flex-basis: 360px;
+    flex-basis: 380px;
     flex-grow: 0;
     flex-shrink: 0;
 }
@@ -514,32 +514,32 @@ nav.globals li.active, nav.globals li.current {
 
 .globals .progress {
     background: url(../img/menu_buttons.png) no-repeat;
-    background-size: 600%;
-    background-position: -2.5% center;
+    background-size: 900%;
+    background-position: 11.5% center;
     width: 45px;
         height: 60px;
 }
 
 .globals .credits {
     background: url(../img/menu_buttons.png) no-repeat;
-    background-size: 600%;
-    background-position: 18.5% center;
+    background-size: 900%;
+    background-position: -1.5% center;
     width: 45px;
         height: 60px;
 }
 
 .globals .help {
     background: url(../img/menu_buttons.png) no-repeat;
-    background-size: 600%;
-    background-position: 40% center;
+    background-size: 900%;
+    background-position: 23.5% center;
     width: 45px;
         height: 60px;
 }
 
 .globals .return {
     background: url(../img/menu_buttons.png) no-repeat;
-    background-size: 600%;
-    background-position: 60% center;
+    background-size: 900%;
+    background-position: 51.5% center;
     width: 45px;
         height: 60px;
 }
@@ -552,35 +552,35 @@ nav.globals li.active, nav.globals li.current {
         height: 60px;
 }
 
-.globals .play {
-    background: url(../img/menu_buttons.png) no-repeat;
-    background-size: 600%;
-    background-position: 102.5% center;
-    width: 45px;
-        height: 60px;
-}
 .globals .pause {
     background: url(../img/menu_buttons.png) no-repeat;
-    background-size: 600%;
-    background-position: 81.5% center;
+    background-size: 900%;
+    background-position: 88.5% center;
+    width: 45px;
+    height: 60px;
+}
+.globals .play {
+    background: url(../img/menu_buttons.png) no-repeat;
+    background-size: 900%;
+    background-position: 101.5% center;
     width: 45px;
         height: 60px;
 }
 
 .globals .more {
-    background: url(../img/sprite_menu.png) no-repeat;
-    background-size: 800%;
-    background-position: 102% center;
+    background: url(../img/menu_buttons.png) no-repeat;
+    background-size: 900%;
+    background-position: 76.5% center;
     width: 45px;
-        height: 60px;
+    height: 60px;
 }
 
 .globals .less {
-    background: url(../img/sprite_menu.png) no-repeat;
-    background-size: 800%;
-    background-position: 87.5% center;
+    background: url(../img/menu_buttons.png) no-repeat;
+    background-size: 900%;
+    background-position: 62.5% center;
     width: 45px;
-        height: 60px;
+    height: 60px;
 }
 
 #play-pause-voice-button {
@@ -777,7 +777,7 @@ nav.horizontal ul.submenu > li.active, nav.horizontal ul.submenu > li.current {
 #subpages_menu {
     position: absolute;
     right: 50%;
-    bottom: 5%;
+    bottom: 6.5%;
     transform: translateX(50%);
 }
 
@@ -817,7 +817,7 @@ nav.horizontal ul.submenu > li.active, nav.horizontal ul.submenu > li.current {
 }
 
 #subpages_menu .button {
-    width: 130px;
+    width: 100px;
     height: 50px;
     margin: 0 2px;
     float: left;
@@ -1199,7 +1199,7 @@ div.icondocument, button.icondocument {
     width: 61px;
     height: 61px;
     background: url(../img/sprite_botones.png) no-repeat 100% center;
-    background-size: 1600%;
+    background-size: 1900%;
 }
 
 div.icondocument {
@@ -1225,7 +1225,7 @@ div.iconsound, button.iconsound {
     width: 61px;
     height: 61px;
     background: url(../img/sprite_botones.png) no-repeat 83.2% center;
-    background-size: 1600%;
+    background-size: 1900%;
 }
 
 div.iconsound {
@@ -1248,7 +1248,7 @@ div.iconvideo, button.iconvideo {
     width: 61px;
     height: 61px;
     background: url(../img/sprite_botones.png) no-repeat 91.7% center;
-    background-size: 1600%;
+    background-size: 1900%;
 }
 
 div.iconvideo {
@@ -1837,7 +1837,7 @@ sup.tooltip {
 .box_end .correct:before, .box_end .wrong:before {
     content: "";
     background: url(../img/sprite_iconos.png) no-repeat;
-    background-size: 600%;
+    background-size: 900%;
     width: 50px;
     top: 0;
     bottom: 0;

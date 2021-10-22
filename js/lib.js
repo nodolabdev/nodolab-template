@@ -1093,7 +1093,7 @@ dhbgApp.standard.start = function() {
         var duration = $this.attr('data-animation-duration') || 400;
         var ontransitionhidden = ".label_current," + $this.attr('data-pagination-transition-hidden') || '';
 
-        function showPage(page, isnext) {
+        function showPage(page, isnext) {
             var $page = $(page),
                 $prev = isnext ? $page.prev() : $page.next();
 
@@ -1827,9 +1827,10 @@ dhbgApp.standard.load_operations = function() {
 
             // Actions in change page.
             $.each(dhbgApp.actions.afterChangePage, function(i, v){
-                const pageTitle = $('.page-title');
-                if(pageTitle.text()==='') pageTitle.hide();
-                else pageTitle.show();
+                const sounds = document.getElementsByTagName('audio');
+                for(let i=0; i<sounds.length; i++) sounds[i].pause();
+                const videos = document.getElementsByTagName('video');
+                for(let i=0; i<videos.length; i++) videos[i].pause();
                 v($new_subpage);
             });
             
@@ -3683,4 +3684,3 @@ dhbgApp.standard.load_operations = function() {
     });
 
 };
-

@@ -5,7 +5,7 @@
  */
 (function (app) {
   function onAppLoaded() {
-    const mainTrack = new Audio("content/sounds/main_track.mp3");
+    const mainTrack = new Audio("content/sounds/main_track.mp4");
     mainTrack.load();
     /**
      * To handle when an activity has been completed.
