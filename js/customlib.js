@@ -39,24 +39,41 @@
     function changeFontSize(increase) {
       var maxVal = 24;
       var minVal = 16;
-      var currentSize = parseInt($(':root').css('font-size'));
-      if ((currentSize === maxVal && increase) || (currentSize === minVal && !increase)) {
+      var currentSize = parseInt($(":root").css("font-size"));
+      if (
+        (currentSize === maxVal && increase) ||
+        (currentSize === minVal && !increase)
+      ) {
         return;
       }
       var amount = increase ? 2 : -2;
-      $(':root').css('font-size', currentSize + amount);
+      $(":root").css("font-size", currentSize + amount);
     }
 
     function pageChanged(i, v) {
-      console.log("Hola mundo")
+      console.log("Hola mundo");
     }
+
+    //Menu control.
+    var $help_modal = $("#help_page").dialog({
+      modal: true,
+      autoOpen: false,
+      width: 989,
+      height: 535,
+      classes: {
+        "ui-dialog": "help_page_dialog",
+      },
+      close: function () {
+        $("body").removeClass("dhbgapp_fullview");
+      },
+    });
 
     //Menu control.
     var $menu_modal = $("#menu_page").dialog({
       modal: true,
       autoOpen: false,
       width: 500,
-      height: 300,
+      height: 400,
       classes: {
         "ui-dialog": "menu_page_dialog",
       },
@@ -65,31 +82,32 @@
       },
     });
 
-    $('[data-global="menu"]').on('click', function () {
-      var $dialog = $('#menu_page');
-      $menu_modal.dialog('open');
-    })
+    $('[data-global="menu"]').on("click", function () {
+      var $dialog = $("#menu_page");
+      $menu_modal.dialog("open");
+    });
 
-
+    $('[data-global="help"]').on("click", function () {
+      var $dialog = $("#help_page");
+      $help_modal.dialog("open");
+    });
 
     // Register application event handlers.
     $(app).on("jpit:activity:completed", onActivityCompleted);
     // $(window).one("click", playPauseMainTrack);
     $('[data-global="play-pause"]').click(playPauseMainTrack);
 
-    $('[data-change-font]').on('click', function () {
-      var increase = $(this).attr('data-change-font') === 'increase';
+    $("[data-change-font]").on("click", function () {
+      var increase = $(this).attr("data-change-font") === "increase";
       changeFontSize(increase);
     });
 
-    $(app).on('afterPageChange', console.log("Cambié de pagina"));
+    $(app).on("afterPageChange", console.log("Cambié de pagina"));
 
-    $.each(app.actions.afterChangePage, function(i, v){
-      console.log("Hola mundo")
+    $.each(app.actions.afterChangePage, function (i, v) {
+      console.log("Hola mundo");
     });
   }
-
-  
 
   $(window).on("load", onAppLoaded);
 })(dhbgApp);
