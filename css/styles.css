@@ -7,6 +7,7 @@ CSS Variables
     --primary-color: #02b802;
     --secondary-color:  #01785f;
     --tertiary-color: #a2d40d;
+    --fourth-color: #93d500;
     font-size: 16px;
   }
 
@@ -78,26 +79,16 @@ body:after {
     content: "";
     display: block;
     position: absolute;
-    bottom: 0;
+    bottom: 50%;
     left: 0%;
-    background-image: url(../img/left-bottom-asset.svg);
-    background-repeat: no-repeat;
-    width: 300px;
-    height: 300px;
-    z-index: -1;
-}
-
-body::before {
-    content: "";
-    display: block;
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    background-image: url(../img/right-asset.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 152px;
-    height: 553px;
+    background: url(../img/left-bottom-asset.png) no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;  
+    width: 160px;
+    height: 410px;
+    transform: translateY(50%);
     z-index: -1;
 }
 
@@ -406,7 +397,7 @@ img.animation, img.play-animation, .animation_image .label {
 main {
     padding: 20px 100px 45px;
     border-radius: 50px;
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0);
     position: relative;
     height: 485px;
     width: 989px;
@@ -414,7 +405,7 @@ main {
     display: block;
     margin: 0 auto;
     overflow: hidden;
-    box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.52);
+    border: 2px dashed #c99ff9;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -446,24 +437,24 @@ main {
 }
 
 .header .banner {
-    background-color: #fff;
+    background-color: var(--secondary-color);
     padding: 5px 15px;
     flex-basis: 500px;
     flex-grow: 0;
     flex-shrink: 0;
-    border-radius: 45px;
+    border-radius: 75px;
     -webkit-box-shadow: 10px 13px 22px -5px rgba(0,0,0,0.63); 
     box-shadow: 10px 13px 22px -5px rgba(0,0,0,0.63);
 }
 
 .header .banner h1 {
-    color: var(--secondary-color);
+    color: #fff;
     text-align: center;
     font-size: 1.125rem;
 }
 
 .header .banner h1 span {
-    color: var(--primary-color);
+    color: var(--fourth-color);
     font-size: 1.75rem;
 }
 
@@ -475,7 +466,7 @@ nav.globals {
     z-index: 99;
     border-radius: 5px;
     display: inline-block;
-    flex-basis: 360px;
+    flex-basis: 380px;
     flex-grow: 0;
     flex-shrink: 0;
 }
@@ -514,7 +505,7 @@ nav.globals li.active, nav.globals li.current {
 
 .globals .progress {
     background: url(../img/menu_buttons.png) no-repeat;
-    background-size: 600%;
+    background-size: 800%;
     background-position: -2.5% center;
     width: 45px;
         height: 60px;
@@ -522,23 +513,23 @@ nav.globals li.active, nav.globals li.current {
 
 .globals .credits {
     background: url(../img/menu_buttons.png) no-repeat;
-    background-size: 600%;
-    background-position: 18.5% center;
+    background-size: 800%;
+    background-position: 12% center;
     width: 45px;
         height: 60px;
 }
 
 .globals .help {
     background: url(../img/menu_buttons.png) no-repeat;
-    background-size: 600%;
-    background-position: 40% center;
+    background-size: 800%;
+    background-position: 27% center;
     width: 45px;
-        height: 60px;
+    height: 60px;
 }
 
 .globals .return {
     background: url(../img/menu_buttons.png) no-repeat;
-    background-size: 600%;
+    background-size: 800%;
     background-position: 60% center;
     width: 45px;
         height: 60px;
@@ -549,22 +540,39 @@ nav.globals li.active, nav.globals li.current {
     background-size: 1500%;
     background-position: 35.6% center;
     width: 45px;
-        height: 60px;
+    height: 60px;
 }
 
 .globals .play {
     background: url(../img/menu_buttons.png) no-repeat;
-    background-size: 600%;
-    background-position: 102.5% center;
+    background-size: 800%;
+    background-position: 57% center;
     width: 45px;
-        height: 60px;
+    height: 60px;
 }
+
 .globals .pause {
     background: url(../img/menu_buttons.png) no-repeat;
-    background-size: 600%;
-    background-position: 81.5% center;
+    background-size: 800%;
+    background-position: 71% center;
     width: 45px;
-        height: 60px;
+    height: 60px;
+}
+
+.globals .more {
+    background: url(../img/menu_buttons.png) no-repeat;
+    background-size: 800%;
+    background-position: 101% center;
+    width: 45px;
+    height: 60px;
+}
+
+.globals .less {
+    background: url(../img/menu_buttons.png) no-repeat;
+    background-size: 800%;
+    background-position: 87% center;
+    width: 45px;
+    height: 60px;
 }
 
 #play-pause-voice-button {
