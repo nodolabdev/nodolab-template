@@ -1244,6 +1244,13 @@ div.iconsound.active, button.iconsound.active {
     background: transparent url(../img/miniload.gif) no-repeat center;
 }
 
+.screen-reader {
+    position: absolute;
+    right: 5%;
+    top: 2%;
+    z-index: 1;
+}
+
 div.iconvideo, button.iconvideo {
     width: 61px;
     height: 61px;
