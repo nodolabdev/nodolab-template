@@ -4,8 +4,8 @@ CSS Variables
 */
 
 :root {
-    --primary-color: #166938;
-    --secondary-color:  #cac535;
+    --primary-color: #00877A;;
+    --secondary-color:  #93D500;
     --tertiary-color: #61a348;
     --green-one: #00953B;
     --green-two: #006632;
@@ -74,6 +74,20 @@ body {
     height: 100%;
     background-image: url(../img/background.svg);
     background-size: cover;
+}
+body:before {
+    content: "";
+    width: 100%;
+    height: 40%;
+    bottom: 40px;
+    right: 0;
+    left: 0;
+    position: absolute;
+    background-image: url(../img/background-2.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    z-index: -1;
 }
 
 body.dhbgapp_fullview {
@@ -158,16 +172,17 @@ img {
 
 .page-title {
     color: #fff;
-    background-color: var(--tertiary-color);
+    background-color: var(--secondary-color);
     border-radius: 45px;
     width: fit-content;
     padding: 5px 15px;
     line-height: 21px;
-    box-shadow: 0px 7px 11px -6px rgba(0,0,0,0.75);
+    box-shadow: 0px 3px 6px #00000059;;
     position: absolute;
     left: 25px;
     top: 0;
     z-index: 1;
+    font-weight: normal;
 }
 
 br.clear, div.clear {
@@ -381,19 +396,18 @@ img.animation, img.play-animation, .animation_image .label {
 /********************************************************************************/
 main {
     padding: 45px 100px 45px;
-    border-radius: 10px;
-    border: 2px solid #006632;
-    background-color: rgba(255, 255, 255, 0.5);
+    background: #ebebeb80;
     position: relative;
     height: 485px;
     width: 989px;
     box-sizing: border-box;
-    display: block;
     margin: 0 auto;
     overflow: hidden;
     display: flex;
     justify-content: center;
-    background-image: url(../img/course-images/container.svg);
+    box-shadow: 0px 3px 6px #0000004D;
+    border: 2px solid #FFFFFF;
+    border-radius: 22px;
 }
 
 
@@ -737,7 +751,7 @@ nav.horizontal ul.submenu > li.active, nav.horizontal ul.submenu > li.current {
 #subpages_menu {
     position: absolute;
     right: 50%;
-    bottom: 0%;
+    bottom: 5%;
     transform: translateX(50%);
 }
 
@@ -777,8 +791,8 @@ nav.horizontal ul.submenu > li.active, nav.horizontal ul.submenu > li.current {
 }
 
 #subpages_menu .button {
-    width: 130px;
-    height: 130px;
+    width: 60px;
+    height: 60px;
     margin: 0 2px;
     float: left;
     transition: all 0.2s ease-in-out;
@@ -789,13 +803,15 @@ nav.horizontal ul.submenu > li.active, nav.horizontal ul.submenu > li.current {
 
 #subpages_menu [previous-page] {
     background: url(../img/prev-button.svg);
-    background-size: cover;
+    background-repeat: no-repeat;
+    background-size: contain;
     margin-right: 10px;
 }
 
 #subpages_menu [next-page] {
     background: url(../img/next-button.svg);
-    background-size: cover;
+    background-repeat: no-repeat;
+    background-size: contain;
 }
 
 /********************************************************************************/
