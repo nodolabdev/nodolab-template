@@ -55,6 +55,7 @@ body {
     background-color: #f0f0ec;
     background-image: url(../img/background.png);
     background-size: cover;
+    overflow: hidden;
 }
 
 body:after {
@@ -252,4 +253,64 @@ button.general.active, button.general:hover {
 .img-container {
     flex-basis: 120%;
     margin-right: 25px;
+}
+
+/********************************************************************************/
+/* HEADER
+/********************************************************************************/
+
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;;
+    margin-bottom: 25px;
+    position: fixed;
+    top: 10px;
+    left: 0;
+    right: 0;
+    width: 100%;
+}
+
+.client-logo {
+    flex-basis: 300px;
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+
+.client-logo img {
+    width: 60%;
+    display: block;
+    margin: 0 auto;
+}
+
+.header .banner {
+    background-color: #fff;
+    padding: 5px 15px;
+    flex-basis: 500px;
+    flex-grow: 0;
+    flex-shrink: 0;
+    border-radius: 45px;
+    -webkit-box-shadow: 10px 13px 22px -5px rgba(0,0,0,0.63); 
+    box-shadow: 10px 13px 22px -5px rgba(0,0,0,0.63);
+}
+
+.header .banner h1 {
+    color: var(--secondary-color);
+    text-align: center;
+    font-size: 1.125rem;
+}
+
+.header .banner h1 span {
+    color: var(--primary-color);
+    font-size: 1.75rem;
+}
+
+/**********************************/
+
+.screen-reader {
+    position: absolute;
+    right: 3%;
+    top: 2%;
+    z-index: 1;
 }

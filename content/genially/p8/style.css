@@ -1,0 +1,113 @@
+* {
+	overflow: hidden;
+}
+
+#animacion {
+	width: 989px;
+	height: 485px;
+	position: relative;
+	overflow: hidden;
+}
+
+#animacion .arbol div,
+#animacion .textos div {
+	position: absolute;
+	opacity: 0;
+}
+
+#animacion .arbol .a1  {
+	width: 211px;
+	height: 298.58px;
+	top: 90.35px;
+	left: 101px;
+	animation: a1 2s ;
+	animation-delay: 0s;
+	animation-fill-mode: forwards;
+}
+
+#animacion .arbol .a2 {
+	width: 211px;
+	height: 299.13px;
+	top: 90.35px;
+	left: 101px;
+	animation: a1 2s ;
+	animation-delay: 2s ;
+	animation-fill-mode: forwards;
+}
+
+#animacion .arbol .a3 {
+	width: 219px;
+	height: 298.64px;
+	top: 90.35px;
+	left: 92px;
+	animation: a1 2s ;
+	animation-delay: 4s;
+	animation-fill-mode: forwards;
+}
+
+#animacion .arbol .a4 {
+	width: 219px;
+	height: 298.64px;
+	top: 90.35px;
+	left: 92px;
+	animation: a1 2s ;
+	animation-delay: 6s;
+	animation-fill-mode: forwards;
+}
+
+#animacion .textos .b1  {
+	width: 502px;
+	height: 61.91px;
+	top: 332px;
+	animation: b1 2s ;
+	animation-delay: 0s;
+	animation-fill-mode: forwards;
+}
+
+#animacion .textos .b2  {
+	width: 562px;
+	height: 133px;
+	top: 262px;
+	animation: b1 2s ;
+	animation-delay: 2s;
+	animation-fill-mode: forwards;
+}
+
+#animacion .textos .b3  {
+	width: 497px;
+	height: 63px;
+	top: 189px;
+	animation: b1 2s ;
+	animation-delay: 4s;
+	animation-fill-mode: forwards;
+}
+
+#animacion .textos .b4  {
+	width: 562.5px;
+	height: 135px;
+	top: 119px;
+	animation: b1 2s ;
+	animation-delay: 6s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes a1 {
+    from {
+    	opacity: 0;
+	}
+    to {
+    	opacity: 1;
+        
+    }
+}
+
+@keyframes b1 {
+    from {
+    	opacity: 0;
+    	left: 300px;
+	}
+    to {
+    	opacity: 1;
+        left: 330px;
+    }
+}

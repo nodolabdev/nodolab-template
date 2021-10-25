@@ -770,6 +770,8 @@
 .w-115 {width: 115px;}
 .w800 {width: 800px;}
 
+.h300 {height: 300px;}
+
 .m-15 {
     margin: 5px;
 }
@@ -996,6 +998,10 @@
     height: 475px;
 }
 
+.genially.p9 {
+    height: 350px;   
+}
+
 .row {
     align-items: center;
 }
@@ -1015,6 +1021,7 @@
 
 .jpit-activities-selection table {
     padding: 20px 0;
+    text-align: center;
 }
 
 #pag-act-10 {
@@ -1043,3 +1050,47 @@
 #pag-mod-2-2 .content-box {
     top: 230px;
 }
+
+.flecha {
+    width: 40px;
+    height: 20px;
+    background: url(../content/flecha.svg) no-repeat;
+}
+
+span img {
+    width: 50px;
+    margin: 0 5px;
+}
+
+.pdf {
+    float: right;
+}
+
+/*Detalle de Lista de Opciones Generales*/
+#opciones_generales {
+    height: 300px;
+    text-align: left;
+}
+
+#opciones_generales div {
+    position: absolute;
+    left: 0;
+    width: 300px;
+}
+
+#opciones_generales div:before {
+    content: "";
+    background: url(../content/flecha.svg) no-repeat;
+    position: absolute;
+    top: 5px;
+    left: -50px;
+    width: 40px;
+    height: 20px;
+}
+
+#opciones_generales .info {top: 10px;}
+#opciones_generales .marcadores {top: 55px;}
+#opciones_generales .alerta {top: 110px;}
+#opciones_generales .enviar {top: 155px;}
+#opciones_generales .carga {top: 210px;}
+#opciones_generales .historial {top: 260px;}

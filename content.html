@@ -128,10 +128,6 @@
 
         <main style="display: none;">
             <h2 class="page-title" tabindex="-1"></h2>
-            <button aria-label="Reproducir audio del contenido" data-global-id="play-pause-voice"
-                id="play-pause-voice-button">
-                <div class="play"><span>Play</span></div>
-            </button>
             <section id="pag-inicio" ptitle="Contextualización">
                 <div class="subpage">
                     <h2 class="fs-30 center">Recomendaciones</h2>
@@ -183,7 +179,7 @@
                         <div class="help-button help-button-7"><img src="./img/next-button.png"
                                 alt="Ícono de siguiente"></div>
                         <div class="help-button help-button-8"><img src="./img/15 boton PDF.png"
-                                alt="Ícono de siguiente"></div>
+                                alt="Ícono de PDF"></div>
                     </div>
                 </div>
             </section>
@@ -284,10 +280,19 @@
                     <p>Estas ramas son irrigadas por un <b>tronco</b> robusto que en el CMI es la perspectiva de <b>Operaciones</b>; el árbol necesita unas <b>raíces</b> para que crezca de manera sólida y estable; esto se representa en la perspectiva de <b>Aprendizaje y Desarrollo</b>. </p>
                 </div>
                 <div class="subpage">
+                    <audio class="screen-reader" controls >
+                        <source src="content/sounds/8.mp3" type="audio/mp3">
+                        Su navegador no soporta el componente de audio
+                    </audio>
                     <iframe class="genially center" aria-label="Para escuchar la descripción de este contenido activa el audio de esta página" style="border: none;" src="content/genially/p8/index.html"></iframe>
                 </div>
                 <div class="subpage">
-                    <iframe class="genially center" aria-label="Para escuchar la descripción de este contenido activa el audio de esta página" style="border: none;" src="content/genially/p9/index.html"></iframe>
+                    <audio class="screen-reader" controls >
+                        <source src="content/sounds/9.mp3" type="audio/mp3">
+                        Su navegador no soporta el componente de audio
+                    </audio>
+                    <p class="w-80 center">Esta es una muestra de Mapa Estratégico que, de forma gráfica, describe el Direccionamiento Estratégico de una compañía y demuestra cómo se distribuyen los Objetivos Estratégicos en las diferentes perspectivas.</p>
+                    <iframe class="genially center p9" aria-label="Para escuchar la descripción de este contenido activa el audio de esta página" style="border: none;" src="content/genially/p9/index.html"></iframe>
                 </div>
             </section>
             <section id="pag-mod-1-3">
@@ -382,6 +387,11 @@
                     <img src="./content/17.svg" class="full-width-bg" alt="Actividades del proceso de seguimiento">
                     <div class="content-box" id="step-5">
                         <p>Preparar la información consolidada que permita la toma de decisiones en la respectiva instancia, y promover la aprobación,  verificación, y discusión sobre los indicadores.</p>
+                        <div class="pdf">
+                            <a href="content/Actividades_del_Proceso_Seguimiento_y_Mejora_a_la_Gestion.pdf" target="_blank">
+                                <img src="./img/15 boton PDF.png" alt="Descargar PDF" />
+                            </a>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -1232,8 +1242,25 @@
                             </div>
                         </div>
                     </div>
-                    <div class="subpage">
-<!-- To Do -->                        
+                </div>
+                <div class="subpage">
+                    <div class="w-80 center">
+                        <h3 class="mb-15">Detalle de Lista de Opciones Generales</h3>
+                        <div class="row">
+                            <div class="col-2">
+                                <img class="h300" src="./content/59.png" />
+                            </div>
+                            <div class="col-2 relative">
+                                <div id="opciones_generales">
+                                    <div class="info">Información del Indicador.</div>
+                                    <div class="marcadores">Agregar indicador a marcadores.</div>
+                                    <div class="alerta">Suscribir o editar alerta.</div>
+                                    <div class="enviar">Enviar Tablero de indicador a: Presentación, impresora, Word, Excel, Power Point, PDF.</div>
+                                    <div class="carga">Realizar actualización de indicadores por carga masiva de información.</div>
+                                    <div class="historial">Visualizar historial de eventos en el indicador.</div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -1824,7 +1851,7 @@
                 </div>
                 <div class="subpage">
                     <div class="jpit-activities-selection" data-act-title="Pragunta 8" data-act-id="08pregunta" data-parent-mark-selector="false" data-mode="single">
-                        <p>En el icono (estrella) se suscriben las alertas.</p>
+                        <p>En el icono <span><img src="content/59-2.png" alt="Estrella" /></span> (estrella) se suscriben las alertas.</p>
                         
                         <div class="option" data-group="1" data-correct="true">
                             <div class="radio"></div>
@@ -1841,7 +1868,7 @@
                 </div>
                 <div class="subpage">
                     <div class="jpit-activities-selection" data-act-title="Pragunta 9" data-act-id="09pregunta" data-parent-mark-selector="false" data-mode="single">
-                        <p>En el icono se (letra i en un círculo) se encuentra la información del indicador.</p>
+                        <p>En el icono <span><img src="content/59-1.png" alt="letra i en un círculo" /></span> (letra i en un círculo) se encuentra la información del indicador.</p>
                         
                         <div class="option" data-group="1">
                             <div class="radio"></div>
@@ -1868,13 +1895,13 @@
                                     <table>
                                         <tr>
                                             <td>Definición de elementos de medición</td>
-                                            <td><span class="icon_horizontal_arrow"></span></td>
+                                            <td><div class="flecha"></span></div>
                                             <td>Monitoreo y medición de la ejecución</td>
-                                            <td><span class="icon_horizontal_arrow"></span></td>
+                                            <td><div class="flecha"></span></div>
                                             <td>Análisis y evaluación de resultados</td>
-                                            <td><span class="icon_horizontal_arrow"></span></td>
+                                            <td><div class="flecha"></span></div>
                                             <td>Identificación de brechas de desempeño</td>
-                                            <td><span class="icon_horizontal_arrow"></span></td>
+                                            <td><div class="flecha"></span></div>
                                             <td>Presentación informes de seguimiento</td>
                                         </tr>
                                         <tr></tr>
@@ -1888,13 +1915,13 @@
                                     <table>
                                         <tr>
                                             <td>Monitoreo y medición de la ejecución</td>
-                                            <td><span class="icon_horizontal_arrow"></span></td>
+                                            <td><div class="flecha"></span></div>
                                             <td>Definición de elementos de medición</td>
-                                            <td><span class="icon_horizontal_arrow"></span></td>
+                                            <td><div class="flecha"></span></div>
                                             <td>Presentación informes de seguimiento</td>
-                                            <td><span class="icon_horizontal_arrow"></span></td>
+                                            <td><div class="flecha"></span></div>
                                             <td>Identificación de brechas de desempeño</td>
-                                            <td><span class="icon_horizontal_arrow"></span></td>
+                                            <td><div class="flecha"></span></div>
                                             <td>Análisis y evaluación de resultados</td>
                                         </tr>
                                         <tr></tr>
@@ -1908,13 +1935,13 @@
                                     <table>
                                         <tr>
                                             <td>Análisis y evaluación de resultados</td>
-                                            <td><span class="icon_horizontal_arrow"></span></td>
+                                            <td><div class="flecha"></span></div>
                                             <td>Definición de elementos de medición</td>
-                                            <td><span class="icon_horizontal_arrow"></span></td>
+                                            <td><div class="flecha"></span></div>
                                             <td>Identificación de brechas de desempeño</td>
-                                            <td><span class="icon_horizontal_arrow"></span></td>
+                                            <td><div class="flecha"></span></div>
                                             <td>Presentación informes de seguimiento</td>
-                                            <td><span class="icon_horizontal_arrow"></span></td>
+                                            <td><div class="flecha"></span></div>
                                             <td>Monitoreo y medición de la ejecución</td>
                                         </tr>
                                         <tr></tr>
