@@ -711,6 +711,7 @@
 .flex-half {flex: 0 0 50%;}
 .flex-halfplus {flex: 0 0 60%;}
 .flex-30 {flex: 0 0 30%;}
+.flex-40 {flex: 0 0 40%;}
 .flex-45 {flex: 0 0 45%;}
 .flex-third {flex: 0 0 33%;}
 
@@ -727,6 +728,8 @@
 .items-center {align-items: center;}
 .items-start {align-items: flex-start;}
 .items-end {align-items: flex-end;}
+
+.space-around {justify-content: space-around;}
 
 
 .img {
@@ -1035,4 +1038,8 @@
 
 #pag-act-10 .jpit-activities-selection .box_end button {
     margin: 0 auto;
+}
+
+#pag-mod-2-2 .content-box {
+    top: 230px;
 }
