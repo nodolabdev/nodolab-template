@@ -716,6 +716,10 @@
 
 .wrap {flex-wrap: wrap;}
 
+.mr-10 {
+    margin-right: 10px;
+}
+
 .mr-15 {
     margin-right: 15px;
 }
@@ -752,7 +756,9 @@
 .fs-16 {font-size: 1rem;}
 .fs-18 {font-size: 1.125rem;}
 .black {color: #000;}
+.w-20 {width: 20%;}
 .w-25 {width: 25%;}
+.w-35 {width: 35%;}
 .w-40 {width: 40%;}
 .w-80 {width: 80%;}
 .w-70 {width: 70%;}
@@ -989,4 +995,44 @@
 
 .row {
     align-items: center;
+}
+
+.jpit-activities-selection > div {
+    cursor: pointer;
+}
+
+.jpit-activities-selection .option {
+    min-height: 35px;
+}
+
+.jpit-activities-selection .selected .check,
+.jpit-activities-selection .selected .radio {
+    background-color: #a2d40d;
+}
+
+.jpit-activities-selection table {
+    padding: 20px 0;
+}
+
+#pag-act-10 {
+    top: -30px;
+    position: relative;
+}
+
+#pag-act-10 .jpit-activities-selection .option {
+    display: flex;
+    align-items: center;
+}
+
+#pag-act-10 .jpit-activities-selection .radio {
+    min-width: 15px;
+    margin-right: 5px;
+}
+
+#pag-act-10 .jpit-activities-selection ol {
+    margin: 0;
+}
+
+#pag-act-10 .jpit-activities-selection .box_end button {
+    margin: 0 auto;
 }
