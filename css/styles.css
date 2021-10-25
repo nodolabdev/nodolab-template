@@ -63,6 +63,38 @@ html {
     font-size: 16px;
 }
 
+html::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    background: url(../img/top-right.svg) no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    width: 130px;
+    height: 120px;
+    z-index: -1;
+}
+
+html::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0%;
+    right: 0%;
+    background: url(../img/bottom-right.svg) no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    width: 130px;
+    height: 120px;
+    z-index: -1;
+}
+
 body {
     font-family: 'Calibri', sans-serif;
     font-size: 1rem;
