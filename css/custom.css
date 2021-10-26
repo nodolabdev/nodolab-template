@@ -717,6 +717,10 @@
     margin-right: 15px;
 }
 
+.ml-15 {
+    margin-left: 15px;
+}
+
 .items-center {
     align-items: center;
 }
@@ -740,11 +744,11 @@
     color: #5c5c5b;
 }
 
-.fs-30 {font-size: 1.875rem;}
-.fs-24 {font-size: 1.5rem;}
-.fs-14 {font-size: .875rem;}
-.fs-16 {font-size: 1rem;}
-.fs-18 {font-size: 1.125rem;}
+.fs-30 {font-size: 1.875rem; line-height: 1.875rem;;}
+.fs-24 {font-size: 1.5rem; line-height: 1.5rem;;}
+.fs-14 {font-size: .875rem; line-height: .875rem;;}
+.fs-16 {font-size: 1rem; line-height: 1rem;;}
+.fs-18 {font-size: 1.125rem; line-height: 1.125rem;;}
 .black {color: #000;}
 .w-80 {width: 80%;}
 
@@ -842,3 +846,248 @@
       opacity: 1;
     }
   }
+
+#help_page {
+    overflow: hidden;
+}
+/********************************************************************************/
+/* PERSONAJES
+/********************************************************************************/
+.personaje {
+    background-size: cover !important;
+    position: absolute;
+    width: 264px;
+    height: 381px;
+    top: 50px;
+}
+
+.p1 {
+    background: url(../content/p1.png) no-repeat;
+}
+
+.p2 {
+    background: url(../content/p2.png) no-repeat;
+    height: 386px;
+}
+
+.p3 {
+    background: url(../content/p3.png) no-repeat;
+    height: 426px;
+}
+
+.p4 {
+    background: url(../content/p4.png) no-repeat;
+    width: 273px;   
+}
+
+.p5 {
+    background: url(../content/p5.png) no-repeat;
+    width: 274px;
+}
+
+.p6 {
+    background: url(../content/p6.png) no-repeat;
+    height: 389px;
+}
+/********************************************************************************/
+/* BURBUJAS
+/********************************************************************************/
+.burbuja {
+    width: 232px;
+    height: 132px;
+    position: absolute;
+}
+
+.b1 {
+    background: url(../content/b1.svg) no-repeat;
+    top: 0;
+    left: 0;
+}
+.b2 {
+    background: url(../content/b2.svg) no-repeat;
+    width: 120px;
+    height: 106px;
+    right: 0;
+    bottom: 0;
+}
+.b3 {
+    background: url(../content/b3.svg) no-repeat;
+    top: 0;
+    right: 0;
+}
+.b4 {
+    background: url(../content/b4.svg) no-repeat;
+    width: 120px;
+    height: 106px;
+    bottom: 0;
+    left: 0;
+}
+
+.b5 {
+    background: url(../content/b1.svg) no-repeat;
+    bottom: 0;
+    right: 0;
+    transform: rotate(180deg);
+}
+
+.b6 {
+    background: url(../content/b3.svg) no-repeat;
+    bottom: 0;
+    left: 0;
+    transform: rotate(180deg);
+}
+
+.burbuja-cont {
+    position: relative;
+    padding: 5px 40px;
+}
+/********************************************************************************/
+/* GENERAL
+/********************************************************************************/
+.float-right {
+    float: right;
+}
+
+.float-left {
+    float: left;
+}
+
+.text-cont {
+    padding: 10px;
+}
+/********************************************************************************/
+/* PANTALLAS
+/********************************************************************************/
+
+/******************************/
+/*Pantalla 4
+/******************************/
+#pantalla-4 .burbuja-cont {
+    width: 65%;
+    text-align: right;
+}
+
+#pantalla-4 .burbuja-cont h3 {
+    font-size: 1.75rem;
+}
+
+#pantalla-4 .personaje {
+    right: 20px;
+}
+
+/******************************/
+/*Pantalla 5
+/******************************/
+#pantalla-5 .burbuja-cont {
+    width: 65%;
+    text-align: justify;
+    float: right;
+}
+
+#pantalla-5 .burbuja-cont h3 {
+    font-size: 1.75rem;
+}
+
+#pantalla-5 .personaje {
+    left: 30px;
+}
+
+/******************************/
+/*Pantalla 6
+/******************************/
+#pantalla-6 .burbuja-cont {
+    width: 65%;
+    text-align: justify;
+}
+
+#pantalla-6 .burbuja-cont h3 {
+    font-size: 1.5rem;
+}
+
+#pantalla-6 .personaje {
+    right: 20px;
+    top: 25px;
+}
+/******************************/
+/*Pantalla 7
+/******************************/
+#pantalla-7 .box_media {
+    width: 300px;
+}
+
+/******************************/
+/*Pantalla 8
+/******************************/
+#pantalla-8 .personaje {
+    right: 20px;
+}
+
+#pantalla-8 .text-cont {
+    width: 80%;
+}
+
+#pantalla-8 .burbuja-cont {
+    width: 63%;
+}
+/******************************/
+/*Pantalla 11-1 a 11-6
+/******************************/
+#pantalla-11-1 .burbuja-cont,
+#pantalla-11-2 .burbuja-cont,
+#pantalla-11-3 .burbuja-cont,
+#pantalla-11-4 .burbuja-cont,
+#pantalla-11-5 .burbuja-cont,
+#pantalla-11-6 .burbuja-cont {
+    width: 65%;
+    text-align: left;
+}
+
+#pantalla-11-1 .burbuja-cont h3,
+#pantalla-11-2 .burbuja-cont h3,
+#pantalla-11-3 .burbuja-cont h3,
+#pantalla-11-4 .burbuja-cont h3,
+#pantalla-11-5 .burbuja-cont h3,
+#pantalla-11-6 .burbuja-cont h3 {
+    font-size: 1.5rem;
+}
+
+#pantalla-11-1 .personaje,
+#pantalla-11-2 .personaje,
+#pantalla-11-3 .personaje,
+#pantalla-11-4 .personaje,
+#pantalla-11-5 .personaje,
+#pantalla-11-6 .personaje {
+    right: 20px;
+    top: 25px;
+}
+
+#pantalla-11-1 .text-cont,
+#pantalla-11-2 .text-cont,
+#pantalla-11-3 .text-cont,
+#pantalla-11-4 .text-cont,
+#pantalla-11-5 .text-cont,
+#pantalla-11-6 .text-cont {
+    background-color: #e3e3e3;
+    font-weight: bold;
+    border-radius: 25px;
+    width: 50%;
+    padding: 10px 30px;
+    margin: 30px 50px 0;
+}
+/******************************/
+/*Pantalla 12
+/******************************/
+#pantalla-12 .burbuja-cont {
+    width: 60%;
+    text-align: justify;
+    float: right;
+}
+
+#pantalla-12 h3 {
+    width: 66%;
+    font-size: 1.75rem;
+}
+
+#pantalla-12 .personaje {
+    left: 30px;
+}
