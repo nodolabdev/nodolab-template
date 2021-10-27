@@ -748,7 +748,7 @@
 .fs-24 {font-size: 1.5rem; line-height: 1.5rem;;}
 .fs-14 {font-size: .875rem; line-height: .875rem;;}
 .fs-16 {font-size: 1rem; line-height: 1rem;;}
-.fs-18 {font-size: 1.125rem; line-height: 1.125rem;;}
+.fs-18 {font-size: 1.125rem; line-height: 1.25rem;;}
 .black {color: #000;}
 .w-80 {width: 80%;}
 
@@ -888,6 +888,17 @@
 .p6 {
     background: url(../content/p6.png) no-repeat;
     height: 389px;
+}
+
+.p7 {
+    background: url(../content/p7.png) no-repeat;
+    height: 389px;
+}
+
+.p8 {
+    background: url(../content/p8.png) no-repeat;
+    height: 420px;
+    width: 250px;
 }
 /********************************************************************************/
 /* BURBUJAS
@@ -1090,4 +1101,100 @@
 
 #pantalla-12 .personaje {
     left: 30px;
+}
+/******************************/
+/*Pantalla 13
+/******************************/
+#pantalla-13 .aprendamos {
+    width: 320px;
+    text-align: center;
+    position: relative;
+    margin: 30px auto 20px;
+}
+
+#pantalla-13 .aprendamos .name {
+    font-family: VAG Rounded;
+    background-color: #a2d40d;
+    width: 70%;
+    padding: 5px;
+    font-weight: bold;
+    color: #fff;
+    font-size: 20px;
+    border-radius: 30px;
+    position: absolute;
+    left: 15%;
+    top: -16px;
+}
+
+#pantalla-13 .aprendamos .name:before {
+    width: 53px;
+    height: 55px;
+    background: url(../content/14.svg) no-repeat;
+    background-size: cover;
+    content: "";
+    position: absolute;
+    left: -26px;
+    top: -10px;
+}
+
+#pantalla-13 .aprendamos .text {
+    padding: 35px 30px 25px;
+    background-color: #e3e3e3;
+    border-radius: 15px;
+}
+
+#pantalla-13 .aprendamos .pdf {
+    background: url(../content/10.png) no-repeat;
+    background-size: cover;
+    width: 98px;
+    height: 61px;
+    position: absolute;
+    right: -49px;
+    top: 25px;
+}
+/******************************/
+/*Pantalla 17
+/******************************/
+#pantalla-17 .burbuja-cont {
+    width: 72%;
+    text-align: left;
+}
+
+#pantalla-17 .burbuja-cont h3 {
+    font-size: 1.5rem;
+}
+
+#pantalla-17 .personaje {
+    right: 20px;
+    top: 50px;
+}
+
+#pantalla-17 .text-cont {
+    background-color: #e3e3e3;
+    font-weight: bold;
+    border-radius: 25px;
+    width: 70%;
+    padding: 10px 15px;
+    margin: 20px 0 0;
+}
+/******************************/
+/*Pantalla 18
+/******************************/
+#pantalla-18 .personaje {
+    right: 20px;
+}
+
+#pantalla-18 .burbuja-cont {
+    width: 60%;
+}
+
+#pantalla-18 h2 {
+    width: 60%;
+    margin-left: 50px;
+}
+/******************************/
+/*Pantalla 19
+/******************************/
+#pantalla-19 .box_media {
+    width: 300px;
 }
