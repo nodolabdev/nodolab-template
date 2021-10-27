@@ -14,7 +14,7 @@
 }
 
 #pag-textos-iconografia .lista_iconos i:hover {
-    color: #f6ae00;
+    color: #a2d40d;
 }
 
 #pag-textos-iconografia .little i {
@@ -54,7 +54,7 @@
 }
 
 #pag-textos-mouseover1 .mouse-over-one .button:hover {
-    background: #f6ae00;
+    background: #a2d40d;
 }
 
 #pag-textos-mouseover1 .mouse-over-one {
@@ -91,7 +91,7 @@
 }
 
 #pag-textos-mouseover2 .mouse-over:hover {
-    background: #f6ae00;
+    background: #a2d40d;
 }
 
 #pag-textos-mouseover2 .contenido_sobre {
@@ -751,7 +751,9 @@
 .fs-18 {font-size: 1.125rem; line-height: 1.25rem;;}
 .black {color: #000;}
 .w-50 {width: 50%;}
+.w-60 {width: 60%;}
 .w-80 {width: 80%;}
+.w-85 {width: 85%;}
 .w-900 {width: 900px;}
 
 .center {
@@ -914,6 +916,7 @@
     width: 232px;
     height: 132px;
     position: absolute;
+    z-index: -1;
 }
 
 .b1 {
@@ -1032,6 +1035,47 @@
     position: absolute;
     top: 25%;
     left: 21%;
+}
+
+ul.datalist li {
+    position: relative;
+    list-style: none;
+}
+
+ul.datalist li:before {
+    width: 20px;
+    height: 20px;
+    content: "";
+    position: absolute;
+    left: -30px;
+    top: 0;
+    background: url(../content/li.svg) no-repeat;
+    background-size: cover;
+}
+
+.pdf {
+    background: url(../content/10.png) no-repeat;
+    background-size: cover;
+    width: 98px;
+    height: 61px;
+    transition: all 500ms;
+}
+
+.pdf:hover {
+    transform: scale(1.1);
+    transition: all 500ms;
+}
+
+.datatable th {
+    background-color:  #1c7f66;
+}
+
+.datatable td {
+    border: 1px solid #01785f;
+}
+
+#pag-act-2 .datatable {
+    border: none;
 }
 /********************************************************************************/
 /* PANTALLAS
@@ -1566,4 +1610,224 @@
 #pantalla-33 .personaje {
     right: 20px;
     top: 25px;
+}
+/******************************/
+/*Actividad 2
+/******************************/
+#pag-act-2 .w-80 {
+    width: 80%;
+}
+
+#pag-act-2 ul {
+    list-style: none;
+    padding-left: 5px;
+}
+
+#pag-act-2 .flex {
+    justify-content: space-evenly;
+}
+/******************************/
+/*Pantalla 37
+/******************************/
+#pantalla-37 .burbuja-cont {
+    width: 60%;
+    text-align: justify;
+    float: right;
+}
+
+#pantalla-37 h3 {
+    width: 66%;
+    font-size: 1.75rem;
+}
+
+#pantalla-37 .personaje {
+    left: 30px;
+}
+/******************************/
+/*Pantalla 39
+/******************************/
+#pantalla-39 .personaje {
+    right: 20px;
+}
+
+#pantalla-39 .burbuja-cont {
+    width: 60%;
+}
+
+#pantalla-39 h2 {
+    width: 60%;
+    margin-left: 50px;
+}
+/******************************/
+/*Pantalla 41
+/******************************/
+#pantalla-41 .burbuja-cont {
+    width: 55%;
+    text-align: left;
+    float: right;
+    overflow: hidden;
+}
+
+#pantalla-41 .personaje {
+    left: 20px;
+    top: 50px;
+}
+
+#pantalla-41 .text-cont {
+    background-color: #e3e3e3;
+    font-weight: bold;
+    border-radius: 25px;
+    width: 65%;
+    padding: 10px 15px;
+    float: right;
+    margin-top: 30px;
+}
+
+#pantalla-41 li {
+    position: relative;
+    list-style: none;
+}
+
+#pantalla-41 li:before {
+    width: 20px;
+    height: 20px;
+    content: "";
+    position: absolute;
+    left: -30px;
+    top: 0;
+    background: url(../content/li.svg) no-repeat;
+    background-size: cover;
+}
+/******************************/
+/*Pantalla 44
+/******************************/
+#pantalla-44 .personaje {
+    right: 20px;
+}
+
+#pantalla-44 .burbuja-cont {
+    width: 50%;
+    overflow: hidden;
+}
+
+#pantalla-44 h2 {
+    width: 60%;
+}
+
+#pag-mod-1-22 ul {
+    text-align: left;
+}
+/******************************/
+/*Actividades 3
+/******************************/
+#pag-act-3 table select {
+    max-width: 150px;
+}
+
+#pag-act-3 .col-2.w-85 {
+    width: 85%;
+}
+
+#pag-act-3 table th {
+    font-size: 16px;
+}
+
+#pag-act-3 .row {
+    align-items: flex-end;
+    width: 105%;
+}
+
+#pag-act-3 .box_end .wrong,
+#pag-act-3 .box_end .correct {
+    position: absolute;
+    top: 50%;
+    left: 25%;
+}
+/******************************/
+/*Pantalla 49
+/******************************/
+#pantalla-49 .personaje {
+    right: 40px;
+}
+
+#pantalla-49 .burbuja-cont {
+    width: 65%;
+    margin-bottom: 50px;
+}
+
+#pantalla-49 h2 {
+    width: 60%;
+    margin-left: 50px;
+}
+
+#pantalla-49 .aprendamos {
+    margin: 30px;
+}
+/******************************/
+/*Pantalla 50
+/******************************/
+#pantalla-50 .burbuja-cont {
+    width: 60%;
+    text-align: justify;
+    float: right;
+}
+
+#pantalla-50 .personaje {
+    left: 30px;
+}
+/******************************/
+/*Pantalla 52
+/******************************/
+.pantalla-52 .flex {
+    justify-content: space-evenly;
+    width: 800px;
+    margin-top: 50px;
+}
+
+.pantalla-52 .flex-30 img {
+    width: 100px;
+}
+
+.pantalla-52 .flex-30 {
+    max-width: 200px;
+}
+
+.pantalla-52 .emergente {
+    top: 64%;
+    border: 1px solid #a2d40d;
+}
+
+.pantalla-52 .emergente:before {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 30px 30px 30px;
+    border-color: transparent transparent #a2d40d transparent;
+    content: "";
+    position: absolute;
+    top: -30px;
+}
+
+#pantalla-52-1 .emergente {
+    left: 10%;
+}
+
+#pantalla-52-1 .emergente:before {
+    left: 114px;
+}
+
+#pantalla-52-2 .emergente {
+    left: 20%;
+}
+
+#pantalla-52-2 .emergente:before {
+    left: 265px;
+}
+
+#pantalla-52-3 .emergente {
+    left: 40%;
+}
+
+#pantalla-52-3 .emergente:before {
+    left: 320px;
 }
