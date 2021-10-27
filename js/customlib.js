@@ -37,7 +37,7 @@
     }
 
     function changeFontSize(increase) {
-      var maxVal = 24;
+      var maxVal = 20;
       var minVal = 16;
       var currentSize = parseInt($(':root').css('font-size'));
       if ((currentSize === maxVal && increase) || (currentSize === minVal && !increase)) {
@@ -45,10 +45,6 @@
       }
       var amount = increase ? 2 : -2;
       $(':root').css('font-size', currentSize + amount);
-    }
-
-    function pageChanged(i, v) {
-      console.log("Hola mundo")
     }
 
     //Menu control.
