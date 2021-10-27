@@ -26,17 +26,17 @@ dhbgApp.strings = {
 
     'after': 'Después',
 
-    'all_correct': 'Felicitaciones, ha completado la actividad de manera satisfactoria',
+    'all_correct': '¡Felicitaciones has logrado superar la prueba!',
 
-    'all_correct_percent': '¡Muy bien! {0}% de sus respuestas son correctas. ¡Felicitaciones!',
+    'all_correct_percent': '¡Felicitaciones has logrado superar la prueba!',
 
-    'all_wrong': 'Debe intentarlo nuevamente, hasta responder la actividad de manera correcta',
+    'all_wrong': 'D¡Oh no! No has superado la prueba, intenta nuevamente.',
 
-    'answer_corrent': 'La respuesta es correcta',
+    'answer_corrent': '¡Felicitaciones has logrado superar la prueba!',
 
     'answer_required': 'Por favor, asigne una respuesta a cada ítem.',
 
-    'answer_wrong': 'La respuesta es incorrecta',
+    'answer_wrong': '¡Oh no! No has superado la prueba, intenta nuevamente.',
 
     'before': 'Antes',
 
@@ -103,7 +103,7 @@ dhbgApp.strings = {
 
     'vertical': 'Vertical',
 
-    'wrong_continue': 'La actividad es incorrecta en un {0}%. Continua la actividad hasta completarla correctamente.',
+    'wrong_continue': '¡Oh no! No has superado la prueba, intenta nuevamente.',
 
-    'wrong_percent': '{0}% de sus respuestas son incorrectas. Lo invitamos a que repase el contenido e intente resolver la actividad de nuevo.'
+    'wrong_percent': '¡Oh no! No has superado la prueba, intenta nuevamente.'
 };

@@ -750,7 +750,9 @@
 .fs-16 {font-size: 1rem; line-height: 1rem;;}
 .fs-18 {font-size: 1.125rem; line-height: 1.25rem;;}
 .black {color: #000;}
+.w-50 {width: 50%;}
 .w-80 {width: 80%;}
+.w-900 {width: 900px;}
 
 .center {
     margin: 0 auto;
@@ -900,6 +902,11 @@
     height: 420px;
     width: 250px;
 }
+
+.p9 {
+    background: url(../content/p9.png) no-repeat;
+    width: 387px;
+}
 /********************************************************************************/
 /* BURBUJAS
 /********************************************************************************/
@@ -952,6 +959,56 @@
     position: relative;
     padding: 5px 40px;
 }
+/******************************/
+/*Aprendamos
+/******************************/
+.aprendamos {
+    width: 320px;
+    text-align: center;
+    position: relative;
+    margin: 30px auto 20px;
+}
+
+.aprendamos .name {
+    font-family: VAG Rounded;
+    background-color: #a2d40d;
+    width: 70%;
+    padding: 5px;
+    font-weight: bold;
+    color: #fff;
+    font-size: 20px;
+    border-radius: 30px;
+    position: absolute;
+    left: 15%;
+    top: -16px;
+}
+
+.aprendamos .name:before {
+    width: 53px;
+    height: 55px;
+    background: url(../content/14.svg) no-repeat;
+    background-size: cover;
+    content: "";
+    position: absolute;
+    left: -26px;
+    top: -10px;
+}
+
+.aprendamos .text {
+    padding: 35px 30px 25px;
+    background-color: #e3e3e3;
+    border-radius: 15px;
+}
+
+.aprendamos .pdf {
+    background: url(../content/10.png) no-repeat;
+    background-size: cover;
+    width: 98px;
+    height: 61px;
+    position: absolute;
+    right: -49px;
+    top: 25px;
+}
 /********************************************************************************/
 /* GENERAL
 /********************************************************************************/
@@ -965,6 +1022,16 @@
 
 .text-cont {
     padding: 10px;
+}
+
+.emergente {
+    background-color: #e3e3e3;
+    border-radius: 25px;
+    width: 50%;
+    padding: 10px 30px;
+    position: absolute;
+    top: 25%;
+    left: 21%;
 }
 /********************************************************************************/
 /* PANTALLAS
@@ -1197,4 +1264,306 @@
 /******************************/
 #pantalla-19 .box_media {
     width: 300px;
+}
+/******************************/
+/*Pantalla 20
+/******************************/
+#pantalla-20 .burbuja-cont {
+    width: 60%;
+    text-align: justify;
+    float: right;
+}
+
+#pantalla-20 h3 {
+    font-size: 1.75rem;
+}
+
+#pantalla-20 .personaje {
+    left: 30px;
+}
+/******************************/
+/*Pantalla 21
+/******************************/
+#pag-mod-1-10 .text-cont {
+    background-color: #e3e3e3;
+    border-radius: 25px;
+    width: 80%;
+    padding: 10px 30px;
+    margin: 30px auto 0;
+}
+/******************************/
+/*Pantalla 22
+/******************************/
+#pantalla-22 .burbuja-cont {
+    width: 72%;
+    text-align: left;
+}
+
+#pantalla-22 .burbuja-cont h3 {
+    font-size: 1.5rem;
+}
+
+#pantalla-22 .personaje {
+    right: 20px;
+    top: 50px;
+}
+
+#pantalla-22 .text-cont {
+    background-color: #e3e3e3;
+    font-weight: bold;
+    border-radius: 25px;
+    width: 70%;
+    padding: 10px 15px;
+    margin: 20px 0 0;
+}
+/******************************/
+/*Pantalla 23
+/******************************/
+#pantalla-23 .burbuja-cont {
+    width: 70%;
+    text-align: left;
+    float: right;
+}
+
+#pantalla-23 .burbuja-cont h3 {
+    font-size: 1.5rem;
+}
+
+#pantalla-23 .personaje {
+    left: -17px;
+    top: 11px;
+    transform: scale(0.8);
+}
+
+#pantalla-23 .text-cont {
+    background-color: #e3e3e3;
+    font-weight: bold;
+    border-radius: 25px;
+    width: 80%;
+    padding: 10px 15px;
+    margin: 20px 0 0;
+    float: right;
+}
+
+#pantalla-23 li {
+    position: relative;
+    list-style: none;
+}
+
+#pantalla-23 li:before {
+    width: 20px;
+    height: 20px;
+    content: "";
+    position: absolute;
+    left: -30px;
+    top: 0;
+    background: url(../content/li.svg) no-repeat;
+    background-size: cover;
+}
+/******************************/
+/*Pantalla 24
+/******************************/
+#pantalla-24 .personaje {
+    right: 40px;
+}
+
+#pantalla-24 .burbuja-cont {
+    width: 60%;
+}
+
+#pantalla-24 h2 {
+    width: 60%;
+    margin-left: 50px;
+}
+
+#pantalla-24 .aprendamos {
+    margin: 30px;
+}
+/******************************/
+/*Pantalla 25
+/******************************/
+#pantalla-25 .burbuja-cont {
+    width: 60%;
+    text-align: justify;
+    float: right;
+}
+
+#pantalla-25 h3 {
+    width: 66%;
+    font-size: 1.75rem;
+}
+
+#pantalla-25 .personaje {
+    left: 30px;
+}
+
+#pantalla-25 .lista {
+    margin-right: 200px;
+}
+/******************************/
+/*Pantalla 27
+/******************************/
+#pantalla-27 .burbuja-cont {
+    width: 60%;
+    text-align: justify;
+    float: right;
+}
+
+#pantalla-27 h3 {
+    width: 66%;
+    font-size: 1.75rem;
+}
+
+#pantalla-27 .personaje {
+    left: 30px;
+}
+/******************************/
+/*Pantalla 28
+/******************************/
+#pantalla-28-1 .emergente,
+#pantalla-28-2 .emergente,
+#pantalla-28-3 .emergente {
+    border: 1px solid #a2d40d;
+}
+
+#pantalla-28-1 .emergente:before,
+#pantalla-28-2 .emergente:before,
+#pantalla-28-3 .emergente:before {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 30px 30px 30px;
+    border-color: transparent transparent #a2d40d transparent;
+    content: "";
+    position: absolute;
+    top: -30px;
+
+}
+
+#pantalla-28-1 .emergente:before {
+    left: 94px;
+}
+
+#pantalla-28-2 .emergente:before {
+    left: 254px;
+}
+
+#pantalla-28-3 .emergente:before {
+    left: 414px;
+}
+/******************************/
+/*Pantalla 30
+/******************************/
+#pantalla-30 .videobox {
+    max-width: 700px;
+    position: absolute;
+    left: calc(50% - 350px);
+    top: 50px;
+}
+/******************************/
+/*Pantalla 31
+/******************************/
+#pantalla-31 .personaje {
+    right: 40px;
+}
+
+#pantalla-31 .burbuja-cont {
+    width: 45%;
+}
+
+#pantalla-31 h2 {
+    width: 60%;
+    margin-left: 50px;
+}
+
+#pantalla-31 .aprendamos {
+    margin: 30px;
+}
+/******************************/
+/*Pantalla 32
+/******************************/
+#pantalla-32-1 .burbuja-cont,
+#pantalla-32-2 .burbuja-cont,
+#pantalla-32-3 .burbuja-cont,
+#pantalla-32-4 .burbuja-cont,
+#pantalla-32-5 .burbuja-cont {
+    width: 70%;
+    text-align: left;
+    float: right;
+}
+
+#pantalla-32-1 .burbuja-cont h3,
+#pantalla-32-2 .burbuja-cont h3,
+#pantalla-32-3 .burbuja-cont h3,
+#pantalla-32-4 .burbuja-cont h3,
+#pantalla-32-5 .burbuja-cont h3 {
+    font-size: 1.5rem;
+}
+
+#pantalla-32-1 .personaje,
+#pantalla-32-2 .personaje,
+#pantalla-32-3 .personaje,
+#pantalla-32-4 .personaje,
+#pantalla-32-5 .personaje {
+    left: -17px;
+    top: 11px;
+    transform: scale(0.8);
+}
+
+#pantalla-32-1 .text-cont,
+#pantalla-32-2 .text-cont,
+#pantalla-32-3 .text-cont,
+#pantalla-32-4 .text-cont,
+#pantalla-32-5 .text-cont {
+    background-color: #e3e3e3;
+    font-weight: bold;
+    border-radius: 25px;
+    width: 80%;
+    padding: 10px 15px;
+    float: right;
+}
+
+#pantalla-32-1 li,
+#pantalla-32-2 li,
+#pantalla-32-3 li,
+#pantalla-32-4 li,
+#pantalla-32-5 li {
+    position: relative;
+    list-style: none;
+}
+
+#pantalla-32-1 li:before,
+#pantalla-32-2 li:before,
+#pantalla-32-3 li:before,
+#pantalla-32-4 li:before,
+#pantalla-32-5 li:before {
+    width: 20px;
+    height: 20px;
+    content: "";
+    position: absolute;
+    left: -30px;
+    top: 0;
+    background: url(../content/li.svg) no-repeat;
+    background-size: cover;
+}
+/******************************/
+/*Pantalla 33
+/******************************/
+#pantalla-33 .burbuja-cont {
+    width: 70%;
+    text-align: justify;
+}
+
+#pantalla-33 .burbuja-cont h3 {
+    font-size: 1.5rem;
+}
+
+#pantalla-33 .videobox {
+    width: 400px;
+    margin-left: 150px;
+}
+
+#pantalla-33 .personaje {
+    right: 20px;
+    top: 25px;
 }
