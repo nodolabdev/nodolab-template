@@ -37,7 +37,7 @@
     }
 
     function changeFontSize(increase) {
-      var maxVal = 24;
+      var maxVal = 20;
       var minVal = 16;
       var currentSize = parseInt($(":root").css("font-size"));
       if (
