@@ -754,6 +754,11 @@
     display: none;
 }
 
+.m-0 {
+    margin: 0;
+}
+
+.lh-25 { line-height: 25px; }
 .lh-30 { line-height: 30px; }
 
 .fs-30 {font-size: 1.875rem;}
@@ -854,10 +859,10 @@
 #pag-esquema .subpage.car-bg::before {
     content: "";
     position: absolute;
-    width: 400px;
-    height: 400px;
-    top: 15%;
-    left: 25%;
+    width: 480px;
+    height: 369px;
+    top: 7%;
+    left: 20%;
     background-image: url(../img/course-images/globo-text.svg);
     background-repeat: no-repeat;
 }
@@ -891,8 +896,8 @@
 .subpage.page-columns .screen-reader {
     position: absolute;
     position: fixed;
-    top: 28%;
-    right: 17%;
+    top: 22%;
+    right: 25%;
 }
 
 
@@ -1028,9 +1033,9 @@
     text-align: justify;
     padding: 5px 20px;
     position: absolute;
-    width: 357px;
-    top: 16%;
-    left: 25%;
+    width: 395px;
+    top: 10%;
+    left: 22%;
     z-index: 10;
 }
 
@@ -1416,10 +1421,10 @@ section[ptitle="Contextualización"] h2 {
 
 .subpage#pag-graphic-pesv:before {
     position: absolute;
-    width: 76%;
+    width: 84%;
     height: 100%;
-    top: 158px;
-    left: 122px;
+    top: 150px;
+    left: 85px;
     content: "";
     background-image: url(../img/course-images/graph-box.svg);
     background-repeat: no-repeat;
@@ -1428,13 +1433,13 @@ section[ptitle="Contextualización"] h2 {
 .subpage#pag-graphic-pesv .graph-box:nth-of-type(1){
     position: absolute;
     top: 235px;
-    left: 133px;
+    left: 105px;
     width: 138px;
 }
 
 .subpage#pag-graphic-pesv .graph-box:nth-of-type(2){
     position: absolute;
-    top: 151px;
+    top: 146px;
     left: 324px;
     width: 122px;
 }
@@ -1442,14 +1447,14 @@ section[ptitle="Contextualización"] h2 {
 .subpage#pag-graphic-pesv .graph-box:nth-of-type(3){
     position: absolute;
     top: 181px;
-    left: 530px;
-    width: 181px;
+    left: 532px;
+    width: 203px;
 }
 
 .subpage#pag-graphic-pesv .graph-box:nth-of-type(4){
     position: absolute;
-    top: 336px;
-    left: 338px;
+    top: 352px;
+    left: 313px;
     width: 181px;
 }
 
@@ -1463,7 +1468,7 @@ section[ptitle="Contextualización"] h2 {
 .subpage#pag-graphic-pesv .graph-box:nth-of-type(6){
     position: absolute;
     top: 253px;
-    left: 754px;
+    left: 786px;
     width: 108px;
     color: white;
 }
@@ -1524,7 +1529,6 @@ section[ptitle="Contextualización"] h2 {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
-    grid-gap: 5px;
 }
 
 .evolution-item {
@@ -1536,7 +1540,7 @@ section[ptitle="Contextualización"] h2 {
 
 .evolution-item.icon{
     display: grid;
-    grid-template-columns: 1fr 3.5fr;
+    grid-template-columns: 0.7fr 3.5fr;
     grid-gap: 5px;
     justify-content: center;
     align-items: center;
@@ -1566,7 +1570,7 @@ section[ptitle="Contextualización"] h2 {
 }
 
 .subpage#speed .politics-pesv-container {
-    grid-template-columns: 65% 35%;
+    grid-template-columns: 75% 25%;
 }
 
 .anexos-box{
@@ -1595,19 +1599,19 @@ section[ptitle="Contextualización"] h2 {
 
 .subpage.car-bg:not(#first-car):after{
     position: absolute;
-    top: 52%;
-    left: 40%;
-    width: 400px;
-    height: 158px;
+    top: 49%;
+    left: 34%;
+    width: 470px;
+    height: 185px;
     content: "";
     background-image: url(../img/course-images/globe-car.svg);
     background-repeat: no-repeat;
 }
 
 .subpage.car-bg:not(#first-car) p {
-    top: 56%;
-    left: 45%;
-    width: 300px;
+    top: 55%;
+    left: 36%;
+    width: 405px;
     height: 90px;
     position: absolute;
     z-index: 1;
