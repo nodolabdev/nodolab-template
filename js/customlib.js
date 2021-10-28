@@ -47,6 +47,7 @@
       $(':root').css('font-size', currentSize + amount);
     }
 
+    
     //Menu control.
     var $menu_modal = $("#menu_page").dialog({
       modal: true,
