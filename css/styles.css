@@ -428,7 +428,7 @@ img.animation, img.play-animation, .animation_image .label {
 /********************************************************************************/
 main {
     padding: 20px 50px 45px;
-    border-radius: 50px;
+    /*border-radius: 50px;*/
     background-color: rgba(255, 255, 255, 0);
     position: relative;
     height: 485px;
@@ -437,7 +437,7 @@ main {
     display: block;
     margin: 0 auto;
     overflow: hidden;
-    border: 2px dashed #c99ff9;
+    /*border: 2px dashed #c99ff9;*/
     display: flex;
     align-items: center;
     justify-content: center;

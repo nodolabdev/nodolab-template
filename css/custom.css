@@ -839,21 +839,6 @@
     max-width: 400px;
     padding: 10px 20px;
 }
-
-/* ANIMATIONS */
-
-@keyframes load {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-
-#help_page {
-    overflow: hidden;
-}
 /********************************************************************************/
 /* PERSONAJES
 /********************************************************************************/
@@ -1076,6 +1061,18 @@ ul.datalist li:before {
 
 #pag-act-2 .datatable {
     border: none;
+}
+
+#help_page {
+    overflow: hidden;
+}
+
+.left {
+    text-align: left;
+}
+
+.fw-normal {
+    font-weight: normal;
 }
 /********************************************************************************/
 /* PANTALLAS
@@ -1809,11 +1806,11 @@ ul.datalist li:before {
 }
 
 #pantalla-52-1 .emergente {
-    left: 10%;
+    left: 5%;
 }
 
 #pantalla-52-1 .emergente:before {
-    left: 114px;
+    left: 162px;
 }
 
 #pantalla-52-2 .emergente {
@@ -1831,3 +1828,164 @@ ul.datalist li:before {
 #pantalla-52-3 .emergente:before {
     left: 320px;
 }
+/******************************/
+/*Pantalla 53
+/******************************/
+#pantalla-53 .diagrama {
+    width: 850px;
+    height: 450px;
+    position: relative;
+}
+
+#pantalla-53 h2 {
+    position: absolute;
+    top: 34%;
+    left: 5%;
+    font-size: 2rem;
+    width: 30%;
+}
+
+#pantalla-53 .diagrama .item {
+    position: absolute;
+    width: 56%;
+    height: 51px;
+    animation: left-right 1s ;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+#pantalla-53 .diagrama .item p {
+    margin: 0;
+    background-color: #e3e3e3;
+    border-radius: 30px;
+    padding: 5px 20px;
+    width: 100%;
+    height: calc(100% - 10px);
+    display: flex;
+    align-items: center;
+}
+
+#pantalla-53 .diagrama .item:before {
+    background-size: cover !important;
+    width: 50px;
+    height: 51px;
+    left: -60px;
+    position: absolute;
+    content: "";
+}
+
+#pantalla-53 .diagrama .item_1 {
+    left: 39%;
+    top: 1%;
+    animation-delay: 0;
+}
+
+#pantalla-53 .diagrama .item_1:before {
+    background: url(../content/53_1.svg) no-repeat;
+}
+
+#pantalla-53 .diagrama .item_2 {
+    left: 43%;
+    top: 15%;
+    animation-delay: 500ms;
+}
+
+#pantalla-53 .diagrama .item_2:before {
+    background: url(../content/53_2.svg) no-repeat;
+}
+
+#pantalla-53 .diagrama .item_3 {
+    left: 46%;
+    top: 29%;
+    animation-delay: 1s;
+}
+
+#pantalla-53 .diagrama .item_3:before {
+    background: url(../content/53_3.svg) no-repeat;
+}
+
+#pantalla-53 .diagrama .item_4 {
+    left: 49%;
+    top: 45%;
+    animation-delay: 1.5s;
+}
+
+#pantalla-53 .diagrama .item_4:before {
+    background: url(../content/53_4.svg) no-repeat;
+}
+
+#pantalla-53 .diagrama .item_5 {
+    left: 46%;
+    top: 59%;
+    animation-delay: 2s;
+}
+
+#pantalla-53 .diagrama .item_5:before {
+    background: url(../content/53_5.svg) no-repeat;
+}
+
+#pantalla-53 .diagrama .item_6 {
+    left: 43%;
+    top: 74%;
+    animation-delay: 2.5s;
+}
+
+#pantalla-53 .diagrama .item_6:before {
+    background: url(../content/53_6.svg) no-repeat;
+}
+
+
+#pantalla-53 .diagrama .item_7 {
+    left: 39%;
+    top: 89%;
+    animation-delay: 3s;
+}
+
+#pantalla-53 .diagrama .item_7:before {
+    background: url(../content/53_7.svg) no-repeat;
+}
+/******************************/
+/*Pantalla 56
+/******************************/
+#pantalla-56 .burbuja-cont {
+    width: 50%;
+    margin-left: 10%;
+    text-align: justify;
+    font-size: 1.125rem;
+}
+
+#pantalla-56 .personaje {
+    right: 60px;
+    top: 25px;
+}
+
+/* ANIMATIONS */
+
+@keyframes load {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+@keyframes left-right {
+    0% {
+      opacity: 0;
+      left: -100px;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+@keyframes top-bottom {
+    0% {
+      opacity: 0;
+      left: -100px;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
