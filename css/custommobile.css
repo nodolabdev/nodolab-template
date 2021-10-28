@@ -1,9 +1,5 @@
 .change { color: red; }
 
-.jpit-activities-droppable .droppable {
-    padding-bottom: 0;
-}
-
 /********************************************************************************/
 /* SPECIFIC LAYER STYLES
 /********************************************************************************/
@@ -18,7 +14,7 @@
 }
 
 #pag-textos-iconografia .lista_iconos i:hover {
-    color: #f6ae00;
+    color: #a2d40d;
 }
 
 #pag-textos-iconografia .little i {
@@ -58,7 +54,7 @@
 }
 
 #pag-textos-mouseover1 .mouse-over-one .button:hover {
-    background: #f6ae00;
+    background: #a2d40d;
 }
 
 #pag-textos-mouseover1 .mouse-over-one {
@@ -95,7 +91,7 @@
 }
 
 #pag-textos-mouseover2 .mouse-over:hover {
-    background: #f6ae00;
+    background: #a2d40d;
 }
 
 #pag-textos-mouseover2 .contenido_sobre {
@@ -111,6 +107,7 @@
 /********************************************************************************/
 /* Animaciones
 /********************************************************************************/
+
 #pag-media-animation1 .movi {
     background: url(../content/mujer.png) no-repeat;
     width: 200px;
@@ -126,9 +123,11 @@
     color: blue;
 }
 
+
 /********************************************************************************/
 /* CSS3 ANIMATION
 /********************************************************************************/
+
 #pag-media-animation3 .instruction { text-align: center; }
 #pag-media-animation3 .box_stressed { width: 700px; }
 #pag-media-animation3 .box_connection { width: 700px;  margin: 0 auto 10px; }
@@ -190,8 +189,10 @@
 /********************************************************************************/
 /* Imágenes con texto
 /********************************************************************************/
+
 #pag-contenidointeractivo-viewfirst .view-content { font-size: 12px; }
 #pag-contenidointeractivo-viewfirst .view-content h2 { color: #fff; border-bottom: dotted 2px #fff; }
+#image_content .view-first { margin: 0 20px; float: left; }
 
 /********************************************************************************/
 /* Imágenes para ampliar
@@ -202,31 +203,26 @@
 /* Pointers with text
 /********************************************************************************/
 #pag-contenidointeractivo-pointers .box_l { background: url(../content/cuerpo.png) no-repeat center top; margin: auto; width: 117px; height: 240px; position: relative; }
-#pag-contenidointeractivo-pointers .note_1 { left: -20px; top: 13px; width: 40px; }
-#pag-contenidointeractivo-pointers .note_2 { left: 72px; top: 100px; width: 40px; }
-#pag-contenidointeractivo-pointers .note_3 { left: -45px; top: 155px; width: 40px; }
-#pag-contenidointeractivo-pointers .note_4 { left: 75px; top: 195px; width: 40px; }
+#pag-contenidointeractivo-pointers .note_1 { left: -30px; top: 13px; }
+#pag-contenidointeractivo-pointers .note_2 { left: 72px; top: 100px; }
+#pag-contenidointeractivo-pointers .note_3 { left: -45px; top: 155px; }
+#pag-contenidointeractivo-pointers .note_4 { left: 75px; top: 195px; }
 
 /********************************************************************************/
 /* Actividad Quiz
 /********************************************************************************/
 .pag-actividades-cuestionario .chalkboard_content {
     min-height: 350px;
+    height: auto;
 }
 
 .jpit_activities_quiz_question_answers { height: 150px; overflow: auto; }
+.jpit_activities_quiz_board { height: 220px; }
 
 /********************************************************************************/
 /* Actividad Sopa de letras
 /********************************************************************************/
 .pag-actividades-sopa .chalkboard_content {
-    min-height: 350px;
-}
-
-/********************************************************************************/
-/* Actividad Sopa de letras
-/********************************************************************************/
-.pag-actividades-crucigrama .chalkboard_content {
     min-height: 350px;
     height: auto;
 }
@@ -234,6 +230,10 @@
 /********************************************************************************/
 /* Actividad arrastrar y soltar - apareamiento
 /********************************************************************************/
+#pag-actividades-arrastrar1 .chalkboard_content {
+    height: auto;
+}
+
 #arrastrar1.jpit-activities-droppable .words_container {
     height: 50px;
 }
@@ -250,8 +250,8 @@
 }
 
 #arrastrar1.jpit-activities-droppable td.droppable {
-    width: 80px;
-    height: 16px;
+    width: 90px;
+    height: 26px;
 }
 
 #arrastrar1.jpit-activities-droppable td.conection {
@@ -264,9 +264,37 @@
     width: 80px;
 }
 
+#pag-actividades-arrastrar1 .item_1 {
+     left: 50px;
+}
+
+#pag-actividades-arrastrar1 .item_2 {
+     left: 150px;
+}
+
+#pag-actividades-arrastrar1 .item_3 {
+     left: 250px;
+}
+
+#pag-actividades-arrastrar1 .item_4 {
+     left: 350px;
+}
+
+#pag-actividades-arrastrar1 .item_5 {
+     left: 450px;
+}
+
 /********************************************************************************/
 /* Actividad arrastrar y soltar - dialogo
 /********************************************************************************/
+#pag-actividades-arrastrar2 .chalkboard_content {
+    height: auto;
+}
+
+#arrastrar2.jpit-activities-droppable td.sources {
+    padding-left: 100px;
+}
+
 #arrastrar2.jpit-activities-droppable .draggable {
     width: 90px;
     float: left;
@@ -299,6 +327,10 @@
 /********************************************************************************/
 /* Actividad arrastrar y soltar - completar
 /********************************************************************************/
+#pag-actividades-arrastrar3 .chalkboard_content {
+    height: auto;
+}
+
 #arrastrar3.jpit-activities-droppable table {
     empty-cells: show;
     border-spacing: 0 5px;
@@ -319,29 +351,29 @@
 }
 
 #arrastrar3.jpit-activities-droppable .draggable {
-    margin: 0 0 5px 0;
+    margin: 0 5px 5px 0;
     width: 180px;
     text-align: left;
 }
 
 #arrastrar3.jpit-activities-droppable .jpit_activities_jpitdroppable_dropped {
-    background-color: transparent;
+    background-color: #fbf9ea;
     color: #000000;
-    border-color: transparent;
+    border-color: #fbf9ea;
+    margin: 0;
 }
 
 #arrastrar3.jpit-activities-droppable .jpit_activities_jpitdroppable_dropped.draggable.wrong {
     color: #D60C1B;
 }
 
-#arrastrar3.jpit-activities-droppable .draggable.wrong,
-#arrastrar3.jpit-activities-droppable .droppable.wrong {
-    background-color: transparent;
-}
-
 /********************************************************************************/
 /* Actividad arrastrar y soltar - insertar
 /********************************************************************************/
+#pag-actividades-arrastrar4 .chalkboard_content {
+    height: auto;
+}
+
 #arrastrar4.jpit-activities-droppable table {
     empty-cells: show;
     border-spacing: 0 5px;
@@ -375,6 +407,10 @@
 /********************************************************************************/
 /* Actividad arrastrar y soltar - muchos a uno
 /********************************************************************************/
+#pag-actividades-arrastrar5 .chalkboard_content {
+    height: auto;
+}
+
 #arrastrar5 .droppable {
     width: 300px;
     height: 150px;
@@ -387,6 +423,10 @@
 /********************************************************************************/
 /* Actividad arrastrar y soltar multiple
 /********************************************************************************/
+#pag-actividades-arrastrargrupos .chalkboard_content {
+    height: auto;
+}
+
 #arrastrargrupos table {
     margin: auto;
     max-width: 590px;
@@ -400,7 +440,8 @@
 }
 
 #arrastrargrupos td {
-    display: inline-block;
+    height: 150px;
+    vertical-align: top;
 }
 
 #arrastrargrupos td .target {
@@ -434,10 +475,14 @@
 /********************************************************************************/
 /* Ordenamiento en matríz
 /********************************************************************************/
+.pag-actividades-sortable-ejemplo2 .chalkboard_content {
+    height: 350px;
+}
+
 .jpit-activities-sortable.matriz ul.sortable {
     display: flex;
     flex-wrap: wrap;
-    width: 150px;
+    width: 155px;
     margin: auto;
     float: none;
     padding: 5px;
@@ -472,7 +517,8 @@
 /* Actividad Clasificar, formato de marcador.
 /********************************************************************************/
 .jpit-activities-check .check_left {
-    margin-bottom: 10px;
+    float: left;
+    width: 50%;
 }
 
 .jpit-activities-check .check_left .word_content {
@@ -484,13 +530,17 @@
     font-size: 20px;
 }
 
+.jpit-activities-check .check_right {
+    float: right;
+}
+
 .jpit-activities-check .buttons {
     text-align: center;
 }
 
 .jpit-activities-check .buttons button.yes,
 .jpit-activities-check .buttons button.not {
-    font-size: 20px;
+    font-size: 30px;
 }
 
 .jpit-activities-check .box_result {
@@ -522,6 +572,7 @@
     font-size:30px;
 }
 
+
 /********************************************************************************/
 /* Actividad marcar
 /********************************************************************************/
@@ -541,11 +592,11 @@
     margin-bottom: 5px;
     cursor: pointer;
     padding: 2px 5px;
-    white-space: nowrap;
 }
 
 .pag-actividades-naruto .jpit-activities-selection .left {
     text-align: right;
+    margin-right: 20px;
 }
 
 .pag-actividades-naruto .jpit-activities-selection .right {
@@ -562,10 +613,6 @@
     margin-right: 5px;
 }
 
-.pag-actividades-naruto .row {
-    display: flex;
-}
-
 /********************************************************************************/
 /* Actividad seleccionar 2
 /********************************************************************************/
@@ -580,7 +627,7 @@
 /********************************************************************************/
 .jpit-activities-form .sheet {
     background: url(../img/bg_papel.png) repeat-x left top;
-    width: 100%;
+    width: 410px;
     margin: auto;
     padding-top: 35px;
 }
@@ -603,4 +650,1462 @@
     height: 40px;
     padding: 3%;
     border: 2px dotted #aaaaaa;
+}
+/********************************************************************************/
+/* SCHEME
+/********************************************************************************/
+#pag-esquema {max-width: 900px; margin: auto;}
+
+#pag-esquema .scheme {
+    background: url(../img/esquema.png) no-repeat;
+    background-size: 100%;
+    width: 100%;
+    padding-top: 68%;
+    position: relative;
+}
+
+#pag-esquema .scheme .section {
+    width: 23%;
+    height: 42%;
+    top: 2.7%;
+    position: absolute;
+}
+
+#pag-esquema .scheme .section:hover {
+    background-color: #B9E6F580;
+}
+
+#pag-esquema .scheme .section.first {left: 2%;}
+#pag-esquema .scheme .section.second {left: 37.4%;}
+#pag-esquema .scheme .section.third {left: 75.1%;}
+#pag-esquema .scheme .section.fourth {top: 57.2%; left: 2%;}
+
+#pag-esquema .scheme .section.fifth {
+    top: 57.2%;
+    left: 37.4%;
+    border-radius: 50%;
+    height: 27.3%;
+}
+
+#pag-esquema .scheme .section.sixth {
+    top: 57.2%;
+    left: 75.1%;
+    height: 27.3%;
+    border-radius: 50% 0;
+}
+
+.ui-widget.ui-widget-content {
+    border: 1px solid rgb(197, 197, 197);
+    border-radius: 25px;
+}
+
+
+/*
+* CUSTOM CLASSES FOR PACKAGE
+*/
+
+
+.flex {
+    display: flex;
+}
+
+.flex-half {
+    flex: 0 0 50%;
+}
+
+.mr-15 {
+    margin-right: 15px;
+}
+
+.ml-15 {
+    margin-left: 15px;
+}
+
+.items-center {
+    align-items: center;
+}
+
+.img {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    height: auto;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.mb-15 {
+    margin-bottom: 15px;
+}
+
+.grey {
+    color: #5c5c5b;
+}
+
+.fs-30 {font-size: 1.875rem; line-height: 1.875rem;;}
+.fs-24 {font-size: 1.5rem; line-height: 1.5rem;;}
+.fs-14 {font-size: .875rem; line-height: .875rem;;}
+.fs-16 {font-size: 1rem; line-height: 1rem;;}
+.fs-18 {font-size: 1.125rem; line-height: 1.25rem;;}
+.black {color: #000;}
+.w-50 {width: 50%;}
+.w-60 {width: 60%;}
+.w-80 {width: 80%;}
+.w-85 {width: 85%;}
+.w-900 {width: 900px;}
+
+.center {
+    margin: 0 auto;
+    text-align: center;
+}
+.justify {
+    text-align: justify;
+}
+
+.transparent {
+    color: transparent;
+}
+
+.absolute {
+    position: absolute;
+}
+
+.p1-img {
+    width: 200px;
+}
+
+.p2-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.p2-container > img {
+    max-width: 420px;
+}
+
+.p2-container .help-button {
+    display: flex;
+    align-items: center;
+    font-size: 28px;
+    color: var(--secondary-color);
+    font-weight: bold;
+    position: absolute;
+    opacity: 0;
+    transition: transform 0.2s ease-in-out;
+}
+
+.p2-container .help-button:hover {
+    transform: translateY(-2px);
+}
+
+.p2-container .help-button img {
+    width: 40%;
+}
+
+.p2-container .help-button-1 {top: 35px; left: 160px; animation: load 3s forwards;}
+.p2-container .help-button-2 {top: 140px;left: 130px; animation: load 3s forwards 0.5s;}
+.p2-container .help-button-3 {top: 285px;left: 110px; animation: load 3s forwards 1s;}
+.p2-container .help-button-4 {top: 360px;left: 190px; animation: load 3s forwards 1.5s;}
+.p2-container .help-button-5 {top: 360px;right: 0px; animation: load 3s forwards 2s;}
+.p2-container .help-button-6 {top: 265px;right: -20px; animation: load 3s forwards 2.5s;}
+.p2-container .help-button-7 {top: 140px;right: -120px; animation: load 3s forwards 3s;}
+.p2-container .help-button-8 {top: 35px;right: 0; animation: load 3s forwards 3.5s;}
+
+#pag-mod-1 p{
+    font-size: 1.125rem;
+    font-weight: bold;
+}
+#pag-mod-1 p{
+    font-size: 1.125rem;
+    font-weight: bold;
+    margin-right: 20px;
+}
+/* #pag-mod-1 .img-container {
+    flex-basis: 350%;
+} */
+
+#pag-mod-1 .modal-sim {
+    bottom: 50%;
+    left: 50px;
+    transform: translateY(50%);
+    box-shadow: 1px 1px 5px 0px rgb(0 0 0 / 52%);
+    border-radius: 45px;
+    background-color: #fff;
+    max-width: 400px;
+    padding: 10px 20px;
+}
+/********************************************************************************/
+/* PERSONAJES
+/********************************************************************************/
+.personaje {
+    background-size: cover !important;
+    position: absolute;
+    width: 264px;
+    height: 381px;
+    top: 50px;
+    bottom: unset;
+    left: unset;
+    right: unset;
+}
+
+.p1 {
+    background: url(../content/p1.png) no-repeat;
+}
+
+.p2 {
+    background: url(../content/p2.png) no-repeat;
+    height: 386px;
+}
+
+.p3 {
+    background: url(../content/p3.png) no-repeat;
+    height: 426px;
+}
+
+.p4 {
+    background: url(../content/p4.png) no-repeat;
+    width: 273px;   
+}
+
+.p5 {
+    background: url(../content/p5.png) no-repeat;
+    width: 274px;
+}
+
+.p6 {
+    background: url(../content/p6.png) no-repeat;
+    height: 389px;
+}
+
+.p7 {
+    background: url(../content/p7.png) no-repeat;
+    height: 389px;
+}
+
+.p8 {
+    background: url(../content/p8.png) no-repeat;
+    height: 420px;
+    width: 250px;
+}
+
+.p9 {
+    background: url(../content/p9.png) no-repeat;
+    width: 387px;
+}
+/********************************************************************************/
+/* BURBUJAS
+/********************************************************************************/
+.burbuja {
+    width: 232px;
+    height: 132px;
+    position: absolute;
+    z-index: -1;
+}
+
+.b1 {
+    background: url(../content/b1.svg) no-repeat;
+    top: 0;
+    left: 0;
+}
+.b2 {
+    background: url(../content/b2.svg) no-repeat;
+    width: 120px;
+    height: 106px;
+    right: 0;
+    bottom: 0;
+}
+.b3 {
+    background: url(../content/b3.svg) no-repeat;
+    top: 0;
+    right: 0;
+}
+.b4 {
+    background: url(../content/b4.svg) no-repeat;
+    width: 120px;
+    height: 106px;
+    bottom: 0;
+    left: 0;
+}
+
+.b5 {
+    background: url(../content/b1.svg) no-repeat;
+    bottom: 0;
+    right: 0;
+    transform: rotate(180deg);
+}
+
+.b6 {
+    background: url(../content/b3.svg) no-repeat;
+    bottom: 0;
+    left: 0;
+    transform: rotate(180deg);
+}
+
+.burbuja-cont {
+    position: relative;
+    padding: 5px 40px;
+
+    animation: burbuja 1s ;
+    animation-fill-mode: forwards;
+    animation-delay: 1s;
+    opacity: 0;
+}
+
+.burbuja-cont.no-move {
+    animation: none;
+    opacity: 1;
+}
+/******************************/
+/*Aprendamos
+/******************************/
+.aprendamos {
+    width: 320px;
+    text-align: center;
+    position: relative;
+    margin: 30px auto 20px;
+
+    animation: burbuja 1s ;
+    animation-fill-mode: forwards;
+    animation-delay: 0;
+    opacity: 0;
+}
+
+.aprendamos .name {
+    font-family: VAG Rounded;
+    background-color: #a2d40d;
+    width: 70%;
+    padding: 5px;
+    font-weight: bold;
+    color: #fff;
+    font-size: 20px;
+    border-radius: 30px;
+    position: absolute;
+    left: 15%;
+    top: -16px;
+}
+
+.aprendamos .name:before {
+    width: 53px;
+    height: 55px;
+    background: url(../content/14.svg) no-repeat;
+    background-size: cover;
+    content: "";
+    position: absolute;
+    left: -26px;
+    top: -10px;
+}
+
+.aprendamos .text {
+    padding: 35px 30px 25px;
+    background-color: #e3e3e3;
+    border-radius: 15px;
+}
+
+.aprendamos .pdf {
+    background: url(../content/10.png) no-repeat;
+    background-size: cover;
+    width: 98px;
+    height: 61px;
+    position: absolute;
+    right: -49px;
+    top: 25px;
+}
+
+.aprendamos.no-move {
+    animation: none;
+    opacity: 1;
+}
+/********************************************************************************/
+/* GENERAL
+/********************************************************************************/
+.float-right {
+    float: right;
+}
+
+.float-left {
+    float: left;
+}
+
+.text-cont {
+    padding: 10px;
+}
+
+.emergente {
+    background-color: #e3e3e3;
+    border-radius: 25px;
+    width: 50%;
+    padding: 10px 30px;
+    position: absolute;
+    top: 25%;
+    left: 21%;
+}
+
+ul.datalist li {
+    position: relative;
+    list-style: none;
+}
+
+ul.datalist li:before {
+    width: 20px;
+    height: 20px;
+    content: "";
+    position: absolute;
+    left: -30px;
+    top: 0;
+    background: url(../content/li.svg) no-repeat;
+    background-size: cover;
+}
+
+.pdf {
+    background: url(../content/10.png) no-repeat;
+    background-size: cover;
+    width: 98px;
+    height: 61px;
+    transition: all 500ms;
+}
+
+.pdf:hover {
+    transform: scale(1.1);
+    transition: all 500ms;
+}
+
+.datatable th {
+    background-color:  #1c7f66;
+}
+
+.datatable td {
+    border: 1px solid #01785f;
+}
+
+#pag-act-2 .datatable {
+    border: none;
+}
+
+#help_page {
+    overflow: hidden;
+}
+
+.left {
+    text-align: left;
+}
+
+.fw-normal {
+    font-weight: normal;
+}
+
+.text-cont {
+    position: relative;
+    padding: 5px 40px;
+
+    animation: text-cont 1s ;
+    animation-fill-mode: forwards;
+    animation-delay: 1s;
+    opacity: 0;
+    left: 0;
+}
+
+.text-cont.no-move {
+    animation: none;
+    opacity: 1;
+}
+/********************************************************************************/
+/* PANTALLAS
+/********************************************************************************/
+
+/******************************/
+/*Pantalla 4
+/******************************/
+#pantalla-4 .burbuja-cont {
+    width: 65%;
+    text-align: right;
+}
+
+#pantalla-4 .burbuja-cont h3 {
+    font-size: 1.75rem;
+}
+
+#pantalla-4 .personaje {
+    right: 20px;
+    left: unset;
+}
+
+/******************************/
+/*Pantalla 5
+/******************************/
+#pantalla-5 .burbuja-cont {
+    width: 65%;
+    text-align: justify;
+    float: right;
+}
+
+#pantalla-5 .burbuja-cont h3 {
+    font-size: 1.75rem;
+}
+
+#pantalla-5 .personaje {
+    left: 30px;
+}
+
+/******************************/
+/*Pantalla 6
+/******************************/
+#pantalla-6 .burbuja-cont {
+    width: 65%;
+    text-align: justify;
+}
+
+#pantalla-6 .burbuja-cont h3 {
+    font-size: 1.5rem;
+}
+
+#pantalla-6 .personaje {
+    right: 20px;
+    left: unset;
+    top: 25px;
+}
+/******************************/
+/*Pantalla 7
+/******************************/
+#pantalla-7 .box_media {
+    width: 300px;
+}
+
+/******************************/
+/*Pantalla 8
+/******************************/
+#pantalla-8 .personaje {
+    right: 20px;
+}
+
+#pantalla-8 .text-cont {
+    width: 80%;
+}
+
+#pantalla-8 .burbuja-cont {
+    width: 63%;
+}
+/******************************/
+/*Pantalla 11-1 a 11-6
+/******************************/
+#pantalla-11-1 .burbuja-cont,
+#pantalla-11-2 .burbuja-cont,
+#pantalla-11-3 .burbuja-cont,
+#pantalla-11-4 .burbuja-cont,
+#pantalla-11-5 .burbuja-cont,
+#pantalla-11-6 .burbuja-cont {
+    width: 65%;
+    text-align: left;
+}
+
+#pantalla-11-1 .burbuja-cont h3,
+#pantalla-11-2 .burbuja-cont h3,
+#pantalla-11-3 .burbuja-cont h3,
+#pantalla-11-4 .burbuja-cont h3,
+#pantalla-11-5 .burbuja-cont h3,
+#pantalla-11-6 .burbuja-cont h3 {
+    font-size: 1.5rem;
+}
+
+#pantalla-11-1 .personaje,
+#pantalla-11-2 .personaje,
+#pantalla-11-3 .personaje,
+#pantalla-11-4 .personaje,
+#pantalla-11-5 .personaje,
+#pantalla-11-6 .personaje {
+    right: 20px;
+    top: 25px;
+}
+
+#pantalla-11-1 .text-cont,
+#pantalla-11-2 .text-cont,
+#pantalla-11-3 .text-cont,
+#pantalla-11-4 .text-cont,
+#pantalla-11-5 .text-cont,
+#pantalla-11-6 .text-cont {
+    background-color: #e3e3e3;
+    font-weight: bold;
+    border-radius: 25px;
+    width: 50%;
+    padding: 10px 30px;
+    margin: 30px 50px 0;
+}
+/******************************/
+/*Pantalla 12
+/******************************/
+#pantalla-12 .burbuja-cont {
+    width: 60%;
+    text-align: justify;
+    float: right;
+}
+
+#pantalla-12 h3 {
+    width: 66%;
+    font-size: 1.75rem;
+}
+
+#pantalla-12 .personaje {
+    left: 30px;
+}
+/******************************/
+/*Pantalla 13
+/******************************/
+#pantalla-13 .aprendamos {
+    width: 320px;
+    text-align: center;
+    position: relative;
+    margin: 30px auto 20px;
+}
+
+#pantalla-13 .aprendamos .name {
+    font-family: VAG Rounded;
+    background-color: #a2d40d;
+    width: 70%;
+    padding: 5px;
+    font-weight: bold;
+    color: #fff;
+    font-size: 20px;
+    border-radius: 30px;
+    position: absolute;
+    left: 15%;
+    top: -16px;
+}
+
+#pantalla-13 .aprendamos .name:before {
+    width: 53px;
+    height: 55px;
+    background: url(../content/14.svg) no-repeat;
+    background-size: cover;
+    content: "";
+    position: absolute;
+    left: -26px;
+    top: -10px;
+}
+
+#pantalla-13 .aprendamos .text {
+    padding: 35px 30px 25px;
+    background-color: #e3e3e3;
+    border-radius: 15px;
+}
+
+#pantalla-13 .aprendamos .pdf {
+    background: url(../content/10.png) no-repeat;
+    background-size: cover;
+    width: 98px;
+    height: 61px;
+    position: absolute;
+    right: -49px;
+    top: 25px;
+}
+/******************************/
+/*Pantalla 17
+/******************************/
+#pantalla-17 .burbuja-cont {
+    width: 72%;
+    text-align: left;
+}
+
+#pantalla-17 .burbuja-cont h3 {
+    font-size: 1.5rem;
+}
+
+#pantalla-17 .personaje {
+    right: 20px;
+    top: 50px;
+}
+
+#pantalla-17 .text-cont {
+    background-color: #e3e3e3;
+    font-weight: bold;
+    border-radius: 25px;
+    width: 70%;
+    padding: 10px 15px;
+    margin: 20px 0 0;
+}
+/******************************/
+/*Pantalla 18
+/******************************/
+#pantalla-18 .personaje {
+    right: 20px;
+}
+
+#pantalla-18 .burbuja-cont {
+    width: 60%;
+}
+
+#pantalla-18 h2 {
+    width: 60%;
+    margin-left: 50px;
+}
+/******************************/
+/*Pantalla 19
+/******************************/
+#pantalla-19 .box_media {
+    width: 300px;
+}
+/******************************/
+/*Pantalla 20
+/******************************/
+#pantalla-20 .burbuja-cont {
+    width: 60%;
+    text-align: justify;
+    float: right;
+}
+
+#pantalla-20 h3 {
+    font-size: 1.75rem;
+}
+
+#pantalla-20 .personaje {
+    left: 30px;
+}
+/******************************/
+/*Pantalla 21
+/******************************/
+#pag-mod-1-10 .text-cont {
+    background-color: #e3e3e3;
+    border-radius: 25px;
+    width: 80%;
+    padding: 10px 30px;
+    margin: 30px auto 0;
+}
+/******************************/
+/*Pantalla 22
+/******************************/
+#pantalla-22 .burbuja-cont {
+    width: 72%;
+    text-align: left;
+}
+
+#pantalla-22 .burbuja-cont h3 {
+    font-size: 1.5rem;
+}
+
+#pantalla-22 .personaje {
+    right: 20px;
+    top: 50px;
+}
+
+#pantalla-22 .text-cont {
+    background-color: #e3e3e3;
+    font-weight: bold;
+    border-radius: 25px;
+    width: 70%;
+    padding: 10px 15px;
+    margin: 20px 0 0;
+}
+/******************************/
+/*Pantalla 23
+/******************************/
+#pantalla-23 .burbuja-cont {
+    width: 70%;
+    text-align: left;
+    float: right;
+}
+
+#pantalla-23 .burbuja-cont h3 {
+    font-size: 1.5rem;
+}
+
+#pantalla-23 .personaje {
+    left: -17px;
+    top: 11px;
+    transform: scale(0.8);
+}
+
+#pantalla-23 .text-cont {
+    background-color: #e3e3e3;
+    font-weight: bold;
+    border-radius: 25px;
+    width: 80%;
+    padding: 10px 15px;
+    margin: 20px 0 0;
+    float: right;
+}
+
+#pantalla-23 li {
+    position: relative;
+    list-style: none;
+}
+
+#pantalla-23 li:before {
+    width: 20px;
+    height: 20px;
+    content: "";
+    position: absolute;
+    left: -30px;
+    top: 0;
+    background: url(../content/li.svg) no-repeat;
+    background-size: cover;
+}
+/******************************/
+/*Pantalla 24
+/******************************/
+#pantalla-24 .personaje {
+    right: 40px;
+}
+
+#pantalla-24 .burbuja-cont {
+    width: 60%;
+}
+
+#pantalla-24 h2 {
+    width: 60%;
+    margin-left: 50px;
+}
+
+#pantalla-24 .aprendamos {
+    margin: 30px;
+}
+/******************************/
+/*Pantalla 25
+/******************************/
+#pantalla-25 .burbuja-cont {
+    width: 60%;
+    text-align: justify;
+    float: right;
+}
+
+#pantalla-25 h3 {
+    width: 66%;
+    font-size: 1.75rem;
+}
+
+#pantalla-25 .personaje {
+    left: 30px;
+}
+
+#pantalla-25 .lista {
+    margin-right: 200px;
+}
+/******************************/
+/*Pantalla 27
+/******************************/
+#pantalla-27 .burbuja-cont {
+    width: 60%;
+    text-align: justify;
+    float: right;
+}
+
+#pantalla-27 h3 {
+    width: 66%;
+    font-size: 1.75rem;
+}
+
+#pantalla-27 .personaje {
+    left: 30px;
+}
+/******************************/
+/*Pantalla 28
+/******************************/
+#pantalla-28-1 .emergente,
+#pantalla-28-2 .emergente,
+#pantalla-28-3 .emergente {
+    border: 1px solid #a2d40d;
+}
+
+#pantalla-28-1 .emergente:before,
+#pantalla-28-2 .emergente:before,
+#pantalla-28-3 .emergente:before {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 30px 30px 30px;
+    border-color: transparent transparent #a2d40d transparent;
+    content: "";
+    position: absolute;
+    top: -30px;
+
+}
+
+#pantalla-28-1 .emergente:before {
+    left: 94px;
+}
+
+#pantalla-28-2 .emergente:before {
+    left: 254px;
+}
+
+#pantalla-28-3 .emergente:before {
+    left: 414px;
+}
+/******************************/
+/*Pantalla 30
+/******************************/
+#pantalla-30 .videobox {
+    max-width: 700px;
+    position: absolute;
+    left: calc(50% - 350px);
+    top: 50px;
+
+    animation: burbuja 1s ;
+    animation-fill-mode: forwards;
+    animation-delay: 0s;
+    opacity: 0;
+}
+/******************************/
+/*Pantalla 31
+/******************************/
+#pantalla-31 .personaje {
+    right: 40px;
+}
+
+#pantalla-31 .burbuja-cont {
+    width: 45%;
+}
+
+#pantalla-31 h2 {
+    width: 60%;
+    margin-left: 50px;
+}
+
+#pantalla-31 .aprendamos {
+    margin: 30px;
+}
+/******************************/
+/*Pantalla 32
+/******************************/
+#pantalla-32-1 .burbuja-cont,
+#pantalla-32-2 .burbuja-cont,
+#pantalla-32-3 .burbuja-cont,
+#pantalla-32-4 .burbuja-cont,
+#pantalla-32-5 .burbuja-cont {
+    width: 70%;
+    text-align: left;
+    float: right;
+}
+
+#pantalla-32-1 .burbuja-cont h3,
+#pantalla-32-2 .burbuja-cont h3,
+#pantalla-32-3 .burbuja-cont h3,
+#pantalla-32-4 .burbuja-cont h3,
+#pantalla-32-5 .burbuja-cont h3 {
+    font-size: 1.5rem;
+}
+
+#pantalla-32-1 .personaje,
+#pantalla-32-2 .personaje,
+#pantalla-32-3 .personaje,
+#pantalla-32-4 .personaje,
+#pantalla-32-5 .personaje {
+    left: -17px;
+    top: 11px;
+    transform: scale(0.8);
+}
+
+#pantalla-32-1 .text-cont,
+#pantalla-32-2 .text-cont,
+#pantalla-32-3 .text-cont,
+#pantalla-32-4 .text-cont,
+#pantalla-32-5 .text-cont {
+    background-color: #e3e3e3;
+    font-weight: bold;
+    border-radius: 25px;
+    width: 80%;
+    padding: 10px 15px;
+    float: right;
+}
+
+#pantalla-32-1 li,
+#pantalla-32-2 li,
+#pantalla-32-3 li,
+#pantalla-32-4 li,
+#pantalla-32-5 li {
+    position: relative;
+    list-style: none;
+}
+
+#pantalla-32-1 li:before,
+#pantalla-32-2 li:before,
+#pantalla-32-3 li:before,
+#pantalla-32-4 li:before,
+#pantalla-32-5 li:before {
+    width: 20px;
+    height: 20px;
+    content: "";
+    position: absolute;
+    left: -30px;
+    top: 0;
+    background: url(../content/li.svg) no-repeat;
+    background-size: cover;
+}
+/******************************/
+/*Pantalla 33
+/******************************/
+#pantalla-33 .burbuja-cont {
+    width: 70%;
+    text-align: justify;
+}
+
+#pantalla-33 .burbuja-cont h3 {
+    font-size: 1.5rem;
+}
+
+#pantalla-33 .videobox {
+    width: 400px;
+    margin-left: 150px;
+
+    animation: burbuja 1s ;
+    animation-fill-mode: forwards;
+    animation-delay: 1s;
+    opacity: 0;
+}
+
+#pantalla-33 .personaje {
+    right: 20px;
+    top: 25px;
+}
+
+
+/******************************/
+/*Actividad 2
+/******************************/
+#pag-act-2 .w-80 {
+    width: 80%;
+}
+
+#pag-act-2 ul {
+    list-style: none;
+    padding-left: 5px;
+}
+
+#pag-act-2 .flex {
+    justify-content: space-evenly;
+}
+/******************************/
+/*Pantalla 37
+/******************************/
+#pantalla-37 .burbuja-cont {
+    width: 60%;
+    text-align: justify;
+    float: right;
+}
+
+#pantalla-37 h3 {
+    width: 66%;
+    font-size: 1.75rem;
+}
+
+#pantalla-37 .personaje {
+    left: 30px;
+}
+/******************************/
+/*Pantalla 39
+/******************************/
+#pantalla-39 .personaje {
+    right: 20px;
+}
+
+#pantalla-39 .burbuja-cont {
+    width: 60%;
+}
+
+#pantalla-39 h2 {
+    width: 60%;
+    margin-left: 50px;
+}
+/******************************/
+/*Pantalla 41
+/******************************/
+#pantalla-41 .burbuja-cont {
+    width: 55%;
+    text-align: left;
+    float: right;
+    overflow: hidden;
+}
+
+#pantalla-41 .personaje {
+    left: 20px;
+    top: 50px;
+}
+
+#pantalla-41 .text-cont {
+    background-color: #e3e3e3;
+    font-weight: bold;
+    border-radius: 25px;
+    width: 65%;
+    padding: 10px 15px;
+    float: right;
+    margin-top: 30px;
+}
+
+#pantalla-41 li {
+    position: relative;
+    list-style: none;
+}
+
+#pantalla-41 li:before {
+    width: 20px;
+    height: 20px;
+    content: "";
+    position: absolute;
+    left: -30px;
+    top: 0;
+    background: url(../content/li.svg) no-repeat;
+    background-size: cover;
+}
+/******************************/
+/*Pantalla 44
+/******************************/
+#pantalla-44 .personaje {
+    right: 20px;
+}
+
+#pantalla-44 .burbuja-cont {
+    width: 50%;
+    overflow: hidden;
+}
+
+#pantalla-44 h2 {
+    width: 60%;
+}
+
+#pag-mod-1-22 ul {
+    text-align: left;
+}
+/******************************/
+/*Actividades 3
+/******************************/
+#pag-act-3 table select {
+    max-width: 150px;
+}
+
+#pag-act-3 .col-2.w-85 {
+    width: 85%;
+}
+
+#pag-act-3 table th {
+    font-size: 16px;
+}
+
+#pag-act-3 .row {
+    align-items: flex-end;
+    width: 105%;
+}
+
+#pag-act-3 .box_end .wrong,
+#pag-act-3 .box_end .correct {
+    position: absolute;
+    top: 50%;
+    left: 25%;
+}
+/******************************/
+/*Pantalla 49
+/******************************/
+#pantalla-49 .personaje {
+    right: 40px;
+}
+
+#pantalla-49 .burbuja-cont {
+    width: 65%;
+    margin-bottom: 50px;
+}
+
+#pantalla-49 h2 {
+    width: 60%;
+    margin-left: 50px;
+}
+
+#pantalla-49 .aprendamos {
+    margin: 30px;
+}
+/******************************/
+/*Pantalla 50
+/******************************/
+#pantalla-50 .burbuja-cont {
+    width: 60%;
+    text-align: justify;
+    float: right;
+}
+
+#pantalla-50 .personaje {
+    left: 30px;
+}
+/******************************/
+/*Pantalla 52
+/******************************/
+.pantalla-52 .flex {
+    justify-content: space-evenly;
+    width: 800px;
+    margin-top: 50px;
+}
+
+.pantalla-52 .flex-30 img {
+    width: 100px;
+}
+
+.pantalla-52 .flex-30 {
+    max-width: 200px;
+}
+
+.pantalla-52 .emergente {
+    top: 64%;
+    border: 1px solid #a2d40d;
+}
+
+.pantalla-52 .emergente:before {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 30px 30px 30px;
+    border-color: transparent transparent #a2d40d transparent;
+    content: "";
+    position: absolute;
+    top: -30px;
+}
+
+#pantalla-52-1 .emergente {
+    left: 5%;
+}
+
+#pantalla-52-1 .emergente:before {
+    left: 162px;
+}
+
+#pantalla-52-2 .emergente {
+    left: 20%;
+}
+
+#pantalla-52-2 .emergente:before {
+    left: 265px;
+}
+
+#pantalla-52-3 .emergente {
+    left: 40%;
+}
+
+#pantalla-52-3 .emergente:before {
+    left: 320px;
+}
+/******************************/
+/*Pantalla 53
+/******************************/
+#pantalla-53 .diagrama {
+    width: 850px;
+    height: 450px;
+    position: relative;
+}
+
+#pantalla-53 h2 {
+    position: absolute;
+    top: 34%;
+    left: 5%;
+    font-size: 2rem;
+    width: 30%;
+}
+
+#pantalla-53 .diagrama .item {
+    position: absolute;
+    width: 56%;
+    height: 51px;
+    animation: left-right 1s ;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+#pantalla-53 .diagrama .item p {
+    margin: 0;
+    background-color: #e3e3e3;
+    border-radius: 30px;
+    padding: 5px 20px;
+    width: 100%;
+    height: calc(100% - 10px);
+    display: flex;
+    align-items: center;
+}
+
+#pantalla-53 .diagrama .item:before {
+    background-size: cover !important;
+    width: 50px;
+    height: 51px;
+    left: -60px;
+    position: absolute;
+    content: "";
+}
+
+#pantalla-53 .diagrama .item_1 {
+    left: 39%;
+    top: 1%;
+    animation-delay: 0;
+}
+
+#pantalla-53 .diagrama .item_1:before {
+    background: url(../content/53_1.svg) no-repeat;
+}
+
+#pantalla-53 .diagrama .item_2 {
+    left: 43%;
+    top: 15%;
+    animation-delay: 500ms;
+}
+
+#pantalla-53 .diagrama .item_2:before {
+    background: url(../content/53_2.svg) no-repeat;
+}
+
+#pantalla-53 .diagrama .item_3 {
+    left: 46%;
+    top: 29%;
+    animation-delay: 1s;
+}
+
+#pantalla-53 .diagrama .item_3:before {
+    background: url(../content/53_3.svg) no-repeat;
+}
+
+#pantalla-53 .diagrama .item_4 {
+    left: 49%;
+    top: 45%;
+    animation-delay: 1.5s;
+}
+
+#pantalla-53 .diagrama .item_4:before {
+    background: url(../content/53_4.svg) no-repeat;
+}
+
+#pantalla-53 .diagrama .item_5 {
+    left: 46%;
+    top: 59%;
+    animation-delay: 2s;
+}
+
+#pantalla-53 .diagrama .item_5:before {
+    background: url(../content/53_5.svg) no-repeat;
+}
+
+#pantalla-53 .diagrama .item_6 {
+    left: 43%;
+    top: 74%;
+    animation-delay: 2.5s;
+}
+
+#pantalla-53 .diagrama .item_6:before {
+    background: url(../content/53_6.svg) no-repeat;
+}
+
+
+#pantalla-53 .diagrama .item_7 {
+    left: 39%;
+    top: 89%;
+    animation-delay: 3s;
+}
+
+#pantalla-53 .diagrama .item_7:before {
+    background: url(../content/53_7.svg) no-repeat;
+}
+/******************************/
+/*Pantalla 56
+/******************************/
+#pantalla-56 .burbuja-cont {
+    width: 50%;
+    margin-left: 10%;
+    text-align: justify;
+    font-size: 1.125rem;
+}
+
+#pantalla-56 .personaje {
+    right: 60px;
+    top: 25px;
+}
+
+/* ANIMATIONS */
+
+@keyframes load {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+@keyframes left-right {
+    0% {
+      opacity: 0;
+      left: -100px;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+@keyframes top-bottom {
+    0% {
+      opacity: 0;
+      top: -500px;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+
+@keyframes right-left {
+    0% {
+      opacity: 0;
+      right: -100px;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+
+@keyframes bottom-top {
+    0% {
+      opacity: 0;
+      top: 100%;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+@keyframes burbuja {
+    0% {
+      opacity: 0;
+      transform: scale(0);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+@keyframes text-cont {
+    0% {
+      opacity: 0;
+      left: -500px;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+.left-to-right {
+    animation: left-right 1s ;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+.right-to-left {
+    animation: right-left 1s ;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+.top-to-bottom {
+    animation: top-bottom 1s ;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+.bottom-to-top {
+    animation: bottom-top 1s ;
+    animation-fill-mode: forwards;
+    opacity: 0;
 }

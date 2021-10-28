@@ -1541,6 +1541,11 @@ ul.datalist li:before {
     position: absolute;
     left: calc(50% - 350px);
     top: 50px;
+
+    animation: burbuja 1s ;
+    animation-fill-mode: forwards;
+    animation-delay: 0s;
+    opacity: 0;
 }
 /******************************/
 /*Pantalla 31
@@ -1643,12 +1648,19 @@ ul.datalist li:before {
 #pantalla-33 .videobox {
     width: 400px;
     margin-left: 150px;
+
+    animation: burbuja 1s ;
+    animation-fill-mode: forwards;
+    animation-delay: 1s;
+    opacity: 0;
 }
 
 #pantalla-33 .personaje {
     right: 20px;
     top: 25px;
 }
+
+
 /******************************/
 /*Actividad 2
 /******************************/

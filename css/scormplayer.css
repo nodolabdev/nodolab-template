@@ -207,7 +207,7 @@ button.general.active, button.general:hover {
 
 #content {
     padding: 20px 100px 45px;
-    border-radius: 50px;
+    /*border-radius: 50px;*/
     background-color: rgba(255, 255, 255, 0);
     position: relative;
     height: 485px;
@@ -216,7 +216,7 @@ button.general.active, button.general:hover {
     display: block;
     margin: 0 auto;
     overflow: hidden;
-    border: 2px dashed #c99ff9;
+    /*border: 2px dashed #c99ff9;*/
     display: flex;
     align-items: center;
 }
@@ -281,4 +281,67 @@ button.general.active, button.general:hover {
 
 .fs-34 {
     font-size: 2.125rem;
+}
+
+@keyframes img {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+.img {
+    animation: img 2s ;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+/********************************************************************************/
+/* HEADER
+/********************************************************************************/
+
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 25px;
+    position: absolute;
+    top: 10px;
+    width: 100%;
+}
+
+.client-logo {
+    flex-basis: 300px;
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+
+.client-logo img {
+    width: 60%;
+    display: block;
+    margin: 0 auto;
+}
+
+.header .banner {
+    background-color: var(--secondary-color);
+    padding: 5px 15px;
+    flex-basis: 500px;
+    flex-grow: 0;
+    flex-shrink: 0;
+    border-radius: 75px;
+    -webkit-box-shadow: 10px 13px 22px -5px rgba(0,0,0,0.63); 
+    box-shadow: 10px 13px 22px -5px rgba(0,0,0,0.63);
+}
+
+.header .banner h1 {
+    color: #fff;
+    text-align: center;
+    font-size: 1.125rem;
+}
+
+.header .banner h1 span {
+    color: var(--fourth-color);
+    font-size: 1.75rem;
 }

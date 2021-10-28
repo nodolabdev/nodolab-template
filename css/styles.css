@@ -1245,6 +1245,12 @@ audio {
     height: 30px;
 }
 
+audio.screen-reader {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
 div.iconsound, button.iconsound {
     width: 61px;
     height: 61px;
