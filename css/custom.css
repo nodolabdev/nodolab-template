@@ -848,6 +848,9 @@
     width: 264px;
     height: 381px;
     top: 50px;
+    bottom: unset;
+    left: unset;
+    right: unset;
 }
 
 .p1 {
@@ -946,6 +949,16 @@
 .burbuja-cont {
     position: relative;
     padding: 5px 40px;
+
+    animation: burbuja 1s ;
+    animation-fill-mode: forwards;
+    animation-delay: 1s;
+    opacity: 0;
+}
+
+.burbuja-cont.no-move {
+    animation: none;
+    opacity: 1;
 }
 /******************************/
 /*Aprendamos
@@ -955,6 +968,11 @@
     text-align: center;
     position: relative;
     margin: 30px auto 20px;
+
+    animation: burbuja 1s ;
+    animation-fill-mode: forwards;
+    animation-delay: 0;
+    opacity: 0;
 }
 
 .aprendamos .name {
@@ -996,6 +1014,11 @@
     position: absolute;
     right: -49px;
     top: 25px;
+}
+
+.aprendamos.no-move {
+    animation: none;
+    opacity: 1;
 }
 /********************************************************************************/
 /* GENERAL
@@ -1074,6 +1097,22 @@ ul.datalist li:before {
 .fw-normal {
     font-weight: normal;
 }
+
+.text-cont {
+    position: relative;
+    padding: 5px 40px;
+
+    animation: text-cont 1s ;
+    animation-fill-mode: forwards;
+    animation-delay: 1s;
+    opacity: 0;
+    left: 0;
+}
+
+.text-cont.no-move {
+    animation: none;
+    opacity: 1;
+}
 /********************************************************************************/
 /* PANTALLAS
 /********************************************************************************/
@@ -1092,6 +1131,7 @@ ul.datalist li:before {
 
 #pantalla-4 .personaje {
     right: 20px;
+    left: unset;
 }
 
 /******************************/
@@ -1125,6 +1165,7 @@ ul.datalist li:before {
 
 #pantalla-6 .personaje {
     right: 20px;
+    left: unset;
     top: 25px;
 }
 /******************************/
@@ -1983,9 +2024,76 @@ ul.datalist li:before {
 @keyframes top-bottom {
     0% {
       opacity: 0;
-      left: -100px;
+      top: -500px;
     }
     100% {
       opacity: 1;
     }
   }
+
+
+@keyframes right-left {
+    0% {
+      opacity: 0;
+      right: -100px;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+
+@keyframes bottom-top {
+    0% {
+      opacity: 0;
+      top: 100%;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+@keyframes burbuja {
+    0% {
+      opacity: 0;
+      transform: scale(0);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+@keyframes text-cont {
+    0% {
+      opacity: 0;
+      left: -500px;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+.left-to-right {
+    animation: left-right 1s ;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+.right-to-left {
+    animation: right-left 1s ;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+.top-to-bottom {
+    animation: top-bottom 1s ;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+.bottom-to-top {
+    animation: bottom-top 1s ;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
