@@ -4,11 +4,11 @@ CSS Variables
 */
 
 :root {
-    --primary-color: #00877A;;
-    --secondary-color:  #93D500;
-    --tertiary-color: #61a348;
+    --primary-color: #02b802;
+    --secondary-color:  #00877A;
+    --tertiary-color: #93D500;
     --green-one: #00953B;
-    --green-two: #006632;
+    --green-two: #00877A;
     font-size: 16px;
   }
 
@@ -66,6 +66,7 @@ html {
 
 body {
     font-family: 'Calibri', sans-serif;
+    font-weight: bold;
     font-size: 1rem;
     color: #000;
     margin: 0;
@@ -105,7 +106,7 @@ body.dhbgapp_fullview {
 h1 {
     font-weight: bold;
     font-size: 2.25rem;
-    color: var(--secondary-color);
+    color: var(--tertiary-color);
     font-family: VAG Rounded;
 }
 
@@ -143,6 +144,10 @@ h6 {
     font-family: VAG Rounded;
 }
 
+h1 span {
+    color: var(--secondary-color);
+}
+
 pre {
     background: #F8F8FF;
     border: #000 dashed 1px;
@@ -157,8 +162,10 @@ cite {
 }
 
 em {
-    color: #ff8427;
+    color: var(--secondary-color);
+    font-size: 1.375rem;
     font-weight: bold;
+    font-style: normal;
 }
 
 p {
@@ -446,13 +453,13 @@ main {
 }
 
 .header .banner h1 {
-    color: var(--secondary-color);
+    color: var(--tertiary-color);
     text-align: left;
     font-size: 2rem;
 }
 
 .header .banner h1 span {
-    color: var(--primary-color);
+    color: var(--secondary-color);
     margin-left: 40px;
     font-size: 2rem;
 }
@@ -1641,7 +1648,7 @@ sup.tooltip {
 /* SPECIAL CONTENT: Data tables
 /********************************************************************************/
 .datatable {
-    border: 1px solid #3E698F;
+    border: 1px solid var(--secondary-color);
     border-spacing: 0;
     border-collapse: none;
     margin-bottom: 10px;
@@ -1659,12 +1666,12 @@ sup.tooltip {
 .datatable th {
     padding: 5px;
     text-align: center;
-    background-color: #5abaca;
-    border: 1px solid #3e698f;
+    background-color: var(--tertiary-color);
+    border: 1px solid var(--secondary-color);
     border-top-width: 0;
     color: #ffffff;
     font-weight: bold;
-    font-size: 13px;
+    font-size: 18px;
 }
 
 .datatable td {
@@ -1674,6 +1681,8 @@ sup.tooltip {
     border-left: 1px solid #3e698f;
     border-top-width: 0;
     empty-cells: show;
+    text-align: center;
+    font-size: 16px;
 }
 
 .datatable .odd td {
