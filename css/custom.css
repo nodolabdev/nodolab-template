@@ -760,8 +760,8 @@
 
 .lh-30 { line-height: 30px; }
 
-.fs-30 {font-size: 1.875rem;}
-.fs-24 {font-size: 1.5rem;}
+.fs-30 {font-size: 30px;}
+.fs-24 {font-size: 24px;}
 .fs-14 {font-size: .875rem;}
 .fs-16 {font-size: 1rem;}
 .fs-16-fix {font-size: 16px;}
@@ -839,7 +839,7 @@
 
 .p2-container .help-button h4 {
     margin: 0 auto;
-    color: var(--green-one);
+    color: var(--secondary-color);
 }
 
 .p2-container .help-button img {
