@@ -808,8 +808,8 @@
 .relative {position: relative;}
 
 .p1-img {
-    width: 50px;
-    margin: 0;
+    width: 40px;
+    margin: 0px 6px;
 }
 
 .p2-container {
