@@ -113,7 +113,7 @@ h1 {
 h2 {
     font-weight: bold;
     font-size: 1.31rem;
-    color: var(--green-one);
+    color: var(--secondary-color);
     font-family: VAG Rounded;
 }
 
@@ -472,7 +472,7 @@ nav.globals {
     z-index: 99;
     border-radius: 5px;
     display: inline-block;
-    flex-basis: 375px;
+    flex-basis: 385px;
     flex-grow: 0;
     flex-shrink: 0;
 }
