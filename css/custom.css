@@ -228,7 +228,7 @@
 }
 
 .jpit_activities_quiz_question_answers { overflow: auto; }
-.jpit_activities_quiz_board { height: 220px; }
+.jpit_activities_quiz_board { height: 185px; overflow: scroll;}
 
 /********************************************************************************/
 /* Actividad Sopa de letras
@@ -1687,6 +1687,7 @@ section[ptitle="Contextualización"] h2 {
 
 .flex-half {flex: 0 0 50%;}
 .flex-halfplus {flex: 0 0 60%;}
+.flex-halfplusplus {flex: 0 0 75%;}
 .flex-30 {flex: 0 0 30%;}
 .flex-45 {flex: 0 0 45%;}
 
@@ -1724,6 +1725,9 @@ section[ptitle="Contextualización"] h2 {
 .w-80 {width: 80%;}
 .w-70 {width: 70%;}
 .w-60 {width: 60%;}
+.w-40 {width: 40%;}
+.w-30 {width: 30%;}
+.w-20 {width: 20%;}
 .w-800 {width: 800px;}
 
 .m-15 {
@@ -1747,6 +1751,10 @@ section[ptitle="Contextualización"] h2 {
 
 .absolute {
     position: absolute;
+}
+
+.lh-25 {
+    line-height: 25px;
 }
 
 .floating { 
@@ -1865,7 +1873,7 @@ section[ptitle="Contextualización"] h2 {
     font-weight: normal;
     padding: 3px;
     font-size: 0.8rem;
-    max-height: 120px;
+    max-height: 200px;
     padding: 10px 5px;
 }
 .p-22-strat .strat-item span {font-size: 16px; font-family: 'VAG Rounded'; padding: 3px; border-radius: 25px;}
@@ -1876,9 +1884,9 @@ section[ptitle="Contextualización"] h2 {
 .p-22-strat .strat-item-2 { grid-area: 1 / 3 / 2 / 5; border-bottom: 2px solid var(--secondary-color); border-right: 2px solid var(--secondary-color);}
 .p-22-strat .strat-item-3 { grid-area: 1 / 5 / 2 / 7; border-bottom: 2px solid var(--secondary-color); border-right: 2px solid var(--secondary-color);}
 .p-22-strat .strat-item-4 { grid-area: 1 / 7 / 2 / 9; border-bottom: 2px solid var(--secondary-color);}
-.p-22-strat .strat-item-5 { grid-area: 2 / 2 / 3 / 4; border-right: 2px solid var(--secondary-color);}
+.p-22-strat .strat-item-5 { grid-area: 2 / 1 / 3 / 4; border-right: 2px solid var(--secondary-color);}
 .p-22-strat .strat-item-6 { grid-area: 2 / 4 / 3 / 6; border-right: 2px solid var(--secondary-color);}
-.p-22-strat .strat-item-7 { grid-area: 2 / 6 / 3 / 8; }
+.p-22-strat .strat-item-7 { grid-area: 2 / 6 / 3 / 9; }
 
 .p-22-strat .strat-item-1 span { background-color: #f9d3db; color: #df244b; }
 .p-22-strat .strat-item-2 span { background-color: #fbedd1; color: #eca718; }
@@ -1892,8 +1900,8 @@ section[ptitle="Contextualización"] h2 {
     position: relative;
 }
 
-.strat-description {top: 25%;right: 2%;width: 550px;}
-#strat-description-3 {top: 20%;}
+.strat-description {top: 15%;right: 3%;width: 550px;}
+#strat-description-3 {top: 10%;}
 #strat-description-18 {top: 8%;}
 
 .passport-sello {
@@ -1908,4 +1916,5 @@ section[ptitle="Contextualización"] h2 {
     position: absolute;
     left: 0;
     top: 0;
+    z-index: -1;
 }
