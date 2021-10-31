@@ -3,7 +3,8 @@
 
 :root {
     --primary-color: #02b802;
-    --secondary-color:  #cac535;
+    --secondary-color:  #00877A;
+    --tertiary-color: #93D500;
 }
 
 
@@ -55,6 +56,20 @@ body {
     background-color: #f0f0ec;
     background-image: url(../img/background.svg);
     background-size: cover;
+}
+body:before {
+    content: "";
+    width: 100%;
+    height: 40%;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    position: absolute;
+    background-image: url(../img/background-2.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    z-index: -1;
 }
 
 
@@ -119,7 +134,7 @@ h6 {
 }
 
 p {
-    font-size: 17px;
+    font-size: 1.125rem;
 }
 
 pre {
@@ -130,7 +145,10 @@ pre {
 }
 
 em {
-    color: white;
+    color: var(--secondary-color);
+    font-size: 1.375rem;
+    font-weight: bold;
+    font-style: normal;
 }
 
 button.general {
@@ -152,19 +170,19 @@ button.general.active, button.general:hover {
 }
 
 #content {
-    padding: 20px 100px 45px;
-    border-radius: 10px;
-    background-color: rgba(255, 255, 255, 0.5);
+    padding: 45px 100px 45px;
+    background: #ebebeb80;
     position: relative;
     height: 485px;
     width: 989px;
     box-sizing: border-box;
-    display: block;
     margin: 0 auto;
     overflow: hidden;
-    box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.52);
     display: flex;
-    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 3px 6px #0000004D;
+    border: 2px solid #FFFFFF;
+    border-radius: 22px;
 }
 
 .ui-state-error, .ui-state-highlight {
@@ -221,43 +239,28 @@ button.general.active, button.general:hover {
 
 .fs-30 {font-size: 1.875rem;}
 .fs-24 {font-size: 1.5rem;}
-
-.container-intro {
-    background-color: #6E6E6E;
-    background-image: url(../img/course-images/conductor.svg);
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 100%;
+.fs-40 {font-size: 40px;}
+.center {text-align: center;}
+.green-1 {color: var(--primary-color);}
+.green-2 {color: var(--secondary-color);}
+.green-3 {color: var(--tertiary-color);}
+.screen-reader {
     position: absolute;
-    left: 0;
-    top: 0;
-}
-
-.container-intro .screen-reader {
-    position: absolute;
-    bottom: 5px;
     right: 0;
-}
-
-
-.intro {
-    position: absolute;
     top: 0;
-    right: 0;
-    width: 50%;
-    height: 50%;
 }
 
 #play_scorm button{
-    position: absolute;
-    background-image: url(../img/course-images/start-button.svg);
+    background-color: var(--tertiary-color);
+    border: 1px solid var(--tertiary-color);
+    color: white;
+    padding: 3px 52px;
+}
+
+#play_scorm button:hover {
     background-color: transparent;
-    border: none;
-    background-repeat: no-repeat;
-    width: 200px;
-    height: 200px;
-    top: 71%;
-    right: 55%;
+    border: 1px solid var(--secondary-color);
+    color: var(--secondary-color);
 }
 
 .duration {
