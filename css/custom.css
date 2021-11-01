@@ -241,7 +241,7 @@
 /********************************************************************************/
 /* Actividad arrastrar y soltar - apareamiento
 /********************************************************************************/
-#pag-actividades-arrastrar1 .chalkboard_content {
+#parque-4 .chalkboard_content {
     height: auto;
 }
 
@@ -261,8 +261,8 @@
 }
 
 #arrastrar1.jpit-activities-droppable td.droppable {
-    width: 90px;
-    height: 26px;
+    width: 43px;
+    height: 43px;
 }
 
 #arrastrar1.jpit-activities-droppable td.conection {
@@ -272,29 +272,16 @@
 }
 
 #arrastrar1.jpit-activities-droppable .draggable {
-    width: 80px;
+    width: 40px;
+	padding: 1px;
+	border: 0;
 }
 
-#pag-actividades-arrastrar1 .item_1 {
-     left: 50px;
+#arrastrar4.jpit-activities-droppable .wrong {
+    border-color: #D60C1B;
+    color: #D60C1B;
+    background-color: transparent;
 }
-
-#pag-actividades-arrastrar1 .item_2 {
-     left: 150px;
-}
-
-#pag-actividades-arrastrar1 .item_3 {
-     left: 250px;
-}
-
-#pag-actividades-arrastrar1 .item_4 {
-     left: 350px;
-}
-
-#pag-actividades-arrastrar1 .item_5 {
-     left: 450px;
-}
-
 /********************************************************************************/
 /* Actividad arrastrar y soltar - dialogo
 /********************************************************************************/
@@ -1851,9 +1838,14 @@ section[ptitle="Contextualización"] h2 {
 .esquema-container {position: relative;}
 .esquema-container-pointer {position: absolute; width: 80px;}
 .esquema-container-pointer#pointer-1 {right: 30%; top: -8%;}
-.esquema-container-pointer#pointer-2 {left: 16%; bottom: 24%;}
-.esquema-container-pointer#pointer-3 {left: 45%; bottom: 50%;}
-.esquema-container-pointer#pointer-4 {left: 60%; bottom: 30%;}
+.esquema-container-pointer#pointer-2 {left: 45%; bottom: 50%;}
+
+.esquema-container-pointer#pointer-3 {left: 51%; bottom: 43%;}
+.esquema-container-pointer#pointer-4 {left: 60%; bottom: 63%;}
+
+.esquema-container-pointer#pointer-5 {left: 53%; bottom: 47%;}
+.esquema-container-pointer#pointer-6 {left: 70%; bottom: 60%;}
+.esquema-container-pointer#pointer-7 {left: 8%; bottom: 24%;}
 
 
 .p-22-strat {
@@ -1909,9 +1901,9 @@ section[ptitle="Contextualización"] h2 {
 
 #passport-sello-gob {top: 15%;left: 45%;}
 #passport-sello-parq-retos {top: 50%;left: 40%;}
-#passport-sello-planta-aguas {top: 10%;left: 68%;}
-#passport-sello-corte {top: 52%;left: 65%;}
-#passport-sello-parq-retos-2 {top: 52%;left: 40%;}
+#passport-sello-planta-aguas {top: 6%;left: 68%;}
+#passport-sello-corte {top: 32%;left: 62%;}
+#passport-sello-parq-retos-2 {top: 52%;left: 70%;}
 
 .planta-bg {
     position: absolute;
@@ -1932,6 +1924,12 @@ section[ptitle="Contextualización"] h2 {
 }
 
 .corte-2-bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.parque-bg {
     position: absolute;
     left: 0;
     top: 0;
@@ -1967,6 +1965,14 @@ section[ptitle="Contextualización"] h2 {
     margin: 0 5px;
 }
 
+.m-2 {
+    margin: 4px;
+}
+
+.m-4 {
+    margin: 2px;
+}
+
 .mr-tb {
     margin: 30px auto;
 }
@@ -1977,4 +1983,53 @@ section[ptitle="Contextualización"] h2 {
 
 .datatable td {
     text-align: justify;
+}
+______________________________
+.pdn {
+    padding: 5px 10px 5px 10px;
+}
+
+.color {
+    color: #00877a;
+}
+
+.lh-15 {
+    line-height: 15px; 
+}
+
+.lh-17 {
+    line-height: 17px; 
+}
+
+.lh-m {
+    line-height: 15px;
+    margin: 8px;
+	padding: 15px;
+}
+
+.pd-15 {
+	padding: 15px;
+}
+
+.ta {
+    text-align: center;
+}
+
+.jpit_activities_quiz_question_feedback_false:after {
+    background: none;
+}
+
+.jpit_activities_quiz_question_feedback_true:after {
+    background: none;
+}
+
+.jpit-activities-droppable .draggable.wrong, .jpit-activities-droppable .droppable.wrong {
+    background-color: #fff !important;
+    border-color: #00877a;
+    color: #00877a;
+}
+
+.jpit-activities-droppable .jpit_activities_jpitdroppable_dropped {
+    background-color: #fff;
+    color: #ffffff;
 }
