@@ -4,8 +4,8 @@ CSS Variables
 */
 
 :root {
-    --primary-color: #02b802;
-    --secondary-color:  #00877A;
+    --primary-color: #3f8677;
+    --secondary-color:  #A3d23e;
     --tertiary-color: #93D500;
     --green-one: #00953B;
     --green-two: #00877A;
@@ -73,7 +73,7 @@ body {
     padding: 0;
     width: 100%;
     height: 100%;
-    background-image: url(../img/background.svg);
+    background-image: url(../img/background.png);
     background-size: cover;
 }
 body:before {
@@ -405,7 +405,7 @@ img.animation, img.play-animation, .animation_image .label {
 /********************************************************************************/
 main {
     padding: 45px 100px 45px;
-    background: #ebebeb80;
+    background: #ffffffde;
     position: relative;
     height: 485px;
     width: 989px;
@@ -453,13 +453,13 @@ main {
 }
 
 .header .banner h1 {
-    color: var(--tertiary-color);
+    color: var(--secondary-color);
     text-align: left;
     font-size: 32px;
 }
 
 .header .banner h1 span {
-    color: var(--secondary-color);
+    color: var(--primary-color);
     margin-left: 40px;
     font-size: 32px;
 }
@@ -800,7 +800,7 @@ nav.horizontal ul.submenu > li.active, nav.horizontal ul.submenu > li.current {
 }
 
 #subpages_menu .button {
-    width: 60px;
+    width: 120px;
     height: 60px;
     margin: 0 2px;
     float: left;

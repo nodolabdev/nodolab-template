@@ -715,6 +715,12 @@
 * CUSTOM CLASSES FOR PACKAGE
 */
 
+.header{
+    background-color: white;
+    border-radius: 50px;
+    box-shadow: 0px 5px 5px 0px #919090;
+}
+
 
 .flex {
     display: flex;
