@@ -755,6 +755,7 @@
 }
 
 .lh-30 { line-height: 30px; }
+.lh-20 { line-height: 20px; }
 
 .fs-30 {font-size: 1.875rem;}
 .fs-24 {font-size: 1.5rem;}
@@ -776,7 +777,7 @@
 }
 
 .highlight {
-    color: var(--green-two);
+    color: black;
 }
 
 .center {
@@ -1000,19 +1001,20 @@
 .subpage#mov-graph-1 .mov-graph-text:nth-of-type(9){
     position: absolute;
     text-align: center;
-    width: 30px;
-    height: 30px;
-    top: 76%;
-    left: 45%;
-}
-
-.subpage#mov-graph-1 .mov-graph-text:nth-of-type(10){
-    position: absolute;
-    text-align: center;
     width: 300px;
     height: 70px;
     left: 57%;
     top: 65%;
+}
+
+.subpage#mov-graph-1 .mov-graph-text:nth-of-type(10){
+    
+    position: absolute;
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    top: 76%;
+    left: 45%;
 }
 
 .subpage#mov-graph-1 .mov-graph-text:nth-of-type(11){
@@ -1068,6 +1070,10 @@ section[ptitle="Contextualización"] h2 {
     height: 300px;
 }
 
+.semaphore-container * {
+    animation: load 2.5s;
+}
+
 .semaphore-container::before {
     position: absolute;
     content: "";
@@ -1077,7 +1083,10 @@ section[ptitle="Contextualización"] h2 {
     top: calc(50% - 166px/2);
     background-image: url(../img/course-images/semaforo.png);
     background-repeat: no-repeat;
+    animation: load 1s ease;
 }
+
+
 
 .green-semaphore .semaphore-container::before {
     background-image: url(../img/course-images/semaforo-verde.png);
@@ -1181,27 +1190,27 @@ section[ptitle="Contextualización"] h2 {
     display: flex;
     align-items: center;
     justify-content: center;
-    top: 40%;
-    left: 0;
+    top: 27%;
+    left: 2%;
 }
 
-.subpage.page-columns .p-container:nth-child(1) {
+.subpage.page-columns > .p-container:nth-of-type(2) {
     left: 2%;
     top: 27%;
 }
-.subpage.page-columns .p-container:nth-child(2) {
-    left: 23%;
+.subpage.page-columns > .p-container:nth-of-type(3) {
+    left: 22%;
     top: 27%;
 }
-.subpage.page-columns .p-container:nth-child(3) {
-    left: 43%;
+.subpage.page-columns > .p-container:nth-of-type(4) {
+    left: 42%;
     top: 27%;
 }
-.subpage.page-columns .p-container:nth-child(4) {
+.subpage.page-columns > .p-container:nth-of-type(5) {
     left: 63%;
     top: 27%;
 }
-.subpage.page-columns .p-container:nth-child(5) {
+.subpage.page-columns > .p-container:nth-of-type(6) {
     left: 83%;
     top: 27%;
 }
@@ -1267,7 +1276,7 @@ section[ptitle="Contextualización"] h2 {
 .subpage.security-button-hover:before{
     position: absolute;
     content: "";
-    top: 229px;
+    top: 93px;
     left: 84px;
     background-image: url(../img/course-images/security-button-hover.svg);
     background-repeat: no-repeat;
@@ -1285,17 +1294,11 @@ section[ptitle="Contextualización"] h2 {
 }
 
 .subpage.security-button-hover#sec-button-4:before {
-    top: 204px;
-    left: 574px;
-    width: 150px;
-    height: 150px;
+    left: 579px;
 }
 
 .subpage.security-button-hover#sec-button-5:before {
-    top: 207px;
-    left: 719px;
-    width: 143px;
-    height: 143px;
+    left: 742px;
 }
 
 .subpage.security-plan {
@@ -1424,6 +1427,15 @@ section[ptitle="Contextualización"] h2 {
     background-image: url(../img/course-images/graph-box.svg);
     background-repeat: no-repeat;
 }
+.subpage#pag-graphic-pesv:after {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: 62%;
+    left: 41%;
+    content: "o";
+    font-size: 24px;
+}
 
 .subpage#pag-graphic-pesv .graph-box:nth-of-type(1){
     position: absolute;
@@ -1492,7 +1504,7 @@ section[ptitle="Contextualización"] h2 {
     width: 50%;
     left: 5%;
     bottom: 19%;
-    background-color: rgba(255, 255, 255, 0.739);
+    background-color: rgb(255 255 255 / 88%);
 }
 
 .subpage.pag-car-1-1{
@@ -1533,6 +1545,10 @@ section[ptitle="Contextualización"] h2 {
     align-items: center;
 }
 
+div.evolution-item:nth-of-type(10) {
+    grid-column: 3/3;
+    grid-row: 4/4;
+}
 
 .evolution-item.icon{
     display: grid;
@@ -1611,6 +1627,52 @@ section[ptitle="Contextualización"] h2 {
     height: 90px;
     position: absolute;
     z-index: 1;
+}
+
+#page-how{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    right: 0;
+    top: 0;
+}
+
+.subpage.security-button-hover > p{
+    height: 105px;
+}
+
+.security-button-hover img {
+    width: 100%;
+    height: 125.8px;
+}
+
+
+.video-controls-suggestion {
+    position: absolute;
+    left: 28px;
+    top: 9%;
+    background-color: white;
+    color: var(--primary-color);
+    border-radius: 16px;
+    z-index: 10;
+    padding: 5px 10px;
+}
+
+.check-pre-page {
+    width: 100%;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 70% 30%;
+    align-items: center;
+}
+
+.check-pre-page img {
+    width: 100%;
+}
+
+.o-0{
+    opacity: 0;
 }
 
 /* ANIMATIONS */

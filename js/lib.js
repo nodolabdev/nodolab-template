@@ -1573,7 +1573,7 @@ dhbgApp.standard.start = function() {
             $(this).addClass('subpage_' + i);
         });
 
-        dhbgApp.pages[index_page] = {'id': $page.attr('id'), 'title': $page.attr('ptitle') || ''};
+        dhbgApp.pages[index_page] = {'id': $page.attr('id'), 'title': $page.attr('ptitle') || '', 'aria-description': $page.attr('aria-description' || '')};
         dhbgApp.pages[index_page].subpages = dhbgApp.FULL_PAGES ? 1 : $('.page_' + index_page + ' .subpage').length;
         dhbgApp.DB.totalPages += dhbgApp.pages[index_page].subpages;
     });
@@ -1739,6 +1739,7 @@ dhbgApp.standard.load_operations = function() {
             // Only print the title page if exists a container with CSS class ".page-title"
             var $pagetitle_box = $('.page-title');
             if ($pagetitle_box.length > 0) {
+                $pagetitle_box.html(page.title);
                 $pagetitle_box.html(page.title);
             }
 

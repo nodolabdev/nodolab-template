@@ -7,6 +7,7 @@
   function onAppLoaded() {
     const mainTrack = new Audio("content/sounds/main_track.mp3");
     mainTrack.load();
+    mainTrack.loop = true;
     /**
      * To handle when an activity has been completed.
      * @param {event} event
@@ -37,7 +38,7 @@
     }
 
     function changeFontSize(increase) {
-      var maxVal = 24;
+      var maxVal = 20;
       var minVal = 16;
       var currentSize = parseInt($(':root').css('font-size'));
       if ((currentSize === maxVal && increase) || (currentSize === minVal && !increase)) {

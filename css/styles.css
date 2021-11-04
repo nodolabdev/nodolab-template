@@ -449,7 +449,7 @@ nav.globals {
     z-index: 99;
     border-radius: 5px;
     display: inline-block;
-    flex-basis: 375px;
+    flex-basis: 385px;
     flex-grow: 0;
     flex-shrink: 0;
 }
@@ -1977,12 +1977,11 @@ sup.tooltip {
     background: url(../img/course-images/semaforo-verde.png) no-repeat;
     background-size: contain;
     position: absolute;
-    width: 30px;
-    height: 30px;
+    width: 45px;
+    height: 45px;
     content: "";
-    top: 6px;
-    left: -3%;
-    content: "";
+    top: 1px;
+    left: -5%;
     z-index: 2;
 }
 
@@ -1991,11 +1990,11 @@ sup.tooltip {
     background: url(../img/course-images/semaforo.png) no-repeat;
     background-size: contain;
     position: absolute;
-    width: 30px;
-    height: 30px;
+    width: 45px;
+    height: 45px;
     content: "";
-    top: 6px;
-    left: -3%;
+    top: 1px;
+    left: -5%;
     z-index: 2;
 }
 

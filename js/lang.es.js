@@ -26,17 +26,17 @@ dhbgApp.strings = {
 
     'after': 'Después',
 
-    'all_correct': '¡Felicitaciones has logrado superar la prueba!',
+    'all_correct': '¡Felicitaciones! Puedes avanzar.',
 
     'all_correct_percent': '¡Felicitaciones has logrado superar la prueba!',
 
-    'all_wrong': '¡Oh no! No has superado la prueba, intenta nuevamente.',
+    'all_wrong': 'Oh no! Intentalo un vez más para avanzar.Haz clic en Reiniciar la actividad para intentarlo de nuevo.',
 
-    'answer_corrent': '¡Felicitaciones has logrado superar la prueba!',
+    'answer_corrent': '¡Felicitaciones! Puedes avanzar.',
 
     'answer_required': 'Por favor, asigne una respuesta a cada ítem.',
 
-    'answer_wrong': '¡Oh no! No has superado la prueba, intenta nuevamente.',
+    'answer_wrong': 'Oh no! Intentalo un vez más para avanzar.Haz clic en Reiniciar la actividad para intentarlo de nuevo.',
 
     'before': 'Antes',
 
