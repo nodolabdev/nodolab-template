@@ -1918,3 +1918,20 @@ section[ptitle="Contextualización"] h2 {
     top: 0;
     z-index: -1;
 }
+
+.page-bg-container {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+}
+
+.page-museo-bg-image {
+    position: absolute;
+    width: 100px;
+    height: auto;
+}
+
+#museo-bg-1 {width: 100%;}
