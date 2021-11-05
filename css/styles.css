@@ -168,7 +168,7 @@ cite {
 }
 
 em {
-    color: #ff8427;
+    color: var(--primary-color);
     font-weight: bold;
 }
 
@@ -460,12 +460,12 @@ main {
 .header .banner h1 {
     color: var(--secondary-color);
     text-align: center;
-    font-size: 1.125rem;
+    font-size: 18px;
 }
 
 .header .banner h1 span {
     color: var(--primary-color);
-    font-size: 1.75rem;
+    font-size: 28px;
 }
 
 /*--------------------------*/
@@ -476,7 +476,7 @@ nav.globals {
     z-index: 99;
     border-radius: 5px;
     display: inline-block;
-    flex-basis: 360px;
+    flex-basis: 380px;
     flex-grow: 0;
     flex-shrink: 0;
 }

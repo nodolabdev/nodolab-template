@@ -743,7 +743,7 @@
 
 .fw-regular {font-weight: normal;}
 .fw-bold {font-weight: bold;}
-.fs-14 {font-size: .875rem;}
+.fs-14 {font-size: 1rem;}
 .fs-16 {font-size: 1rem;}
 .fs-18 {font-size: 1.125rem;}
 .fs-20 {font-size: 20px;}
@@ -967,4 +967,8 @@ ul li p {
 
 .screen-reader {
     top: 2%;
+}
+
+.hidro_schema {
+    width: 1000px;
 }
