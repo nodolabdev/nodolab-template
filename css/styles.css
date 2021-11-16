@@ -76,19 +76,31 @@ body {
     background-image: url(../img/background.png);
     background-size: cover;
 }
-body:before {
+/* body:before {
     content: "";
-    width: 100%;
+    width: 300px;
     height: 40%;
-    bottom: 40px;
-    right: 0;
+    bottom: 0px;
     left: 0;
     position: absolute;
-    background-image: url(../img/background-2.svg);
+    background-image: url(../img/lupa.svg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: bottom;
     z-index: -1;
+} */
+body:after {
+    content: "";
+    width: 450px;
+    height: 450px;
+    bottom: 40px;
+    right: 0;
+    position: absolute;
+    background-image: url(../img/presa-agua.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    z-index: 2;
 }
 
 body.dhbgapp_fullview {

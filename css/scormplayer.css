@@ -45,31 +45,36 @@
     src: url(../content/fonts/calibri-bold-italic.ttf);
 }
 
+html {
+    width: 100%;
+    height: 100%;
+}
+
 body {
     font-family: 'Calibri', sans-serif;
-    font-size: 12px;
+    font-weight: bold;
+    font-size: 1rem;
     color: #000;
     margin: 0;
     padding: 0;
     width: 100%;
     height: 100%;
-    background-color: #f0f0ec;
-    background-image: url(../img/background.svg);
-    background-size: cover;
+    background-image: url(../img/background.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
 }
-body:before {
+body:after {
     content: "";
-    width: 100%;
-    height: 40%;
-    bottom: 0;
+    width: 450px;
+    height: 450px;
+    bottom: 0px;
     right: 0;
-    left: 0;
     position: absolute;
-    background-image: url(../img/background-2.svg);
-    background-size: cover;
+    background-image: url(../img/presa-agua.svg);
+    background-size: contain;
     background-repeat: no-repeat;
     background-position: bottom;
-    z-index: -1;
+    z-index: 2;
 }
 
 
