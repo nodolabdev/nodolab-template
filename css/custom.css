@@ -2509,3 +2509,104 @@ section[ptitle="Contextualización"] h2 {
 .pantalla-50 .col-2.burbuja .box_media img {
     max-height: 180px;
 }
+
+/*Pantalla 52*/
+
+.pantalla-52 .p52 {
+    position: relative;
+}
+
+.pantalla-52 .p52 .exposicion {
+    position: absolute;
+    background: url(../content/p52-1.svg) no-repeat;
+    background-size: 100% 100%;
+    width: 250px;
+    padding: 20px 10px 10px;
+    top: 65%;
+}
+
+.pantalla-52 .p52 .sensibilidad {
+    position: absolute;
+    background: url(../content/p52-2.svg) no-repeat;
+    background-size: 100% 100%;
+    width: 250px;
+    padding: 20px 10px 10px;
+    top: 62%;
+    right: 0;
+}
+
+.pantalla-52 .p52 .adaptativa {
+    position: absolute;
+    background: url(../content/p52-3.svg) no-repeat;
+    background-size: 100% 100%;
+    width: 360px;
+    padding: 10px 10px 30px;
+    top: 10%;
+    right: -98px;
+}
+
+.pantalla-52 .p52 .resiliencia {
+    position: absolute;
+    background: url(../content/p52-4.svg) no-repeat;
+    background-size: 100% 100%;
+    width: 300px;
+    padding: 10px 10px 20px;
+    top: 20%;
+    left: -35px;
+}
+
+/*Pantalla 55*/
+
+.pantalla-55 .burbuja {
+    position: absolute;
+    background: url(../content/p55-2.svg) no-repeat;
+    background-size: cover;
+    width: 290px;
+    height: 195px;
+    right: 72%;
+    bottom: 0;
+    color: #fff;
+    padding: 38px 53px 0px 63px;
+}
+
+.pantalla-55 .emergente.personas {
+    width: 100%;
+    top: -60%;
+    right: 11%;
+    left: unset;
+}
+
+.pantalla-55 .emergente.personas:before {
+    top: unset;
+    bottom: -20px;
+    left: 50%;
+    transform: rotate(180deg);
+    border-color: transparent transparent #94d60a transparent;
+}
+
+.pantalla-55 .emergente.recursos {
+    width: 164%;
+    top: -60%;
+    left: -7%;
+}
+
+.pantalla-55 .emergente.recursos:before {
+    top: unset;
+    bottom: -20px;
+    left: 38%;
+    transform: rotate(180deg);
+}
+
+.pantalla-55 .emergente.procesos {
+    width: 100%;
+    top: -30%;
+    left: -10%;
+}
+
+.pantalla-55 .emergente.procesos:before {
+    top: unset;
+    bottom: -20px;
+    left: 48%;
+    transform: rotate(180deg);
+    border-color: transparent transparent #94d60a transparent;
+}
