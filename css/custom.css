@@ -786,6 +786,8 @@
 
 .w-200 {width: 200px; margin: auto;}
 .w-400 {width: 400px; margin: auto;}
+.w-30 {width: 30% !important;}
+.w-70 {width: 70% !important;}
 .w-80 {width: 80%;}
 .br-10 {border-radius: 10px;}
 
@@ -1601,7 +1603,7 @@ section[ptitle="Contextualización"] h2 {
 
 .box_end{
     position: absolute;
-    bottom: -5%;
+    bottom: 0%;
     left: 0;
     right: 0;
 }
@@ -1945,6 +1947,7 @@ section[ptitle="Contextualización"] h2 {
     position: absolute;
     top: 25%;
     left: 21%;
+    z-index: 3;
 }
 
 .emergente:before {
@@ -2609,4 +2612,205 @@ section[ptitle="Contextualización"] h2 {
     left: 48%;
     transform: rotate(180deg);
     border-color: transparent transparent #94d60a transparent;
+}
+
+/*Pantalla 60*/
+
+.pantalla-60 .text {
+    background: url(../content/p60-burbuja.png) no-repeat;
+    background-size: 100% 100%;
+    padding: 5px 10px 10px;
+    margin-bottom: 20px;
+}
+
+.pantalla-60 .botones {
+    display: flex;
+    justify-content: space-around;
+}
+
+.pantalla-60 .botones .current {
+    position: relative;
+}
+
+.pantalla-60 .botones .current:after {
+    content: "";
+    background: url(../content/p60-hover.svg) no-repeat;
+    background-size: cover;
+    width: 132%;
+    height: 116%;
+    position: absolute;
+    left: -16%;
+    top: -18%;
+}
+
+/*Pantalla 65*/
+
+.pantalla-65 .relative .box_media {
+    position: absolute;
+    width: 120%;
+}
+
+.pantalla-65 .relative .box_media.car1 {
+    left: -30%;
+}
+
+.pantalla-65 .relative .box_media.car2 {
+    top: 20%;
+    left: -20%;
+}
+
+.pantalla-65 .relative .box_media.car3 {
+    top: 40%;
+    left: -8%;
+}
+
+.pantalla-65 .relative .box_media.car4 {
+    top: 60%;
+    left: -24%;
+}
+
+.pantalla-65 .relative .box_media.car5 {
+    top: 80%;
+    left: -20%;
+}
+
+/*Pantalla 72*/
+
+.pantalla-72 .relative div {
+    background-size: cover !important;
+    width: 200px;
+    height: 78px;
+    position: absolute;
+}
+
+.pantalla-72 .relative .p72-1 {
+    background: url(../content/p72-1.png) no-repeat;
+    left: 87%;
+    top: 41%;
+}
+
+.pantalla-72 .relative .p72-2 {
+    background: url(../content/p72-2.png) no-repeat;
+    left: 49%;
+    top: 84%;
+}
+
+/*Pantalla 77*/
+
+.pantalla-77 .pilares {
+    justify-content: space-between;
+    text-align: center;
+}
+
+.pantalla-77 .pilares img {
+    max-height: 200px;
+}
+
+.pantalla-77 .pilares div {
+    max-width: 250px;
+}
+
+/*Pantalla 78*/
+
+.pantalla-78 .relative .box_media {
+    position: absolute;
+}
+
+.pantalla-78 .relative .dotacion {
+    top: 4%;
+    left: -70%;
+}
+
+.pantalla-78 .relative .plan {
+    top: 10%;
+    right: -56%;
+}
+
+.pantalla-78 .relative .capacitacion {
+    bottom: -14%;
+    left: -33%;
+}
+
+/*Pantalla 82*/
+
+.pantalla-82 .verde {
+    border: 2px solid #93D402;
+    border-radius: 10px;
+    padding: 5px 10px;
+    margin: 3px;
+}
+
+.pantalla-82 .naranja {
+    border: 2px solid #F98D2A;
+    border-radius: 10px;
+    padding: 5px 10px;
+    margin: 3px;
+}
+
+.pantalla-82 .azul {
+    border: 2px solid #5BC2E7;
+    border-radius: 10px;
+    padding: 5px 10px;
+    margin: 3px;
+}
+
+.pantalla-82 .morado {
+    border: 2px solid #803061;
+    border-radius: 10px;
+    padding: 5px 10px;
+    margin: 3px;
+}
+
+/*Pantalla 83*/
+
+.pantalla-83 img {
+    margin: 20px 0;
+}
+
+.pantalla-83 .estrategico {
+    top: 10%;
+    left: 28%;
+    width: 65%;
+}
+
+.pantalla-83 .estrategico:before {
+    top: 49%;
+    left: -30px;
+    transform: rotate(-90deg);
+}
+
+.pantalla-83 .operativo {
+    top: 45%;
+    left: 39%;
+    width: 54%;
+}
+
+.pantalla-83 .operativo:before {
+    top: 57%;
+    left: -30px;
+    transform: rotate(-90deg);
+}
+
+.pantalla-83 .tactico {
+    top: 30%;
+    left: 9%;
+    width: 45%;
+}
+
+.pantalla-83 .tactico:before {
+    top: 45%;
+    right: -30px;
+    transform: rotate(90deg);
+}
+
+.pantalla-83 .comunitario {
+    top: 27%;
+    left: 1%;
+    width: 53%;
+}
+
+.pantalla-83 .comunitario:before {
+    top: 69%;
+    right: -30px;
+    transform: rotate(90deg);
 }
