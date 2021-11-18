@@ -3,6 +3,11 @@
 /********************************************************************************/
 /* SPECIFIC LAYER STYLES
 /********************************************************************************/
+
+.justi {
+    text-align: justify;
+}
+
 #pag-textos-infografia .note_pointer_left, #pag-textos-infografia .note_pointer_right {
     display: inline-table;
     position: relative;
