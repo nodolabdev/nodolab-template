@@ -1045,6 +1045,10 @@
     left: 21%;
 }
 
+ul.datalist {
+    text-align: left;
+}
+
 ul.datalist li {
     position: relative;
     list-style: none;
@@ -2108,4 +2112,7 @@ ul.datalist li:before {
     animation: bottom-top 1s ;
     animation-fill-mode: forwards;
     opacity: 0;
+}
+.mt-40 {
+    margin-top: 40px;
 }
