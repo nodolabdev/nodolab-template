@@ -2185,6 +2185,7 @@ dhbgApp.standard.load_operations = function() {
                         }
                         $box_end.empty();
                         $box_end.append(msg).show();
+                        $box_end.focus();
                     }
                     else {
                         $box_end.show();
@@ -2923,13 +2924,14 @@ dhbgApp.standard.load_operations = function() {
 
                 var msg;
                 if (weight >= dhbgApp.evaluation.approve_limit) {
-                    msg = '<div class="correct">' + (feedbacktrue ? feedbacktrue : dhbgApp.s('all_correct_percent', weight)) + '</div>';
+                    msg = '<div class="correct" tabindex="0">' + (feedbacktrue ? feedbacktrue : dhbgApp.s('all_correct_percent', weight)) + '</div>';
                 }
                 else {
-                    msg = '<div class="wrong">' + (feedbackfalse ? feedbackfalse : dhbgApp.s('wrong_percent', (100 - weight))) + '</div>';
+                    msg = '<div class="wrong" tabindex="0">' + (feedbackfalse ? feedbackfalse : dhbgApp.s('wrong_percent', (100 - weight))) + '</div>';
                 }
 
                 $box_end.append(msg).show();
+                $box_end.focus();
 
                 activity.disable();
                 activity.highlight('correct', 'wrong');
