@@ -410,13 +410,13 @@ main {
 }
 
 .client-logo {
-    flex-basis: 300px;
+    flex-basis: 260px;
     flex-grow: 0;
     flex-shrink: 0;
 }
 
 .client-logo img {
-    width: 60%;
+    width: 69%;
     display: block;
     margin: 0 auto;
 }
@@ -424,7 +424,7 @@ main {
 .header .banner {
     background-color: transparent;
     padding: 5px 15px;
-    flex-basis: 500px;
+    flex-basis: 419px;
     flex-grow: 0;
     flex-shrink: 0;
 }
@@ -1874,7 +1874,7 @@ sup.tooltip {
 .jpit_activities_quiz_question_simplechoice .jpit_activities_quiz_question_option_control,
 .jpit_activities_quiz_question_multichoice .jpit_activities_quiz_question_option_control,
 .jpit_activities_quiz_question_multisetchoice .jpit_activities_quiz_question_option_control {
-    display: none;
+    display: inline;
 }
 
 .jpit_activities_quiz_question_option_answer label {
@@ -1897,7 +1897,6 @@ sup.tooltip {
     font-weight: bold;
     background-color: var(--primary-color);
     border-radius: 20px;
-    display: table;
     margin: 2px 0;
     padding-right: 20px;
 }
