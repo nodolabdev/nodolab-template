@@ -785,7 +785,10 @@
 .green-3 {color: var(--tertiary-color);}
 
 .w-200 {width: 200px; margin: auto;}
+.w-300 {width: 300px; margin: auto;}
 .w-400 {width: 400px; margin: auto;}
+.w-600 {width: 600px; margin: auto;}
+.w-800 {width: 800px; margin: auto;}
 .w-30 {width: 30% !important;}
 .w-70 {width: 70% !important;}
 .w-80 {width: 80%;}
@@ -2152,6 +2155,178 @@ section[ptitle="Contextualización"] h2 {
     background: url(../content/p12-4.svg) no-repeat;
 }
 
+/*Pantalla 13*/
+
+#pantalla-13-1 .emergente {
+    top: 37%;
+}
+
+#pantalla-13-2 .emergente {
+    top: 43%;
+}
+
+#pantalla-13-2 .emergente:before {
+    left: 29%;
+}
+
+#pantalla-13-3 .emergente {
+    top: 29%;
+}
+
+#pantalla-13-3 .emergente:before {
+    top: 100%;
+    left: 61%;
+    transform: rotate(180deg);
+    border-color: transparent transparent #93d50a transparent;
+}
+
+#pantalla-13-4 .emergente {
+    top: 32%;
+}
+
+#pantalla-13-4 .emergente:before {
+    top: -20px;
+    left: 61%;
+}
+
+#pantalla-13-5 .emergente {
+    top: 49%;
+}
+
+#pantalla-13-5 .emergente:before {
+    left: 75%;
+    border-color: transparent transparent #93d50a transparent;
+}
+
+/*Pantalla 14*/
+
+.pantalla-14 .emergente.distribucion {
+    top: 55%;
+    left: 16%;
+    width: 65%;
+}
+
+.pantalla-14 .emergente.transmision {
+    top: 54%;
+    left: 17%;
+    width: 66%;
+}
+
+.pantalla-14 .emergente.transmision:before {
+    left: 345px;
+}
+
+.pantalla-14 .emergente.generacion {
+    top: 33%;
+    left: 21%;
+}
+
+.pantalla-14 .emergente.generacion:before {
+    right: -30px;
+    top: 33%;
+    transform: rotate(90deg);
+}
+
+.pantalla-14-1 .emergente.produccion {
+    left: 40%;
+}
+
+.pantalla-14-1 .emergente.produccion:before {
+    top: 48%;
+    left: -30px;
+    transform: rotate(-90deg);
+}
+
+.pantalla-14-1 .emergente.transporte {
+    left: 40%;
+    top: 40%;
+}
+
+.pantalla-14-1 .emergente.transporte:before {
+    top: 48%;
+    left: -30px;
+    transform: rotate(-90deg);
+}
+
+.pantalla-14-1 .emergente.distribucion {
+    left: 40%;
+    top: 65%;
+}
+
+.pantalla-14-1 .emergente.distribucion:before {
+    top: 48%;
+    left: -30px;
+    transform: rotate(-90deg);
+}
+
+/*Pantalla 15 */
+
+.pantalla-15 .emergente.captacion {
+    left: 5%;
+    top: 37%;
+}
+
+.pantalla-15 .emergente.captacion:before {
+    top: 100%;
+    left: 29%;
+    transform: rotate(180deg);
+}
+
+.pantalla-15 .emergente.potabilizacion {
+    top: 35%;
+    left: 14%;
+}
+
+.pantalla-15 .emergente.potabilizacion:before {
+    top: 100%;
+    left: 38%;
+    transform: rotate(180deg);
+}
+
+.pantalla-15 .emergente.primaria {
+    top: 39%;
+    left: 32%;
+}
+
+.pantalla-15 .emergente.primaria:before {
+    top: 100%;
+    left: 45%;
+    transform: rotate(180deg);
+}
+
+.pantalla-15 .emergente.secundaria {
+    top: 53%;
+    left: 27%;
+    width: 65%;
+}
+
+.pantalla-15 .emergente.secundaria:before {
+    left: 65%;
+}
+
+/*Pantalla 16*/
+
+.pantalla-16 .emergente.recoleccion {
+    left: 42%;
+    top: 11%;
+}
+
+.pantalla-16 .emergente.recoleccion:before {
+    top: 45%;
+    left: -30px;
+    transform: rotate(-90deg);
+}
+
+.pantalla-16 .emergente.tratamiento {
+    left: 1%;
+}
+
+.pantalla-16 .emergente.tratamiento:before {
+    top: 36%;
+    right: -30px;
+    transform: rotate(90deg);
+}
+
 /*Pantalla 19 - 20 - 21*/
 .p19-21 .riesgo {
     background: url(../content/p19.svg) no-repeat;
@@ -2181,6 +2356,18 @@ section[ptitle="Contextualización"] h2 {
 .p19-21 .riesgo.p21 .select {
     top: 30%;
     left: 61.7%;
+}
+
+/*Pantalla 22*/
+
+#pantalla-22 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#pantalla-22 .w-300 {
+    margin: 30px;
 }
 
 /*Pantalla 24*/
