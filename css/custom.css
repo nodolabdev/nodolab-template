@@ -1965,6 +1965,21 @@ section[ptitle="Contextualización"] h2 {
 
 }
 
+.note {
+    position: relative;
+}
+
+.note:before {
+    content: "";
+    background: url(../content/nota.svg) no-repeat;
+    background-size: 100%;
+    position: absolute;
+    width: 80px;
+    padding-top: 87px;
+    right: calc(100% + 20px);
+    top: -20px;
+}
+
 /*Pantalla 5*/
 .pantalla-5 .modelo {
     background: url(../content/p5.svg) no-repeat;
@@ -2228,7 +2243,7 @@ section[ptitle="Contextualización"] h2 {
 }
 
 .pantalla-14-1 .emergente.produccion {
-    left: 40%;
+    left: 25%;
 }
 
 .pantalla-14-1 .emergente.produccion:before {
@@ -2238,7 +2253,7 @@ section[ptitle="Contextualización"] h2 {
 }
 
 .pantalla-14-1 .emergente.transporte {
-    left: 40%;
+    left: 25%;
     top: 40%;
 }
 
@@ -2249,7 +2264,7 @@ section[ptitle="Contextualización"] h2 {
 }
 
 .pantalla-14-1 .emergente.distribucion {
-    left: 40%;
+    left: 25%;
     top: 65%;
 }
 
