@@ -68,7 +68,3 @@ body {
       color: white; }
       #onetrust-consent-sdk #onetrust-banner-sdk a:hover {
         color: #f2f4fc; }
-
-.genially-embed .genially-view-navigation-actions-container.genially-view-without-option-button.genially-view-no-in-autopagination-and-without-option-button.genially-view-mono-slide-horizontal .genially-view-navigation-actions {
-  display: none;
-}
