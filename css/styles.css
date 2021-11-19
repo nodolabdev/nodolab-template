@@ -163,7 +163,7 @@ cite {
 
 em {
     color: var(--secondary-color);
-    font-size: 1.375rem;
+    font-size: 1rem;
     font-weight: bold;
     font-style: normal;
 }
@@ -404,7 +404,7 @@ img.animation, img.play-animation, .animation_image .label {
 /* CONTENT AREA
 /********************************************************************************/
 main {
-    padding: 45px 100px 45px;
+    padding: 45px 60px 45px;
     background: #ebebeb80;
     position: relative;
     height: 485px;
