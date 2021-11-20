@@ -4,51 +4,44 @@
 /* SPECIFIC LAYER STYLES
 /********************************************************************************/
 .text_tooltip {
-    line-height: 10px;
+    line-height: 13px;
     padding: 0;
 }
 
-#pag-mod-3-4 .box_media.imgs_uno {
-    background: url(../content/51.png) no-repeat;
-    width: 100%;
-    margin: auto;
-    padding: 80%;
-    background-size: 100%;
-}
-
-
 #pag-mod-3-4 .box_media .note_1 {
-    left: 69%;
-    top: 5%;
+    position: absolute;
+    left: -2%;
+    top: 59%;
   }
     
   #pag-mod-3-4 .box_media .note_2 {
-    left: 57%;
-    top: 23%;
+    left: 22%;
+    top: 59%;
+    position: absolute;
   }
 
   #pag-mod-3-4 .box_media .note_3 {
-
-    left: 26%;
-    top: 49%;
+    position: absolute;
+    left: 44%;
+    top: 13%;
   }
 
   #pag-mod-3-4 .box_media .note_4 {
-
-    left: 78%;
-    top: 62%;
+    position: absolute;
+    left: -4%;
+    top: 84%;
   }
 
   #pag-mod-3-4 .box_media .note_5 {
-
-    left: 22.5%;
-    top: 88%;
+    position: absolute;
+    left: 6.5%;
+    top: 86%;
   }
 
   #pag-mod-3-4 .box_media .note_6 {
     position: absolute;
-    left: 22.5%;
-    top: 88%;
+    left: 21.5%;
+    top: 81%;
   }
 
 .unity-1-button.gray, .unity-2-button.gray, .unity-3-button.gray, .unity-4-button.gray {
@@ -842,11 +835,13 @@
 .fs-16 {font-size: 1rem;}
 .fs-18 {font-size: 1.125rem;}
 .black {color: #000;}
+.w-15 {width: 15%;}
 .w-20 {width: 20%;}
 .w-25 {width: 25%;}
 .w-35 {width: 35%;}
 .w-40 {width: 40%;}
 .w-80 {width: 80%;}
+.w-90 {width: 90%;}
 .w-70 {width: 70%;}
 .w-60 {width: 60%;}
 .w-100 {width: 100%;}
