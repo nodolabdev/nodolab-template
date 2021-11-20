@@ -134,7 +134,8 @@ h6 {
 }
 
 p {
-    font-size: 1.125rem;
+    font-size: 1rem;
+    margin: 14px;
 }
 
 pre {
@@ -232,6 +233,8 @@ button.general.active, button.general:hover {
 .mb-15 {
     margin-bottom: 15px;
 }
+.mt-2 {margin-top: 2px;}
+.mr-10 {margin: 10px;}
 
 .grey {
     color: #5c5c5b;
@@ -240,6 +243,8 @@ button.general.active, button.general:hover {
 .fs-30 {font-size: 1.875rem;}
 .fs-24 {font-size: 1.5rem;}
 .fs-40 {font-size: 2.5rem;}
+.fs-18 {font-size: 1.125rem;}
+
 .center {text-align: center;}
 .green-1 {color: var(--primary-color);}
 .green-2 {color: var(--secondary-color);}

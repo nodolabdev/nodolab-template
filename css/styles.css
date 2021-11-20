@@ -163,13 +163,13 @@ cite {
 
 em {
     color: var(--secondary-color);
-    font-size: 1.375rem;
+    font-size: 1rem;
     font-weight: bold;
     font-style: normal;
 }
 
 p {
-    line-height: 20px;
+    line-height: 25px;
 }
 
 img {
@@ -404,7 +404,7 @@ img.animation, img.play-animation, .animation_image .label {
 /* CONTENT AREA
 /********************************************************************************/
 main {
-    padding: 45px 100px 45px;
+    padding: 45px 60px 45px;
     background: #ebebeb80;
     position: relative;
     height: 485px;
@@ -455,13 +455,13 @@ main {
 .header .banner h1 {
     color: var(--tertiary-color);
     text-align: left;
-    font-size: 2rem;
+    font-size: 32px;
 }
 
 .header .banner h1 span {
     color: var(--secondary-color);
     margin-left: 40px;
-    font-size: 2rem;
+    font-size: 32px;
 }
 
 /*--------------------------*/
@@ -2000,7 +2000,7 @@ sup.tooltip {
     color: #d60c1b;
 }
 
-.jpit_activities_quiz_question_feedback_true:after {
+/* .jpit_activities_quiz_question_feedback_true:after {
     background: url(../img/course-images/semaforo-verde.png) no-repeat;
     background-size: contain;
     position: absolute;
@@ -2011,9 +2011,9 @@ sup.tooltip {
     left: -3%;
     content: "";
     z-index: 2;
-}
+} */
 
-.jpit_activities_quiz_question_feedback_false:after {
+/* .jpit_activities_quiz_question_feedback_false:after {
     content: "";
     background: url(../img/course-images/semaforo.png) no-repeat;
     background-size: contain;
@@ -2024,14 +2024,14 @@ sup.tooltip {
     top: 6px;
     left: -3%;
     z-index: 2;
-}
+} */
 
 .jpit-activities-quiz .verify_box {
     padding-top: 10px;
     text-align: center;
     position: absolute;
     width: auto;
-    bottom: 5px;
+    bottom: -55px;
     left: calc(50% - 130px/2);
     z-index: 1;
 }

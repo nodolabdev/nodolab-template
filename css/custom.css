@@ -741,6 +741,9 @@
 .grey {
     color: #5c5c5b;
 }
+
+.grey {filter: grayscale(100%)}
+
 .d-none {
     display: none;
 }
@@ -1845,7 +1848,9 @@ section[ptitle="Contextualización"] h2 {
 
 .esquema-container-pointer#pointer-5 {left: 53%; bottom: 47%;}
 .esquema-container-pointer#pointer-6 {left: 70%; bottom: 60%;}
-.esquema-container-pointer#pointer-7 {left: 8%; bottom: 24%;}
+.esquema-container-pointer#pointer-7 {left: 17%; bottom: 21%;}
+
+.esquema-container-pointer#pointer-8 {left: 11%; bottom: 25%;}
 
 
 .p-22-strat {
