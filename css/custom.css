@@ -972,3 +972,8 @@ ul li p {
 .hidro_schema {
     width: 1000px;
 }
+
+#activities-q2 .jpit-activities-quiz .jpit_activities_quiz_question_answers {
+    display: block;
+    column-count: 2;
+}
