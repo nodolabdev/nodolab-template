@@ -235,6 +235,7 @@ button.general.active, button.general:hover {
 }
 .mt-2 {margin-top: 2px;}
 .mr-10 {margin: 10px;}
+.ta {text-align: justify;}
 
 .grey {
     color: #5c5c5b;
