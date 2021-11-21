@@ -1,0 +1,282 @@
+@charset "utf-8";
+/* CSS Document */
+
+:root {
+    --primary-color: #02b802;
+    --secondary-color:  #00877A;
+    --tertiary-color: #93D500;
+}
+
+
+@font-face {
+    font-family: VAG Rounded;
+    font-weight: bold;
+    src: url(../content/fonts/VAGRounded-Bold.otf);
+}
+
+@font-face {
+    font-family: VAG Rounded;
+    font-weight: normal;
+    src: url(../content/fonts/VAGRoundedBT-Regular.otf);
+}
+
+@font-face {
+    font-family: Calibri;
+    font-weight: normal;
+    src: url(../content/fonts/calibri-regular.ttf);
+}
+
+@font-face {
+    font-family: Calibri;
+    font-weight: bold;
+    src: url(../content/fonts/calibri-bold.ttf);
+}
+
+@font-face {
+    font-family: Calibri;
+    font-style: italic;
+    src: url(../content/fonts/calibri-italic.ttf);
+}
+
+@font-face {
+    font-family: Calibri;
+    font-style: italic;
+    font-weight: bold;
+    src: url(../content/fonts/calibri-bold-italic.ttf);
+}
+
+html {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    font-family: 'Calibri', sans-serif;
+    font-weight: bold;
+    font-size: 1rem;
+    color: #000;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/background.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+body:after {
+    content: "";
+    width: 450px;
+    height: 450px;
+    bottom: 0px;
+    right: 0;
+    position: absolute;
+    background-image: url(../img/presa-agua.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    z-index: 2;
+}
+
+
+#body {
+    max-width: 968px;
+    margin: 130px auto;
+}
+
+#body:before {
+    content: "";
+    position: fixed;
+    top: -2px;
+    left: 30px;
+    background: url(../img/logo.png) no-repeat;
+    background-size: 100%;
+    width: 160px;
+    height: 63px;
+    z-index: 1;
+}
+
+
+
+h1 {
+    font-weight: bold;
+    font-size: 36px;
+    color: var(--secondary-color);
+    font-family: VAG Rounded;
+}
+
+h2 {
+    font-weight: bold;
+    font-size: 21px;
+    color: var(--secondary-color);
+    font-family: VAG Rounded;
+}
+
+h3 {
+    font-weight: normal;
+    font-size: 1.125rem;
+    color: black;
+    font-family: VAG Rounded;
+}
+
+h4 {
+    font-size: 17px;
+    color: #000000;
+    font-weight: normal;
+    font-family: VAG Rounded;
+}
+
+h5 {
+    font-weight: normal;
+    font-size: 14px;
+    color: #000000;
+    font-family: VAG Rounded;
+}
+
+h6 {
+    font-size: 14px;
+    font-weight: normal;
+    font-family: VAG Rounded;
+}
+
+p {
+    font-size: 1.125rem;
+}
+
+pre {
+    background:#F8F8FF;
+    border: #000 dashed 1px;
+    padding: 6px;
+    overflow: auto;
+}
+
+em {
+    color: var(--secondary-color);
+    font-size: 1.375rem;
+    font-weight: bold;
+    font-style: normal;
+}
+
+button.general {
+    background-color: #fff;
+    cursor: pointer;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 17px;
+    color: transparent;
+    background-color: var(--primary-color);
+    padding: 10px 15px;
+    border: 1px solid var(--primary-color);
+    transition: all 0.2s ease-in-out;
+}
+
+button.general.active, button.general:hover {
+    background-color: transparent;
+    color: transparent;
+}
+
+#content {
+    padding: 45px 100px 45px;
+    background: #ebebeb80;
+    position: relative;
+    height: 485px;
+    width: 989px;
+    box-sizing: border-box;
+    margin: 0 auto;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0px 3px 6px #0000004D;
+    border: 2px solid #FFFFFF;
+    border-radius: 22px;
+}
+
+.ui-state-error, .ui-state-highlight {
+    padding: 10px;
+}
+
+@media (max-width:750px) {
+    #body {
+        width: 95%;
+        margin: 70px auto;
+    }
+
+    #play_scorm {
+        max-width: 100%;
+    }
+
+    #content {
+        padding: 15px;
+        border-radius: 30px;
+    }
+
+    #content:after {
+        display: none;
+    }
+}
+
+.flex {
+    display: flex;
+}
+
+.items-center {
+    align-items: center;
+}
+
+.img {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    height: auto;
+}
+
+.white {color: white};
+.bold {
+    font-weight: bold;
+}
+
+.mb-15 {
+    margin-bottom: 15px;
+}
+
+.grey {
+    color: #5c5c5b;
+}
+
+.fs-30 {font-size: 1.875rem;}
+.fs-24 {font-size: 1.5rem;}
+.fs-40 {font-size: 40px;}
+.center {text-align: center;}
+.green-1 {color: var(--primary-color);}
+.green-2 {color: var(--secondary-color);}
+.green-3 {color: var(--tertiary-color);}
+.screen-reader {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+#play_scorm button{
+    background-color: var(--tertiary-color);
+    border: 1px solid var(--tertiary-color);
+    color: white;
+    padding: 3px 52px;
+}
+
+#play_scorm button:hover {
+    background-color: transparent;
+    border: 1px solid var(--secondary-color);
+    color: var(--secondary-color);
+}
+
+.duration {
+    position: absolute;
+    top: 90%;
+    right: 14%;
+}
+
+.start-suggestion-text{
+    width: 27%;
+    position: absolute;
+    bottom: 10%;
+    right: 0%;
+}
