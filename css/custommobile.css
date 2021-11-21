@@ -7,6 +7,237 @@
 /********************************************************************************/
 /* SPECIFIC LAYER STYLES
 /********************************************************************************/
+.text_tooltip {
+    line-height: 13px;
+    padding: 0;
+}
+
+#pag-mod-3-4 .box_media .note_1 {
+    position: absolute;
+    left: -2%;
+    top: 20.5%;
+  }
+    
+  #pag-mod-3-4 .box_media .note_2 {
+    left: 18%;
+    top: 20.5%;
+    position: absolute;
+  }
+
+  #pag-mod-3-4 .box_media .note_3 {
+    position: absolute;
+    left: 40%;
+    top: 16%;
+  }
+
+  #pag-mod-3-4 .box_media .note_4 {
+    position: absolute;
+    left: -4%;
+    top: 22.5%;
+  }
+
+  #pag-mod-3-4 .box_media .note_5 {
+    position: absolute;
+    left: 5%;
+    top: 22.3%;
+  }
+
+  #pag-mod-3-4 .box_media .note_6 {
+    position: absolute;
+    left: 17.5%;
+    top: 22.2%;
+  }
+
+  #pag-mod-3-4 .box_media .note_7 {
+    position: absolute;
+    left: 38.5%;
+    top: 20.5%;
+  }
+  
+  #pag-mod-3-4 .box_media .note_8 {
+    position: absolute;
+    left: 72.5%;
+    top: 20.5%;
+  }
+
+  #pag-mod-3-5 .box_media .note_1-1 {
+    position: absolute;
+    left: 77.5%;
+    top: 16%;
+  }
+
+  #pag-mod-3-5 .box_media .note_1-2 {
+    position: absolute;
+    left: 20.5%;
+    top: 17%;
+  }
+
+  #pag-mod-3-5 .box_media .note_1-3 {
+    position: absolute;
+    left: 76%;
+    top: 16.7%;
+  }
+
+  #pag-mod-3-5 .box_media .note_1-4 {
+    position: absolute;
+    left: 78.5%;
+    top: 17.8%;
+  }
+
+  #pag-mod-3-5 .box_media .note_1-5 {
+    position: absolute;
+    left: 91.5%;
+    top: 18%;
+  }
+
+  #pag-mod-3-5 .box_media .note_1-6 {
+    position: absolute;
+    left: 21.5%;
+    top: 18.5%;
+  }
+
+  #pag-mod-3-5 .box_media .note_1-7 {
+    position: absolute;
+    left: 77.5%;
+    top: 18.5%;
+  }
+
+  #pag-mod-3-5 .box_media .note_1-8 {
+    position: absolute;
+    left: 78.5%;
+    top: 19.5%;
+  }
+
+  #pag-mod-3-5 .box_media .note_1-9 {
+    position: absolute;
+    left: 91.5%;
+    top: 19.8%;
+  }
+
+  #pag-mod-3-6 .box_media .note_2-1 {
+    position: absolute;
+    left: 43.5%;
+    top: 17%;
+  }
+
+  #pag-mod-3-6 .box_media .note_2-2 {
+    position: absolute;
+    left: 54%;
+    top: 17%;
+  }
+
+  #pag-mod-3-6 .box_media .note_2-3 {
+    position: absolute;
+    left: 60.5%;
+    top: 17.2%;
+  }
+
+  #pag-mod-3-6 .box_media .note_2-4 {
+    position: absolute;
+    left: 74.5%;
+    top: 17.4%;
+  }
+
+  #pag-mod-3-6 .box_media .note_2-5 {
+    position: absolute;
+    left: 41.5%;
+    top: 17.8%
+  }
+
+  #pag-mod-3-6 .box_media .note_2-6 {
+    position: absolute;
+    left: 50.5%;
+    top: 17.8%;
+  }
+
+  #pag-mod-3-6 .box_media .note_2-7 {
+    position: absolute;
+    left: 63.5%;
+    top: 18%;
+  }
+
+  #pag-mod-3-6 .box_media .note_2-8 {
+    position: absolute;
+    left: 37.5%;
+    top: 23.5%;
+  }
+
+  #pag-mod-3-6 .box_media .note_2-9 {
+    position: absolute;
+    left: 74.5%;
+    top: 23.5%;
+  }
+
+  #pag-mod-3-8 .box_media .note_3-1 {
+    position: absolute;
+    left: 5.5%;
+    top: 18.8%;
+  }
+
+  #pag-mod-3-8 .box_media .note_3-2 {
+    position: absolute;
+    left: 36.5%;
+    top: 15.2%;
+  }
+
+  #pag-mod-3-8 .box_media .note_3-3 {
+    position: absolute;
+    left: 86.5%;
+    top: 15.3%;
+  }
+
+  #pag-mod-3-8 .box_media .note_3-4 {
+    position: absolute;
+    left: 38.5%;
+    top: 16.6%;
+  }
+
+  #pag-mod-3-8 .box_media .note_3-5 {
+    position: absolute;
+    left: 59.5%;
+    top: 16%;
+  }
+
+  #pag-mod-3-8 .box_media .note_3-6 {
+    position: absolute;
+    left: 59.5%;
+    top: 20%;
+  }
+
+  #pag-mod-3-8 .box_media .note_3-7 {
+    position: absolute;
+    left: 57.5%;
+    top: 22%;
+  }
+
+  #pag-mod-3-8 .box_media .note_3-8 {
+    position: absolute;
+    left: 35.5%;
+    top: 15%;
+  }
+
+  #pag-mod-3-8 .box_media .note_3-9 {
+    position: absolute;
+    left: 62.5%;
+    top: 14.2%;
+  }
+
+  #pag-mod-3-8 .box_media .note_3-10 {
+    position: absolute;
+    left: 68.5%;
+    top: 15.5%;
+  }
+
+  .note_pointer_left, .note_pointer_right  {
+    transform: scale(0.4);
+  }
+
+  .note_pointer_left.six, .note_pointer_right.six  {
+    transform: scale(0.3);
+  }
+
+
+
 #pag-textos-infografia .note_pointer_left, #pag-textos-infografia .note_pointer_right {
     display: inline-table;
     position: relative;

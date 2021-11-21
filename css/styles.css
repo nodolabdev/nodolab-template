@@ -2804,10 +2804,7 @@ html.single header {
     padding: 0 10px;
 }
 
-html.single .page-title,
-html.single nav.main {
-    display: none;
-}
+
 
 html.single h2 {
     padding: 0;
