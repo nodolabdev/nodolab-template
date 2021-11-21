@@ -232,10 +232,10 @@
     transform: scale(0.4);
   }
 
+  
   .note_pointer_left.six, .note_pointer_right.six  {
     transform: scale(0.3);
   }
-
 
 
 #pag-textos-infografia .note_pointer_left, #pag-textos-infografia .note_pointer_right {

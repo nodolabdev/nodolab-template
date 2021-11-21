@@ -250,7 +250,6 @@
     top: 18px !important;
 }
 
-
 .instruction.audi11 {
     top: 4px !important;
     left: 286px !important;
@@ -992,14 +991,6 @@
 
 .mr-15 {
     margin-right: 15px;
-}
-
-.mr-100 {
-    margin-right: 100px;
-}
-
-.mr-160 {
-    margin-right: 160px;
 }
 
 .items-center {align-items: center;}
