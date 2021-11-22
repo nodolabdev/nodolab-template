@@ -228,7 +228,11 @@
 }
 
 .jpit_activities_quiz_question_answers { overflow: auto; }
-.jpit_activities_quiz_board { height: 185px; overflow: scroll;}
+.jpit_activities_quiz_board { 
+    max-height: 240px;
+    margin-bottom: 10px;
+    overflow: auto;
+}
 
 /********************************************************************************/
 /* Actividad Sopa de letras
@@ -1581,7 +1585,7 @@ section[ptitle="Contextualización"] h2 {
 
 .jpit_activities_quiz_question_feedback {
     position: absolute;
-    top: 50%;
+    top: 30%;
     left: calc(50% - 422px/2);
 }
 
@@ -1848,7 +1852,7 @@ section[ptitle="Contextualización"] h2 {
 .p-8-esquema .text-box p{margin: 0;}
 
 
-.p-8-esquema .text-box.text-box-1 {left: -20%;top: 5%;}
+.p-8-esquema .text-box.text-box-1 {left: -25%;top: 5%;}
 .p-8-esquema .text-box.text-box-2 {left: -25%;top: 38%;}
 .p-8-esquema .text-box.text-box-3 {left: -25%;top: 79%;}
 .p-8-esquema .text-box.text-box-4 {right: -25%; top: 5%;}
@@ -1863,9 +1867,18 @@ section[ptitle="Contextualización"] h2 {
     flex-wrap: wrap;
 }
 
-.p-16 .icons .icon {text-align: center; width: 60px;display: flex;flex-direction: column;justify-content: flex-start;align-items: center;min-height: 100%; padding: 3px 10px;}
+.p-16 .icons .icon {
+    text-align: center;
+    width: 65px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 100%;
+    padding: 10px 20px;
+}
 .p-16 .icons .icon img{height: 60px; margin: 0 auto;}
-.p-16 .icons .icon p{font-size: 10px; text-transform: uppercase; text-align: center; line-height: 10px; color: #00b1e2;}
+.p-16 .icons .icon p{font-size: 14px; text-transform: uppercase; text-align: center; line-height: 14px; color: #00b1e2;}
 
 .modal-box {padding: 30px; background-color: rgba(255, 255, 255, 0.6); box-shadow: 0px 3px 6px #0000004D; border-radius: 25px;}
 
@@ -1897,17 +1910,17 @@ section[ptitle="Contextualización"] h2 {
     max-height: 200px;
     padding: 10px 5px;
 }
-.p-22-strat .strat-item span {font-size: 16px; font-family: 'VAG Rounded'; padding: 3px; border-radius: 25px;}
+.p-22-strat .strat-item span {font-size: 16px; font-family: 'VAG Rounded'; padding: 3px; border-radius: 25px; margin-bottom: 12px;}
 .p-22-strat .strat-item p {margin: 0;}
 
 
 .p-22-strat .strat-item-1 { grid-area: 1 / 1 / 2 / 3; border-bottom: 2px solid var(--secondary-color); border-right: 2px solid var(--secondary-color);}
-.p-22-strat .strat-item-2 { grid-area: 1 / 3 / 2 / 5; border-bottom: 2px solid var(--secondary-color); border-right: 2px solid var(--secondary-color);}
-.p-22-strat .strat-item-3 { grid-area: 1 / 5 / 2 / 7; border-bottom: 2px solid var(--secondary-color); border-right: 2px solid var(--secondary-color);}
-.p-22-strat .strat-item-4 { grid-area: 1 / 7 / 2 / 9; border-bottom: 2px solid var(--secondary-color);}
+.p-22-strat .strat-item-2 { grid-area: 1 / 3 / 2 / 6; border-bottom: 2px solid var(--secondary-color); border-right: 2px solid var(--secondary-color);}
+.p-22-strat .strat-item-3 { grid-area: 1 / 6 / 2 / 8; border-bottom: 2px solid var(--secondary-color); border-right: 2px solid var(--secondary-color);}
+.p-22-strat .strat-item-4 { grid-area: 1 / 8 / 2 / 9; border-bottom: 2px solid var(--secondary-color);}
 .p-22-strat .strat-item-5 { grid-area: 2 / 1 / 3 / 4; border-right: 2px solid var(--secondary-color);}
-.p-22-strat .strat-item-6 { grid-area: 2 / 4 / 3 / 6; border-right: 2px solid var(--secondary-color);}
-.p-22-strat .strat-item-7 { grid-area: 2 / 6 / 3 / 9; }
+.p-22-strat .strat-item-6 { grid-area: 2 / 4 / 3 / 7; border-right: 2px solid var(--secondary-color);}
+.p-22-strat .strat-item-7 { grid-area: 2 / 7 / 3 / 9; }
 
 .p-22-strat .strat-item-1 span { background-color: #f9d3db; color: #df244b; }
 .p-22-strat .strat-item-2 span { background-color: #fbedd1; color: #eca718; }
@@ -1970,3 +1983,24 @@ section[ptitle="Contextualización"] h2 {
 .table-box--blue-2 {border-color: #2280c2;} 
 .table-box--purple {border-color: #48348a;}
 .table-box--pink {border-color: #a32c87;}
+
+
+#pag-parque :not(.passport-feedback) p {
+    margin: 0;
+}
+
+.activities-q4 .jpit-activities-quiz .jpit_activities_quiz_board {
+    max-height: initial;
+}
+.activities-q4 .jpit-activities-quiz .jpit_activities_quiz_question_answers {
+    display: block;
+    column-count: 2;
+    break-inside: avoid;
+}
+.activities-q4 .jpit-activities-quiz .jpit_activities_quiz_question_answers li {
+    break-inside: avoid;
+}
+.passport-feedback p {
+    margin: 0;
+    margin-top: 20px;
+}

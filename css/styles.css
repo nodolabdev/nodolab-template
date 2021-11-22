@@ -66,7 +66,6 @@ html {
 
 body {
     font-family: 'Calibri', sans-serif;
-    font-weight: bold;
     font-size: 1rem;
     color: #000;
     margin: 0;
@@ -405,7 +404,7 @@ img.animation, img.play-animation, .animation_image .label {
 /********************************************************************************/
 main {
     padding: 45px 60px 45px;
-    background: #ebebeb80;
+    background: #ffffffad;
     position: relative;
     height: 485px;
     width: 989px;
@@ -1874,7 +1873,7 @@ sup.tooltip {
 
 .jpit-activities-quiz .box_content {
     position: relative;
-    padding-bottom: 40px;
+    padding-bottom: 10px;
 }
 
 .jpit-activities-quiz .box_content .jpit_activities_quiz_question_statement {
@@ -1901,7 +1900,7 @@ sup.tooltip {
 .jpit_activities_quiz_question_simplechoice .jpit_activities_quiz_question_option_control,
 .jpit_activities_quiz_question_multichoice .jpit_activities_quiz_question_option_control,
 .jpit_activities_quiz_question_multisetchoice .jpit_activities_quiz_question_option_control {
-    display: none;
+    display: inline;
 }
 
 .jpit_activities_quiz_question_option_answer label {
@@ -1924,7 +1923,6 @@ sup.tooltip {
     font-weight: bold;
     background-color: var(--primary-color);
     border-radius: 20px;
-    display: table;
     margin: 2px 0;
     padding-right: 20px;
 }
