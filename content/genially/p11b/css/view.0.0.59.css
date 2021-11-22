@@ -68,3 +68,8 @@ body {
       color: white; }
       #onetrust-consent-sdk #onetrust-banner-sdk a:hover {
         color: #f2f4fc; }
+
+
+.container-wrapper-genially {
+  background-color: transparent !important;
+}
