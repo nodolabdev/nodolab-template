@@ -745,6 +745,10 @@
     align-items: center;
 }
 
+.items-bottom {
+    align-items: flex-end;
+}
+
 .light {
     font-weight: lighter;
 } 
@@ -2771,6 +2775,19 @@ section[ptitle="Contextualización"] h2 {
     left: -35px;
 }
 
+/*Pantalla 54*/
+
+.pantalla-54 .text {
+    background-color: #fff;
+    border-radius: 10px;
+    border: 2px solid #00785f;
+    padding: 0 10px;
+}
+
+.pantalla-54 .text p {
+    margin: 5px;
+}
+
 /*Pantalla 55*/
 
 .pantalla-55 .burbuja {
@@ -2856,6 +2873,16 @@ section[ptitle="Contextualización"] h2 {
     top: -18%;
 }
 
+/*Pantalla 62*/
+
+.pantalla-62 .p62 {
+    background: url(../content/p62.png) no-repeat;
+    background-size: 100%;
+    width: 600px;
+    height: 350px;
+    padding: 10px 20px 10px 270px;
+}
+
 /*Pantalla 65*/
 
 .pantalla-65 .relative .box_media {
@@ -2887,6 +2914,41 @@ section[ptitle="Contextualización"] h2 {
     left: -20%;
 }
 
+.pantalla-65 .emergente:before {
+    top: 41%;
+    left: -30px;
+    transform: rotate(-90deg);
+}
+
+.pantalla-65 .emergente {
+    width: 30%;
+}
+
+.pantalla-65 .emergente.uno {
+    left: 49%;
+    top: 27%;
+}
+
+.pantalla-65 .emergente.dos {
+    left: 51%;
+    top: 38%;
+}
+
+.pantalla-65 .emergente.tres {
+    left: 53%;
+    top: 50%;
+}
+
+.pantalla-65 .emergente.cuatro {
+    left: 50%;
+    top: 63%;
+}
+
+.pantalla-65 .emergente.cinco {
+    left: 51%;
+    top: 72%;
+}
+
 /*Pantalla 72*/
 
 .pantalla-72 .relative div {
@@ -2906,6 +2968,51 @@ section[ptitle="Contextualización"] h2 {
     background: url(../content/p72-2.png) no-repeat;
     left: 49%;
     top: 84%;
+}
+
+/*Pantalla 73*/
+
+.pantalla-73 .w-100 {
+    width: 100px !important;
+}
+
+.pantalla-73 .w-600 {
+    width: 600px !important;
+}
+
+.pantalla-73 .jpit-activities-cloze p,
+.pantalla-73 .jpit-activities-cloze .box_end,
+.pantalla-73 .jpit-activities-cloze .verify_container {
+    position: absolute;
+}
+
+.pantalla-73 .jpit-activities-cloze .verify_container {
+    bottom: 0;
+    right: 3%;
+}
+
+.pantalla-73 .hospital {
+    top: 33%;
+    left: 10%;
+}
+
+.pantalla-73 .unidad {
+    top: 36%;
+    left: 66%;
+}
+
+.pantalla-73 .sede {
+    top: 50%;
+    left: 69%;
+}
+
+.pantalla-73 .box_end p {
+    position: relative;
+}
+
+.pantalla-73 .box_end .wrong,
+.pantalla-73 .box_end .correct {
+    z-index: 2;
 }
 
 /*Pantalla 77*/
@@ -3013,6 +3120,7 @@ section[ptitle="Contextualización"] h2 {
 .pantalla-83 .tactico:before {
     top: 45%;
     right: -30px;
+    left: unset;
     transform: rotate(90deg);
 }
 
@@ -3025,5 +3133,6 @@ section[ptitle="Contextualización"] h2 {
 .pantalla-83 .comunitario:before {
     top: 69%;
     right: -30px;
+    left: unset;
     transform: rotate(90deg);
 }
