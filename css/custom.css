@@ -1939,6 +1939,27 @@ section[ptitle="Contextualización"] h2 {
     position: absolute;
     left: 0;
     top: 0;
+	opacity: 50%;
+}
+
+#parque-1 p {
+    line-height: 20px;
+    margin: 10px auto;
+}
+
+#parque-2 p {
+    line-height: 20px;
+    margin: 10px auto;
+}
+
+#parque-3 p {
+    line-height: 20px;
+    margin: 10px auto;
+}
+
+#parque-4 p {
+    line-height: 20px;
+    margin: 10px auto;
 }
 
 .header .banner h1 span {
@@ -1983,9 +2004,6 @@ section[ptitle="Contextualización"] h2 {
     margin: 30px auto;
 }
 
-#pantalla-16-1 .modal-box {
-    padding: 15px;
-}
 
 .datatable td {
     text-align: justify;
@@ -2064,4 +2082,8 @@ ______________________________
 
 #pag-corte strong {
     color: var(--secondary-color);
+}
+
+button.general {margin-left: 0px;
+    margin-bottom: 30px;
 }
