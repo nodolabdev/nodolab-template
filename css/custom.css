@@ -241,11 +241,13 @@
 
 
 .instruction.tool_1 {
-    top: 33px !important;
+    top: -10px;
+    margin: 0 auto;
 }
 
 .instruction.tool_2 {
-    top: 18px !important;
+    top: 0;
+    margin: 0 auto;
 }
 
 .indic {
@@ -987,6 +989,9 @@
 .mr-10 {
     margin-right: 10px;
 }
+.mr-4 {
+    margin-right: 4px;
+}
 
 .mr-15 {
     margin-right: 15px;
@@ -997,6 +1002,7 @@
 .items-end {align-items: flex-end;}
 
 .space-around {justify-content: space-around;}
+.jc-center {justify-content: center;}
 
 
 .img {
@@ -1032,6 +1038,7 @@
 .w-25 {width: 25%;}
 .w-35 {width: 35%;}
 .w-40 {width: 40%;}
+.w-45 {width: 45%;}
 .w-80 {width: 80%;}
 .w-90 {width: 90%;}
 .w-70 {width: 70%;}

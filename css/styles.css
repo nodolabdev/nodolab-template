@@ -7,6 +7,7 @@ CSS Variables
     --primary-color: #02b802;
     --secondary-color: #01785f;
     --tertiary-color: #a2d40d;
+    --title-color: #d58a07;
     font-size: 16px;
 }
 
@@ -414,42 +415,44 @@ main {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 25px;
+    max-width: 990px;
+    margin: 0 auto 25px;
 }
 
 .client-logo {
-    flex-basis: 300px;
+    flex-basis: 240px;
     flex-grow: 0;
     flex-shrink: 0;
 }
 
 .client-logo img {
-    width: 60%;
+    width: 75%;
     display: block;
     margin: 0 auto;
 }
 
 .header .banner {
-    background-color: #fff;
+    background-color: transparent;
     padding: 5px 15px;
-    flex-basis: 500px;
+    flex-basis: 330px;
     flex-grow: 0;
     flex-shrink: 0;
-    border-radius: 45px;
-    -webkit-box-shadow: 10px 13px 22px -5px rgba(0, 0, 0, 0.63);
-    box-shadow: 10px 13px 22px -5px rgba(0, 0, 0, 0.63);
 }
 
 .header .banner h1 {
-    color: var(--secondary-color);
-    text-align: center;
-    font-size: 1.125rem;
+    color: var(--title-color);
+    text-align: left;
+    font-size: 2.1rem;
+    line-height: 0.9;
+    margin: 0;
 }
 
 .header .banner h1 span {
-    color: var(--primary-color);
-    font-size: 1.75rem;
+    color: var(--secondary-color);
+    margin-left: 50px;
+    font-size: 2.6rem;
 }
+
 
 /*--------------------------*/
 /* Globals menu
@@ -496,76 +499,81 @@ nav.globals li.active, nav.globals li.current {
     display: block;
 }
 
+.globals {
+    --nav-icon-width: 53px;
+    --nav-icon-height: 70px;
+}
+
 .globals .progress {
     background: url(../img/menu_buttons.png) no-repeat;
     background-size: 900%;
     background-position: 11.5% center;
-    width: 45px;
-    height: 60px;
+    width: var(--nav-icon-width);
+    height: var(--nav-icon-height);
 }
 
 .globals .credits {
     background: url(../img/menu_buttons.png) no-repeat;
     background-size: 900%;
     background-position: -1.5% center;
-    width: 45px;
-    height: 60px;
+    width: var(--nav-icon-width);
+    height: var(--nav-icon-height);
 }
 
 .globals .help {
     background: url(../img/menu_buttons.png) no-repeat;
     background-size: 900%;
     background-position: 23.5% center;
-    width: 45px;
-    height: 60px;
+    width: var(--nav-icon-width);
+    height: var(--nav-icon-height);
 }
 
 .globals .return {
     background: url(../img/menu_buttons.png) no-repeat;
     background-size: 900%;
     background-position: 51.5% center;
-    width: 45px;
-    height: 60px;
+    width: var(--nav-icon-width);
+    height: var(--nav-icon-height);
 }
 
 .globals .home {
     background: url(../img/sprite_botones.png) no-repeat;
     background-size: 1500%;
     background-position: 35.6% center;
-    width: 45px;
-    height: 60px;
+    width: var(--nav-icon-width);
+    height: var(--nav-icon-height);
 }
 
 .globals .pause {
     background: url(../img/menu_buttons.png) no-repeat;
     background-size: 900%;
     background-position: 88.5% center;
-    width: 45px;
-    height: 60px;
+    width: var(--nav-icon-width);
+    height: var(--nav-icon-height);
 }
 
 .globals .play {
     background: url(../img/menu_buttons.png) no-repeat;
     background-size: 900%;
     background-position: 101.5% center;
-    width: 45px;
-    height: 60px;
+    width: var(--nav-icon-width);
+    height: var(--nav-icon-height);
 }
 
 .globals .more {
     background: url(../img/menu_buttons.png) no-repeat;
     background-size: 900%;
     background-position: 76.5% center;
-    width: 45px;
-    height: 60px;
+    width: var(--nav-icon-width);
+    height: var(--nav-icon-height);
 }
 
 .globals .less {
     background: url(../img/menu_buttons.png) no-repeat;
     background-size: 900%;
     background-position: 62.5% center;
-    width: 45px;
-    height: 60px;
+    width: var(--nav-icon-width);
+    height: var(--nav-icon-height);
 }
 
 #play-pause-voice-button {
@@ -581,23 +589,24 @@ nav.globals li.active, nav.globals li.current {
 #play-pause-voice-button .play {
     background: url(../img/audio-icon.png) no-repeat;
     background-size: contain;
-    width: 45px;
-    height: 50px;
+    width: var(--nav-icon-width);
+    height: var(--nav-icon-height);
 }
 
 #play-pause-voice-button .pause {
     background: url(../content/play-button.png) no-repeat;
     background-size: contain;
-    width: 45px;
-    height: 50px;
+    width: var(--nav-icon-width);
+    height: var(--nav-icon-height);
 }
 
 .globals li {
-    transition: filter 0.2s ease-in-out;
+    transition: filter 0.15s ease-out, transform 0.15s ease-out;
 }
 
 .globals li:hover {
     filter: grayscale(1);
+    transform: scale(1.08);
 }
 
 .globals li span {
@@ -811,6 +820,7 @@ nav.horizontal ul.submenu>li.active, nav.horizontal ul.submenu>li.current {
     background-repeat: no-repeat;
     padding: 0;
     border: 0;
+    filter: drop-shadow(2 px -3 px 0 px rgba(255, 255, 255, 1)) drop-shadow(1 px 3 px 0 px rgba(255, 255, 255, 1)) drop-shadow(-2 px 1 px 0 px rgba(255, 255, 255, 1));
 }
 
 #subpages_menu [previous-page] {
@@ -1113,24 +1123,13 @@ footer {
     background-position: -662px -140px;
 }
 
-/*.note_pointer_left, .note_pointer_right {
-    background: url(../img/sprite.png) no-repeat;
-    font-size: 1.125rem;
-    font-weight: bold;
-    border: none;
-    width: 43px;
-    height: 31px;
-    color: #ffffff;
-    padding-top: 10px;
-    position: absolute;
-}*/
 
 .note_pointer_left, .note_pointer_right {
     font-size: 1.125rem;
     font-weight: bold;
     border: none;
-    min-width: 43px;
-    min-height: 31px;
+    min-width: 30px;
+    min-height: 30px;
     width: auto;
     height: auto;
     color: #ffffff;
@@ -1138,48 +1137,34 @@ footer {
     position: relative;
     background-color: #00cddc;
     border-radius: 15px;
+    transition: transform 250ms ease-out;
+}
+
+.note_pointer_left:hover, .note_pointer_right:hover {
+    opacity: 0.9;
+    transform: scale(1.1);
 }
 
 .note_pointer_left:before {
     content: "";
     position: absolute;
-    width: 30px;
-    height: 30px;
+    width: 24px;
+    height: 24px;
     background-image: linear-gradient(45deg, #00cddc 50%, transparent 50%);
     left: -7px;
-    top: -4px;
+    top: 0px;
     transform: rotate(-65deg);
 }
 
 .note_pointer_right:before {
     content: "";
     position: absolute;
-    width: 30px;
-    height: 30px;
+    width: 24px;
+    height: 24px;
     background-image: linear-gradient(45deg, #00cddc 50%, transparent 50%);
     right: -7px;
-    top: -4px;
+    top: 0px;
     transform: rotate(-20deg);
-}
-
-.note_pointer_right {
-    background-position: -1198px 0;
-    padding-left: 5px;
-    text-align: left;
-}
-
-.note_pointer_left {
-    background-position: -1130px 0;
-    padding-right: 5px;
-    text-align: right;
-}
-
-.note_pointer_right:hover {
-    background-position: -1198px -50px;
-}
-
-.note_pointer_left:hover {
-    background-position: -1130px -50px;
 }
 
 div.icondocument, button.icondocument {
