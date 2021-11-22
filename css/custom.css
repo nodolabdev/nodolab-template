@@ -232,15 +232,13 @@
     filter: grayscale(1);
 }
 
-.instruction.audi {
-    top: -3px !important;
-    left: 286px !important;
+.instruction.audi, .instruction.audi11, .instruction.audi8 {
+    top: 21px !important;
+    right: 0 !important;
+    position: absolute;
+    display: inline-block;
 }
 
-.instruction.audi8 {
-    top: 36px !important;
-    left: 286px !important;
-}
 
 .instruction.tool_1 {
     top: 33px !important;
@@ -248,11 +246,6 @@
 
 .instruction.tool_2 {
     top: 18px !important;
-}
-
-.instruction.audi11 {
-    top: 4px !important;
-    left: 286px !important;
 }
 
 .indic {
@@ -484,8 +477,13 @@
     height: auto;
 }
 
-.jpit_activities_quiz_question_answers { height: 150px; overflow: auto; }
-.jpit_activities_quiz_board { height: 220px; }
+.jpit_activities_quiz_question_answers { max-height: 150px; overflow: auto; }
+
+.jpit_activities_quiz_question_feedback {
+    position: absolute;
+    left: 50%;
+    transform: translate3d(-50%, -100px, 1px);
+}
 
 /********************************************************************************/
 /* Actividad Sopa de letras
@@ -978,6 +976,7 @@
 }
 .flex-half {flex: 0 0 50%;}
 .flex-halfplus {flex: 0 0 60%;}
+.flex-20 {flex: 0 0 20%;}
 .flex-30 {flex: 0 0 30%;}
 .flex-40 {flex: 0 0 40%;}
 .flex-45 {flex: 0 0 45%;}
@@ -1042,6 +1041,7 @@
 .w-115 {width: 115px;}
 .w-188 {width: 188px;}
 .w800 {width: 800px;}
+.w700 {width: 700px;}
 
 .h300 {height: 300px;}
 
@@ -1150,6 +1150,13 @@
     top: 100px;
     left: 330px;
     width: 600px;
+}
+
+.xs-text {
+    position: absolute;
+    top: 100px;
+    left: 330px;
+    width: 470px;
 }
 
 .unity-1-button {
@@ -1273,11 +1280,13 @@
 }
 
 .genially.p9 {
-    height: 300px;   
+    height: 400px;
+    top: 14px;
+    position: relative; 
 }
 
 .genially.p11 {
-    height: 411px;   
+    height: 411px;
 }
 
 .row {
@@ -1340,10 +1349,6 @@ span img {
     margin: 0 5px;
 }
 
-.pdf {
-    float: right;
-}
-
 /*Detalle de Lista de Opciones Generales*/
 #opciones_generales {
     height: 300px;
@@ -1380,4 +1385,51 @@ span img {
     right: 0;
     z-index: 1;
     text-align: center;
+}
+
+.pdf, .enlace {
+    position: absolute;
+    right: 20px;
+    bottom: 0;
+}
+
+.enlace {
+    width: 43px;
+    background: #fff;
+    padding: 8px 11px;
+    border-radius: 100px;
+    border: 2px solid #018D6B;
+    transition: all 0.1s ease-out;
+}
+
+.enlace:hover {
+    transform: scale(1.03);
+    cursor: pointer;
+}
+
+.text-on-wood {
+    position: relative;
+}
+
+.text-on-wood img { 
+    opacity: 0.8;
+}
+
+.text-on-wood p {
+    position: absolute;
+    top: 16px;
+    width: 240px;
+    left: 70px;
+    font-weight: bold;
+}
+
+.text-on-wood-2 {
+    margin-top: -20px;
+    flex-basis: 300px;
+}
+
+.text-on-wood-2 p { 
+    top: 72px;
+    width: 202px;
+    left: 57px;
 }
