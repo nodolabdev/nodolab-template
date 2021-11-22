@@ -134,8 +134,8 @@ h6 {
 }
 
 p {
-    font-size: 1rem;
-    margin: 14px;
+    font-size: 1.125rem;
+    margin: 10px;
 }
 
 pre {
@@ -243,7 +243,7 @@ button.general.active, button.general:hover {
 
 .fs-30 {font-size: 1.875rem;}
 .fs-24 {font-size: 1.5rem;}
-.fs-40 {font-size: 2.5rem;}
+.fs-40 {font-size: 40px;}
 .fs-18 {font-size: 1.125rem;}
 
 .center {text-align: center;}

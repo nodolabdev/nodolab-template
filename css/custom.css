@@ -1914,6 +1914,7 @@ section[ptitle="Contextualización"] h2 {
     position: absolute;
     left: 0;
     top: 0;
+	opacity: 40%;
 }
 
 .planta-2-bg {
