@@ -784,6 +784,7 @@
 .green-2 {color: var(--secondary-color);}
 .green-3 {color: var(--tertiary-color);}
 
+.w-80px {width: 80px !important; margin: auto;}
 .w-200 {width: 200px; margin: auto;}
 .w-300 {width: 300px; margin: auto;}
 .w-400 {width: 400px; margin: auto;}
@@ -2660,6 +2661,16 @@ section[ptitle="Contextualización"] h2 {
 
 .pantalla-41 .matriz div.extremo {
     left: 75.8%;
+}
+
+/*Pantalla 43*/
+
+.pantalla-43 .w-80px {
+    filter: grayscale(1);
+}
+
+.pantalla-43 .w-80px.current {
+    filter: grayscale(0);
 }
 
 /*Pantalla 49*/
