@@ -3,7 +3,10 @@
 
 :root {
     --primary-color: #02b802;
-    --secondary-color:  #01785f;
+    --secondary-color: #01785f;
+    --tertiary-color: #a2d40d;
+    --title-color: #d58a07;
+    font-size: 16px;
 }
 
 
@@ -150,7 +153,7 @@ p {
 }
 
 pre {
-    background:#F8F8FF;
+    background: #F8F8FF;
     border: #000 dashed 1px;
     padding: 6px;
     overflow: auto;
@@ -190,7 +193,7 @@ button.general.active, button.general:hover {
     display: block;
     margin: 0 auto;
     overflow: hidden;
-    box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.52);
+    box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.52);
 }
 
 .intro-text {
@@ -268,8 +271,8 @@ button.general.active, button.general:hover {
 .header {
     display: flex;
     align-items: center;
-    justify-content: center;;
-    margin-bottom: 25px;
+    justify-content: center;
+    margin: 25px auto;
     position: fixed;
     top: 10px;
     left: 0;
@@ -290,25 +293,25 @@ button.general.active, button.general:hover {
 }
 
 .header .banner {
-    background-color: #fff;
+    background-color: transparent;
     padding: 5px 15px;
-    flex-basis: 500px;
+    flex-basis: 330px;
     flex-grow: 0;
     flex-shrink: 0;
-    border-radius: 45px;
-    -webkit-box-shadow: 10px 13px 22px -5px rgba(0,0,0,0.63); 
-    box-shadow: 10px 13px 22px -5px rgba(0,0,0,0.63);
 }
 
 .header .banner h1 {
-    color: var(--secondary-color);
-    text-align: center;
-    font-size: 1.125rem;
+    color: var(--title-color);
+    text-align: left;
+    font-size: 2.1rem;
+    line-height: 0.9;
+    margin: 0;
 }
 
 .header .banner h1 span {
-    color: var(--primary-color);
-    font-size: 1.75rem;
+    color: var(--secondary-color);
+    margin-left: 50px;
+    font-size: 2.6rem;
 }
 
 /**********************************/
