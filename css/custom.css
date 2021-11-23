@@ -894,7 +894,17 @@
     right: 17%;
 }
 
+#pag-listas .subpage {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
 
+#pag-corte10 .subpage {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
 
 .subpage .genially{
     position: absolute;
@@ -1944,22 +1954,46 @@ section[ptitle="Contextualización"] h2 {
 
 #parque-1 p {
     line-height: 20px;
-    margin: 10px auto;
+    margin: 10px 0;
 }
 
 #parque-2 p {
     line-height: 20px;
-    margin: 10px auto;
+    margin: 10px 0;
 }
 
 #parque-3 p {
     line-height: 20px;
-    margin: 10px auto;
+    margin: 10px 0;
 }
 
 #parque-4 p {
     line-height: 20px;
-    margin: 10px auto;
+    margin: 10px 0;
+}
+
+#parque-4-1 img {
+    border: 0;
+    max-width: 35%;
+	margin-bottom: -10px;
+}
+
+#parque-4-2 img {
+    border: 0;
+    max-width: 35%;
+	margin-bottom: -10px;
+}
+
+#parque-4-3 img {
+    border: 0;
+    max-width: 35%;
+	margin-bottom: -10px;
+}
+
+#parque-4-4 img {
+    border: 0;
+    max-width: 35%;
+	margin-bottom: -10px;
 }
 
 .header .banner h1 span {
@@ -2085,5 +2119,35 @@ ______________________________
 }
 
 button.general {margin-left: 0px;
-    margin-bottom: 30px;
+    margin-bottom: 55px;
+}
+
+#pag-corte5 p {
+	margin: 10px 0;
+	line-height: 23px;
+}
+
+#pag-corte9 p {
+	margin: 7px 0;
+	line-height: 23px;
+}
+
+#parque-4-1 p {
+    line-height: 23px;
+    margin: 5px 0;
+}
+
+#parque-4-2 p {
+    line-height: 23px;
+    margin: 5px 0;
+}
+
+#parque-4-3 p {
+    line-height: 23px;
+    margin: 5px 0;
+}
+
+#parque-4-4 p {
+    line-height: 23px;
+    margin: 5px 0;
 }

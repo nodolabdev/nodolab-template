@@ -233,7 +233,8 @@ button.general.active, button.general:hover {
 .mb-15 {
     margin-bottom: 15px;
 }
-.mt-2 {margin-top: 2px;}
+.mt-2 {margin-top: 2px;
+	margin-bottom: 20px;}
 .mr-10 {margin: 10px;}
 .ta {text-align: justify;}
 
