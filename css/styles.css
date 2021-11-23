@@ -389,7 +389,7 @@ img.animation, img.play-animation, .animation_image .label {
 /* CONTENT AREA
 /********************************************************************************/
 main {
-    padding: 50px 50px 15px;
+    padding: 50px 50px 20px;
     border-radius: 50px;
     background-color: rgba(255, 255, 255, 0.5);
     position: relative;
@@ -820,7 +820,8 @@ nav.horizontal ul.submenu>li.active, nav.horizontal ul.submenu>li.current {
     background-repeat: no-repeat;
     padding: 0;
     border: 0;
-    filter: drop-shadow(2 px -3 px 0 px rgba(255, 255, 255, 1)) drop-shadow(1 px 3 px 0 px rgba(255, 255, 255, 1)) drop-shadow(-2 px 1 px 0 px rgba(255, 255, 255, 1));
+    filter: drop-shadow(2px -3px 0px rgba(255, 255, 255, 1)) drop-shadow(1px 3px 0px rgba(255, 255, 255, 1)) drop-shadow(-2px 1px 0px rgba(255, 255, 255, 1));
+    transition: all 0.2s ease-out;
 }
 
 #subpages_menu [previous-page] {
@@ -834,12 +835,9 @@ nav.horizontal ul.submenu>li.active, nav.horizontal ul.submenu>li.current {
     background-size: cover;
 }
 
-#subpages_menu [previous-page].active {
-    filter: grayscale(1);
-}
-
-#subpages_menu [next-page].active {
-    filter: grayscale(1);
+#subpages_menu .button.active {
+    filter: grayscale(1) drop-shadow(2px -3px 0px rgba(255, 255, 255, 1)) drop-shadow(1px 3px 0px rgba(255, 255, 255, 1)) drop-shadow(-2px 1px 0px rgba(255, 255, 255, 1));
+    transform: scale(1.06);
 }
 
 /********************************************************************************/

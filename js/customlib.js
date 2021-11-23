@@ -102,12 +102,6 @@
       var increase = $(this).attr("data-change-font") === "increase";
       changeFontSize(increase);
     });
-
-    $(app).on("afterPageChange", console.log("Cambié de pagina"));
-
-    $.each(app.actions.afterChangePage, function (i, v) {
-      console.log("Hola mundo");
-    });
   }
 
   $(window).on("load", onAppLoaded);
