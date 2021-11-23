@@ -1889,8 +1889,12 @@ section[ptitle="Contextualización"] h2 {
 
 .esquema-container {position: relative;}
 .esquema-container-pointer {position: absolute; width: 80px;}
-.esquema-container-pointer#pointer-1 {right: 30%; top: -13%;}
-.esquema-container-pointer#pointer-2 {left: 7%; bottom: 25%;}
+.esquema-container-pointer.pointer-0 {left: 23%; top: -9%;}
+.esquema-container-pointer.pointer-1 {right: 30%; top: -18%;}
+.esquema-container-pointer.pointer-2 {left: 10%; bottom: 32%;}
+.esquema-container-pointer.pointer-0.floating {left: 16%; top: -17%;}
+.esquema-container-pointer.pointer-1.floating {right: 30%; top: -24%;}
+.esquema-container-pointer.pointer-2.floating {left: 5%; bottom: 37%;}
 
 .p-22-strat {
     display: grid;
