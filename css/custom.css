@@ -1097,48 +1097,6 @@
     width: 200px;
 }
 
-.p2-container {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.p2-container > img {
-    max-width: 420px;
-}
-
-.p2-container .help-button {
-    display: flex;
-    align-items: center;
-    font-size: 28px;
-    color: var(--secondary-color);
-    font-weight: bold;
-    position: absolute;
-    opacity: 0;
-    transition: transform 0.2s ease-in-out;
-}
-
-.p2-container .help-button:hover {
-    transform: translateY(-2px);
-}
-
-.p2-container .help-button img {
-    width: 100%;
-    max-width: 60px;
-}
-
-.help-background {position: absolute; bottom: 0;}
-.p2-container .help-button-1 {top: 250px; left: 210px; animation: load 3s forwards;}
-.p2-container .help-button-2 {top: 140px;left: 250px; animation: load 3s forwards 0.5s;}
-.p2-container .help-button-3 {top: 50px;left: 340px; animation: load 3s forwards 1s;}
-.p2-container .help-button-4 {top: 50px;left: 500px; animation: load 3s forwards 1.5s;}
-.p2-container .help-button-5 {top: 95px;right: 330px; animation: load 3s forwards 2s;}
-.p2-container .help-button-6 {top: 175px;right: 200px; animation: load 3s forwards 2.5s;}
-.p2-container .help-button-7 {top: 260px;right: 120px; animation: load 3s forwards 3s;}
-.p2-container .help-button-8 {top: 350px;right: 210px; animation: load 3s forwards 3.5s;}
-
 #pag-mod-1 p{
     font-size: 1.125rem;
     font-weight: bold;
@@ -1499,3 +1457,81 @@ span img {
 .custom-padding {
     padding: 0 30px;
 }
+
+.p2-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.p2-container > img {
+    max-width: 370px;
+}
+
+.p2-container .help-button {
+    display: flex;
+    align-items: center;
+    font-size: 28px;
+    color: var(--secondary-color);
+    font-weight: bold;
+    position: absolute;
+    opacity: 0;
+    transform: scale(0.95);
+    transition: transform 0.3s ease-out;
+    transform-origin: center center;
+}
+
+.p2-container .help-button:hover {
+    transform: scale(1.2);
+}
+
+.help-button .enlace {
+    position: static;
+    right: initial;
+    bottom: initial;
+}
+
+.help-button:hover .enlace:hover{
+    transform: scale(1);
+}
+
+.p2-container .help-button img {
+    width: 100%;
+    max-height: 70px;
+    max-width: 100px;
+}
+
+.help-background {position: absolute; bottom: 14px;}
+
+.p2-container .help-button-1 {top: 360px; left: 190px; animation: load 0.7s forwards;}
+.p2-container .help-button-2 {top: 250px;left: 210px; animation: load 0.7s forwards 0.3s;}
+.p2-container .help-button-3 {top: 130px;left: 260px; animation: load 0.7s forwards 0.6s;}
+.p2-container .help-button-4 {top: 64px;left: 360px; animation: load 0.7s forwards 0.9s;}
+.p2-container .help-button-5 {top: 66px;right: 450px; animation: load 0.7s forwards 1.2s;}
+.p2-container .help-button-6 {top: 95px;right: 309px; animation: load 0.7s forwards 1.5s;}
+.p2-container .help-button-7 {top: 157px;right: 216px; animation: load 0.7s forwards 1.8s;}
+.p2-container .help-button-8 {top: 250px;right: 200px; animation: load 0.7s forwards 2.1s;}
+.p2-container .help-button-9 {top: 360px;right: 176px; animation: load 0.7s forwards 2.4s;}
+
+
+.help-box .help-tooltip {
+    display: none;
+    background-color: #fff;
+    font-size: 1.1rem;
+    width: 280px;
+    padding: 20px 24px;
+    border-radius: 20px;
+    box-shadow: 1px 1px 5px 1px rgba(119, 130, 140, 0.9);
+    left: 50%;
+    top: 55%;
+    transform: translate3d(-50%, -50%, 1px);
+    text-align: left;
+    line-height: 1rem;
+    color: #000;
+    font-weight: lighter;
+    position: absolute;
+}
+
+

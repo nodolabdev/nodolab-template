@@ -513,9 +513,9 @@ nav.globals li.active, nav.globals li.current {
 }
 
 .globals .credits {
-    background: url(../img/menu_buttons.png) no-repeat;
-    background-size: 900%;
-    background-position: -1.5% center;
+    background: url('../img/6 boton menu.png') no-repeat;
+    background-size: 72%;
+    background-position: center 4px;
     width: var(--nav-icon-width);
     height: var(--nav-icon-height);
 }

@@ -158,26 +158,48 @@
 
             <!--Página de Ayuda-->
             <section id="pag-help" ptitle="Ayuda">
-                <div class="subpage" id="help_subpage">
+                <div class="subpage help-box" id="help_subpage">
                     <h3 class="fs-18 fixed-title">Conoce nuetros botones</h3>
                     <div class="p2-container">
                         <img class="img help-background" src="./img/help-background.png" alt="">
-                        <div class="help-button help-button-1 mouse-over" data-ref="#test"><img src="./img/6 boton menu.png" alt="Ícono de menú. Para conocer las temáticas que vas a explorar haz clic aquí."><div aria-hidden="true" id="test">Ícono de menú. Para conocer las temáticas que vas a explorar haz clic aquí.</div>
+                        <div class="help-button help-button-1">
+                            <img class="mouse-over" src="./img/6 boton menu.png" alt="Ícono de menú. Para conocer las temáticas que vas a explorar haz clic aquí." data-ref="#menu-tooltip">
                         </div>
-                        <div class="help-button tooltip help-button-2" title="Ícono de logros. Para conocer tus avances y porcentajes haz clic aquí."><img src="./img/7 boton logros.png"
-                                alt="Ícono de logros. Para conocer tus avances y porcentajes haz clic aquí."></div>
-                        <div class="help-button tooltip help-button-3" title="Ícono de ayuda. Si quieres recordar el uso de los botones haz clic aquí."><img src="./img/8 boton ayuda.png" alt="Ícono de ayuda. Si quieres recordar el uso de los botones haz clic aquí.">
+                        <div class="help-button help-button-2">
+                            <img class="mouse-over" src="./img/7 boton logros.png" alt="Ícono de logros. Para conocer tus avances y porcentajes haz clic aquí." data-ref="#logros-tooltip">
                         </div>
-                        <div class="help-button tooltip help-button-4" title="Ícono de música. Para activar o desactivar la pista musical haz clic aquí."><img src="./img/music-o.png" alt="Ícono de música. Para activar o desactivar la pista musical haz clic aquí.">
+                        <div class="help-button help-button-3">
+                            <img class="mouse-over" src="./img/8 boton ayuda.png" alt="Ícono de ayuda. Si quieres recordar el uso de los botones haz clic aquí." data-ref="#ayuda-tooltip">
                         </div>
-                        <div class="help-button tooltip help-button-5" title="Ícono de salir. Para salir del curso haz clic aquí."><img src="./img/10 boton salir.png" alt="Ícono de salir. Para salir del curso haz clic aquí.">
+                        <div class="help-button help-button-4">
+                            <img class="mouse-over" src="./img/music-o.png" alt="Ícono de música. Para activar o desactivar la pista musical haz clic aquí." data-ref="#music-tooltip">
                         </div>
-                        <div class="help-button tooltip help-button-6" title="Ícono de anterior. Para regresar a la pantalla anterior haz clic aquí."><img src="./img/prev-button.png" alt="Ícono de anterior. Para regresar a la pantalla anterior haz clic aquí.">
+                        <div class="help-button help-button-5">
+                            <img class="mouse-over" src="./img/10 boton salir.png" alt="Ícono de salir. Para salir del curso haz clic aquí." data-ref="#exit-tooltip">
                         </div>
-                        <div class="help-button tooltip help-button-7" title="Ícono de siguiente. Si quieres avanzar haz clic aquí."><img src="./img/next-button.png"
-                                alt="Ícono de siguiente. Si quieres avanzar haz clic aquí."></div>
-                        <div class="help-button tooltip help-button-8" title="Ícono de PDF. Cuando encuentres este ícono podrás profundizar en las temáticas abordadas."><img src="./img/15 boton PDF.png"
-                                alt="Ícono de PDF. Cuando encuentres este ícono podrás profundizar en las temáticas abordadas."></div>
+                        <div class="help-button help-button-6">
+                            <img class="mouse-over" src="./img/prev-button.png" alt="Ícono de anterior. Para regresar a la pantalla anterior haz clic aquí." data-ref="#prev-tooltip">
+                        </div>
+                        <div class="help-button help-button-7">
+                            <img class="mouse-over" src="./img/next-button.png" alt="Ícono de siguiente. Si quieres avanzar haz clic aquí." data-ref="#next-tooltip">
+                        </div>
+                        <div class="help-button help-button-8">
+                            <img class="mouse-over" src="./img/15 boton PDF.png" alt="Ícono de PDF. Cuando encuentres este ícono podrás profundizar en las temáticas abordadas." data-ref="#pdf-tooltip">
+                        </div>
+                        <div class="help-button help-button-9">
+                            <div class="enlace">
+                                <img class="mouse-over"src="./img/17 boton enlace.svg" alt="Ícono de enlace. Cuando encuentres este ícono podrás navegar a una web externa de este documento." data-ref="#enlace-tooltip"/>
+                            </div>
+                        </div>
+                        <div aria-hidden="true" id="menu-tooltip" class="help-tooltip">Ícono de menú. Para conocer las temáticas que vas a explorar haz clic aquí.</div>
+                        <div aria-hidden="true" id="logros-tooltip" class="help-tooltip">Ícono de logros. Para conocer tus avances y porcentajes haz clic aquí.</div>
+                        <div aria-hidden="true" id="ayuda-tooltip" class="help-tooltip">Ícono de ayuda. Si quieres recordar el uso de los botones haz clic aquí.</div>
+                        <div aria-hidden="true" id="music-tooltip" class="help-tooltip">Ícono de música. Para activar o desactivar la pista musical haz clic aquí.</div>
+                        <div aria-hidden="true" id="exit-tooltip" class="help-tooltip">Ícono de salir. Para salir del curso haz clic aquí.</div>
+                        <div aria-hidden="true" id="prev-tooltip" class="help-tooltip">Ícono de anterior. Para regresar a la pantalla anterior haz clic aquí.</div>
+                        <div aria-hidden="true" id="next-tooltip" class="help-tooltip">Ícono de siguiente. Si quieres avanzar haz clic aquí.</div>
+                        <div aria-hidden="true" id="pdf-tooltip" class="help-tooltip">Ícono de PDF. Cuando encuentres este ícono podrás profundizar en las temáticas abordadas.</div>
+                        <div aria-hidden="true" id="enlace-tooltip" class="help-tooltip">Ícono de enlace. Cuando encuentres este ícono podrás navegar a una web externa de este documento.</div>
                     </div>
                 </div>
             </section>
@@ -2186,25 +2208,48 @@ FIN
     </div>
 
     <div id="help_page" style="display:none;">
-        <div class="subpage" id="help_subpage">
+        <div class="subpage help-box" id="help_subpage">
+            <h3 class="fs-18 fixed-title">Conoce nuetros botones</h3>
             <div class="p2-container">
-                <img class="img help-background" src="./img/help-background.png" alt="Arbol">
-                <div class="help-button help-button-1"><img src="./img/6 boton menu.png" alt="Ícono de menú">
+                <img class="img help-background" src="./img/help-background.png" alt="">
+                <div class="help-button help-button-1">
+                    <img class="mouse-over" src="./img/6 boton menu.png" alt="Ícono de menú. Para conocer las temáticas que vas a explorar haz clic aquí." data-ref="#menu-tooltip-modal">
                 </div>
-                <div class="help-button help-button-2"><img src="./img/7 boton logros.png"
-                        alt="Ícono de logros"></div>
-                <div class="help-button help-button-3"><img src="./img/8 boton ayuda.png" alt="Ícono de ayuda">
+                <div class="help-button help-button-2">
+                    <img class="mouse-over" src="./img/7 boton logros.png" alt="Ícono de logros. Para conocer tus avances y porcentajes haz clic aquí." data-ref="#logros-tooltip-modal">
                 </div>
-                <div class="help-button help-button-4"><img src="./img/9 boton audio.png" alt="Ícono de audio">
+                <div class="help-button help-button-3">
+                    <img class="mouse-over" src="./img/8 boton ayuda.png" alt="Ícono de ayuda. Si quieres recordar el uso de los botones haz clic aquí." data-ref="#ayuda-tooltip-modal">
                 </div>
-                <div class="help-button help-button-5"><img src="./img/10 boton salir.png" alt="Ícono de salir">
+                <div class="help-button help-button-4">
+                    <img class="mouse-over" src="./img/music-o.png" alt="Ícono de música. Para activar o desactivar la pista musical haz clic aquí." data-ref="#music-tooltip-modal">
                 </div>
-                <div class="help-button help-button-6"><img src="./img/prev-button.png" alt="Ícono de anterior">
+                <div class="help-button help-button-5">
+                    <img class="mouse-over" src="./img/10 boton salir.png" alt="Ícono de salir. Para salir del curso haz clic aquí." data-ref="#exit-tooltip-modal">
                 </div>
-                <div class="help-button help-button-7"><img src="./img/next-button.png"
-                        alt="Ícono de siguiente"></div>
-                <div class="help-button help-button-8"><img src="./img/15 boton PDF.png"
-                        alt="Ícono de PDF"></div>
+                <div class="help-button help-button-6">
+                    <img class="mouse-over" src="./img/prev-button.png" alt="Ícono de anterior. Para regresar a la pantalla anterior haz clic aquí." data-ref="#prev-tooltip-modal">
+                </div>
+                <div class="help-button help-button-7">
+                    <img class="mouse-over" src="./img/next-button.png" alt="Ícono de siguiente. Si quieres avanzar haz clic aquí." data-ref="#next-tooltip-modal">
+                </div>
+                <div class="help-button help-button-8">
+                    <img class="mouse-over" src="./img/15 boton PDF.png" alt="Ícono de PDF. Cuando encuentres este ícono podrás profundizar en las temáticas abordadas." data-ref="#pdf-tooltip-modal">
+                </div>
+                <div class="help-button help-button-9">
+                    <div class="enlace">
+                        <img class="mouse-over"src="./img/17 boton enlace.svg" alt="Ícono de enlace. Cuando encuentres este ícono podrás navegar a una web externa de este documento." data-ref="#enlace-tooltip-modal"/>
+                    </div>
+                </div>
+                <div aria-hidden="true" id="menu-tooltip-modal" class="help-tooltip">Ícono de menú. Para conocer las temáticas que vas a explorar haz clic aquí.</div>
+                <div aria-hidden="true" id="logros-tooltip-modal" class="help-tooltip">Ícono de logros. Para conocer tus avances y porcentajes haz clic aquí.</div>
+                <div aria-hidden="true" id="ayuda-tooltip-modal" class="help-tooltip">Ícono de ayuda. Si quieres recordar el uso de los botones haz clic aquí.</div>
+                <div aria-hidden="true" id="music-tooltip-modal" class="help-tooltip">Ícono de música. Para activar o desactivar la pista musical haz clic aquí.</div>
+                <div aria-hidden="true" id="exit-tooltip-modal" class="help-tooltip">Ícono de salir. Para salir del curso haz clic aquí.</div>
+                <div aria-hidden="true" id="prev-tooltip-modal" class="help-tooltip">Ícono de anterior. Para regresar a la pantalla anterior haz clic aquí.</div>
+                <div aria-hidden="true" id="next-tooltip-modal" class="help-tooltip">Ícono de siguiente. Si quieres avanzar haz clic aquí.</div>
+                <div aria-hidden="true" id="pdf-tooltip-modal" class="help-tooltip">Ícono de PDF. Cuando encuentres este ícono podrás profundizar en las temáticas abordadas.</div>
+                <div aria-hidden="true" id="enlace-tooltip-modal" class="help-tooltip">Ícono de enlace. Cuando encuentres este ícono podrás navegar a una web externa de este documento.</div>
             </div>
         </div>
     </div>
@@ -2231,6 +2276,8 @@ FIN
                 <menuitem label="Unidad 2. Proceso y Esquema de Gobierno de CMI">
                     <menu>
                         <menuitem label="1. Introducción" data-page="pag-mod-2-1">
+                        </menuitem>
+                        <menuitem label="Actividad de aprendizaje" data-page="pag-mod-2-3">
                         </menuitem>
                         <menuitem label="2. Roles del Esquema de Gobierno" data-page="pag-mod-2-5">
                         </menuitem>
