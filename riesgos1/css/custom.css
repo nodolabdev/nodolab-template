@@ -1968,6 +1968,10 @@ section[ptitle="Contextualización"] h2 {
 
 }
 
+#subpages_menu {
+    z-index: 4;
+}
+
 .note {
     position: relative;
 }
