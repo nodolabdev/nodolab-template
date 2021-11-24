@@ -1924,7 +1924,7 @@ section[ptitle="Contextualización"] h2 {
     position: absolute;
     left: 0;
     top: 0;
-	opacity: 40%;
+	opacity: 36%;
 }
 
 .planta-2-bg {
@@ -2150,4 +2150,204 @@ button.general {margin-left: 0px;
 #parque-4-4 p {
     line-height: 23px;
     margin: 5px 0;
+}
+/* ANIMATIONS */
+
+@keyframes aparecer {
+    0% {
+        transform: scale(0);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes zoom-out {
+    0% {
+        transform: scale(2);
+    }
+
+    33% {
+        transform: scale(1);
+    }
+
+    67% {
+        transform: scale(1.5);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes left-right {
+    0% {
+        transform: translate(-1000px, 0);
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+@keyframes right-left {
+    0% {
+        transform: translate(1000px, 0);
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+@keyframes fade-in-up {
+    0% {
+        opacity: 0;
+        transform: translateY(80px);
+    }
+
+    75% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes fade-in-left {
+    0% {
+        opacity: 0;
+        transform: translateX(-80px);
+    }
+
+    75% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes fade-in-right {
+    0% {
+        opacity: 0;
+        transform: translateX(80px);
+    }
+
+    75% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes fade-in-rotate {
+    0% {
+        opacity: 0;
+        transform: rotate(180deg);
+    }
+
+    75% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: rotate(0);
+    }
+}
+
+@keyframes fade-in-scale {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+
+    75% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+:root {
+    --animation-duration: 0.4s;
+    --animation-duration-long: 0.65s;
+    --animation-duration-xlong: 0.85s;
+    --animation-ease: ease-out;
+    --step-delay: 0.3s;
+    --step: 0;
+}
+
+.step-0 {
+    --step: 0;
+}
+.step-1 {
+    --step: 1;
+}
+.step-2 {
+    --step: 2;
+}
+.step-3 {
+    --step: 3;
+}
+.step-4 {
+    --step: 4;
+}
+.step-5 {
+    --step: 5;
+}
+.step-6 {
+    --step: 6;
+}
+.step-7 {
+    --step: 7;
+}
+.step-8 {
+    --step: 8;
+}
+.step-9 {
+    --step: 9;
+}
+
+.left-right {
+    animation: left-right var(--animation-duration) var(--animation-ease) both calc(var(--step) * var(--step-delay));
+}
+
+.right-left {
+    animation: right-left var(--animation-duration) var(--animation-ease) both calc(var(--step) * var(--step-delay));
+}
+
+.emergente {
+    animation: aparecer var(--animation-duration) var(--animation-ease) both calc(var(--step) * var(--step-delay));
+}
+
+.zoom-out {
+    animation: zoom-out var(--animation-duration-xlong) var(--animation-ease) both calc(var(--step) * var(--step-delay));
+}
+
+.fade-in-up {
+    animation: fade-in-up var(--animation-duration-long) var(--animation-ease) both calc(var(--step) * var(--step-delay));
+}
+
+.fade-in-left {
+    animation: fade-in-left var(--animation-duration-long) var(--animation-ease) both calc(var(--step) * var(--step-delay));
+}
+
+.fade-in-right {
+    animation: fade-in-right var(--animation-duration-long) var(--animation-ease) both calc(var(--step) * var(--step-delay));
+}
+
+.fade-in-rotate {
+    animation: fade-in-rotate var(--animation-duration-long) var(--animation-ease) both calc(var(--step) * var(--step-delay));
+}
+
+.fade-in-scale {
+    animation: fade-in-scale var(--animation-duration) var(--animation-ease) both calc(var(--step) * var(--step-delay));
 }
