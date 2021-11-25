@@ -2931,6 +2931,8 @@ dhbgApp.standard.load_operations = function() {
 
                 $box_end.append(msg).show();
 
+                $box_end.find('div').eq(0).attr('tabindex', '0').focus();
+
                 activity.disable();
                 activity.highlight('correct', 'wrong');
 

@@ -66,7 +66,7 @@ html {
 
 body {
     font-family: 'Calibri', sans-serif;
-    font-weight: bold;
+    font-weight: normal;
     font-size: 1rem;
     color: #000;
     margin: 0;
@@ -76,19 +76,20 @@ body {
     background-image: url(../img/background.png);
     background-size: cover;
 }
-/* body:before {
+body:before {
     content: "";
     width: 300px;
     height: 40%;
     bottom: 0px;
     left: 0;
     position: absolute;
-    background-image: url(../img/lupa.svg);
+    background-image: url(../img/lupa.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: bottom;
     z-index: -1;
-} */
+}
+
 body:after {
     content: "";
     width: 280px;
@@ -100,7 +101,7 @@ body:after {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: bottom;
-    z-index: 2;
+    z-index: -1;
 }
 
 body.dhbgapp_fullview {
@@ -445,13 +446,13 @@ main {
 }
 
 .client-logo {
-    flex-basis: 300px;
+    flex-basis: 223px;
     flex-grow: 0;
     flex-shrink: 0;
 }
 
 .client-logo img {
-    width: 60%;
+    width: 81%;
     display: block;
     margin: 0 auto;
 }
@@ -459,7 +460,7 @@ main {
 .header .banner {
     background-color: transparent;
     padding: 5px 15px;
-    flex-basis: 500px;
+    flex-basis: 444px;
     flex-grow: 0;
     flex-shrink: 0;
 }
@@ -472,7 +473,6 @@ main {
 
 .header .banner h1 span {
     color: var(--primary-color);
-    margin-left: 40px;
     font-size: 32px;
 }
 
@@ -1817,7 +1817,7 @@ sup.tooltip {
     padding: 10px;
     background-color: #fff;
     width: 400px;
-    margin: auto;
+    margin: 20px;
     border-radius: 20px;
     font-weight: bold;
     position: relative;

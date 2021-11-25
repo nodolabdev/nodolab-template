@@ -740,6 +740,12 @@
 .mt-20{
     margin-top: 20px;
 }
+.subpage .mb-10{
+    margin-bottom: 10px;
+}
+.subpage .mb-20{
+    margin-bottom: 20px;
+}
 
 .items-center {
     align-items: center;
@@ -789,10 +795,13 @@
 .green-3 {color: var(--tertiary-color);}
 
 .w-80px {width: 80px !important; margin: auto;}
+.w-160 {width: 160px; margin: auto;}
 .w-200 {width: 200px; margin: auto;}
+.w-270 {width: 270px; margin: auto;}
 .w-300 {width: 300px; margin: auto;}
 .w-400 {width: 400px; margin: auto;}
 .w-600 {width: 600px; margin: auto;}
+.w-700 {width: 700px; margin: auto;}
 .w-800 {width: 800px; margin: auto;}
 .w-30 {width: 30% !important;}
 .w-70 {width: 70% !important;}
@@ -871,6 +880,11 @@
     width: 40%;
     margin-bottom: 5px;
 }
+
+.p2-container .help-button.help-wide-button img {
+    width: 70%;
+}
+
 .subpage.car-bg{
     position: absolute;
     top: 0;
@@ -1611,9 +1625,16 @@ section[ptitle="Contextualización"] h2 {
 
 .box_end{
     position: absolute;
-    bottom: 0%;
+    top: 0%;
     left: 0;
     right: 0;
+    z-index: 3;
+    bottom: 0;
+    background-color: rgba(241, 241, 241, 0.8);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .subpage.car-bg:not(#first-car):after{
@@ -2690,6 +2711,10 @@ section[ptitle="Contextualización"] h2 {
 .pantalla-43 .w-80px {
     filter: grayscale(1);
 }
+.pantalla-43 .w-80px img{
+    max-height: 60px;
+    margin: 5px auto;
+}
 
 .pantalla-43 .w-80px.current {
     filter: grayscale(0);
@@ -2814,16 +2839,16 @@ section[ptitle="Contextualización"] h2 {
     background-size: cover;
     width: 290px;
     height: 195px;
-    right: 72%;
+    right: 80%;
     bottom: 0;
     color: #fff;
     padding: 38px 53px 0px 63px;
 }
 
 .pantalla-55 .emergente.personas {
-    width: 100%;
-    top: -60%;
-    right: 11%;
+    width: 130%;
+    top: -56%;
+    right: 0%;
     left: unset;
 }
 
@@ -2836,9 +2861,9 @@ section[ptitle="Contextualización"] h2 {
 }
 
 .pantalla-55 .emergente.recursos {
-    width: 164%;
-    top: -60%;
-    left: -7%;
+    width: 194%;
+    top: -64%;
+    left: -21%;
 }
 
 .pantalla-55 .emergente.recursos:before {
@@ -2849,9 +2874,9 @@ section[ptitle="Contextualización"] h2 {
 }
 
 .pantalla-55 .emergente.procesos {
-    width: 100%;
-    top: -30%;
-    left: -10%;
+    width: 140%;
+    top: -28%;
+    left: -34%;
 }
 
 .pantalla-55 .emergente.procesos:before {
@@ -3011,8 +3036,8 @@ section[ptitle="Contextualización"] h2 {
 
 /*Pantalla 73*/
 
-.pantalla-73 .w-150 {
-    width: 150px !important;
+.pantalla-73 .w-200 {
+    width: 200px !important;
 }
 
 .pantalla-73 .w-600 {
@@ -3286,4 +3311,24 @@ section[ptitle="Contextualización"] h2 {
 .zoom-out {
     animation: zoom-out 1s ;
     animation-fill-mode: forwards;
+}
+
+#help_subpage_modal p {
+    line-height: 1rem;
+}
+
+.subpage p:not(.m-0) {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.mr-0 {
+    margin-right: 0;
+}
+.tools-m1 {
+    margin-left: auto;
+    margin-right: auto;
+}
+.text-left, 
+.text-left p {
+    text-align: left;
 }
