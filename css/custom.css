@@ -228,7 +228,7 @@
 }
 
 .jpit_activities_quiz_question_answers { overflow: auto; }
-.jpit_activities_quiz_board { height: 220px; }
+.jpit_activities_quiz_board { height: auto; }
 
 /********************************************************************************/
 /* Actividad Sopa de letras
@@ -715,6 +715,7 @@
     flex: 0 0 50%;
 }
 
+.m0 { margin: 0}
 .mr-15 {margin-right: 15px;}
 .mr-20 {margin-right: 20px;}
 .mr-30 {margin-right: 30px;}
@@ -1581,7 +1582,7 @@ section[ptitle="Contextualización"] h2 {
 
 .jpit_activities_quiz_question_feedback {
     position: absolute;
-    top: 50%;
+    top: 9%;
     left: calc(50% - 422px/2);
 }
 
@@ -1690,6 +1691,8 @@ section[ptitle="Contextualización"] h2 {
 .flex-halfplus {flex: 0 0 55%;}
 .flex-30 {flex: 0 0 30%;}
 .flex-45 {flex: 0 0 45%;}
+.flex-60 {flex: 0 0 60%;}
+.flex-70 {flex: 0 0 70%;}
 
 
 .mr-15 {
@@ -1937,6 +1940,7 @@ section[ptitle="Contextualización"] h2 {
     position: absolute;
     left: 0;
     top: 0;
+    opacity: 0.6;
 }
 
 .corte-2-bg {
@@ -2122,7 +2126,7 @@ button.general {margin-left: 0px;
     margin-bottom: 55px;
 }
 
-#pag-corte5 p {
+#pag-corte5 p:not(.m0) {
 	margin: 10px 0;
 	line-height: 23px;
 }
@@ -2350,4 +2354,45 @@ button.general {margin-left: 0px;
 
 .fade-in-scale {
     animation: fade-in-scale var(--animation-duration) var(--animation-ease) both calc(var(--step) * var(--step-delay));
+}
+
+.options-in-columns.jpit-activities-quiz .jpit_activities_quiz_board {
+    max-height: initial;
+}
+.options-in-columns.jpit-activities-quiz .jpit_activities_quiz_question_answers {
+    display: block;
+    column-count: 2;
+    break-inside: avoid;
+}
+.options-in-columns.jpit-activities-quiz .jpit_activities_quiz_question_answers li {
+    break-inside: avoid;
+}
+
+.options-in-row.jpit-activities-quiz .jpit_activities_quiz_board {
+    max-height: initial;
+}
+.options-in-row.jpit-activities-quiz .jpit_activities_quiz_question_answers {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+}
+.options-in-row.jpit-activities-quiz .jpit_activities_quiz_question_answers .jpit_activities_quiz_question_option {
+    display: inline-flex;
+}
+.options-in-row.jpit-activities-quiz .jpit_activities_quiz_question_answers .jpit_activities_quiz_question_option .jpit_activities_quiz_question_option_answer {
+    display: flex;
+    align-items: center;
+}
+.options-in-row.jpit-activities-quiz .jpit_activities_quiz_question_answers .jpit_activities_quiz_question_option .jpit_activities_quiz_question_option_answer label {
+    margin-right: 10px;
+}
+.options-in-row.jpit-activities-quiz .jpit_activities_quiz_question_answers .jpit_activities_quiz_question_option .jpit_activities_quiz_question_option_answer img {
+    max-width: 70px;
+}
+.options-in-row.jpit-activities-quiz .jpit_activities_quiz_question_answers li {
+    margin: 20px;
+}
+
+#help_subpage_modal p{
+    line-height: 1rem;
 }
