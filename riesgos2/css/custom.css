@@ -1978,6 +1978,20 @@ section[ptitle="Contextualización"] h2 {
     position: relative;
 }
 
+.pdf {
+    background: url(../img/pdf.svg) no-repeat;
+    background-size: cover;
+    width: 50px;
+    height: 50px;
+    margin: auto;
+    transition: all .5s;
+}
+
+.pdf:hover {
+    transform: scale(1.1);
+    transition: all .5s;
+}
+
 .note:before {
     content: "";
     background: url(../content/nota.svg) no-repeat;
@@ -2953,6 +2967,27 @@ section[ptitle="Contextualización"] h2 {
     top: 72%;
 }
 
+ /*Pantalla 69 */
+
+ .pantalla-69 a {
+    position: absolute;
+ }
+
+ .pantalla-69 a.tactica {
+    left: 2%;
+    top: 22%;
+ }
+
+.pantalla-69 a.estrategica {
+    top: 76%;
+    right: 8%;
+}
+
+.pantalla-69 a.critica {
+    top: 14%;
+    right: 8%;
+ }
+
 /*Pantalla 72*/
 
 .pantalla-72 .relative div {
@@ -3069,6 +3104,9 @@ section[ptitle="Contextualización"] h2 {
     border-radius: 10px;
     padding: 5px 10px;
     margin: 3px;
+
+    transform: translate(-1000px, 0);
+    animation-delay: 0.5s;
 }
 
 .pantalla-82 .azul {
@@ -3076,6 +3114,8 @@ section[ptitle="Contextualización"] h2 {
     border-radius: 10px;
     padding: 5px 10px;
     margin: 3px;
+    transform: translate(-1000px, 0);
+    animation-delay: 1s;
 }
 
 .pantalla-82 .morado {
@@ -3083,6 +3123,8 @@ section[ptitle="Contextualización"] h2 {
     border-radius: 10px;
     padding: 5px 10px;
     margin: 3px;
+    transform: translate(-1000px, 0);
+    animation-delay: 1.5s;
 }
 
 /*Pantalla 83*/
