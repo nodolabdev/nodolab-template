@@ -57,6 +57,7 @@ body {
     background-image: url(../img/background.svg);
     background-size: cover;
     position: relative;
+    min-height: 100%;
 }
 body:before {
     content: "";
