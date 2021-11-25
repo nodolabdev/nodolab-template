@@ -76,19 +76,18 @@ body {
     background-image: url(../img/background.png);
     background-size: cover;
 }
-/* body:before {
+body:before {
     content: "";
     width: 300px;
-    height: 40%;
-    bottom: 0px;
+    height: 300px;
+    bottom: 40px;
     left: 0;
     position: absolute;
-    background-image: url(../img/lupa.svg);
-    background-size: cover;
+    background-image: url(../img/lupa.png);
+    background-size: contain;
     background-repeat: no-repeat;
-    background-position: bottom;
-    z-index: -1;
-} */
+    z-index: 1;
+}
 body:after {
     content: "";
     width: 280px;
