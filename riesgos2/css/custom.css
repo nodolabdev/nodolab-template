@@ -3011,12 +3011,16 @@ section[ptitle="Contextualización"] h2 {
 
 /*Pantalla 73*/
 
-.pantalla-73 .w-100 {
-    width: 100px !important;
+.pantalla-73 .w-150 {
+    width: 150px !important;
 }
 
 .pantalla-73 .w-600 {
     width: 600px !important;
+}
+
+.pantalla-73  p {
+    margin: 20px 10px 10px;
 }
 
 .pantalla-73 .jpit-activities-cloze p,
@@ -3052,6 +3056,10 @@ section[ptitle="Contextualización"] h2 {
 .pantalla-73 .box_end .wrong,
 .pantalla-73 .box_end .correct {
     z-index: 2;
+}
+
+.w-100.top-bottom p {
+    text-align: left;
 }
 
 /*Pantalla 77*/
