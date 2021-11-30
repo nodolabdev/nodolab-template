@@ -723,6 +723,9 @@
 .mt-20{
     margin-top: 20px;
 }
+.mt-50{
+    margin-top: 50px;
+}
 
 .items-center {
     align-items: center;
@@ -1125,6 +1128,10 @@ section[ptitle="Contextualización"] h2 {
     z-index: 10;
 }
 
+.wrecks-causes::before {
+    animation: aparecer var(--animation-duration-long) var(--animation-ease) both calc(var(--step) * var(--step-delay));
+}
+
 .wrecks-causes#taco-1::before {
     top: 214px;
     left: 258px;
@@ -1232,6 +1239,7 @@ section[ptitle="Contextualización"] h2 {
     height: 107px;
     background-image: url(../img/course-images/column-hover.svg);
     background-repeat: no-repeat;
+    animation: aparecer var(--animation-duration) var(--animation-ease) both calc(var(--step) * var(--step-delay));
 }
 .subpage.active.page-columns#active-2:after{
     top: 113px;
@@ -1255,10 +1263,10 @@ section[ptitle="Contextualización"] h2 {
     background-color: white;
     position: absolute;
     text-align: justify;
-    top: -20%;
+    top: -34%;
     left: calc(50% - 630px/2);
     width: 630px;
-    height: auto;
+    height: 180px;
     padding: 20px;
 }
 
@@ -1276,13 +1284,14 @@ section[ptitle="Contextualización"] h2 {
 .subpage.security-button-hover:before{
     position: absolute;
     content: "";
-    top: 93px;
+    top: 63px;
     left: 84px;
     background-image: url(../img/course-images/security-button-hover.svg);
     background-repeat: no-repeat;
     width: 159px;
     height: 159px;
     z-index: 1;
+    animation: zoom-out var(--animation-duration-long) var(--animation-ease) both calc(var(--step) * var(--step-delay));;
 }
 
 .subpage.security-button-hover#sec-button-2:before {
@@ -1348,6 +1357,7 @@ section[ptitle="Contextualización"] h2 {
     background-image: url(../img/course-images/security-plan-buttons-hover.svg);
     background-position: center;
     background-repeat: no-repeat;
+    animation: aparecer var(--animation-duration-long) var(--animation-ease) both calc(var(--step) * var(--step-delay));
 }
 
 .subpage.security-plan#security-plan-2::after{
@@ -1395,10 +1405,6 @@ section[ptitle="Contextualización"] h2 {
     bottom: 12%;
     left: 177px;
     background-color: #ffffffd9;
-}
-
-.subpage.pdfs-security-plan{
-    justify-content: unset;
 }
 
 .subpage.pdfs-security-plan h2, .subpage.pdfs-security-plan h4 {
@@ -1577,14 +1583,6 @@ div.evolution-item:nth-of-type(10) {
     align-items: center;
 }
 
-.subpage#drugs .politics-pesv-container{
-    grid-template-columns: 60% 40%;
-}
-
-.subpage#speed .politics-pesv-container {
-    grid-template-columns: 65% 35%;
-}
-
 .anexos-box{
     display: flex;
     flex-direction: column;
@@ -1639,7 +1637,15 @@ div.evolution-item:nth-of-type(10) {
 }
 
 .subpage.security-button-hover > p{
-    height: 105px;
+    height:100px;
+    padding: 12px;
+    width: 80%;
+    margin-left:auto;
+    margin-right:auto;
+    background-color: rgba(255, 255, 255, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .security-button-hover img {
@@ -1684,4 +1690,184 @@ div.evolution-item:nth-of-type(10) {
     100% {
       opacity: 1;
     }
+}
+
+@keyframes aparecer {
+    0% {
+        transform: scale(0);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes zoom-out {
+    0% {
+        transform: scale(2);
+    }
+
+    33% {
+        transform: scale(1);
+    }
+
+    67% {
+        transform: scale(1.5);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes left-right {
+    0% {
+        transform: translate(-1000px, 0);
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+@keyframes right-left {
+    0% {
+        transform: translate(1000px, 0);
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+@keyframes fade-in-up {
+    0% {
+        opacity: 0;
+        transform: translateY(80px);
+    }
+
+    75% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes fade-in-left {
+    0% {
+        opacity: 0;
+        transform: translateX(-80px);
+    }
+
+    75% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes fade-in-right {
+    0% {
+        opacity: 0;
+        transform: translateX(80px);
+    }
+
+    75% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes fade-in-rotate {
+    0% {
+        opacity: 0;
+        transform: rotate(180deg);
+    }
+
+    75% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: rotate(0);
+    }
+}
+
+:root {
+    --animation-duration: 0.4s;
+    --animation-duration-long: 0.65s;
+    --animation-duration-xlong: 0.85s;
+    --animation-ease: ease-out;
+    --step-delay: 0.3s;
+    --step: 0;
+}
+
+.step-0 {
+    --step: 0;
+}
+.step-1 {
+    --step: 1;
+}
+.step-2 {
+    --step: 2;
+}
+.step-3 {
+    --step: 3;
+}
+.step-4 {
+    --step: 4;
+}
+.step-5 {
+    --step: 5;
+}
+.step-6 {
+    --step: 6;
+}
+.step-7 {
+    --step: 7;
+}
+.step-8 {
+    --step: 8;
+}
+.step-9 {
+    --step: 9;
+}
+
+.left-right {
+    animation: left-right var(--animation-duration) var(--animation-ease) both calc(var(--step) * var(--step-delay));
+}
+
+.right-left {
+    animation: right-left var(--animation-duration) var(--animation-ease) both calc(var(--step) * var(--step-delay));
+}
+
+.emergente {
+    animation: aparecer var(--animation-duration) var(--animation-ease) both calc(var(--step) * var(--step-delay));
+}
+
+.zoom-out {
+    animation: zoom-out var(--animation-duration-xlong) var(--animation-ease) both calc(var(--step) * var(--step-delay));
+}
+
+.fade-in-up {
+    animation: fade-in-up var(--animation-duration-long) var(--animation-ease) both calc(var(--step) * var(--step-delay));
+}
+
+.fade-in-left {
+    animation: fade-in-left var(--animation-duration-long) var(--animation-ease) both calc(var(--step) * var(--step-delay));
+}
+
+.fade-in-right {
+    animation: fade-in-right var(--animation-duration-long) var(--animation-ease) both calc(var(--step) * var(--step-delay));
+}
+
+.fade-in-rotate {
+    animation: fade-in-rotate var(--animation-duration-long) var(--animation-ease) both calc(var(--step) * var(--step-delay));
 }
