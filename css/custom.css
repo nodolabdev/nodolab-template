@@ -217,7 +217,7 @@
 }
 
 .jpit_activities_quiz_question_answers { overflow: auto; }
-.jpit_activities_quiz_board { height: 220px; }
+.jpit_activities_quiz_board { max-height: 240px; }
 
 /********************************************************************************/
 /* Actividad Sopa de letras
