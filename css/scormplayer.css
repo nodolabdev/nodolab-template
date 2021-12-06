@@ -3,7 +3,7 @@
 
 :root {
     --primary-color: #02b802;
-    --secondary-color:  #00877A;
+    --secondary-color: #00877A;
     --tertiary-color: #93D500;
 }
 
@@ -57,12 +57,14 @@ body {
     background-image: url(../img/background.svg);
     background-size: cover;
     position: relative;
+    min-height: 100%;
 }
+
 body:before {
     content: "";
     width: 100%;
-    height: 40%;
-    bottom: 0;
+    padding-top: 17%;
+    bottom: -30px;
     right: 0;
     left: 0;
     position: absolute;
@@ -139,7 +141,7 @@ p {
 }
 
 pre {
-    background:#F8F8FF;
+    background: #F8F8FF;
     border: #000 dashed 1px;
     padding: 6px;
     overflow: auto;
@@ -225,7 +227,12 @@ button.general.active, button.general:hover {
     height: auto;
 }
 
-.white {color: white};
+.white {
+    color: white
+}
+
+;
+
 .bold {
     font-weight: bold;
 }
@@ -238,20 +245,41 @@ button.general.active, button.general:hover {
     color: #5c5c5b;
 }
 
-.fs-30 {font-size: 1.875rem;}
-.fs-24 {font-size: 1.5rem;}
-.fs-40 {font-size: 40px;}
-.center {text-align: center;}
-.green-1 {color: var(--primary-color);}
-.green-2 {color: var(--secondary-color);}
-.green-3 {color: var(--tertiary-color);}
+.fs-30 {
+    font-size: 1.875rem;
+}
+
+.fs-24 {
+    font-size: 1.5rem;
+}
+
+.fs-40 {
+    font-size: 40px;
+}
+
+.center {
+    text-align: center;
+}
+
+.green-1 {
+    color: var(--primary-color);
+}
+
+.green-2 {
+    color: var(--secondary-color);
+}
+
+.green-3 {
+    color: var(--tertiary-color);
+}
+
 .screen-reader {
     position: absolute;
     right: 0;
     top: 0;
 }
 
-#play_scorm button{
+#play_scorm button {
     background-color: var(--tertiary-color);
     border: 1px solid var(--tertiary-color);
     color: white;
@@ -270,7 +298,7 @@ button.general.active, button.general:hover {
     right: 14%;
 }
 
-.start-suggestion-text{
+.start-suggestion-text {
     width: 27%;
     position: absolute;
     bottom: 10%;
