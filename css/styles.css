@@ -405,7 +405,7 @@ img.animation, img.play-animation, .animation_image .label {
 /* CONTENT AREA
 /********************************************************************************/
 main {
-    padding: 60px 100px 45px;
+    padding: 75px 40px 45px;
     border-radius: 50px;
     background-color: rgba(255, 255, 255, 0.5);
     position: relative;
@@ -435,13 +435,13 @@ main {
 }
 
 .client-logo {
-    flex-basis: 300px;
+    flex-basis: 223px;
     flex-grow: 0;
     flex-shrink: 0;
 }
 
 .client-logo img {
-    width: 60%;
+    width: 81%;
     display: block;
     margin: 0 auto;
 }
@@ -449,7 +449,7 @@ main {
 .header .banner {
     background-color: #fff;
     padding: 5px 15px;
-    flex-basis: 500px;
+    flex-basis: 470px;
     flex-grow: 0;
     flex-shrink: 0;
     border-radius: 45px;
@@ -476,7 +476,7 @@ nav.globals {
     z-index: 99;
     border-radius: 5px;
     display: inline-block;
-    flex-basis: 380px;
+    flex-basis: 440px;
     flex-grow: 0;
     flex-shrink: 0;
 }
@@ -515,73 +515,54 @@ nav.globals li.active, nav.globals li.current {
 
 .globals .progress {
     background: url(../img/menu_buttons.png) no-repeat;
-    background-size: 600%;
-    background-position: -2.5% center;
-    width: 45px;
-        height: 60px;
+    background-position: -0.7% center;
 }
 
 .globals .credits {
     background: url(../img/menu_buttons.png) no-repeat;
-    background-size: 600%;
-    background-position: 18.5% center;
-    width: 45px;
-        height: 60px;
+    background-position: 19.6% center;
 }
 
 .globals .help {
     background: url(../img/menu_buttons.png) no-repeat;
-    background-size: 600%;
     background-position: 40% center;
-    width: 45px;
-        height: 60px;
 }
 
 .globals .return {
     background: url(../img/menu_buttons.png) no-repeat;
-    background-size: 600%;
-    background-position: 60% center;
-    width: 45px;
-        height: 60px;
+    background-position: 60.4% center;
 }
 
 .globals .home {
     background: url(../img/sprite_botones.png) no-repeat;
-    background-size: 1500%;
     background-position: 35.6% center;
-    width: 45px;
-        height: 60px;
 }
 
 .globals .play {
     background: url(../img/menu_buttons.png) no-repeat;
-    background-size: 600%;
     background-position: 102.5% center;
-    width: 45px;
-        height: 60px;
 }
 .globals .pause {
     background: url(../img/menu_buttons.png) no-repeat;
-    background-size: 600%;
-    background-position: 81.5% center;
-    width: 45px;
-        height: 60px;
+    background-position: 80.5% center;
 }
 
-.globals .more {
+.globals .more[role="button"] {
     background: url(../img/sprite_menu.png) no-repeat;
-    background-size: 800%;
-    background-position: 102% center;
-    width: 45px;
-        height: 60px;
+    background-position: 100.4% center;
+    background-size: 990%;
 }
 
-.globals .less {
+.globals .less[role="button"] {
     background: url(../img/sprite_menu.png) no-repeat;
-    background-size: 800%;
-    background-position: 87.5% center;
-    width: 45px;
-        height: 60px;
+    background-position: 86.3% center;
+    background-size: 990%;
+}
+
+.globals a[role="button"] {
+    background-size: 740%;
+    width: 54px;
+    height: 80px;
 }
 
 #play-pause-voice-button {
