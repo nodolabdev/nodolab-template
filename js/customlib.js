@@ -73,8 +73,8 @@
     var $menu_modal = $("#menu_page").dialog({
       modal: true,
       autoOpen: false,
-      width: 500,
-      height: 400,
+      width: 650,
+      height: 550,
       classes: {
         "ui-dialog": "menu_page_dialog",
       },

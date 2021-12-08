@@ -205,7 +205,8 @@ dhbgApp.standard.start = function() {
     // ==============================================================================================
     dhbgApp.DB.dataPage = null;
 
-    $('[data-page]').on('click', function () {
+    $('[data-page]').on('click', function (e) {
+        e.stopPropagation();
         var $this = $(this);
 
         preventDefaultNavLink($(this));
