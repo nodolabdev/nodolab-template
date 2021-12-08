@@ -4,7 +4,7 @@
 /* SPECIFIC LAYER STYLES
 /********************************************************************************/
 .text_tooltip {
-    line-height: 13px;
+    line-height: 1.2em;
     padding: 0;
 }
 
@@ -29,19 +29,19 @@
   #pag-mod-3-4 .box_media .note_4 {
     position: absolute;
     left: -4%;
-    top: 84%;
+    top: 87%;
   }
 
   #pag-mod-3-4 .box_media .note_5 {
     position: absolute;
-    left: 6.5%;
-    top: 86%;
+    left: 7.4%;
+    top: 87.6%;
   }
 
   #pag-mod-3-4 .box_media .note_6 {
     position: absolute;
-    left: 21.5%;
-    top: 81%;
+    left: 30.9%;
+    top: 87.6%;
   }
 
   #pag-mod-3-4 .box_media .note_7 {
@@ -58,97 +58,105 @@
 
   #pag-mod-3-5 .box_media .note_1-1 {
     position: absolute;
-    left: 80.5%;
-    top: 11%;
+    left: 84.7%;
+    top: 9.8%;
   }
 
   #pag-mod-3-5 .box_media .note_1-2 {
     position: absolute;
-    left: 22.5%;
-    top: 20%;
+    left: 26.3%;
+    top: 18.5%;
   }
 
   #pag-mod-3-5 .box_media .note_1-3 {
     position: absolute;
-    left: 78.5%;
-    top: 20%;
+    left: 83.4%;
+    top: 20.4%;
   }
 
   #pag-mod-3-5 .box_media .note_1-4 {
     position: absolute;
-    left: 82.5%;
-    top: 28%;
+    left: 87.1%;
+    top: 28.3%;
   }
 
   #pag-mod-3-5 .box_media .note_1-5 {
     position: absolute;
-    left: 97.5%;
-    top: 32%;
+    left: 94.5%;
+    top: 33.4%;
   }
 
   #pag-mod-3-5 .box_media .note_1-6 {
     position: absolute;
-    left: 22.5%;
-    top: 37%;
+    left: 26%;
+    top: 36%;
   }
 
   #pag-mod-3-5 .box_media .note_1-7 {
     position: absolute;
-    left: 80.5%;
-    top: 37%;
+    left: 85.3%;
+    top: 37.8%;
   }
 
   #pag-mod-3-5 .box_media .note_1-8 {
     position: absolute;
-    left: 82.5%;
-    top: 46%;
+    left: 87.2%;
+    top: 48%;
   }
 
   #pag-mod-3-5 .box_media .note_1-9 {
     position: absolute;
-    left: 97.5%;
-    top: 49%;
+    left: 94.2%;
+    top: 51%;
+  }
+
+  #pag-mod-3-5 .box_media .note_1-4::before,
+  #pag-mod-3-5 .box_media .note_1-5::before,
+  #pag-mod-3-5 .box_media .note_1-8::before,
+  #pag-mod-3-5 .box_media .note_1-9::before,
+  #pag-mod-3-6 .box_media .note_2-3::before {
+    display: none;
   }
 
   #pag-mod-3-6 .box_media .note_2-1 {
     position: absolute;
-    left: 45.5%;
-    top: 12%;
+    left: 43.9%;
+    top: 12.7%;
   }
 
   #pag-mod-3-6 .box_media .note_2-2 {
     position: absolute;
-    left: 57.5%;
-    top: 11%;
+    left: 61.7%;
+    top: 12.1%;
   }
 
   #pag-mod-3-6 .box_media .note_2-3 {
     position: absolute;
-    left: 63.5%;
-    top: 16%;
+    left: 69%;
+    top: 16.9%;
   }
 
   #pag-mod-3-6 .box_media .note_2-4 {
     position: absolute;
-    left: 76.5%;
-    top: 16%;
+    left: 79.5%;
+    top: 13%;
   }
 
   #pag-mod-3-6 .box_media .note_2-5 {
     position: absolute;
-    left: 44.5%;
-    top: 21%;
+    left: 54.2%;
+    top: 25.3%;
   }
 
   #pag-mod-3-6 .box_media .note_2-6 {
     position: absolute;
-    left: 53.5%;
-    top: 21%;
+    left: 64.4%;
+    top: 25%;
   }
 
   #pag-mod-3-6 .box_media .note_2-7 {
     position: absolute;
-    left: 67.5%;
+    left: 79.1%;
     top: 25%;
   }
 
@@ -160,7 +168,7 @@
 
   #pag-mod-3-6 .box_media .note_2-9 {
     position: absolute;
-    left: 78.5%;
+    left: 82.5%;
     top: 87%;
   }
 
@@ -178,14 +186,14 @@
 
   #pag-mod-3-8 .box_media .note_3-3 {
     position: absolute;
-    left: 91.5%;
+    left: 97.5%;
     top: 16%;
   }
 
   #pag-mod-3-8 .box_media .note_3-4 {
     position: absolute;
-    left: 41.5%;
-    top: 29%;
+    left: 29.1%;
+    top: 36%;
   }
 
   #pag-mod-3-8 .box_media .note_3-5 {
@@ -202,30 +210,30 @@
 
   #pag-mod-3-8 .box_media .note_3-7 {
     position: absolute;
-    left: 63.5%;
+    left: 70.5%;
     top: 87%;
   }
 
   #pag-mod-3-8 .box_media .note_3-8 {
     position: absolute;
-    left: 37.5%;
+    left: 40.5%;
     top: 10%;
   }
 
   #pag-mod-3-8 .box_media .note_3-9 {
     position: absolute;
-    left: 64.5%;
+    left: 69.5%;
     top: 2%;
   }
 
   #pag-mod-3-8 .box_media .note_3-10 {
     position: absolute;
-    left: 71.5%;
+    left: 76.5%;
     top: 18%;
   }
 
   .note_pointer_left.six, .note_pointer_right.six  {
-    transform: scale(0.7);
+    transform: scale(0.8);
   }
 
 .unity-1-button.gray, .unity-2-button.gray, .unity-3-button.gray, .unity-4-button.gray {
@@ -241,13 +249,14 @@
 
 
 .instruction.tool_1 {
-    top: -10px;
+    top: 8px;
     margin: 0 auto;
 }
 
 .instruction.tool_2 {
-    top: 0;
+    top: 27px;
     margin: 0 auto;
+    z-index: 2;
 }
 
 .indic {
@@ -996,6 +1005,7 @@
 .flex-half {flex: 0 0 50%;}
 .flex-halfplus {flex: 0 0 60%;}
 .flex-20 {flex: 0 0 20%;}
+.flex-24 {flex: 0 0 24%;}
 .flex-30 {flex: 0 0 30%;}
 .flex-40 {flex: 0 0 40%;}
 .flex-45 {flex: 0 0 45%;}
@@ -1064,6 +1074,7 @@
 .w-100 {width: 100%;}
 .w-115 {width: 115px;}
 .w-188 {width: 188px;}
+.w600 {width: 600px;}
 .w800 {width: 800px;}
 .w700 {width: 700px;}
 
@@ -1071,6 +1082,11 @@
 
 .m-15 {
     margin: 5px;
+}
+
+.mv-0 {
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 .center {
@@ -1389,7 +1405,7 @@ span img {
 }
 
 .img-container.disabled img {
-    opacity: 0.5;
+    opacity: 0.22;
     filter: grayscale(1);
 }
 
@@ -1515,6 +1531,11 @@ span img {
 .p2-container .help-button-8 {top: 250px;right: 200px; animation: load 0.7s forwards 2.1s;}
 .p2-container .help-button-9 {top: 360px;right: 176px; animation: load 0.7s forwards 2.4s;}
 
+.p2-container.in-modal [class*="help-button-"] {
+    animation-duration: 0s;
+    animation-name: none;
+    opacity: 1;
+}
 
 .help-box .help-tooltip {
     display: none;

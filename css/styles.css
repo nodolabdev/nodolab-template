@@ -193,6 +193,7 @@ img {
     position: absolute;
     left: 25px;
     top: 0;
+    z-index: 1;
 }
 
 br.clear, div.clear {
@@ -230,7 +231,6 @@ ol.ol_counter li {
 
 a {
     font-weight: bold;
-    font-size: 12px;
     color: var(--secondary-color);
 }
 
