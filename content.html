@@ -23,9 +23,11 @@
     <script src="components/pit/utilities/jpit_utilities.js"></script>
     <script src="components/pit/activity/jpit_activity.js"></script>
     <script src="components/pit/resources/jpit_resource.js"></script>
+    <script src="components/pit/activity/quiz/jpit_activity_quiz.js"></script>
     <script src="components/pit/activity/cloze/jpit_activity_cloze.js"></script>
     <script src="components/pit/activity/check/jpit_activity_check.js"></script>
     <script src="components/pit/resources/zoom/jpit_resource_zoom.js"></script>
+    <script src="components/pit/resources/movi/jpit_resource_movi.js"></script>
 
     <script src="js/app.js"></script>
     <script src="js/init.js"></script>
@@ -115,22 +117,22 @@
                         <div class="img-container w-60 center">
                             <img src="./content/2.png"
                                 alt="Ten presente la duración del curso y programa tus espacios de estudio"
-                                class="jpit-resources-zoom" data-magnification="3" data-magnifier-size="200">
+                                class="jpit-resources-zoom" data-magnification="3" data-magnifier-size="420">
                         </div>
                         <div class="img-container w-60 center">
                             <img src="./content/3.png"
                                 alt="Busca un lugar tranquilo para estudiar y evita las distracciones, esto te ayudará con tus niveles de concentración."
-                                class="jpit-resources-zoom" data-magnification="3" data-magnifier-size="200">
+                                class="jpit-resources-zoom" data-magnification="3" data-magnifier-size="420">
                         </div>
                         <div class="img-container w-60 center">
                             <img src="./content/4.png"
                                 alt="Te sugerimos usar audifonos"
-                                class="jpit-resources-zoom" data-magnification="3" data-magnifier-size="200">
+                                class="jpit-resources-zoom" data-magnification="3" data-magnifier-size="420">
                         </div>
                         <div class="img-container w-60 center">
                             <img src="./content/5.png"
                                 alt="Este curso cuenta con sistema closed caption en los contenidos audiovisuales."
-                                class="jpit-resources-zoom" data-magnification="3" data-magnifier-size="200">
+                                class="jpit-resources-zoom" data-magnification="3" data-magnifier-size="420">
                         </div>
                     </div>
                     <div class="instruction" aria-hidden="true"><i class="ion-help-circled"></i>Pasa el cursor por la imagen para ampliar su visualización</div>
@@ -466,7 +468,7 @@
                     <div class="text-cont">
                         <ol type="1">
                             <li>Se realiza un estudio de mercado para definir la banda de precio, es decir, cuál puede ser el precio de un bien o servicio en el mercado.</li>
-                            <li>.Se realiza un presupuesto ambiental según el proyecto y su duración, indicando de acuerdo con las actividades que va a desarrollar el contratista, los programas ambientales que se requiere implementar.</li>
+                            <li>Se realiza un presupuesto ambiental según el proyecto y su duración, indicando de acuerdo con las actividades que va a desarrollar el contratista, los programas ambientales que se requiere implementar.</li>
                             <li>Luego de publicado el pliego, se realiza la revisión de las propuestas del contratista, incluyendo el presupuesto ambiental.</li>
                             <li>Una vez seleccionado el proponente, se verifica el costo de los ítems ambientales para el respectivo pago.</li>
                         </ol>
@@ -582,7 +584,7 @@
                         <ul>
                             <li>Oficio en PDF dirigido a la Coordinación del Grupo de Arqueología del ICANH solicitando la Autorización de Intervención Arqueológica, debidamente firmado por el profesional en arqueología.</li>
                             <li>Formato de registro de proyectos diligenciado en digital en formato Excel. </li>
-                            <li>Una copia en PDF de la propuesta que debe contener las siguientes partes: portada, planteamiento y justificación, antecedentes, objetivos, metodología, cronograma, presupuesto, y bibliografía.</li>
+                            <li>Una copia en PDF de la propuesta que debe contener las siguientes partes: portada, planteamiento y justificación, antecedentes, objetivos, metodología, cronograma, presupuesto y bibliografía.</li>
                             <li>Anexos en PDF (Hojas de vida, mapas y otros, propuesta sobre manejo del patrimonio, propuesta de Arqueología Pública)</li>
                         </ul>
 
@@ -617,18 +619,18 @@
                     <div class="burbuja-cont">
                         <p class="bold"> Qué interesante todo esto del tema arqueológico ¿No?</p>
                         <p class="bold">Queda mucho por investigar para que podamos tener claridades en caso de que encontremos tesoros escondidos en Alzo al momento de implementar nuestro proyecto de alcantarillado.</p>
-                        <p class="bold">Ahora hablemos de la señalización en vías. Eso sí que lo debemos conocer también para nuestra obra</p>
+                        <p class="bold">Ahora hablemos de la señalización en vías.</p>
                         <div class="burbuja b1"></div>
                         <div class="burbuja b2"></div>
                     </div>
                     <div class="personaje p3 top-to-bottom"></div>
                 </div>
             </section>
-            <section id="pag-act-1" ptitle="Actividades de aprendizaje">
+            <section id="pag-act-1" ptitle="Actividad de aprendizaje">
                 <div class="subpage">
                     <p class="bold mt-10">¿Qué tal si ponemos a prueba lo que aprendiste?</p>
                     <p class="bold">Hablemos de las fases para solicitar autorización de intervención arqueológica</p>
-                    <div class="jpit-activities-cloze" data-parent-mark-selector="span" data-act-id="1_cloze" data-act-title="Actividad de aprendizaje 1">
+                    <div class="jpit-activities-cloze" data-parent-mark-selector="span" data-act-id="a-aprendizaje-1_cloze" data-act-title="Actividad de aprendizaje 1">
                         <p>Selecciona para cada opción la respuesta correcta</p>
                         <ol type="1">
                             <li>
@@ -649,22 +651,12 @@
                                     </select>
                                 </span>
                             </li>
-                            <li>
-                                Cuando se requiere realizar modificaciones a las áreas de intervención, metodologías, cronograma, equipo de trabajo, entre otras, el profesional en arqueología titular de la Autorización deberá realizar la correspondiente solicitud que será revisada y autorizada en un término de quince  días hábiles. 
-                                <span>
-                                    <select>
-                                        <option data-response="true">Verdadero</option>
-                                        <option>Falso</option>
-                                    </select>
-                                </span>
-                            </li>
                         </ol>
 
                         <div class="box_end"></div>
                     </div>
                 </div>
             </section>
-
             <section id="pag-mod-1-14" ptitle="7. Conceptos básicos sobre señalización en vías">
                 <div class="subpage" id="pantalla-27">
                     <h3 class="float-right">Conceptos básicos sobre señalización en vías</h3>
@@ -714,7 +706,7 @@
                     <div class="instruction" aria-hidden="true"><i class="ion-help-circled"></i>Pasa el cursor por la imagen para ampliar su visualización</div>
                     <div class="emergente">
                         <h4>Categoría II - Obras de interferencias moderadas</h4>
-                        <p>Este tipo de obra corresponde a aquellas que comprometen la circulación, tanto vehicular como peatonal,  En el lugar de los trabajos y en zonas aledañas a este. Los residentes y/o comercios del sector tendrán inconvenientes en cuanto a la accesibilidad, pero en todo caso su acceso será directo. La zona de influencia para la elaboración del PMT de este tipo de intervención comprende el área de las obras y hasta donde los análisis de tránsito evidencien afectación por congestiones, o demoras producto de los trabajos que se realizan. </p>
+                        <p>Este tipo de obra corresponde a aquellas que comprometen la circulación, tanto vehicular como peatonal, en el lugar de los trabajos y en zonas aledañas a este. Los residentes y/o comercios del sector tendrán inconvenientes en cuanto a la accesibilidad, pero en todo caso su acceso será directo. La zona de influencia para la elaboración del PMT de este tipo de intervención comprende el área de las obras y hasta donde los análisis de tránsito evidencien afectación por congestiones, o demoras producto de los trabajos que se realizan. </p>
                         <p>La señalización necesaria se puede lograr considerando los esquemas incluidos al final de este capítulo, o similares con ajustes según la situación específica lo requiera o realizar modificaciones durante el desarrollo de los trabajos previa aprobación del PMT o sus modificaciones.</p>
                     </div>
                 </div>
@@ -866,222 +858,47 @@
 
             <section id="pag-act-2" ptitle="Actividades de aprendizaje">
                 <div class="subpage">
-                    <p class="bold mt-40">¿Qué tal si ponemos a prueba lo que aprendiste?
+                     <p class="bold mt-40">¿Qué tal si ponemos a prueba lo que aprendiste?
                         <br>Veamos cómo te va separando los residuos</p>
-                    <div class="jpit-activities-selection" data-act-id="2_multi" data-act-title="Actividad de aprendizaje 2" data-mode="multi">
-                        <p>Selecciona para cada opción la respuesta correcta</p>
-                        <div class="row">
-                            <div class="col-2 w-80">
-                                <table class="datatable">
-                                    <thead>
-                                        <th>Aprovechables</th>
-                                        <th>Especiales</th>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>
-                                                <ul>
-                                                    <li data-group="1" data-correct="true"><div class="check"></div> Cartón.</li>
-                                                    <li data-group="1"><div class="check"></div> Icopor.</li>
-                                                    <li data-group="1" data-correct="true"><div class="check"></div> Plegadiza.</li>
-                                                    <li data-group="1" data-correct="true"><div class="check"></div> Vidrio.</li>
-                                                    <li data-group="1"><div class="check"></div> Pan.</li>
-                                                    <li data-group="1" data-correct="true"><div class="check"></div> Tetra pak.</li>
-                                                    <li data-group="1"><div class="check"></div> Papel higiénico.</li>
-                                                    <li data-group="1" data-correct="true"><div class="check"></div> Papel.</li>
-                                                    <li data-group="1" data-correct="true"><div class="check"></div> Plástico.</li>   
-                                                </ul>
-                                            </td>
-                                            <td>
-                                                <ul>
-                                                    <li data-group="2" data-correct="true"><div class="check"></div>Tubería de pvc y poliuretano.</li>
-                                                    <li data-group="2" data-correct="true"><div class="check"></div>Madera.</li>
-                                                    <li data-group="2"><div class="check"></div>Plástico.</li>
-                                                    <li data-group="2"><div class="check"></div>Cascarones de huevo.</li>
-                                                    <li data-group="2" data-correct="true"><div class="check"></div>Icopor.</li>
-                                                    <li data-group="2" data-correct="true"><div class="check"></div>Manguera Termoplástica.</li>
-                                                    <li data-group="2" data-correct="true"><div class="check"></div>Escombros.</li>
-                                                    <li data-group="2"><div class="check"></div>Restos de otros alimentos.</li>
-                                                </ul>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                            <div class="col-2">
-                                <div class="box_end"></div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-                <div class="subpage">
-                    <p class="bold">¿Qué tal si ponemos a prueba lo que aprendiste?
-                        <br>Veamos cómo te va separando los residuos</p>
-                    <div class="jpit-activities-selection" data-act-id="3_multi" data-act-title="Actividad de aprendizaje 3" data-mode="multi">
-                        <p>Selecciona para cada opción la respuesta correcta</p>
-                        <div class="row">
-                            <div class="col-2 w-80">
-                                <table class="datatable">
-                                    <thead>
-                                        <th>Ordinarios</th>
-                                        <th>Orgánicos</th>
-                                        <th>Peligrosos</th>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>
-                                                <ul>
-                                                    <li data-group="1"><div class="check"></div>Plástico.</li>
-                                                    <li data-group="1" data-correct="true"><div class="check"></div>Papel higiénico.</li>
-                                                    <li data-group="1"><div class="check"></div>Vidrio.</li>
-                                                    <li data-group="1" data-correct="true"><div class="check"></div>Papel aluminio.</li>
-                                                    <li data-group="1" data-correct="true"><div class="check"></div>Pañales desechables.</li>
-                                                    <li data-group="1"><div class="check"></div>Cartón.</li>
-                                                    <li data-group="1" data-correct="true"><div class="check"></div>Colillas de cigarrillo.</li>
-                                                </ul>
-                                            </td>
-                                            <td>
-                                                <ul>
-                                                    <li data-group="2" data-correct="true"><div class="check"></div>Cascarones de huevo.</li>
-                                                    <li data-group="2" data-correct="true"><div class="check"></div>Pan.</li>
-                                                    <li data-group="2" data-correct="true"><div class="check"></div>Bolsitas de té.</li>
-                                                    <li data-group="2" data-correct="true"><div class="check"></div>Huesos.</li>
-                                                    <li data-group="2" data-correct="true"><div class="check"></div>Flores.</li>
-                                                    <li data-group="2"><div class="check"></div>Papel.</li>
-                                                    <li data-group="2" data-correct="true"><div class="check"></div>Pasto.</li>
-                                                </ul>
-                                            </td>
-                                            <td>
-                                                <ul>
-                                                    <li data-group="3" data-correct="true"><div class="check"></div>Envases químicos.</li>
-                                                    <li data-group="3" data-correct="true"><div class="check"></div>Aerosoles.</li>
-                                                    <li data-group="3" data-correct="true"><div class="check"></div>Tarro de pintura.</li>
-                                                    <li data-group="3" data-correct="true"><div class="check"></div>Trapo.</li>
-                                                    <li data-group="3" data-correct="true"><div class="check"></div>guantes sucios.</li>
-                                                </ul>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                            <div class="col-2">
-                                <div class="box_end"></div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-
-                <div class="subpage">
-                    <p class="bold">Ahora evaluemos un poco lo que aprendiste sobre señales</p>
-                    <div class="jpit-activities-cloze" data-parent-mark-selector="span" data-act-id="4_cloze" data-act-title="Actividad de aprendizaje 4">
-                        <p>Selecciona para cada opción la respuesta correcta, según el tipo de señal que representa</p>
-                        <div class="flex">
-                            <div class="flex-30">
-                                <img src="content/s1.svg" alt="Señal de angostamiento de la vía" />
-                                <span>
-                                    <select>
-                                        <option>Informativa</option>
-                                        <option data-response="true">Preventiva</option>
-                                        <option>Reglamentaria</option>
-                                    </select>
-                                </span>
-                            </div>
-                            <div class="flex-30">
-                                <img src="content/s2.svg" alt="Señal de vía cerrada" />
-                                <span>
-                                    <select>
-                                        <option>Informativa</option>
-                                        <option>Preventiva</option>
-                                        <option data-response="true">Reglamentaria</option>
-                                    </select>
-                                </span>
-                            </div>
-                            <div class="flex-30">
-                                <img src="content/s3.svg" alt="Señal de fin de carril" />
-                                <span>
-                                    <select>
-                                        <option data-response="true">Informativa</option>
-                                        <option>Preventiva</option>
-                                        <option>Reglamentaria</option>
-                                    </select>
-                                </span>
-                            </div>
-                        </div>
-
+                    <div class="jpit-activities-quiz columns columns-3" data-act-title="Actividad de aprendizaje 2" data-act-id="a-aprendizaje-2_select">
+                        <question type="multichoice">
+                            <description>
+                                <p class="bold mt-40">Residuos aprovechables</p>
+                            </description>
+                            <ul>
+                                <li data-response="true"> Cartón.</li>
+                                <li> Icopor.</li>
+                                <li data-response="true"> Plegadiza.</li>
+                                <li data-response="true"> Vidrio.</li>
+                                <li> Pan.</li>
+                                <li data-response="true"> Tetra pak.</li>
+                                <li> Papel higiénico.</li>
+                                <li data-response="true"> Papel.</li>
+                                <li data-response="true"> Plástico.</li>
+                            </ul>
+                        </question>
                         <div class="box_end"></div>
                     </div>
                 </div>
-
                 <div class="subpage">
-                    <p class="bold">Pasemos a revisar las zonas de obra</p>
-                    <div class="jpit-activities-cloze" data-parent-mark-selector="span" data-act-id="5_cloze" data-act-title="Actividad de aprendizaje 5">
-                        <p>Selecciona para cada opción la respuesta correcta, según la descripción</p>
-                        <ul>
-                            <li>
-                                Zona para advertir a los usuarios la situación que la vía presenta más adelante. 
-                                <span>
-                                    <select>
-                                        <option>Área de Obras</option>
-                                        <option>Fin de Obras</option>
-                                        <option data-response="true">Prevención</option>
-                                        <option>Seguridad</option>
-                                        <option>Transición</option>
-                                    </select>
-                                </span>
-                            </li>
-                            <li>
-                                Zona en la que los vehículos deben abandonar el o los carriles ocupados por las obras. 
-                                <span>
-                                    <select>
-                                        <option>Área de Obras</option>
-                                        <option>Fin de Obras</option>
-                                        <option>Prevención</option>
-                                        <option>Seguridad</option>
-                                        <option data-response="true">Transición</option>
-                                    </select>
-                                </span>
-                            </li>
-                            <li>
-                                Zona que separa el área de obras de los flujos vehiculares o peatonales. 
-                                <span>
-                                    <select>
-                                        <option>Área de Obras</option>
-                                        <option>Fin de Obras</option>
-                                        <option>Prevención</option>
-                                        <option data-response="true">Seguridad</option>
-                                        <option>Transición</option>
-                                    </select>
-                                </span>
-                            </li>
-                            <li>
-                                Zona cerrada al tránsito donde se realizan las actividades requeridas por las obras.
-                                <span>
-                                    <select>
-                                        <option data-response="true">Área de Obras</option>
-                                        <option>Fin de Obras</option>
-                                        <option>Prevención</option>
-                                        <option>Seguridad</option>
-                                        <option>Transición</option>
-                                    </select>
-                                </span>
-                            </li>
-                            <li>
-                                Zona utilizada para que el tránsito retorne a las condiciones de circulación normales.
-                                <span>
-                                    <select>
-                                        <option>Área de Obras</option>
-                                        <option data-response="true">Fin de Obras</option>
-                                        <option>Prevención</option>
-                                        <option>Seguridad</option>
-                                        <option>Transición</option>
-                                    </select>
-                                </span>
-                            </li>
-
-                        </ul>
-
+                     <p class="bold mt-40">¿Qué tal si ponemos a prueba lo que aprendiste?
+                        <br>Veamos cómo te va separando los residuos</p>
+                    <div class="jpit-activities-quiz columns columns-3" data-act-title="Actividad de aprendizaje 3" data-act-id="a-aprendizaje-3_select">
+                        <question type="multichoice">
+                            <description>
+                                <p class="bold mt-40">Residuos especiales</p>
+                            </description>
+                            <ul>
+                                <li data-response="true">Tubería de pvc y poliuretano.</li>
+                                <li data-response="true">Madera.</li>
+                                <li>Plástico.</li>
+                                <li>Cascarones de huevo.</li>
+                                <li data-response="true">Icopor.</li>
+                                <li data-response="true">Manguera Termoplástica.</li>
+                                <li data-response="true">Escombros.</li>
+                                <li>Restos de otros alimentos.</li>
+                            </ul>
+                        </question>
                         <div class="box_end"></div>
                     </div>
                 </div>
@@ -1213,17 +1030,16 @@
                 </div>
             </section>
 
-            <section id="pag-act-3" ptitle="Actividades de aprendizaje">
+            <section id="pag-act-3" ptitle="Actividad de aprendizaje">
                 <div class="subpage">
-                    <div class="jpit-activities-cloze" data-parent-mark-selector="span" data-act-id="6_cloze" data-act-title="Actividad de aprendizaje 6">
+                    <div class="jpit-activities-cloze" data-parent-mark-selector="span" data-act-id="a-aprendizaje-4_cloze" data-act-title="Actividad de aprendizaje 4">
                         <div class="row">
-                            <div class="col-2">
+                            <div class="" style="flex-basis: 40%;">
                                 <p class="bold">¿Qué tal si ponemos a prueba lo que aprendiste?
                                 <br>Veamos cómo te va identificando cuáles son algunos aspectos e impactos ambientales que pueden presentarse en la ejecución de las actividades relacionadas con la prestación del servicio de acueducto y alcantarillado:</p>
                                 <p>Selecciona para cada opción de la tabla, cuál es la respuesta correcta para completar la información</p>
-                                <div class="box_end"></div>
                             </div>
-                            <div class="col-2 w-85">
+                            <div class="">
                                 <table class="datatable">
                                     <thead>
                                         <th>Infraestructura\Actividad</th>
@@ -1306,6 +1122,7 @@
                                         </tr>
                                     </tbody>
                                 </table>
+                                <div class="box_end"></div>
                             </div>
                         </div>
                     </div>
@@ -1499,7 +1316,233 @@
                     <p>Total monto obtenido: 48,204,763.016.50</p>
                 </div>
             </section>
+            <section id="pag-act-eval-1" ptitle="Actividad de evaluación 1">
+                <div class="subpage">
+                    <p class="bold mt-10">¿Qué tal si ponemos a prueba lo que aprendiste?</p>
+                    <p class="bold">Hablemos de las fases para solicitar autorización de intervención arqueológica</p>
+                    <div class="jpit-activities-cloze" data-parent-mark-selector="span" data-act-id="Act-eval-1_cloze"
+                        data-act-title="Actividad de evaluación 1">
+                        <p>Selecciona para cada opción la respuesta correcta</p>
+                        <ol type="1">
+                            <li>
+                                Cuando se requiere realizar modificaciones a las áreas de intervención, metodologías, cronograma,
+                                equipo de trabajo, entre otras, el profesional en arqueología titular de la Autorización deberá
+                                realizar la correspondiente solicitud que será revisada y autorizada en un término de quince días
+                                hábiles.
+                                <span>
+                                    <select>
+                                        <option data-response="true">Verdadero</option>
+                                        <option>Falso</option>
+                                    </select>
+                                </span>
+                            </li>
+                        </ol>
+            
+                        <div class="box_end"></div>
+                    </div>
+                </div>
+            </section>
 
+            <section id="pag-act-eval-2" ptitle="Actividad de evaluación 2">
+            <div class="subpage">
+                <p class="bold mt-40">¿Qué tal si ponemos a prueba lo que aprendiste?
+                    <br>Veamos cómo te va separando los residuos
+                </p>
+                <div class="jpit-activities-quiz columns columns-3" data-act-title="Actividad de evaluación 2"
+                    data-act-id="Act-eval-2_select">
+                    <question type="multichoice">
+                        <description>
+                            <p class="bold mt-40">Residuos ordinarios</p>
+                        </description>
+                        <ul>
+                            <li>Plástico.</li>
+                            <li data-response="true">Papel higiénico.</li>
+                            <li>Vidrio.</li>
+                            <li data-response="true">Papel aluminio.</li>
+                            <li data-response="true">Pañales desechables.</li>
+                            <li>Cartón.</li>
+                            <li data-response="true">Colillas de cigarrillo.</li>
+                        </ul>
+                    </question>
+                    <div class="box_end"></div>
+                </div>
+            </div>
+            </section>
+            <section id="pag-act-eval-3" ptitle="Actividad de evaluación 3">
+            <div class="subpage">
+                <p class="bold mt-40">¿Qué tal si ponemos a prueba lo que aprendiste?
+                    <br>Veamos cómo te va separando los residuos
+                </p>
+                <div class="jpit-activities-quiz columns columns-3" data-act-title="Actividad de evaluación 3"
+                    data-act-id="Act-eval-3_select">
+                    <question type="multichoice">
+                        <description>
+                            <p class="bold mt-40">Residuos orgánicos</p>
+                        </description>
+                        <ul>
+                            <li data-response="true">Cascarones de huevo.</li>
+                            <li data-response="true">Pan.</li>
+                            <li data-response="true">Bolsitas de té.</li>
+                            <li data-response="true">Huesos.</li>
+                            <li data-response="true">Flores.</li>
+                            <li>Papel.</li>
+                            <li data-response="true">Pasto.</li>
+                        </ul>
+                    </question>
+                    <div class="box_end"></div>
+                </div>
+            </div>
+            </section>
+            <section id="pag-act-eval-4" ptitle="Actividad de evaluación 4">
+            <div class="subpage">
+                <p class="bold mt-40">¿Qué tal si ponemos a prueba lo que aprendiste?
+                    <br>Veamos cómo te va separando los residuos
+                </p>
+                <div class="jpit-activities-quiz columns columns-3" data-act-title="Actividad de evaluación 4"
+                    data-act-id="Act-eval-4_select">
+                    <question type="multichoice">
+                        <description>
+                            <p class="bold mt-40">Residuos Peligrosos</p>
+                        </description>
+                        <ul>
+                            <li data-response="true">Envases químicos.</li>
+                            <li data-response="true">Aerosoles.</li>
+                            <li data-response="true">Tarro de pintura.</li>
+                            <li data-response="true">Trapo.</li>
+                            <li data-response="true">Guantes sucios.</li>
+                        </ul>
+                    </question>
+                    <div class="box_end"></div>
+                </div>
+            </div>
+            </section>
+            <section id="pag-act-eval-5" ptitle="Actividad de evaluación 5">
+                <div class="subpage">
+                    <p class="bold">Ahora evaluemos un poco lo que aprendiste sobre señales</p>
+                    <div class="jpit-activities-cloze" data-parent-mark-selector="span" data-act-id="Act-eval-5_cloze"
+                        data-act-title="Actividad de evaluación 5">
+                        <p>Selecciona para cada opción la respuesta correcta, según el tipo de señal que representa</p>
+                        <div class="flex">
+                            <div class="flex-30">
+                                <img src="content/s1.svg" alt="Señal de angostamiento de la vía" />
+                                <span>
+                                    <select>
+                                        <option>Informativa</option>
+                                        <option data-response="true">Preventiva</option>
+                                        <option>Reglamentaria</option>
+                                    </select>
+                                </span>
+                            </div>
+                            <div class="flex-30">
+                                <img src="content/s2.svg" alt="Señal de vía cerrada" />
+                                <span>
+                                    <select>
+                                        <option>Informativa</option>
+                                        <option>Preventiva</option>
+                                        <option data-response="true">Reglamentaria</option>
+                                    </select>
+                                </span>
+                            </div>
+                            <div class="flex-30">
+                                <img src="content/s3.svg" alt="Señal de fin de carril" />
+                                <span>
+                                    <select>
+                                        <option data-response="true">Informativa</option>
+                                        <option>Preventiva</option>
+                                        <option>Reglamentaria</option>
+                                    </select>
+                                </span>
+                            </div>
+                        </div>
+                
+                        <div class="box_end"></div>
+                    </div>
+                </div>
+                </section>
+                <section id="pag-act-eval-6" ptitle="Actividad de evaluación 6">
+                <div class="subpage">
+                    <p class="bold">Pasemos a revisar las zonas de obra</p>
+                    <div class="jpit-activities-cloze" data-parent-mark-selector="span" data-act-id="Act-eval-6_cloze"
+                        data-act-title="Actividad de evaluación 6">
+                        <p>Selecciona para cada opción la respuesta correcta, según la descripción</p>
+                        <ul>
+                            <li>
+                                <p>
+                                    Zona para advertir a los usuarios la situación que la vía presenta más adelante.
+                                    <span>
+                                        <select>
+                                            <option>Área de Obras</option>
+                                            <option>Fin de Obras</option>
+                                            <option data-response="true">Prevención</option>
+                                            <option>Seguridad</option>
+                                            <option>Transición</option>
+                                        </select>
+                                    </span>
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    Zona en la que los vehículos deben abandonar el o los carriles ocupados por las obras.
+                                    <span>
+                                        <select>
+                                            <option>Área de Obras</option>
+                                            <option>Fin de Obras</option>
+                                            <option>Prevención</option>
+                                            <option>Seguridad</option>
+                                            <option data-response="true">Transición</option>
+                                        </select>
+                                    </span>
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    Zona que separa el área de obras de los flujos vehiculares o peatonales.
+                                    <span>
+                                        <select>
+                                            <option>Área de Obras</option>
+                                            <option>Fin de Obras</option>
+                                            <option>Prevención</option>
+                                            <option data-response="true">Seguridad</option>
+                                            <option>Transición</option>
+                                        </select>
+                                    </span>
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    Zona cerrada al tránsito donde se realizan las actividades requeridas por las obras.
+                                    <span>
+                                        <select>
+                                            <option data-response="true">Área de Obras</option>
+                                            <option>Fin de Obras</option>
+                                            <option>Prevención</option>
+                                            <option>Seguridad</option>
+                                            <option>Transición</option>
+                                        </select>
+                                    </span>
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    Zona utilizada para que el tránsito retorne a las condiciones de circulación normales.
+                                    <span>
+                                        <select>
+                                            <option>Área de Obras</option>
+                                            <option data-response="true">Fin de Obras</option>
+                                            <option>Prevención</option>
+                                            <option>Seguridad</option>
+                                            <option>Transición</option>
+                                        </select>
+                                    </span>
+                                </p>
+                            </li>
+                
+                        </ul>
+                
+                        <div class="box_end"></div>
+                    </div>
+                </div>
+            </section>
             <section id="pag-final" ptitle="Finalización">
                 <div class="subpage" id="pantalla-56">
                     <div class="burbuja-cont">

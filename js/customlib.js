@@ -21,17 +21,17 @@
       }
     }
 
-    function playPauseMainTrack() {
+  function playPauseMainTrack() {
       if (!mainTrack.paused) {
         mainTrack.pause();
         $('[data-global="play-pause"] > *')
-          .addClass("pause")
-          .removeClass("play");
+          .addClass("play")
+          .removeClass("pause");
         $('[data-global="play-pause"] > * > *').text("Reproducir pista");
       } else {
         $('[data-global="play-pause"] > *')
-          .addClass("play")
-          .removeClass("pause");
+          .addClass("pause")
+          .removeClass("play");
         $('[data-global="play-pause"] > * > *').text("Pausar pista");
         mainTrack.play();
       }
