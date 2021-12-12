@@ -722,6 +722,11 @@
 .mt-20{
     margin-top: 20px;
 }
+.mv-12,
+.mv-12.center {
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
 
 .items-center {
     align-items: center;

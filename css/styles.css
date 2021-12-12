@@ -5,12 +5,12 @@ CSS Variables
 
 :root {
     --primary-color: #02b802;
-    --secondary-color:  #00877A;
+    --secondary-color: #00877A;
     --tertiary-color: #93D500;
     --green-one: #00953B;
     --green-two: #00877A;
     font-size: 16px;
-  }
+}
 
 /* CSS Document */
 
@@ -77,6 +77,7 @@ body {
     position: relative;
     min-height: 100%;
 }
+
 body:before {
     content: "";
     width: 100%;
@@ -394,6 +395,7 @@ img.animation, img.play-animation, .animation_image .label {
 .box_media {
     text-align: center;
 }
+
 /********************************************************************************/
 /* DEVICE CONTROL
 /********************************************************************************/
@@ -406,7 +408,7 @@ img.animation, img.play-animation, .animation_image .label {
 /********************************************************************************/
 main {
     padding: 45px 60px 45px;
-    background: #ebebeb80;
+    background: #ffffffad;
     position: relative;
     height: 485px;
     width: 989px;
@@ -505,7 +507,7 @@ nav.globals li.active, nav.globals li.current {
     color: #333;
 }
 
-.globals li.button > * {
+.globals li.button>* {
     margin: 0 3px;
     display: flex;
     align-items: flex-end;
@@ -549,6 +551,7 @@ nav.globals li.active, nav.globals li.current {
     width: 45px;
     height: 60px;
 }
+
 .globals .pause {
     background: url(../img/audiobutton.svg) no-repeat;
     width: 45px;
@@ -560,6 +563,7 @@ nav.globals li.active, nav.globals li.current {
     height: 77px;
     background: url(../img/increase.svg) no-repeat;
 }
+
 .globals .decrease {
     width: 45px;
     height: 77px;
@@ -583,6 +587,7 @@ nav.globals li.active, nav.globals li.current {
     width: 45px;
     height: 50px;
 }
+
 #play-pause-voice-button .pause {
     background: url(../content/play-button.png) no-repeat;
     background-size: contain;
@@ -653,14 +658,14 @@ nav.horizontal ul.menu {
     border-radius: 36px/30px;
     border-top-left-radius: 0;
     border-top-right-radius: 0;
-    box-shadow: 2.1px 2.1px 0.8px 0px rgba(0,0,0,0.25);
+    box-shadow: 2.1px 2.1px 0.8px 0px rgba(0, 0, 0, 0.25);
     padding: 0;
     display: flex;
     justify-content: center;
     min-width: 610px;
 }
 
-nav.horizontal ul.menu > li {
+nav.horizontal ul.menu>li {
     color: #fff;
     position: relative;
     float: left;
@@ -674,23 +679,23 @@ nav.horizontal ul.menu > li {
     cursor: pointer;
 }
 
-nav.horizontal ul.menu > li.withsubitems:after {
+nav.horizontal ul.menu>li.withsubitems:after {
     content: "\f104";
     font-family: "Ionicons";
     position: absolute;
     right: 5px;
 }
 
-nav.horizontal ul.menu > li.first-child {
+nav.horizontal ul.menu>li.first-child {
     border-radius: 5px 0 0 5px;
 }
 
-nav.horizontal ul.menu > li.active, nav.horizontal ul.menu li.current {
+nav.horizontal ul.menu>li.active, nav.horizontal ul.menu li.current {
     color: #55d0d9;
     background-color: #fff;
 }
 
-nav.horizontal ul.menu > li.last-child {
+nav.horizontal ul.menu>li.last-child {
     border-right: none;
 }
 
@@ -716,11 +721,11 @@ nav.horizontal ul.submenu ul.submenu {
     top: 0;
 }
 
-nav.horizontal li.active > ul.submenu {
+nav.horizontal li.active>ul.submenu {
     display: initial;
 }
 
-nav.horizontal ul.submenu > li {
+nav.horizontal ul.submenu>li {
     padding: 10px 20px;
     text-align: left;
     list-style: none;
@@ -732,24 +737,24 @@ nav.horizontal ul.submenu > li {
     border: none;
 }
 
-nav.horizontal li.active > ul.submenu .button.first-child {
+nav.horizontal li.active>ul.submenu .button.first-child {
     border-top-right-radius: 20px;
     border-top-left-radius: 20px;
 }
 
-nav.horizontal li.active > ul.submenu .button.last-child {
+nav.horizontal li.active>ul.submenu .button.last-child {
     border-bottom-right-radius: 20px;
     border-bottom-left-radius: 20px;
 }
 
-nav.horizontal ul.submenu > li.withsubitems:after {
+nav.horizontal ul.submenu>li.withsubitems:after {
     content: "\f10a";
     font-family: "Ionicons";
     position: absolute;
     right: 5px;
 }
 
-nav.horizontal ul.submenu > li.active, nav.horizontal ul.submenu > li.current {
+nav.horizontal ul.submenu>li.active, nav.horizontal ul.submenu>li.current {
     background-color: #cdd8eb;
     color: #000000;
     font-weight: bold;
@@ -883,7 +888,7 @@ footer {
     padding: 5px 15px;
 }
 
-.box-text > .title {
+.box-text>.title {
     font-size: 1.125rem;
     margin: 0 0 5px 0;
     font-weight: bold;
@@ -904,6 +909,7 @@ footer {
 .box-text.important .title {
     color: #A63D33;
 }
+
 /********* box_example ********/
 .box-text.example {
     border-left: 30px solid #047CAB;
@@ -1245,7 +1251,7 @@ div.iconvideo.active, button.iconvideo.active {
     text-align: center;
 }
 
-.videobox > div {
+.videobox>div {
     margin: 0 auto 5px;
     box-shadow: 6px 6px 6px #888;
 }
@@ -1288,16 +1294,24 @@ sup.tooltip {
 /********************************************************************************/
 /* SPECIAL CONTENT: MOUSE OVER
 /********************************************************************************/
-.mouse-over { cursor: pointer; }
+.mouse-over {
+    cursor: pointer;
+}
 
 /********************************************************************************/
 /* SPECIAL CONTENT: MORE - LEST
 /********************************************************************************/
-.more-less { cursor: pointer; }
+.more-less {
+    cursor: pointer;
+}
 
-.viewmore .icon_more { display: none; }
+.viewmore .icon_more {
+    display: none;
+}
 
-.viewless .icon_less { display: none; }
+.viewless .icon_less {
+    display: none;
+}
 
 /********************************************************************************/
 /* TEXTO EN COLUMNAS
@@ -1306,7 +1320,7 @@ sup.tooltip {
     display: flex;
 }
 
-.row > .col-2 {
+.row>.col-2 {
     padding-right: 15px;
     padding-left: 15px;
     width: 50%;
@@ -1335,6 +1349,7 @@ sup.tooltip {
     float: left;
     margin: 0;
 }
+
 .vertical-menu .chalkboard_vertical_items .chalkboard_vertical_item {
     padding: 5px;
     margin: 5px 10px;
@@ -1352,7 +1367,7 @@ sup.tooltip {
     color: #fff;
 }
 
-.vertical-menu> .chalkboard_vertical_content > .element > h5 {
+.vertical-menu>.chalkboard_vertical_content>.element>h5 {
     margin: 0;
     font-size: 16px;
 }
@@ -1401,7 +1416,7 @@ sup.tooltip {
     color: #fff;
 }
 
-.vertical-menu-both-sides .chalkboard_both_content > .element > h5 {
+.vertical-menu-both-sides .chalkboard_both_content>.element>h5 {
     margin: 0;
     font-size: 16px;
 }
@@ -1415,7 +1430,7 @@ sup.tooltip {
     margin: 10px 0 20px;
 }
 
-.horizontal-menu .chalkboard_items > .chalkboard_item {
+.horizontal-menu .chalkboard_items>.chalkboard_item {
     float: left;
     padding: 5px;
     margin: 5px 2px;
@@ -1427,14 +1442,14 @@ sup.tooltip {
     border: 1px solid var(--secondary-color);
 }
 
-.horizontal-menu .chalkboard_items >.chalkboard_item.active, .horizontal-menu .chalkboard_items >.chalkboard_item.current {
+.horizontal-menu .chalkboard_items>.chalkboard_item.active, .horizontal-menu .chalkboard_items>.chalkboard_item.current {
     color: #000;
     background-color: #fbf9ea;
     border-top: 2px solid #888;
     padding-top: 6px;
 }
 
-.horizontal-menu .chalkboard_items >.chalkboard_item.current {
+.horizontal-menu .chalkboard_items>.chalkboard_item.current {
     font-weight: bold;
     background-color: var(--secondary-color);
     color: #fff;
@@ -1445,7 +1460,7 @@ sup.tooltip {
     justify-content: center;
 }
 
-.horizontal-menu >.chalkboard_content {
+.horizontal-menu>.chalkboard_content {
     width: 98%;
     float: left;
     height: 300px;
@@ -1456,7 +1471,7 @@ sup.tooltip {
     border-radius: 30px;
 }
 
-.horizontal-menu > .chalkboard_content > .element > h5 {
+.horizontal-menu>.chalkboard_content>.element>h5 {
     margin: 0 0 10px;
     font-size: 16px;
 }
@@ -1573,7 +1588,7 @@ sup.tooltip {
     padding: 5px;
 }
 
-.ctrl-pagination > .layers > .layer > h5 {
+.ctrl-pagination>.layers>.layer>h5 {
     margin-top: 0;
 }
 
@@ -1811,7 +1826,7 @@ sup.tooltip {
     font-weight: bold;
     position: relative;
     min-height: 35px;
-    box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.16);
+    box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.16);
 }
 
 .box_end .correct:before, .box_end .wrong:before {
@@ -1914,7 +1929,8 @@ sup.tooltip {
     font-weight: bold;
     cursor: pointer;
 }
-.jpit_activities_quiz_question_option_answer label:hover, .jpit_activities_quiz_question_option_answer_selected label  {
+
+.jpit_activities_quiz_question_option_answer label:hover, .jpit_activities_quiz_question_option_answer_selected label {
     background-color: #ffffff;
     color: var(--primary-color);
 }
@@ -2218,6 +2234,7 @@ sup.tooltip {
     padding: 10px;
     user-select: none;
 }
+
 .jpitdroppable_select_list_item.selected {
     background-color: #dedede;
     border-color: #bcbcbc
@@ -2235,6 +2252,7 @@ sup.tooltip {
     border-bottom: 20px solid transparent;
     clear: both;
 }
+
 /********************************************************************************/
 /* SPECIFIC ACTIVITIES: DROPPABLE - SEGUN IMAGEN
 /********************************************************************************/
@@ -2324,6 +2342,7 @@ sup.tooltip {
     background-color: var(--secondary-color);
     border: none;
 }
+
 /********************************************************************************/
 /* SPECIFIC ACTIVITIES: MULTIDROPPABLE
 /********************************************************************************/
@@ -2585,9 +2604,17 @@ sup.tooltip {
 /********************************************************************************/
 /* GLOBALS
 /********************************************************************************/
-.globals i.maximize { display: none; }
-.globals .minimized i.minimize { display: none; }
-.globals .minimized i.maximize { display: inline; }
+.globals i.maximize {
+    display: none;
+}
+
+.globals .minimized i.minimize {
+    display: none;
+}
+
+.globals .minimized i.maximize {
+    display: inline;
+}
 
 /********************************************************************************/
 /* RESULTS
@@ -2632,6 +2659,7 @@ sup.tooltip {
 .measuring-progress.circle {
     margin: -20px 10px 0 5px;
 }
+
 /* Circle */
 .measuring-progress.circle {
     margin: -20px 10px 0 5px;
@@ -2746,6 +2774,7 @@ sup.tooltip {
     position: absolute;
     top: 30px;
 }
+
 /********************************************************************************/
 /* MEDIA PRINT
 /********************************************************************************/
@@ -2796,6 +2825,7 @@ html.single h1 {
         display: inline-block;
     }
 }
+
 /********************************************************************************/
 /* JQUERY ADJUSTMENT
 /********************************************************************************/
