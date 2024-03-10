@@ -13,6 +13,15 @@ Los logos y/o nombres presentes en la plantilla no pueden ser utilizados para in
 
 Así mismo, los desarrolladores e instituciones involucradas entregan esta herramienta "como es" y no se hacen responsables por lo que se haga con ella ni por errores, fallas u otros perjuicios derivados de su utilización.
 
+## Creando el zip file
+Excluir los siguientes archivos al crear el zip file del paquete scorm:
+  - `.gitignore`
+  - `package.json`
+  - `package-lock.json`
+  - `yarn.lock`
+  - `scss/*`
+
+
 ## Créditos
 
 ### Desarrolladores

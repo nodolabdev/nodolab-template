@@ -1,0 +1,125 @@
+/* ----------------- */
+/*     Progresss     */
+/* ----------------- */
+
+.measuring-progress {
+  position: relative;
+
+  &.default {
+    float: left;
+    padding: 10px 0 0 10px;
+    display: flex;
+    align-items: center;
+    width: 150px;
+
+    progress {
+      height: 30px;
+      width: 100%;
+    }
+
+    label {
+      position: absolute;
+      left: 120px;
+      top: 20px;
+    }
+  }
+
+  &.circle {
+    margin: -20px 10px 0 5px;
+    &.c100 {
+      background-color: #ffffff !important;
+      border: 1px solid #999999;
+    }
+  }
+
+  &.horizontal {
+    align-items: center;
+    border-radius: 15px;
+    color: var(--color-secondary);
+    display: flex;
+    flex-basis: 320px;
+    gap: 24px;
+    justify-content: flex-start;
+
+    label {
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    .progress_text {
+      font-size: 12px;
+      position: absolute;
+      left: -2px;
+      bottom: -16px;
+    }
+
+    .results_value {
+      width: 28px;
+      height: 22px;
+      border-radius: 15px;
+      text-align: center;
+      padding-top: 6px;
+      line-height: 10px;
+      z-index: 2;
+    }
+
+    .results_level {
+      height: 15px;
+      width: 80%;
+      background-color: var(--color-secondary-light);
+      border-radius: 10px;
+      overflow: hidden;
+      border: 1px solid #fff;
+
+      div {
+        background-color: var(--color-secondary);
+        width: 0%;
+        height: 15px;
+      }
+    }
+  }
+
+  &.vertical {
+    font-size: 11px;
+    font-weight: bold;
+    margin-left: 5px;
+
+    .results_value {
+      position: absolute;
+      left: 5px;
+      top: 0;
+      width: 28px;
+      height: 22px;
+      border-radius: 15px;
+      background-color: #fff;
+      text-align: center;
+      padding-top: 6px;
+      line-height: 10px;
+      z-index: 2;
+      border: 1px solid #007fff;
+    }
+
+    .results_level {
+      position: absolute;
+      left: 14px;
+      bottom: -5px;
+      width: 11px;
+      height: 150px;
+      background-color: #007fff;
+      border: 1px solid #007fff;
+      border-radius: 10px 10px 0 0;
+      overflow: hidden;
+
+      div {
+        background-color: #ffffff;
+        width: 11px;
+        height: 100%;
+      }
+    }
+
+    .progress_text {
+      position: absolute;
+      top: 30px;
+    }
+  }
+}

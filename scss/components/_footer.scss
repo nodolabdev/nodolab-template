@@ -1,0 +1,48 @@
+footer {
+  background-color: var(--white);
+  background-size: 100px;
+  bottom: 0;
+  height: 68px;
+  left: 0;
+  padding: 10px 8px;
+  position: fixed;
+  right: 0;
+  text-align: center;
+  z-index: 4;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: 32px;
+
+  .scorm__course-title {
+    text-transform: uppercase;
+    font-size: var(--font-size-medium-16);
+    color: var(--color-secondary);
+    em {
+      font-weight: bold;
+      color: var(--color-secondary);
+      font-style: unset;
+      font-size: var(--font-size-medium-20);
+    }
+  }
+
+  .flex {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 24px;
+  }
+
+  #page_number {
+    border-radius: 50%;
+    border: 1px solid var(--color-secondary);
+    bottom: 10px;
+    color: var(--color-secondary);
+    font-size: 16px;
+    font-weight: bold;
+    height: 44px;
+    line-height: 44px;
+    text-align: center;
+    width: 44px;
+  }
+}

@@ -40,6 +40,7 @@ dhbgApp.start = function() {
 
     var style_path = "css/styles.css";
     var custom_path = "css/custom.css";
+    var components_path = "css/components/style.css";
 
     dhbgApp.documentHeight = $(document).height();
     dhbgApp.documentWidth = $(document).width();
@@ -52,6 +53,7 @@ dhbgApp.start = function() {
             var refresh = new Date().getTime();
             style_path = "css/mobile.css?t="+refresh;
             custom_path = "css/custommobile.css?t="+refresh;
+            components_path = "css/components/style.css?t="+refresh;
         }
         else {
             style_path = "css/mobile.min.css";
@@ -62,6 +64,7 @@ dhbgApp.start = function() {
         if (dhbgApp.DEBUG_MODE) {
             style_path = "css/styles.css";
             custom_path = "css/custom.css";
+            components_path = "css/components/style.css";
         }
         else {
             style_path = "css/styles.min.css";
@@ -81,6 +84,12 @@ dhbgApp.start = function() {
         custom.type = "text/css";
         document.body.appendChild(custom);
 
+        var components = document.createElement("link");
+        components.href = components_path;
+        components.rel = "stylesheet";
+        components.type = "text/css";
+        document.body.appendChild(components);
+
         var start_app = function () {
             if (dhbgApp.MODE == 'mobile') {
                 dhbgApp.mobile.start();
@@ -92,11 +101,12 @@ dhbgApp.start = function() {
 
         var styles_loaded = false;
         var custom_loaded = false;
+        var components_loaded = false;
 
         styles.onload = function () {
             styles_loaded = true;
 
-            if (custom_loaded && !dhbgApp.STARTED) {
+            if (custom_loaded && components_loaded && !dhbgApp.STARTED) {
                 start_app();
             }
         }
@@ -104,10 +114,20 @@ dhbgApp.start = function() {
         custom.onload = function () {
             custom_loaded = true;
 
-            if (styles_loaded && !dhbgApp.STARTED) {
+            if (styles_loaded && components_loaded && !dhbgApp.STARTED) {
                 start_app();
             }
         }
+
+        components.onload = function () {
+          components_loaded = true;
+
+          if (styles_loaded && custom_loaded && !dhbgApp.STARTED) {
+              start_app();
+          }
+        }
+
+
 
     }
     else {

@@ -1,0 +1,24 @@
+.scorm {
+  &__drawer {
+    color: var(--white);
+    .menu {
+      list-style: none;
+    }
+    .submenu {
+      list-style: none;
+    }
+
+    .button {
+      padding: 12px;
+      &.current {
+        border-radius: 25px;
+      }
+      &:not(.withsubitems) {
+        &.current {
+          background-color: var(--color-primary-dark);
+          color: var(--highlight-blue);
+        } 
+      }
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "name": "nodolab-template",
+  "version": "1.0.0",
+  "description": "Template for interactive content editing",
+  "main": "js/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss": "node-sass -w -r scss -o css/components"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nodolabdev/nodolab-template.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nodolabdev/nodolab-template/issues"
+  },
+  "homepage": "https://github.com/nodolabdev/nodolab-template#readme",
+  "devDependencies": {
+    "sass": "^1.71.1"
+  },
+  "dependencies": {
+    "node-sass": "^9.0.0"
+  }
+}

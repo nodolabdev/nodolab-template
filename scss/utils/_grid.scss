@@ -1,0 +1,26 @@
+@mixin grid(
+  $columns: 4,
+  $columns-tablet: 0,
+  $columns-desktop: 0,
+  $minmax: 0,
+  $column-gap: true
+) {
+  display: grid;
+  grid-template-columns: repeat($columns, minmax($minmax, 1fr));
+
+  @if $column-gap {
+    grid-column-gap: 16px;
+  }
+
+  @include respond-to('medium') {
+    grid-template-columns: repeat($columns-tablet, minmax($minmax, 1fr));
+  }
+
+  @include respond-to('large') {
+    grid-template-columns: repeat($columns-desktop, minmax($minmax, 1fr));
+
+    @if $column-gap {
+      grid-column-gap: 24px;
+    }
+  }
+}
