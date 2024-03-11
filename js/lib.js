@@ -78,6 +78,11 @@ dhbgApp.standard.start = function() {
 
             if ($withsub) {
                 $item.addClass('withsubitems');
+                $item.on('click', function(e){
+                  if(e.target.classList.contains('withsubitems')) {
+                    $item.toggleClass('open');
+                  }
+                })
             }
 
             if ($li.attr('data-page')) {
@@ -101,6 +106,8 @@ dhbgApp.standard.start = function() {
 
         $nav.empty();
         $nav.append($menu);
+
+
     });
 
     // ==============================================================================================

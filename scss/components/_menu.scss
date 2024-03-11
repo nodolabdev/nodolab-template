@@ -10,14 +10,41 @@
 
     .button {
       padding: 12px;
-      &.current {
-        border-radius: 25px;
-      }
+      border-radius: 25px;
+      transition: all 0.2s ease;
+
       &:not(.withsubitems) {
         &.current {
           background-color: var(--color-primary-dark);
           color: var(--highlight-blue);
         } 
+      }
+
+      &:hover {
+        background-color: var(--color-primary-dark);
+      }
+      
+      &.withsubitems {
+        position: relative;
+        .submenu {
+          display: none;
+        }
+        &.open {
+          .submenu {
+            display: block;
+          }
+          &:hover {
+            background-color: var(--color-primary);
+          }
+          &::before {
+            content: '▴';  
+          }
+        }
+        &::before {
+          content: '▾';
+          position: absolute;
+          right: 24px;
+        }
       }
     }
   }

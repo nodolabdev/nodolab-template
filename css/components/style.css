@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body, .scorm__button {
   font-family: var(--avenir-family);
   font-style: normal;
@@ -151,6 +152,7 @@ main {
   width: 100%;
   transition: all 0.3s ease;
   padding: 130px 60px;
+  margin: 0 auto;
   width: 100vh; }
   main section {
     margin: 0 auto;
@@ -204,12 +206,28 @@ footer {
   .scorm__drawer .submenu {
     list-style: none; }
   .scorm__drawer .button {
-    padding: 12px; }
-    .scorm__drawer .button.current {
-      border-radius: 25px; }
+    padding: 12px;
+    border-radius: 25px;
+    transition: all 0.2s ease; }
     .scorm__drawer .button:not(.withsubitems).current {
       background-color: var(--color-primary-dark);
       color: var(--highlight-blue); }
+    .scorm__drawer .button:hover {
+      background-color: var(--color-primary-dark); }
+    .scorm__drawer .button.withsubitems {
+      position: relative; }
+      .scorm__drawer .button.withsubitems .submenu {
+        display: none; }
+      .scorm__drawer .button.withsubitems.open .submenu {
+        display: block; }
+      .scorm__drawer .button.withsubitems.open:hover {
+        background-color: var(--color-primary); }
+      .scorm__drawer .button.withsubitems.open::before {
+        content: '▴'; }
+      .scorm__drawer .button.withsubitems::before {
+        content: '▾';
+        position: absolute;
+        right: 24px; }
 
 /* ----------------- */
 /*     Progresss     */
