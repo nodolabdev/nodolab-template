@@ -1,4 +1,4 @@
-body {
+body, .scorm__button {
   font-family: var(--avenir-family);
   font-style: normal;
   font-weight: var(--font-weight-regular);
@@ -150,7 +150,8 @@ body {
 main {
   width: 100%;
   transition: all 0.3s ease;
-  padding: 94px 60px; }
+  padding: 130px 60px;
+  width: 100vh; }
   main section {
     margin: 0 auto;
     max-width: 726px; }
@@ -302,3 +303,26 @@ footer {
     .measuring-progress.vertical .progress_text {
       position: absolute;
       top: 30px; }
+
+.scorm__controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  margin-top: 24px; }
+
+.scorm__control svg {
+  width: 9px; }
+
+.scorm__button {
+  padding: 8px 12px;
+  border: 1px solid var(--grey-dark);
+  border-radius: 25px;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  transition: background-color 0.2s ease; }
+  .scorm__button:hover {
+    background-color: var(--grey-light); }

@@ -212,6 +212,30 @@ dhbgApp.standard.start = function() {
         }
     };
 
+    $('main > section').each(function() {
+      var $page = $(this);
+      $page.append(`
+      <div class="scorm__controls">
+        <button class="button scorm__button scorm__control scorm__control--prev" previous-page>
+          <svg viewBox="0 0 24 24">
+            <use
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              xlink:href="/content/icons.svg#chevron-left"></use>
+          </svg>
+          Página anterior
+        </button>
+        <button class="button scorm__button scorm__control scorm__control--next" next-page>
+          Siguiente página
+          <svg viewBox="0 0 24 24">
+            <use
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              xlink:href="/content/icons.svg#chevron-right"></use>
+          </svg>
+        </button>
+      </div>
+      `);
+  });
+
     $('[next-page]').on('click', function () {
         if ($(this).hasClass('disabled')) {
             return;
@@ -1626,6 +1650,8 @@ dhbgApp.standard.load_operations = function() {
 
         dhbgApp.loadPage(sco.page, sco.subpage);
     };
+
+
 
     dhbgApp.printProgress = function() {
         if (typeof dhbgApp.scorm == 'object') {

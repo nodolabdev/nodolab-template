@@ -1,0 +1,16 @@
+.scorm {
+  &__button {
+    @extend %typography-base;
+    padding: 8px 12px;
+    border: 1px solid var(--grey-dark);
+    border-radius: 25px;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    transition: background-color 0.2s ease;
+    &:hover {
+      background-color: var(--grey-light);
+    }
+  }
+}

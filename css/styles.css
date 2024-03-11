@@ -12,6 +12,8 @@
   --highlight-blue: #12EFE4;
   --white: #ffffff;
   --bg-color: #F5F5F5;
+  --grey-dark: #575969;
+  --grey-light: #DDDDDD;
   /* WIDTHS */
   --drawer-width: 360px;
   /* FONT FAMILIES */
@@ -337,11 +339,6 @@ img.animation, img.play-animation, .animation_image .label {
 /*--------------------------*/
 /* Subpages menu
 /*--------------------------*/
-#subpages_menu {
-    position: absolute;
-    right: 80px;
-    bottom: 17px;
-}
 
 #subpages_menu ul {
     margin: 0;
