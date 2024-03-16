@@ -63,12 +63,6 @@ dhbgApp.start = function() {
         custom.type = "text/css";
         document.body.appendChild(custom);
 
-        var components = document.createElement("link");
-        components.href = components_path;
-        components.rel = "stylesheet";
-        components.type = "text/css";
-        document.body.appendChild(components);
-
         var start_app = function () {
             if (dhbgApp.MODE == 'mobile') {
                 dhbgApp.mobile.start();
@@ -80,12 +74,11 @@ dhbgApp.start = function() {
 
         var styles_loaded = false;
         var custom_loaded = false;
-        var components_loaded = false;
 
         styles.onload = function () {
             styles_loaded = true;
 
-            if (custom_loaded && components_loaded && !dhbgApp.STARTED) {
+            if (custom_loaded && !dhbgApp.STARTED) {
                 start_app();
             }
         }
@@ -93,20 +86,10 @@ dhbgApp.start = function() {
         custom.onload = function () {
             custom_loaded = true;
 
-            if (styles_loaded && components_loaded && !dhbgApp.STARTED) {
+            if (styles_loaded && !dhbgApp.STARTED) {
                 start_app();
             }
         }
-
-        components.onload = function () {
-          components_loaded = true;
-
-          if (styles_loaded && custom_loaded && !dhbgApp.STARTED) {
-              start_app();
-          }
-        }
-
-
 
     }
     else {
