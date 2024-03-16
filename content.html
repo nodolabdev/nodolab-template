@@ -2025,6 +2025,271 @@
         </div>
 
         <div class="subpage">
+          <h3>Clasificar</h3>
+          <p>
+              Permite realizar una actividad donde se clasifican contenidos entre dos posibles valores, como: <strong>Verdadero/Falso</strong> o <strong>Si/No</strong>.
+          </p>
+          <p>
+              Una actividad de clasificar se define agregando la clase <em>jpit-activities-check</em> a un contenedor y dentro de él:
+          </p>
+          <ul class="data_list">
+              <li>Una etiqueta <em>words</em> compuesta por elementos <em>li</em> que contendrán las palabras o elementos a clasificar. Los <em>li</em> que contengan a los incluidos/verdaderos/sí deben tener el atributo <em>data-val</em> establecido en <em>true</em>.</li>
+              <li>La estructura HTML personalizada para dar el contexto deseado, asignando las siguientes clases a los controles en los que se desee mostrar la información correspondiente.
+                  <ul class="data_list">
+                      <li><em>play</em>: es el contenedor inicial. Se oculta al mostrar los resultados y se vuelve a cargar al momento de reintentar la actividad.</li>
+                      <li><em>word_content</em>: elemento donde se mostrarán las "palabras" a clasificar. Se encuentra al interior del contenedor marcado como <em>play</em>.</li>
+                      <li><em>yes</em>: elemento que se comporta como el sí o verdadero al clasificar. Suele ser un <em>button</em> pero puede ser cualquier otro elemento.</li>
+                      <li><em>not</em>: elemento que se comporta como el no o falso al clasificar. Suele ser un <em>button</em> pero puede ser cualquier otro elemento.</li>
+                      <li><em>box_conclution</em>: es el contenedor que se muestra al finalizar la clasificación. Si se desea que se muestren las respuestas correctamente o incorrectamente clasificadas se debe adicionar una o las dos siguientes clases, según se desee. El no incluir una de ellas hará que no se muestren esos tipos de resultados.
+                          <ul class="data_list">
+                              <li><em>correct_words</em> (opcional): contenedor donde se mostrarán las palabras clasificadas correctamente.</li>
+                              <li><em>wrong_words</em> (opcional):  contenedor donde se mostrarán las palabras que fueron clasificadas incorrectamente.</li>
+                          </ul>
+                      </li>
+                      <li><em>reload</em> (opcional): elemento que controla el reinicio de la actividad luego de cada ronda de clasificación. Si no se adiciona, la actividad tendrá una sola ronda de clasificación. Suele ser un <em>button</em> pero puede ser cualquier otro elemento.</li>
+                      <li><em>hits</em> (opcional): es un contenedor donde se copia la cantidad de aciertos al clasificar.</li>
+                      <li><em>miss</em> (opcional): es un contenedor donde se copia la cantidad de clasificaciones incorrectas.</li>
+                  </ul>
+              </li>
+          </ul>
+
+          <div class="horizontal-menu">
+              <dl>
+                  <dt>Ejemplo</dt>
+                  <dd>
+                      <div class="jpit-activities-check">
+                          <words>
+                              <li data-val="true">Medellín</li>
+                              <li data-val="true">Cartagena</li>
+                              <li>Turín</li>
+                              <li data-val="true">Santa Marta</li>
+                              <li>Hong Kong</li>
+                              <li>Quito</li>
+                              <li data-val="true">Villavicencio</li>
+                              <li>Lima</li>
+                              <li data-val="true">Pasto</li>
+                              <li data-val="true">Armenia</li>
+                          </words>
+                          <div class="board">
+                              <div class="check_left">
+                                  <div class="play">
+                                      <p>Indique si la siguiente ciudad es o no colombiana:</p>
+                                      <div class="word_content">&nbsp;</div>
+                                      <div class="buttons">
+                                          <button class="yes general">Si</button>
+                                          <button class="not general">No</button>
+                                      </div>
+                                  </div>
+                                  <div class="box_conclution">
+                                      <h3>¡Ha finalizado!</h3>
+                                      <p>Al clasificar ha tenido los siguientes aciertos y desaciertos:</p>
+                                      <p>
+                                          <strong>Aciertos:</strong>
+                                          <span class="correct_words"></span>
+                                      </p>
+                                      <p>
+                                          <strong>Desaciertos:</strong>
+                                          <span class="wrong_words"></span>
+                                      </p>
+                                      <div class="buttons">
+                                          <button class="general reload">Vovler a clasificar las ciudades incorrectamente clasificadas</button>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="check_right">
+                                  <div class="box_result">
+                                      <div class="correct">
+                                          <div class="hits">0</div>
+                                          <div class="text">Aciertos</div>
+                                      </div>
+                                      <div class="wrong">
+                                          <div class="miss">0</div>
+                                          <div class="text">Desaciertos</div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </dd>
+              </dl>
+              <dl>
+                  <dt>HTML</dt>
+                  <dd>
+<pre>
+&lt;div class="jpit-activities-check"&gt;
+&lt;words&gt;
+&lt;li data-val="true"&gt;Medellín&lt;/li&gt;
+&lt;li data-val="true"&gt;Cartagena&lt;/li&gt;
+&lt;li&gt;Turín&lt;/li&gt;
+&lt;li data-val="true"&gt;Santa Marta&lt;/li&gt;
+&lt;li&gt;Hong Kong&lt;/li&gt;
+&lt;li&gt;Quito&lt;/li&gt;
+&lt;li data-val="true"&gt;Villavicencio&lt;/li&gt;
+&lt;li&gt;Lima&lt;/li&gt;
+&lt;li data-val="true"&gt;Pasto&lt;/li&gt;
+&lt;li data-val="true"&gt;Armenia&lt;/li&gt;
+&lt;/words&gt;
+&lt;div class="board"&gt;
+&lt;div class="check_left"&gt;
+  &lt;div class="play"&gt;
+      &lt;p&gt;Indique si la siguiente ciudad es o no colombiana:&lt;/p&gt;
+      &lt;div class="word_content"&gt;&nbsp;&lt;/div&gt;
+      &lt;div class="buttons"&gt;
+          &lt;button class="yes general"&gt;Si&lt;/button&gt;
+          &lt;button class="not general"&gt;No&lt;/button&gt;
+      &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="box_conclution"&gt;
+      &lt;h3&gt;¡Ha finalizado!&lt;/h3&gt;
+      &lt;p&gt;Al clasificar ha tenido los siguientes aciertos y desaciertos:&lt;/p&gt;
+      &lt;p&gt;
+          &lt;strong&gt;Aciertos:&lt;/strong&gt;
+          &lt;span class="correct_words"&gt;&lt;/span&gt;
+      &lt;/p&gt;
+      &lt;p&gt;
+          &lt;strong&gt;Desaciertos:&lt;/strong&gt;
+          &lt;span class="wrong_words"&gt;&lt;/span&gt;
+      &lt;/p&gt;
+      &lt;div class="buttons"&gt;
+          &lt;button class="general reload"&gt;Vovler a clasificar las ciudades incorrectamente clasificadas&lt;/button&gt;
+      &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="check_right"&gt;
+  &lt;div class="box_result"&gt;
+      &lt;div class="correct"&gt;
+          &lt;div class="hits"&gt;0&lt;/div&gt;
+          &lt;div class="text"&gt;Aciertos&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="wrong"&gt;
+          &lt;div class="miss"&gt;0&lt;/div&gt;
+          &lt;div class="text"&gt;Desaciertos&lt;/div&gt;
+      &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+                  </dd>
+              </dl>
+              <dl>
+                  <dt>CSS personalizado</dt>
+                  <dd>
+<pre class="notmobile">
+.jpit-activities-check .check_left {
+float: left;
+width: 50%;
+}
+
+.jpit-activities-check .check_left .word_content {
+background: #ffffff none repeat scroll 0 0;
+box-shadow: 3px 3px 3px #dadbdc;
+margin-bottom: 10px;
+padding: 20px 10px;
+text-align: center;
+font-size: 20px;
+}
+
+.jpit-activities-check .check_right {
+float: right;
+}
+
+.jpit-activities-check .buttons {
+text-align: center;
+}
+
+.jpit-activities-check .buttons button.yes,
+.jpit-activities-check .buttons button.not {
+font-size: 30px;
+}
+
+.jpit-activities-check .box_result {
+float: left;
+font-size: 20px;
+text-align: center;
+}
+
+.jpit-activities-check .box_result > div {
+background-color: #ffffff;
+box-shadow: 3px 3px 3px #cbcccc;
+padding: 10px;
+width: 110px;
+float: left;
+margin: 0 10px;
+}
+
+.jpit-activities-check .box_result .correct {
+color: #8bc541;
+}
+.jpit-activities-check .box_result .hits {
+font-size:30px;
+}
+
+.jpit-activities-check .box_result .wrong {
+color: #d60c1b;
+}
+.jpit-activities-check .box_result .miss {
+font-size:30px;
+}
+</pre>
+<pre class="onlymobile">
+.jpit-activities-check .check_left {
+margin-bottom: 10px;
+}
+
+.jpit-activities-check .check_left .word_content {
+background: #ffffff none repeat scroll 0 0;
+box-shadow: 3px 3px 3px #dadbdc;
+margin-bottom: 10px;
+padding: 20px 10px;
+text-align: center;
+font-size: 20px;
+}
+
+.jpit-activities-check .buttons {
+text-align: center;
+}
+
+.jpit-activities-check .buttons button.yes,
+.jpit-activities-check .buttons button.not {
+font-size: 20px;
+}
+
+.jpit-activities-check .box_result {
+float: left;
+font-size: 20px;
+text-align: center;
+}
+
+.jpit-activities-check .box_result > div {
+background-color: #ffffff;
+box-shadow: 3px 3px 3px #cbcccc;
+padding: 10px;
+width: 110px;
+float: left;
+margin: 0 10px;
+}
+
+.jpit-activities-check .box_result .correct {
+color: #8bc541;
+}
+.jpit-activities-check .box_result .hits {
+font-size:30px;
+}
+
+.jpit-activities-check .box_result .wrong {
+color: #d60c1b;
+}
+.jpit-activities-check .box_result .miss {
+font-size:30px;
+}
+</pre>
+                  </dd>
+              </dl>
+          </div>
+      </div>
+
+        <div class="subpage">
           <h3>Seleccionar</h3>
           <p>
             Sirve para seleccionar elementos dentro de un contenidos, sea como opciones individuales o como opciones
