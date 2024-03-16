@@ -1,0 +1,39 @@
+// Adds spacer as either margin or padding
+// @param {number} $spacer: Which spacer (1-8) to use
+// @param {string} $property: Which property to use (margin or padding)
+// @param {string} $location: Where spacing is set (top, bottom, left, right)
+
+$height-small-map: (
+  'spacer-1': 8px,
+  'spacer-2': 16px,
+  'spacer-3': 24px,
+  'spacer-4': 36px,
+  'spacer-5': 48px,
+  'spacer-6': 60px,
+  'spacer-7': 92px,
+  'spacer-8': 136px,
+);
+
+// Only spacers 5-8 include adjustments for larger breakpoints
+$height-large-map: (
+  'spacer-5': 60px,
+  'spacer-6': 80px,
+  'spacer-7': 120px,
+  'spacer-8': 180px,
+);
+
+@mixin spacer($spacer, $property, $location) {
+  #{$property}-#{$location}: map-get(
+    $height-small-map,
+    'spacer-#{$spacer}'
+  );
+
+  @if ($spacer > 4) {
+    @include respond-to('large') {
+      #{$property}-#{$location}: map-get(
+        $height-large-map,
+        'spacer-#{$spacer}'
+      );
+    }
+  }
+}

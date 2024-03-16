@@ -1,0 +1,72 @@
+
+//Mixins for sizes
+
+@mixin h1() {
+  font-size: var(--font-size-large-16);
+  line-height: var(--font-size-large-28);
+  @include respond-to('medium') {
+    font-size: var(--font-size-large-22);
+    line-height: var(--font-size-large-30);
+  }
+  @include respond-to('large') {
+    font-size: var(--font-size-large-30);
+    line-height: var(--font-size-large-36);
+  }
+}
+
+@mixin h2() {
+  font-size: var(--font-size-large-24);
+  line-height: var(--font-size-large-32);
+  @include respond-to('medium') {
+    font-size: var(--font-size-large-28);
+    line-height: var(--font-size-large-36);
+  }
+  @include respond-to('large') {
+    font-size: var(--font-size-large-28);
+    line-height: var(--font-size-large-36);
+  }
+}
+
+@mixin h3() {
+  font-size: var(--font-size-large-22);
+  line-height: var(--font-size-large-30);
+  @include respond-to('medium') {
+    font-size: var(--font-size-large-24);
+    line-height: var(--font-size-large-32);
+  }
+  @include respond-to('large') {
+    font-size: var(--font-size-large-24);
+    line-height: var(--font-size-large-32);
+  }
+}
+
+@mixin h4() {
+  font-size: var(--font-size-medium-20);
+  line-height: var(--font-size-large-28);
+  @include respond-to('medium') {
+    font-size: var(--font-size-large-22);
+    line-height: var(--font-size-large-30);
+  }
+  @include respond-to('large') {
+    font-size: var(--font-size-large-22);
+    line-height: var(--font-size-large-30);
+  }
+}
+
+@mixin h5() {
+  font-size: var(  --font-size-medium-16);
+  line-height: var(--font-size-large-28);
+  @include respond-to('medium') {
+    font-size: var(--font-size-medium-20);
+    line-height: var(--font-size-large-30);
+  }
+  @include respond-to('large') {
+    font-size: var(--font-size-medium-20);
+    line-height: var(--font-size-large-30);
+  }
+}
+
+@mixin body() {
+  font-size: var(  --font-size-medium-16);
+  line-height: var(--font-size-large-28);
+}

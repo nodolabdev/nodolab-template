@@ -1,15 +1,9 @@
 .instruction {
-    i {
-        font-size: 16px;
-        margin-right: 5px;
-    }
-
-    &[type='danger'] {
-        color: #b24926;
-    }
-
-    &[type='alert'] {
-        font-weight: bold;
-    }
+  font-size: var(--font-size-common);
+  line-height: var(--font-size-large-24);
+  font-weight: bold;
+  color: var(--color-primary);
+  i {
+    margin-right: 5px;
+  }
 }
-

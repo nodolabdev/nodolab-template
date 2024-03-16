@@ -333,7 +333,6 @@
           <h3>Encabezado de nivel 3 (<em>h3</em>)</h3>
           <h4>Encabezado de nivel 4 (<em>h4</em>)</h4>
           <h5>Encabezado de nivel 5 (<em>h5</em>)</h5>
-          <h6>Encabezado de nivel 6 (<em>h6</em>)</h6>
 
           <p>Apariencia de los <a href="#">enlaces</a> (<em>a</em>).</p>
           <p>Apariencia de un <strong>texto destacado</strong> (<em>strong</em>).</p>
@@ -356,10 +355,10 @@
 
         <div class="subpage">
           <h3>Importante</h3>
-          <div class="box-text important" label="Importante">
+          <div class="box-text box-text--important" label="Importante">
             <p>Se utiliza la clase <em>important</em> y es para los párrafos que requieren un énfasis. Ejemplo:</p>
             <pre>
-&lt;div class="box-text important" label="Importante"&gt;
+&lt;div class="box-text box-text--important" label="Importante"&gt;
   &lt;p&gt;
     Acá un párrafo importante,
     del que se requiere hacer énfasis.
@@ -370,10 +369,10 @@
 
         <div class="subpage">
           <h3>Ejemplos</h3>
-          <div class="box-text example" label="Ejemplo">
+          <div class="box-text box-text--example" label="Ejemplo">
             <p>Se utiliza la clase <em>example</em> y es para los párrafos que muestran un ejemplo. Ejemplo:</p>
             <pre>
-&lt;div class="box-text example" label="Ejemplo"&gt;
+&lt;div class="box-text box-text--example" label="Ejemplo"&gt;
   &lt;p&gt;
     Acá un párrafo de ejemplo.
   &lt;/p&gt;
@@ -384,10 +383,10 @@
 
         <div class="subpage">
           <h3>Anotaciones</h3>
-          <div class="box-text note" label="Nota">
+          <div class="box-text box-text--note" label="Nota">
             <p>Se utiliza la clase <em>note</em> y es para hacer anotaciones. Ejemplo:</p>
             <pre>
-&lt;div class="box-text note" label="Nota"&gt;
+&lt;div class="box-text box-text--note" label="Nota"&gt;
   &lt;p&gt;
     Acá una anotación.
   &lt;/p&gt;
@@ -398,10 +397,10 @@
 
         <div class="subpage">
           <h3>Enlaces</h3>
-          <div class="box-text link" label="Enlace">
+          <div class="box-text box-text--link" label="Enlace">
             <p>Se utiliza la clase <em>link</em> y es para referencias a páginas web o sitios en internet. Ejemplo:</p>
             <pre>
-&lt;div class="box-text link" label="Enlace"&gt;
+&lt;div class="box-text box-text--link" label="Enlace"&gt;
   &lt;p&gt;
     Acá un <a href="https://bambuco.co" target="_blank">enlace</a>.
   &lt;/p&gt;
@@ -412,10 +411,10 @@
 
         <div class="subpage">
           <h3>Actividad</h3>
-          <div class="box-text activity" label="Actividad de aprendizaje">
+          <div class="box-text box-text--activity" label="Actividad de aprendizaje">
             <p>Se utiliza la clase <em>activity</em> y es para destacar actividades dentro del contenido. Ejemplo:</p>
             <pre>
-&lt;div class="box-text activity" label="Actividad de aprendizaje"&gt;
+&lt;div class="box-text box-text--activity" label="Actividad de aprendizaje"&gt;
   &lt;p&gt;
     Acá la descripción de la actividad.
   &lt;/p&gt;
@@ -442,7 +441,7 @@
             <li><strong>none</strong>: para eliminar la indicación de tipo de instrucción.</li>
             <li>No indique el tipo para las instrucciones que sean de ayuda ya que son las utilizadas por defecto.</li>
           </ul>
-          <div class="box-text example" label="Ejemplos">
+          <div class="box-text box-text--example" label="Ejemplos">
             <pre>
 &lt;div class="instruction"&gt;
   Una instrucción por defecto (ayuda).
@@ -473,7 +472,7 @@
           <p>Para elementos que no son "a" y deben abrir un enlace, utilizar la clase <em>open-url</em> y colocar el
             atributo <em>data-url</em> para especificar la dirección. Siempre abre en ventana nueva.</p>
 
-          <div class="box-text example" label="Ejemplo">
+          <div class="box-text box-text--example" label="Ejemplo">
             <pre>
 &lt;button class="open-url" data-url="http://google.com"&gt;
   Clic para ir a Google
@@ -499,7 +498,7 @@
             <em>data-cssclass</em> en el elemento destino.
           </p>
 
-          <div class="box-text example" label="Ejemplo">
+          <div class="box-text box-text--example" label="Ejemplo">
             <pre>&lt;button class="w-content-controler general" data-content="#ventana_textos_modal"&gt;
   Abrir ventana modal
 &lt;/button&gt;
@@ -535,7 +534,7 @@
             los atributos: <em>top</em>, <em>bottom</em>, <em>left</em> y/o <em>right</em>.
           </p>
 
-          <div class="box-text example" label="Ejemplo">
+          <div class="box-text box-text--example" label="Ejemplo">
             <pre>&lt;button class="wf-content-controler general" data-content="#ventana_textos_flotante"&gt;
   Abrir ventana flotante
 &lt;/button&gt;
@@ -560,7 +559,7 @@
             absoluta.
           </p>
 
-          <div class="box-text example" label="Ejemplo">
+          <div class="box-text box-text--example" label="Ejemplo">
             <pre>&lt;button class="wf-content-controler general" data-content="#ventana_textos_flotante2"&gt;
   Abrir ventana flotante
 &lt;/button&gt;
@@ -885,7 +884,7 @@
           <p>Dado que los iconos se basan en fuentes se puede hacer algunas alteraciones de tamaño, color, efectos,
             entre otros.</p>
 
-          <div class="box-text example" label="Ejemplo: Transformando íconos">
+          <div class="box-text box-text--example" label="Ejemplo: Transformando íconos">
             <ul class="data_list">
               <li class="little">Más pequeño:
                 <i class="ion-arrow-down-a"></i>
@@ -928,7 +927,7 @@
             el texto a mostrar en el tooltip se define en el atributo <em>label</em>. El contenido puede ser texto plano
             o HTML. Un uso frecuente de los tooltip es reemplazar las "notas al pie" de los documentos tradicionales.
           </p>
-          <div class="box-text example" label="Ejemplo de tooltip">
+          <div class="box-text box-text--example" label="Ejemplo de tooltip">
             <pre>
 &lt;sup class="tooltip" title="Mensaje a &lt;em&gt;desplegar&lt;/em&gt; en el tooltip"&gt;[1]&lt;/sup&gt;
 </pre>
@@ -977,7 +976,7 @@
             <em>data-ref</em>, el cual debe contener la ruta CSS del elemento que se muestra al pasar el mouse. Se
             mantiene visible el último elemento mostrado.
           </p>
-          <div class="box-text important" label="Importante">
+          <div class="box-text box-text--important" label="Importante">
             <p>No se controla la visualización inicial por lo que se deben ocultar los elementos explícitamente y
               mantener visible solamente el inicial. Además, marcar el elemento de control del elemento visible con la
               clase <em>current</em>.</p>
@@ -1035,7 +1034,7 @@
             elemento que debe tener el atributo <em>data-ref</em>, el cual debe contener la ruta CSS del elemento que se
             muestra al pasar el mouse. Al quitar el mouse el elemento se vuelve a ocultar.</p>
 
-          <div class="box-text important" label="Importante">
+          <div class="box-text box-text--important" label="Importante">
             <p>No se controla la visualización inicial por lo que se debe ocultar explícitamente el elemento al inicio.
             </p>
           </div>
@@ -1067,7 +1066,7 @@
             <em>puff</em>, <em>pulsate</em>, <em>shake</em>, <em>slide</em>, <em>scale</em>, <em>size</em>
           </p>
 
-          <div class="box-text example" label="Ejemplo">
+          <div class="box-text box-text--example" label="Ejemplo">
             <div class="instruction"><span class="onlymobile">Toque</span><span class="notmobile">De clic en</span> el
               <span class="icon_more button"></span> para ampliar la información
             </div>
@@ -1094,7 +1093,7 @@
             </div>
           </div>
 
-          <div class="box-text important" label="Importante">
+          <div class="box-text box-text--important" label="Importante">
             <p>La visualización inicial se debe definir directamente en el estilo del elemento destino. Además, el
               estado inicial del controlador se puede definir con las clases <em>viewmore</em> cuando inicia desplegado
               o <em>viewless</em> cuando incia contraido.</p>
@@ -1111,13 +1110,13 @@
               <p>Para utilizarlo, se crea un <em>div</em> con la clase <em>row</em> y dentro de él dos <em>div</em> con
                 la clase <em>col-2</em>. Dentro de cada uno de estos últimos <em>div</em> irá el contenido de cada
                 columna.</p>
-              <div class="box-text note" label="Tip">
+              <div class="box-text box-text--note" label="Tip">
                 <p>Cabe anotar que dentro de cada columna puede haber nuevamente un contenido "a dos columnas" en el
                   caso que se requiera.</p>
               </div>
             </div>
             <div class="col-2">
-              <div class="box-text example" label="Ejemplo de texto a dos columnas">
+              <div class="box-text box-text--example" label="Ejemplo de texto a dos columnas">
                 <pre>
 &lt;div class="row"&gt;
     &lt;div class="col-2"&gt;
@@ -1148,7 +1147,7 @@
             efecto "sobre".
           </p>
 
-          <div class="box-text example" label="Ejemplo de audio simple">
+          <div class="box-text box-text--example" label="Ejemplo de audio simple">
             <pre>&lt;button class="iconsound button" data-sound="beep09.ogg">&lt;/button&gt;</pre>
 
             <p>
@@ -1170,7 +1169,7 @@
             gran mayoría por el navegador.
           </p>
 
-          <div class="box-text example" label="Ejemplo de audio con controles">
+          <div class="box-text box-text--example" label="Ejemplo de audio con controles">
             <pre>
 &lt;audio controls&gt;
   &lt;source src="content/sounds/constantspectrummelody.ogg" type="audio/ogg"&gt;
@@ -1214,7 +1213,7 @@
             subtítulos es <strong>vtt</strong> y se aconseja mantener el archivo <strong>.vtt</strong> en la misma
             carpeta que los videos aunque se incluya como texto en base64.
           </p>
-          <div class="box-text example" label="Ejemplo de video utilizando el reproductor del navegador">
+          <div class="box-text box-text--example" label="Ejemplo de video utilizando el reproductor del navegador">
             <pre>
 &lt;div class="videobox"&gt;
   &lt;video controls&gt;
@@ -1255,7 +1254,7 @@
             </p>
           </div>
 
-          <div class="box-text example" label="Ejemplo de video utilizando el reproductor externo">
+          <div class="box-text box-text--example" label="Ejemplo de video utilizando el reproductor externo">
             <pre>
 &lt;div class="videobox"&gt;
   &lt;video controls class="mejs__player"&gt;
@@ -1292,7 +1291,7 @@
               de Wikimedia commons. By Marion Bélisle.</div>
           </div>
 
-          <div class="box-text note" label="Tip: piense en el ancho/alto del video">
+          <div class="box-text box-text--note" label="Tip: piense en el ancho/alto del video">
             <p>Utilice medidas porcentuales para videos anchos con el fin de que se ajusten al ancho de la pantalla o
               del contenedor. Por ejemplo: <strong> width="100%"</strong> directamente en la etiqueta <em>video</em>, o
               por CSS: <strong> width: 100%;</strong>. Es especialmente útil para que el video se ajuste en dispositivos
@@ -1414,7 +1413,7 @@
             debe ir el contenido que se muestra con la interacción.
           </p>
 
-          <div class="box-text example" label="Ejemplo">
+          <div class="box-text box-text--example" label="Ejemplo">
             <pre>
 &lt;div class="view-first"&gt;
     &lt;img src="content/primavera.png" /&gt;
@@ -1987,7 +1986,7 @@
             </div>
           </div>
 
-          <div class="box-text example" label="HTML">
+          <div class="box-text box-text--example" label="HTML">
             <p>
               El HTML para la actividad anterior sería el siguiente:
             </p>
@@ -2360,7 +2359,7 @@
             referencia debe tener la clase <em>about</em>, además se recomienda que el recurso y su referencia estén en
             un contenedor con la clase <em>box_media</em>.
           </p>
-          <div class="box-text example" label="Código de ejemplo">
+          <div class="box-text box-text--example" label="Código de ejemplo">
             <pre>
 &lt;div class="box_media"&gt;
     &lt;img src="content/el_beso_udea.png" /&gt;
@@ -2452,7 +2451,7 @@
       <!--Maquetación-->
       <section id="pag-maquetacion" ptitle="Maquetación">
         <div class="subpage">
-          <div class="box-text important" label="Caso especial">
+          <div class="box-text box-text--important" label="Caso especial">
             <p>
               Esta plantilla dispone de una condición especial para reducir el espacio en caso de que se tengan
               actividades de una sola página. Para ello se debe agregar la clase <em>single</em> a la etiqueta

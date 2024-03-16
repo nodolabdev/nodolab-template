@@ -1,6 +1,9 @@
 %typography-base {
+  color: var(--text-color);
   font-family: var(--avenir-family);
+  font-size: var(--font-size-medium-16);
   font-style: normal;
   font-weight: var(--font-weight-regular);
   letter-spacing: normal;
+  line-height: var(--font-size-large-28);
 }

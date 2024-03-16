@@ -279,20 +279,32 @@ dhbgApp.standard.start = function() {
     $('.box-text').each(function(){
         var $this = $(this);
         var $children = $this.children();
+        var $box_ribbon = $(`<div class="box-text__ribbon">
+          <svg viewBox="0 0 24 24">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/content/icons.svg#ribbon"></use>
+          </svg>
+        </div>
+        `);
         var $box_body = $('<div class="box_body"></div>');
 
         var $object = ($children.length > 0) ? $children : $this.html();
 
         $box_body.append($object);
 
+
         $this.empty();
 
         if ($this.attr('label')) {
+            var $box_header = $('<div class="box-text__header"></div>');
+            var $box_header_icon = $(`<div class="box-text__header-icon"></div>`)
             var $box_title = $('<div class="title">' + $this.attr('label') + '</div>');
-            $this.append($box_title);
+            $box_header.append($box_header_icon);
+            $box_header.append($box_title);
+            $this.append($box_header);
         }
 
         $this.append($box_body);
+        $this.append($box_ribbon);
     });
 
     // ==============================================================================================

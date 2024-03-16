@@ -1,34 +1,59 @@
-.scorm-title {
-  font-size: 30px;
+.scorm-title,
+h1 {
+  @include h1();
   line-height: 45px;
   color: var(--white);
 }
 
 h2 {
-    font-weight: bold;
-    font-size: 21px;
-    color: #4f69cc;
+  @include h2();
+  @include spacer(2, margin, bottom);
+  @include spacer(2, margin, top);
+  color: var(--color-primary);
+  font-weight: bold;
 }
 
 h3 {
-    font-weight: normal;
-    font-size: 18px;
-    color: #4f69cc;
+  @include h3();
+  @include spacer(2, margin, bottom);
+  @include spacer(2, margin, top);
+  color: var(--color-primary-light);
+  font-size: var(--font-size-medium-20);
+  font-weight: bold;
 }
 
 h4 {
-    font-size: 17px;
-    color: #000000;
-    font-weight: normal;
+  @include h4();
+  @include spacer(2, margin, bottom);
+  @include spacer(2, margin, top);
+  color: #000000;
+  font-weight: bold;
 }
 
 h5 {
-    font-weight: normal;
-    font-size: 14px;
-    color: #000000;
+  @include h4();
+  @include spacer(2, margin, bottom);
+  @include spacer(2, margin, top);
+  color: #000000;
+  font-weight: bold;
 }
 
-h6 {
-    font-size: 14px;
-    font-weight: normal;
+p {
+  @include spacer(2, margin, bottom);
+}
+
+em {
+  color: var(--em-color);
+  font-weight: bold;
+}
+
+a {
+  color: var(--link-color);
+  transition: all 0.2s ease;
+  text-decoration: none;
+  border-bottom: 1px solid var(--link-color);
+  &:hover {
+    color: var(--link-color-hover);
+    border-bottom: 1px solid var(--link-color-hover);
+  }
 }

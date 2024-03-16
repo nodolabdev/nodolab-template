@@ -1,8 +1,11 @@
 main {
   margin: 0 auto;
-  padding: 130px 60px;
+  padding: 80px 16px;
   transition: all 0.3s ease;
   width: 100vw;
+  @include respond-to('large') {
+    padding: 130px 60px;
+  }
   section {
     margin: 0 auto;
     max-width: 726px;

@@ -3,14 +3,27 @@
 :root {
   /* COLORS */
   --color-primary: #453C78;
+  --color-primary-light: #4E44A0;
   --color-primary-dark: #2D284F;
   --color-secondary: #826D4A;
   --color-secondary-light: #ECC9A3;
   --highlight-blue: #12EFE4;
   --white: #ffffff;
   --bg-color: #F5F5F5;
+  --box-text-bg-color: #F9F9FC;
   --grey-dark: #575969;
+  --text-color: #3C3C3B;
   --grey-light: #DDDDDD;
+  --em-color: #4A4A49;
+  --link-color: #4867D0;
+  --link-color-hover: #3D3FB8;
+
+  --box-text-important: #EE7B76;
+  --box-text-example: #00CEA8;
+  --box-text-link: #40A4C5;
+  --box-text-note: #826CA4;
+  --box-text-activity: #D28D62;
+
   /* WIDTHS */
   --drawer-width: 360px;
   /* FONT FAMILIES */
@@ -30,6 +43,14 @@
   --font-size-medium-16: 16px;
   --font-size-medium-18: 18px;
   --font-size-medium-20: 20px;
+  --font-size-large-22: 22px;
+  --font-size-large-24: 24px;
+  --font-size-large-28: 28px;
+  --font-size-large-30: 28px;
+  --font-size-large-32: 32px;
+  --font-size-large-36: 36px;
+  --font-size-large-40: 40px;
+  --font-size-large-44: 44px;
 }
 
 html {
@@ -65,15 +86,6 @@ pre {
 cite {
     font-weight: normal;
     font-style: italic;
-}
-
-em {
-    color: #ff8427;
-    font-weight: bold;
-}
-
-p {
-    line-height: 20px;
 }
 
 img {
