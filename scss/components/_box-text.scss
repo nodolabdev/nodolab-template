@@ -85,37 +85,6 @@
         }
     }
 
-    &.connection {
-        background-color: #ffffff;
-        border-top: 2px;
-
-        &:before {
-            background: url(../img/connection.png) no-repeat;
-            top: 0;
-            bottom: unset;
-            left: 15%;
-            width: 40%;
-            height: 2px;
-        }
-
-        &:after {
-            content: "";
-            background: url(../img/connection.png) no-repeat;
-            bottom: 0;
-            right: 15%;
-            width: 40%;
-            height: 2px;
-            position: absolute;
-            transform: rotate(180deg);
-        }
-
-        .title,
-        .box_body p,
-        em {
-            color: #7A633C;
-        }
-    }
-
     &.activity {
         border-left: 30px solid #E09353;
 
