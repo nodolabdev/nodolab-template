@@ -1,0 +1,15 @@
+.more-less {
+    cursor: pointer;
+
+    &.viewmore {
+        .icon_more {
+            display: none;
+        }
+    }
+
+    &.viewless {
+        .icon_less {
+            display: none;
+        }
+    }
+}

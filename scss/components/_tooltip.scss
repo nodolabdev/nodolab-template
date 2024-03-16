@@ -1,0 +1,21 @@
+.tooltip {
+    cursor: pointer;
+    position: relative;
+    text-align: center;
+
+    & sup {
+        font-weight: bold;
+        padding-left: 3px;
+        color: #5FB0B7;
+        font-style: italic;
+    }
+
+    & .text_tooltip {
+        padding: 10px;
+        line-height: 10px;
+    }
+
+    & .ui-tooltip-content {
+        word-wrap: break-word;
+    }
+}

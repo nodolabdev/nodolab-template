@@ -5,7 +5,7 @@
   "main": "js/app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "scss": "node-sass -w -r scss -o css/components"
+    "scss": "node-sass -w -r scss -o css"
   },
   "repository": {
     "type": "git",

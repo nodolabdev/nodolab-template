@@ -1,0 +1,41 @@
+.expand-image {
+    position: relative;
+    background-repeat: repeat-x;
+    background-position: center center;
+    background-size: cover;
+    cursor: pointer;
+    width: 100px;
+    height: 100px;
+    border: 1px solid #999999;
+    box-shadow: 5px 5px 5px #bbb;
+    margin-bottom: 5px;
+
+    &:hover {
+        opacity: 0.7;
+    }
+
+    .ion-arrow-expand {
+        position: absolute;
+        top: 5px;
+        left: 5px;
+        font-size: 35px;
+        color: #fff;
+        cursor: pointer;
+    }
+}
+
+#expand_image_content {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 99%;
+    width: 99%;
+    max-width: 99%;
+    max-height: 99%;
+    overflow: auto;
+}
+
+.expand_image_dialog {
+    background-color: rgba(0, 0, 0, 0.7);
+}

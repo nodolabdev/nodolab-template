@@ -1,0 +1,15 @@
+.instruction {
+    i {
+        font-size: 16px;
+        margin-right: 5px;
+    }
+
+    &[type='danger'] {
+        color: #b24926;
+    }
+
+    &[type='alert'] {
+        font-weight: bold;
+    }
+}
+

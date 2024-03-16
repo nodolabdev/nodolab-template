@@ -1,0 +1,40 @@
+.wf-content {
+    position: absolute;
+    padding: 10px 15px;
+    background: #ebeefa;
+    border-radius: 10px;
+    box-shadow: 2.2px 3px 0 0 #081a7224;
+
+    &.autox {
+        left: 10px;
+        right: 10px;
+    }
+
+    &.autoy {
+        top: 10px;
+        bottom: 10px;
+    }
+
+    .close {
+        position: absolute;
+        padding: 3px;
+        background-color: transparent;
+        border-radius: 50%;
+        border: 1px solid #2B2D63;
+        color: #2B2D63;
+        line-height: 16px;
+        font-size: 12px;
+        text-align: center;
+        font-weight: bold;
+        width: 15px;
+        height: 15px;
+        top: 4px;
+        right: 4px;
+
+        &.active, &:hover {
+            background-color: #55d0d9;
+            color: #fff;
+            border-color: #fff;
+        }
+    }
+}

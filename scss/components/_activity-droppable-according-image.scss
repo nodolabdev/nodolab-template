@@ -1,0 +1,86 @@
+.jpit-activities-droppable.row {
+    align-items: center;
+}
+
+.jpit-activities-droppable .col-2 {
+    display: flex;
+    justify-content: center;
+
+    .board.ctrl-pagination {
+        min-height: 300px;
+        width: 250px;
+        margin: 20px auto;
+        position: relative;
+        overflow: unset;
+        text-align: center;
+        background-color: #D7DDF2;
+        height: auto;
+
+        li.layer {
+            padding: 0;
+        }
+
+        .image {
+            background-color: #fff;
+            border-radius: 20px;
+            padding: 15px;
+        }
+
+        .target {
+            min-height: 50px;
+            background-color: #fff;
+            width: 100%;
+            border: none;
+            border-radius: 20px;
+            margin: 10px 0;
+            position: relative;
+        }
+
+        .ctrl-pagination.sides .button.next {
+            right: 20px;
+        }
+
+        .ctrl-pagination.sides .button.previous {
+            left: 20px;
+        }
+
+        .ctrl-pagination.sides .position {
+            color: #fff;
+            background-color: #556bc6;
+            border: none;
+        }
+    }
+
+    .sources {
+        float: left;
+        height: 300px;
+        background-color: #F7F8FC;
+        padding: 20px;
+        color: #2B2D63;
+        border-radius: 30px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    #arrastrar6.jpit-activities-droppable .jpit_activities_jpitdroppable_dropped {
+        background-color: #556bc6;
+        color: #ffffff;
+        top: 0 !important;
+        bottom: 0;
+        right: 0;
+        left: 0 !important;
+        width: auto !important;
+        padding: 0;
+        border: none;
+        position: absolute !important;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #arrastrar6.jpit-activities-droppable .draggable {
+        width: 100px;
+    }
+}

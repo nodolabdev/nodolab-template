@@ -1,0 +1,18 @@
+.jpit-activities-selection {
+    .radio, .check {
+        width: 15px;
+        border: 1px solid #000;
+        height: 15px;
+        background-color: #ffffff;
+        display: inline-block;
+        cursor: pointer;
+    }
+
+    .radio {
+        border-radius: 100%;
+    }
+
+    .selected .radio, .selected .check {
+        background-color: #f6ae00;
+    }
+}

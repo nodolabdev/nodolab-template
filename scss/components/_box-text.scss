@@ -1,0 +1,132 @@
+.box-text {
+    background-color: #F7F8FC;
+    max-width: 800px;
+    margin: 10px auto;
+    position: relative;
+    padding: 20px;
+    text-align: justify;
+    border-radius: 10px;
+
+    &:before {
+        content: "";
+        background: url(../img/boxes.png) no-repeat center;
+        background-size: 680%;
+        width: 64px;
+        position: absolute;
+        left: -65px;
+        top: 0;
+        bottom: 0;
+    }
+
+    .box_body {
+        padding: 5px 15px;
+    }
+
+    > .title {
+        font-size: 18px;
+        margin: 0 0 5px 0;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    &.important {
+        border-left: 30px solid #E77469;
+
+        &:before {
+            background-position: 4% center;
+        }
+
+        .box_body em,
+        .box_body p,
+        .title {
+            color: #A63D33;
+        }
+    }
+
+    &.example {
+        border-left: 30px solid #047CAB;
+
+        &:before {
+            background-position: 27% center;
+        }
+
+        .box_body em,
+        .box_body p,
+        .title {
+            color: #047CAB;
+        }
+    }
+
+    &.note {
+        border-left: 30px solid #6C5B91;
+
+        &:before {
+            background-position: 50% center;
+        }
+
+        .box_body em,
+        .box_body p,
+        .title {
+            color: #6C5B91;
+        }
+    }
+
+    &.link {
+        border-left: 30px solid #01B8E5;
+
+        &:before {
+            background-position: 72.5% center;
+        }
+
+        .box_body em,
+        .box_body p,
+        .title {
+            color: #01B8E5;
+        }
+    }
+
+    &.connection {
+        background-color: #ffffff;
+        border-top: 2px;
+
+        &:before {
+            background: url(../img/connection.png) no-repeat;
+            top: 0;
+            bottom: unset;
+            left: 15%;
+            width: 40%;
+            height: 2px;
+        }
+
+        &:after {
+            content: "";
+            background: url(../img/connection.png) no-repeat;
+            bottom: 0;
+            right: 15%;
+            width: 40%;
+            height: 2px;
+            position: absolute;
+            transform: rotate(180deg);
+        }
+
+        .title,
+        .box_body p,
+        em {
+            color: #7A633C;
+        }
+    }
+
+    &.activity {
+        border-left: 30px solid #E09353;
+
+        &:before {
+            background-position: 95.8% center;
+        }
+
+        .box_body em,
+        .box_body p,
+        .title {
+            color: #E09353;
+        }
+    }
+}

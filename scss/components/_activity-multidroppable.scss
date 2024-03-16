@@ -1,0 +1,54 @@
+.jpit-activities-multidroppable {
+  padding-bottom: 100px;
+
+  .droppable {
+    border: 1px solid #007fff;
+    text-align: left;
+    padding: 5px;
+    background-color: #FFFFFF;
+    z-index: 1;
+  }
+
+  .draggable {
+    background-color: #ffffff;
+    border: 1px solid #007fff;
+    text-align: center;
+    cursor: move;
+    padding: 5px;
+    position: relative;
+    z-index: 2;
+    border-radius: 15px;
+
+    &.disabled {
+      cursor: default;
+    }
+
+    &.wrong,
+    .droppable.wrong {
+      background-color: #ffffff;
+      border-color: #D60C1B;
+      color: #D60C1B;
+    }
+  }
+}
+
+
+@include respond-to('up-to-medium') {
+  .jpit-activities-multidroppable {
+    .box_end {
+      padding: 0 0 10px 0;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: #fff;
+      border-top: 1px solid #999;
+      z-index: 9;
+
+      &:before,
+      &:after {
+        display: none;
+      }
+    }
+  }
+}

@@ -1,0 +1,42 @@
+.view-first {
+    overflow: hidden;
+    position: relative;
+    color: #fff;
+    text-align: center;
+    border-radius: 20px;
+
+    .mask {
+        position: absolute;
+        overflow: hidden;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        opacity: 0;
+        background-color: rgba(0, 0, 0, 0.7);
+        transition: all 0.4s ease-in-out;
+    }
+
+    img {
+        position: relative;
+        transition: all 0.2s linear;
+
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+
+    &:hover .mask {
+        opacity: 1;
+    }
+
+    .view-content {
+        padding: 0 5px;
+
+        h2 {
+            color: #fff;
+            border: none;
+            font-size: 22px;
+        }
+    }
+}

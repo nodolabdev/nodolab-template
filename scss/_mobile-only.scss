@@ -1,0 +1,46 @@
+@include respond-to('up-to-medium') {
+  #full_content {
+    color: #000;
+
+    h5 {
+      margin: 0;
+      font-size: 16px;
+    }
+
+    .back_label {
+      z-index: 1;
+      background-color: #4e52b6;
+      position: fixed;
+      top: 0;
+      right: 0;
+      left: 0;
+    }
+
+    .backward_button {
+      height: 25px;
+      margin: 3px;
+      width: 22px;
+      border: none;
+      background: url(../img/sprite_botones.png) no-repeat 47% center;
+      background-size: 1150%;
+      float: left;
+    }
+  }
+
+  #dialog_content {
+    position: fixed;
+    top: 31px;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    width: 96%;
+    height: auto;
+    float: left;
+    overflow: auto;
+    background-color: #F7F8FC;
+    padding: 2%;
+    color: #2B2D63;
+    border-radius: 30px;
+    padding-bottom: 70px;
+  }
+}

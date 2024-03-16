@@ -1,0 +1,68 @@
+.jpit-activities-sortable {
+  ul.sortable {
+    margin: 0;
+    padding: 1px 0;
+    list-style: none;
+
+    .sortable-item {
+      padding: 4px;
+      cursor: move;
+      position: relative;
+
+      &:hover:before {
+        content: "\f105";
+        position: absolute;
+        top: 50%;
+        left: 0;
+        display: inline-block;
+        font-family: "Ionicons";
+        opacity: 0.7;
+      }
+    }
+
+    &.sortable-horizontal {
+      clear: both;
+      float: left;
+      display: flex;
+      flex-wrap: wrap;
+      position: relative;
+      padding: 1px;
+
+      .sortable-item {
+        float: left;
+        margin: 2px;
+
+        &:hover:before {
+          content: "\f10b";
+          bottom: -5px;
+          left: 50%;
+        }
+      }
+    }
+  }
+
+  .wrong {
+    color: #D60C1B;
+  }
+
+  .verify_container {
+    padding-top: 20px;
+    text-align: center;
+  }
+
+  .state-highlight {
+    border: 2px dashed #e4e4e4;
+    border-radius: 10px;
+  }
+}
+
+
+@include respond-to('medium') {
+  .jpit-activities-sortable {
+    ul.sortable {
+      .sortable-item {
+        padding: 4px 4px 4px 10px;
+      }
+    }
+  }
+}

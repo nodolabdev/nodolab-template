@@ -45,31 +45,10 @@ dhbgApp.start = function() {
     dhbgApp.documentHeight = $(document).height();
     dhbgApp.documentWidth = $(document).width();
 
-    if ($(window).width() <= dhbgApp.MOBILE_WIDTH) {
-
-        dhbgApp.MODE = 'mobile';
-
-        if (dhbgApp.DEBUG_MODE) {
-            var refresh = new Date().getTime();
-            style_path = "css/mobile.css?t="+refresh;
-            custom_path = "css/custommobile.css?t="+refresh;
-            components_path = "css/components/style.css?t="+refresh;
-        }
-        else {
-            style_path = "css/mobile.min.css";
-        }
-    }
-    else {
-
-        if (dhbgApp.DEBUG_MODE) {
-            style_path = "css/styles.css";
-            custom_path = "css/custom.css";
-            components_path = "css/components/style.css";
-        }
-        else {
-            style_path = "css/styles.min.css";
-        }
-    }
+    style_path = "css/style.css";
+    custom_path = "css/custom.css";
+    
+   
 
     if (dhbgApp.DEBUG_MODE) {
         var styles = document.createElement("link");

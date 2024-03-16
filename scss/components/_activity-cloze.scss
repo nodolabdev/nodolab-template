@@ -1,0 +1,71 @@
+.jpit-activities-cloze {
+    p {
+        line-height: 30px;
+    }
+
+    .verify_container {
+        text-align: center;
+    }
+
+    input {
+        position: relative;
+
+        &.correct:after {
+            background: url(../img/sprite.png) no-repeat -1280px -100px;
+            position: absolute;
+            right: -20px;
+            width: 40px;
+            height: 30px;
+            content: "";
+            top: -5px;
+            z-index: 2;
+        }
+
+        &.wrong:after {
+            content: "";
+            background: url(../img/sprite.png) no-repeat -1280px -140px;
+            position: absolute;
+            right: -20px;
+            width: 30px;
+            height: 30px;
+            top: -5px;
+            z-index: 2;
+        }
+
+        &[type="text"] {
+            background-color: transparent;
+            border: none;
+            border-bottom: 1px solid #000;
+            width: 100px;
+            text-align: center;
+
+            &.wrong {
+                color: #D60C1B;
+            }
+        }
+    }
+
+    span.correct,
+    span.wrong {
+        position: relative;
+
+        &:after {
+            content: "";
+            position: absolute;
+            right: -20px;
+            width: 40px;
+            height: 30px;
+            top: -5px;
+            z-index: 2;
+        }
+
+        &.correct:after {
+            background: url(../img/sprite.png) no-repeat -1280px -100px;
+        }
+
+        &.wrong:after {
+            background: url(../img/sprite.png) no-repeat -1280px -140px;
+            width: 30px;
+        }
+    }
+}
