@@ -361,7 +361,7 @@ dhbgApp.mobile.start = function() {
         var properties = {
             modal: true,
             autoOpen: false,
-            resizable: true,
+            resizable: false,
             maxHeight: $(window).height() - 5,
             maxWidth: $(window).width() - 5,
             close: function( event, ui ) {

@@ -11705,20 +11705,17 @@ $.widget( "ui.dialog", {
 		appendTo: "body",
 		autoOpen: true,
 		buttons: [],
-		classes: {
-			"ui-dialog": "ui-corner-all",
-			"ui-dialog-titlebar": "ui-corner-all"
-		},
+		classes: {},
 		closeOnEscape: true,
 		closeText: "Close",
-		draggable: true,
+		draggable: false,
 		hide: null,
 		height: "auto",
 		maxHeight: null,
 		maxWidth: null,
-		minHeight: 150,
-		minWidth: 150,
-		modal: false,
+		minHeight: "auto",
+		minWidth: "auto",
+		modal: true,
 		position: {
 			my: "center",
 			at: "center",
@@ -11733,10 +11730,10 @@ $.widget( "ui.dialog", {
 				}
 			}
 		},
-		resizable: true,
-		show: null,
+		resizable: false,
+		show:  { effect: "fadeIn", duration: 100 },
 		title: null,
-		width: 300,
+		width: "auto",
 
 		// Callbacks
 		beforeClose: null,
@@ -12113,7 +12110,7 @@ $.widget( "ui.dialog", {
 		if ( this.options.title ) {
 			title.text( this.options.title );
 		} else {
-			title.html( "&#160;" );
+			title.html( "" );
 		}
 	},
 
@@ -12535,8 +12532,8 @@ $.widget( "ui.dialog", {
 			} );
 		}
 
-		this.overlay = $( "<div>" )
-			.appendTo( this._appendTo() );
+		this.overlay = $( "<div style='display:none'>" )
+			.appendTo( this._appendTo() ).show();
 
 		this._addClass( this.overlay, null, "ui-widget-overlay ui-front" );
 		this._on( this.overlay, {

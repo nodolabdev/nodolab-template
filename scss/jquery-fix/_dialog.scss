@@ -1,0 +1,85 @@
+.ui-dialog {
+  $block: &;
+
+  position: fixed;
+  min-width: 280px;
+  max-width: 560px;
+  border-radius: 12px;
+  padding: 0;
+  background-color: var(--bg-color);
+  top: 50% !important; //required to override inline styles
+  left: 50% !important;
+  transform: translate(-50%, -50%);
+
+  .ui-dialog &-titlebar {
+    border-width: 0;
+    background-color: transparent;
+    padding: 16px 24px;
+
+    #{$block}-title {
+      float: none;
+    }
+
+    &-close {
+      outline: transparent solid 2px;
+      outline-offset: 2px;
+      position: absolute;
+      right: 12px;
+      top: 8px;
+      width: 32px;
+      margin: 0;
+      padding: 0;
+      height: 32px;
+      border: 0;
+      border-radius: 6px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: background-color 200ms ease;
+
+      .ui-icon {
+        --icon-size: 16px;
+        @include use-icon-font;
+        background-image: none;
+        text-indent: 0;
+        width: 32px;
+        height: 32px;
+        color: var(--on-bg-color);
+        font-size: var(--icon-size);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        position: static;
+
+        &::after {
+          content: "\f129";
+          width: var(--icon-size);
+          height: var(--icon-size);
+        }
+      }
+
+      &:hover,
+      &:focus,
+      &:active {
+        background-color: rgba(0, 0, 0, 0.06);
+      }
+    }
+  }
+
+  .ui-dialog &-content {
+    padding: 8px 24px 32px;
+    color: var(--on-bg-color);
+  }
+
+  &.ui-widget.ui-widget-content {
+    border-width: 0;
+  }
+}
+
+.ui-widget-overlay.ui-front {
+  background-color: rgba(0, 0, 0, 0.48);
+  opacity: 1;
+}
+
+// shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),0 4px 6px -2px rgba(0, 0, 0, 0.05)

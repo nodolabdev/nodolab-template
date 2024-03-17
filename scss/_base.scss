@@ -9,6 +9,7 @@
   --color-secondary-light: #ECC9A3;
   --highlight-blue: #12EFE4;
   --white: #ffffff;
+  --on-bg-color: #3C3C3B;
   --bg-color: #F5F5F5;
   --box-text-bg-color: #F9F9FC;
   --grey-dark: #575969;
@@ -67,93 +68,94 @@ body {
 }
 
 body.dhbgapp_fullview {
-    overflow: hidden;
+  overflow: hidden;
 }
 
 #body {
-    margin: 0 auto;
-    position: relative;
+  margin: 0 auto;
+  position: relative;
 }
 
 pre {
-    background:#F8F8FF;
-    border: #000 dashed 1px;
-    padding: 6px;
-    overflow: auto;
-    color: #333;
+  background: #F8F8FF;
+  border: #000 dashed 1px;
+  padding: 6px;
+  overflow: auto;
+  color: #333;
 }
 
 cite {
-    font-weight: normal;
-    font-style: italic;
+  font-weight: normal;
+  font-style: italic;
 }
 
 img {
-    border: 0;
-    max-width: 100%;
+  border: 0;
+  max-width: 100%;
 }
 
-br.clear, div.clear {
-    clear: both;
-    width: 0;
-    height: 0;
-    font-size: 0;
-    line-height: 0;
+br.clear,
+div.clear {
+  clear: both;
+  width: 0;
+  height: 0;
+  font-size: 0;
+  line-height: 0;
 }
 
 .hidden {
-    display: none;
+  display: none;
 }
 
 ul.data_list {
-    list-style: none;
+  list-style: none;
 }
 
 ul.data_list li {
-    padding-bottom: 10px;
+  padding-bottom: 10px;
 }
 
 ol.ol_counter li {
-    padding-bottom: 10px;
+  padding-bottom: 10px;
 }
 
 a:hover {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 
 blockquote {
-    font-style: italic;
-    background: url(../img/comillas1.png) no-repeat top left;
-    padding: 10px 40px;
-    margin: 0;
-    position: relative;
-    color: #1e120d;
+  font-style: italic;
+  background: url(../img/comillas1.png) no-repeat top left;
+  padding: 10px 40px;
+  margin: 0;
+  position: relative;
+  color: #1e120d;
 }
 
 blockquote:after {
-    background: url(../img/comillas2.png) no-repeat top left;
-    width: 36px;
-    height: 30px;
-    content: "";
-    position: absolute;
-    bottom: 0;
-    right: 0;
+  background: url(../img/comillas2.png) no-repeat top left;
+  width: 36px;
+  height: 30px;
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
 }
 
 blockquote label {
-    font-weight: bold;
-    display: block;
-    margin-top: 10px;
-    text-align: center;
-    font-style: normal;
+  font-weight: bold;
+  display: block;
+  margin-top: 10px;
+  text-align: center;
+  font-style: normal;
 }
 
 //TODO leono286: wrap this in mediaqueries 
 .onlymobile {
-    display: none;
+  display: none;
 }
 
 .notmobile {
-    display: none;
+  display: none;
 }

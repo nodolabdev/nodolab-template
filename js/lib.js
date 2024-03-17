@@ -1304,7 +1304,15 @@ dhbgApp.standard.start = function() {
 
     if (dhbgApp.MODEL == 'scorm' && (!dhbgApp.scorm || !dhbgApp.scorm.lms)) {
         $('#not_scorm_msg').html(dhbgApp.s('scorm_not'));
-        $('#not_scorm_msg').dialog( { modal: true } );
+        $('#not_scorm_msg').dialog({
+        modal: true,
+        open: function () {
+            $('body').addClass('dhbgapp_fullview');
+        },
+        close: function () {
+            $('body').removeClass('dhbgapp_fullview');
+        }
+    });
     }
 
     if (dhbgApp.scorm && dhbgApp.scorm.activities) {
