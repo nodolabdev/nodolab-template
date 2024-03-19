@@ -21,6 +21,11 @@
     color: var(--disabled-button-text);
     font-weight: normal;
     padding: 14px 32px;
+    transition: all 0.1s ease;
+    &:hover {
+      transform: scale(1.01);
+      box-shadow: 0px 0px 4px 1px #4F4EAF4F;
+    }
     &.visited {
       background-color: #F7F7FA;
       color: #000;
@@ -66,10 +71,46 @@
     color: var(--disabled-button-text);
     display: block;
     font-weight: normal;
-    padding: 14px 32px;
     padding: 32px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    &::before {
+      border-radius: 50%;
+      display: block;
+      box-shadow: 3px 1px 0px 0px rgba(0, 0, 0, 0.1);
+      content: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="80%" height="80%" viewBox="0 0 26.44 26.605"><g id="g259" transform="translate(-5852.877 -348.652)"><g id="g265"><g id="path267"><path id="Trazado_838" data-name="Trazado 838" d="M5863.187,375.257a.526.526,0,0,1-.526-.526v-3.314a.525.525,0,0,1,.526-.526h1.735a1.052,1.052,0,0,0,0-2.1h-1.735a.525.525,0,0,1-.526-.526v-2.787H5853.4a.526.526,0,0,1,0-1.052h9.784a.525.525,0,0,1,.525.526v2.788h1.21a2.1,2.1,0,0,1,0,4.208h-1.21v2.788A.526.526,0,0,1,5863.187,375.257Z" fill="%23fff"/></g></g><g id="g269"><g id="path271"><path id="Trazado_839" data-name="Trazado 839" d="M5872.97,375.257H5853.4a.527.527,0,0,1-.526-.526V355.163a.526.526,0,0,1,.526-.526h2.788v-1.052a2.1,2.1,0,1,1,4.208,0v1.052h2.788a.525.525,0,0,1,.525.526v3.314a.526.526,0,0,1-.525.526h-1.736a1.052,1.052,0,1,0,0,2.1h1.736a.525.525,0,0,1,.525.526v2.788h2.262v-1.052a2.1,2.1,0,0,1,4.208,0v1.052h2.788a.527.527,0,0,1,.526.526v9.784A.527.527,0,0,1,5872.97,375.257Zm-19.041-1.052h18.515v-8.732h-2.788a.526.526,0,0,1-.526-.526v-1.578a1.052,1.052,0,1,0-2.1,0v1.578a.526.526,0,0,1-.526.526h-3.313a.525.525,0,0,1-.526-.526v-2.788h-1.21a2.1,2.1,0,0,1,0-4.208h1.21v-2.262h-2.788a.526.526,0,0,1-.526-.526v-1.578a1.052,1.052,0,1,0-2.1,0v1.578a.526.526,0,0,1-.526.526h-2.788Z" fill="%23fff"/></g></g><g id="g277"><g id="path279"><path id="Trazado_840" data-name="Trazado 840" d="M5878.791,359.488h-3.313a.526.526,0,0,1-.526-.526v-1.736a1.052,1.052,0,0,0-2.1,0v1.736a.526.526,0,0,1-.526.526h-3.313a.527.527,0,0,1-.526-.526v-2.788h-1.053a2.1,2.1,0,0,1,0-4.208h1.053v-2.788a.526.526,0,0,1,.526-.526h9.783a.526.526,0,0,1,.526.526v9.784A.527.527,0,0,1,5878.791,359.488ZM5876,358.436h2.261V349.7h-8.731v2.788a.526.526,0,0,1-.526.526h-1.579a1.052,1.052,0,0,0,0,2.1h1.579a.527.527,0,0,1,.526.526v2.788h2.262v-1.21a2.1,2.1,0,1,1,4.208,0Z" fill="%23fff"/></g></g></g></svg>');
+      height: 28px;
+      position: relative;
+      background-color: var(--disabled-button-text);
+      width: 28px;
+      padding: 10px;
+    }
+    &::after {
+      content: 'Pendiente';
+      position: absolute;
+      font-size: 10px;
+      line-height: 15px;
+      background-color: var(--disabled-button-text);
+      padding: 3px 8px;
+      border-radius: 7px;
+      color: var(--white);
+      right: 24px;
+    }
     &:not(:last-child) {
       margin-bottom: 24px;
+    }
+    &.done {
+      background-color: #F7F7FA;
+      color: #000;
+      &::before {
+        background-color: var(--box-text-activity);
+      }
+      &::after {
+        content: 'Terminado';
+        background-color: var(--color-tertiary);
+      }
     }
   }
 }

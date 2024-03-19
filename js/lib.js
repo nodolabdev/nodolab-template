@@ -625,6 +625,10 @@ dhbgApp.standard.start = function() {
                             list_intents[list_intents.length] = '0%';
                         }
                     }
+                    console.log(list_intents);
+                    if(list_intents.includes('100%')){
+                      $act.addClass('done');
+                    }
                     $act.append(list_intents.join(', '));
                 }
                 else {
