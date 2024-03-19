@@ -551,7 +551,15 @@ dhbgApp.standard.start = function() {
         for(index in dhbgApp.scorm.scoList) {
             if (dhbgApp.scorm.scoList[index]) {
                 var sco = dhbgApp.scorm.scoList[index];
-                $current_page = $('<button class="result_sco general">' + (position) + '</button>');
+                $current_page = $(`
+                  <button class="result_sco general">
+                    <div class="result_sco__eyebrow">
+                      <span class="result_sco__page">Página ${position}</span>
+                      ${sco.visited ? '<span class="result_sco__visit result_sco__visit--visited">Visto</span>': '<span class="result_sco__visit result_sco__visit--no-visited">No visto</span>'}
+                    </div>
+                    <div class="result_sco__title">${dhbgApp.pages[index].title}</div>
+                  </button>
+                `);
                 if (sco.visited) {
                     $current_page.addClass('visited');
                 }

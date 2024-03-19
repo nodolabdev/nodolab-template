@@ -67,6 +67,12 @@
 }
 
 @mixin body() {
-  font-size: var(  --font-size-medium-16);
+  font-size: var(--font-size-medium-16);
   line-height: var(--font-size-large-28);
+}
+
+@mixin body-small() {
+  font-size: var(--font-size-common);
+  line-height: var(--font-size-medium-20);
+  letter-spacing: 0.25px;
 }
