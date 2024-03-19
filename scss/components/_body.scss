@@ -1,0 +1,8 @@
+body {
+  &.panel-open {
+    overflow: hidden;
+    @include respond-to('large') {
+      overflow: auto;
+    }
+  }
+}

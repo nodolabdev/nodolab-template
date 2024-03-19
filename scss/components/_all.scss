@@ -1,10 +1,8 @@
-@import "header";
-@import "main";
 @import "activities";
 @import "activity-cloze";
 @import "activity-crossword";
-@import "activity-droppable";
 @import "activity-droppable-according-image";
+@import "activity-droppable";
 @import "activity-form";
 @import "activity-mark";
 @import "activity-multidroppable";
@@ -12,6 +10,7 @@
 @import "activity-selection";
 @import "activity-sortable";
 @import "activity-wordpuzzle";
+@import "body";
 @import "box-text";
 @import "buttons";
 @import "controls";
@@ -19,8 +18,10 @@
 @import "drawer";
 @import "floating-window";
 @import "footer";
+@import "header";
 @import "horizontal-menu";
 @import "instructions";
+@import "main";
 @import "menu";
 @import "more-less";
 @import "pagination";

@@ -267,6 +267,13 @@ dhbgApp.mobile.start = function() {
             imgs[img_src] = true;
         }
     });
+    
+    // ==============================================================================================
+    // Adding overlay when panel is open
+    // ==============================================================================================
+    $('#drawer-toggle').change(function() {
+      $('body').toggleClass('panel-open', !this.checked);
+    });
 
     // ==============================================================================================
     // Buttons to load page
@@ -275,6 +282,7 @@ dhbgApp.mobile.start = function() {
 
     $('[data-page]').on('click', function () {
         var $this = $(this);
+        $('#drawer-toggle').click();
         dhbgApp.loadPageN($this.attr('data-page'));
 
         if ($this.attr('data-section')) {

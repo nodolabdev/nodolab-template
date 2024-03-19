@@ -1,8 +1,24 @@
-
 .scorm {
   :not(:has(#drawer-toggle:checked)) + main {
-    width: calc(100% - var(--drawer-width));
-    margin-left: var(--drawer-width);
+    &::before {
+      background-color: #000;
+      content: '';
+      display: block;
+      height: 100%;
+      left: 0;
+      opacity: 0.2;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1;
+    }
+    @include respond-to("large") {
+      width: calc(100% - var(--drawer-width));
+      margin-left: var(--drawer-width);
+      &::before {
+        content: none;
+      }
+    }
   }
   #drawer-toggle {
     cursor: pointer;
@@ -46,7 +62,7 @@
       &::before {
         background-color: white;
         border-radius: 50%;
-        content: '';
+        content: "";
         left: 50%;
         opacity: 0;
         position: absolute;
