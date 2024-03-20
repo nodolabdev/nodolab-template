@@ -5,6 +5,7 @@
   --color-primary: #453C78;
   --color-primary-light: #4E44A0;
   --color-primary-dark: #2D284F;
+  --color-nodo: #0E0134;
   --color-secondary: #826D4A;
   --color-secondary-light: #ECC9A3;
   --color-tertiary: #00D0A4;
@@ -55,8 +56,11 @@
   --font-size-large-30: 28px;
   --font-size-large-32: 32px;
   --font-size-large-36: 36px;
+  --font-size-large-38: 38px;
   --font-size-large-40: 40px;
   --font-size-large-44: 44px;
+  --font-size-large-56: 56px;
+  --font-size-large-56: 64px;
 }
 
 html {
@@ -120,7 +124,7 @@ ul.data_list li {
   padding-bottom: 10px;
 }
 
-ol.ol_counter li {
+ol.ol_counter li, ul li, ol li {
   padding-bottom: 10px;
   margin-inline-start: 24px;
 }

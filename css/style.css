@@ -1429,7 +1429,11 @@ main {
     .ctrl-pagination .previous.previous,
     .ctrl-pagination .next.previous {
       margin-right: 3px;
-      transform: translateY(-50%) rotateY(180deg); }
+      transform: rotateY(180deg); }
+      @media (min-width: 600px) {
+        .ctrl-pagination .previous.previous,
+        .ctrl-pagination .next.previous {
+          transform: translateY(-50%) rotateY(180deg); } }
     .ctrl-pagination .previous.next,
     .ctrl-pagination .next.next {
       margin-left: 3px; }

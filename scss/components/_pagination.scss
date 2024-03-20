@@ -79,7 +79,10 @@
 
     &.previous {
       margin-right: 3px;  
-      transform: translateY(-50%) rotateY(180deg);
+      transform: rotateY(180deg);
+      @include respond-to('medium') {
+        transform: translateY(-50%) rotateY(180deg);
+      }
     }
     &.next {
       margin-left: 3px;

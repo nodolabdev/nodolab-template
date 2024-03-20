@@ -17,9 +17,17 @@
 </head>
 <body data-autoload="false" data-display-window="modal" data-window-width="100" data-window-height="100">
     <div id="body">
-        <div id="content">
-
-            <h1>Presentación</h1>
+        <div id="content" class="content">
+          <div class="content__banner">
+            <h1 class="content__title">Presentación</h1>
+            <div class="content__logo">
+              <svg viewBox="0 0 172.475 51.705">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/content/icons.svg#nodolab"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="content__info">
+            
             <p>
                 Esta página es la que se carga inicialmente, puede utilizarse para dar instrucciones a los usuarios, para hacer la presentación del contenido o puede obviarse configurándola para cargar el contenido automáticamente. En el caso de presentar el documento, se recomienda mostrar en esta página: una <strong>introducción</strong> al contenido que se encontrará en el documento, el <strong>objetivo</strong> que se espera lograr abordando el contenido, el tiempo aproximado (<strong>duración</strong>) que una persona debería dedicar a completar el documento.
             </p>
@@ -62,6 +70,7 @@
                 <strong>Nota:</strong> Cualquier imagen utilizada como contenido en ésta o en otra página debe ir en el directorio <em>content/</em>.
             </p>
             <div id="play_scorm"></div>
+          </div>
         </div>
     </div>
 </body>

@@ -5,7 +5,8 @@
   "main": "js/app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "scss": "node-sass -w -r scss -o css"
+    "scss": "node-sass -w -r scss -o css",
+    "scss-scorm": "node-sass -w  -r scss/scormplayer -o css"
   },
   "repository": {
     "type": "git",

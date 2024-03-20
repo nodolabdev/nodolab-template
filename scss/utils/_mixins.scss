@@ -7,3 +7,20 @@
     display: none;
   }
 }
+
+@mixin button {
+  border-radius: 16px;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: bold;
+  padding: 8px 12px;
+  background-color: var(--color-primary);
+  border: 0px;
+  color: var(--white);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  &:hover {
+    transform: scale(1.01);
+    filter: brightness(1.1);
+  }
+}

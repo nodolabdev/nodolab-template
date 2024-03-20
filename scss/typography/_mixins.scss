@@ -1,6 +1,15 @@
 
 //Mixins for sizes
 
+@mixin display() {
+  font-size: var(--font-size-large-32);
+  line-height: var(--font-size-large-40);
+  @include respond-to('medium') {
+    font-size: var(--font-size-large-38);
+    line-height: var(--font-size-large-44);
+  }
+}
+
 @mixin h1() {
   font-size: var(--font-size-large-16);
   line-height: var(--font-size-large-28);

@@ -1,0 +1,71 @@
+@import "../base";
+@import "../utils/all";
+@import "../typography/all";
+
+.content {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  max-height: 100vh;
+  @include respond-to("medium") {
+    flex-direction: row;
+  }
+  &__banner {
+    background-color: var(--color-nodo);
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    @include spacer(7, padding, bottom);
+    @include respond-to("medium") {
+      height: 100vh;
+      flex-basis: 50%;
+    }
+    &:before {
+      content: '';
+      background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="325.957" height="312.926" viewBox="0 0 325.957 312.926"><defs><clipPath id="clip-path"><path id="Trazado_1008" data-name="Trazado 1008" d="M325.957,834.333H0L.495,521.407H325.957Z" fill="none"/></clipPath><filter id="Trazado_1006" x="-122.772" y="53.596" width="305.811" height="345.032" filterUnits="userSpaceOnUse"><feOffset dx="3.559" dy="3.559" input="SourceAlpha"/><feGaussianBlur stdDeviation="0.593" result="blur"/><feFlood flood-color="%23397884" flood-opacity="0.188"/><feComposite operator="in" in2="blur"/><feComposite in="SourceGraphic"/></filter><filter id="Trazado_1007" x="-175.201" y="183.288" width="305.811" height="345.033" filterUnits="userSpaceOnUse"><feOffset dx="3.559" dy="3.559" input="SourceAlpha"/><feGaussianBlur stdDeviation="0.593" result="blur-2"/><feFlood flood-color="%23397884" flood-opacity="0.188"/><feComposite operator="in" in2="blur-2"/><feComposite in="SourceGraphic"/></filter></defs><g id="Grupo_1104" data-name="Grupo 1104" transform="translate(0 -521.407)" opacity="0.49"><g id="Grupo_1103" data-name="Grupo 1103" clip-path="url(%23clip-path)"><g transform="matrix(1, 0, 0, 1, 0, 521.41)" filter="url(%23Trazado_1006)"><path id="Trazado_1006-2" data-name="Trazado 1006" d="M47.651,591.112c29.6,8.254,64.9,21.761,65.6,55.938.577,28.427-29.851,70.432-15.4,98.973C110,770,143.446,770.393,160.7,789.548c18.646,20.7,20.815,51.649,9.4,74.921-6.519,13.289-17.024,24.407-29.475,32.881-8.416,5.727-28.3,19.977-39.619,16.118l-223.2-76.129,89.281-261.758Z" transform="translate(0 -521.41)" fill="none" stroke="%23707070" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.156"/></g><g transform="matrix(1, 0, 0, 1, 0, 521.41)" filter="url(%23Trazado_1007)"><path id="Trazado_1007-2" data-name="Trazado 1007" d="M-4.778,720.8c29.6,8.254,64.9,21.761,65.6,55.938.577,28.427-29.851,70.431-15.4,98.973,12.144,23.981,45.595,24.37,62.847,43.525,18.646,20.7,20.815,51.649,9.4,74.921-6.519,13.289-17.024,24.407-29.475,32.881-8.416,5.727-28.3,19.976-39.618,16.117l-223.2-76.129,89.281-261.758Z" transform="translate(0 -521.41)" fill="none" stroke="%23707070" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.156"/></g></g></g></svg>');; 
+      background-size: contain;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 200px;
+      height: 200px;
+    }
+  }
+  &__title {
+    text-transform: uppercase;
+    @include display();
+    @include spacer(7, margin, top);
+  }
+  &__logo {
+    width: 150px;
+    @include spacer(7, margin, top);
+  }
+
+  &__info {
+    padding-inline: 16px;
+    overflow: scroll;
+    @include spacer(4, margin, top);
+    @include spacer(4, padding, bottom);
+    @include respond-to("medium") {
+      flex-basis: 50%;
+    }
+    @include respond-to("large") {
+      padding-inline: 60px;
+    }
+  }
+
+  #play_scorm {
+    display: flex;
+    justify-content: center;
+    @include respond-to('medium') {
+      justify-content: flex-end;
+    }
+    button {
+      @include button();
+      text-transform: uppercase;
+    }
+  }
+}
