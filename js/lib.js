@@ -601,15 +601,15 @@ dhbgApp.standard.start = function() {
     $('.horizontal-menu').each(function(){
 
         var $this = $(this);
-        var $chalkboard_items = $('<div class="chalkboard_items board"></div>');
-        var $chalkboard_content = $('<div class="chalkboard_content elements"></div>');
+        var $chalkboard_items = $('<div class="horizontal-menu__chalkboard-items"></div>');
+        var $chalkboard_content = $('<div class="horizontal-menu__chalkboard-content"></div>');
 
         $this.find('>dl').each(function() {
             var $dl = $(this);
 
-            var $dd= $('<div class="element rule_1 tab_content"></div>');
+            var $dd= $('<div class="horizontal-menu__item-content"></div>');
             $dd.append($dl.find('>dd').children());
-            var $dt = $('<div class="chalkboard_item button">' + $dl.find('>dt').html() + '</div>').on('click', function(){
+            var $dt = $('<button class="horizontal-menu__item-button">' + $dl.find('>dt').html() + '</button>').on('click', function(){
 
                 var $item_dt = $(this);
 
@@ -620,26 +620,19 @@ dhbgApp.standard.start = function() {
                     });
                 }
 
-                $chalkboard_content.find('.element').hide();
-
                 $chalkboard_items.find('.current').removeClass('current');
+                $chalkboard_content.find('.current').removeClass('current');
                 $item_dt.addClass('current');
-                $dd.show();
+                $dd.addClass('current');
             });
-
-            $dt.on('mouseover', dhbgApp.defaultValues.buttonover);
-
-            $dt.on('mouseout', dhbgApp.defaultValues.buttonout);
 
             $chalkboard_items.append($dt);
 
             $chalkboard_content.append($dd);
         });
 
-        $chalkboard_content.find('.element').hide();
         $chalkboard_items.find(':first-child').addClass('current');
-        $chalkboard_items.find(':last-child').addClass('last-item');
-        $chalkboard_content.find('.element:first-child').show();
+        $chalkboard_content.find(':first-child').addClass('current');
         $this.empty();
 
         $this.append($chalkboard_items);
