@@ -55,7 +55,7 @@ dhbgApp.standard.start = function() {
         };
 
         f_builditem = function($li) {
-            var $item = $('<li class="button"></li>');
+            var $item = $('<li role="button" class="button"></li>');
 
             if ($li.attr('label')) {
                 $item.html($li.attr('label'));
@@ -83,7 +83,7 @@ dhbgApp.standard.start = function() {
                     $item.toggleClass('open');
                   }
                 })
-            }
+            } 
 
             if ($li.attr('data-page')) {
                 $item.attr('data-page', $li.attr('data-page'));
@@ -172,6 +172,7 @@ dhbgApp.standard.start = function() {
         }
     });
 
+    // TODO: leono286, this should be handled with CSS not JS.
     // ==============================================================================================
     // Actions on buttons
     // ==============================================================================================
@@ -360,6 +361,7 @@ dhbgApp.standard.start = function() {
 
     $(document).on('click', '.w-content-controler', function(){
         var $this = $(this);
+        var $dialog = $($this.attr('data-content'));
         var w = $this.attr('data-property-width');
         var h = $this.attr('data-property-height');
 
@@ -372,7 +374,7 @@ dhbgApp.standard.start = function() {
                 }
             }
 
-            $($this.attr('data-content')).dialog('option', 'width', w);
+            $dialog.dialog('option', 'width', w);
         }
 
         if (h) {
@@ -384,10 +386,10 @@ dhbgApp.standard.start = function() {
                 }
             }
 
-            $($this.attr('data-content')).dialog('option', 'height', h);
+            $dialog.dialog('option', 'height', h);
         }
 
-        $($this.attr('data-content')).dialog('open');
+        $dialog.dialog('open');
         $('body').addClass('dhbgapp_fullview');
     });
 
@@ -1842,7 +1844,7 @@ dhbgApp.standard.load_operations = function() {
     dhbgApp.actions.activityDroppable = function ($this, options) {
         var activity;
         var unique_id = 'activity_droppable_' + dhbgApp.rangerand(0, 1000, true);
-        var feedbacktrue = '', feedbackfalse = '';
+        var feedbacktrue = dhbgApp.s('all_correct'), feedbackfalse = dhbgApp.s('all_wrong');
         var html_body = $this.html();
         var scorm_id = options.scorm_id;
 
@@ -1944,6 +1946,12 @@ dhbgApp.standard.load_operations = function() {
         }
 
         activityOptions.onDrop = function($dragEl) {
+
+            // var $dropzone = this;
+            //     if ($this.attr('data-adjust-size') && $this.attr('data-adjust-size') == 'true') {
+            //         $dragEl.width($dropzone.width());
+            //         $dragEl.height($dropzone.height());
+            //     } from mobile
             $dragEl.trigger('click');
 
             var end = type_verification == 'target' ? activity.isComplete() : activity.isFullComplete();
@@ -1955,10 +1963,7 @@ dhbgApp.standard.load_operations = function() {
 
             if (!end) return;
 
-            var timer = $this.data('clock');
-            if (timer) {
-                timer.stop();
-            }
+             $this.data('clock') && $this.data('clock').stop();
 
             var weight;
 
@@ -2057,11 +2062,11 @@ dhbgApp.standard.load_operations = function() {
         $box_end.hide();
 
         if ($this.find('feedback correct').text() != '') {
-            feedbacktrue = $this.find('feedback correct');
+            feedbacktrue = $this.find('feedback correct').html();
         }
 
         if ($this.find('feedback wrong').text() != '') {
-            feedbackfalse = $this.find('feedback wrong');
+            feedbackfalse = $this.find('feedback wrong').html();
         }
 
         $this.find('feedback').empty();

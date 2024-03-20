@@ -51,7 +51,6 @@
   <script src="js/init.js"></script>
   <script src="js/lang.es.js"></script>
   <script src="js/lib.js"></script>
-  <script src="js/mobilelib.js"></script>
   <script src="js/stories.js"></script>
   <script src="components/scorm/SCORM_12_APIWrapper.js"> </script>
   <script src="components/scorm/scorm_api.js"> </script>
@@ -97,8 +96,6 @@
       <nav label="Principal" class="horizontal main scorm__drawer" data-offset="true">
         <menu>
           <menuitem label="Contextualización" data-page="pag-inicio">
-          </menuitem>
-          <menuitem label="Esquema" data-page="pag-esquema">
           </menuitem>
           <menuitem label="Componentes">
           <menu>
@@ -285,37 +282,6 @@
               el paquete. Por defecto se utiliza un modelo SCORM lo que indica que se intenta la conexión con el LMS.
             </li>
           </ul>
-        </div>
-      </section>
-
-      <!--Esquema-->
-      <section id="pag-esquema" ptitle="Esquema">
-        <div class="subpage" id="biblio_subpage">
-          <div class="instruction">
-            <span class="onlymobile">Toca </span>
-            <span class="notmobile">Haz clic en </span>
-            los compomentes del esquema para ir a los contenidos
-          </div>
-          <div class="scheme">
-            <a href="#" data-page="pag-textos">
-              <div class="section first"></div>
-            </a>
-            <a href="#" data-page="pag-media">
-              <div class="section second"></div>
-            </a>
-            <a href="#" data-page="pag-contenidointeractivo">
-              <div class="section third"></div>
-            </a>
-            <a href="#" data-page="pag-actividades">
-              <div class="section fourth"></div>
-            </a>
-            <a href="#" data-page="pag-referencias">
-              <div class="section fifth"></div>
-            </a>
-            <a href="#" data-page="pag-maquetacion">
-              <div class="section sixth"></div>
-            </a>
-          </div>
         </div>
       </section>
 
@@ -520,42 +486,6 @@
           </div>
         </div>
         
-        <div class="subpage">
-          <h3>Notas emergentes - Tooltips</h3>
-
-          <p>Para las notas emergentes se utiliza la clase <em>tooltip</em>, normalmente en un elemento <em>sup</em> y
-            el texto a mostrar en el tooltip se define en el atributo <em>label</em>. El contenido puede ser texto plano
-            o HTML. Un uso frecuente de los tooltip es reemplazar las "notas al pie" de los documentos tradicionales.
-          </p>
-          <div class="box-text box-text--example" label="Ejemplo de tooltip">
-            <pre>
-&lt;sup class="tooltip" title="Mensaje a &lt;em&gt;desplegar&lt;/em&gt; en el tooltip"&gt;[1]&lt;/sup&gt;
-</pre>
-            <p>
-              El anterior ejemplo se vería así:<sup class="tooltip"
-                title="Mensaje a <em>desplegar</em> en el tooltip">[1]</sup>. Notese que en el tooltip la palabra
-              <cite>desplegar</cite> está enriquezida con una etiqueta HTML.
-            </p>
-          </div>
-          <p>
-            Adicional al contenido, se pueden adicionar los siguientes atributos para resolver el posicionamiento del
-            tooltip.
-          </p>
-          <ul class="data_list">
-            <li><strong>data-position-my</strong>: Indica la posición del tooltip en relación al elemento que lo
-              despliega. Para ver los posibles valores y su funcionamiento, revisar el atributo "my" de la página <a
-                href="http://api.jqueryui.com/position/" target="_blank">jQuery UI Position</a>.</li>
-            <li><strong>data-position-at</strong>: Indica la posición del tooltip en relación al elemento destino. Para
-              ver los posibles valores y su funcionamiento, revisar el atributo "at" de la página <a
-                href="http://api.jqueryui.com/position/" target="_blank">jQuery UI Position</a>.</li>
-            <li><strong>data-position-flipfit</strong>: Determina como se resuelve la posición cuando el elemento se
-              sale del espacio disponible si se usa la posición por defecto. Para ver los posibles valores y su
-              funcionamiento, revisar el atributo "collision" de la página <a href="http://api.jqueryui.com/position/"
-                target="_blank">jQuery UI Position</a>.</li>
-          </ul>
-
-        </div>
-
         <div class="subpage">
           <h3>Citas</h3>
           <p>Textos que se citan al pie de la letra. Se utiliza la etiqueta <em>blockquote</em>. La información de la
