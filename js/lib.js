@@ -392,109 +392,6 @@ dhbgApp.standard.start = function() {
     });
 
     // ==============================================================================================
-    // Float Window
-    // ==============================================================================================
-    $('.wf-content').each(function() {
-        var $this = $(this);
-
-        var style = '';
-        if ($this.attr('data-property-width')) {
-            style += 'width:' + $this.attr('data-property-width') + ';';
-        }
-
-        if ($this.attr('data-property-height')) {
-            style += 'height:' + $this.attr('data-property-height') + ';';
-        }
-
-        var $close = $('<div class="close button">X</div>');
-        $close.on('click', function(event) {
-            $this.hide({ effect: 'slide', direction: 'down' });
-            event.stopPropagation();
-        });
-
-        if (style != '') {
-            $this.attr('style', style);
-        }
-
-        $this.append($close);
-        $this.hide();
-    });
-
-    $('.wf-content-controler').on('click', function(){
-        var $this = $(this);
-        var w = $this.attr('data-property-width');
-        var h = $this.attr('data-property-height');
-
-        var $float_window = $($this.attr('data-content'));
-
-        if (w) {
-            $float_window.css('width', w);
-        }
-
-        if (h) {
-            $float_window.css('height', h);
-        }
-
-        $float_window.show({ effect: 'slide', direction: 'down' });
-    });
-
-    // ==============================================================================================
-    // "Mouse over" with one visible
-    // ==============================================================================================
-    $('.mouse-over-one').each(function(){
-        var $this = $(this);
-
-        $this.find('[data-ref]').on('mouseover', function() {
-            $this.find('[data-ref]').each(function() {
-                $($(this).attr('data-ref')).hide();
-            });
-
-            $this.parent().find('> .button').removeClass('current');
-
-            var selector = $(this).attr('data-ref');
-            $(selector).show();
-            $(this).addClass('current');
-        });
-    });
-
-    // ==============================================================================================
-    // "Mouse over"
-    // ==============================================================================================
-    $('.mouse-over').on('mouseover', function() {
-        var selector = $(this).attr('data-ref');
-        $(selector).show();
-    });
-
-    $('.mouse-over').on('mouseout', function() {
-        var selector = $(this).attr('data-ref');
-        $(selector).hide();
-    });
-
-    // ==============================================================================================
-    // "More - Less"
-    // ==============================================================================================
-    $('.more-less').on('click', function() {
-        var $this = $(this);
-        var selector = $this.attr('data-ref');
-        var effect = $this.attr('data-effect');
-
-        if (!effect) {
-            effect = 'blind';
-        }
-
-        if ($this.hasClass('viewmore')) {
-            $(selector).hide(effect, {}, 500);
-            $this.removeClass('viewmore');
-            $this.addClass('viewless');
-        }
-        else {
-            $(selector).show(effect, {}, 500);
-            $this.removeClass('viewless');
-            $this.addClass('viewmore');
-        }
-    });
-
-    // ==============================================================================================
     // Global Controls
     // ==============================================================================================
 
@@ -606,7 +503,7 @@ dhbgApp.standard.start = function() {
                     });
                 }
                 else {
-                    title = '<strong>' + title + ': </strong>';
+                    title = '<span class="result_activity__title">' + title + ': </span>';
                 }
 
                 $act.append(title);
@@ -629,10 +526,10 @@ dhbgApp.standard.start = function() {
                     if(list_intents.includes('100%')){
                       $act.addClass('done');
                     }
-                    $act.append(list_intents.join(', '));
+                    $act.append(`<span class="result_activity__intents">${list_intents.join(', ')}</span>`);
                 }
                 else {
-                    $act.append(dhbgApp.s('activities_attempts'));
+                    $act.append(`<span class="result_activity__intents">${dhbgApp.s('activities_attempts')}</span>`);
                 }
                 $ulactivities.append($act);
             }

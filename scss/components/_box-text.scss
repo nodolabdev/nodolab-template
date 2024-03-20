@@ -1,7 +1,7 @@
 .box-text {
   background-color: var(--box-text-bg-color);
-  padding: 16px;
   border-radius: 25px;
+  padding: 16px;
   position: relative;
   @include spacer(3, margin, bottom);
   @include spacer(3, margin, top);
@@ -75,18 +75,19 @@
   }
 
   &__header {
-    display: flex;
     align-items: center;
-    justify-content: flex-start;
+    display: flex;
     gap: 16px;
+    justify-content: flex-start;
     @include spacer(2, margin, bottom);
   }
   &__header-icon {
-    width: 50px;
-    height: 50px;
     border-radius: 50%;
     box-shadow: 3px 1px 0px 0px rgba(0, 0, 0, 0.1);
+    height: 50px;
+    min-width: 50px;
     position: relative;
+    width: 50px;
     &::before {
       height: 60%;
       left: 50%;
@@ -98,9 +99,13 @@
   }
 
   &__ribbon {
+    display: none;
     position: absolute;
-    width: 42px;
     right: 5%;
     top: 0;
+    width: 42px;
+    @include respond-to('medium') {
+      display: block;
+    }
   }
 }
