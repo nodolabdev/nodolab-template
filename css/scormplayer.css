@@ -287,6 +287,17 @@ body {
       .content__banner {
         height: 100vh;
         flex-basis: 50%; } }
+    @media (min-width: 1024px) {
+      .content__banner::after {
+        width: 100px;
+        height: 100px;
+        background-image: url("/content/nodolab-logo-2.svg");
+        background-size: contain;
+        position: absolute;
+        content: '';
+        top: 50%;
+        right: -50px;
+        transform: translateY(-50%); } }
     .content__banner:before {
       content: '';
       background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="325.957" height="312.926" viewBox="0 0 325.957 312.926"><defs><clipPath id="clip-path"><path id="Trazado_1008" data-name="Trazado 1008" d="M325.957,834.333H0L.495,521.407H325.957Z" fill="none"/></clipPath><filter id="Trazado_1006" x="-122.772" y="53.596" width="305.811" height="345.032" filterUnits="userSpaceOnUse"><feOffset dx="3.559" dy="3.559" input="SourceAlpha"/><feGaussianBlur stdDeviation="0.593" result="blur"/><feFlood flood-color="%23397884" flood-opacity="0.188"/><feComposite operator="in" in2="blur"/><feComposite in="SourceGraphic"/></filter><filter id="Trazado_1007" x="-175.201" y="183.288" width="305.811" height="345.033" filterUnits="userSpaceOnUse"><feOffset dx="3.559" dy="3.559" input="SourceAlpha"/><feGaussianBlur stdDeviation="0.593" result="blur-2"/><feFlood flood-color="%23397884" flood-opacity="0.188"/><feComposite operator="in" in2="blur-2"/><feComposite in="SourceGraphic"/></filter></defs><g id="Grupo_1104" data-name="Grupo 1104" transform="translate(0 -521.407)" opacity="0.49"><g id="Grupo_1103" data-name="Grupo 1103" clip-path="url(%23clip-path)"><g transform="matrix(1, 0, 0, 1, 0, 521.41)" filter="url(%23Trazado_1006)"><path id="Trazado_1006-2" data-name="Trazado 1006" d="M47.651,591.112c29.6,8.254,64.9,21.761,65.6,55.938.577,28.427-29.851,70.432-15.4,98.973C110,770,143.446,770.393,160.7,789.548c18.646,20.7,20.815,51.649,9.4,74.921-6.519,13.289-17.024,24.407-29.475,32.881-8.416,5.727-28.3,19.977-39.619,16.118l-223.2-76.129,89.281-261.758Z" transform="translate(0 -521.41)" fill="none" stroke="%23707070" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.156"/></g><g transform="matrix(1, 0, 0, 1, 0, 521.41)" filter="url(%23Trazado_1007)"><path id="Trazado_1007-2" data-name="Trazado 1007" d="M-4.778,720.8c29.6,8.254,64.9,21.761,65.6,55.938.577,28.427-29.851,70.431-15.4,98.973,12.144,23.981,45.595,24.37,62.847,43.525,18.646,20.7,20.815,51.649,9.4,74.921-6.519,13.289-17.024,24.407-29.475,32.881-8.416,5.727-28.3,19.976-39.618,16.117l-223.2-76.129,89.281-261.758Z" transform="translate(0 -521.41)" fill="none" stroke="%23707070" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.156"/></g></g></g></svg>');
@@ -318,7 +329,10 @@ body {
     padding-inline: 16px;
     overflow: scroll;
     margin-top: 36px;
-    padding-bottom: 36px; }
+    padding-bottom: 92px; }
+    @media (min-width: 1024px) {
+      .content__info {
+        padding-bottom: 120px; } }
     @media (min-width: 600px) {
       .content__info {
         flex-basis: 50%; } }
