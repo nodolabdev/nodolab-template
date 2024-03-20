@@ -79,7 +79,7 @@
 
     &.previous {
       margin-right: 3px;  
-      transform: rotateY(180deg);
+      transform: translateY(-50%) rotateY(180deg);
     }
     &.next {
       margin-left: 3px;

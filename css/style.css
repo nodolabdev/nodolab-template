@@ -1399,7 +1399,7 @@ main {
     .ctrl-pagination .previous.previous,
     .ctrl-pagination .next.previous {
       margin-right: 3px;
-      transform: rotateY(180deg); }
+      transform: translateY(-50%) rotateY(180deg); }
     .ctrl-pagination .previous.next,
     .ctrl-pagination .next.next {
       margin-left: 3px; }
