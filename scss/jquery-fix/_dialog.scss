@@ -6,7 +6,7 @@
   max-width: 560px;
   border-radius: 12px;
   padding: 0;
-  background-color: var(--bg-color);
+  background-color: var(--dialog-bg-color);
   top: 50% !important; //required to override inline styles
   left: 50% !important;
   transform: translate(-50%, -50%);
@@ -44,7 +44,7 @@
         text-indent: 0;
         width: 32px;
         height: 32px;
-        color: var(--on-bg-color);
+        color: var(--text-color);
         font-size: var(--icon-size);
         display: flex;
         justify-content: center;
@@ -69,7 +69,7 @@
 
   .ui-dialog &-content {
     padding: 8px 24px 32px;
-    color: var(--on-bg-color);
+    color: var(--text-color);
   }
 
   &.ui-widget.ui-widget-content {
@@ -78,7 +78,7 @@
 }
 
 .ui-widget-overlay.ui-front {
-  background-color: rgba(0, 0, 0, 0.48);
+  background-color: rgba(4, 16, 22, 0.81);
   opacity: 1;
 }
 

@@ -10,7 +10,6 @@
   --color-tertiary: #00D0A4;
   --highlight-blue: #12EFE4;
   --white: #ffffff;
-  --on-bg-color: #3C3C3B;
   --bg-color: #F5F5F5;
   --box-text-bg-color: #F9F9FC;
   --grey-dark: #575969;
@@ -22,6 +21,7 @@
   --disabled-button: #E5E5ED;
   --disabled-button-text: #8B879F;
   --enabled-button: #F7F7FA;
+  --dialog-bg-color: #F5F6FA;
   --box-text-important: #EE7B76;
   --box-text-example: #00CEA8;
   --box-text-link: #40A4C5;
@@ -1694,7 +1694,7 @@ main {
   max-width: 560px;
   border-radius: 12px;
   padding: 0;
-  background-color: var(--bg-color);
+  background-color: var(--dialog-bg-color);
   top: 50% !important;
   left: 50% !important;
   transform: translate(-50%, -50%); }
@@ -1737,7 +1737,7 @@ main {
         text-indent: 0;
         width: 32px;
         height: 32px;
-        color: var(--on-bg-color);
+        color: var(--text-color);
         font-size: var(--icon-size);
         display: flex;
         justify-content: center;
@@ -1752,12 +1752,12 @@ main {
         background-color: rgba(0, 0, 0, 0.06); }
   .ui-dialog .ui-dialog-content {
     padding: 8px 24px 32px;
-    color: var(--on-bg-color); }
+    color: var(--text-color); }
   .ui-dialog.ui-widget.ui-widget-content {
     border-width: 0; }
 
 .ui-widget-overlay.ui-front {
-  background-color: rgba(0, 0, 0, 0.48);
+  background-color: rgba(4, 16, 22, 0.81);
   opacity: 1; }
 
 @media (max-width: 600px) {
