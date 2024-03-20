@@ -1,71 +1,29 @@
 .horizontal-menu {
   width: 100%;
   margin-bottom: 20px;
-
-  .chalkboard_horizontal_content {
-    .element {
-      position: relative;
-      padding: 5px;
-      margin: 5px 10px;
-      text-align: center;
-      line-height: 20px;
-      border-radius: 20px;
-      color: #556BC6;
-      border: 1px solid #556BC6;
-
-      &:after {
-        content: "\f125";
-        font-family: "Ionicons";
-        font-size: 16px;
-        position: absolute;
-        right: 5px;
-        top: 50%;
-        margin-top: -8px;
-      }
-    }
-  }
-
   .chalkboard_items {
-    >.chalkboard_item {
-      float: left;
-      padding: 5px;
-      text-align: center;
-      line-height: 20px;
-      border-radius: 20px;
-      color: #556BC6;
-      border: 1px solid #556BC6;
-      min-width: 80px;
-
-      &.active,
-      &.current {
-        color: #000;
-        background-color: #fbf9ea;
-        border-top: 2px solid #888;
-        padding-top: 6px;
-
-        &.current {
-          font-weight: bold;
-          background-color: #556BC6;
-          color: #fff;
-          border: none;
-        }
+    display: flex;
+    justify-content: flex-start;
+    overflow-x: scroll;
+    gap: 6px;
+    max-width: 100vw;
+    @include hide-element-scrollbar();
+    @include spacer(2, margin, bottom);
+    .chalkboard_item {
+      background-color: var(--disabled-button);
+      padding: 8px 12px;
+      border-radius: 18px;
+      color: var(--color-primary-dark);
+      transition: all 0.2s ease;
+      &:hover {
+        color: var(--color-primary-light);
+        filter: brightness(0.9);
       }
-    }
-  }
-
-  >.chalkboard_content {
-    width: 96%;
-    height: auto;
-    float: left;
-    overflow: auto;
-    background-color: #F7F8FC;
-    padding: 2%;
-    color: #2B2D63;
-    border-radius: 30px;
-
-    >.element>h5 {
-      margin: 0 0 10px;
-      font-size: 16px;
+      &.current {
+        color: var(--white);
+        font-weight: bold;
+        background-color: var(--color-primary-light);
+      }
     }
   }
 }
@@ -74,18 +32,6 @@
   .horizontal-menu {
     width: 100%;
     margin-bottom: 20px;
-
-    .chalkboard_items {
-      &.board {
-        display: flex;
-        justify-content: center;
-      }
-
-      >.chalkboard_item {
-        margin: 5px 2px;
-        width: 155px;
-      }
-    }
 
     >.chalkboard_content {
       width: 98%;

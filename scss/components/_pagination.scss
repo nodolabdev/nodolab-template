@@ -1,10 +1,18 @@
 .ctrl-pagination {
   position: relative;
   margin-bottom: 10px;
-  background-color: #F7F8FC;
+  background-color: var(--box-text-bg-color);
   padding: 2%;
   color: #2B2D63;
   border-radius: 30px;
+  padding-bottom: 64px;
+  @include respond-to('medium') {
+    padding-inline: 60px;
+  }
+
+  .label_current {
+    display: none;
+  }
 
   ul.layers {
     list-style: none;
@@ -18,83 +26,71 @@
     padding: 5px 10px 0 10px;
   }
 
+  .position {
+    color: var(--color-primary-light);
+    font-weight: bold;
+    background-color: var(--disabled-button);
+    padding-inline: 8px;
+    border-radius: 12px;
+    @include body();
+    @include respond-to('medium') {
+      position: absolute;
+      bottom: -12px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
   ul.pagination {
     list-style: none;
-    margin: 0;
-    padding: 0;
-    float: right;
-    margin: 5px 0 0;
-
-    &.arrows {
-      font-size: 20px;
-    }
-
+    position: absolute;
+    left: 50%;
+    bottom: 12px;
+    transform: translateX(-50%);
+    display: flex;
     li {
-      div {
-        border: 1px solid #556BC6;
-        border-radius: 15px;
-        height: 15px;
-        width: 25px;
-        text-align: center;
-        margin-left: 2px;
-        line-height: 15px;
-
-        &.active,
-        &.current {
-          background-color: #556BC6;
-          color: #ffffff;
-        }
-      }
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    @include respond-to('medium') {
+      position: unset;
+      transform: unset;
     }
   }
 
   .previous,
   .next {
-    width: 21px;
-    height: 21px;
+    width: 44px;
+    height: 44px;
     float: left;
     cursor: pointer;
     margin-top: 1px;
-
-    &.previous {
-      margin-right: 3px;
-      background: url(../img/sprite_iconos.png) no-repeat 1.5% center;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="80%" height="80%" viewBox="0 0 15.518 19.164"><g id="Grupo_635" data-name="Grupo 635" transform="translate(-2475.477 -1532.212)"><g id="Grupo_634" data-name="Grupo 634"><g id="Grupo_633" data-name="Grupo 633"><path id="Trazado_607" data-name="Trazado 607" d="M2475.477,1532.212l15.518,9.582-15.518,9.581Z" fill="%236956a0"/></g></g></g></svg>');
+    background-size: 40%;
+    background-position: center;
+    background-repeat: no-repeat;
+    @include respond-to('medium') {
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
     }
 
+    &.previous {
+      margin-right: 3px;  
+      transform: rotateY(180deg);
+    }
     &.next {
       margin-left: 3px;
-      background: url(../img/sprite_iconos.png) no-repeat 14.5% center;
+      @include respond-to('medium') {
+        left: unset;
+        right: 0;
+      }
     }
 
     &:hover {
       filter: grayscale(1);
     }
-  }
-
-  .label_current {
-    border-radius: 50px;
-    bottom: 5px;
-    color: #ffffff;
-    background-color: #556BC6;
-    font-size: 30px;
-    position: absolute;
-    text-align: center;
-    height: 35px;
-    width: 35px;
-    padding: 5px;
-  }
-
-  >.layers>.layer>h5 {
-    margin-top: 0;
-  }
-}
-
-@include respond-to('medium') {
-  .ctrl-pagination {
-    width: 98%;
-    float: left;
-    height: 300px;
-    overflow: auto;
-    padding: 20px;
   }
 }

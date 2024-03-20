@@ -19,12 +19,14 @@
 
   &__globals {
     grid-column: 11 / 13;
-    background-color: var(--color-primary-dark);
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
+    @include respond-to('medium') {
+      background-color: var(--color-primary-dark);
+    }
     ul {
       display: flex;
       align-items: center;
@@ -72,6 +74,10 @@
       position: absolute;
       content: '';
       left: -64px;
+      display: none;
+      @include respond-to('medium') {
+        display: block;
+      }
     }
   }
 }
