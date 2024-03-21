@@ -1793,13 +1793,14 @@ dhbgApp.standard.load_operations = function() {
                     if (count_questions > 1) {
                         var msg;
                         if (weight >= dhbgApp.evaluation.approve_limit) {
-                            msg = '<div class="correct">' + dhbgApp.s('all_correct_percent', weight) + '</div>';
+                            msg = '<div class="jpit_activities_quiz_question_feedback_true">' + dhbgApp.s('all_correct_percent', weight) + '</div>';
                         }
                         else {
-                            msg = '<div class="wrong">' + dhbgApp.s('wrong_percent', (100 - weight)) + '</div>';
+                            msg = '<div class="jpit_activities_quiz_question_feedback_false">' + dhbgApp.s('wrong_percent', (100 - weight)) + '</div>';
                         }
-                        $box_end.empty();
-                        $box_end.append(msg).show();
+                        const $feedback_box = $('.jpit_activities_quiz_question_feedback');
+                        $feedback_box.empty();
+                        $feedback_box.append(msg).show();
                     }
                     else {
                         $box_end.show();

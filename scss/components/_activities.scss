@@ -1,6 +1,11 @@
 .box_end {
   text-align: center;
   padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 24px;
 
   &:before,
   &:after {
@@ -10,43 +15,51 @@
 
   .correct,
   .wrong {
-    padding: 10px;
-    background-color: #fff;
-    width: 400px;
-    margin: auto;
-    border-radius: 20px;
-    font-weight: bold;
+    align-items: center;
+    background-color: #ffffff;
+    border-radius: 14px;
+    box-shadow: 0 4px 4px rgba(54, 64, 67, 0.15);
+    display: flex;
+    min-height: 50px;
+    justify-content: center;
+    padding: 8px 12px;
     position: relative;
-    min-height: 35px;
-    box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.16);
-
-    &:before {
-      content: "";
-      background: url(../img/sprite_iconos.png) no-repeat;
-      background-size: 600%;
-      width: 50px;
-      top: 0;
-      bottom: 0;
-      left: -55px;
-      position: absolute;
+    text-align: center;
+    width: 80%;
+    font-weight: bold;
+    @include respond-to('medium') {
+      border-radius: 0 14px 14px 0;
+      margin-inline-start: 50px;
+      &::before {
+        position: absolute;
+        left: -50px;
+        border-radius: 14px 0 0 14px;
+        height: 100%;
+        aspect-ratio: 1 / 1;
+        background-size: 75%;
+        background-repeat: no-repeat;
+        background-position: center;
+        content: "";
+        top: 0;
+        z-index: 2;
+        box-shadow: 0 4px 4px rgba(54, 64, 67, 0.15);
+      }
     }
   }
 
   .correct {
-    color: #27d368;
-    border-left: 70px solid #27d368;
-
+    color: var(--green-success);
     &:before {
-      background-position: 75% center;
+      background-color: var(--green-success);
+      background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="29.879" height="29.882" viewBox="0 0 29.879 29.882"><g id="Grupo_1124" data-name="Grupo 1124" transform="translate(-629.337 -617.608)"><g id="Grupo_278" data-name="Grupo 278" transform="translate(-5356.524 -878.597)"><g id="Grupo_277" data-name="Grupo 277"><path id="Trazado_253" data-name="Trazado 253" d="M6000.8,1525.587a14.429,14.429,0,1,1,6.3-1.444A14.318,14.318,0,0,1,6000.8,1525.587Zm0-28.43a13.989,13.989,0,1,0,0,27.978,13.978,13.978,0,0,0,13.987-13.987A14,14,0,0,0,6000.8,1497.157Z" fill="%23fff" stroke="%23fff" stroke-width="1"/></g></g><g id="Grupo_279" data-name="Grupo 279" transform="translate(-5356.524 -878.597)"><path id="Trazado_254" data-name="Trazado 254" d="M5991.353,1511.981c1.442,1,2.2,1.179,3.44,3.273s1.46,3.517,1.787,3.779,1.963-.065,2.813-.523.882-.711,1.677-2.568a41.8,41.8,0,0,1,4.262-7.567c1.374-1.832,4.267-4.241,4.4-4.7s-1.242-.671-2.551-.278-4.065,3.424-5.729,5.809c-1.849,2.65-2.506,4.887-2.833,4.822s-.966-1.4-1.882-2.381-1.881-1.646-2.993-1.45S5990.688,1511.52,5991.353,1511.981Z" fill="%23fff"/></g></g></svg>');
     }
   }
 
   .wrong {
-    color: #FF2706;
-    border-left: 70px solid #FF2706;
-
+    color: var(--red-error);
     &:before {
-      background-position: 99% center;
+      background-color: var(--red-error);
+      background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="27.538" height="27.542" viewBox="0 0 27.538 27.542"><g id="Grupo_569" data-name="Grupo 569" transform="translate(-3302.372 -1557.676)"><g id="Grupo_567" data-name="Grupo 567"><path id="Trazado_548" data-name="Trazado 548" d="M3316.141,1584.757a13.3,13.3,0,1,1,5.809-1.331A13.2,13.2,0,0,1,3316.141,1584.757Zm0-26.2a12.9,12.9,0,1,0,12.891,12.9A12.907,12.907,0,0,0,3316.141,1558.554Z" fill="%23fff" stroke="%23fff" stroke-width="0.922"/></g><g id="Grupo_568" data-name="Grupo 568"><path id="Trazado_549" data-name="Trazado 549" d="M3310.812,1577a1.777,1.777,0,0,0,1.209.212c.629-.094.906-.564,1.536-1.716a32.263,32.263,0,0,1,5-6.226c1.438-1.409,3.387-2.792,3.183-3.149-.4-.7-.437-1.236-1.663-1.034s-3.025,2.241-4.784,4.088c-1.955,2.053-5.186,6.211-4.961,6.744A.829.829,0,0,0,3310.812,1577Z" fill="%23fff"/><path id="Trazado_550" data-name="Trazado 550" d="M3312.353,1564.368a1.952,1.952,0,0,1,1.25.118c.812.315.9,1.573,1.654,3.138a19.58,19.58,0,0,0,3.689,5.052c.952,1.022,2.72,2.4,3.073,2.937.225.346-.454,1.739-1.511,1.6-1.232-.164-4.486-4.17-6.044-6.169-1.732-2.22-3.367-5.335-3.088-5.845A1.266,1.266,0,0,1,3312.353,1564.368Z" fill="%23fff"/></g></g></svg>');
     }
   }
 }

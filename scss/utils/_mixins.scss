@@ -14,13 +14,13 @@
   line-height: 24px;
   font-weight: bold;
   padding: 8px 12px;
-  background-color: var(--color-primary);
+  background-color: var(--color-primary-light-400);
   border: 0px;
   color: var(--white);
   cursor: pointer;
   transition: all 0.2s ease;
-  &:hover {
-    transform: scale(1.01);
+  &:hover { 
     filter: brightness(1.1);
+    box-shadow: 0 4px 4px rgba(54, 64, 67, 0.15);
   }
 }

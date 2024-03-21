@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import "utils/all";
 
 :root {
   /* COLORS */
@@ -16,7 +17,9 @@
   --color-primary-light-200: #433A78;
   --color-primary-light-300: #4D4196;
   --color-primary-light: #4E44A0;
+  --color-primary-light-400: #6956A0;
   --color-primary: #453C78;
+  --color-borders:#A79FC0;
   --color-secondary-light: #ECC9A3;
   --color-secondary: #826D4A;
   --color-tertiary: #00D0A4;
@@ -32,6 +35,12 @@
   --link-color: #4867D0;
   --text-color: #3C3C3B;
   --white: #ffffff;
+  --red-error: #D75D72;
+  --red-error-100: #e6babe;
+  --green-success: #6CCF74;
+  --green-success-100: #d3efe2;
+  --green-success-200: #3F698B;
+
 
   /* WIDTHS */
   --drawer-width: 360px;
@@ -93,6 +102,7 @@ pre {
   padding: 6px;
   overflow: auto;
   color: #333;
+  @include spacer(4, margin, bottom);
 }
 
 cite {
@@ -127,7 +137,7 @@ ul.data_list li {
   margin-inline: 0px;
 }
 
-ol.ol_counter li, ul li, ol li {
+ol.ol_counter li {
   padding-bottom: 10px;
   margin-inline-start: 24px;
 }

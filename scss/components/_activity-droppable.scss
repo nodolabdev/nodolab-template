@@ -1,13 +1,28 @@
 .jpit-activities-droppable {
+  th {
+    color: var(--color-nodo);
+    width: 50%;
+    border: 1px solid var(--color-borders);;
+    border-radius: 16px;
+    padding: 5px 12px;
+    text-align: right;
+    @include respond-to('medium') {
+      width: 80%;
+    }
+  }
   .droppable {
-    border: 1px solid #007fff;
+    border: 1px dashed var(--color-borders);
+    border-radius: 16px;
     text-align: left;
     padding: 0;
+    margin: 0 auto;
   }
 
   .draggable {
     background-color: #ffffff;
-    border: 1px solid #007fff;
+    color: var(--color-nodo);
+    border: 1px solid var(--color-borders);
+    border-radius: 16px;
     text-align: center;
     cursor: move;
     padding: 5px;
@@ -21,20 +36,34 @@
   }
 
   .jpit_activities_jpitdroppable_dropped {
-    background-color: #E2793D;
+    background-color: var(--color-borders);
     color: #ffffff;
+    margin-right: 12px;
   }
 
-  .draggable.wrong,
-  .droppable.wrong {
-    background-color: #ffffff;
-    border-color: #D60C1B;
-    color: #D60C1B;
+  .draggable.wrong {
+    background-color: var(--red-error-100);
+    border-color: var(--red-error);
+    color: var(--red-error);
+    font-weight: bold;
+  }
+  .draggable.correct {
+    background-color: var(--green-success-100);
+    border-color: var(--green-success-200);
+    color: var(--green-success-200);
+    font-weight: bold;
   }
 
   &:after {
     content: "";
     display: inline-block;
+  }
+
+  &--multi {
+    .droppable {
+      background-color: var(--white);
+      padding: 12px;
+    }
   }
 }
 
@@ -84,21 +113,8 @@
 
 @include respond-to('up-to-medium') {
   .jpit-activities-droppable {
-    .droppable {
-      padding-bottom: 30px;
-      /* This is important so there is always space to touch and select*/
-      user-select: none;
-    }
-
     .box_end {
-      padding: 0 0 10px 0;
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      background: #fff;
-      border-top: 1px solid #999;
-
+      border-radius: 16px;
       &:before,
       &:after {
         display: none;

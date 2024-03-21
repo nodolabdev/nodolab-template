@@ -22,18 +22,5 @@
 }
 
 button.general {
-    background-color: #fff;
-    padding: 10px 30px;
-    cursor: pointer;
-    border-radius: 30px;
-    font-weight: bold;
-    font-size: 17px;
-    color: #556BC6;
-    border: 1px solid #556BC6;
-    margin: 20px;
-}
-
-button.general.active, button.general:hover {
-    background-color: #556BC6;
-    color: #fff;
+  @include button();
 }

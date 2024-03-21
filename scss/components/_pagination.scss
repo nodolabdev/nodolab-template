@@ -32,6 +32,8 @@
     background-color: var(--disabled-button);
     padding-inline: 8px;
     border-radius: 12px;
+    margin: 0;
+    padding-block: 0;
     @include body();
     @include respond-to('medium') {
       position: absolute;
@@ -42,12 +44,14 @@
   }
 
   ul.pagination {
+    bottom: 12px;
+    display: flex;
+    justify-content: center;
+    left: 50%;
     list-style: none;
     position: absolute;
-    left: 50%;
-    bottom: 12px;
     transform: translateX(-50%);
-    display: flex;
+    width: 100%;
     li {
       display: flex;
       align-items: center;
@@ -77,15 +81,13 @@
       transform: translateY(-50%);
     }
 
-    &.previous {
-      margin-right: 3px;  
+    &.previous { 
       transform: rotateY(180deg);
       @include respond-to('medium') {
         transform: translateY(-50%) rotateY(180deg);
       }
     }
     &.next {
-      margin-left: 3px;
       @include respond-to('medium') {
         left: unset;
         right: 0;

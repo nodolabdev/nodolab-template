@@ -1,0 +1,13 @@
+.jpit-activities-view {
+  &.jpit-activities-view {
+    @include button();
+    margin: 0 auto;
+    display: block;
+    @include spacer(4, margin, block);
+    @include respond-to('medium') {
+      display: inline;
+      margin-inline-start: 24px;
+    }
+  }
+  
+}
