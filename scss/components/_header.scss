@@ -1,7 +1,7 @@
 .scorm {
   &__header {
     align-items: center;
-    background-color: var(--color-primary);
+    background-color: var(--color-primary-light-200);
     content: '';
     height: 64px;
     left: 0;
@@ -33,12 +33,14 @@
       justify-content: center;
       list-style: none;
       .button {
-        width: 44px;
-        height: 44px;
-        display: flex;
         align-items: center;
+        display: flex;
+        height: 44px;
         justify-content: center;
+        margin: 0;
+        padding: 0;
         position: relative;
+        width: 44px;
         &::before {
           content: '';  
           width: 100%;

@@ -200,11 +200,37 @@ dhbgApp.standard.start = function() {
     });
 
     // ==============================================================================================
-    // Adding overlay when panel is open
+    // Handlers of the Menu/Drawer
     // ==============================================================================================
     $('#drawer-toggle').change(function() {
-      $('body').toggleClass('panel-open', !this.checked);
+      $('body').toggleClass('panel-open', this.checked);
     });
+
+    function getBreakpoint(viewportWidth) {
+      if (viewportWidth >= 1024) {
+          return 'large';
+      } else if (viewportWidth >= 768) {
+          return 'small-large';
+      } else if (viewportWidth >= 600) {
+          return 'medium';
+      } else if (viewportWidth <= 600 && viewportWidth >= 320) {
+          return 'up-to-medium';
+      } else {
+          return 'small';
+      }
+    }
+
+    $('.scorm__drawer').on('click', function(e) {
+      const viewportWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+      if(e.target.tagName.toLowerCase() === 'li' && getBreakpoint(viewportWidth)!=='large') {
+        $('#drawer-toggle').click();
+      }
+    });
+    $('.drawer__overlay').on('click', function() {
+      console.log("clicked");
+      $('#drawer-toggle').click();
+    })
+  
 
     // ==============================================================================================
     // Buttons to load page

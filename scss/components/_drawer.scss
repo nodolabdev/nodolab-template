@@ -1,8 +1,7 @@
 .scorm {
-  :not(:has(#drawer-toggle:checked)) + main {
-    &::before {
+  :has(#drawer-toggle:checked) + main {
+    .drawer__overlay {
       background-color: #000;
-      content: '';
       display: block;
       height: 100%;
       left: 0;
@@ -11,7 +10,15 @@
       top: 0;
       width: 100%;
       z-index: 1;
+      pointer-events: all;
     }
+    @include respond-to('large') {
+      .drawer__overlay {
+        display: none;
+      }
+    }
+  }
+  :not(:has(#drawer-toggle:checked)) + main {
     @include respond-to("large") {
       width: calc(100% - var(--drawer-width));
       margin-left: var(--drawer-width);
@@ -25,22 +32,30 @@
     display: none;
     &:checked {
       + .scorm__drawer {
-        left: calc(var(--drawer-width) * -1); /* Drawer off-screen on checked */
+        left: 0px; /* Drawer off-screen on checked */
+      }
+      @include respond-to("large") {
+        + .scorm__drawer {
+          left: calc(var(--drawer-width) * -1); /* Drawer off-screen on checked */
+        }
       }
     }
   }
 
   &__drawer {
-    background-color: var(--color-primary);
+    background-color: var(--color-primary-light-300);
     box-sizing: border-box;
     height: 100%;
-    left: 0; /* Drawer initially on-screen */
+    left: calc(var(--drawer-width) * -1); /* Drawer initially on-screen */
     padding: 20px;
     position: fixed;
     top: 64px;
     transition: left 0.3s ease;
     width: var(--drawer-width);
     z-index: 3;
+    @include respond-to("large") {
+      left: 0px; /* Drawer initially on-screen */
+    }
     &-toggle {
       grid-column: 1/1;
       color: var(--white);

@@ -2,34 +2,36 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 :root {
   /* COLORS */
-  --color-primary: #453C78;
-  --color-primary-light: #4E44A0;
-  --color-primary-dark: #2D284F;
-  --color-nodo: #0E0134;
-  --color-secondary: #826D4A;
-  --color-secondary-light: #ECC9A3;
-  --color-tertiary: #00D0A4;
-  --highlight-blue: #12EFE4;
-  --white: #ffffff;
   --bg-color: #F5F5F5;
-  --box-text-bg-color: #F9F9FC;
   --box-bg-color: var(--box-text-bg-color);
+  --box-text-activity: #D28D62;
+  --box-text-bg-color: #F9F9FC;
   --box-text-color: #2B2C67;
-  --grey-dark: #575969;
-  --text-color: #3C3C3B;
-  --grey-light: #DDDDDD;
-  --em-color: #4A4A49;
-  --link-color: #4867D0;
-  --link-color-hover: #3D3FB8;
-  --disabled-button: #E5E5ED;
-  --disabled-button-text: #8B879F;
-  --enabled-button: #F7F7FA;
-  --dialog-bg-color: #F5F6FA;
-  --box-text-important: #EE7B76;
   --box-text-example: #00CEA8;
+  --box-text-important: #EE7B76;
   --box-text-link: #40A4C5;
   --box-text-note: #826CA4;
-  --box-text-activity: #D28D62;
+  --color-nodo: #0E0134;
+  --color-primary-dark: #2D284F;
+  --color-primary-light-200: #433A78;
+  --color-primary-light-300: #4D4196;
+  --color-primary-light: #4E44A0;
+  --color-primary: #453C78;
+  --color-secondary-light: #ECC9A3;
+  --color-secondary: #826D4A;
+  --color-tertiary: #00D0A4;
+  --dialog-bg-color: #F5F6FA;
+  --disabled-button-text: #8B879F;
+  --disabled-button: #E5E5ED;
+  --em-color: #4A4A49;
+  --enabled-button: #F7F7FA;
+  --grey-dark: #575969;
+  --grey-light: #DDDDDD;
+  --highlight-blue: #12EFE4;
+  --link-color-hover: #3D3FB8;
+  --link-color: #4867D0;
+  --text-color: #3C3C3B;
+  --white: #ffffff;
   /* WIDTHS */
   --drawer-width: 360px;
   /* FONT FAMILIES */
@@ -109,7 +111,8 @@ ul.data_list {
   list-style: none; }
 
 ul.data_list li {
-  padding-bottom: 10px; }
+  padding-bottom: 10px;
+  margin-inline: 0px; }
 
 ol.ol_counter li, ul li, ol li {
   padding-bottom: 10px;
@@ -1014,9 +1017,8 @@ button.general.active, button.general:hover {
 #credits_subpage .editions {
   font-size: 11px; }
 
-.scorm :not(:has(#drawer-toggle:checked)) + main::before {
+.scorm :has(#drawer-toggle:checked) + main .drawer__overlay {
   background-color: #000;
-  content: '';
   display: block;
   height: 100%;
   left: 0;
@@ -1024,7 +1026,12 @@ button.general.active, button.general:hover {
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 1; }
+  z-index: 1;
+  pointer-events: all; }
+
+@media (min-width: 1024px) {
+  .scorm :has(#drawer-toggle:checked) + main .drawer__overlay {
+    display: none; } }
 
 @media (min-width: 1024px) {
   .scorm :not(:has(#drawer-toggle:checked)) + main {
@@ -1037,14 +1044,18 @@ button.general.active, button.general:hover {
   cursor: pointer;
   display: none; }
   .scorm #drawer-toggle:checked + .scorm__drawer {
-    left: calc(var(--drawer-width) * -1);
+    left: 0px;
     /* Drawer off-screen on checked */ }
+  @media (min-width: 1024px) {
+    .scorm #drawer-toggle:checked + .scorm__drawer {
+      left: calc(var(--drawer-width) * -1);
+      /* Drawer off-screen on checked */ } }
 
 .scorm__drawer {
-  background-color: var(--color-primary);
+  background-color: var(--color-primary-light-300);
   box-sizing: border-box;
   height: 100%;
-  left: 0;
+  left: calc(var(--drawer-width) * -1);
   /* Drawer initially on-screen */
   padding: 20px;
   position: fixed;
@@ -1052,6 +1063,10 @@ button.general.active, button.general:hover {
   transition: left 0.3s ease;
   width: var(--drawer-width);
   z-index: 3; }
+  @media (min-width: 1024px) {
+    .scorm__drawer {
+      left: 0px;
+      /* Drawer initially on-screen */ } }
   .scorm__drawer-toggle {
     grid-column: 1/1;
     color: var(--white);
@@ -1117,8 +1132,8 @@ button.general.active, button.general:hover {
       color: #fff;
       border-color: #fff; }
 
-footer {
-  background-color: var(--white);
+footer, .footer {
+  background-color: var(--color-nodo);
   background-size: 100px;
   bottom: 0;
   height: 68px;
@@ -1132,29 +1147,39 @@ footer {
   justify-content: space-between;
   align-items: center;
   padding-inline: 32px; }
-  footer .scorm__course-title {
+  footer .scorm__course-title, .footer .scorm__course-title {
     display: none;
     text-transform: uppercase;
     font-size: var(--font-size-medium-16);
-    color: var(--color-secondary); }
-    footer .scorm__course-title em {
+    color: var(--white); }
+    footer .scorm__course-title em, .footer .scorm__course-title em {
       font-weight: bold;
-      color: var(--color-secondary);
+      color: var(--white);
       font-style: unset;
       font-size: var(--font-size-medium-20); }
     @media (min-width: 1024px) {
-      footer .scorm__course-title {
+      footer .scorm__course-title, .footer .scorm__course-title {
         display: block; } }
-  footer .flex {
+  footer__logo, .footer__logo {
+    display: none; }
+    @media (min-width: 600px) {
+      footer__logo, .footer__logo {
+        display: block;
+        width: 150px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%); } }
+  footer .flex, .footer .flex {
     display: flex;
     align-items: center;
     justify-content: flex-end;
     gap: 24px; }
-  footer #page_number {
+  footer #page_number, .footer #page_number {
     border-radius: 50%;
-    border: 1px solid var(--color-secondary);
+    border: 1px solid var(--white);
     bottom: 10px;
-    color: var(--color-secondary);
+    color: var(--white);
     font-size: 16px;
     font-weight: bold;
     height: 44px;
@@ -1164,7 +1189,7 @@ footer {
 
 .scorm__header {
   align-items: center;
-  background-color: var(--color-primary);
+  background-color: var(--color-primary-light-200);
   content: '';
   height: 64px;
   left: 0;
@@ -1203,12 +1228,14 @@ footer {
     justify-content: center;
     list-style: none; }
     .scorm__globals ul .button {
-      width: 44px;
-      height: 44px;
-      display: flex;
       align-items: center;
+      display: flex;
+      height: 44px;
       justify-content: center;
-      position: relative; }
+      margin: 0;
+      padding: 0;
+      position: relative;
+      width: 44px; }
       .scorm__globals ul .button::before {
         content: '';
         width: 100%;
@@ -1265,7 +1292,7 @@ footer {
     background-color: var(--disabled-button);
     padding: 8px 12px;
     border-radius: 18px;
-    color: var(--color-primary-dark);
+    color: var(--color-primary-400);
     white-space: nowrap;
     transition: all 0.2s ease;
     flex-basis: 72px;
@@ -1336,7 +1363,8 @@ main {
   .scorm__drawer .button {
     padding: 12px;
     border-radius: 25px;
-    transition: all 0.2s ease; }
+    transition: all 0.2s ease;
+    margin: 0; }
     .scorm__drawer .button:not(.withsubitems).current {
       background-color: var(--color-primary-dark);
       color: var(--highlight-blue); }
@@ -1478,7 +1506,7 @@ main {
   .measuring-progress.horizontal {
     align-items: center;
     border-radius: 15px;
-    color: var(--color-secondary);
+    color: var(--white);
     display: flex;
     flex-basis: 320px;
     gap: 24px;
