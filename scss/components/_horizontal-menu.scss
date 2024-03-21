@@ -27,7 +27,8 @@
     color: var(--color-primary-dark);
     white-space: nowrap;
     transition: all 0.2s ease;
-    min-width: 72px;
+    flex-basis: 72px;
+    flex-shrink: 0;
     border-width: 0;
 
     &:hover {
@@ -51,6 +52,7 @@
     color: var(--box-text-color);
     display: grid;
     grid-template-areas: 'content';
+    grid-template-columns: minmax(0, 1fr);
 
     @include respond-to('medium') {
       @include spacer(3, padding, block);
