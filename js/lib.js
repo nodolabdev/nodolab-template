@@ -222,7 +222,7 @@ dhbgApp.standard.start = function() {
 
     $('.scorm__drawer').on('click', function(e) {
       const viewportWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-      if(e.target.tagName.toLowerCase() === 'li' && getBreakpoint(viewportWidth)!=='large') {
+      if(e.target.tagName.toLowerCase() === 'li' && getBreakpoint(viewportWidth)!=='large' && !e.target.classList.contains('withsubitems')) {
         $('#drawer-toggle').click();
       }
     });

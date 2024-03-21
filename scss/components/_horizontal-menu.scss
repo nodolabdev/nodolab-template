@@ -24,7 +24,7 @@
     background-color: var(--disabled-button);
     padding: 8px 12px;
     border-radius: 18px;
-    color: var(--color-primary-400);
+    color: var(--color-primary-dark);
     white-space: nowrap;
     transition: all 0.2s ease;
     flex-basis: 72px;
@@ -47,12 +47,14 @@
   &__chalkboard-content {
     @include spacer(2, padding, block);
     @include spacer(2, padding, inline);
-    border-radius: 30px;
     background-color: var(--box-bg-color);
+    border-radius: 30px;
     color: var(--box-text-color);
     display: grid;
     grid-template-areas: 'content';
     grid-template-columns: minmax(0, 1fr);
+    max-height: 400px;
+    overflow: scroll;
 
     @include respond-to('medium') {
       @include spacer(3, padding, block);

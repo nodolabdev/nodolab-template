@@ -3,7 +3,7 @@
 
   .box_content {
     position: relative;
-    padding-bottom: 40px;
+    @include spacer(4, padding, bottom);
 
     .jpit_activities_quiz_question_statement {
       margin-bottom: 20px;
@@ -96,43 +96,50 @@
 
   .jpit_activities_quiz_paginator_container {
     position: absolute;
-    bottom: 5px;
-    right: 5px;
-    z-index: 2;
+    bottom: -42px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
 
     &>.jpit_activities_quiz_paginator_current {
-      padding: 0 7px;
-      float: left;
-      color: #556BC6;
-      font-size: 12px;
-      line-height: 24px;
+      align-items: center;
+      background-color: var(--disabled-button);
+      border-radius: 12px;
+      color: var(--color-primary-light);
+      display: flex;
       font-weight: bold;
-      border: 1px solid #556BC6;
-      border-radius: 10px;
+      justify-content: center;
+      padding-inline: 8px;
+      @include body();
     }
 
     &>.jpit_activities_quiz_paginator_previous,
     &>.jpit_activities_quiz_paginator_next {
-      width: 21px;
-      height: 21px;
-      float: left;
+      width: 44px;
+      height: 44px;
+      display: block;
       cursor: pointer;
-      margin-top: 1px;
-      margin-left: 3px;
-      background-size: 1100%;
     }
 
     &>.jpit_activities_quiz_paginator_previous {
-      background: url(../img/sprite_iconos.png) no-repeat 2.5% center;
-
+      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="80%" height="80%" viewBox="0 0 15.518 19.164"><g id="Grupo_635" data-name="Grupo 635" transform="translate(-2475.477 -1532.212)"><g id="Grupo_634" data-name="Grupo 634"><g id="Grupo_633" data-name="Grupo 633"><path id="Trazado_607" data-name="Trazado 607" d="M2475.477,1532.212l15.518,9.582-15.518,9.581Z" fill="%236956a0"/></g></g></g></svg>');
+      transform: rotateY(180deg);
+      background-size: 40%;
+      background-position: center;
+      background-repeat: no-repeat;
+      border: 0px;
       &:hover {
         filter: grayscale(1);
       }
     }
 
     &>.jpit_activities_quiz_paginator_next {
-      background: url(../img/sprite_iconos.png) no-repeat 14.5% center;
-
+      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="80%" height="80%" viewBox="0 0 15.518 19.164"><g id="Grupo_635" data-name="Grupo 635" transform="translate(-2475.477 -1532.212)"><g id="Grupo_634" data-name="Grupo 634"><g id="Grupo_633" data-name="Grupo 633"><path id="Trazado_607" data-name="Trazado 607" d="M2475.477,1532.212l15.518,9.582-15.518,9.581Z" fill="%236956a0"/></g></g></g></svg>');
+      background-size: 40%;
+      background-position: center;
+      background-repeat: no-repeat;
+      border: 0px;
       &:hover {
         filter: grayscale(1);
       }

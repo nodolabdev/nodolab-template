@@ -925,164 +925,80 @@
             elemento hijo de la etiqueta que define el cuestionario.
           </p>
 
-          <div class="horizontal-menu pag-actividades-cuestionario">
-            <dl>
-              <dt>Ejemplo</dt>
-              <dd>
-                <div class="jpit-activities-quiz" data-act-title="El cuestionario" data-act-id="1_cuestionario">
-                  <question type="simplechoice">
-                    <description>
-                      <p>Los tipos de preguntas que hay son: simplechoice y complete</p>
-                    </description>
-                    <ul>
-                      <li data-response="true">Falso</li>
-                      <li>Verdadero</li>
-                    </ul>
-                    <feedback>
-                      <correct>Así es, hay más tipos de preguntas.</correct>
-                    </feedback>
-                  </question>
-                  <question type="label">
-                    <description>
-                      <p>El tipo de pregunta "label" no se califica.</p>
-                    </description>
-                    <text>Sirve, por ejemplo, para presentar texto introductorio de otras preguntas. Tener en cuenta que
-                      si se utiliza este tipo de preguntas es probable que no sea bueno dejar que las preguntas se
-                      muestren en orden aleatorio.</text>
-                  </question>
-                  <question type="complete">
-                    <description>
-                      <p>Sobre las diferencias entre los tipos de cuestionario.</p>
-                    </description>
-                    <p class="item">
-                      Las preguntas por <input type="text" data-response="defecto" /> son mostradas de manera
-                      <select class="answers">
-                        <option data-response="true">aleatoria</option>
-                        <option>ordenada</option>
-                      </select>, para cambiar su comportamiento por defecto se debe agregar el atributo
-                      <select class="answers">
-                        <option>ni idea</option>
-                        <option data-response="true">data-shuffle="false"</option>
-                      </select>.
-                    </p>
-                  </question>
-                  <question type="multichoice">
-                    <description>
-                      <p>Los siguientes tipos de preguntas son calificables</p>
-                    </description>
-                    <ul>
-                      <li data-response="true">simplechoice</li>
-                      <li data-response="true">complete</li>
-                      <li>label</li>
-                    </ul>
-                  </question>
-                  <question type="defineterm">
-                    <description>
-                      <p>Escriba la abreviación de los siguientes términos (no es sensible a mayúsculas o minúsculas)
-                      </p>
-                    </description>
-                    <ul>
-                      <li data-response="OVA">Objetos virtuales de aprendizaje</li>
-                      <li data-response="REDA">Recursos educativos digitales abiertos</li>
-                    </ul>
-                  </question>
-                  <question type="multisetchoice">
-                    <description>
-                      <p>Seleccione solamente los pares o los impares</p>
-                    </description>
-                    <ul>
-                      <li data-response="1">1</li>
-                      <li data-response="2">2</li>
-                      <li data-response="2">6</li>
-                      <li data-response="1">3</li>
-                      <li data-response="1">9</li>
-                    </ul>
-                  </question>
-                  <feedback>
-                    <wrong>No es correcto, es preciso que revise su respuesta.</wrong>
-                  </feedback>
-                </div>
-              </dd>
-            </dl>
-            <dl>
-              <dt>HTML</dt>
-              <dd>
-                <pre>
-&lt;div class="jpit-activities-quiz" data-act-title="El cuestionario" data-act-id="1_cuestionario"&gt;
-    &lt;question type="simplechoice"&gt;
-        &lt;description&gt;&lt;p&gt;Los tipos de preguntas que hay son: simplechoice y complete&lt;/p&gt;&lt;/description&gt;
-        &lt;ul&gt;
-            &lt;li data-response="true"&gt;Falso&lt;/li&gt;
-            &lt;li&gt;Verdadero&lt;/li&gt;
-        &lt;/ul&gt;
-        &lt;feedback&gt;
-            &lt;correct&gt;Así es, hay más tipos de preguntas.&lt;/correct&gt;
-        &lt;/feedback&gt;
-    &lt;/question&gt;
-    &lt;question type="label"&gt;
-        &lt;description&gt;&lt;p&gt;El tipo de pregunta "label" no se califica.&lt;/p&gt;&lt;/description&gt;
-        &lt;text&gt;Sirve, por ejemplo, para presentar texto introductorio de otras preguntas.
-            Tener en cuenta que si se utiliza este tipo de preguntas es probable que no sea bueno dejar que
-            las preguntas se muestren en orden aleatorio.&lt;/text&gt;
-    &lt;/question&gt;
-    &lt;question type="complete"&gt;
-        &lt;description&gt;
-            &lt;p&gt;Sobre las diferencias entre los tipos de cuestionario.&lt;/p&gt;
-        &lt;/description&gt;
-        &lt;p class="item"&gt;
-            Las preguntas por defecto son mostradas de manera
-            &lt;select class="answers"&gt;
-                &lt;option data-response="true"&gt;aleatoria&lt;/option&gt;
-                &lt;option&gt;ordenada&lt;/option&gt;
-            &lt;/select&gt;, para cambiar su comportamiento por defecto se debe agregar el atributo
-            &lt;select class="answers"&gt;
-                &lt;option&gt;ni idea&lt;/option&gt;
-                &lt;option data-response="true"&gt;data-shuffle="false"&lt;/option&gt;
-            &lt;/select&gt;.
-        &lt;/p&gt;
-    &lt;/question&gt;
-    &lt;question type="multichoice"&gt;
-        &lt;description&gt;&lt;p&gt;Los siguientes tipos de preguntas son calificables&lt;/p&gt;&lt;/description&gt;
-        &lt;ul&gt;
-            &lt;li data-response="true"&gt;simplechoice&lt;/li&gt;
-            &lt;li data-response="true"&gt;complete&lt;/li&gt;
-            &lt;li&gt;label&lt;/li&gt;
-        &lt;/ul&gt;
-    &lt;/question&gt;
-    &lt;question type="defineterm"&gt;
-        &lt;description&gt;&lt;p&gt;Escriba la abreviación de los siguientes términos
-        (no es sensible a mayúsculas o minúsculas)&lt;/p&gt;&lt;/description&gt;
-        &lt;ul&gt;
-            &lt;li data-response="OVA"&gt;Objetos virtuales de aprendizaje&lt;/li&gt;
-            &lt;li data-response="REDA"&gt;Recursos educativos digitales abiertos&lt;/li&gt;
-        &lt;/ul&gt;
-    &lt;/question&gt;
-    &lt;question type="multisetchoice"&gt;
-        &lt;description&gt;&lt;p&gt;Seleccione solamente los pares o los impares&lt;/p&gt;&lt;/description&gt;
-        &lt;ul&gt;
-            &lt;li data-response="1"&gt;1&lt;/li&gt;
-            &lt;li data-response="2"&gt;2&lt;/li&gt;
-            &lt;li data-response="2"&gt;6&lt;/li&gt;
-            &lt;li data-response="1"&gt;3&lt;/li&gt;
-            &lt;li data-response="1"&gt;9&lt;/li&gt;
-        &lt;/ul&gt;
-    &lt;/question&gt;
-    &lt;feedback&gt;
-        &lt;wrong&gt;No es correcto, es preciso que revise su respuesta.&lt;/wrong&gt;
-    &lt;/feedback&gt;
-&lt;/div&gt;
-</pre>
-              </dd>
-            </dl>
-            <dl>
-              <dt>CSS personalizado</dt>
-              <dd>
-                <pre>
-#id_subpagina .jpit_activities_quiz_question_answers { height: 150px; overflow: auto; }
-#id_subpagina .jpit_activities_quiz_board { height: 220px; }
-</pre>
-              </dd>
-            </dl>
+          <div class="box-text box-text--activity" label="Cuestionario">
+            <div class="jpit-activities-quiz" data-act-title="El cuestionario" data-act-id="1_cuestionario">
+              <question type="simplechoice">
+                <description>
+                  <p>Los tipos de preguntas que hay son: simplechoice y complete</p>
+                </description>
+                <ul>
+                  <li data-response="true">Falso</li>
+                  <li>Verdadero</li>
+                </ul>
+                <feedback>
+                  <correct>Así es, hay más tipos de preguntas.</correct>
+                </feedback>
+              </question>
+              <question type="label">
+                <description>
+                  <p>El tipo de pregunta "label" no se califica.</p>
+                </description>
+                <text>Sirve, por ejemplo, para presentar texto introductorio de otras preguntas. Tener en cuenta que
+                  si se utiliza este tipo de preguntas es probable que no sea bueno dejar que las preguntas se
+                  muestren en orden aleatorio.</text>
+              </question>
+              <question type="complete">
+                <description>
+                  <p>Sobre las diferencias entre los tipos de cuestionario.</p>
+                </description>
+                <p class="item">
+                  Las preguntas por <input type="text" data-response="defecto" /> son mostradas de manera
+                  <select class="answers">
+                    <option data-response="true">aleatoria</option>
+                    <option>ordenada</option>
+                  </select>, para cambiar su comportamiento por defecto se debe agregar el atributo
+                  <select class="answers">
+                    <option>ni idea</option>
+                    <option data-response="true">data-shuffle="false"</option>
+                  </select>.
+                </p>
+              </question>
+              <question type="multichoice">
+                <description>
+                  <p>Los siguientes tipos de preguntas son calificables</p>
+                </description>
+                <ul>
+                  <li data-response="true">simplechoice</li>
+                  <li data-response="true">complete</li>
+                  <li>label</li>
+                </ul>
+              </question>
+              <question type="defineterm">
+                <description>
+                  <p>Escriba la abreviación de los siguientes términos (no es sensible a mayúsculas o minúsculas)
+                  </p>
+                </description>
+                <ul>
+                  <li data-response="OVA">Objetos virtuales de aprendizaje</li>
+                  <li data-response="REDA">Recursos educativos digitales abiertos</li>
+                </ul>
+              </question>
+              <question type="multisetchoice">
+                <description>
+                  <p>Seleccione solamente los pares o los impares</p>
+                </description>
+                <ul>
+                  <li data-response="1">1</li>
+                  <li data-response="2">2</li>
+                  <li data-response="2">6</li>
+                  <li data-response="1">3</li>
+                  <li data-response="1">9</li>
+                </ul>
+              </question>
+              <feedback>
+                <wrong>No es correcto, es preciso que revise su respuesta.</wrong>
+              </feedback>
+            </div>
           </div>
 
         </div>
@@ -1101,11 +1017,8 @@
             <em>data-verify-type="target"</em>.
           </p>
 
-          <div class="horizontal-menu">
-            <dl>
-              <dt>Ejemplo</dt>
-              <dd>
-                <div id="arrastrar1" class="jpit-activities-droppable" data-verify-type="target"
+          <div class="box-text box-text--activity" label="Arrastrar y soltar - modo apareamiento">
+            <div id="arrastrar1" class="jpit-activities-droppable" data-verify-type="target"
                   data-act-id="arrastrar1">
                   <p>Complete los espacios en blanco con las capitales correspondientes, del listado inferior.</p>
                   <table>
@@ -1138,106 +1051,6 @@
 
                   <div class="box_end"></div>
                 </div>
-              </dd>
-            </dl>
-            <dl>
-              <dt>HTML</dt>
-              <dd>
-                <pre>
-&lt;div id="arrastrar" class="jpit-activities-droppable" data-verify-type="target" data-act-id="arrastrar1"&gt;
-    &lt;p&gt;Complete los espacios en blanco con las capitales correspondientes, del listado inferior.&lt;/p&gt;
-    &lt;table&gt;
-        &lt;tr&gt;
-            &lt;th&gt;Risaralda&lt;/th&gt;
-            &lt;td class="conection"&gt;&lt;span class="icon_horizontal_arrow"&gt;&lt;/span&gt;&lt;/td&gt;
-            &lt;td data-target-group="1"&gt;&lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr&gt;
-            &lt;th&gt;Antioquia&lt;/th&gt;
-            &lt;td class="conection"&gt;&lt;span class="icon_horizontal_arrow"&gt;&lt;/span&gt;&lt;/td&gt;
-            &lt;td data-target-group="2"&gt;&lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr&gt;
-            &lt;th&gt;Norte de Santander&lt;/th&gt;
-            &lt;td class="conection"&gt;&lt;span class="icon_horizontal_arrow"&gt;&lt;/span&gt;&lt;/td&gt;
-            &lt;td data-target-group="3"&gt;&lt;/td&gt;
-        &lt;/tr&gt;
-    &lt;/table&gt;
-
-    &lt;h4&gt;Capitales:&lt;/h4&gt;
-    &lt;div&gt;
-        &lt;div data-group="2" class="item_1"&gt;Medellín&lt;/div&gt;
-        &lt;div data-group="4" class="item_2" &gt;Bogotá&lt;/div&gt;
-        &lt;div data-group="4" class="item_3" &gt;Rioacha&lt;/div&gt;
-        &lt;div data-group="3" class="item_4" &gt;Cúcuta&lt;/div&gt;
-        &lt;div data-group="1" class="item_5" &gt;Pereira&lt;/div&gt;
-    &lt;/div&gt;
-    &lt;br class="clear" /&gt;
-
-    &lt;div class="box_end"&gt;&lt;/div&gt;
-&lt;/div&gt;
-</pre>
-              </dd>
-            </dl>
-            <dl>
-              <dt>CSS personalizado</dt>
-              <dd>
-                <pre>
-#arrastrar.jpit-activities-droppable .words_container {
-    height: 50px;
-}
-
-#arrastrar.jpit-activities-droppable table {
-    empty-cells: show;
-    clear: both;
-}
-
-#arrastrar.jpit-activities-droppable th {
-    color: #000;
-    padding: 5px;
-    text-align: right;
-}
-
-#arrastrar.jpit-activities-droppable td.droppable {
-    width: 80px;
-    height: 16px;
-}
-
-#arrastrar.jpit-activities-droppable td.conection {
-    width: 30px;
-    border: none;
-    padding: 5px 10px;
-}
-
-#arrastrar.jpit-activities-droppable .draggable {
-    float: left;
-    margin: 0 5px 5px 0;
-    position: absolute;
-    width: 80px;
-}
-
-#arrastrar .item_1 {
-     left: 50px;
-}
-
-#arrastrar .item_2 {
-     left: 150px;
-}
-
-#arrastrar .item_3 {
-     left: 250px;
-}
-
-#arrastrar .item_4 {
-     left: 350px;
-}
-
-#arrastrar .item_5 {
-     left: 450px;
-}
-</pre>
-              </dd>
-            </dl>
           </div>
         </div>
 
@@ -1253,82 +1066,36 @@
             de orígen pueden no caber en el destino.
           </p>
 
-          <div class="horizontal-menu">
-            <dl>
-              <dt>Ejemplo</dt>
-              <dd>
-                <div id="arrastrar5" class="jpit-activities-droppable" data-act-id="arrastrar5" data-target-multi="3"
-                  data-autoalign="false">
-                  <div>
-                    Arrastre al recuadro los nombres de los tres personajes que aparecen en la serie de los Caballeros
-                    del Zodíaco.
-                    <div data-target-group="1"></div>
-                  </div>
-                  <div>
-                    <h4>Personajes:</h4>
-                    <div>
-                      <div data-group="1">Aldebarán</div>
-                      <div data-group="2">Óliver</div>
-                      <div data-group="2">Bruce Harper</div>
-                      <div data-group="1">Hyoga</div>
-                      <div data-group="2">Benji Price</div>
-                      <div data-group="1">Shiryu</div>
-                    </div>
-                    <br class="clear" />
-                  </div>
-                  <div class="box_end"></div>
-                </div>
-              </dd>
-            </dl>
-            <dl>
-              <dt>HTML</dt>
-              <dd>
-                <pre>
-&lt;div id="arrastrar" class="jpit-activities-droppable"  data-act-id="arrastrar5" data-target-multi="3" data-autoalign="false"&gt;
-    &lt;div&gt;
-        Arrastre al recuadro los nombres de los tres personajes que aparecen en la serie de los Caballeros del Zodíaco.
-        &lt;div data-target-group="1"&gt;&lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div&gt;
-        &lt;h4&gt;Personajes:&lt;/h4&gt;
-        &lt;div&gt;
-            &lt;div data-group="1"&gt;Aldebarán&lt;/div&gt;
-            &lt;div data-group="2"&gt;Óliver &lt;/div&gt;
-            &lt;div data-group="2"&gt;Bruce Harper&lt;/div&gt;
-            &lt;div data-group="1"&gt;Hyoga&lt;/div&gt;
-            &lt;div data-group="2"&gt;Benji Price&lt;/div&gt;
-            &lt;div data-group="1"&gt;Shiryu&lt;/div&gt;
-        &lt;/div&gt;
-        &lt;br class="clear" /&gt;
-    &lt;/div&gt;
-    &lt;div class="box_end"&gt;&lt;/div&gt;
-&lt;/div&gt;
-</pre>
-              </dd>
-            </dl>
-            <dl>
-              <dt>CSS personalizado</dt>
-              <dd>
-                <pre>
-#arrastrar .droppable {
-    width: 300px;
-    height: 150px;
-}
-
-#arrastrar .draggable {
-    display: inline-block;
-}
-</pre>
-              </dd>
-            </dl>
+          <div class="box-text box-text--activity" label="Arrastrar y soltar - modo apareamiento">
+            <div id="arrastrar5" class="jpit-activities-droppable" data-act-id="arrastrar5" data-target-multi="3"
+            data-autoalign="false">
+            <div>
+              Arrastre al recuadro los nombres de los tres personajes que aparecen en la serie de los Caballeros
+              del Zodíaco.
+              <div data-target-group="1"></div>
+            </div>
+            <div>
+              <h4>Personajes:</h4>
+              <div>
+                <div data-group="1">Aldebarán</div>
+                <div data-group="2">Óliver</div>
+                <div data-group="2">Bruce Harper</div>
+                <div data-group="1">Hyoga</div>
+                <div data-group="2">Benji Price</div>
+                <div data-group="1">Shiryu</div>
+              </div>
+              <br class="clear" />
+            </div>
+            <div class="box_end"></div>
+          </div>
           </div>
         </div>
 
         <div class="subpage" id="pag-actividades-arrastrar6">
           <h3>Arrastrar y soltar - según la imagen</h3>
-
           <div class="instruction">Arrastre la respuesta correcta sobre el espacio en blanco</div>
-          <div id="arrastrar6" class="jpit-activities-droppable row" data-act-id="arrastrar6"
+          <div class="box-text box-text--activity" label="Arrastrar según imagen">
+            <div id="arrastrar6" class="jpit-activities-droppable row" data-act-id="arrastrar6"
             data-act-title="Arrastrar según imagen">
             <div class="col-2">
               <div class="board ctrl-pagination" data-orientation="sides">
@@ -1356,43 +1123,7 @@
               <div class="box_end"></div>
             </div>
           </div>
-
-          <div class="box-text box-text--example" label="HTML">
-            <p>
-              El HTML para la actividad anterior sería el siguiente:
-            </p>
-            <pre>
-&lt;div id="arrastrar6" class="jpit-activities-droppable row" data-act-id="arrastrar6" data-act-title="Arrastrar según imagen"&gt;
-    &lt;div class="col-2"&gt;
-        &lt;div class="board ctrl-pagination" data-orientation="sides"&gt;
-            &lt;li&gt;
-                &lt;div class="image"&gt;
-                    &lt;div class="box_media"&gt;
-                        &lt;img src="content/mujer.png" /&gt;
-                    &lt;/div&gt;
-                &lt;/div&gt;
-                &lt;div class="target" data-target-group="1"&gt;&lt;/div&gt;
-            &lt;/li&gt;
-            &lt;li&gt;
-                &lt;div class="image"&gt;
-                    &lt;div class="box_media"&gt;
-                        &lt;img src="content/mujer2.png" /&gt;
-                    &lt;/div&gt;
-                &lt;/div&gt;
-                &lt;div class="target" data-target-group="2"&gt;&lt;/div&gt;
-            &lt;/li&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div class="col-2 sources"&gt;
-        &lt;div class="item" data-group="1"&gt;Color&lt;/div&gt;
-        &lt;div class="item" data-group="2"&gt;Blanco y negro&lt;/div&gt;
-        &lt;div class="box_end"&gt;&lt;/div&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
-</pre>
           </div>
-
-
         </div>
 
         <div class="subpage">
@@ -1424,239 +1155,60 @@
               </li>
           </ul>
 
-          <div class="horizontal-menu">
-              <dl>
-                  <dt>Ejemplo</dt>
-                  <dd>
-                      <div class="jpit-activities-check">
-                          <words>
-                              <li data-val="true">Medellín</li>
-                              <li data-val="true">Cartagena</li>
-                              <li>Turín</li>
-                              <li data-val="true">Santa Marta</li>
-                              <li>Hong Kong</li>
-                              <li>Quito</li>
-                              <li data-val="true">Villavicencio</li>
-                              <li>Lima</li>
-                              <li data-val="true">Pasto</li>
-                              <li data-val="true">Armenia</li>
-                          </words>
-                          <div class="board">
-                              <div class="check_left">
-                                  <div class="play">
-                                      <p>Indique si la siguiente ciudad es o no colombiana:</p>
-                                      <div class="word_content">&nbsp;</div>
-                                      <div class="buttons">
-                                          <button class="yes general">Si</button>
-                                          <button class="not general">No</button>
-                                      </div>
-                                  </div>
-                                  <div class="box_conclution">
-                                      <h3>¡Ha finalizado!</h3>
-                                      <p>Al clasificar ha tenido los siguientes aciertos y desaciertos:</p>
-                                      <p>
-                                          <strong>Aciertos:</strong>
-                                          <span class="correct_words"></span>
-                                      </p>
-                                      <p>
-                                          <strong>Desaciertos:</strong>
-                                          <span class="wrong_words"></span>
-                                      </p>
-                                      <div class="buttons">
-                                          <button class="general reload">Vovler a clasificar las ciudades incorrectamente clasificadas</button>
-                                      </div>
-                                  </div>
-                              </div>
-                              <div class="check_right">
-                                  <div class="box_result">
-                                      <div class="correct">
-                                          <div class="hits">0</div>
-                                          <div class="text">Aciertos</div>
-                                      </div>
-                                      <div class="wrong">
-                                          <div class="miss">0</div>
-                                          <div class="text">Desaciertos</div>
-                                      </div>
-                                  </div>
-                              </div>
+          <div class="box-text box-text--activity" label="Clasificar">
+            <div class="jpit-activities-check">
+              <words>
+                  <li data-val="true">Medellín</li>
+                  <li data-val="true">Cartagena</li>
+                  <li>Turín</li>
+                  <li data-val="true">Santa Marta</li>
+                  <li>Hong Kong</li>
+                  <li>Quito</li>
+                  <li data-val="true">Villavicencio</li>
+                  <li>Lima</li>
+                  <li data-val="true">Pasto</li>
+                  <li data-val="true">Armenia</li>
+              </words>
+              <div class="board">
+                  <div class="check_left">
+                      <div class="play">
+                          <p>Indique si la siguiente ciudad es o no colombiana:</p>
+                          <div class="word_content">&nbsp;</div>
+                          <div class="buttons">
+                              <button class="yes general">Si</button>
+                              <button class="not general">No</button>
                           </div>
                       </div>
-                  </dd>
-              </dl>
-              <dl>
-                  <dt>HTML</dt>
-                  <dd>
-<pre>
-&lt;div class="jpit-activities-check"&gt;
-&lt;words&gt;
-&lt;li data-val="true"&gt;Medellín&lt;/li&gt;
-&lt;li data-val="true"&gt;Cartagena&lt;/li&gt;
-&lt;li&gt;Turín&lt;/li&gt;
-&lt;li data-val="true"&gt;Santa Marta&lt;/li&gt;
-&lt;li&gt;Hong Kong&lt;/li&gt;
-&lt;li&gt;Quito&lt;/li&gt;
-&lt;li data-val="true"&gt;Villavicencio&lt;/li&gt;
-&lt;li&gt;Lima&lt;/li&gt;
-&lt;li data-val="true"&gt;Pasto&lt;/li&gt;
-&lt;li data-val="true"&gt;Armenia&lt;/li&gt;
-&lt;/words&gt;
-&lt;div class="board"&gt;
-&lt;div class="check_left"&gt;
-  &lt;div class="play"&gt;
-      &lt;p&gt;Indique si la siguiente ciudad es o no colombiana:&lt;/p&gt;
-      &lt;div class="word_content"&gt;&nbsp;&lt;/div&gt;
-      &lt;div class="buttons"&gt;
-          &lt;button class="yes general"&gt;Si&lt;/button&gt;
-          &lt;button class="not general"&gt;No&lt;/button&gt;
-      &lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div class="box_conclution"&gt;
-      &lt;h3&gt;¡Ha finalizado!&lt;/h3&gt;
-      &lt;p&gt;Al clasificar ha tenido los siguientes aciertos y desaciertos:&lt;/p&gt;
-      &lt;p&gt;
-          &lt;strong&gt;Aciertos:&lt;/strong&gt;
-          &lt;span class="correct_words"&gt;&lt;/span&gt;
-      &lt;/p&gt;
-      &lt;p&gt;
-          &lt;strong&gt;Desaciertos:&lt;/strong&gt;
-          &lt;span class="wrong_words"&gt;&lt;/span&gt;
-      &lt;/p&gt;
-      &lt;div class="buttons"&gt;
-          &lt;button class="general reload"&gt;Vovler a clasificar las ciudades incorrectamente clasificadas&lt;/button&gt;
-      &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="check_right"&gt;
-  &lt;div class="box_result"&gt;
-      &lt;div class="correct"&gt;
-          &lt;div class="hits"&gt;0&lt;/div&gt;
-          &lt;div class="text"&gt;Aciertos&lt;/div&gt;
-      &lt;/div&gt;
-      &lt;div class="wrong"&gt;
-          &lt;div class="miss"&gt;0&lt;/div&gt;
-          &lt;div class="text"&gt;Desaciertos&lt;/div&gt;
-      &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-</pre>
-                  </dd>
-              </dl>
-              <dl>
-                  <dt>CSS personalizado</dt>
-                  <dd>
-<pre class="notmobile">
-.jpit-activities-check .check_left {
-float: left;
-width: 50%;
-}
-
-.jpit-activities-check .check_left .word_content {
-background: #ffffff none repeat scroll 0 0;
-box-shadow: 3px 3px 3px #dadbdc;
-margin-bottom: 10px;
-padding: 20px 10px;
-text-align: center;
-font-size: 20px;
-}
-
-.jpit-activities-check .check_right {
-float: right;
-}
-
-.jpit-activities-check .buttons {
-text-align: center;
-}
-
-.jpit-activities-check .buttons button.yes,
-.jpit-activities-check .buttons button.not {
-font-size: 30px;
-}
-
-.jpit-activities-check .box_result {
-float: left;
-font-size: 20px;
-text-align: center;
-}
-
-.jpit-activities-check .box_result > div {
-background-color: #ffffff;
-box-shadow: 3px 3px 3px #cbcccc;
-padding: 10px;
-width: 110px;
-float: left;
-margin: 0 10px;
-}
-
-.jpit-activities-check .box_result .correct {
-color: #8bc541;
-}
-.jpit-activities-check .box_result .hits {
-font-size:30px;
-}
-
-.jpit-activities-check .box_result .wrong {
-color: #d60c1b;
-}
-.jpit-activities-check .box_result .miss {
-font-size:30px;
-}
-</pre>
-<pre class="onlymobile">
-.jpit-activities-check .check_left {
-margin-bottom: 10px;
-}
-
-.jpit-activities-check .check_left .word_content {
-background: #ffffff none repeat scroll 0 0;
-box-shadow: 3px 3px 3px #dadbdc;
-margin-bottom: 10px;
-padding: 20px 10px;
-text-align: center;
-font-size: 20px;
-}
-
-.jpit-activities-check .buttons {
-text-align: center;
-}
-
-.jpit-activities-check .buttons button.yes,
-.jpit-activities-check .buttons button.not {
-font-size: 20px;
-}
-
-.jpit-activities-check .box_result {
-float: left;
-font-size: 20px;
-text-align: center;
-}
-
-.jpit-activities-check .box_result > div {
-background-color: #ffffff;
-box-shadow: 3px 3px 3px #cbcccc;
-padding: 10px;
-width: 110px;
-float: left;
-margin: 0 10px;
-}
-
-.jpit-activities-check .box_result .correct {
-color: #8bc541;
-}
-.jpit-activities-check .box_result .hits {
-font-size:30px;
-}
-
-.jpit-activities-check .box_result .wrong {
-color: #d60c1b;
-}
-.jpit-activities-check .box_result .miss {
-font-size:30px;
-}
-</pre>
-                  </dd>
-              </dl>
+                      <div class="box_conclution">
+                          <h3>¡Ha finalizado!</h3>
+                          <p>Al clasificar ha tenido los siguientes aciertos y desaciertos:</p>
+                          <p>
+                              <strong>Aciertos:</strong>
+                              <span class="correct_words"></span>
+                          </p>
+                          <p>
+                              <strong>Desaciertos:</strong>
+                              <span class="wrong_words"></span>
+                          </p>
+                          <div class="buttons">
+                              <button class="general reload">Vovler a clasificar las ciudades incorrectamente clasificadas</button>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="check_right">
+                      <div class="box_result">
+                          <div class="correct">
+                              <div class="hits">0</div>
+                              <div class="text">Aciertos</div>
+                          </div>
+                          <div class="wrong">
+                              <div class="miss">0</div>
+                              <div class="text">Desaciertos</div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
           </div>
       </div>
 
@@ -1674,34 +1226,14 @@ font-size:30px;
             de la actividad es únicamente "sin completar" o 100%.
           </p>
 
-          <div class="horizontal-menu">
-            <dl>
-              <dt>
-                Ejemplo
-              </dt>
-              <dd>
-                <p>
-                  Vea el siguiente contenido: <button class="w-content-controler general jpit-activities-view"
-                    data-content="#ventana_act_ver">Abrir contenido</button>
-                </p>
-                <div id="ventana_act_ver" class="w-content">
-                  Acá estaría el contenido. En este momento la actividad ya se marca como completada.
-                </div>
-              </dd>
-            </dl>
-            <dl>
-              <dt>HTML</dt>
-              <dd>
-                <pre>
-&lt;p&gt;
-    Vea el siguiente contenido:
-    &lt;button class="w-content-controler general jpit-activities-view" data-content="#ventana_act_ver"&gt;Abrir contenido&lt;/button&gt;
-&lt;/p&gt;
-&lt;div id="ventana_act_ver" class="w-content"&gt;
-    Acá estaría el contenido. En este momento la actividad ya se marca como completada.
-&lt;/div&gt;</pre>
-              </dd>
-            </dl>
+          <div class="box-text box-text--activity" label="Ver - Abrir">
+            <p>
+              Vea el siguiente contenido: <button class="w-content-controler general jpit-activities-view"
+                data-content="#ventana_act_ver">Abrir contenido</button>
+            </p>
+            <div id="ventana_act_ver" class="w-content">
+              Acá estaría el contenido. En este momento la actividad ya se marca como completada.
+            </div>
           </div>
         </div>
       </section>
