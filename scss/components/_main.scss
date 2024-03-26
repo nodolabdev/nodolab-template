@@ -1,7 +1,10 @@
 main {
   margin: 0 auto;
-  padding: 80px 16px;
+  padding: 112px 20px 80px;
   transition: margin-left 0.3s ease;
+  @include respond-to('medium') {
+    padding-top: 80px;
+  }
   @include respond-to('large') {
     padding: 130px 60px;
   }

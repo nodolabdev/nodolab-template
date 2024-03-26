@@ -1,0 +1,5 @@
+@font-face {
+  font-family: "Material Symbols Rounded";
+  src: url("./fonts/MaterialSymbolsRounded.woff2") format('woff2');
+  src: url("./fonts/MaterialSymbolsRounded.ttf") format("truetype"), url("./fonts/MaterialSymbolsRounded.woff2") format("woff2");
+}

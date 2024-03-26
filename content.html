@@ -87,10 +87,10 @@
     <div id="not_scorm_msg" style="display: none;"></div>
 
     <header class="scorm__header">
+      <div class="drawer__overlay"></div>
       <label for="drawer-toggle" id="drawer-open" class="scorm__drawer-toggle">
-        <svg viewBox="0 0 24 24">
-          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/content/icons.svg#menu"></use>
-        </svg>
+        <span class="google-symbols-rounded closed">menu</span>
+        <span class="google-symbols-rounded opened">menu_open</span>
       </label>
       <input type="checkbox" id="drawer-toggle">
       <nav label="Principal" class="horizontal main scorm__drawer" data-offset="true">
@@ -119,25 +119,19 @@
       <h1 class="scorm-title page-title"></h1>
       <nav label="Características globales" class="globals scorm__globals">
         <menu>
-          <menuitem data-global-id="results">
+          <menuitem data-global-id="results" title="Progreso">
           <div class="progress">
-            <svg viewBox="0 0 24 24">
-              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/content/icons.svg#location"></use>
-            </svg>
+            <span class="google-symbols-rounded" >checklist</span>
           </div>
           </menuitem>
-          <menuitem data-global-id="return">
+          <menuitem data-global-id="return" title="Salir de pantalla completa">
           <div class="return">
-            <svg viewBox="0 0 24 24">
-              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/content/icons.svg#home"></use>
-            </svg>
+            <span class="google-symbols-rounded" >fullscreen_exit</span>
           </div>
           </menuitem>
-          <menuitem data-global-id="close_all">
+          <menuitem data-global-id="close_all" title="Regresar al curso">
           <div class="home">
-            <svg viewBox="0 0 24 24">
-              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/content/icons.svg#expand"></use>
-            </svg>
+            <span class="google-symbols-rounded" >logout</span>
           </div>
           </menuitem>
         </menu>
@@ -145,8 +139,6 @@
     </header>
 
     <main style="display: none;">
-      <div class="drawer__overlay"></div>
-
       <section id="pag-inicio" ptitle="Contextualización">
 
         <div class="subpage">

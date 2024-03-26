@@ -93,6 +93,10 @@ dhbgApp.standard.start = function() {
                 $item.attr('data-global', $li.attr('data-global-id'));
             }
 
+            if ($li.attr('title')) {
+                $item.attr('title', $li.attr('title'));
+            }
+
             return $item;
         };
 
@@ -202,7 +206,7 @@ dhbgApp.standard.start = function() {
     // ==============================================================================================
     // Handlers of the Menu/Drawer
     // ==============================================================================================
-    $('#drawer-toggle').change(function() {
+    $('#drawer-toggle').on('change', function() {
       $('body').toggleClass('panel-open', this.checked);
     });
 
@@ -218,6 +222,11 @@ dhbgApp.standard.start = function() {
       } else {
           return 'small';
       }
+    }
+
+    const viewportWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+    if (getBreakpoint(viewportWidth) === 'large') {
+        $('#drawer-toggle').prop('checked', true);
     }
 
     $('.scorm__drawer').on('click', function(e) {
@@ -447,8 +456,8 @@ dhbgApp.standard.start = function() {
         });
     }
     else {
-        $('[data-global="return"]').hide();
-        $('[data-global="close_all"]').hide();
+        // $('[data-global="return"]').hide();
+        // $('[data-global="close_all"]').hide();
     }
 
     // Results control.

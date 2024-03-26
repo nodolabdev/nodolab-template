@@ -4,6 +4,8 @@
   position: fixed;
   min-width: 280px;
   max-width: 560px;
+  max-height: 96%;
+  overflow: hidden;
   border-radius: 12px;
   padding: 0;
   background-color: var(--dialog-bg-color);

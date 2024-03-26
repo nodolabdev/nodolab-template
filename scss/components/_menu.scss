@@ -38,13 +38,20 @@
             background-color: var(--color-primary);
           }
           &::before {
-            content: '▴';  
+            content: 'arrow_drop_up';  
           }
         }
         &::before {
-          content: '▾';
+          font-family: "Material Symbols Rounded";
+          content: 'arrow_drop_down';
+          font-size: 20px;
           position: absolute;
           right: 24px;
+
+
+          @include respond-to('large') {
+            font-size: 24px;
+          }
         }
       }
     }
