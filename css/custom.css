@@ -40,69 +40,6 @@
 #pag-textos-iconografia .effects i.d { text-shadow: 8px 0px 0px #000;  }
 
 
-/********************************************************************************/
-/* Solo para ejemplo de mouse over 1
-/********************************************************************************/
-#pag-textos-mouseover1 .mouse-over-one .button {
-    background: #FFFFFF;
-    border: dashed #00A5C0 1px;
-    float: left;
-    margin: 10px;
-    text-align: center;
-    font-weight: bold;
-    padding: 10px;
-}
-
-#pag-textos-mouseover1 .mouse-over-one .button:hover {
-    background: #f6ae00;
-}
-
-#pag-textos-mouseover1 .mouse-over-one {
-    vertical-align: top;
-}
-
-#pag-textos-mouseover1 .contenido_sobre h5 {
-    margin: 0;
-}
-
-#pag-textos-mouseover1 .contenido_sobre {
-    padding: 10px;
-    text-align: justify;
-    box-shadow: 7px 7px 5px #cccccc;
-    background: #FFFFFF;
-    border: 1px solid #aaa;
-    margin-bottom: 20px;
-    border-radius: 5px;
-}
-
-#pag-textos-mouseover1 .element { height: 100px; overflow: auto; }
-
-/********************************************************************************/
-/* Solo para ejemplo de mouse over 2
-/********************************************************************************/
-#pag-textos-mouseover2 .mouse-over {
-    background: #FFFFFF;
-    border: dashed #00A5C0 1px;
-    margin: 10px auto;
-    text-align: center;
-    font-weight: bold;
-    padding: 10px;
-    width: 10px;
-}
-
-#pag-textos-mouseover2 .mouse-over:hover {
-    background: #f6ae00;
-}
-
-#pag-textos-mouseover2 .contenido_sobre {
-    padding: 10px;
-    text-align: justify;
-    box-shadow: 7px 7px 5px #cccccc;
-    background: #FFFFFF;
-    border: 1px solid #aaa;
-    margin-bottom: 20px;
-    border-radius: 5px;
-}
 
 /********************************************************************************/
 /* Imágenes con texto
@@ -115,13 +52,7 @@
 /********************************************************************************/
 /* Actividad Quiz
 /********************************************************************************/
-.pag-actividades-cuestionario .chalkboard_content {
-    min-height: 350px;
-    height: auto;
-}
 
-.jpit_activities_quiz_question_answers { height: 150px; overflow: auto; }
-.jpit_activities_quiz_board { height: 220px; }
 
 /********************************************************************************/
 /* Actividad arrastrar y soltar - apareamiento

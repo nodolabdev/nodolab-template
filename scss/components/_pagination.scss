@@ -6,6 +6,7 @@
   color: #2B2D63;
   border-radius: 30px;
   padding-bottom: 64px;
+
   @include respond-to('medium') {
     padding-inline: 60px;
   }
@@ -14,16 +15,27 @@
     display: none;
   }
 
+  .layers-wrapper {
+    width: 100%;
+    overflow: hidden;
+  }
+
   ul.layers {
+    --current-page: 0;
     list-style: none;
+    width: 100%;
     margin: 0;
     padding: 0;
-    overflow: auto;
+    display: flex;
+    transform: translateX(calc(100% * var(--current-page)* -1));
+    transition: transform 0.3s ease-out;
   }
 
   li.layer {
     margin: 0;
     padding: 5px 10px 0 10px;
+    flex: 0 0 100%;
+    overflow: auto;
   }
 
   .position {
@@ -35,6 +47,7 @@
     margin: 0;
     padding-block: 0;
     @include body();
+
     @include respond-to('medium') {
       position: absolute;
       bottom: -12px;
@@ -52,11 +65,13 @@
     position: absolute;
     transform: translateX(-50%);
     width: 100%;
+
     li {
       display: flex;
       align-items: center;
       justify-content: center;
     }
+
     @include respond-to('medium') {
       position: unset;
       transform: unset;
@@ -74,6 +89,8 @@
     background-size: 40%;
     background-position: center;
     background-repeat: no-repeat;
+    border-width: 0;
+
     @include respond-to('medium') {
       position: absolute;
       left: 0;
@@ -81,12 +98,14 @@
       transform: translateY(-50%);
     }
 
-    &.previous { 
+    &.previous {
       transform: rotateY(180deg);
+
       @include respond-to('medium') {
         transform: translateY(-50%) rotateY(180deg);
       }
     }
+
     &.next {
       @include respond-to('medium') {
         left: unset;

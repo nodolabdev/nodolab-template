@@ -711,23 +711,16 @@ dhbgApp.standard.start = function() {
                 $item.append('<div class="label_current">' + label + '</div>');
             }
 
-            if (i > 1) {
-                $item.hide();
-            }
 
             i++;
         });
         $items.data('current', 0);
 
             // Next button.
-            var $next_button = $('<li><div class="button next"></div></li>');
-            $next_button.on('mouseover', dhbgApp.defaultValues.buttonover);
-            $next_button.on('mouseout', dhbgApp.defaultValues.buttonout);
+            var $next_button = $('<li><button class="button next"></button></li>');
 
             // Back button.
-            var $back_button = $('<li><div class="button previous"></div></li>');
-            $back_button.on('mouseover', dhbgApp.defaultValues.buttonover);
-            $back_button.on('mouseout', dhbgApp.defaultValues.buttonout);
+            var $back_button = $('<li><button class="button previous"></button></li>');
 
             // It in first page is hidden.
             $back_button.css('visibility', 'hidden');
@@ -748,8 +741,8 @@ dhbgApp.standard.start = function() {
                 }
 
                 var prevpage = $items.get(new_item_index);
-                showPage(prevpage, false);
                 $items.data('current', new_item_index);
+                $list.css({ "--current-page": `${new_item_index}` });
                 $position_index_label.text(dhbgApp.s('pagination_label', { 'a': (new_item_index + 1), 'b': $items.length } ));
 
                 if (new_item_index < $items.length) {
@@ -792,8 +785,8 @@ dhbgApp.standard.start = function() {
                 }
 
                 var nextpage = $items.get(new_item_index);
-                showPage(nextpage, true);
                 $items.data('current', new_item_index);
+                $list.css({ "--current-page": `${new_item_index}` });
                 $position_index_label.text(dhbgApp.s('pagination_label', { 'a': (new_item_index + 1), 'b': $items.length } ));
 
                 if (new_item_index == $items.length - 1) {
@@ -826,7 +819,9 @@ dhbgApp.standard.start = function() {
                 return ($items.data('current') + 1) == total_pages;
             }
         });
-        $this.append($list);
+        const $list_wrapper = $('<div class="layers-wrapper"></div>');
+        $list_wrapper.append($list);
+        $this.append($list_wrapper);
         $this.append($list_buttons);
         $this.append('<div class="clear"></div>');
         var animation = $this.attr('data-animation') || 'none';
