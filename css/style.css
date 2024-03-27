@@ -2073,6 +2073,15 @@ main {
         font-size: var(--font-size-large-22);
         line-height: var(--font-size-large-30); } }
 
+.timeline {
+  width: 100%;
+  height: 80vh;
+  position: relative;
+  z-index: 1; }
+  @media (min-width: 1024px) {
+    .timeline {
+      height: 50vh; } }
+
 .ui-dialog {
   position: fixed;
   min-width: 280px;

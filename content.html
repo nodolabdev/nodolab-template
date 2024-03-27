@@ -51,9 +51,13 @@
   <script src="js/init.js"></script>
   <script src="js/lang.es.js"></script>
   <script src="js/lib.js"></script>
-  <script src="js/stories.js"></script>
   <script src="components/scorm/SCORM_12_APIWrapper.js"> </script>
   <script src="components/scorm/scorm_api.js"> </script>
+
+  <!-- Add timeline files if required -->
+  <link rel="stylesheet" href="components/timelinejs/timeline.css" type="text/css" />
+  <script src="components/timelinejs/timeline.js"> </script>
+  <!-- End of timeline files -->
 
   <style type='text/css'>
     body {
@@ -905,6 +909,14 @@
           </div>
           <br class="clear" />
         </div>
+
+        <div class="subpage" id="pag-contenido-timeline">
+
+          <h3>Línea de tiempo interactiva</h3>
+          <div class="timeline">
+            <div id="makeup-history-timeline"></div>
+          </div>
+        </div>
       </section>
 
       <!--Actividades-->
@@ -1540,8 +1552,9 @@
     </div>
   </div>
 
-  <!-- <div class="drawer__overlay"></div> -->
-
+ <!-- Add timeline init file if required -->
+  <script src="js/timeline_init.js"></script>
+  <!-- End of timeline init file -->
 </body>
 
 </html>
