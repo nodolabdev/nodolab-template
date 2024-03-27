@@ -54,7 +54,7 @@
     grid-template-areas: 'content';
     grid-template-columns: minmax(0, 1fr);
     max-height: 400px;
-    overflow: scroll;
+    overflow-y: scroll;
 
     @include respond-to('medium') {
       @include spacer(3, padding, block);

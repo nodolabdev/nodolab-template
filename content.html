@@ -121,17 +121,17 @@
         <menu>
           <menuitem data-global-id="results" title="Progreso">
           <div class="progress">
-            <span class="google-symbols-rounded" >checklist</span>
+            <span class="google-symbols-rounded">checklist</span>
           </div>
           </menuitem>
           <menuitem data-global-id="return" title="Salir de pantalla completa">
           <div class="return">
-            <span class="google-symbols-rounded" >fullscreen_exit</span>
+            <span class="google-symbols-rounded">fullscreen_exit</span>
           </div>
           </menuitem>
           <menuitem data-global-id="close_all" title="Regresar al curso">
           <div class="home">
-            <span class="google-symbols-rounded" >logout</span>
+            <span class="google-symbols-rounded">logout</span>
           </div>
           </menuitem>
         </menu>
@@ -472,8 +472,12 @@
             <div id="ventana_textos_modal" class="w-content">
               <h4>Título de la ventana modal</h4>
               <div class="content">
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestiae aperiam odit quas quia impedit voluptate cupiditate harum, quaerat, ab alias explicabo dignissimos placeat, id eum? Blanditiis in consequuntur modi deleniti.</p>
-                <p>Adipisci minima consequuntur voluptatibus cumque doloremque ratione nulla, consequatur, tempora eius provident quo odit fugiat nemo voluptas inventore officia doloribus, expedita exercitationem quia veniam non! Quam sint deleniti quas sequi?</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestiae aperiam odit quas quia impedit
+                  voluptate cupiditate harum, quaerat, ab alias explicabo dignissimos placeat, id eum? Blanditiis in
+                  consequuntur modi deleniti.</p>
+                <p>Adipisci minima consequuntur voluptatibus cumque doloremque ratione nulla, consequatur, tempora eius
+                  provident quo odit fugiat nemo voluptas inventore officia doloribus, expedita exercitationem quia
+                  veniam non! Quam sint deleniti quas sequi?</p>
               </div>
             </div>
           </div>
@@ -652,8 +656,8 @@
 
         <div class="subpage">
           <h3>Menú horizontal</h3>
-            <div class="instruction">Toca cada elemento para ver su contenido</div>
-            <br>
+          <div class="instruction">Toca cada elemento para ver su contenido</div>
+          <br>
 
           <div class="horizontal-menu">
             <dl>
@@ -667,8 +671,11 @@
                   ve una por una acorde a un menú de texto en la parte superior del contenido.</p>
                 <p>En caso de requerir colocar un título en el contenido de cada elemento, se aconseja agregarlo en una
                   etiqueta <em>h5</em>.
-                <p>Cuando la cantidad de items del menú es tal que el ancho del menú es mayor al ancho del dispositivo, se genera un scroll horizontal.</p>
-                <p>La altura del contenedor del contenido será igual al alto que ocupe el ítem con más contenido, para esto se debe procurar que el contenido que muestra cada item sea similar al de los demás, es decir que ocupe mas o menos el mismo alto.</p>
+                <p>Cuando la cantidad de items del menú es tal que el ancho del menú es mayor al ancho del dispositivo,
+                  se genera un scroll horizontal.</p>
+                <p>La altura del contenedor del contenido será igual al alto que ocupe el ítem con más contenido, para
+                  esto se debe procurar que el contenido que muestra cada item sea similar al de los demás, es decir que
+                  ocupe mas o menos el mismo alto.</p>
               </dd>
             </dl>
             <dl>
@@ -696,19 +703,22 @@
 </pre>
               </dd>
             </dl>
-                        <dl>
+            <dl>
               <dt>
                 Consideraciones 2
               </dt>
               <dd>
                 <h5>Algunas consideraciones 2</h5>
 
-               <p>Se utiliza cuando hay una serie de opciones que se van a colocar en una misma página pero el usuario
+                <p>Se utiliza cuando hay una serie de opciones que se van a colocar en una misma página pero el usuario
                   ve una por una acorde a un menú de texto en la parte superior del contenido.</p>
                 <p>En caso de requerir colocar un título en el contenido de cada elemento, se aconseja agregarlo en una
                   etiqueta <em>h5</em>.
-                <p>Cuando la cantidad de items del menú es tal que el ancho del menú es mayor al ancho del dispositivo, se genera un scroll horizontal.</p>
-                <p>La altura del contenedor del contenido será igual al alto que ocupe el ítem con más contenido, para esto se debe procurar que el contenido que muestra cada item sea similar al de los demás, es decir que ocupe mas o menos el mismo alto.</p>
+                <p>Cuando la cantidad de items del menú es tal que el ancho del menú es mayor al ancho del dispositivo,
+                  se genera un scroll horizontal.</p>
+                <p>La altura del contenedor del contenido será igual al alto que ocupe el ítem con más contenido, para
+                  esto se debe procurar que el contenido que muestra cada item sea similar al de los demás, es decir que
+                  ocupe mas o menos el mismo alto.</p>
               </dd>
             </dl>
             <dl>
@@ -765,6 +775,48 @@
             </li>
           </div>
           <div class="instruction">Haga clic sobre las flechas para pasar entre páginas</div>
+        </div>
+        <div class="subpage" id="pag-cards">
+          <h3>Cards (Tarjetas)</h3>
+          <p>Utilice una tarjeta para mostrar contenido y acciones sobre un solo tema.
+            Las tarjetas deben ser fáciles de escanear en busca de información relevante y procesable. Elementos como
+            texto e imágenes deben colocarse en las tarjetas de manera que indique claramente la jerarquía.
+            Las cards deben ir agrupadas en un div con la clase <em>cards</em>. Cada cada debe a su vez tener definida
+            la clase <em>card</em> y recibir los atributos: <em>label</em> para el título en la card, <em>img</em> con
+            la ubicación de la imagen y <em>img-alt</em> con el text alternativo de la imagen.
+            Se recomienta un texto máximo de 200 caractéres dentro de cada card para una visualización natural dentro
+            de los diferentes viewports y si se requiere, utilizar el CTA para expandir la información dentro de 
+            una ventana modal.
+            También se recomienda utilizar imagenes con un aspect-ratio de 1/1 (cuadradas) para evitar que se pierda
+            información de la imagen en el ajuste al contenedor de la tarjeta.
+          </p>
+          <div class="cards">
+            <div class="card" label="Dinosaurs will die" img="/content/makeup-woman.jpg" img-alt="Cuerpo">
+              <p>Antes de iniciar un maquillaje es fundamental limpiar la piel del rostro, usa agua micelar para
+                eliminar
+                impurezas, maquillaje que traiga la persona, e incluso los restos del desmaquillante bifásico.
+              </p>
+            </div>
+            <div class="card" label="Bob" img="/content/ojo.jpg" img-alt="Cuerpo">
+              <p>Mattis pellentesque id nibh tortor id. Pulvinar etiam non quam lacus suspendisse faucibus interdum
+                posuere lorem. Malesuada pellentesque elit eget gravida. Quis enim lobortis scelerisque fermentum dui.
+              </p>
+              <button class="w-content-controler general"
+                data-content="#card-aditional-content">Abrir contenido adicional</button>
+              <div id="card-aditional-content" class="w-content">
+                Acá estaría el contenido de esta card.
+              </div>
+            </div>
+            <div class="card" label="The separation of church and skate" img="/content/makeup-woman.jpg"
+              img-alt="Cuerpo">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Vitae sapien pellentesque habitant morbi.</p>
+            </div>
+            <div class="card" label="Stickin in my eye" img="/content/ojo.jpg" img-alt="Cuerpo">
+              <p>Ac felis donec et odio pellentesque diam volutpat commodo. Pulvinar sapien et ligula ullamcorper
+                malesuada proin libero nunc consequat. Nunc scelerisque viverra mauris in.</p>
+            </div>
+          </div>
         </div>
 
         <div class="subpage" id="pag-contenidointeractivo-viewfirst">
@@ -1000,39 +1052,38 @@
           </p>
 
           <div class="box-text box-text--activity" label="Arrastrar y soltar - modo apareamiento">
-            <div id="arrastrar1" class="jpit-activities-droppable" data-verify-type="target"
-                  data-act-id="arrastrar1">
-                  <p>Complete los espacios en blanco con las capitales correspondientes, del listado inferior.</p>
-                  <table>
-                    <tr>
-                      <th>Risaralda</th>
-                      <td class="conection"><span class="icon_horizontal_arrow"></span></td>
-                      <td data-target-group="1"></td>
-                    </tr>
-                    <tr>
-                      <th>Antioquia</th>
-                      <td class="conection"><span class="icon_horizontal_arrow"></span></td>
-                      <td data-target-group="2"></td>
-                    </tr>
-                    <tr>
-                      <th>Norte de Santander</th>
-                      <td class="conection"><span class="icon_horizontal_arrow"></span></td>
-                      <td data-target-group="3"></td>
-                    </tr>
-                  </table>
+            <div id="arrastrar1" class="jpit-activities-droppable" data-verify-type="target" data-act-id="arrastrar1">
+              <p>Complete los espacios en blanco con las capitales correspondientes, del listado inferior.</p>
+              <table>
+                <tr>
+                  <th>Risaralda</th>
+                  <td class="conection"><span class="icon_horizontal_arrow"></span></td>
+                  <td data-target-group="1"></td>
+                </tr>
+                <tr>
+                  <th>Antioquia</th>
+                  <td class="conection"><span class="icon_horizontal_arrow"></span></td>
+                  <td data-target-group="2"></td>
+                </tr>
+                <tr>
+                  <th>Norte de Santander</th>
+                  <td class="conection"><span class="icon_horizontal_arrow"></span></td>
+                  <td data-target-group="3"></td>
+                </tr>
+              </table>
 
-                  <h4>Capitales:</h4>
-                  <div>
-                    <div data-group="2" class="item_1">Medellín</div>
-                    <div data-group="4" class="item_2">Bogotá</div>
-                    <div data-group="4" class="item_3">Rioacha</div>
-                    <div data-group="3" class="item_4">Cúcuta</div>
-                    <div data-group="1" class="item_5">Pereira</div>
-                  </div>
-                  <br class="clear" />
+              <h4>Capitales:</h4>
+              <div>
+                <div data-group="2" class="item_1">Medellín</div>
+                <div data-group="4" class="item_2">Bogotá</div>
+                <div data-group="4" class="item_3">Rioacha</div>
+                <div data-group="3" class="item_4">Cúcuta</div>
+                <div data-group="1" class="item_5">Pereira</div>
+              </div>
+              <br class="clear" />
 
-                  <div class="box_end"></div>
-                </div>
+              <div class="box_end"></div>
+            </div>
           </div>
         </div>
 
@@ -1049,27 +1100,27 @@
           </p>
 
           <div class="box-text box-text--activity" label="Arrastrar y soltar - modo apareamiento">
-            <div id="arrastrar5" class="jpit-activities-droppable jpit-activities-droppable--multi" data-act-id="arrastrar5" data-target-multi="3"
-            data-autoalign="false">
-            <div>
-              Arrastre al recuadro los nombres de los tres personajes que aparecen en la serie de los Caballeros
-              del Zodíaco.
-              <div data-target-group="1"></div>
-            </div>
-            <div>
-              <h4>Personajes:</h4>
+            <div id="arrastrar5" class="jpit-activities-droppable jpit-activities-droppable--multi"
+              data-act-id="arrastrar5" data-target-multi="3" data-autoalign="false">
               <div>
-                <div data-group="1">Aldebarán</div>
-                <div data-group="2">Óliver</div>
-                <div data-group="2">Bruce Harper</div>
-                <div data-group="1">Hyoga</div>
-                <div data-group="2">Benji Price</div>
-                <div data-group="1">Shiryu</div>
+                Arrastre al recuadro los nombres de los tres personajes que aparecen en la serie de los Caballeros
+                del Zodíaco.
+                <div data-target-group="1"></div>
               </div>
-              <br class="clear" />
+              <div>
+                <h4>Personajes:</h4>
+                <div>
+                  <div data-group="1">Aldebarán</div>
+                  <div data-group="2">Óliver</div>
+                  <div data-group="2">Bruce Harper</div>
+                  <div data-group="1">Hyoga</div>
+                  <div data-group="2">Benji Price</div>
+                  <div data-group="1">Shiryu</div>
+                </div>
+                <br class="clear" />
+              </div>
+              <div class="box_end"></div>
             </div>
-            <div class="box_end"></div>
-          </div>
           </div>
         </div>
 
@@ -1078,121 +1129,144 @@
           <div class="instruction">Arrastre la respuesta correcta sobre el espacio en blanco</div>
           <div class="box-text box-text--activity" label="Arrastrar según imagen">
             <div id="arrastrar6" class="jpit-activities-droppable row" data-act-id="arrastrar6"
-            data-act-title="Arrastrar según imagen">
-            <div class="col-2">
-              <div class="board ctrl-pagination" data-orientation="sides">
-                <li>
-                  <div class="image">
-                    <div class="box_media">
-                      <img src="content/mujer.png" />
+              data-act-title="Arrastrar según imagen">
+              <div class="col-2">
+                <div class="board ctrl-pagination" data-orientation="sides">
+                  <li>
+                    <div class="image">
+                      <div class="box_media">
+                        <img src="content/mujer.png" />
+                      </div>
                     </div>
-                  </div>
-                  <div class="target" data-target-group="1"></div>
-                </li>
-                <li>
-                  <div class="image">
-                    <div class="box_media">
-                      <img src="content/mujer2.png" />
+                    <div class="target" data-target-group="1"></div>
+                  </li>
+                  <li>
+                    <div class="image">
+                      <div class="box_media">
+                        <img src="content/mujer2.png" />
+                      </div>
                     </div>
-                  </div>
-                  <div class="target" data-target-group="2"></div>
-                </li>
+                    <div class="target" data-target-group="2"></div>
+                  </li>
+                </div>
+              </div>
+              <div class="col-2 sources">
+                <div class="item" data-group="1">Color</div>
+                <div class="item" data-group="2">Blanco y negro</div>
+                <div class="box_end"></div>
               </div>
             </div>
-            <div class="col-2 sources">
-              <div class="item" data-group="1">Color</div>
-              <div class="item" data-group="2">Blanco y negro</div>
-              <div class="box_end"></div>
-            </div>
-          </div>
           </div>
         </div>
 
         <div class="subpage">
           <h3>Clasificar</h3>
           <p>
-              Permite realizar una actividad donde se clasifican contenidos entre dos posibles valores, como: <strong>Verdadero/Falso</strong> o <strong>Si/No</strong>.
+            Permite realizar una actividad donde se clasifican contenidos entre dos posibles valores, como:
+            <strong>Verdadero/Falso</strong> o <strong>Si/No</strong>.
           </p>
           <p>
-              Una actividad de clasificar se define agregando la clase <em>jpit-activities-check</em> a un contenedor y dentro de él:
+            Una actividad de clasificar se define agregando la clase <em>jpit-activities-check</em> a un contenedor y
+            dentro de él:
           </p>
           <ul class="data_list">
-              <li>Una etiqueta <em>words</em> compuesta por elementos <em>li</em> que contendrán las palabras o elementos a clasificar. Los <em>li</em> que contengan a los incluidos/verdaderos/sí deben tener el atributo <em>data-val</em> establecido en <em>true</em>.</li>
-              <li>La estructura HTML personalizada para dar el contexto deseado, asignando las siguientes clases a los controles en los que se desee mostrar la información correspondiente.
+            <li>Una etiqueta <em>words</em> compuesta por elementos <em>li</em> que contendrán las palabras o elementos
+              a clasificar. Los <em>li</em> que contengan a los incluidos/verdaderos/sí deben tener el atributo
+              <em>data-val</em> establecido en <em>true</em>.
+            </li>
+            <li>La estructura HTML personalizada para dar el contexto deseado, asignando las siguientes clases a los
+              controles en los que se desee mostrar la información correspondiente.
+              <ul class="data_list">
+                <li><em>play</em>: es el contenedor inicial. Se oculta al mostrar los resultados y se vuelve a cargar al
+                  momento de reintentar la actividad.</li>
+                <li><em>word_content</em>: elemento donde se mostrarán las "palabras" a clasificar. Se encuentra al
+                  interior del contenedor marcado como <em>play</em>.</li>
+                <li><em>yes</em>: elemento que se comporta como el sí o verdadero al clasificar. Suele ser un
+                  <em>button</em> pero puede ser cualquier otro elemento.
+                </li>
+                <li><em>not</em>: elemento que se comporta como el no o falso al clasificar. Suele ser un
+                  <em>button</em> pero puede ser cualquier otro elemento.
+                </li>
+                <li><em>box_conclution</em>: es el contenedor que se muestra al finalizar la clasificación. Si se desea
+                  que se muestren las respuestas correctamente o incorrectamente clasificadas se debe adicionar una o
+                  las dos siguientes clases, según se desee. El no incluir una de ellas hará que no se muestren esos
+                  tipos de resultados.
                   <ul class="data_list">
-                      <li><em>play</em>: es el contenedor inicial. Se oculta al mostrar los resultados y se vuelve a cargar al momento de reintentar la actividad.</li>
-                      <li><em>word_content</em>: elemento donde se mostrarán las "palabras" a clasificar. Se encuentra al interior del contenedor marcado como <em>play</em>.</li>
-                      <li><em>yes</em>: elemento que se comporta como el sí o verdadero al clasificar. Suele ser un <em>button</em> pero puede ser cualquier otro elemento.</li>
-                      <li><em>not</em>: elemento que se comporta como el no o falso al clasificar. Suele ser un <em>button</em> pero puede ser cualquier otro elemento.</li>
-                      <li><em>box_conclution</em>: es el contenedor que se muestra al finalizar la clasificación. Si se desea que se muestren las respuestas correctamente o incorrectamente clasificadas se debe adicionar una o las dos siguientes clases, según se desee. El no incluir una de ellas hará que no se muestren esos tipos de resultados.
-                          <ul class="data_list">
-                              <li><em>correct_words</em> (opcional): contenedor donde se mostrarán las palabras clasificadas correctamente.</li>
-                              <li><em>wrong_words</em> (opcional):  contenedor donde se mostrarán las palabras que fueron clasificadas incorrectamente.</li>
-                          </ul>
-                      </li>
-                      <li><em>reload</em> (opcional): elemento que controla el reinicio de la actividad luego de cada ronda de clasificación. Si no se adiciona, la actividad tendrá una sola ronda de clasificación. Suele ser un <em>button</em> pero puede ser cualquier otro elemento.</li>
-                      <li><em>hits</em> (opcional): es un contenedor donde se copia la cantidad de aciertos al clasificar.</li>
-                      <li><em>miss</em> (opcional): es un contenedor donde se copia la cantidad de clasificaciones incorrectas.</li>
+                    <li><em>correct_words</em> (opcional): contenedor donde se mostrarán las palabras clasificadas
+                      correctamente.</li>
+                    <li><em>wrong_words</em> (opcional): contenedor donde se mostrarán las palabras que fueron
+                      clasificadas incorrectamente.</li>
                   </ul>
-              </li>
+                </li>
+                <li><em>reload</em> (opcional): elemento que controla el reinicio de la actividad luego de cada ronda de
+                  clasificación. Si no se adiciona, la actividad tendrá una sola ronda de clasificación. Suele ser un
+                  <em>button</em> pero puede ser cualquier otro elemento.
+                </li>
+                <li><em>hits</em> (opcional): es un contenedor donde se copia la cantidad de aciertos al clasificar.
+                </li>
+                <li><em>miss</em> (opcional): es un contenedor donde se copia la cantidad de clasificaciones
+                  incorrectas.</li>
+              </ul>
+            </li>
           </ul>
 
           <div class="box-text box-text--activity" label="Clasificar">
             <div class="jpit-activities-check">
               <words>
-                  <li data-val="true">Medellín</li>
-                  <li data-val="true">Cartagena</li>
-                  <li>Turín</li>
-                  <li data-val="true">Santa Marta</li>
-                  <li>Hong Kong</li>
-                  <li>Quito</li>
-                  <li data-val="true">Villavicencio</li>
-                  <li>Lima</li>
-                  <li data-val="true">Pasto</li>
-                  <li data-val="true">Armenia</li>
+                <li data-val="true">Medellín</li>
+                <li data-val="true">Cartagena</li>
+                <li>Turín</li>
+                <li data-val="true">Santa Marta</li>
+                <li>Hong Kong</li>
+                <li>Quito</li>
+                <li data-val="true">Villavicencio</li>
+                <li>Lima</li>
+                <li data-val="true">Pasto</li>
+                <li data-val="true">Armenia</li>
               </words>
               <div class="board">
-                  <div class="check_left">
-                      <div class="play">
-                          <p>Indique si la siguiente ciudad es o no colombiana:</p>
-                          <div class="word_content">&nbsp;</div>
-                          <div class="buttons">
-                              <button class="yes general">Si</button>
-                              <button class="not general">No</button>
-                          </div>
-                      </div>
-                      <div class="box_conclution">
-                          <h3>¡Ha finalizado!</h3>
-                          <p>Al clasificar ha tenido los siguientes aciertos y desaciertos:</p>
-                          <p>
-                              <strong>Aciertos:</strong>
-                              <span class="correct_words"></span>
-                          </p>
-                          <p>
-                              <strong>Desaciertos:</strong>
-                              <span class="wrong_words"></span>
-                          </p>
-                          <div class="buttons">
-                              <button class="general reload">Vovler a clasificar las ciudades incorrectamente clasificadas</button>
-                          </div>
-                      </div>
+                <div class="check_left">
+                  <div class="play">
+                    <p>Indique si la siguiente ciudad es o no colombiana:</p>
+                    <div class="word_content">&nbsp;</div>
+                    <div class="buttons">
+                      <button class="yes general">Si</button>
+                      <button class="not general">No</button>
+                    </div>
                   </div>
-                  <div class="check_right">
-                      <div class="box_result">
-                          <div class="correct">
-                              <div class="hits">0</div>
-                              <div class="text">Aciertos</div>
-                          </div>
-                          <div class="wrong">
-                              <div class="miss">0</div>
-                              <div class="text">Desaciertos</div>
-                          </div>
-                      </div>
+                  <div class="box_conclution">
+                    <h3>¡Ha finalizado!</h3>
+                    <p>Al clasificar ha tenido los siguientes aciertos y desaciertos:</p>
+                    <p>
+                      <strong>Aciertos:</strong>
+                      <span class="correct_words"></span>
+                    </p>
+                    <p>
+                      <strong>Desaciertos:</strong>
+                      <span class="wrong_words"></span>
+                    </p>
+                    <div class="buttons">
+                      <button class="general reload">Vovler a clasificar las ciudades incorrectamente
+                        clasificadas</button>
+                    </div>
                   </div>
+                </div>
+                <div class="check_right">
+                  <div class="box_result">
+                    <div class="correct">
+                      <div class="hits">0</div>
+                      <div class="text">Aciertos</div>
+                    </div>
+                    <div class="wrong">
+                      <div class="miss">0</div>
+                      <div class="text">Desaciertos</div>
+                    </div>
+                  </div>
+                </div>
               </div>
+            </div>
           </div>
-          </div>
-      </div>
+        </div>
 
         <div class="subpage" id="pag-actividades-view">
           <h3>Ver - Abrir</h3>
@@ -1418,7 +1492,8 @@
         <div class="subpage" id="credits_subpage">
 
           <div class="box-text" label="Créditos">
-            <p>Curaduría de contenidos Gestión pedagógica y diseño instruccional Producción multimedial Desarrollo e implementación Gestión técnica y administrativa</p>
+            <p>Curaduría de contenidos Gestión pedagógica y diseño instruccional Producción multimedial Desarrollo e
+              implementación Gestión técnica y administrativa</p>
           </div>
 
           <div class="box-text" label="Referencias">

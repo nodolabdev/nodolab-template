@@ -1,0 +1,33 @@
+.cards {
+  @include grid-container(1, 2, 3);
+  row-gap: 24px;
+}
+
+.card {
+  background-color: #f0f0f0;
+  border-radius: 20px;
+  border: 1px solid var(--cards-boder);
+  box-shadow: 0px 4px 4px 0px #00000040;
+  margin: 0 auto;
+  max-width: 450px;
+  &__img {
+    aspect-ratio: 1/1;
+    border-radius: 20px;
+    object-fit: cover;
+    overflow: hidden;
+    img {
+      border-radius: 20px;
+      height: 100%;
+      object-fit: cover;
+      width: 100%;
+    }
+  }
+  &__body {
+    padding: 24px 16px;
+  }
+  &__title {
+    @include h4();
+    color: var(--color-primary);
+    @include spacer(2, margin, bottom);
+  }
+}

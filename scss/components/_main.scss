@@ -11,5 +11,9 @@ main {
   section {
     margin: 0 auto;
     max-width: 726px;
+    container-type: inline-size;
+    @include respond-to('extra-large') {
+      max-width: 1024px;
+    }
   }
 }

@@ -351,6 +351,29 @@ dhbgApp.standard.start = function() {
     });
 
     // ==============================================================================================
+    // Cards
+    // ==============================================================================================
+    $('.card').each(function(){
+      const $this = $(this);
+      const $children = $this.children();
+      const $card_body = $('<div class="card__body"></div>');
+      const $object = ($children.length > 0) ? $children : $this.html();
+      $card_body.append($object);
+
+      if($this.attr('label')) {
+        var $card_title = $(`<div class="card__title">${$this.attr('label')}</div>`);
+        $card_body.prepend($card_title);
+      }
+
+      if($this.attr('img') && $this.attr('img-alt') ) {
+        var $card_img = $(`<div class="card__img"><img src="${$this.attr('img')}" alt="${$this.attr('img-alt')}"></div>`);
+        $this.append($card_img);
+      }
+
+      $this.append($card_body);
+    })
+
+    // ==============================================================================================
     // Modal Windows
     // ==============================================================================================
     $('.w-content').each(function() {
