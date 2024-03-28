@@ -60,8 +60,9 @@
   /* WIDTHS */
   --drawer-width: 360px;
   /* FONT FAMILIES */
-  --avenir-family: 'Avenir', arial, sans-serif;
+  --default-font-family: 'Avenir', arial, sans-serif;
   --roboto-font-family: 'Roboto', sans-serif;
+  --icon-font-family: "Material Symbols Rounded";
   /* FONT WEIGHTS */
   --font-weight-regular: 400;
   --font-weight-thin: 100;
@@ -194,7 +195,7 @@ blockquote label {
 
 body {
   color: var(--text-color);
-  font-family: var(--avenir-family);
+  font-family: var(--default-font-family);
   font-size: var(--font-size-medium-16);
   font-style: normal;
   font-weight: var(--font-weight-regular);

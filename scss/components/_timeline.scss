@@ -3,8 +3,142 @@
   height: 80vh;
   position: relative;
   z-index: 1;
+  border-radius: 28px;
+  overflow: hidden;
 
-  @include respond-to('large'){
+  @include respond-to('large') {
     height: 50vh;
+  }
+
+  .tl-timeline {
+
+    background-color: var(--box-bg-color);
+
+    :is(h1, h2, h3, h4, h5, h6, p),
+    tl-slidenav-next,
+    .tl-slidenav-previous,
+    .tl-slidenav-next,
+    .tl-message,
+    .tl-timegroup-message,
+    .tl-headline-date,
+    h3.tl-headline-date {
+      font-family: var(--default-font-family) !important;
+      text-transform: none !important;
+    }
+
+    :is(h1, h2, h3, h4, h5, h6) {
+      font-weight: bold;
+    }
+
+    h1 {
+      @include h1();
+      color: var(--color-primary);
+    }
+
+    h2 {
+      @include h2();
+      color: var(--color-primary-light)
+    }
+
+    h3 {
+      @include h3();
+      color: #000000;
+    }
+
+    h4 {
+      @include h4();
+      color: #000000;
+    }
+
+    .tl-slide {
+      background-color: var(--box-bg-color);
+
+      &-content-container {
+        background-color: var(--box-bg-color);
+      }
+
+      .tl-text p {
+        color: var(--text-color);
+      }
+    }
+
+    .tl-storyslider .tl-slider-container-mask {
+       background-color: var(--box-bg-color);
+    }
+
+    .tl-slidenav-previous,
+    .tl-slidenav-next {
+      font-size: var(--default-font-family);
+
+      .tl-slidenav-content-container {
+
+        .tl-slidenav-icon,
+        .tl-slidenav-title {
+          color: var(--color-primary-light);
+        }
+        .tl-slidenav-title {
+          opacity: 0.75;
+        }
+      }
+    }
+
+    .tl-slidenav-next,
+    .tl-slidenav-previous {
+      .tl-slidenav-icon:before {
+        font-family: var(--icon-font-family);
+        font-size: 40px;
+        font-variation-settings:  'wght' 700,  'opsz' 40;
+      }
+    }
+
+    .tl-slidenav-previous .tl-slidenav-icon:before {
+      content: "arrow_back_ios";
+    }
+
+    .tl-slidenav-next .tl-slidenav-icon:before {
+      content: "arrow_forward_ios";
+    }
+
+    .tl-timenav {
+      background-color: #fdfdfd;
+    }
+
+    .tl-message-full {
+      $color: #4D4196; //same --color-primary-light-300 but SCSS won't work with CSS vars.
+      background-color: rgba($color, 0.85);
+      backdrop-filter: blur(2px);
+
+      [class^="tl-icon-"], .tl-message-content  {
+        color: var(--white)
+      }
+
+      [class^="tl-icon-"] {
+        font-family: var(--icon-font-family);
+        margin-bottom: 8px;
+
+        &.tl-icon-swipe-left:after {
+          content: "swipe_left";
+        }
+      }
+
+      .tl-message-content {
+        margin-top: 16px;
+        font-family: var(--default-font-family);
+        @include h3();
+
+        .tl-button {
+          text-transform: lowercase;
+          color: var(--color-primary);
+          padding: 4px 16px;
+          border-radius: 20px;
+          @include h4();
+        }
+      }
+    }
+
+    .tl-attribution {
+      display: none;
+    }
+
   }
 }

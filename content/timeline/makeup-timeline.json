@@ -34,7 +34,7 @@
       },
       {
         "media": {
-          "url": "content/timeline/makeup_img/grecia.png"
+          "url": "content/timeline/makeup_img/edad_media.png"
         },
         "start_date": {
           "year": "476"
@@ -190,7 +190,7 @@
           "headline": "Época actual",
           "text": "<p>En la actualidad y gracias a la aparición de las redes sociales la industria del maquillaje juega un papel fundamental en la sociedad, existen una amplia gama de productos, texturas, y herramientas que han revolucionado el mundo de la belleza, desde el cuidado de la piel hasta el maquillaje.</p>"
         },
-        "display_date": "2000 - Actualidad"
+        "display_date": "2000 — Actualidad"
       }
     ]
 }
