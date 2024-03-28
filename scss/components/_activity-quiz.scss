@@ -5,6 +5,24 @@
     position: relative;
     @include spacer(4, padding, bottom);
 
+    .board_wrapper {
+      width: 100%;
+      overflow: hidden;
+    }
+
+    .jpit_activities_quiz_board {
+      --current-page: 0;
+      display: flex;
+      width: 100%;
+      padding-bottom: 20px;
+      transform: translateX(calc(100% * var(--current-page)* -1));
+      transition: transform 0.3s ease-out;
+    }
+
+    .jpit_activities_quiz_quest {
+      flex: 0 0 100%;
+    }
+
     .jpit_activities_quiz_question_statement {
       margin-bottom: 20px;
 
@@ -61,10 +79,10 @@
 
     .jpit_activities_quiz_question_feedback_true,
     .jpit_activities_quiz_question_feedback_false,
-    .jpit_activities_quiz_question_feedback>*  {
+    .jpit_activities_quiz_question_feedback>* {
       padding: 8px 12px;
       text-align: center;
-      background-color:transparent;
+      background-color: transparent;
       position: relative;
       border-radius: 0 14px 14px 0;
       width: auto;
@@ -88,18 +106,53 @@
         z-index: 2;
       }
 
-      &.jpit_activities_quiz_question_feedback_true, & {
+      &.jpit_activities_quiz_question_feedback_true,
+      & {
         color: var(--green-success-300);
+
         &::after {
           background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="21.106" height="21.109" viewBox="0 0 21.106 21.109"><g id="Grupo_1129" data-name="Grupo 1129" transform="translate(-714.078 -693.296)"><g id="Grupo_188" data-name="Grupo 188" transform="translate(45)"><g id="Grupo_187" data-name="Grupo 187"><g id="Grupo_186" data-name="Grupo 186"><g id="Grupo_185" data-name="Grupo 185"><g id="Grupo_184" data-name="Grupo 184"><path id="Trazado_135" data-name="Trazado 135" d="M679.631,714.052a10.195,10.195,0,1,1,4.452-1.021A10.108,10.108,0,0,1,679.631,714.052Zm0-20.084a9.884,9.884,0,1,0,9.881,9.884A9.893,9.893,0,0,0,679.631,693.968Z" fill="%23e85270"/><path id="Trazado_136" data-name="Trazado 136" d="M679.631,714.405a10.546,10.546,0,1,1,4.607-1.056A10.47,10.47,0,0,1,679.631,714.405Zm0-20.083a9.53,9.53,0,1,0,9.527,9.53A9.539,9.539,0,0,0,679.631,694.322Z" fill="%2352d29c"/></g></g></g></g></g><g id="Grupo_190" data-name="Grupo 190" transform="translate(45)"><g id="Grupo_189" data-name="Grupo 189"><path id="Trazado_137" data-name="Trazado 137" d="M674.6,703.147a4.556,4.556,0,0,1,1.915,1.822c.692,1.166.813,1.959,1,2.1a2.476,2.476,0,0,0,1.566-.291c.474-.255.491-.4.934-1.43a23.253,23.253,0,0,1,2.374-4.214c.765-1.02,2.375-2.362,2.448-2.617s-.692-.374-1.421-.155-2.263,1.907-3.19,3.235c-1.029,1.476-1.4,2.722-1.577,2.685s-.539-.779-1.049-1.326a1.9,1.9,0,0,0-1.666-.807C675.306,702.263,674.225,702.89,674.6,703.147Z" fill="%2352d29c"/></g></g></g></svg>');
         }
       }
 
-      &.jpit_activities_quiz_question_feedback_false, .jpit_activities_quiz_question_feedback .wrong {
+      &.jpit_activities_quiz_question_feedback_false,
+      .jpit_activities_quiz_question_feedback .wrong {
         color: var(--red-error);
+
         &::after {
           background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="21.106" height="21.109" viewBox="0 0 21.106 21.109"><g id="Grupo_1127" data-name="Grupo 1127" transform="translate(-649.078 -362.063)"><g id="Grupo_152" data-name="Grupo 152"><g id="Grupo_151" data-name="Grupo 151"><g id="Grupo_150" data-name="Grupo 150"><g id="Grupo_149" data-name="Grupo 149"><path id="Trazado_117" data-name="Trazado 117" d="M659.631,382.819a10.195,10.195,0,1,1,4.452-1.021A10.108,10.108,0,0,1,659.631,382.819Zm0-20.084a9.884,9.884,0,1,0,9.881,9.884A9.893,9.893,0,0,0,659.631,362.735Z" fill="%23e85270"/><path id="Trazado_118" data-name="Trazado 118" d="M659.631,383.172a10.546,10.546,0,1,1,4.607-1.056A10.47,10.47,0,0,1,659.631,383.172Zm0-20.084a9.529,9.529,0,1,0,0,19.058,9.521,9.521,0,0,0,9.527-9.527A9.54,9.54,0,0,0,659.631,363.088Z" fill="%23e85270"/></g></g></g></g><g id="Grupo_153" data-name="Grupo 153"><path id="Trazado_119" data-name="Trazado 119" d="M654.9,377.821a1.551,1.551,0,0,0,1.056.184c.55-.082.792-.492,1.342-1.5a28.14,28.14,0,0,1,4.371-5.44c1.256-1.232,2.959-2.44,2.78-2.752-.352-.616-.381-1.08-1.452-.9s-2.643,1.958-4.18,3.573c-1.708,1.793-4.531,5.426-4.335,5.892A.726.726,0,0,0,654.9,377.821Z" fill="%23e85270"/><path id="Trazado_120" data-name="Trazado 120" d="M656.245,366.784a1.705,1.705,0,0,1,1.091.1c.71.275.784,1.375,1.446,2.742a17.078,17.078,0,0,0,3.223,4.414c.832.894,2.376,2.094,2.685,2.566.2.3-.4,1.52-1.321,1.4-1.076-.143-3.919-3.643-5.281-5.389-1.513-1.94-2.941-4.661-2.7-5.107A1.106,1.106,0,0,1,656.245,366.784Z" fill="%23e85270"/></g></g></svg>');
         }
+      }
+    }
+
+
+    //---------------------------------//
+    // Custom styles per question type //
+    //---------------------------------//
+
+    .jpit_activities_quiz_question_multichoice,
+    .jpit_activities_quiz_question_multisetchoice {
+      .jpit_activities_quiz_question_answers {
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 32px;
+
+        @include respond-to('medium') {
+          column-gap: 56px;
+        }
+
+        @include respond-to('large') {
+          column-gap: 80px;
+        }
+      }
+    }
+
+    .jpit_activities_quiz_question_simplechoice {
+      .jpit_activities_quiz_question_answers {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
       }
     }
   }
@@ -112,12 +165,13 @@
     border-radius: 25px;
   }
 
-  .jpit_activities_quiz_question_option{
+  .jpit_activities_quiz_question_option {
     padding: 0;
     border-radius: 25px;
     margin-inline-start: 0px;
 
     @include spacer(2, margin, bottom);
+
     &_answer_selected {
       border: 1px dashed var(--color-primary-light)
     }
@@ -158,6 +212,7 @@
       background-position: center;
       background-repeat: no-repeat;
       border: 0px;
+
       &:hover {
         filter: grayscale(1);
       }
@@ -169,6 +224,7 @@
       background-position: center;
       background-repeat: no-repeat;
       border: 0px;
+
       &:hover {
         filter: grayscale(1);
       }
@@ -184,6 +240,7 @@
     right: 0;
     z-index: 1;
     @include spacer(2, margin, bottom);
+
     button {
       @include button();
     }

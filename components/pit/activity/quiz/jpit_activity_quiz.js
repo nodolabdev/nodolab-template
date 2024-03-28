@@ -231,11 +231,11 @@ jpit.activities.quiz.activity = function (container, questions, options) {
 
         "paginateTo":function(index){
 
-            $container.find('.jpit_activities_quiz_quest').hide().each(function(ind,val){
+            $container.find('.jpit_activities_quiz_quest').each(function(ind,val){
                 var lower = (index * obj.paginationNumber) - obj.paginationNumber;
                 var top =  (index * obj.paginationNumber);
                 if((ind+1)> lower && (ind+1)<= top) {
-                    $(val).show();
+                    $(val).parent().css({ "--current-page": `${ind}` });;
                 }
             });
 

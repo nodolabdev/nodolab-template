@@ -1332,8 +1332,6 @@ dhbgApp.standard.load_operations = function() {
             nsubpage = 0;
         }
 
-        $('html,body').scrollTop(0);
-
         if(npage == 0){
             $('[previous-page]').css('visibility', 'hidden');
         }
@@ -1451,6 +1449,7 @@ dhbgApp.standard.load_operations = function() {
                     $('main .subpage').removeClass('current');
 
                     $('main > section').hide();
+                    $('html,body').scrollTop(0);
                     $('main > section.page_' + npage).show();
 
                     // Hack by multiple subpages selecteds in fast clicks.
@@ -1868,7 +1867,8 @@ dhbgApp.standard.load_operations = function() {
 
         var $verify_box = $('<div class="verify_box"></div>');
         $verify_box.append($verify);
-        $box_questions.find('.jpit_activities_quiz_board').after($verify_box);
+        $box_questions.find('.jpit_activities_quiz_board').wrap("<div class='board_wrapper'></div>");
+        $box_questions.find('.board_wrapper').after($verify_box);
 
         $this.empty();
         $this.append($box_questions);
