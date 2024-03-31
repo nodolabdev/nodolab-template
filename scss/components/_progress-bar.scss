@@ -4,6 +4,7 @@
 
 .measuring-progress {
   position: relative;
+  cursor: pointer;
 
   &.default {
     float: left;
@@ -24,102 +25,102 @@
     }
   }
 
-  &.circle {
-    margin: -20px 10px 0 5px;
-    &.c100 {
-      background-color: #ffffff !important;
-      border: 1px solid #999999;
-    }
-  }
-
   &.horizontal {
     align-items: center;
-    border-radius: 15px;
     color: var(--white);
     display: flex;
     flex-basis: 320px;
-    gap: 24px;
+    gap: 16px;
     justify-content: flex-start;
+    align-items: center;
+    font-size: var(--font-size-common);
 
     label {
-      font-size: 22px;
+      font-size: var(--font-size-large-22);
       font-weight: bold;
     }
 
-    .progress_text {
-      font-size: 12px;
-      position: absolute;
-      left: -2px;
-      bottom: -16px;
-    }
-
     .results_value {
-      width: 28px;
-      height: 22px;
-      border-radius: 15px;
       text-align: center;
-      padding-top: 6px;
-      line-height: 10px;
-      z-index: 2;
+      span {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2px;
+      }
+
+       .progress_text {
+       line-height: 1em;
+    }
     }
 
     .results_level {
       height: 15px;
       width: 80%;
       background-color: var(--color-secondary-light);
-      border-radius: 10px;
+      border-radius: 15px;
       overflow: hidden;
-      border: 1px solid #fff;
 
       div {
         background-color: var(--color-secondary);
         width: 0%;
         height: 15px;
+        transition: width 0.2s ease;
       }
     }
   }
 
-  &.vertical {
-    font-size: 11px;
-    font-weight: bold;
-    margin-left: 5px;
 
-    .results_value {
-      position: absolute;
-      left: 5px;
-      top: 0;
-      width: 28px;
-      height: 22px;
-      border-radius: 15px;
-      background-color: #fff;
-      text-align: center;
-      padding-top: 6px;
-      line-height: 10px;
-      z-index: 2;
-      border: 1px solid #007fff;
-    }
+  // not used for now
+  // &.circle {
+  //   margin: -20px 10px 0 5px;
+  //   &.c100 {
+  //     background-color: #ffffff !important;
+  //     border: 1px solid #999999;
+  //   }
+  // }
 
-    .results_level {
-      position: absolute;
-      left: 14px;
-      bottom: -5px;
-      width: 11px;
-      height: 150px;
-      background-color: #007fff;
-      border: 1px solid #007fff;
-      border-radius: 10px 10px 0 0;
-      overflow: hidden;
+  // &.vertical {
+  //   font-size: 11px;
+  //   font-weight: bold;
+  //   margin-left: 5px;
 
-      div {
-        background-color: #ffffff;
-        width: 11px;
-        height: 100%;
-      }
-    }
+  //   .results_value {
+  //     position: absolute;
+  //     left: 5px;
+  //     top: 0;
+  //     width: 28px;
+  //     height: 22px;
+  //     border-radius: 15px;
+  //     background-color: #fff;
+  //     text-align: center;
+  //     padding-top: 6px;
+  //     line-height: 10px;
+  //     z-index: 2;
+  //     border: 1px solid #007fff;
+  //   }
 
-    .progress_text {
-      position: absolute;
-      top: 30px;
-    }
-  }
+  //   .results_level {
+  //     position: absolute;
+  //     left: 14px;
+  //     bottom: -5px;
+  //     width: 11px;
+  //     height: 150px;
+  //     background-color: #007fff;
+  //     border: 1px solid #007fff;
+  //     border-radius: 10px 10px 0 0;
+  //     overflow: hidden;
+
+  //     div {
+  //       background-color: #ffffff;
+  //       width: 11px;
+  //       height: 100%;
+  //     }
+  //   }
+
+  //   .progress_text {
+  //     position: absolute;
+  //     top: 30px;
+  //   }
+  // }
 }

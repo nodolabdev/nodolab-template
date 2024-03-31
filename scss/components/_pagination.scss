@@ -9,6 +9,7 @@
 
   @include respond-to('medium') {
     padding-inline: 60px;
+    padding-block: 32px 20px;
   }
 
   .label_current {
@@ -39,10 +40,10 @@
   }
 
   .position {
-    color: var(--color-primary-light);
-    font-weight: bold;
-    background-color: var(--disabled-button);
-    padding-inline: 8px;
+    color: var(--color-primary-light-400);
+    font-weight: 500;
+    background-color: var(--grey-light-200);
+    padding: 4px 12px;
     border-radius: 12px;
     margin: 0;
     padding-block: 0;

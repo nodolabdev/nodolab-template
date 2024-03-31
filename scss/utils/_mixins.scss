@@ -9,18 +9,19 @@
 }
 
 @mixin button {
-  border-radius: 16px;
+  font-family: var(--default-font-family);
+  border-radius: 32px;
   font-size: 18px;
   line-height: 24px;
-  font-weight: bold;
-  padding: 8px 12px;
-  background-color: var(--color-primary-light-400);
+  font-weight: 500;
+  padding: 4px 20px;
+  background-color: var(--activity-button-bg-color);
   border: 0px;
-  color: var(--white);
+  color: var(--color-primary-light-400);
   cursor: pointer;
   transition: all 0.2s ease;
   &:hover { 
-    filter: brightness(1.1);
-    box-shadow: 0 4px 4px rgba(54, 64, 67, 0.15);
+    background-color: var(--color-primary-light-400);
+    color: var(--white);
   }
 }

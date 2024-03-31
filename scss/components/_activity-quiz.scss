@@ -1,9 +1,16 @@
 .jpit-activities-quiz {
   position: relative;
 
+  @include respond-to("up-to-medium") {
+    padding-bottom: 34px;
+  }
+
   .box_content {
-    position: relative;
-    @include spacer(4, padding, bottom);
+    @include spacer(1, padding, bottom);
+
+    @include respond-to('medium') {
+      @include spacer(3, padding, bottom);
+    }
 
     .board_wrapper {
       width: 100%;
@@ -75,6 +82,11 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      position: absolute;
+      bottom: -12px;
+      text-align: center;
+      margin-inline: auto;
+      width: 100%;
     }
 
     .jpit_activities_quiz_question_feedback_true,
@@ -93,13 +105,13 @@
       margin-inline-start: 50px;
 
       &:after {
-        left: -50px;
+        left: -20px;
         top: 50%;
         transform: translateY(-50%);
         content: '';
-        width: 50px;
-        height: 50px;
-        background-size: 75%;
+        width: 28px;
+        height: 28px;
+        background-size: 84%;
         background-repeat: no-repeat;
         background-position: center;
         position: absolute;
@@ -179,21 +191,25 @@
 
   .jpit_activities_quiz_paginator_container {
     position: absolute;
-    bottom: -36px;
-    left: 50%;
-    transform: translateX(-50%);
+    bottom: -6px;
+    right: -10px;
     display: flex;
     align-items: center;
+    z-index: 3;
+
+    @include respond-to('large') {
+      bottom: -10px;
+    }
 
     &>.jpit_activities_quiz_paginator_current {
       align-items: center;
       background-color: var(--disabled-button);
       border-radius: 12px;
-      color: var(--color-primary-light);
+      color: var(--color-primary-light-400);
       display: flex;
       font-weight: bold;
       justify-content: center;
-      padding-inline: 8px;
+      padding: 4px 14px;
       @include body();
     }
 
@@ -206,12 +222,13 @@
     }
 
     &>.jpit_activities_quiz_paginator_previous {
-      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="80%" height="80%" viewBox="0 0 15.518 19.164"><g id="Grupo_635" data-name="Grupo 635" transform="translate(-2475.477 -1532.212)"><g id="Grupo_634" data-name="Grupo 634"><g id="Grupo_633" data-name="Grupo 633"><path id="Trazado_607" data-name="Trazado 607" d="M2475.477,1532.212l15.518,9.582-15.518,9.581Z" fill="%236956a0"/></g></g></g></svg>');
+      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="80%" height="80%" viewBox="0 0 15.518 19.164"><g id="Grupo_635" data-name="Grupo 635" transform="translate(-2475.477 -1532.212)"><g id="Grupo_634" data-name="Grupo 634"><g id="Grupo_633" data-name="Grupo 633"><path id="Trazado_607" data-name="Trazado 607" d="M2475.477,1532.212l15.518,9.582-15.518,9.581Z" fill="%236D54A2"/></g></g></g></svg>');
       transform: rotateY(180deg);
       background-size: 40%;
       background-position: center;
       background-repeat: no-repeat;
       border: 0px;
+      margin-inline-end: -6px;
 
       &:hover {
         filter: grayscale(1);
@@ -219,11 +236,12 @@
     }
 
     &>.jpit_activities_quiz_paginator_next {
-      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="80%" height="80%" viewBox="0 0 15.518 19.164"><g id="Grupo_635" data-name="Grupo 635" transform="translate(-2475.477 -1532.212)"><g id="Grupo_634" data-name="Grupo 634"><g id="Grupo_633" data-name="Grupo 633"><path id="Trazado_607" data-name="Trazado 607" d="M2475.477,1532.212l15.518,9.582-15.518,9.581Z" fill="%236956a0"/></g></g></g></svg>');
+      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="80%" height="80%" viewBox="0 0 15.518 19.164"><g id="Grupo_635" data-name="Grupo 635" transform="translate(-2475.477 -1532.212)"><g id="Grupo_634" data-name="Grupo 634"><g id="Grupo_633" data-name="Grupo 633"><path id="Trazado_607" data-name="Trazado 607" d="M2475.477,1532.212l15.518,9.582-15.518,9.581Z" fill="%236D54A2"/></g></g></g></svg>');
       background-size: 40%;
       background-position: center;
       background-repeat: no-repeat;
       border: 0px;
+      margin-inline-start: -6px;
 
       &:hover {
         filter: grayscale(1);

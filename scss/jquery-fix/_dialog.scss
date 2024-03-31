@@ -7,12 +7,16 @@
   max-height: 96%;
   overflow: hidden;
   border-radius: 12px;
-  width: 94% !important;
+  width: 90% !important;
   padding: 0;
   background-color: var(--dialog-bg-color);
   top: 50% !important; //required to override inline styles
   left: 50% !important;
   transform: translate(-50%, -50%);
+
+  @include respond-to("medium") {
+    width: 76% !important;
+  }
 
   .ui-dialog &-titlebar {
     border-width: 0;
@@ -39,6 +43,7 @@
       justify-content: center;
       align-items: center;
       transition: background-color 200ms ease;
+      z-index: 2;
 
       .ui-icon {
         --icon-size: 16px;
@@ -70,13 +75,58 @@
     }
   }
 
-  .ui-dialog &-content {
-    padding: 8px 24px 32px;
+  &.ui-dialog-buttons & {
+    &-titlebar {
+      padding-bottom: 0;
+
+      &-close {
+        display: none;
+      }
+    }
+
+    &-content {
+      padding-block-end: 20px;
+    }
+  }
+
+  .ui-dialog {
+    &-content {
+      padding: 8px 16px 32px;
+      color: var(--text-color);
+
+      @include respond-to('medium'){
+        padding-inline: 24px;
+      }
+
+      @include respond-to('large'){
+        padding-inline: 32px;
+      }
+    }
+
+    &-buttonpane {
+      margin-top: 0;
+      padding-inline: 16px;
+    }
+  }
+
+  &.ui-widget.ui-widget-content,
+  .ui-widget-content {
+    border-width: 0;
+    background: var(--dialog-bg-color);
     color: var(--text-color);
   }
 
-  &.ui-widget.ui-widget-content {
-    border-width: 0;
+  &-buttonset {
+    .ui-button {
+      border-width: 0px;
+      background-color: transparent;
+      color: var(--color-primary-light-400);
+      transition: background-color 0.1s ease;
+
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.08);
+      }
+    }
   }
 }
 
@@ -84,5 +134,3 @@
   background-color: rgba(4, 16, 22, 0.81);
   opacity: 1;
 }
-
-// shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),0 4px 6px -2px rgba(0, 0, 0, 0.05)

@@ -1,9 +1,13 @@
 .instruction {
   font-size: var(--font-size-common);
   line-height: var(--font-size-large-24);
-  font-weight: bold;
+  font-weight: 500;
+  margin-block-start: 8px;
+  font-style: italic;
   color: var(--color-primary);
+  text-align: center;
   i {
+    font-size: var(--font-size-medium-16);
     margin-right: 5px;
   }
 }

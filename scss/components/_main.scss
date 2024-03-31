@@ -1,19 +1,16 @@
 main {
   margin: 0 auto;
-  padding: 112px 20px 80px;
+  padding: 112px 20px 112px;
   transition: margin-left 0.3s ease;
   @include respond-to('medium') {
-    padding-top: 80px;
+    padding-block-start: 80px;
   }
   @include respond-to('large') {
     padding: 130px 60px;
   }
   section {
     margin: 0 auto;
-    max-width: 726px;
+    max-width: 1296px;
     container-type: inline-size;
-    @include respond-to('extra-large') {
-      max-width: 1024px;
-    }
   }
 }

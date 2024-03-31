@@ -7,8 +7,13 @@
     background-color: transparent;
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 12px;
     transition: background-color 0.2s ease;
+
+    @include respond-to('medium') {
+      gap: 20px;
+    }
+
     &:hover {
       background-color: var(--grey-light);
     }

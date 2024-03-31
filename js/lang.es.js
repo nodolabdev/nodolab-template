@@ -26,17 +26,19 @@ dhbgApp.strings = {
 
     'after': 'Después',
 
-    'all_correct': 'Felicitaciones, ha completado la actividad de manera satisfactoria',
+    'all_correct_percent': '<p><strong>¡Has aprobado la actividad!</strong> <br/> Todas tus respuestas son correctas. ¡Muy&nbsp;bien!&nbsp;🙌</p>',
 
-    'all_correct_percent': '¡Muy bien! {0}% de sus respuestas son correctas. ¡Felicitaciones!',
+    'some_correct_percent_approve': '<p><strong>¡Has aprobado la actividad!</strong> <br/> Aunque completaste el {0}% de las respuestas. ¡Puedes&nbsp;hacerlo&nbsp;mejor!&nbsp;💪</p>',
 
-    'all_wrong': 'Debe intentarlo nuevamente, hasta responder la actividad de manera correcta',
+    'some_correct_percent_no_approve': '<p><strong>¡Falta poco!</strong> <br/> {0}% de tus respuestas son correctas. ¡Intenta&nbsp;de&nbsp;nuevo!&nbsp;💪</p>',
 
-    'answer_corrent': 'La respuesta es correcta',
+    'wrong_percent': '<p><strong>¡Opss!</strong> <br/> Todas tus respuestas son incorrectas. ¡Intenta&nbsp;de&nbsp;nuevo!&nbsp;💪</p>',
 
-    'answer_required': 'Por favor, asigne una respuesta a cada ítem.',
+    'answer_corrent': 'Respuesta correcta',
 
-    'answer_wrong': 'La respuesta es incorrecta',
+    'answer_required': 'Primero debes responder esta pregunta.',
+
+    'answer_wrong': 'Respuesta incorrecta',
 
     'before': 'Antes',
 
@@ -102,6 +104,4 @@ dhbgApp.strings = {
     'vertical': 'Vertical',
 
     'wrong_continue': 'La actividad es incorrecta en un {0}%. Continua la actividad hasta completarla correctamente.',
-
-    'wrong_percent': '{0}% de sus respuestas son incorrectas. Lo invitamos a que repase el contenido e intente resolver la actividad de nuevo.'
 };

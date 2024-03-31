@@ -126,13 +126,13 @@ dhbgApp.standard.start = function() {
 
             switch (type) {
                 case 'horizontal':
-                    var $box_label = $('<div class="results_value"><label>0</label>%</div>');
+                    var $box_label = $('<div class="results_value"><span><label>0</label>%</span></div>');
                     var $label = $box_label.find('label');
                     var $box_bar = $('<div class="results_level"><div></div></div>');
                     var $bar = $box_bar.find('div');
                     $this.append($box_label);
                     $this.append($box_bar);
-                    $this.append('<div class="progress_text">' + progress_text + '</div>')
+                    $box_label.append('<div class="progress_text">' + progress_text + '</div>')
                     dhbgApp.loadProgress = function(progress) {
                         $bar.css('width', progress + '%');
                         $label.text(progress);
@@ -236,7 +236,6 @@ dhbgApp.standard.start = function() {
       }
     });
     $('.drawer__overlay').on('click', function() {
-      console.log("clicked");
       $('#drawer-toggle').click();
     })
   
@@ -479,16 +478,14 @@ dhbgApp.standard.start = function() {
         });
     }
     else {
-        // $('[data-global="return"]').hide();
-        // $('[data-global="close_all"]').hide();
+        $('[data-global="return"]').hide();
+        $('[data-global="close_all"]').hide();
     }
 
     // Results control.
     var $results_modal = $('#results_page').dialog({
         modal: true,
         autoOpen: false,
-        width: dhbgApp.documentWidth - 50,
-        height: dhbgApp.documentHeight - 50,
         classes: {
             "ui-dialog": "results_page_dialog"
         },
@@ -497,7 +494,7 @@ dhbgApp.standard.start = function() {
         }
     });
 
-    $('[data-global="results"]').on('click', function () {
+    $('[data-global="results"], .measuring-progress').on('click', function () {
 
         var $dialog = $('#results_page');
         var $visited = $dialog.find('#results_page_visited');
@@ -582,7 +579,6 @@ dhbgApp.standard.start = function() {
                             list_intents[list_intents.length] = '0%';
                         }
                     }
-                    console.log(list_intents);
                     if(list_intents.includes('100%')){
                       $act.addClass('done');
                     }
@@ -605,8 +601,6 @@ dhbgApp.standard.start = function() {
     var $credits_modal = $('#credits-page').dialog({
         modal: true,
         autoOpen: false,
-        width: w_global_modal,
-        height: dhbgApp.documentHeight - 50,
         classes: {
             "ui-dialog": "results_page_dialog"
         },
@@ -1611,7 +1605,7 @@ dhbgApp.standard.load_operations = function() {
         var count_questions = $this.find('question[type!="label"]').length;
         var question_weight = 100 / count_questions;
 
-        $this.find('question').each(function(){
+        $this.find('question').each(function(){ 
             var $question = $(this);
             var q;
             var question_options = {};
@@ -1817,16 +1811,9 @@ dhbgApp.standard.load_operations = function() {
                     dhbgApp.printProgress();
 
                     if (count_questions > 1) {
-                        var msg;
-                        if (weight >= dhbgApp.evaluation.approve_limit) {
-                            msg = '<div class="jpit_activities_quiz_question_feedback_true">' + dhbgApp.s('all_correct_percent', weight) + '</div>';
-                        }
-                        else {
-                            msg = '<div class="jpit_activities_quiz_question_feedback_false">' + dhbgApp.s('wrong_percent', (100 - weight)) + '</div>';
-                        }
-                        const $feedback_box = $('.jpit_activities_quiz_question_feedback');
-                        $feedback_box.empty();
-                        $feedback_box.append(msg).show();
+                        const msg = dhbgApp.actions.getFeedbackMsg(weight);
+                        $box_end.empty();
+                        $box_end.append(msg).show();
                     }
                     else {
                         $box_end.show();
@@ -1844,7 +1831,7 @@ dhbgApp.standard.load_operations = function() {
 
         });
 
-        var verify_display_function = function() {
+        var verify_display_function = function () {
             if (activity.verified[activity.currentPagination]) {
                 $verify.hide();
             }
@@ -1891,7 +1878,7 @@ dhbgApp.standard.load_operations = function() {
     dhbgApp.actions.activityDroppable = function ($this, options) {
         var activity;
         var unique_id = 'activity_droppable_' + dhbgApp.rangerand(0, 1000, true);
-        var feedbacktrue = dhbgApp.s('all_correct'), feedbackfalse = dhbgApp.s('all_wrong');
+        var feedbacktrue, feedbackfalse;
         var html_body = $this.html();
         var scorm_id = options.scorm_id;
 
@@ -2027,14 +2014,7 @@ dhbgApp.standard.load_operations = function() {
             }
             dhbgApp.printProgress();
 
-            var msg;
-            if (weight >= dhbgApp.evaluation.approve_limit) {
-                msg = '<div class="correct">' + (feedbacktrue ? feedbacktrue : dhbgApp.s('all_correct_percent', weight)) + '</div>';
-            }
-            else {
-                msg = '<div class="wrong">' + (feedbackfalse ? feedbackfalse : dhbgApp.s('wrong_percent', (100 - weight))) + '</div>';
-            }
-
+            var msg =  dhbgApp.actions.getFeedbackMsg(weight);
             var $msg = $(msg);
             var $close;
             if ($box_end.attr('data-enable-close-button')) {
@@ -2196,7 +2176,7 @@ dhbgApp.standard.load_operations = function() {
                 }
                 else {
                     $msg = $('<div class="wrong"></div>');
-                    $msg.append(feedbackfalse ? feedbackfalse : dhbgApp.s('wrong_percent', (100 - weight)));
+                    $msg.append(feedbackfalse ? feedbackfalse : dhbgApp.s('some_correct_percent', weight));
                 }
 
                 $box_end.append($msg).show();
@@ -2304,7 +2284,7 @@ dhbgApp.standard.load_operations = function() {
                     msg = '<div class="correct">' + (feedbacktrue ? feedbacktrue : dhbgApp.s('all_correct_percent', weight)) + '</div>';
                 }
                 else {
-                    msg = '<div class="wrong">' + (feedbackfalse ? feedbackfalse : dhbgApp.s('wrong_percent', (100 - weight))) + '</div>';
+                    msg = '<div class="wrong">' + (feedbackfalse ? feedbackfalse : dhbgApp.s('some_correct_percent', weight)) + '</div>';
                 }
 
                 $box_end.append(msg).show();
@@ -2349,110 +2329,6 @@ dhbgApp.standard.load_operations = function() {
 
     };
 
-    dhbgApp.actions.activitySortable = function ($this) {
-
-        var scorm_id = $this.attr('data-act-id') ? $this.attr('data-act-id') : 'sortable';
-
-        if (dhbgApp.scorm) {
-            if (!dhbgApp.scorm.activities[scorm_id]) { dhbgApp.scorm.activities[scorm_id] = []; }
-        }
-
-        var activity;
-        var unique_id = 'activity_sortable_' + dhbgApp.rangerand(0, 1000, true);
-        var feedbacktrue = dhbgApp.s('all_correct'), feedbackfalse = dhbgApp.s('all_wrong');
-        var html_body = $this.html();
-        var $box_end = $this.find('.box_end');
-        var allowRetry = !($this.attr('data-allow-retry') === 'false');
-        var modalFeedback = true && $this.attr('data-modal-feedback');
-
-        $box_end.hide();
-
-        if ($this.find('feedback correct').text() != '') {
-            feedbacktrue = $this.find('feedback correct').html();
-        }
-
-        if ($this.find('feedback wrong').text() != '') {
-            feedbackfalse = $this.find('feedback wrong').html();
-        }
-
-        $this.find('feedback').empty();
-
-        var set_position = $this.attr('data-set-position') ? $this.attr('data-set-position') : false;
-
-        // Build the board.
-        activity = new jpit.activities.sortable.activity($this);
-
-        if (set_position) {
-            $this.find('.ui-sortable').on('sortstop', function() {
-                $this.find(set_position).each(function(i, o) {
-                    var $item = $(this);
-                    var group = Number($item.parent().attr('data-group'));
-                    var minus = 0;
-
-                    if (group) {
-                        for (var j = group - 1; j > 0; j--) {
-                            minus += $this.find('[data-group=' + j + ']').length;
-                        }
-                    }
-
-                    $item.html(i + 1 - minus);
-                });
-            });
-        }
-
-        var $verify = $('<button class="button general">' + dhbgApp.s('verify') + '</button>');
-        $verify.on('mouseover', dhbgApp.defaultValues.buttonover);
-        $verify.on('mouseout', dhbgApp.defaultValues.buttonout);
-
-        $verify.on('click', function() {
-            $verify.hide();
-
-            var weight = Math.round(activity.weight());
-
-            if (dhbgApp.scorm) {
-                dhbgApp.scorm.activityAttempt(scorm_id, weight)
-            }
-            dhbgApp.printProgress();
-
-            var msg;
-            if (weight >= dhbgApp.evaluation.approve_limit) {
-                msg = '<div class="correct">' + (feedbacktrue ? feedbacktrue : dhbgApp.s('all_correct_percent', weight)) + '</div>';
-            }
-            else {
-                msg = '<div class="wrong">' + (feedbackfalse ? feedbackfalse : dhbgApp.s('wrong_percent', (100 - weight))) + '</div>';
-            }
-
-            var $msg = $(msg);
-            $box_end.append($msg).show();
-
-            activity.disable();
-            activity.highlight('correct', 'wrong');
-
-            if (weight < 100 && allowRetry) {
-                var $button_again = $('<button class="button general">' + dhbgApp.s('continue_activity') + '</button>');
-                $button_again.on('click', function(){
-                    $box_end.empty();
-                    $box_end.hide();
-                    $this.find('.correct').removeClass('correct');
-                    $this.find('.wrong').removeClass('wrong');
-                    activity.enable();
-                    $verify.show();
-                });
-
-                $box_end.append($button_again);
-            }
-            $(dhbgApp).trigger('jpit:activity:completed', [$this, {
-                id: scorm_id,
-                weight: weight
-            }]);
-        });
-
-        var $box_verify = $('<div class="verify_container"></div>');
-        $box_verify.append($verify);
-        $box_verify.insertAfter($box_end);
-
-    };
-
     dhbgApp.actions.activityCheck = function ($this) {
         var scorm_id = $this.attr('data-act-id') ? $this.attr('data-act-id') : 'check';
 
@@ -2476,6 +2352,11 @@ dhbgApp.standard.load_operations = function() {
                 if (a.finishedAll()) {
                     weight = 100;
                 }
+
+                const msg =  dhbgApp.actions.getFeedbackMsg(weight);
+                const $msg = $(msg);
+                const $box_end = $this.find(".box_end");
+                $box_end.empty().append($msg);
 
                 if (dhbgApp.scorm) {
                     dhbgApp.scorm.activityAttempt(scorm_id, weight);
@@ -2648,6 +2529,20 @@ dhbgApp.standard.load_operations = function() {
 
         $(dhbgApp).trigger('jpit:activity:rendered', [$this, { id: scorm_id }]);
     };
+
+    dhbgApp.actions.getFeedbackMsg = function (weight) {
+        let msg;
+        if (weight >= dhbgApp.evaluation.approve_limit) {
+                const text = weight === 100 ? dhbgApp.s("all_correct_percent") : dhbgApp.s("some_correct_percent_approve", weight) 
+                msg = `<div class="correct">${text}</div>`;
+            }
+            else {
+                const text = weight === 0 ? dhbgApp.s("wrong_percent") : dhbgApp.s("some_correct_percent_no_approve", weight) 
+                msg = `<div class="${weight === 0 ? "wrong" : "partial"}">${text}</div>`;
+        }
+        
+        return msg;
+    }
 
     $('[data-offset="true"]').each(function(){
         var $this = $(this);

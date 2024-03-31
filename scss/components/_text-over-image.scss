@@ -4,36 +4,44 @@
     color: #fff;
     text-align: center;
     border-radius: 20px;
+    display: inline-grid;
+    grid-template-areas: "content";
+    > * {
+        grid-area: content;
+    }
 
     .mask {
-        position: absolute;
         overflow: hidden;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        right: 0;
         opacity: 0;
         background-color: rgba(0, 0, 0, 0.7);
         transition: all 0.4s ease-in-out;
+        z-index: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     img {
         position: relative;
         transition: all 0.2s linear;
+        z-index: 1;
+        width: 100%;
+    }
 
-        &:hover {
-            transform: scale(1.1);
-        }
+    &:hover img {
+        transform: scale(1.1);
     }
 
     &:hover .mask {
         opacity: 1;
+        z-index: 2;
     }
 
     .view-content {
         padding: 0 5px;
 
         h2 {
+            margin-block-start: 0;
             color: #fff;
             border: none;
             font-size: 22px;

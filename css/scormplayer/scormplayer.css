@@ -1,6 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,400;1,700&display=swap");
-@import url(../components/google-symbols/material-symbols-rounded.css);
-@import url(../components/google-symbols/material-symbols-rounded.css);
+@import url(../components/fonts/google-symbols/material-symbols-rounded.css);
+@import url(../components/fonts/poppins/poppins.css);
 .google-symbols-rounded {
   font-family: 'Material Symbols Rounded';
   font-weight: normal;
@@ -18,7 +17,7 @@
 
 :root {
   /* COLORS */
-  --bg-color: #F5F5F5;
+  --bg-color: #F0F0F5;
   --box-bg-color: var(--box-text-bg-color);
   --box-text-activity: #D28D62;
   --box-text-bg-color: #F9F9FC;
@@ -33,34 +32,38 @@
   --color-primary-light-300: #4D4196;
   --color-primary-light: #4E44A0;
   --color-primary-light-400: #6956A0;
+  --color-primary-light-500: #443869;
   --color-primary: #453C78;
   --color-borders:#A79FC0;
-  --color-secondary-light: #ECC9A3;
-  --color-secondary: #826D4A;
+  --color-secondary-light: #FFF;
+  --color-secondary: #c59e75ed;
   --color-tertiary: #00D0A4;
   --dialog-bg-color: #F5F6FA;
   --disabled-button-text: #8B879F;
-  --disabled-button: #E5E5ED;
+  --disabled-button: #DCDCE6;
   --em-color: #4A4A49;
   --enabled-button: #F7F7FA;
   --grey-dark: #575969;
   --grey-light: #DDDDDD;
+  --grey-light-200: #DFDFE8;
   --highlight-blue: #12EFE4;
   --link-color-hover: #3D3FB8;
   --link-color: #4867D0;
   --text-color: #3C3C3B;
   --white: #ffffff;
   --red-error: #D75D72;
+  --yellow-warning: #C9A95D;
   --red-error-100: #e6babe;
   --green-success: #6CCF74;
   --green-success-100: #d3efe2;
   --green-success-200: #3F698B;
   --green-success-300: #48B788;
   --cards-boder: #827E7E;
+  --activity-button-bg-color:#D9D9D9;
   /* WIDTHS */
   --drawer-width: 360px;
   /* FONT FAMILIES */
-  --default-font-family: 'Avenir', arial, sans-serif;
+  --default-font-family: 'Poppins', arial, sans-serif;
   --roboto-font-family: 'Roboto', sans-serif;
   --icon-font-family: "Material Symbols Rounded";
   /* FONT WEIGHTS */
@@ -70,6 +73,7 @@
   --font-weight-regular: 400;
   --font-weight-medium: 500;
   --font-weight-bold: 700;
+  --font-weight-extra-bold: 800;
   --font-weight-black: 900;
   /* FONT SIZES */
   --font-size-small: 12px;
@@ -97,8 +101,7 @@ body {
   margin: 0;
   padding: 0;
   width: 100%;
-  height: 100%;
-  background-color: var(--bg-color); }
+  height: 100%; }
 
 body.dhbgapp_fullview {
   overflow: hidden; }
@@ -172,26 +175,27 @@ blockquote label {
   text-align: center;
   font-style: normal; }
 
+.box_media {
+  text-align: center;
+  margin-block: 24px; }
+
 .onlymobile {
   display: none; }
 
 .notmobile {
   display: none; }
 
-.google-symbols-rounded {
-  font-family: 'Material Symbols Rounded';
-  font-weight: normal;
-  font-style: normal;
-  font-variation-settings: 'OPSZ';
-  font-size: 24px;
-  /* Preferred icon size */
-  display: inline-block;
-  line-height: 1;
-  text-transform: none;
-  letter-spacing: normal;
-  word-wrap: normal;
-  white-space: nowrap;
-  direction: ltr; }
+body * {
+  scrollbar-color: var(--color-primary) var(--bg-color); }
+
+body *::-webkit-scrollbar {
+  width: 8px; }
+
+body *::-webkit-scrollbar-track {
+  background: var(--bg-color); }
+
+body *::-webkit-scrollbar-thumb {
+  background: var(--color-primary); }
 
 body {
   color: var(--text-color);
@@ -206,7 +210,8 @@ h1 {
   font-size: var(--font-size-large-16);
   line-height: var(--font-size-large-28);
   line-height: 45px;
-  color: var(--white); }
+  color: var(--white);
+  font-weight: 700; }
   @media (min-width: 600px) {
     h1 {
       font-size: var(--font-size-large-22);
@@ -219,10 +224,10 @@ h1 {
 h2 {
   font-size: var(--font-size-large-24);
   line-height: var(--font-size-large-32);
-  margin-bottom: 16px;
-  margin-top: 16px;
+  margin-block-start: 1.4em;
+  margin-block-end: 0.6em;
   color: var(--color-primary);
-  font-weight: bold; }
+  font-weight: 800; }
   @media (min-width: 600px) {
     h2 {
       font-size: var(--font-size-large-28);
@@ -235,11 +240,11 @@ h2 {
 h3 {
   font-size: var(--font-size-large-22);
   line-height: var(--font-size-large-30);
-  margin-bottom: 16px;
-  margin-top: 16px;
+  margin-block-start: 1.4em;
+  margin-block-end: 0.6em;
   color: var(--color-primary-light);
   font-size: var(--font-size-medium-20);
-  font-weight: bold; }
+  font-weight: 700; }
   @media (min-width: 600px) {
     h3 {
       font-size: var(--font-size-large-24);
@@ -252,10 +257,10 @@ h3 {
 h4 {
   font-size: var(--font-size-medium-20);
   line-height: var(--font-size-large-28);
-  margin-bottom: 16px;
-  margin-top: 16px;
+  margin-block-start: 1.4em;
+  margin-block-end: 0.6em;
   color: #000000;
-  font-weight: bold; }
+  font-weight: 500; }
   @media (min-width: 600px) {
     h4 {
       font-size: var(--font-size-large-22);
@@ -266,19 +271,19 @@ h4 {
       line-height: var(--font-size-large-30); } }
 
 h5 {
-  font-size: var(--font-size-medium-20);
+  font-size: var(--font-size-medium-16);
   line-height: var(--font-size-large-28);
-  margin-bottom: 16px;
-  margin-top: 16px;
+  margin-block-start: 1.4em;
+  margin-block-end: 0.6em;
   color: #000000;
-  font-weight: bold; }
+  font-weight: 500; }
   @media (min-width: 600px) {
     h5 {
-      font-size: var(--font-size-large-22);
+      font-size: var(--font-size-medium-20);
       line-height: var(--font-size-large-30); } }
   @media (min-width: 1024px) {
     h5 {
-      font-size: var(--font-size-large-22);
+      font-size: var(--font-size-medium-20);
       line-height: var(--font-size-large-30); } }
 
 p {
@@ -389,17 +394,18 @@ body {
       .content #play_scorm {
         justify-content: flex-end; } }
     .content #play_scorm button {
-      border-radius: 16px;
+      font-family: var(--default-font-family);
+      border-radius: 32px;
       font-size: 18px;
       line-height: 24px;
-      font-weight: bold;
-      padding: 8px 12px;
-      background-color: var(--color-primary-light-400);
+      font-weight: 500;
+      padding: 4px 20px;
+      background-color: var(--activity-button-bg-color);
       border: 0px;
-      color: var(--white);
+      color: var(--color-primary-light-400);
       cursor: pointer;
       transition: all 0.2s ease;
       text-transform: uppercase; }
       .content #play_scorm button:hover {
-        filter: brightness(1.1);
-        box-shadow: 0 4px 4px rgba(54, 64, 67, 0.15); }
+        background-color: var(--color-primary-light-400);
+        color: var(--white); }

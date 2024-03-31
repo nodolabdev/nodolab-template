@@ -51,3 +51,21 @@
     }
   }
 }
+
+@mixin grid-autofit(
+  $minmax: 100px,
+  $gap: true
+) {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax($minmax, 1fr));
+
+  @if $gap {
+    gap: 16px;
+  }
+
+  @include respond-to-container('large') {
+    @if $gap {
+      gap: 24px;
+    }
+  }
+}

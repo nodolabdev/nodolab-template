@@ -1,21 +1,30 @@
 .jpit-activities-droppable {
+
+  table {
+    margin-inline: auto;
+  }
+
   th {
     color: var(--color-nodo);
     width: 50%;
-    border: 1px solid var(--color-borders);;
+    border: 1px solid var(--color-borders);
+    ;
     border-radius: 16px;
     padding: 5px 12px;
     text-align: right;
+
     @include respond-to('medium') {
       width: 80%;
     }
   }
+
   .droppable {
     border: 1px dashed var(--color-borders);
     border-radius: 16px;
     text-align: left;
     padding: 0;
     margin: 0 auto;
+    min-width: 80px;
   }
 
   .draggable {
@@ -29,16 +38,28 @@
     -ms-touch-action: none;
     touch-action: none;
     user-select: none;
+    display: inline-block;
+    width: fit-content;
+    min-width: 80px;
 
     &.disabled {
       cursor: default;
     }
   }
 
+  &:not(.jpit-activities-droppable--multi) {
+    .jpit_activities_jpitdroppable_dropped {
+      width: 100%;
+      height: 100%;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
   .jpit_activities_jpitdroppable_dropped {
     background-color: var(--color-borders);
     color: #ffffff;
-    margin-right: 12px;
   }
 
   .draggable.wrong {
@@ -47,6 +68,7 @@
     color: var(--red-error);
     font-weight: bold;
   }
+
   .draggable.correct {
     background-color: var(--green-success-100);
     border-color: var(--green-success-200);
@@ -115,12 +137,11 @@
   .jpit-activities-droppable {
     .box_end {
       border-radius: 16px;
+
       &:before,
       &:after {
         display: none;
       }
     }
-
-    padding-bottom: 150px;
   }
 }
