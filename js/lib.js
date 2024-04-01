@@ -227,6 +227,7 @@ dhbgApp.standard.start = function() {
     const viewportWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
     if (getBreakpoint(viewportWidth) === 'large') {
         $('#drawer-toggle').prop('checked', true);
+        $('body').addClass('panel-open')
     }
 
     $('.scorm__drawer').on('click', function(e) {
