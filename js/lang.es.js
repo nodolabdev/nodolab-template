@@ -26,13 +26,13 @@ dhbgApp.strings = {
 
     'after': 'Después',
 
-    'all_correct_percent': '<p><strong>¡Has aprobado la actividad!</strong> <br/> Todas tus respuestas son correctas. ¡Muy&nbsp;bien!&nbsp;🙌</p>',
+    'all_correct_percent': '<p><strong>¡Muy bien!</strong> <br/> Todas tus respuestas son correctas. ¡Sigue&nbsp;adelante!&nbsp;😁</p>',
 
     'some_correct_percent_approve': '<p><strong>¡Has aprobado la actividad!</strong> <br/> Aunque completaste el {0}% de las respuestas. ¡Puedes&nbsp;hacerlo&nbsp;mejor!&nbsp;💪</p>',
 
-    'some_correct_percent_no_approve': '<p><strong>¡Falta poco!</strong> <br/> {0}% de tus respuestas son correctas. ¡Intenta&nbsp;de&nbsp;nuevo!&nbsp;💪</p>',
+    'some_correct_percent_no_approve': '<p><strong>¡Falta poco!</strong> <br/> {0}% de tus respuestas son correctas. ¡Intenta&nbsp;de&nbsp;nuevo!&nbsp;🙄</p>',
 
-    'wrong_percent': '<p><strong>¡Opss!</strong> <br/> Todas tus respuestas son incorrectas. ¡Intenta&nbsp;de&nbsp;nuevo!&nbsp;💪</p>',
+    'wrong_percent': '<p><strong>¡Opss!</strong> <br/> Todas tus respuestas son incorrectas. ¡Intenta&nbsp;de&nbsp;nuevo!&nbsp;😣</p>',
 
     'answer_corrent': 'Respuesta correcta',
 

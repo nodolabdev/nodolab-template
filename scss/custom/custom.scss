@@ -1,0 +1,74 @@
+@import "../utils/all";
+
+.change {
+  color: red;
+}
+
+/********************************************************************************/
+/* SPECIFIC LAYER STYLES
+/********************************************************************************/
+
+/********************************************************************************/
+/* Actividad arrastrar y soltar - muchos a uno
+/********************************************************************************/
+#pag-actividades-arrastrar5 .chalkboard_content {
+  height: auto;
+}
+
+#drag-drop .droppable {
+  width: 300px;
+  height: 150px;
+}
+
+#drag-drop .draggable {
+  display: inline-block;
+}
+
+.text-center {
+  text-align: center;
+}
+.italic {
+  font-style: italic;
+}
+.flex-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  flex-direction: column;
+  @include respond-to('medium') {
+    flex-direction: row;
+  }
+  & > * {
+    flex: 1 1 50%;
+  }
+  img {
+    border-radius: 8px;
+  }
+}
+
+.flex-center {
+  align-items: center;
+}
+
+ul > li {
+  margin-inline-start: 48px;
+}
+
+.image-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  flex-direction: column;
+  @include spacer(6, padding, block);
+  @include respond-to('medium') {
+    flex-direction: row;
+  }
+}
+
+.flex-info {
+  @include respond-to('large') {
+    max-width: 624px;
+    margin: 0 auto;
+  }  
+}
