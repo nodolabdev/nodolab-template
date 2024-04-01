@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "scss": "node-sass -w -r scss -o css",
-    "scss-scorm": "node-sass -w  -r scss/scormplayer -o css"
+    "scss-scorm": "node-sass -w  -r scss/scormplayer -o css",
+    "scss-custom": "node-sass -w  -r scss/custom -o css"
   },
   "repository": {
     "type": "git",
