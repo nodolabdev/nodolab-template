@@ -30,7 +30,7 @@
 
     @include respond-to('extra-large') {
       grid-template-columns: 72px 1fr 196px;
-      gap: 24;
+      gap: 24px;
     }
   }
 
@@ -60,7 +60,7 @@
     position: relative;
     padding-inline-end: 8px;
     @include respond-to('medium') {
-      background-color: var(--color-primary-dark);
+      background-color: var(--color-primary-dark-100);
     }
     ul {
       display: flex;
@@ -108,7 +108,7 @@
     &:before {
       width: 0;
       height: 0;
-      border-bottom: 64px solid var(--color-primary-dark);
+      border-bottom: 64px solid var(--color-primary-dark-100);
       border-left: 64px solid transparent;
       position: absolute;
       content: '';

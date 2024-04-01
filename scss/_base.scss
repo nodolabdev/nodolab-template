@@ -1,49 +1,58 @@
 @import url(../components/fonts/poppins/poppins.css);
+
 :root {
   /* COLORS */
-  --bg-color: #F0F0F5;
-  --box-bg-color: var(--box-text-bg-color);
-  --box-text-activity: #D28D62;
-  --box-text-bg-color: #F9F9FC;
-  --box-text-color: #2B2C67;
-  --box-text-example: #00CEA8;
-  --box-text-important: #EE7B76;
-  --box-text-link: #40A4C5;
-  --box-text-note: #826CA4;
-  --color-nodo: #0E0134;
-  --color-primary-dark: #2D284F;
-  --color-primary-light-200: #433A78;
-  --color-primary-light-300: #4D4196;
-  --color-primary-light: #4E44A0;
-  --color-primary-light-400: #6956A0;
-  --color-primary-light-500: #443869;
+  --bg-color: #EDEDED;
+  --text-color: #4A4A49;
+  --em-color: var(--text-color);
+  --white: #ffffff;
+  --dialog-bg-color: var(--bg-color);
+  --color-primary-dark: #321C6D;
+  --color-primary-dark-100: #2D284F;
+  --color-primary-dark-200: #3C3661;
   --color-primary: #453C78;
-  --color-borders:#A79FC0;
-  --color-secondary-light: #FFF;
-  --color-secondary: #c59e75ed;
-  --color-tertiary: #00D0A4;
-  --dialog-bg-color: #F5F6FA;
-  --disabled-button-text: #8B879F;
-  --disabled-button: #DCDCE6;
-  --em-color: #4A4A49;
-  --enabled-button: #F7F7FA;
-  --grey-dark: #575969; 
-  --grey-light: #DDDDDD;
-  --grey-light-200: #DFDFE8;
+  --color-primary-light: #4E44A2;
+  --color-primary-light-200: var(--color-primary);
+  --color-primary-light-300: #4E4487;
+  --color-primary-light-400: #6D54A4;
+  --color-primary-light-500: #47376C;
+  --color-primary-light-600: #39327aca;
   --highlight-blue: #12EFE4;
   --link-color-hover: #3D3FB8;
   --link-color: #4867D0;
-  --text-color: #3C3C3B;
-  --white: #ffffff;
-  --red-error: #D75D72;
-  --yellow-warning: #C9A95D;
-  --red-error-100: #e6babe;
-  --green-success: #6CCF74;
-  --green-success-100: #d3efe2;
-  --green-success-200: #3F698B;
-  --green-success-300: #48B788;
+  --box-bg-color: var(--box-text-bg-color);
+  --box-text-bg-color: #F7F7F7;
+  --box-text-important: #FF7371;
+  --box-text-example: #00D1A5;
+  --box-text-link: #00A6C8;
+  --box-text-note: #846CA6;
+  --box-text-activity: #DB8A56;
+  --box-text-color: var(--text-color);
+  --color-secondary-light: #ECC9A3;
+  --color-secondary: #C7A075;
+  --color-secondary-light-100: #E2B089;
+  --color-tertiary: #826D4A;
+  --activity-button-bg-color: #D8D8D8;
+  --green-success: #4BD96C;
+  --green-success-100: #4B999A;
+  --green-success-200: #3F698D;
+  --green-success-300: #D5F1E4;
+  --yellow-warning: #D0A74E;
+  --red-error: #D95D72;
+  --red-error-100: #8E4E55;
+  --red-error-200: #A74B53;
+  --red-error-300: #E8BCC0;
   --cards-boder: #827E7E;
-  --activity-button-bg-color:#D9D9D9;
+  --color-dark: #1C120E;
+  --color-borders: #A9A1C2;
+  --color-green: #62EBAC;
+  --color-green-dark: #57C492;
+  --disabled-button-text: #8B879F;
+  --disabled-button: #DCDCE6;
+  --grey-dark: #575969;
+  --grey-light: #DDDDDD;
+  --grey-light-200: #F4F4F4;
+
 
   /* WIDTHS */
   --drawer-width: 360px;
@@ -89,6 +98,7 @@ body {
   padding: 0;
   width: 100%;
   height: 100%;
+  background-color: var(--bg-color);
 }
 
 body.dhbgapp_fullview {
@@ -193,9 +203,10 @@ blockquote label {
 }
 
 body * {
-  scrollbar-color: var(--color-primary) var(--bg-color);
+  scrollbar-color: var(--color-primary-light-600) var(--bg-color);
 }
-body *::-webkit-scrollbar{
+
+body *::-webkit-scrollbar {
   width: 8px;
 }
 
@@ -204,5 +215,5 @@ body *::-webkit-scrollbar-track {
 }
 
 body *::-webkit-scrollbar-thumb {
-  background: var(--color-primary);
+  background: var(--color-primary-light-600);
 }

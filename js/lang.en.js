@@ -40,7 +40,7 @@ dhbgApp.strings = {
 
     'before': 'Before',
 
-    'click_to_open': 'Click to open the document',
+    'click_to_open': 'Start',
 
     'cloze_required': 'Please, fill in all the fields to continue',
 

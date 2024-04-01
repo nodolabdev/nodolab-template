@@ -3,6 +3,9 @@
 /* ----------------- */
 
 .measuring-progress {
+  $text-color: var(--color-tertiary);
+  $progress-bg-color: var(--color-secondary);
+  $progress-track-bg-color: var(--color-secondary-light);;
   position: relative;
   cursor: pointer;
 
@@ -27,7 +30,7 @@
 
   &.horizontal {
     align-items: center;
-    color: var(--white);
+    color: $text-color;
     display: flex;
     flex-basis: 320px;
     gap: 16px;
@@ -57,12 +60,13 @@
     .results_level {
       height: 15px;
       width: 80%;
-      background-color: var(--color-secondary-light);
+      background-color: $progress-track-bg-color;
       border-radius: 15px;
       overflow: hidden;
+      border: 1px solid $progress-track-bg-color;
 
       div {
-        background-color: var(--color-secondary);
+        background-color: $progress-bg-color;
         width: 0%;
         height: 15px;
         transition: width 0.2s ease;

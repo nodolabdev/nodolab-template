@@ -2,83 +2,269 @@
 @import "../base";
 @import "../typography/all";
 
+body {
+  background-color: var(--grey-light-200);
+}
+
 .content {
   display: flex;
   flex-direction: column;
-  overflow: hidden;
-  max-height: 100vh;
+  padding-inline: 24px;
+  padding-block-start: 18px;
+  min-height: 100vh;
+
   @include respond-to("medium") {
+    overflow: hidden;
     flex-direction: row;
+    max-height: 100vh;
+
+    &:before {
+      content: '';
+      background-color: var(--color-secondary-light-100);
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      width: 40%;
+      z-index: -1;
+    }
   }
+
+  @include respond-to("large") { 
+    &:before {
+      width: 34%;
+    }
+  }
+
+  @include respond-to("extra-large") { 
+    &:before {
+      width: 30%;
+    }
+  }
+
   &__banner {
-    background-color: var(--color-nodo);
     display: flex;
     align-items: center;
     justify-content: flex-end;
     display: flex;
     flex-direction: column;
     position: relative;
-    @include spacer(7, padding, bottom);
+
     @include respond-to("medium") {
       height: 100vh;
+      max-height: unset;
       flex-basis: 50%;
-    }
-    @include respond-to('large') {
-      &::after {
-        background-image: url('/content/nodolab-logo-2.svg');
-        background-size: contain;
-        content: '';
-        height: 100px;
-        position: absolute;
-        right: -50px;
-        top: 50%;
-        transform: translateY(-50%);
-        width: 100px;
-      }
-    }
-    &:before {
-      content: '';
-      background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="325.957" height="312.926" viewBox="0 0 325.957 312.926"><defs><clipPath id="clip-path"><path id="Trazado_1008" data-name="Trazado 1008" d="M325.957,834.333H0L.495,521.407H325.957Z" fill="none"/></clipPath><filter id="Trazado_1006" x="-122.772" y="53.596" width="305.811" height="345.032" filterUnits="userSpaceOnUse"><feOffset dx="3.559" dy="3.559" input="SourceAlpha"/><feGaussianBlur stdDeviation="0.593" result="blur"/><feFlood flood-color="%23397884" flood-opacity="0.188"/><feComposite operator="in" in2="blur"/><feComposite in="SourceGraphic"/></filter><filter id="Trazado_1007" x="-175.201" y="183.288" width="305.811" height="345.033" filterUnits="userSpaceOnUse"><feOffset dx="3.559" dy="3.559" input="SourceAlpha"/><feGaussianBlur stdDeviation="0.593" result="blur-2"/><feFlood flood-color="%23397884" flood-opacity="0.188"/><feComposite operator="in" in2="blur-2"/><feComposite in="SourceGraphic"/></filter></defs><g id="Grupo_1104" data-name="Grupo 1104" transform="translate(0 -521.407)" opacity="0.49"><g id="Grupo_1103" data-name="Grupo 1103" clip-path="url(%23clip-path)"><g transform="matrix(1, 0, 0, 1, 0, 521.41)" filter="url(%23Trazado_1006)"><path id="Trazado_1006-2" data-name="Trazado 1006" d="M47.651,591.112c29.6,8.254,64.9,21.761,65.6,55.938.577,28.427-29.851,70.432-15.4,98.973C110,770,143.446,770.393,160.7,789.548c18.646,20.7,20.815,51.649,9.4,74.921-6.519,13.289-17.024,24.407-29.475,32.881-8.416,5.727-28.3,19.977-39.619,16.118l-223.2-76.129,89.281-261.758Z" transform="translate(0 -521.41)" fill="none" stroke="%23707070" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.156"/></g><g transform="matrix(1, 0, 0, 1, 0, 521.41)" filter="url(%23Trazado_1007)"><path id="Trazado_1007-2" data-name="Trazado 1007" d="M-4.778,720.8c29.6,8.254,64.9,21.761,65.6,55.938.577,28.427-29.851,70.431-15.4,98.973,12.144,23.981,45.595,24.37,62.847,43.525,18.646,20.7,20.815,51.649,9.4,74.921-6.519,13.289-17.024,24.407-29.475,32.881-8.416,5.727-28.3,19.976-39.618,16.117l-223.2-76.129,89.281-261.758Z" transform="translate(0 -521.41)" fill="none" stroke="%23707070" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.156"/></g></g></g></svg>');; 
-      background-size: contain;
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 200px;
-      height: 200px;
+      justify-content: center;
+      align-self: center;
+      align-items: flex-end;
     }
   }
+
   &__title {
     text-transform: uppercase;
-    @include display();
-    @include spacer(7, margin, top);
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.81);
+    background-color: #392b1ca8;
+    color: var(--white);
+    font-size: 20px;
+    font-weight: normal;
+    position: absolute;
+    bottom: 0;
+    margin: 0;
+    padding: 42px 32px 26px;
+    font-weight: 400;
+    line-height: 0.3em;
+    letter-spacing: 0.14em;
+
+    strong {
+      line-height: 1.1em;
+      font-size: 28px;
+    }
+
+    @include respond-to("medium") {
+      top: 54%;
+      bottom: unset;
+      left: 1%;
+    }
+
+    @include respond-to("small-large") {
+      font-size: 32px;
+      line-height: 0.5em;
+    
+      strong {
+        line-height: 1.1em;
+        font-size: 40px;
+      }
+    }
+    @include respond-to("large") {
+      left: unset;
+      right: -32px;
+      width: 420px;
+    }
   }
+
   &__logo {
-    width: 150px;
-    @include spacer(7, margin, top);
+    width: 100%;
+    line-height: 0;
+
+    img {
+      width: 100%;
+    }
+
+    @include respond-to('medium') {
+      max-width: 460px;
+    }
   }
 
   &__info {
-    padding-inline: 16px;
-    overflow: scroll;
-    @include spacer(4, margin, top);
-    @include spacer(7, padding, bottom);
+    padding-block-start: 16px;
+
     @include respond-to("medium") {
+      @include spacer(4, margin, top);
+      @include spacer(7, padding, bottom);
+      padding-inline: 24px 16px;
+      overflow: auto;
       flex-basis: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
     }
+
     @include respond-to("large") {
       padding-inline: 60px;
+      padding-bottom: 0;
+      justify-content: flex-end;
+      @include spacer(4, margin, bottom);
+    }
+
+    h1 {
+      font-size: 28px;
+      font-weight: normal;
+      color: var(--color-primary-dark-200);
+      line-height: 1.1em;
+      margin-block-end: 12px;
+      text-transform: uppercase;
+      font-weight: 400;
+      line-height: 0.7em;
+      letter-spacing: 0.12em;
+
+      strong {
+        line-height: 1.1em;
+        font-size: 34px;
+      }
+
+      @include respond-to("medium") {
+        margin-top: 60%;
+      }
+
+      @include respond-to("small-large") {
+        margin-top: 40%;
+        font-size: 36px;
+
+        strong {
+          font-size: 42px;
+        }
+      }
+
+      @include respond-to("large") {
+        margin-top: 20%;
+      }
+    }
+
+    p {
+      color: var(--color-dark);
+
+      @include respond-to("large") {
+        font-size: var(--font-size-medium-18);
+      }
+    }
+
+    .duration {
+      text-transform: uppercase;
+      color: var(--color-primary-dark-200);
+      font-size: var(--font-size-medium-20);
     }
   }
 
   #play_scorm {
     display: flex;
     justify-content: center;
+    @include spacer(5, margin, bottom);
+    @include spacer(4, margin, top);
+
     @include respond-to('medium') {
       justify-content: flex-end;
     }
+
     button {
       @include button();
+      background-color: var(--color-primary-light-400);
+      color: var(--white);
       text-transform: uppercase;
+      font-size: var(--font-size-large-24);
+      margin: 0 auto;
+      padding: 0.4em 2.8em;
+      position: relative;
+
+      &:hover {
+        background-color: var(--white);
+        color: var(--color-primary-light-400);
+      }
+
+      @include respond-to("medium") {
+        padding: 0.4em 4em 0.4em 1em;
+      }
+
+      @include respond-to("small-large") {
+        font-size: var(--font-size-large-30);
+        margin-inline: auto 0;
+        text-align: left;
+      }
+
+      .google-symbols-rounded {
+        font-size: 32px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 8px;
+      }
+
     }
+
+    .loading {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: var(--font-size-small);
+      height: 100%;
+      margin: 0;
+
+      @include respond-to('medium') {
+        font-size: var(--font-size-common);
+        width: 100%;
+        justify-content: flex-end;
+      }
+
+      @include respond-to('small-large') {
+        font-size: var(--font-size-medium-18);
+      }
+
+      img {
+        aspect-ratio: 3;
+        object-fit: cover;
+
+        @include respond-to("medium") {
+          width: 96px;
+        }
+
+        @include respond-to("small-large") {
+          width: 112px;
+        }
+
+        @include respond-to("large") {
+          width: 128px;
+        }
+      }
+    }
+
   }
 }

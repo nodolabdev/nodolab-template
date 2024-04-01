@@ -1,27 +1,37 @@
 .ui-dialog {
   $block: &;
 
-  position: fixed;
-  min-width: 280px;
-  max-width: 560px;
-  max-height: 96%;
-  overflow: hidden;
-  border-radius: 12px;
-  width: 90% !important;
-  padding: 0;
-  background-color: var(--dialog-bg-color);
-  top: 50% !important; //required to override inline styles
-  left: 50% !important;
-  transform: translate(-50%, -50%);
+  &.ui-widget.ui-widget-content.ui-front {
+    position: fixed;
+    min-width: 280px;
+    max-width: 560px;
+    max-height: 96%;
+    overflow: hidden;
+    border-radius: 12px;
+    width: 90% !important;
+    padding: 0;
+    background-color: var(--dialog-bg-color);
+    top: 50% !important; //required to override inline styles
+    left: 50% !important;
+    transform: translate(-50%, -50%);
 
-  @include respond-to("medium") {
-    width: 76% !important;
+    &[role="dialog"] {
+      overflow: auto;
+    }
+
+    @include respond-to("medium") {
+      width: 76% !important;
+    }
   }
+
 
   .ui-dialog &-titlebar {
     border-width: 0;
     background-color: transparent;
     padding: 16px 24px;
+    position: sticky;
+    z-index: 2;
+    top: 0;
 
     #{$block}-title {
       float: none;
@@ -31,6 +41,7 @@
       outline: transparent solid 2px;
       outline-offset: 2px;
       position: absolute;
+      background-color: var(--dialog-bg-color);
       right: 12px;
       top: 8px;
       width: 32px;
@@ -94,11 +105,11 @@
       padding: 8px 16px 32px;
       color: var(--text-color);
 
-      @include respond-to('medium'){
+      @include respond-to('medium') {
         padding-inline: 24px;
       }
 
-      @include respond-to('large'){
+      @include respond-to('large') {
         padding-inline: 32px;
       }
     }

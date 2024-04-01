@@ -42,7 +42,7 @@ dhbgApp.strings = {
 
     'before': 'Antes',
 
-    'click_to_open': 'Entrar',
+    'click_to_open': 'Comenzar',
 
     'cloze_required': 'Por favor, llene todos los espacios en blanco para continuar.',
 

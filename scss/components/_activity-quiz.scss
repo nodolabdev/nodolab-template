@@ -51,8 +51,8 @@
       }
 
       label {
-        background-color: #556bc6;
-        color: #fff;
+        background-color: var(--color-primary-light-400);
+        color: var(--white);
         padding: 2px 6px;
         border-radius: 30px;
         font-size: 16px;
@@ -120,7 +120,7 @@
 
       &.jpit_activities_quiz_question_feedback_true,
       & {
-        color: var(--green-success-300);
+        color: var(--green-success);
 
         &::after {
           background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="21.106" height="21.109" viewBox="0 0 21.106 21.109"><g id="Grupo_1129" data-name="Grupo 1129" transform="translate(-714.078 -693.296)"><g id="Grupo_188" data-name="Grupo 188" transform="translate(45)"><g id="Grupo_187" data-name="Grupo 187"><g id="Grupo_186" data-name="Grupo 186"><g id="Grupo_185" data-name="Grupo 185"><g id="Grupo_184" data-name="Grupo 184"><path id="Trazado_135" data-name="Trazado 135" d="M679.631,714.052a10.195,10.195,0,1,1,4.452-1.021A10.108,10.108,0,0,1,679.631,714.052Zm0-20.084a9.884,9.884,0,1,0,9.881,9.884A9.893,9.893,0,0,0,679.631,693.968Z" fill="%23e85270"/><path id="Trazado_136" data-name="Trazado 136" d="M679.631,714.405a10.546,10.546,0,1,1,4.607-1.056A10.47,10.47,0,0,1,679.631,714.405Zm0-20.083a9.53,9.53,0,1,0,9.527,9.53A9.539,9.539,0,0,0,679.631,694.322Z" fill="%2352d29c"/></g></g></g></g></g><g id="Grupo_190" data-name="Grupo 190" transform="translate(45)"><g id="Grupo_189" data-name="Grupo 189"><path id="Trazado_137" data-name="Trazado 137" d="M674.6,703.147a4.556,4.556,0,0,1,1.915,1.822c.692,1.166.813,1.959,1,2.1a2.476,2.476,0,0,0,1.566-.291c.474-.255.491-.4.934-1.43a23.253,23.253,0,0,1,2.374-4.214c.765-1.02,2.375-2.362,2.448-2.617s-.692-.374-1.421-.155-2.263,1.907-3.19,3.235c-1.029,1.476-1.4,2.722-1.577,2.685s-.539-.779-1.049-1.326a1.9,1.9,0,0,0-1.666-.807C675.306,702.263,674.225,702.89,674.6,703.147Z" fill="%2352d29c"/></g></g></g></svg>');
@@ -141,6 +141,15 @@
     //---------------------------------//
     // Custom styles per question type //
     //---------------------------------//
+
+    .jpit_activities_quiz_question_answers {
+      input[type="text"], select {
+        background-color: var(--box-bg-color);
+        color: var(--color-primary-light-400);
+        border-bottom: 1px solid var(--color-primary-light-400);
+      }
+        
+    }
 
     .jpit_activities_quiz_question_multichoice,
     .jpit_activities_quiz_question_multisetchoice {
@@ -203,8 +212,8 @@
 
     &>.jpit_activities_quiz_paginator_current {
       align-items: center;
-      background-color: var(--disabled-button);
-      border-radius: 12px;
+      background-color: var(--activity-button-bg-color);
+      border-radius: 16px;
       color: var(--color-primary-light-400);
       display: flex;
       font-weight: bold;

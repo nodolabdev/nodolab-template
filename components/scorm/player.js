@@ -105,7 +105,7 @@ var scormredirect = function (window_scorm) {
 }
 
 function add_load_button (unique_id) {
-    var $button = $('<button class="general">' + dhbgApp.s('click_to_open') + '</button>');
+    var $button = $('<button class="general">' + dhbgApp.s('click_to_open') + '<span class="google-symbols-rounded">arrow_right</span></button>');
 
     if (dhbgApp.WINDOWS_MODE == 'popup') {
         $button.on('click', function() {
@@ -114,8 +114,12 @@ function add_load_button (unique_id) {
         });
     }
     else if (dhbgApp.WINDOWS_MODE == 'modal') {
+        
+        var img=new Image();
+        img.src = "img/infinity-loader.svg";
+        
         $button.on('click', function() {
-            $('#play_scorm').html('<p class="ui-state-highlight"><img src="img/loading.gif" alt="' + dhbgApp.s('loading') + '" /> ' + dhbgApp.s('loading') + '</p>');
+            $('#play_scorm').html('<p class="loading"><img src="img/infinity-loader.svg" alt="' + dhbgApp.s('loading') + '" /> ' + dhbgApp.s('loading') + '</p>');
             var $scorm_frame = $('body', window.parent.document);
 
             $scorm_frame.prepend($css_to_fullpage);

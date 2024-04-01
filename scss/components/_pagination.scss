@@ -5,7 +5,7 @@
   padding: 2%;
   color: #2B2D63;
   border-radius: 30px;
-  padding-bottom: 64px;
+  padding-bottom: 12px;
 
   @include respond-to('medium') {
     padding-inline: 60px;
@@ -42,7 +42,7 @@
   .position {
     color: var(--color-primary-light-400);
     font-weight: 500;
-    background-color: var(--grey-light-200);
+    background-color: var(--activity-button-bg-color);
     padding: 4px 12px;
     border-radius: 12px;
     margin: 0;
@@ -58,13 +58,10 @@
   }
 
   ul.pagination {
-    bottom: 12px;
     display: flex;
     justify-content: center;
-    left: 50%;
+    align-items: center;
     list-style: none;
-    position: absolute;
-    transform: translateX(-50%);
     width: 100%;
 
     li {
