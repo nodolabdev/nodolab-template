@@ -118,3 +118,8 @@ ul > li {
     width: 100%;
     height: auto;
     max-width: 260px; }
+  .img-container--xl img {
+    max-width: 560px; }
+
+.spacer-bottom-2 {
+  margin-bottom: 16px; }

@@ -127,4 +127,13 @@ ul > li {
     height: auto;
     max-width: 260px;
   }
+  &--xl {
+    img {
+      max-width: 560px; 
+    }
+  }
+}
+
+.spacer-bottom-2 {
+  @include spacer(2, margin, bottom);
 }
