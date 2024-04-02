@@ -110,3 +110,9 @@ ul > li {
     }
   }
 }
+
+.shadow-image {
+  img {
+    pointer-events: none;
+  }
+}
