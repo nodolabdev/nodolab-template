@@ -10,8 +10,9 @@ body {
   display: flex;
   flex-direction: column;
   padding-inline: 24px;
-  padding-block-start: 18px;
   min-height: 100vh;
+  max-width: 1240px;
+  margin-inline: auto;
 
   @include respond-to("medium") {
     overflow: hidden;
@@ -38,7 +39,7 @@ body {
 
   @include respond-to("extra-large") { 
     &:before {
-      width: 30%;
+      width: 40%;
     }
   }
 
@@ -113,6 +114,9 @@ body {
     @include respond-to('medium') {
       max-width: 460px;
     }
+    @include respond-to('extra-large') {
+      max-width: 520px;
+    }
   }
 
   &__info {
@@ -132,8 +136,12 @@ body {
     @include respond-to("large") {
       padding-inline: 60px;
       padding-bottom: 0;
-      justify-content: flex-end;
-      @include spacer(4, margin, bottom);
+      @include spacer(4, margin, top);
+
+      .wrapper {
+        max-height: 480px;
+        margin-top: 160px;
+      }
     }
 
     h1 {

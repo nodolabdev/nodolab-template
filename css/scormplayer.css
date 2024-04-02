@@ -1,5 +1,5 @@
 @import url(../components/fonts/google-symbols/material-symbols-rounded.css);
-@import url(../components/fonts/poppins/poppins.css);
+@import url(../components/fonts/montserrat/montserrat.css);
 .google-symbols-rounded {
   font-family: 'Material Symbols Rounded';
   font-weight: normal;
@@ -45,7 +45,7 @@
   --box-text-color: var(--text-color);
   --color-secondary-light: #ECC9A3;
   --color-secondary: #C7A075;
-  --color-secondary-light-100: #E2B089;
+  --color-secondary-light-100: #E1AE89;
   --color-tertiary: #826D4A;
   --activity-button-bg-color: #D8D8D8;
   --green-success: #4BD96C;
@@ -70,7 +70,7 @@
   /* WIDTHS */
   --drawer-width: 360px;
   /* FONT FAMILIES */
-  --default-font-family: 'Poppins', arial, sans-serif;
+  --default-font-family: 'Montserrat', arial, sans-serif;
   --roboto-font-family: 'Roboto', sans-serif;
   --icon-font-family: "Material Symbols Rounded";
   /* FONT WEIGHTS */
@@ -326,8 +326,9 @@ body {
   display: flex;
   flex-direction: column;
   padding-inline: 24px;
-  padding-block-start: 18px;
-  min-height: 100vh; }
+  min-height: 100vh;
+  max-width: 1240px;
+  margin-inline: auto; }
   @media (min-width: 600px) {
     .content {
       overflow: hidden;
@@ -347,7 +348,7 @@ body {
       width: 34%; } }
   @media (min-width: 1440px) {
     .content:before {
-      width: 30%; } }
+      width: 40%; } }
   .content__banner {
     display: flex;
     align-items: center;
@@ -405,6 +406,9 @@ body {
     @media (min-width: 600px) {
       .content__logo {
         max-width: 460px; } }
+    @media (min-width: 1440px) {
+      .content__logo {
+        max-width: 520px; } }
   .content__info {
     padding-block-start: 16px; }
     @media (min-width: 600px) {
@@ -424,8 +428,10 @@ body {
       .content__info {
         padding-inline: 60px;
         padding-bottom: 0;
-        justify-content: flex-end;
-        margin-bottom: 36px; } }
+        margin-top: 36px; }
+        .content__info .wrapper {
+          max-height: 480px;
+          margin-top: 160px; } }
     .content__info h1 {
       font-size: 28px;
       font-weight: normal;
