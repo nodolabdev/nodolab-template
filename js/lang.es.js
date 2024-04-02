@@ -20,88 +20,88 @@
  *
  */
 dhbgApp.strings = {
-    'accept': 'Aceptar',
+  'accept': 'Aceptar',
 
-    'activities_attempts': 'no tiene intentos',
+  'activities_attempts': 'no tiene intentos',
 
-    'after': 'Después',
+  'after': 'Después',
 
-    'all_correct_percent': '<p><strong>¡Muy bien!</strong> <br/> Todas tus respuestas son correctas. ¡Sigue&nbsp;adelante!&nbsp;😁</p>',
+  'all_correct_percent': '<p><strong>¡Has aprobado la actividad!</strong> <br/> Todas tus respuestas son correctas. ¡Muy&nbsp;bien!&nbsp;🙌</p>',
 
-    'some_correct_percent_approve': '<p><strong>¡Has aprobado la actividad!</strong> <br/> Aunque completaste el {0}% de las respuestas. ¡Puedes&nbsp;hacerlo&nbsp;mejor!&nbsp;💪</p>',
+  'some_correct_percent_approve': '<p><strong>¡Has aprobado la actividad!</strong> <br/> Aunque completaste el {0}% de las respuestas. ¡Puedes&nbsp;hacerlo&nbsp;mejor!&nbsp;💪</p>',
 
-    'some_correct_percent_no_approve': '<p><strong>¡Falta poco!</strong> <br/> {0}% de tus respuestas son correctas. ¡Intenta&nbsp;de&nbsp;nuevo!&nbsp;🙄</p>',
+  'some_correct_percent_no_approve': '<p><strong>¡Falta poco!</strong> <br/> {0}% de tus respuestas son correctas. ¡Intenta&nbsp;de&nbsp;nuevo!&nbsp;💪</p>',
 
-    'wrong_percent': '<p><strong>¡Opss!</strong> <br/> Todas tus respuestas son incorrectas. ¡Intenta&nbsp;de&nbsp;nuevo!&nbsp;😣</p>',
+  'wrong_percent': '<p><strong>¡Opss!</strong> <br/> Todas tus respuestas son incorrectas. ¡Intenta&nbsp;de&nbsp;nuevo!&nbsp;💪</p>',
 
-    'answer_corrent': 'Respuesta correcta',
+  'answer_corrent': 'Respuesta correcta',
 
-    'answer_required': 'Primero debes responder esta pregunta.',
+  'answer_required': 'Primero debes responder esta pregunta.',
 
-    'answer_wrong': 'Respuesta incorrecta',
+  'answer_wrong': 'Respuesta incorrecta',
 
-    'before': 'Antes',
+  'before': 'Antes',
 
-    'click_to_open': 'Comenzar',
+  'click_to_open': 'Comenzar',
 
-    'cloze_required': 'Por favor, llene todos los espacios en blanco para continuar.',
+  'cloze_required': 'Por favor, llene todos los espacios en blanco para continuar.',
 
-    'continue_activity': 'Continuar con la actividad',
+  'continue_activity': 'Continuar con la actividad',
 
-    'drop_required': 'Por favor, arrastre todos los elementos a alguno de los destinos válidos',
+  'drop_required': 'Por favor, arrastre todos los elementos a alguno de los destinos válidos',
 
-    'ended_not_close': 'Ha cerrado la ventana del documento, si desea volverlo a abrir, utilice el siguiente botón.',
+  'ended_not_close': 'Ha cerrado la ventana del documento, si desea volverlo a abrir, utilice el siguiente botón.',
 
-    'form_full': 'Todos los campos han sido diligenciados.',
+  'form_full': 'Todos los campos han sido diligenciados.',
 
-    'form_required': 'Debe diligenciar todos los campos.',
+  'form_required': 'Debe diligenciar todos los campos.',
 
-    'horizontal': 'Horizontal',
+  'horizontal': 'Horizontal',
 
-    'loading': 'Cargando...',
+  'loading': 'Cargando...',
 
-    'mark_required': 'Necesitas marcar por lo menos una zona para continuar.',
+  'mark_required': 'Necesitas marcar por lo menos una zona para continuar.',
 
-    'none': 'Ninguno',
+  'none': 'Ninguno',
 
-    'opened': 'Este documento de estudio ha sido abierto en una ventana emergente.',
+  'opened': 'Este documento de estudio ha sido abierto en una ventana emergente.',
 
-    'opened_return': 'Este documento de estudio ha sido abierto en una ventana emergente. Si ya ha finalizado de interactuar con el recurso, de clic acá para regresar a la pagina principal del curso.',
+  'opened_return': 'Este documento de estudio ha sido abierto en una ventana emergente. Si ya ha finalizado de interactuar con el recurso, de clic acá para regresar a la pagina principal del curso.',
 
-    'pagination_label': '{a} / {b}',
+  'pagination_label': '{a} / {b}',
 
-    'play_animation': 'Clic para reproducir la animación',
+  'play_animation': 'Clic para reproducir la animación',
 
-    'popups': 'Parece que las ventanas emergentes están bloqueadas, deteniendo la ejecución de este documento de estudio.',
+  'popups': 'Parece que las ventanas emergentes están bloqueadas, deteniendo la ejecución de este documento de estudio.',
 
-    'print_version': 'Vista de impresión',
+  'print_version': 'Vista de impresión',
 
-    'progress': 'Avance',
+  'progress': 'Avance',
 
-    'repeat_animation': 'Clic para repetir la animación',
+  'repeat_animation': 'Clic para repetir la animación',
 
-    'restart_activity': 'Reiniciar la actividad',
-    'end_activity': 'Terminar',
+  'restart_activity': 'Reiniciar la actividad',
+  'end_activity': 'Terminar',
 
-    'result_to': '{a} de {b}',
+  'result_to': '{a} de {b}',
 
-    'save': 'Guardar',
+  'save': 'Guardar',
 
-    'save_correct': 'Se ha guardado la información correctamente',
+  'save_correct': 'Se ha guardado la información correctamente',
 
-    'save_wrong': 'No se ha podido guardar la información, por favor verifique su conexión a Internet e intente de nuevo más tarde.',
+  'save_wrong': 'No se ha podido guardar la información, por favor verifique su conexión a Internet e intente de nuevo más tarde.',
 
-    'score': 'Encontradas:',
+  'score': 'Encontradas:',
 
-    'scorm_not': 'Este documento se encuentra en modo de solo lectura por lo que la información de lo que realice no se guardará. Si precisa almacenar el seguimiento, por favor cierre esta página e intente más tarde.',
+  'scorm_not': 'Este documento se encuentra en modo de solo lectura por lo que la información de lo que realice no se guardará. Si precisa almacenar el seguimiento, por favor cierre esta página e intente más tarde.',
 
-    'selected_required': 'Necesita seleccionar una palabra de la lista para continuar',
+  'selected_required': 'Necesita seleccionar una palabra de la lista para continuar',
 
-    'start_activity': 'Iniciar la actividad',
+  'start_activity': 'Iniciar la actividad',
 
-    'verify': 'Verificar',
+  'verify': 'Verificar',
 
-    'vertical': 'Vertical',
+  'vertical': 'Vertical',
 
-    'wrong_continue': 'La actividad es incorrecta en un {0}%. Continua la actividad hasta completarla correctamente.',
+  'wrong_continue': 'La actividad es incorrecta en un {0}%. Continua la actividad hasta completarla correctamente.',
 };
