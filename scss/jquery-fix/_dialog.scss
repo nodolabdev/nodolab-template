@@ -14,6 +14,7 @@
     top: 50% !important; //required to override inline styles
     left: 50% !important;
     transform: translate(-50%, -50%);
+    font-family: var(--default-font-family);
 
     &[role="dialog"] {
       overflow: auto;
