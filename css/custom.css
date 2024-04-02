@@ -50,7 +50,7 @@
   .flex-row > * {
     flex: 1 1 50%; }
   .flex-row img {
-    border-radius: 8px; }
+    border-radius: 16px; }
 
 .flex-center {
   align-items: center; }
@@ -105,5 +105,16 @@ ul > li {
   .logo-container:hover img {
     transform: scale(1.1); }
 
-.shadow-image img {
+.shadow-image {
   pointer-events: none; }
+  .shadow-image img {
+    pointer-events: none; }
+
+.img-container {
+  width: 100%;
+  height: auto;
+  text-align: center; }
+  .img-container img {
+    width: 100%;
+    height: auto;
+    max-width: 260px; }

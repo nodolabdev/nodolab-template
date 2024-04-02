@@ -42,7 +42,7 @@
     flex: 1 1 50%;
   }
   img {
-    border-radius: 8px;
+    border-radius: 16px;
   }
 }
 
@@ -112,7 +112,19 @@ ul > li {
 }
 
 .shadow-image {
+  pointer-events: none;
   img {
     pointer-events: none;
+  }
+}
+
+.img-container {
+  width: 100%;
+  height: auto;
+  text-align: center;
+  img {
+    width: 100%;
+    height: auto;
+    max-width: 260px;
   }
 }

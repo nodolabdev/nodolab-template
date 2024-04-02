@@ -53,7 +53,6 @@
     display: grid;
     grid-template-areas: 'content';
     grid-template-columns: minmax(0, 1fr);
-    max-height: 400px;
     overflow-y: scroll;
 
     @include respond-to('medium') {
