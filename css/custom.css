@@ -139,3 +139,10 @@ ul.text-list > li {
   .cream-box p {
     font-size: var(--font-size-medium-16);
     line-height: var(--font-size-large-28); }
+
+.jpit-activities-check .box_conclution {
+  position: relative; }
+  .jpit-activities-check .box_conclution .box_end {
+    padding: 0; }
+    .jpit-activities-check .box_conclution .box_end > * {
+      position: relative; }
