@@ -76,6 +76,7 @@ ul.text-list > li {
 .genially-embed {
   width: 300px;
   height: 300px;
+  @include spacer(4, margin, block);
   @include respond-to('large') {
     width: 800px;
     height: 600px;
@@ -140,4 +141,19 @@ ul.text-list > li {
 
 .spacer-block-4 {
   @include spacer(4, margin, block);
+}
+
+.cream-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  img {
+    max-width: 90px;
+  }
+  p {
+    font-size: var(  --font-size-medium-16);
+    line-height: var(--font-size-large-28);
+  }
 }

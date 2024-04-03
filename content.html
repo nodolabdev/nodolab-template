@@ -144,7 +144,7 @@
               <p>Tener conocimientos básicos de la piel, ya que un buen acabado y la durabilidad del maquillaje depende
                 de cómo manejan el tipo de piel del cliente.
               </p>
-              <video controls width="360">
+              <video muted autoplay loop width="360">
                 <source src="/content/video-1.mp4" type="video/mp4" />
                 Download the
                 <a href="/content/video-1.mp4">MP4</a>
@@ -436,55 +436,104 @@
             fundamentales en tu oficio como profesional de maquillaje.
           </p>
           <div class="box-text box-text--activity" label="Actividad">
-            <div class="jpit-activities-check">
-              <words>
-                <li data-val="true">Medellín</li>
-                <li data-val="true">Cartagena</li>
-                <li>Turín</li>
-                <li data-val="true">Santa Marta</li>
-                <li>Hong Kong</li>
-                <li>Quito</li>
-                <li data-val="true">Villavicencio</li>
-                <li>Lima</li>
-                <li data-val="true">Pasto</li>
-                <li data-val="true">Armenia</li>
-              </words>
-              <div class="board">
-                <div class="check_left">
-                  <div class="play">
-                    <p>Indique si la siguiente ciudad es o no colombiana:</p>
-                    <div class="word_content">&nbsp;</div>
-                    <div class="buttons">
-                      <button class="yes general">Si</button>
-                      <button class="not general">No</button>
+            <div class="instruction" type="info">Selecciona para cada opción, si cumple o no con la condición.</div>
+            <div class="flex-row">
+              <div class="img-container">
+                <img src="/content/img-24.png" alt="Fotografia para actividad">
+              </div>
+              <div class="jpit-activities-check">
+                <p>Imagina que Andrea es una clienta que va a tomar tu servicio por primera vez. Al examinar su piel
+                  observas lo que se ve en la fotografía.
+                  Además, ella te especifica que sus ojos son sensibles, así que debes evitar aplicarles productos en el
+                  interior. <br><br>
+                  ¿Qué elementos deberíamos utilizar para preparar su piel?
+                </p>
+                <words>
+                  <li data-val="true">
+                    <div class="cream-box">
+                      <img src="content/act-img-1.png" alt="Desmaquillante Bifásico">
+                      <p>Desmaquillante Bifásico</p>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="cream-box">
+                      <img src="content/act-img-2.png" alt="Gotas osmoclear">
+                      <p>Gotas osmoclear</p>
+                    </div>
+                  </li>
+                  <li data-val="true">
+                    <div class="cream-box">
+                      <img src="content/act-img-3.png" alt="Crema Hidratante">
+                      <p>Crema Hidratante</p>
+                    </div>
+                  </li>
+                  <li data-val="true">
+                    <div class="cream-box">
+                      <img src="content/act-img-4.png" alt="Hidratante de Labios">
+                      <p>Hidratante de Labios</p>
+                    </div>
+                  </li>
+                  <li data-val="true">
+                    <div class="cream-box">
+                      <img src="content/act-img-5.png" alt="Agua micelar">
+                      <p>Agua micelar</p>
+                    </div>
+                  </li>
+                  <li data-val="true">
+                    <div class="cream-box">
+                      <img src="content/act-img-6.png" alt="Tonico facial">
+                      <p>Tonico facial</p>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="cream-box">
+                      <img src="content/act-img-7.png" alt="Crema humectante">
+                      <p>Crema humectante</p>
+                    </div>
+                  </li>
+                  <li data-val="true">
+                    <div class="cream-box">
+                      <img src="content/act-img-8.png" alt="Contorno ojos">
+                      <p>Contorno ojos</p>
+                    </div>
+                  </li>
+                </words>
+                <div class="board">
+                  <div class="check_left">
+                    <div class="play">
+                      <div class="word_content">&nbsp;</div>
+                      <div class="buttons">
+                        <button class="yes general">Si</button>
+                        <button class="not general">No</button>
+                      </div>
+                    </div>
+                    <div class="box_conclution">
+                      <h3>¡Has finalizado!</h3>
+                      <p>Al clasificar has tenido los siguientes aciertos y desaciertos:</p>
+                      <p>
+                        <strong>Aciertos:</strong>
+                        <span class="correct_words"></span>
+                      </p>
+                      <p>
+                        <strong>Desaciertos:</strong>
+                        <span class="wrong_words"></span>
+                      </p>
+                      <div class="box_end"></div>
+                      <div class="buttons">
+                        <button class="general reload">Reiniciar actividad</button>
+                      </div>
                     </div>
                   </div>
-                  <div class="box_conclution">
-                    <h3>¡Has finalizado!</h3>
-                    <p>Al clasificar has tenido los siguientes aciertos y desaciertos:</p>
-                    <p>
-                      <strong>Aciertos:</strong>
-                      <span class="correct_words"></span>
-                    </p>
-                    <p>
-                      <strong>Desaciertos:</strong>
-                      <span class="wrong_words"></span>
-                    </p>
-                    <div class="box_end"></div>
-                    <div class="buttons">
-                      <button class="general reload">Reiniciar actividad</button>
-                    </div>
-                  </div>
-                </div>
-                <div class="check_right">
-                  <div class="box_result">
-                    <div class="correct">
-                      <div class="hits">0</div>
-                      <div class="text">Aciertos</div>
-                    </div>
-                    <div class="wrong">
-                      <div class="miss">0</div>
-                      <div class="text">Desaciertos</div>
+                  <div class="check_right">
+                    <div class="box_result">
+                      <div class="correct">
+                        <div class="hits">0</div>
+                        <div class="text">Aciertos</div>
+                      </div>
+                      <div class="wrong">
+                        <div class="miss">0</div>
+                        <div class="text">Desaciertos</div>
+                      </div>
                     </div>
                   </div>
                 </div>
