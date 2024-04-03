@@ -124,6 +124,9 @@ ul > li {
 .spacer-bottom-2 {
   margin-bottom: 16px; }
 
+.spacer-block-2 {
+  margin-block: 16px; }
+
 .banner {
   margin-bottom: 16px; }
 
@@ -143,7 +146,8 @@ ul > li {
   display: grid;
   grid-template-columns: repeat(1, minmax(0, 1fr));
   grid-column-gap: 16px;
-  row-gap: 24px; }
+  row-gap: 24px;
+  margin-block: 36px; }
   @media (min-width: 600px) {
     .infografia {
       grid-template-columns: repeat(3, minmax(0, 1fr)); } }
@@ -160,3 +164,6 @@ ul > li {
   flex-direction: column;
   align-items: center;
   justify-content: center; }
+
+.subpage {
+  margin-bottom: 36px; }
