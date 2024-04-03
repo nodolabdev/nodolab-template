@@ -50,7 +50,7 @@
   align-items: center;
 }
 
-ul > li {
+ul.text-list > li {
   margin-inline-start: 48px;
 }
 
@@ -136,4 +136,8 @@ ul > li {
 
 .spacer-bottom-2 {
   @include spacer(2, margin, bottom);
+}
+
+.spacer-block-4 {
+  @include spacer(4, margin, block);
 }
