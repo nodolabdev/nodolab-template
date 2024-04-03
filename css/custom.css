@@ -146,3 +146,6 @@ ul.text-list > li {
     padding: 0; }
     .jpit-activities-check .box_conclution .box_end > * {
       position: relative; }
+
+.bsQnGP.bsQnGP.bsQnGP, .genially-embed .genially-view-navigation-actions-container.genially-view-without-option-button {
+  display: none; }
