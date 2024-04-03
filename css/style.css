@@ -1615,7 +1615,8 @@ footer,
     transition: all 0.2s ease;
     flex-basis: 72px;
     flex-shrink: 0;
-    border-width: 0; }
+    border-width: 0;
+    font-size: var(--font-size-common); }
     .horizontal-menu__item-button:hover {
       cursor: pointer;
       color: var(--color-primary-light);
@@ -1632,9 +1633,7 @@ footer,
     color: var(--box-text-color);
     display: grid;
     grid-template-areas: 'content';
-    grid-template-columns: minmax(0, 1fr);
-    max-height: 400px;
-    overflow-y: scroll; }
+    grid-template-columns: minmax(0, 1fr); }
     @media (min-width: 600px) {
       .horizontal-menu__chalkboard-content {
         padding-block: 24px;
@@ -1659,7 +1658,7 @@ footer,
   font-size: var(--font-size-common);
   line-height: var(--font-size-large-24);
   font-weight: 500;
-  margin-block-start: 8px;
+  margin-block: 16px;
   font-style: italic;
   color: var(--color-primary-light-200);
   text-align: center; }
@@ -1679,7 +1678,7 @@ main {
       padding: 130px 60px; } }
   main section {
     margin: 0 auto;
-    max-width: 1296px;
+    max-width: 1024px;
     container-type: inline-size; }
 
 .scorm__drawer {
@@ -2412,6 +2411,8 @@ main {
   @media (min-width: 600px) {
     .ui-dialog.ui-widget.ui-widget-content.ui-front {
       width: 76% !important; } }
+  .ui-dialog.ui-widget.ui-widget-content.ui-front .google-symbols-rounded {
+    font-family: var(--icon-font-family); }
 
 .ui-dialog .ui-dialog-titlebar {
   border-width: 0;
@@ -2439,10 +2440,11 @@ main {
     justify-content: center;
     align-items: center;
     transition: background-color 200ms ease;
-    z-index: 2; }
+    z-index: 2;
+    font-size: 0; }
     .ui-dialog .ui-dialog-titlebar-close .ui-icon {
-      --icon-size: 16px;
-      font-family: "Ionicons";
+      --icon-size: 24px;
+      font-family: var(--icon-font-family);
       speak: none;
       font-style: normal;
       font-size: 24px;
@@ -2465,9 +2467,10 @@ main {
       margin: 0;
       position: static; }
       .ui-dialog .ui-dialog-titlebar-close .ui-icon::after {
-        content: "\f129";
+        content: "close";
         width: var(--icon-size);
-        height: var(--icon-size); }
+        height: var(--icon-size);
+        font-family: var(--icon-font-family); }
     .ui-dialog .ui-dialog-titlebar-close:hover, .ui-dialog .ui-dialog-titlebar-close:focus, .ui-dialog .ui-dialog-titlebar-close:active {
       background-color: rgba(0, 0, 0, 0.06); }
 

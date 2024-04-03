@@ -1,5 +1,5 @@
 @mixin use-icon-font {
-  font-family: "Ionicons";
+  font-family: var(--icon-font-family);
   speak: none;
   font-style: normal;
   font-size: 24px;
