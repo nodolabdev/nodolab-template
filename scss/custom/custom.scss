@@ -1,0 +1,139 @@
+@import "../utils/all";
+
+.change {
+  color: red;
+}
+
+/********************************************************************************/
+/* SPECIFIC LAYER STYLES
+/********************************************************************************/
+
+/********************************************************************************/
+/* Actividad arrastrar y soltar - muchos a uno
+/********************************************************************************/
+#pag-actividades-arrastrar5 .chalkboard_content {
+  height: auto;
+}
+
+#drag-drop .droppable {
+  width: 300px;
+  height: 150px;
+}
+
+#drag-drop .draggable {
+  display: inline-block;
+}
+
+.text-center {
+  text-align: center;
+}
+.italic {
+  font-style: italic;
+}
+.flex-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  flex-direction: column;
+  @include respond-to('medium') {
+    flex-direction: row;
+  }
+  & > * {
+    flex: 1 1 50%;
+  }
+  img {
+    border-radius: 16px;
+  }
+}
+
+.flex-center {
+  align-items: center;
+}
+
+ul > li {
+  margin-inline-start: 48px;
+}
+
+.image-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  flex-direction: column;
+  @include spacer(6, padding, block);
+  @include respond-to('medium') {
+    flex-direction: row;
+  }
+}
+
+.flex-info {
+  @include respond-to('large') {
+    max-width: 624px;
+    margin: 0 auto;
+  }  
+}
+
+.genially-embed {
+  width: 300px;
+  height: 300px;
+  @include respond-to('large') {
+    width: 800px;
+    height: 600px;
+  }
+}
+
+.logo-container {
+  display: block;
+  border-bottom: 0;
+  width: 250px;
+  object-fit: cover;
+  margin: 0 auto;
+  @include spacer(4, margin, bottom);
+  &:hover {
+    border-bottom: 0;
+  }
+  img {
+    height: 100%;
+    width: auto;
+    transition: all 0.2s ease;
+  }
+  &--mariana {
+    img {
+      object-fit: cover;
+      width: 250px;
+      height: 80px;
+    }
+  }
+  &:hover {
+    img {
+      transform: scale(1.1);
+    }
+  }
+}
+
+.shadow-image {
+  pointer-events: none;
+  img {
+    pointer-events: none;
+  }
+}
+
+.img-container {
+  width: 100%;
+  height: auto;
+  text-align: center;
+  img {
+    width: 100%;
+    height: auto;
+    max-width: 260px;
+  }
+  &--xl {
+    img {
+      max-width: 560px; 
+    }
+  }
+}
+
+.spacer-bottom-2 {
+  @include spacer(2, margin, bottom);
+}
