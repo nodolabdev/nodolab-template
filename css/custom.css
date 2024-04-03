@@ -55,7 +55,7 @@
 .flex-center {
   align-items: center; }
 
-ul > li {
+ul.text-list > li {
   margin-inline-start: 48px; }
 
 .image-content {
@@ -123,3 +123,6 @@ ul > li {
 
 .spacer-bottom-2 {
   margin-bottom: 16px; }
+
+.spacer-block-4 {
+  margin-block: 36px; }
