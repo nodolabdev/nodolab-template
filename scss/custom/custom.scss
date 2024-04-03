@@ -163,18 +163,120 @@ ul > li {
   @include grid(1, 3, 3);
   row-gap: 24px;
   @include spacer(4, margin, block);
-}
-
-.info-box {
-  border: 1px solid #827E7E;
-  border-radius: 20px;
-  padding: 25px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  &__box {
+    border: 1px solid #827E7E;
+    border-radius: 20px;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 .subpage {
   @include spacer(4, margin, bottom);
+}
+
+.infografia-2 {
+  @include grid(1, 1, 1);
+  row-gap: 24px;
+  @include spacer(4, margin, block);
+  margin: 0 auto;
+  justify-content: center;
+  &__box {
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    height: 85px;
+    @include respond-to('medium') {
+      height: 126px;
+    }
+    &--left {
+      .infografia-2 {
+        &__link {
+          border-radius: 50px 20px 20px 50px;
+        }
+        &__img-container {
+          position: absolute;
+          left: 0;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+        &__box-title-container {
+          justify-content: flex-end;
+          width: 100%;
+          @include respond-to('medium') {
+            justify-content: center;
+          }
+        }
+      }
+    }
+    &--right {
+      .infografia-2 {
+        &__link {
+          border-radius: 20px 50px 50px 20px;
+        }
+        &__img-container {
+          position: absolute;
+          right: 0;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+        &__box-title-container {
+          justify-content: flex-start;
+          width: 100%;
+          @include respond-to('medium') {
+            justify-content: center;
+          }
+        }
+      }
+    }
+  }
+  &__link {
+    align-items: center;
+    background-color: #E5DFF6;
+    border-bottom: none;
+    border-radius: 20px;
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    max-width: 532px;
+    padding: 18px;
+    padding: 25px;
+    position: relative;
+    width: 100%;
+    &:hover {
+      border-bottom: none;
+      .infografia-2__img-container {
+        transform: translateY(-50%) scale(1.1);
+      }
+    }
+  }
+  &__img-container {
+    border-radius: 50%;
+    border: 3px solid #6956A1;
+    padding: 21px;
+    background-color: white;
+    transition: all 0.2s ease;
+    height: 85px;
+    @include respond-to('medium') {
+      height: 126px;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      margin: 0 auto;
+    }
+  }
+  &__box-title-container {
+    margin: 0 auto;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__box-title {
+    margin: 0;
+  }
 }
