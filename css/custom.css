@@ -255,3 +255,10 @@ ul > li {
     justify-content: center; }
   .infografia-2__box-title {
     margin: 0; }
+
+.jpit-activities-check .box_conclution {
+  position: relative; }
+  .jpit-activities-check .box_conclution .box_end {
+    padding: 0; }
+    .jpit-activities-check .box_conclution .box_end > * {
+      position: relative; }

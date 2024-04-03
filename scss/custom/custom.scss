@@ -280,3 +280,15 @@ ul > li {
     margin: 0;
   }
 }
+
+.jpit-activities-check{
+  .box_conclution {
+    position: relative;
+    .box_end {
+      padding: 0;
+      & > * {
+        position: relative;
+      }
+    }
+  }
+}
