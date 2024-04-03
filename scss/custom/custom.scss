@@ -140,7 +140,9 @@ ul > li {
 .spacer-block-2 {
   @include spacer(2, margin, block);
 }
-
+.spacer-block-4 {
+  @include spacer(4, margin, block);
+}
 .banner {
   @include spacer(2, margin, bottom);
 }
