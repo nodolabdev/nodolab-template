@@ -23,6 +23,10 @@
     @include respond-to("medium") {
       width: 76% !important;
     }
+
+    .google-symbols-rounded {
+      font-family: var(--icon-font-family);
+    }
   }
 
 
@@ -56,9 +60,10 @@
       align-items: center;
       transition: background-color 200ms ease;
       z-index: 2;
+      font-size: 0;
 
       .ui-icon {
-        --icon-size: 16px;
+        --icon-size: 24px;
         @include use-icon-font;
         background-image: none;
         text-indent: 0;
@@ -73,9 +78,10 @@
         position: static;
 
         &::after {
-          content: "\f129";
+          content: "close";
           width: var(--icon-size);
           height: var(--icon-size);
+          font-family: var(--icon-font-family);
         }
       }
 

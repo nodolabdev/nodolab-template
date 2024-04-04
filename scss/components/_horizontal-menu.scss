@@ -30,6 +30,7 @@
     flex-basis: 72px;
     flex-shrink: 0;
     border-width: 0;
+    font-size: var(--font-size-common);
 
     &:hover {
       cursor: pointer;
@@ -53,7 +54,6 @@
     display: grid;
     grid-template-areas: 'content';
     grid-template-columns: minmax(0, 1fr);
-    overflow-y: scroll;
 
     @include respond-to('medium') {
       @include spacer(3, padding, block);
