@@ -221,3 +221,9 @@ body *::-webkit-scrollbar-track {
 body *::-webkit-scrollbar-thumb {
   background: var(--color-primary-light-600);
 }
+
+iframe {
+  border-width: 0;
+  width: 100% !important;
+  max-width: 800px;
+}
