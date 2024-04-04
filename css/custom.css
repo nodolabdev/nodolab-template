@@ -23,9 +23,6 @@
 /********************************************************************************/
 /* Actividad arrastrar y soltar - muchos a uno
 /********************************************************************************/
-#pag-actividades-arrastrar5 .chalkboard_content {
-  height: auto; }
-
 #drag-drop .droppable {
   width: 300px;
   height: 150px; }
@@ -117,3 +114,26 @@ ul > li {
 
 .spacer-bottom-2 {
   margin-bottom: 16px; }
+
+/********************************************************************************/
+/* CREDITS
+/********************************************************************************/
+.logo-container {
+  display: block;
+  border-bottom: 0;
+  width: 250px;
+  object-fit: cover;
+  margin: 0 auto;
+  margin-bottom: 36px; }
+  .logo-container:hover {
+    border-bottom: 0; }
+  .logo-container img {
+    height: 100%;
+    width: auto;
+    transition: all 0.2s ease; }
+  .logo-container--mariana img {
+    object-fit: cover;
+    width: 250px;
+    height: 80px; }
+  .logo-container:hover img {
+    transform: scale(1.1); }
