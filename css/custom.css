@@ -33,18 +33,12 @@
 #drag-drop .draggable {
   display: inline-block; }
 
-<<<<<<< HEAD
 .text-center {
   text-align: center; }
 
 .italic {
   font-style: italic; }
 
-=======
-/********************************************************************************/
-/* UTIL CLASSES
-/********************************************************************************/
->>>>>>> course/enlace-estrategico-maquillaje
 .flex-row {
   display: flex;
   align-items: flex-start;
@@ -64,7 +58,6 @@
 ul.text-list > li {
   margin-inline-start: 48px; }
 
-<<<<<<< HEAD
 .image-content {
   display: flex;
   align-items: center;
@@ -93,6 +86,9 @@ ul.text-list > li {
       width: 800px;
       height: 600px; } }
 
+/********************************************************************************/
+/* CREDITS
+/********************************************************************************/
 .logo-container {
   display: block;
   border-bottom: 0;
@@ -118,8 +114,6 @@ ul.text-list > li {
   .shadow-image img {
     pointer-events: none; }
 
-=======
->>>>>>> course/enlace-estrategico-maquillaje
 .img-container {
   width: 100%;
   height: auto;
@@ -130,7 +124,6 @@ ul.text-list > li {
     max-width: 260px; }
   .img-container--xl img {
     max-width: 560px; }
-<<<<<<< HEAD
 
 .spacer-bottom-2 {
   margin-bottom: 16px; }
@@ -143,9 +136,11 @@ ul.text-list > li {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding-inline: 8px;
   gap: 16px; }
   .cream-box img {
-    max-width: 90px; }
+    max-width: 90px;
+    height: 90px; }
   .cream-box p {
     font-size: var(--font-size-medium-16);
     line-height: var(--font-size-large-28); }
@@ -156,34 +151,3 @@ ul.text-list > li {
     padding: 0; }
     .jpit-activities-check .box_conclution .box_end > * {
       position: relative; }
-
-.bsQnGP.bsQnGP.bsQnGP, .genially-embed .genially-view-navigation-actions-container.genially-view-without-option-button {
-  display: none; }
-=======
-
-.spacer-bottom-2 {
-  margin-bottom: 16px; }
-
-/********************************************************************************/
-/* CREDITS
-/********************************************************************************/
-.logo-container {
-  display: block;
-  border-bottom: 0;
-  width: 250px;
-  object-fit: cover;
-  margin: 0 auto;
-  margin-bottom: 36px; }
-  .logo-container:hover {
-    border-bottom: 0; }
-  .logo-container img {
-    height: 100%;
-    width: auto;
-    transition: all 0.2s ease; }
-  .logo-container--mariana img {
-    object-fit: cover;
-    width: 250px;
-    height: 80px; }
-  .logo-container:hover img {
-    transform: scale(1.1); }
->>>>>>> course/enlace-estrategico-maquillaje

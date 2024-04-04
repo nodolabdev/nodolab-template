@@ -152,9 +152,11 @@ ul.text-list > li {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding-inline: 8px;
   gap: 16px;
   img {
     max-width: 90px;
+    height: 90px;
   }
   p {
     font-size: var(  --font-size-medium-16);
