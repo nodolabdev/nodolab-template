@@ -1586,7 +1586,9 @@ dhbgApp.standard.load_operations = function() {
 
         dhbgApp.printProgress();
 
-        if (dhbgApp.scorm && dhbgApp.scorm.indexPages.length > page && dhbgApp.scorm.indexPages[page].length > subpage) {
+        const shouldChangePage =(dhbgApp.scorm && dhbgApp.scorm.indexPages.length > page && dhbgApp.scorm.indexPages[page].length > subpage) || (dhbgApp.pages[page]?.id === "pag-creditos")
+        
+        if (shouldChangePage) {
             var current = dhbgApp.FULL_PAGES ? page : dhbgApp.scorm.indexPages[page][subpage];
             $('#page_number').text((current + 1) + '/' + dhbgApp.DB.totalPages);
         }
