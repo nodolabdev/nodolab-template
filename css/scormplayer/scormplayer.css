@@ -207,6 +207,11 @@ body *::-webkit-scrollbar-track {
 body *::-webkit-scrollbar-thumb {
   background: var(--color-primary-light-600); }
 
+iframe {
+  border-width: 0;
+  width: 100% !important;
+  max-width: 800px; }
+
 body {
   color: var(--text-color);
   font-family: var(--default-font-family);
@@ -442,10 +447,9 @@ body {
       margin-block-end: 12px;
       text-transform: uppercase;
       font-weight: 400;
-      line-height: 0.7em;
+      line-height: 0.95em;
       letter-spacing: 0.12em; }
       .content__info h1 strong {
-        line-height: 1.1em;
         font-size: 34px; }
       @media (min-width: 600px) {
         .content__info h1 {
