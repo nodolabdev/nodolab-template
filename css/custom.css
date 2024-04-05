@@ -259,6 +259,12 @@ ul > li {
   .infografia-2__box-title {
     margin: 0; }
 
+.jpit-activities-check .word_content {
+  background-color: transparent;
+  height: 382px; }
+  .jpit-activities-check .word_content img {
+    border-radius: 14px; }
+
 .jpit-activities-check .box_conclution {
   position: relative; }
   .jpit-activities-check .box_conclution .box_end {
