@@ -2,7 +2,7 @@
   font-size: var(--font-size-common);
   line-height: var(--font-size-large-24);
   font-weight: 500;
-  margin-block-start: 8px;
+ @include spacer(2, margin, block);
   font-style: italic;
   color: var(--color-primary-light-200);
   text-align: center;

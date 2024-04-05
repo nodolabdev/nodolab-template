@@ -1238,7 +1238,9 @@ dhbgApp.standard.start = function() {
 
         dhbgApp.pagesNames[v.id] = i;
 
-        if (dhbgApp.scorm) {
+        const skipInScorm = v.id === 'pag-creditos';
+
+        if (dhbgApp.scorm && !skipInScorm) {
             dhbgApp.scorm.indexPages[i] = [];
 
             for (var k = 0; k < v.subpages; k++) {
@@ -1283,6 +1285,35 @@ dhbgApp.standard.start = function() {
     }
     else {
         dhbgApp.loadPage(0, 0);
+    }
+
+    function clearWatermark(iframe,watermarkDone, shareDone) {
+        const iframeBody = $(iframe)[0].contentDocument.body;
+        const waterMark = $(iframeBody).find('a [data-cy="eduWatermark"]');
+        const shareButton = $(iframeBody).find('[data-cy="shareIcon"]');
+        if (waterMark.length) {
+            waterMark.parent().parent().remove();
+            watermarkDone = true;
+        }
+        if (shareButton.length) {
+            shareButton.parent().parent().remove();
+            shareDone = true;
+        }
+        if (!watermarkDone || !shareDone) {
+            setTimeout(() => {
+                clearWatermark(iframe, watermarkDone, shareDone)
+            }, 500);
+        }
+    }
+
+    const $geniallyEmbed = $('.genially-embed');
+    if ($geniallyEmbed.length) {
+        $geniallyEmbed.each(function (){
+            let shareDone = false;
+            let watermarkDone = false;
+            clearWatermark(this,watermarkDone, shareDone)
+
+        })
     }
 };
 
@@ -1469,7 +1500,12 @@ dhbgApp.standard.load_operations = function() {
             }
 
             if (dhbgApp.scorm) {
-                dhbgApp.scorm.saveVisit(dhbgApp.scorm.indexPages[npage][nsubpage]);
+                const index = dhbgApp.scorm.indexPages
+                    && dhbgApp.scorm.indexPages[npage]
+                    && dhbgApp.scorm.indexPages[npage][nsubpage];
+                if (index !== undefined) {
+                    dhbgApp.scorm.saveVisit(dhbgApp.scorm.indexPages[npage][nsubpage]);
+                }
             }
 
             dhbgApp.DB.currentSubPage = nsubpage;
@@ -1534,7 +1570,12 @@ dhbgApp.standard.load_operations = function() {
             }
 
             if (dhbgApp.scorm) {
-                dhbgApp.scorm.saveVisit(dhbgApp.scorm.indexPages[npage][nsubpage]);
+                const index = dhbgApp.scorm.indexPages
+                    && dhbgApp.scorm.indexPages[npage]
+                    && dhbgApp.scorm.indexPages[npage][nsubpage];
+                if (index !== undefined) {
+                    dhbgApp.scorm.saveVisit(dhbgApp.scorm.indexPages[npage][nsubpage]);
+                }
             }
 
         }
@@ -1545,7 +1586,9 @@ dhbgApp.standard.load_operations = function() {
 
         dhbgApp.printProgress();
 
-        if (dhbgApp.scorm && dhbgApp.scorm.indexPages.length > page && dhbgApp.scorm.indexPages[page].length > subpage) {
+        const shouldChangePage =(dhbgApp.scorm && dhbgApp.scorm.indexPages.length > page && dhbgApp.scorm.indexPages[page].length > subpage) || (dhbgApp.pages[page]?.id === "pag-creditos")
+        
+        if (shouldChangePage) {
             var current = dhbgApp.FULL_PAGES ? page : dhbgApp.scorm.indexPages[page][subpage];
             $('#page_number').text((current + 1) + '/' + dhbgApp.DB.totalPages);
         }
