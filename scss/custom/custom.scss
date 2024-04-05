@@ -47,6 +47,16 @@
   }
 }
 
+.ui-dialog.ui-widget.ui-widget-content.ui-front[role="dialog"][aria-describedby="modal-yt-video"] {
+  max-width: 94vw !important;
+  width: 840px !important;
+
+  iframe {
+    width: 100%;
+    aspect-ratio: 1.7777;
+  }
+}
+
 .text-center {
   text-align: center;
 }
@@ -77,24 +87,24 @@
     border-radius: 0px;
   }
 
- @include respond-to('up-to-medium'){
-   &.activity > .general {
-    margin-block: 16px;
-  }
- }
-
-  @include respond-to('medium') {
-    &.intro > * {
-    flex: unset;
-  }
-
-  &.activity > * {
-    flex: unset;
-    
-    &.general {
-      flex: 0 0 200px;
+  @include respond-to('up-to-medium') {
+    &.activity>.general {
+      margin-block: 16px;
     }
   }
+
+  @include respond-to('medium') {
+    &.intro>* {
+      flex: unset;
+    }
+
+    &.activity>* {
+      flex: unset;
+
+      &.general {
+        flex: 0 0 200px;
+      }
+    }
   }
 
 }

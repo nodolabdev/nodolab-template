@@ -42,6 +42,13 @@
   width: 68%;
   max-width: 68%; }
 
+.ui-dialog.ui-widget.ui-widget-content.ui-front[role="dialog"][aria-describedby="modal-yt-video"] {
+  max-width: 94vw !important;
+  width: 840px !important; }
+  .ui-dialog.ui-widget.ui-widget-content.ui-front[role="dialog"][aria-describedby="modal-yt-video"] iframe {
+    width: 100%;
+    aspect-ratio: 1.7777; }
+
 .text-center {
   text-align: center; }
 
