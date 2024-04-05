@@ -383,6 +383,13 @@ dhbgApp.standard.start = function() {
             autoOpen: false,
             close: function( event, ui ) {
                 $('body').removeClass('dhbgapp_fullview');
+                const $iframeInContent = $(this).find('iframe');
+                if($iframeInContent.length) {
+                    $iframeInContent.each(function(){
+                        this.contentWindow
+                            .postMessage('{"event":"command","func":"stopVideo","args":""}', '*');
+                    })
+                }
             }, 
             open: function(event, ui) { 
                 $('.ui-widget-overlay').bind('click', function() { 
