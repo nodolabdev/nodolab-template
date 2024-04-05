@@ -54,11 +54,6 @@
   <script src="components/scorm/SCORM_12_APIWrapper.js"> </script>
   <script src="components/scorm/scorm_api.js"> </script>
 
-  <!-- Add timeline files if required -->
-  <link rel="stylesheet" href="components/timelinejs/timeline.css" type="text/css" />
-  <script src="components/timelinejs/timeline.js"> </script>
-  <!-- End of timeline files -->
-
   <style type='text/css'>
     body {
       background-color: var(--bg-color);
@@ -101,23 +96,17 @@
       <input type="checkbox" id="drawer-toggle">
       <nav label="Principal" class="horizontal main scorm__drawer" data-offset="true">
         <menu>
-          <menuitem label="Contextualización" data-page="pag-inicio">
+          <menuitem label="Definición del visagismo" data-page="pag-definicion">
           </menuitem>
-          <menuitem label="Componentes">
-          <menu>
-            <menuitem label="1. Textos especiales" data-page="pag-textos">
-            </menuitem>
-            <menuitem label="2. Multimedia" data-page="pag-media">
-            </menuitem>
-            <menuitem label="3. Formato de contenido" data-page="pag-contenidointeractivo">
-            </menuitem>
-            <menuitem label="4. Actividades" data-page="pag-actividades">
-            </menuitem>
-            <menuitem label="5. Referencias" data-page="pag-referencias">
-            </menuitem>
-          </menu>
+          <menuitem label="Estudio del rostro sobre el plano horizontal" data-page="pag-estudio">
           </menuitem>
-          <menuitem label="Maquetación" data-page="pag-maquetacion">
+          <menuitem label="Técnica de luces y sombras" data-page="pag-tecnicas">
+          </menuitem>
+          <menuitem label="Terminología técnica: ojos y labios" data-page="pag-terminologia">
+          </menuitem>
+          <menuitem label="Medición básica de las cejas" data-page="pag-medicion">
+          </menuitem>
+          <menuitem label="Tipos de ojos y cómo maquillarlos" data-page="pag-tipos">
           </menuitem>
           <menuitem label="Créditos" data-page="pag-creditos">
           </menuitem>
@@ -147,1000 +136,498 @@
     </header>
 
     <main style="display: none;">
-      <section id="pag-inicio" ptitle="Contextualización">
-
+      <section id="pag-definicion" ptitle="Definición del visagismo">
         <div class="subpage">
           <div class="banner"><img src="img/banner.png" alt="Banner" /></div>
-          <h3>Introducción</h3>
-          <p>
-            En este espacio encontrará ejemplos de los controles que se pueden utilizar para dar formato a los
-            contenidos del documento y para construir rápidamente actividades, además de instrucciones para usar los
-            controles e información para estandarizar el proceso de montaje.
+          <p class="text-center">
+            <span class="italic">¿Sabías que según los rasgos del rostro de tu cliente hay técnicas de maquillaje que
+              pueden favorecerle más?</span></br></br>
           </p>
-          <p>
-            Esta plantilla está diseñada para simplificar el montaje de los documentos, soportando el empaquetamiento
-            SCORM, reduciendo los conocimientos técnicos necesarios para el montaje y/o personalización, entre otras
-            características operativas; no obstante, dado que su montaje se da mediante HTML/CSS, es preciso tener
-            conocimientos básicos de los mismos y respetar las definiciones y reglas que se hacen en cada sección ya
-            que
-            un error en el HTML puede hacer inservible la plantilla completa.
-          </p>
-        </div>
-
-        <div class="subpage">
-          <h3>Páginas</h3>
-          <p>
-            Las páginas son los bloques principales que dividen el contenido. Cada página es un elemento
-            <em>section</em> dentro del elemento <em>main</em>. Las páginas tienen los siguientes atributos
-            especiales:
-          </p>
-          <ul class="data_list">
-            <li><strong>id</strong>: El identificador único que servirá como referencia para enlazarlo con los menús u
-              otros enlaces.</li>
-            <li><strong>ptitle</strong> (opcional): Un título que identificará la página de cara al lector. Si el
-              título
-              se establece y en el documento hay un contenedor con la clase <em>page-title</em>, el título se agrega
-              en
-              dicho contenedor cuando la página se hace activa.</li>
-          </ul>
-          <p>
-            Las páginas tienen una única división que son las subpáginas. Toda página debe tener como mínimo una
-            subpágina. La primera o única subpágina de una página es la que se muestra en un primer momento cuando se
-            abre la página. Las subpáginas son elementos de tipo <em>div</em> con la clase <em>subpage</em>.
-          </p>
-          <p>
-            A las páginas se puede llegar desde un menú o desde un vínculo dentro del contenido. A continuación se
-            muestra como ejemplo una serie de enlaces apuntando a páginas específicas utilizando su identificador
-            único.
-            Sin embargo, la acción de vincular se puede hacer en otros elementos HTML, no necesariamente enlaces.
-          </p>
-          <ol class="ol_counter">
-            <li><a href="javascript:;" data-page="pag-textos">Textos especiales</a></li>
-            <li><a href="javascript:;" data-page="pag-media">Multimedia</a></li>
-            <li><a href="javascript:;" data-page="pag-contenidointeractivo">Formato de contenido</a></li>
-            <li><a href="javascript:;" data-page="pag-actividades">Actividades</a></li>
-            <li><a href="javascript:;" data-page="pag-referencias">Referencias</a></li>
-          </ol>
-          <p>
-            Para realizar la acción anterior basta con agregar a cualquier elemento el atributo <em>data-page</em> con
-            el valor igual al identificador de la página a cargar. Ejemplo:<br />
-          <pre>    &lt;a href="#" data-page="pag-textos"&gt;Textos especiales&lt;/a&gt;</pre>
-          </p>
-          <p>
-            También se puede ir a un lugar dentro de una página agregando al elemento el atributo adicional
-            <em>data-section</em> con el valor igual al selector de un lugar en la página. Ejemplo:<br />
-            Ir directamente al tipo de actividad "<a href="javascript:;" data-page="pag-actividades"
-              data-section="#subpage-act-crucigrama">Crucigrama</a>".
-          <pre>    Ir directamente al tipo de actividad "&lt;a href="#" data-page="pag-actividades" data-section="#subpage-act-crucigrama"&gt;Crucigrama&lt;/a&gt;"</pre>
-          </p>
-        </div>
-
-        <div class="subpage">
-          <h3>Dispositivos</h3>
-          <p>
-            Al momento de mostrar el contenido no se hace una detección real de dispositivos sino que se asumen dos
-            posibilidades dependiendo del ancho del navegador desde el que se visita el documento. La primera es la
-            por
-            defecto o de escritorio y la segunda es la de móvil. Por defecto se asume que un dispositivo es móvil si
-            tiene un ancho inferior a <strong>512 pixeles</strong>, aunque ese valor es configurable mediante el
-            atributo <em>data-mobile-mode</em> definido en la etiqueta <em>body</em>. Dicho atributo acepta los
-            valores:
-            <strong>0</strong> o <strong>false</strong> para no separar los dispositivos sino utilizar únicamente el
-            modo de escritorio; <strong>true</strong> para utilizar la configuración por defecto; o un valor numérico
-            indicando el ancho en pixeles que determina el límite que separa ambos modos, sólo el número, sin unidades
-            de medida. Si no se establece el atributo, se utiliza la configuración por defecto.
-          </p>
-          <p>
-            La detección no se hace considerando los tipos de dispositivos dadas muchas razones operativas, entre
-            ellas
-            que sin importar el dispositivo que se tenga, muchas acciones que se realizan están sujetas al espacio
-            disponible en pantalla y en algunos casos es posible que incluso un dispositivo móvil tenga mayor
-            resolución
-            que algunos equipos de escritorio. Además, con las pantallas táctiles se eliminó una de las
-            características
-            diferenciadoras de los móviles como es el "tocar" y así van apareciendo características técnicas que
-            difuminan cada vez más la diferencia entre ambos tipos de dispositivos.
-          </p>
-          <p>
-            Para indicar contenidos que se muestran en un tipo de dispositivo y no en el otro, se pueden utilizar las
-            clases: <em>onlymobile</em> o <em>notmobile</em>. Por ejemplo:
-          </p>
-          <pre>
-&lt;strong&gt;
-  Está en modo
-  "&lt;span class="onlymobile"&gt;dispositivo móvil&lt;/span&gt;
-  &lt;span class="notmobile"&gt;escritorio&lt;/span&gt;"
-&lt;/strong&gt;
-                    </pre>
-          <p>
-            El código anterior se verá diferente a continuación según el tipo de dispositivo (ancho, realmente) desde
-            el
-            que esté visualizando este contenido:
-            <strong>Está en modo "<span class="onlymobile">dispositivo móvil</span><span
-                class="notmobile">escritorio</span>"</strong>.
-          </p>
-        </div>
-
-        <div class="subpage">
-          <h3>Otras configuraciones</h3>
-          <p>Se encuentran disponibles otros parámetros de configuración para definir comportamientos del documento. A
-            continuación se presenta una descripción de cada uno de ellos, considerando que deben ser definidos como
-            atributos en la etiqueta <em>body</em>, además, todos son opcionales y en caso de no ser definidos se
-            aplicará el valor por defecto.</p>
-          <ul class="data_list">
-            <li><strong>data-debug="[<em>true</em> | false]"</strong>: Coloca el documento en modo depuración. Es útil
-              sobre todo para el montaje y antes de deshabilitarlo se debe <cite>minificar</cite> los estilos CSS.
-            </li>
-
-            <li><strong>data-display-mode="[<em>onlypages</em> | slides]"</strong>: Determina si el contenido es
-              mostrado cada subpágina a la vez (<strong>slides</strong>) o si se puestran todas las subpáginas en una
-              misma página (<strong>onlypages</strong>).</li>
-
-            <li><strong>data-approve-limit="[<em>número</em>]"</strong>: Un valor numérico que indica el porcentaje
-              correspondiente al límite inferior con el cual se aprueba una actividad. Esta información determina como
-              se muestran algunos mensajes de retroalimentación y como se comportan algunas actividades. El valor por
-              defecto es <strong>100</strong>, es decir, una actividad debe estar correcta en un 100% para
-              considerarse
-              completada.</li>
-
-            <li><strong>data-activities-percentaje="[<em>número</em>]"</strong>: Un valor numérico que indica el
-              porcentaje que se le asigna como peso a la calificación obtenida en las actividades, el porcentaje
-              restante se asigna a la revisión/visita de las páginas y subpáginas del documento. Es de considerar que
-              solamente se computa la calificación más alta obtenida en la realización de una actividad, independiente
-              de los demás intentos. Si el documento se encuentra como SCORM, para que se considere completado se debe
-              aprobar el 100%. El valor por defecto es <strong>60</strong>, es decir, el computo de los resultados
-              obtenidos en las actividades aporta el 60% del progreso y la navegación por los contenidos aporta el 40%
-              restante.</li>
-
-            <li><strong> data-model="[<em>scorm</em> | page]"</strong>: Define el tipo de modelo elegido para ejecutar
-              el paquete. Por defecto se utiliza un modelo SCORM lo que indica que se intenta la conexión con el LMS.
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <!--Textos especiales-->
-      <section id="pag-textos" ptitle="1. Textos especiales">
-        <div class="subpage">
-          <h3>Elementos comunes</h3>
-          <p>
-            A continuación, algunos elementos genéricos que se utilizan en diferentes momentos cuando se interactúa
-            con
-            los contenidos. Al lado de cada uno se muestra su respectiva etiqueta. No se incluye el encabezado de
-            nivel
-            1 ya que se utiliza como título principal y solamente debe haber uno en todo el documento.
-          </p>
-
-          <h2>Encabezado de nivel 2 (<em>h2</em>)</h2>
-          <h3>Encabezado de nivel 3 (<em>h3</em>)</h3>
-          <h4>Encabezado de nivel 4 (<em>h4</em>)</h4>
-          <h5>Encabezado de nivel 5 (<em>h5</em>)</h5>
-
-          <p>Apariencia de los <a href="#">enlaces</a> (<em>a</em>).</p>
-          <p>Apariencia de un <strong>texto destacado</strong> (<em>strong</em>).</p>
-          <p>Apariencia de un <em>texto de énfasis</em> (<em>em</em>).</p>
-          <p>Apariencia de las <cite>citas cortas</cite> (<em>cite</em>).</p>
-        </div>
-
-        <div class="subpage">
-          <h3>Bloques de texto</h3>
-          <p>
-            Sirven para dar énfasis o categorizar los tipos de textos especiales. Para utilizarlos basta con agregar a
-            un elemento <em>div</em> la clase <em>box-text</em> y para indicar el tipo de texto se utiliza una marca
-            personal, de las cuales se encuentran definidas por defecto las siguiente: <em>important</em>,
-            <em>example</em>, <em>note</em>.
-          </p>
-          <p>
-            Para asignar un título a un bloque, se utiliza el atributo <em>label</em>.
-          </p>
-        </div>
-
-        <div class="subpage">
-          <h3>Importante</h3>
-          <div class="box-text box-text--important" label="Importante">
-            <p>Se utiliza la clase <em>important</em> y es para los párrafos que requieren un énfasis. Ejemplo:</p>
-            <pre>
-&lt;div class="box-text box-text--important" label="Importante"&gt;
-  &lt;p&gt;
-    Acá un párrafo importante,
-    del que se requiere hacer énfasis.
-  &lt;/p&gt;
-&lt;/div&gt;</pre>
-          </div>
-        </div>
-
-        <div class="subpage">
-          <h3>Ejemplos</h3>
-          <div class="box-text box-text--example" label="Ejemplo">
-            <p>Se utiliza la clase <em>example</em> y es para los párrafos que muestran un ejemplo. Ejemplo:</p>
-            <pre>
-&lt;div class="box-text box-text--example" label="Ejemplo"&gt;
-  &lt;p&gt;
-    Acá un párrafo de ejemplo.
-  &lt;/p&gt;
-&lt;/div&gt;
-                        </pre>
-          </div>
-        </div>
-
-        <div class="subpage">
-          <h3>Anotaciones</h3>
-          <div class="box-text box-text--note" label="Nota">
-            <p>Se utiliza la clase <em>note</em> y es para hacer anotaciones. Ejemplo:</p>
-            <pre>
-&lt;div class="box-text box-text--note" label="Nota"&gt;
-  &lt;p&gt;
-    Acá una anotación.
-  &lt;/p&gt;
-&lt;/div&gt;
-                        </pre>
-          </div>
-        </div>
-
-        <div class="subpage">
-          <h3>Enlaces</h3>
-          <div class="box-text box-text--link" label="Enlace">
-            <p>Se utiliza la clase <em>link</em> y es para referencias a páginas web o sitios en internet. Ejemplo:
-            </p>
-            <pre>
-&lt;div class="box-text box-text--link" label="Enlace"&gt;
-  &lt;p&gt;
-    Acá un <a href="https://bambuco.co" target="_blank">enlace</a>.
-  &lt;/p&gt;
-&lt;/div&gt;
-                        </pre>
-          </div>
-        </div>
-
-        <div class="subpage">
-          <h3>Actividad</h3>
-          <div class="box-text box-text--activity" label="Actividad de aprendizaje">
-            <p>Se utiliza la clase <em>activity</em> y es para destacar actividades dentro del contenido. Ejemplo:</p>
-            <pre>
-&lt;div class="box-text box-text--activity" label="Actividad de aprendizaje"&gt;
-  &lt;p&gt;
-    Acá la descripción de la actividad.
-  &lt;/p&gt;
-&lt;/div&gt;
-                        </pre>
-          </div>
-        </div>
-
-        <div class="subpage">
-          <h3>Instrucciones</h3>
-          <p>
-            Son contenidos simples que se utilizan para dar indicaciones en algún punto del contenido, como por
-            ejemplo
-            donde hay una acción que realizar como pasar el mouse sobre un elemento. La instrucción se define
-            agregando
-            la clase <em>instruction</em> a un elemento html.
-          </p>
-          <p>
-            Las instrucciones son de diferentes tipos. El tipo se indica mediante el atributo <em>type</em> el cuál
-            puede tener uno de los siguientes valores:
-          </p>
-          <ul class="data_list">
-            <li><strong>info</strong>: para las instrucciones de tipo informativo.</li>
-            <li><strong>danger</strong>: para las instrucciones que indican peligro.</li>
-            <li><strong>alert</strong>: para las instrucciones de alerta.</li>
-            <li><strong>none</strong>: para eliminar la indicación de tipo de instrucción.</li>
-            <li>No indique el tipo para las instrucciones que sean de ayuda ya que son las utilizadas por defecto.
-            </li>
-          </ul>
-          <div class="box-text box-text--example" label="Ejemplos">
-            <pre>
-&lt;div class="instruction"&gt;
-  Una instrucción por defecto (ayuda).
-&lt;/div&gt;
-</pre>
-            <p>Lo anterior se vería así:</p>
-            <div class="instruction">Una instrucción por defecto (ayuda).</div>
-
-            <hr />
-            <pre>
-&lt;div class="instruction" type="info"&gt;
-  Una instrucción de tipo informativo.
-&lt;/div&gt;
-</pre>
-            <p>Lo anterior se vería así:</p>
-            <div class="instruction" type="info">Una instrucción de tipo informativo.</div>
-            <hr />
-            <p>Otros:</p>
-            <div class="instruction" type="danger">Una instrucción de "peligro": <em>type="danger"</em>.</div>
-            <div class="instruction" type="alert">Una instrucción de alerta: <em>type="alert"</em>.</div>
-            <div class="instruction" type="none">Sin tipo de instrucción: <em>type="none"</em>.</div>
-          </div>
-        </div>
-
-        <div class="subpage">
-          <h3>Abrir contenido en ventana modal</h3>
-
-          <p>Para abrir contenidos en ventanas modales dentro del mismo objeto. Se agrega la clase
-            <em>w-content-controler</em> al elemento que debe abrir la ventana (origen), por defecto con el evento
-            clic.
-            No tiene que ser botón o enlace, puede ser cualquier elemento. Se debe establecer el atributo
-            <em>data-content</em> con la ruta CSS del elemento que se convertirá en ventana (destino). El elemento que
-            se abre como ventana debe tener la clase <em>w-content</em>. Se puede utilizar el atributo
-            <em>data-property-width</em>, tanto en el origen como en el destino, para definir el ancho de la ventana
-            modal y <em>data-property-height</em> para definir el alto, ambos valores pueden indicarse en porcentaje
-            con
-            un valor como: <em>80%</em>. También se puede asignar una clase al destino mediante el atributo
-            <em>data-cssclass</em> en el elemento destino.
-          </p>
-
-          <div class="box-text box-text--example" label="Ejemplo">
-            <pre>&lt;button class="w-content-controler general" data-content="#ventana_textos_modal"&gt;
-  Abrir ventana modal
-&lt;/button&gt;
-&lt;div id="ventana_textos_modal" class="w-content"&gt;
-  Así se ve la ventana modal
-&lt;/div&gt;
-</pre>
-            <p>
-              Lo anterior se vería así: <button class="w-content-controler general"
-                data-content="#ventana_textos_modal">Abrir ventana modal</button>
-            </p>
-            <div id="ventana_textos_modal" class="w-content">
-              <h4>Título de la ventana modal</h4>
-              <div class="content">
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestiae aperiam odit quas quia impedit
-                  voluptate cupiditate harum, quaerat, ab alias explicabo dignissimos placeat, id eum? Blanditiis in
-                  consequuntur modi deleniti.</p>
-                <p>Adipisci minima consequuntur voluptatibus cumque doloremque ratione nulla, consequatur, tempora
-                  eius
-                  provident quo odit fugiat nemo voluptas inventore officia doloribus, expedita exercitationem quia
-                  veniam non! Quam sint deleniti quas sequi?</p>
+          <div class="subpage">
+            <p>En este contenido aprenderás cuáles son los tipos de rostros y las técnicas de contorno que más les
+              favorecen; lo cuál te servirá para sacar mayor provecho de los rasgos del rostro de tu cliente, logrando
+              un resultado satisfactorio.</p>
+            <div class="flex-row flex-center">
+              <div class="text-box">
+                <p>El visagismo viene de la palabra francesa <i>visage</i> que significa rostro, y de su terminación
+                  ismo
+                  que
+                  significa doctrina.</p>
+                <p>Por lo tanto, el <em>visagismo es: el estudio del rostro.</em> </p>
+                <div class="box-text box-text--note" label="Aplicado al arte del maquillaje">
+                  <p>El visagismo nos permite analizar qué técnica le va mejor a cada persona, de acuerdo con las
+                    medidas de su rostro.</p>
+                </div>
+              </div>
+              <div class="img-container img-container--xl">
+                <img src="content/img-1.jpeg" alt="Mujer maquillando a mujer">
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      <!--Multimedia-->
-      <section id="pag-media" ptitle="2. Multimedia">
-
-        <div class="subpage">
-          <h3>Audios</h3>
-
-          <p>
-            Los audios pueden ser cargados desde cualquier elemento HTML utilizando el atributo <em>data-sound</em>,
-            el
-            cual contiene la ruta compuesta por el nombre del archivo y, si está dentro de una carpeta, el nombre de
-            la
-            carpeta. Todos los audios deben ir en la carpeta <strong>content/sounds/</strong>. Se recomienda utilizar
-            un
-            botón con clase <em>iconsound</em> al cual además se le puede agregar la clase <em>button</em> para el
-            efecto "sobre".
-          </p>
-
-          <div class="box-text box-text--example" label="Ejemplo de audio simple">
-            <pre>&lt;button class="iconsound button" data-sound="beep09.ogg">&lt;/button&gt;</pre>
-
-            <p>
-              El código anterior se vería así: <button class="iconsound button" data-sound="beep09.ogg"></button>,
-              donde
-              <strong>beep09.ogg</strong> es el nombre del archivo y se encuentra directamente en la carpeta
-              <strong>content/sounds/</strong>.
-            <div class="instruction" type="info"><a href="https://commons.wikimedia.org/wiki/File:Beep-09.ogg"
-                target="_blank">Sonido Beep</a>, tomado de Wikimedia commons. By Rockhusho.</div>
-            </p>
-          </div>
-
-          <p>
-            Si lo que se desea es un audio en un reproductor con controles, entonces se debe utilizar la etiqueta
-            estandar de HMTL5: <em>audio</em>, con las opciones que se definen para ella. Para ver información al
-            respecto visite <a href="https://www.w3schools.com/html/html5_audio.asp"
-              target="_blank">https://www.w3schools.com/html/html5_audio.asp</a>. En este caso, la ruta del orígen del
-            archivo se debe definir completamente, aunque se recomienda que se almacenen tambien en la carpeta
-            <strong>content/sounds/</strong>. Cabe anotar que la apariencia del reproductor estará determinada en su
-            gran mayoría por el navegador.
-          </p>
-
-          <div class="box-text box-text--example" label="Ejemplo de audio con controles">
-            <pre>
-&lt;audio controls&gt;
-  &lt;source src="content/sounds/constantspectrummelody.ogg" type="audio/ogg"&gt;
-  Su navegador no soporta el componente de audio
-&lt;/audio&gt;
-</pre>
-
-            <p>
-              El código anterior se vería así:
-              <audio controls>
-                <source src="content/sounds/constantspectrummelody.ogg" type="audio/ogg">
-                Su navegador no soporta el componente de audio
-              </audio>
-            <div class="instruction" type="info">Audio <a
-                href="https://commons.wikimedia.org/wiki/File:ConstantSpectrumMelody.ogg"
-                target="_blank">ConstantSpectrumMelody</a>, tomado de Wikimedia commons. By Fabrice.Neyret.</div>
-            </p>
-          </div>
-
-        </div>
-
-        <div class="subpage">
-          <h3>Videos</h3>
-
-          <p>
-            Los videos van en la carpeta <strong>content/videos/</strong>.Para lograr una compatibilidad completa, el
-            video debe estar en mp4 y webm. Los videos deben ir en un contenedor, por ejemplo un <em>div</em>, con la
-            clase <em>videobox</em>.
-          </p>
-          <p>
-            Si el video lleva subtítulos, se recomienda que estén incluidos en el atributo <em>src</em> como texto en
-            base64, para que no haya problema si el objeto se reproduce localmente. El formato recomendado de los
-            subtítulos es <strong>vtt</strong> y se aconseja mantener el archivo <strong>.vtt</strong> en la misma
-            carpeta que los videos aunque se incluya como texto en base64.
-          </p>
-          <div class="box-text box-text--example" label="Ejemplo de video utilizando el reproductor del navegador">
-            <pre>
-&lt;div class="videobox"&gt;
-  &lt;video controls&gt;
-    &lt;source src="content/videos/eta_porketo.mp4" type="video/mp4"&gt;
-    &lt;source src="content/videos/eta_porketo.webm" type="video/webm"&gt;
-    &lt;track label="Español" kind="subtitles" srclang="es"
-    src="data:text/vtt;base64,V0VCVlRUDQoNCjENCjAwOjAwOjAwLjIzNCAtLT4gMDA
-    6MDA6MDQuMDAwDQpFc3RlIHB1ZXJxdWl0byBzZSBmdWUgYWwuLi4NCg0KMg0KMDA6MDA6
-    MDQuMDA0IC0tPiAwMDowMDoxMC4wMDANCi4uLiBhY8OhIGRlYmVyw61hIGFwYXJlY2VyI
-    GxhIHRyYWR1Y2Npw7NuLA0KYSBtYW5lcmEgZGUgc3VidMOtdHVsb3MuDQoNCjMNCjAwOj
-    AwOjEwLjAwMiAtLT4gMDA6MDA6MjYuMDAwDQouLi4gbGEgcG9uZHLDrWEgc2kgc3VwaWV
-    yYSBxdWUgZGljZSA6JygNCihzdXB1ZXN0YW1lbnRlIGVzIGVzcGVyYW50by4uLiDCocKh
-    bmkgaWRlYSEhKQ0K" default&gt;
-    El reproductor de video no es soportado por el navegador
-  &lt;/video&gt;
-&lt;/div&gt;
-</pre>
-
-            <p>
-              El código anterior se vería así:
-            </p>
-            <div class="videobox">
-              <video controls>
-                <source src="content/videos/eta_porketo.mp4" type="video/mp4">
-                <source src="content/videos/eta_porketo.webm" type="video/webm">
-                El reproductor de video no es soportado por el navegador
-                <track label="Español" kind="subtitles" srclang="es"
-                  src="data:text/vtt;base64,V0VCVlRUDQoNCjENCjAwOjAwOjAwLjIzNCAtLT4gMDA6MDA6MDQuMDAwDQpFc3RlIHB1ZXJxdWl0byBzZSBmdWUgYWwuLi4NCg0KMg0KMDA6MDA6MDQuMDA0IC0tPiAwMDowMDoxMC4wMDANCi4uLiBhY8OhIGRlYmVyw61hIGFwYXJlY2VyIGxhIHRyYWR1Y2Npw7NuLA0KYSBtYW5lcmEgZGUgc3VidMOtdHVsb3MuDQoNCjMNCjAwOjAwOjEwLjAwMiAtLT4gMDA6MDA6MjYuMDAwDQouLi4gbGEgcG9uZHLDrWEgc2kgc3VwaWVyYSBxdWUgZGljZSA6JygNCihzdXB1ZXN0YW1lbnRlIGVzIGVzcGVyYW50by4uLiDCocKhbmkgaWRlYSEhKQ0K"
-                  default>
-              </video>
+            <div class="box-text box-text--important" label="Para destacar:">
+              <p>En el maquillaje, igual que en la pintura y otras manifestaciones artísticas, el objetivo es aportar
+                simetría al rostro a través de la combinación de técnicas de luces y sombras, sirviéndose de la
+                definición de cejas, labios y resaltar los ojos…</p>
             </div>
-            <div class="instruction" type="info">Video <a
-                href="https://commons.wikimedia.org/wiki/File:Eta_porketo.webm" target="_blank">Eta porketo</a>,
-              tomado
-              de Wikimedia commons. By Marion Bélisle.</div>
-            <p>
-              Es probable que en algunos navegadores no se vean los subtítulos si el documento se está visualizando
-              localmente.
+            <p>Veamos ahora cómo se lleva a cabo ese estudio del rostro. <br>
+              Pasa a la siguiente página para continuar.
             </p>
-          </div>
-
-          <div class="box-text box-text--note" label="Tip: piense en el ancho/alto del video">
-            <p>Utilice medidas porcentuales para videos anchos con el fin de que se ajusten al ancho de la pantalla o
-              del contenedor. Por ejemplo: <strong> width="100%"</strong> directamente en la etiqueta <em>video</em>,
-              o
-              por CSS: <strong> width: 100%;</strong>. Es especialmente útil para que el video se ajuste en
-              dispositivos
-              con pantallas pequeñas como celulares.</p>
           </div>
         </div>
       </section>
-
-      <!--Formato de contenido-->
-      <section id="pag-contenidointeractivo" ptitle="3. Formatos de contenido">
-
+      <section id="pag-estudio" ptitle="Estudio del rostro sobre el plano horizontal">
         <div class="subpage">
-          <h3>Menú horizontal</h3>
-          <div class="instruction">Toca cada elemento para ver su contenido</div>
-          <br>
-
+          <p>La práctica del visagismo está basada en el principio del plano horizontal, que emplea una fórmula de
+            medición para identificar las proporciones del rostro:</p>
+          <div class="instruction" type="info">Toca cada zona del rostro para conocer su descripción.</div>
+          <div class="text-center">
+            <iframe class="genially-embed" src="/content/genially/GENIALLY_1/genially.html"></iframe>
+          </div>
+        </div>
+        <div class="subpage">
+          <p>Una vez hemos identificado dichas medidas, debemos tener en cuenta la siguiente regla, conformada por 3
+            puntos:</p>
+          <div class="instruction" type="info">Toca cada elemento para ver su contenido</div>
           <div class="horizontal-menu">
             <dl>
-              <dt>
-                Consideraciones
-              </dt>
+              <dt>Rostro ancho</dt>
               <dd>
-                <h5>Algunas consideraciones</h5>
-
-                <p>Se utiliza cuando hay una serie de opciones que se van a colocar en una misma página pero el
-                  usuario
-                  ve una por una acorde a un menú de texto en la parte superior del contenido.</p>
-                <p>En caso de requerir colocar un título en el contenido de cada elemento, se aconseja agregarlo en
-                  una
-                  etiqueta <em>h5</em>.
-                <p>Cuando la cantidad de items del menú es tal que el ancho del menú es mayor al ancho del
-                  dispositivo,
-                  se genera un scroll horizontal.</p>
-                <p>La altura del contenedor del contenido será igual al alto que ocupe el ítem con más contenido, para
-                  esto se debe procurar que el contenido que muestra cada item sea similar al de los demás, es decir
-                  que
-                  ocupe mas o menos el mismo alto.</p>
+                <p>Si la zona intelectual es de mayor medida que la zona afectiva y sensitiva, <em>el rostro es
+                    ancho.</em></p>
               </dd>
             </dl>
             <dl>
-              <dt>
-                Ejemplo
-              </dt>
+              <dt>Rostro largo</dt>
               <dd>
-                <pre>
-&lt;div class="horizontal-menu"&gt;
-&lt;dl&gt;
-    &lt;dt&gt;Consideraciones&lt;/dt&gt;
-    &lt;dd&gt;
-        &lt;h5&gt;Consideraciones&lt;/h5&gt;
-        &lt;p&gt;Se le debe...&lt;/p&gt;
-    &lt;/dd&gt;
-&lt;/dl&gt;
-&lt;dl&gt;
-    &lt;dt&gt;Ejemplo&lt;/dt&gt;
-    &lt;dd&gt;
-        &lt;p&gt;El código del actual ejemplo es:&lt;/p&gt;
-        ...
-    &lt;/dd&gt;
-&lt;/dl&gt;
-&lt;/div&gt;
-</pre>
+                <p>Si las zonas intelectual y sensitiva son más grandes que la zona afectiva, <em>el rostro es
+                    largo.</em></p>
               </dd>
             </dl>
             <dl>
-              <dt>
-                Consideraciones 2
-              </dt>
+              <dt>Rostro equilibrado</dt>
               <dd>
-                <h5>Algunas consideraciones 2</h5>
-
-                <p>Se utiliza cuando hay una serie de opciones que se van a colocar en una misma página pero el
-                  usuario
-                  ve una por una acorde a un menú de texto en la parte superior del contenido.</p>
-                <p>En caso de requerir colocar un título en el contenido de cada elemento, se aconseja agregarlo en
-                  una
-                  etiqueta <em>h5</em>.
-                <p>Cuando la cantidad de items del menú es tal que el ancho del menú es mayor al ancho del
-                  dispositivo,
-                  se genera un scroll horizontal.</p>
-                <p>La altura del contenedor del contenido será igual al alto que ocupe el ítem con más contenido, para
-                  esto se debe procurar que el contenido que muestra cada item sea similar al de los demás, es decir
-                  que
-                  ocupe mas o menos el mismo alto.</p>
-              </dd>
-            </dl>
-            <dl>
-              <dt>
-                CSS
-              </dt>
-              <dd>
-                <p>Para cambiar el ancho del actual ejemplo se utiliza el siguiente código CSS.</p>
-                <pre>
-#id_subpagina .horizontal-menu .chalkboard_content {
-    height: 300px;
-}
-</pre>
+                <p>Si las tres zonas miden lo mismo, <em>el rostro es equilibrado.</em></p>
               </dd>
             </dl>
           </div>
-
         </div>
-
         <div class="subpage">
-          <h3>Paginación secuencial</h3>
-
-          <div class="ctrl-pagination">
-            <li>
-              <p>Utilizado para dividir el contenido en páginas. Simplemente se adiciona la clase
-                <em>ctrl-pagination</em> a un
-                <em>&lt;div&gt;</em> contenedor y se agregan las páginas, cada una en un <em>&lt;li&gt;</em>.
-              </p>
-              <p>
-                Para controlar el alto de las páginas, de manera que se mantenga uniforme, utilizar el atributo
-                <em>data-layer-height</em>, con el valor de alto del contenido.
-              </p>
-              <p>
-                Para indicar el número de cada página se puede adicionalmente especificar el atributo
-                <em>data-labelcurrent</em> establecido en <em>true</em>. Eso adiciona un elemento con la clase
-                <em>label_current</em> que se puede posicionar mediante CSS.
-              </p>
-            </li>
-            <li>
-              <h5>Ejemplo</h5>
-              <pre>
-&lt;div class="ctrl-pagination" data-layer-height="180px" data-labelcurrent="true" &gt;
-  &lt;li&gt;
-    Contenido primera página
-  &lt;/li&gt;
-  &lt;li&gt;
-    Segunda página
-  &lt;/li&gt;
-&lt;/div&gt;
-</pre>
-            </li>
-            <li>
-              <p>Otra página.</p>
-            </li>
-          </div>
-          <div class="instruction">Haga clic sobre las flechas para pasar entre páginas</div>
-        </div>
-        <div class="subpage" id="pag-cards">
-          <h3>Cards (Tarjetas)</h3>
-          <p>Utilice una tarjeta para mostrar contenido y acciones sobre un solo tema.
-            Las tarjetas deben ser fáciles de escanear en busca de información relevante y procesable. Elementos como
-            texto e imágenes deben colocarse en las tarjetas de manera que indique claramente la jerarquía.
-            Las cards deben ir agrupadas en un div con la clase <em>cards</em>. Cada cada debe a su vez tener definida
-            la clase <em>card</em> y recibir los atributos: <em>label</em> para el título en la card, <em>img</em> con
-            la ubicación de la imagen y <em>img-alt</em> con el text alternativo de la imagen.
-            Se recomienta un texto máximo de 200 caractéres dentro de cada card para una visualización natural dentro
-            de los diferentes viewports y si se requiere, utilizar el CTA para expandir la información dentro de
-            una ventana modal.
-            También se recomienda utilizar imagenes con un aspect-ratio de 1/1 (cuadradas) para evitar que se pierda
-            información de la imagen en el ajuste al contenedor de la tarjeta.
-          </p>
-          <div class="cards">
-            <div class="card" label="Dinosaurs will die" img="content/makeup-woman.jpg" img-alt="Cuerpo">
-              <p>Antes de iniciar un maquillaje es fundamental limpiar la piel del rostro, usa agua micelar para
-                eliminar
-                impurezas, maquillaje que traiga la persona, e incluso los restos del desmaquillante bifásico.
-              </p>
-            </div>
-            <div class="card" label="Bob" img="content/ojo.jpg" img-alt="Cuerpo">
-              <p>Mattis pellentesque id nibh tortor id. Pulvinar etiam non quam lacus suspendisse faucibus interdum
-                posuere lorem. Malesuada pellentesque elit eget gravida. Quis enim lobortis scelerisque fermentum dui.
-              </p>
-              <button class="w-content-controler general" data-content="#card-aditional-content">Abrir contenido
-                adicional</button>
-              <div id="card-aditional-content" class="w-content">
-                Acá estaría el contenido de esta card.
-              </div>
-            </div>
-            <div class="card" label="The separation of church and skate" img="content/makeup-woman.jpg"
-              img-alt="Cuerpo">
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                et
-                dolore magna aliqua. Vitae sapien pellentesque habitant morbi.</p>
-            </div>
-            <div class="card" label="Stickin in my eye" img="content/ojo.jpg" img-alt="Cuerpo">
-              <p>Ac felis donec et odio pellentesque diam volutpat commodo. Pulvinar sapien et ligula ullamcorper
-                malesuada proin libero nunc consequat. Nunc scelerisque viverra mauris in.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="subpage" id="pag-contenidointeractivo-viewfirst">
-
-          <h3>Imagenes con contenido de texto</h3>
-          <p>Este formato es útil para desplegar contenido explicativo, que será mostrado sobre una imagen al pasar el
-            mouse sobre ella. Para utilizarlo agregue la clase <em>view-first</em> a un contenedor, usualmente un
-            <em>div</em>, al interior agregue una imagen y otro contenedor con la clase <em>view-content</em> en el
-            cual
-            debe ir el contenido que se muestra con la interacción.
-          </p>
-
-          <div class="box-text box-text--example" label="Ejemplo">
-            <pre>
-&lt;div class="view-first"&gt;
-    &lt;img src="content/primavera.png" /&gt;
-    &lt;div class="view-content"&gt;
-        &lt;h2&gt;Primavera&lt;/h2&gt;
-        &lt;strong&gt;Inicio: &lt;/strong&gt;20-21 marzo&lt;br /&gt;
-        &lt;strong&gt;H. norte: &lt;/strong&gt;Primavera&lt;br /&gt;
-        &lt;strong&gt;H. sur: &lt;/strong&gt;Otoño&lt;br /&gt;
-        &lt;strong&gt;Inclinación: &lt;/strong&gt;0°&lt;br /&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
-</pre>
-
-            <p>
-              El código anterior se vería así:
-            <div class="view-first">
-              <img src="content/primavera.png" />
-              <div class="view-content">
-                <h2>Primavera</h2>
-                <strong>Inicio: </strong>20-21 marzo<br />
-                <strong>H. norte: </strong>Primavera<br />
-                <strong>H. sur: </strong>Otoño<br />
-                <strong>Inclinación: </strong>0°<br />
-              </div>
-            </div>
-            </p>
-          </div>
-
-          <p>
-            Un ejemplo práctico sobre el uso de este control se muestra a continuación, con las estaciones.
-          </p>
-          <div class="instruction">Pase el mouse sobre cada imagen para más información</div>
-          <div id="image_content">
-            <div class="view-first">
-              <img src="content/primavera.png" />
-              <div class="view-content">
-                <h2>Primavera</h2>
-                <strong>Inicio: </strong>20-21 marzo<br />
-                <strong>H. norte: </strong>Primavera<br />
-                <strong>H. sur: </strong>Otoño<br />
-                <strong>Inclinación: </strong>0°<br />
-              </div>
-            </div>
-            <div class="view-first">
-              <img src="content/verano.png" />
-              <div class="view-content">
-                <h2>Verano</h2>
-                <strong>Inicio: </strong>21-22 Junio<br />
-                <strong>H. norte: </strong>Verano<br />
-                <strong>H. sur: </strong>Invierno<br />
-                <strong>Inclinación: </strong>23,5º Norte<br />
-              </div>
-            </div>
-            <div class="view-first">
-              <img src="content/otono.png" />
-              <div class="view-content">
-                <h2>Otoño</h2>
-                <strong>Inicio: </strong>23-24 Septiembre<br />
-                <strong>H. norte: </strong>Otoño<br />
-                <strong>H. sur: </strong>Primavera<br />
-                <strong>Inclinación: </strong>0°<br />
-              </div>
-            </div>
-            <div class="view-first">
-              <img src="content/invierno.png" />
-              <div class="view-content">
-                <h2>Invierno</h2>
-                <strong>Inicio: </strong>21-22 Diciembre<br />
-                <strong>H. norte: </strong>Invierno<br />
-                <strong>H. sur: </strong>Verano<br />
-                <strong>Inclinación: </strong>23,5º Sur<br />
-              </div>
-            </div>
-          </div>
-          <br class="clear" />
-        </div>
-
-        <div class="subpage" id="pag-contenido-timeline">
-
-          <h3>Línea de tiempo interactiva</h3>
-          <div class="timeline">
-            <div id="makeup-history-timeline"></div>
-          </div>
-        </div>
-      </section>
-
-      <!--Actividades-->
-      <section id="pag-actividades" ptitle="4. Tipos de actividades">
-        <div class="subpage">
-          <h3>Generalidades</h3>
-          <p>
-            Para darle una identificación propia a cada actividad con el fin de reconocerlas fácilmente en la
-            revisión,
-            se deben agregar dos atributos a la etiqueta principal que define la actividad:
-          </p>
-          <ul class="data_list">
-            <li><strong>data-act-id:</strong> Un identificador corto y único de la actividad, sin espacios ni
-              caracteres
-              especiales. Es el que se muestra en el rastreo del SCORM. También es utilizado para ordenar las
-              actividades al momento de listarlas en la ventana de <strong>Resultados</strong> por lo que es útil
-              colocar un número antes del identificador para indicar en que posición se debería mostrar el resultado
-              de
-              la actividad, por ejemplo: <em>1_quiz</em> se listaría antes de <em>2_apareamiento</em> sin importar el
-              título que tengan. Si no se especifica este campo y hay más de una actividad del mismo tipo en el
-              paquete,
-              se perderá la información de una de ellas.</li>
-            <li><strong>data-act-title:</strong> El nombre que aparecerá en la ventana de <strong>Resultados</strong>
-            </li>
-          </ul>
-          <p>Ver ejemplo en actividad <strong>Cuestionario</strong>.</p>
-        </div>
-
-        <div class="subpage">
-          <h3>Cuestionario</h3>
-
-          <p>
-            Un cuestionario se define agregando la clase <em>jpit-activities-quiz</em> a un contenedor y dentro de él
-            agregando elementos de tipo <em>question</em> con el atributo <em>type</em> según el tipo de pregunta.
-            Cada
-            pregunta además tiene un elemento <em>description</em> para el enunciado y una estructura específica para
-            el
-            cuerpo según su tipo.
-          </p>
-          <p>Tipos de pregunta disponibles:</p>
-          <ul class="data_list">
-            <li><em>Etiqueta (label)</em>: No es calificable, se utiliza para mostrar un texto fijo.</li>
-            <li><em>Selección única (simplechoice)</em>: Para seleccionar una opción correcta de una lista de posibles
-              valores.</li>
-            <li><em>Selección múltiple (multichoice)</em>: Para seleccionar varias opciones, todas las correctas, en
-              una
-              lista de posibles valores.</li>
-            <li><em>Selección múltiple en conjunto (multisetchoice)</em>: Para seleccionar las correctas de una lista
-              de
-              posibles valores. Permite definir varios conjuntos correctos, excluyentes entre si.</li>
-            <li><em>Cloze (complete)</em>: Presenta varias opciones entre un contenido, con controles para seleccionar
-              los valores correctos.</li>
-            <li><em>Definición (defineterm)</em>: Para permitir entradas de texto que tienen que coincidir
-              completamente
-              con las respuestas correctas, según el término a definir.</li>
-          </ul>
-          <p>
-            Por defecto las preguntas se muestran en orden aleatorio, para desactivar el modo aleatorio adicionar al
-            cuestionario el atributo <em>data-shuffle="false"</em>.
-          </p>
-          <p>
-            Las preguntas se pueden verificar una a una, si alguna no es verificada pero se responde, la verificación
-            se
-            hará al momento de verificar la última respuesta.
-          </p>
-          <p>
-            Cada pregunta puede tener una retroalimentación para cuando se resuelve correctamente y/o una para cuando
-            se
-            hace de manera incorrecta. Para definir la retroalimentación se crea un elemento <em>feedback</em> al
-            interior de la pregunta y dentro de éste uno o los dos elementos: <em>correct</em> y <em>wrong</em> con el
-            respectivo texto. También se puede definir una retroalimentación por defecto para uno o los dos
-            resultados,
-            a nivel de cuestionario, agregando la misma estructura pero al mismo nivel de las preguntas, es decir,
-            como
-            elemento hijo de la etiqueta que define el cuestionario.
-          </p>
-
-          <div class="box-text box-text--activity" label="Cuestionario">
-            <div class="jpit-activities-quiz" data-act-title="El cuestionario" data-act-id="1_cuestionario">
+          <p>Vamos a poner en práctica lo que hemos estudiado hasta ahora…</p>
+          <div class="box-text box-text--activity" label="Actividad">
+            <div class="jpit-activities-quiz" data-act-id="Actividad de aprendizaje 1" data-shuffle="false">
+              <question type="label">
+                <description>
+                  <div class="text-center">
+                    <h5>¡Quiz rápido!</h5>
+                    <p>Responde cada pregunta y verifica tu respuesta.</p>
+                  </div>
+                </description>
+                <text>
+                  <div class="text-center">
+                    <p>Al completar todas las preguntas podrás ver el resultado final e intentar de nuevo la actividad.
+                    </p>
+                  </div>
+                  <div class="instruction" type="info">Avanza para continuar</div>
+                </text>
+              </question>
               <question type="simplechoice">
                 <description>
-                  <p>Los tipos de preguntas que hay son: simplechoice y complete</p>
+                  <div class="instruction" type="info">Selecciona la respuesta correcta.</div>
+                  <p>Independiente del tipo de rostro que tenga mi cliente, puedo hacer un maquillaje según mi gusto:
+                  </p>
                 </description>
                 <ul>
                   <li data-response="true">Falso</li>
                   <li>Verdadero</li>
                 </ul>
-                <feedback>
-                  <correct>Así es, hay más tipos de preguntas.</correct>
-                </feedback>
-              </question>
-              <question type="label">
-                <description>
-                  <p>El tipo de pregunta "label" no se califica.</p>
-                </description>
-                <text>Sirve, por ejemplo, para presentar texto introductorio de otras preguntas. Tener en cuenta que
-                  si se utiliza este tipo de preguntas es probable que no sea bueno dejar que las preguntas se
-                  muestren en orden aleatorio.</text>
               </question>
               <question type="complete">
                 <description>
-                  <p>Sobre las diferencias entre los tipos de cuestionario.</p>
+                  <div class="instruction" type="info">Escribe o selecciona las respuestas correctas.</div>
+                  <p>Completa los enunciados sobre las zonas del rostro en el plano horizontal:</p>
                 </description>
                 <p class="item">
-                  Las preguntas por <input type="text" data-response="defecto" /> son mostradas de manera
+                  Desde las cejas hasta la base de la nariz:
                   <select class="answers">
-                    <option data-response="true">aleatoria</option>
-                    <option>ordenada</option>
-                  </select>, para cambiar su comportamiento por defecto se debe agregar el atributo
+                    <option>intelectual</option>
+                    <option data-response="true">afectiva</option>
+                    <option>sensitiva</option>
+                  </select> <br>
+                  Desde la base de la nariz hasta el mentón:
                   <select class="answers">
-                    <option>ni idea</option>
-                    <option data-response="true">data-shuffle="false"</option>
-                  </select>.
+                    <option>intelectual</option>
+                    <option>afectiva</option>
+                    <option data-response="true">sensitiva</option>
+                  </select> <br>
+                  Desde el nacimiento del cuero cabelludo hasta la altura de las cejas:
+                  <select class="answers">
+                    <option data-response="true">intelectual</option>
+                    <option>afectiva</option>
+                    <option>sensitiva</option>
+                  </select> <br>
                 </p>
               </question>
-              <question type="multichoice">
+              <question type="complete">
                 <description>
-                  <p>Los siguientes tipos de preguntas son calificables</p>
+                  <div class="instruction" type="info">Escribe o selecciona las respuestas correctas.</div>
+                  <p>Completa los enunciados sobre los tipos de rostro, según la relación de tamaño de las zonas en el
+                    plano horizontal:</p>
                 </description>
-                <ul>
-                  <li data-response="true">simplechoice</li>
-                  <li data-response="true">complete</li>
-                  <li>label</li>
-                </ul>
-              </question>
-              <question type="multisetchoice">
-                <description>
-                  <p>Seleccione solamente los pares o los impares</p>
-                </description>
-                <ul>
-                  <li data-response="1">1</li>
-                  <li data-response="2">2</li>
-                  <li data-response="2">6</li>
-                  <li data-response="1">3</li>
-                  <li data-response="1">9</li>
-                </ul>
+                <p class="item">
+                  El rostro
+                  <select class="answers">
+                    <option>ancho</option>
+                    <option data-response="true">largo</option>
+                    <option>equilibrado</option>
+                  </select> tiene las zonas intelectual y sensitiva más grandes que la afectiva.<br>
+                  En el rostro
+                  <select class="answers">
+                    <option>ancho</option>
+                    <option>largo</option>
+                    <option data-response="true">equilibrado</option>
+                  </select> de las tres zonas, la intelectual es la más grande.<br>
+                  En el
+                  <select class="answers">
+                    <option data-response="true">ancho</option>
+                    <option>largo</option>
+                    <option>equilibrado</option>
+                  </select> las tres zonas miden lo mismo.<br>
+                </p>
               </question>
             </div>
           </div>
-
         </div>
-
-        <div class="subpage" id="pag-actividades-arrastrar1">
-          <h3>Arrastrar y soltar - modo apareamiento</h3>
-          <p>
-            Una actividad de arrastrar se define agregando la clase <em>jpit-activities-droppable</em> a un contenedor
-            y
-            dentro de él definiendo un contenido HTML teniendo en cuenta: definir los orígenes marcando elementos con
-            la
-            clase <em>data-group</em> cuyo valor será el número del grupo al que pertenece el elemento y definir los
-            destinos marcando elementos con el atributo <em>data-target-gorup</em> cuyo valor será el número del grupo
-            que acepta como correcto.
-          </p>
-          <p>
-            Si la actividad tiene más elementos para arrastrar que destinos, entonces debe llevar el atributo
-            <em>data-verify-type="target"</em>.
-          </p>
-
-          <div class="box-text box-text--activity" label="Arrastrar y soltar - modo apareamiento">
-            <div id="arrastrar1" class="jpit-activities-droppable" data-verify-type="target" data-act-id="arrastrar1">
-              <p>Complete los espacios en blanco con las capitales correspondientes, del listado inferior.</p>
-              <table>
-                <tr>
-                  <th>Risaralda</th>
-                  <td class="conection"><span class="icon_horizontal_arrow"></span></td>
-                  <td data-target-group="1"></td>
-                </tr>
-                <tr>
-                  <th>Antioquia</th>
-                  <td class="conection"><span class="icon_horizontal_arrow"></span></td>
-                  <td data-target-group="2"></td>
-                </tr>
-                <tr>
-                  <th>Norte de Santander</th>
-                  <td class="conection"><span class="icon_horizontal_arrow"></span></td>
-                  <td data-target-group="3"></td>
-                </tr>
-              </table>
-
-              <h4>Capitales:</h4>
-              <div class="options">
-                <div data-group="2" class="item_1">Medellín</div>
-                <div data-group="4" class="item_2">Bogotá</div>
-                <div data-group="4" class="item_3">Rioacha</div>
-                <div data-group="3" class="item_4">Cúcuta</div>
-                <div data-group="1" class="item_5">Pereira</div>
-              </div>
-              <br class="clear" />
-
-              <div class="box_end"></div>
-            </div>
+        <div class="subpage">
+          <div class="box-text box-text--note" label="Nota">
+            <p>El visagismo es una práctica relevante ya que, al dividir la cara en 3 partes es posible visualizar la
+              distribución de las facciones del rostro y sus proporciones.</p>
+          </div>
+          <p>Esto es útil para aplicar distintas técnicas, como la de luces y sombras. Estudiemos a continuación, en qué
+            consiste. <br> Pasa a la siguiente página para continuar.</p>
+        </div>
+      </section>
+      <section id="pag-tecnicas" ptitle="Técnica de luces y sombras">
+        <p>Una vez has identificado las medidas y el tipo de rostro de tu cliente, podrás jugar con la aplicación de
+          contornos, luces y sombras, para lograr una simetría.
+        </p>
+        <div class="box-text box-text--important" label="Ten presente que:">
+          <ul>
+            <li>
+              <p>La <em>técnica de luz</em> ilumina y resalta.</p>
+            </li>
+            <li>
+              <p>La <em>técnica de sombra</em> minimiza, disimula y moldea.</p>
+            </li>
+          </ul>
+        </div>
+        <p>A continuación, te presento algunos ejemplos de aplicación de sombras y luces según tipos de rostro.</p>
+        <div class="infografia">
+          <div class="infografia__box">
+            <img src="/content/img-info-1.png" alt="Encajonada">
+            <h5>Encajonada</h5>
+          </div>
+          <div class="infografia__box">
+            <img src="/content/img-info-2.png" alt="Rectangular">
+            <h5>Rectangular</h5>
+          </div>
+          <div class="infografia__box">
+            <img src="/content/img-info-3.png" alt="Redonda">
+            <h5>Redonda</h5>
+          </div>
+          <div class="infografia__box">
+            <img src="/content/img-info-4.png" alt="Cuadrada">
+            <h5>Cuadrada</h5>
+          </div>
+          <div class="infografia__box">
+            <img src="/content/img-info-5.png" alt="Triángulo invertido">
+            <h5>Triángulo invertido</h5>
+          </div>
+          <div class="infografia__box">
+            <img src="/content/img-info-6.png" alt="Corazón">
+            <h5>Corazón</h5>
+          </div>
+          <div class="infografia__box">
+            <img src="/content/img-info-7.png" alt="Rombo">
+            <h5>Rombo</h5>
+          </div>
+          <div class="infografia__box">
+            <img src="/content/img-info-8.png" alt="Triángulo">
+            <h5>Triángulo</h5>
+          </div>
+          <div class="infografia__box">
+            <img src="/content/img-info-9.png" alt="Ovalado">
+            <h5>Ovalado</h5>
           </div>
         </div>
+        <p>En tu proceso de cualificación en el arte del maquillaje, es ideal que practiques aplicando las medidas de
+          cada zona, y que aprendas a conocer los tipos de rostro para una correcta aplicación de luces y sombras. No
+          obstante, te presento un <em>ejemplo de contorno universal</em> que va bien con todos los tipos de rostro:
+        </p>
+        <div class="flex-row flex-center">
+          <div class="img-container img-container--xl">
+            <img src="content/img-2.jpeg" alt="Mujer con maquillaje aplicado">
+          </div>
+          <div class="text-box">
+            <h5 class="special-title special-title--contornear">Contornear</h5>
+            <p>Aplica el contorno en la zona de los pómulos iniciando desde la patilla con dirección a la comisura de
+              los labios hasta donde finaliza el iris, la zona de la sien, la frente, la línea mandibular y la nariz.
+            </p>
+            <h5 class="special-title special-title--iluminar">Iluminar</h5>
+            <p>Aplica luces con un iluminador en la zona del hueso orbicular, en la zona de la mitad de la frente y
+              cejas, la nariz y el mentón.
+            </p>
+          </div>
+        </div>
+        <div class="box-text box-text--important" label="Ten presente">
+          <p>Si la persona que estás maquillando tiene el mentón muy pronunciado deberás cambiar el iluminador por el
+            contorno.</p>
+        </div>
+        <p>Pasemos ahora a revisar algunos aspectos importantes de los ojos y los labios, necesarios para hablar con la
+          terminología técnica adecuada en el mundo del maquillaje profesional. <br>Pasa a la siguiente página para
+          continuar.</p>
+      </section>
 
-        <div class="subpage" id="pag-actividades-arrastrar5">
-          <h3>Arrastrar y soltar - muchos a uno</h3>
-          <p>Posible modificación de la actividad de arrastrar y soltar, en este caso para arrastrar varios objetivos
-            a
-            un solo destino.</p>
-
-          <p>Su característica principal es que se puede definir cuántos objetos deben ser movidos al destino. Para
-            hacer esa definición se utiliza el atributo <em>data-target-multi</em> colocando el valor de los elementos
-            que acepta el destino. También se puede establecer el atributo <em>data-autoalign</em> con un valor de
-            <strong>false</strong> para que los elementos no se alineen automáticamente, muy útil cuando los elementos
-            de orígen pueden no caber en el destino.
+      <section id="pag-terminologia" ptitle="Terminología técnica: ojos y labios">
+        <div class="subpage">
+          <p>Como maquilladores es muy importante que tengamos clara la terminología técnica de las partes del rostro,
+            en especial de los ojos y los labios, ya que al reconocerlas será más sencillo comprender las explicaciones
+            de las técnicas de los maquillajes a realizar.
           </p>
-
-          <div class="box-text box-text--activity" label="Arrastrar y soltar - modo apareamiento">
-            <div id="arrastrar5" class="jpit-activities-droppable jpit-activities-droppable--multi"
-              data-act-id="arrastrar5" data-target-multi="3" data-autoalign="false">
-              <div>
-                Arrastre al recuadro los nombres de los tres personajes que aparecen en la serie de los Caballeros
-                del Zodíaco.
-                <div data-target-group="1"></div>
-              </div>
-              <div>
-                <h4>Personajes:</h4>
-                <div>
-                  <div data-group="1">Aldebarán</div>
-                  <div data-group="2">Óliver</div>
-                  <div data-group="2">Bruce Harper</div>
-                  <div data-group="1">Hyoga</div>
-                  <div data-group="2">Benji Price</div>
-                  <div data-group="1">Shiryu</div>
+          <h3>Partes de los ojos</h3>
+          <div class="img-container img-container--xxl">
+            <img src="content/img-3.png" alt="Partes de los ojos">
+          </div>
+          <h3>Partes de los labios</h3>
+          <div class="img-container img-container--xxl">
+            <img src="content/img-4.png" alt="Partes de los labios">
+          </div>
+        </div>
+        <div class="subpage">
+          <div class="box-text box-text--activity" label="Actividad">
+            <div class="jpit-activities-quiz" data-act-id="Actividad de aprendizaje 2" data-shuffle="false">
+              <question type="simplechoice" data-question-with-image="true"
+                data-image-description="content/img-act-1.png">
+                <description>
+                  <div class="instruction" type="info">Selecciona la respuesta correcta.</div>
+                  <p>En el maquillaje de esta modelo, el color verde predomina en:</p>
+                </description>
+                <div class="flex-row flex-center">
+                  <ul>
+                    <li>El párpado fijo</li>
+                    <li>La cuenca</li>
+                    <li>El párpado móvil</li>
+                    <li data-response="true">El lagrimal</li>
+                    <li>El párpado inferior</li>
+                  </ul>
                 </div>
-                <br class="clear" />
-              </div>
-              <div class="box_end"></div>
+              </question>
+              <question type="multichoice" data-question-with-image="true"
+                data-image-description="content/img-act-2.png">
+                <description>
+                  <div class="instruction" type="info">Selecciona las respuestas correctas.</div>
+                  <p>Este maquillaje tiene color tonos satinados en:</p>
+                </description>
+                <div class="flex-row flex-center">
+                  <ul>
+                    <li>El párpado fijo</li>
+                    <li>La cuenca</li>
+                    <li data-response="true">El párpado móvil</li>
+                    <li data-response="true">El lagrimal</li>
+                    <li data-response="true">El párpado inferior</li>
+                  </ul>
+                </div>
+              </question>
+              <question type="multichoice" data-question-with-image="true"
+                data-image-description="content/img-act-3.png">
+                <description>
+                  <div class="instruction" type="info">Selecciona las respuestas correctas.</div>
+                  <p>Este maquillaje tiene color tonos satinados en:</p>
+                </description>
+                <div class="flex-row flex-center">
+                  <ul>
+                    <li>El párpado fijo</li>
+                    <li>La cuenca</li>
+                    <li data-response="true">El párpado móvil</li>
+                    <li>El lagrimal</li>
+                    <li data-response="true">El párpado inferior</li>
+                  </ul>
+                </div>
+              </question>
+            </div>
+          </div>
+          <p>Otro punto fundamental del rostro a maquillar es la zona de las cejas, y necesitamos estudiarlas para
+            comprender mejor cómo hacer un buen maquillaje en ellas. Por eso vamos a revisar rápidamente cómo hacerles
+            una medición básica. <br>Pasa a la siguiente página para continuar.</p>
+        </div>
+      </section>
+      <section id="pag-medicion" ptitle="Medición básica de las cejas">
+        <div class="subpage">
+          <p>Para lograr que el resultado del maquillaje a aplicar, destaque las mejores características de cada tipo de
+            rostro, es fundamental usar correctamente la regla para medir las cejas, tanto para su depilación, como en
+            el
+            momento de maquillarlas. Aquí te cuento en qué consiste:
+          </p>
+          <div class='instruction' type='info'>Toca cada punto de la ceja para conocer su descripción</div>
+          <div class="text-center">
+            <iframe class="genially-embed" src="/content/genially/GENIALLY_2/genially.html"></iframe>
+          </div>
+        </div>
+        <div class="subpage">
+          <div class="box-text box-text--activity" label="Actividad">
+            <div class="jpit-activities-quiz" data-act-id="Actividad de aprendizaje 2" data-shuffle="false">
+              <question type="simplechoice" data-question-with-image="true"
+                data-image-description="content/img-act-4.png">
+                <description>
+                  <div class="instruction" type="info">Selecciona la respuesta correcta.</div>
+                  <p>La modelo tiene una medida correcta en sus cejas:</p>
+                </description>
+                <div class="flex-row flex-center">
+                  <ul>
+                    <li data-response="true">Falso</li>
+                    <li>Verdadero</li>
+                  </ul>
+                </div>
+              </question>
+              <question type="simplechoice" data-question-with-image="true"
+                data-image-description="content/img-act-5.png">
+                <description>
+                  <div class="instruction" type="info">Selecciona la respuesta correcta.</div>
+                  <p>¿En qué deberíamos profundizar el maquillaje de cejas de esta modelo?</p>
+                </description>
+                <div class="flex-row flex-center">
+                  <ul>
+                    <li>Cuadrado al inicio</li>
+                    <li data-response="true">Vértice y finalización</li>
+                    <li>Inicio</li>
+                    <li>Solo finalización</li>
+                  </ul>
+                </div>
+              </question>
             </div>
           </div>
         </div>
+        <p>Por último, estudiemos con más detalle las principales características de los ojos para hacer un buen
+          maquillaje en ellos. <br>Pasa a la siguiente página para continuar.</p>
+      </section>
 
-        <div class="subpage" id="pag-actividades-arrastrar6">
-          <h3>Arrastrar y soltar - según la imagen</h3>
-          <div class="instruction">Arrastre la respuesta correcta sobre el espacio en blanco</div>
-          <div class="box-text box-text--activity" label="Arrastrar según imagen">
+      <section id="pag-tipos" ptitle="Tipos de ojos y cómo maquillarlos">
+        <div class="subpage">
+          <p>Los ojos juegan un papel fundamental en el maquillaje ya que por medio de ellos se logra darle expresión a
+            la
+            mirada y al rostro de cada persona. <br>A continuación, te contaré cómo se clasifican los ojos según su
+            forma,
+            tamaño, volumen y longitud:</p>
+          <h3>Forma</h3>
+          <div class="instruction" type="info">Toca cada elemento para ver su contenido</div>
+          <div class="horizontal-menu">
+            <dl>
+              <dt>Almendrados</dt>
+              <dd>
+                <h5>Almendrados</h5>
+                <p>Son los más comunes en las personas latinas. <br>
+                  Como su nombre lo indica, son parecidos a la forma de una almendra, simétricos e inclinados
+                  ligeramente hacia arriba. <br>
+                  Este tipo de ojos es muy favorecedor, ya que cualquier tipo de maquillaje le va bien, desde uno
+                  natural, el smokey eyes, o el delineado felino.</p>
+                <div class="img-container"><img src="content/Almendrados.png" alt="Almendrados"></div>
+              </dd>
+            </dl>
+            <dl>
+              <dt>Caídos</dt>
+              <dd>
+                <h5>Caídos</h5>
+                <p>Se caracterizan porque su extremo exterior está hacia abajo. <br>
+                  Se recomienda siempre aplicar las sombras tratando de hacer un efecto lifting, es decir hacia arriba,
+                  para que visualmente ofrezca la sensación de levantamiento de la mirada. <br>Se recomienda usar
+                  delineado esfumado, y evitar el delineado felino.</p>
+                <div class="img-container"><img src="content/Caidos.png" alt="Caídos"></div>
+              </dd>
+            </dl>
+          </div>
+          <h3>Tamaño</h3>
+          <div class="instruction" type="info">Toca cada elemento para ver su contenido</div>
+          <div class="horizontal-menu">
+            <dl>
+              <dt>Pequeños</dt>
+              <dd>
+                <h5>Pequeños</h5>
+                <p>Se recomienda usar tonos claros para iluminar el ojo y abrirlo. <br>No le favorecen técnicas como el
+                  smokey eyes, el delineado muy marcado, o los tonos muy oscuros.</p>
+                <div class="img-container"><img src="content/Pequeños.png" alt="Pequeños"></div>
+              </dd>
+            </dl>
+            <dl>
+              <dt>Grandes</dt>
+              <dd>
+                <h5>Grandes</h5>
+                <p>Se recomienda darles profundidad. <br> Para ello les favorecen técnicas como el <i>smokey eye</i>,
+                  los colores marrón o los oscuros.</p>
+                <div class="img-container"><img src="content/Grandes.png" alt="Grandes"></div>
+              </dd>
+            </dl>
+          </div>
+          <h3>Volumen</h3>
+          <div class="instruction" type="info">Toca cada elemento para ver su contenido</div>
+          <div class="horizontal-menu">
+            <dl>
+              <dt>Hundidos</dt>
+              <dd>
+                <h5>Hundidos</h5>
+                <p>Se recomienda usar tonos claros y un tono más oscuro de transición. <br>Se sugiere en la línea de
+                  agua usar un lápiz beige ya que este creará un efecto visual de mayor amplitud en el ojo.</p>
+                <div class="img-container"><img src="content/Hundidos.png" alt="Hundidos"></div>
+              </dd>
+            </dl>
+            <dl>
+              <dt>Encapotados</dt>
+              <dd>
+                <h5>Encapotados</h5>
+                <p>En este tipo de ojos, el párpado fijo cae sobre el párpado móvil, por ello se recomienda subir las
+                  sombras hasta el párpado fijo. Usar tonos desde el lagrimal hasta donde finaliza el iris, aplicando
+                  colores satinados, claros (como dorados), o tonos cálidos. <br>No se recomienda delineado felino.</p>
+                <div class="img-container"><img src="content/Encapotados.png" alt="Encapotados"></div>
+              </dd>
+            </dl>
+          </div>
+          <h3>Longitud</h3>
+          <div class="instruction" type="info">Toca cada elemento para ver su contenido</div>
+          <div class="horizontal-menu">
+            <dl>
+              <dt>Separados</dt>
+              <dd>
+                <h5>Separados</h5>
+                <p>Se recomienda aplicar la técnica de delineado foxy eyes. <br>Para lograr un equilibrio, aplicar
+                  sombras oscuras desde el lagrimal hasta la zona de profundidad, cuidando la transición en los colores.
+                </p>
+                <div class="img-container"><img src="content/Separados.png" alt="Separados"></div>
+              </dd>
+            </dl>
+            <dl>
+              <dt>Juntos</dt>
+              <dd>
+                <h5>Juntos</h5>
+                <p>Para lograr un equilibrio en este tipo de ojos, se recomienda aplicar luz en el lagrimal y oscuridad
+                  en los extremos.</p>
+                <div class="img-container"><img src="content/Juntos.png" alt="Juntos"></div>
+              </dd>
+            </dl>
+          </div>
+        </div>
+        <div class="subpage">
+          <div class="box-text box-text--important" label="Para tener presente:">
+            <p>Es muy importante qué tengas claro cuál es el tipo de técnica de maquillaje que se debe aplicar en cada
+              tipo de ojo, ya que de esto dependerá el éxito de tu maquillaje y la satisfacción de tu cliente.</p>
+          </div>
+        </div>
+        <div class="subpage">
+          <div class="box-text box-text--activity" label="Actividad">
             <div id="arrastrar6" class="jpit-activities-droppable row" data-act-id="arrastrar6"
-              data-act-title="Arrastrar según imagen">
+              data-act-title="Actividad de aprendizaje 3">
               <div class="col-2">
                 <div class="board ctrl-pagination" data-orientation="sides">
                   <li>
                     <div class="image">
                       <div class="box_media">
-                        <img src="content/mujer.png" />
+                        <img src="content/img-act-eyes-1.png" />
                       </div>
                     </div>
                     <div class="target" data-target-group="1"></div>
@@ -1148,364 +635,74 @@
                   <li>
                     <div class="image">
                       <div class="box_media">
-                        <img src="content/mujer2.png" />
+                        <img src="content/img-act-eyes-2.png" />
                       </div>
                     </div>
                     <div class="target" data-target-group="2"></div>
                   </li>
+                  <li>
+                    <div class="image">
+                      <div class="box_media">
+                        <img src="content/img-act-eyes-3.png" />
+                      </div>
+                    </div>
+                    <div class="target" data-target-group="3"></div>
+                  </li>
+                  <li>
+                    <div class="image">
+                      <div class="box_media">
+                        <img src="content/img-act-eyes-4.png" />
+                      </div>
+                    </div>
+                    <div class="target" data-target-group="4"></div>
+                  </li>
+                  <li>
+                    <div class="image">
+                      <div class="box_media">
+                        <img src="content/img-act-eyes-5.png" />
+                      </div>
+                    </div>
+                    <div class="target" data-target-group="5"></div>
+                  </li>
+                  <li>
+                    <div class="image">
+                      <div class="box_media">
+                        <img src="content/img-act-eyes-6.png" />
+                      </div>
+                    </div>
+                    <div class="target" data-target-group="6"></div>
+                  </li>
+                  <li>
+                    <div class="image">
+                      <div class="box_media">
+                        <img src="content/img-act-eyes-7.png" />
+                      </div>
+                    </div>
+                    <div class="target" data-target-group="7"></div>
+                  </li>
                 </div>
               </div>
               <div class="col-2 sources">
-                <div class="item" data-group="1">Color</div>
-                <div class="item" data-group="2">Blanco y negro</div>
+                <div class="item" data-group="1">Encapotados</div>
+                <div class="item" data-group="2">Hundidos</div>
+                <div class="item" data-group="3">Juntos</div>
+                <div class="item" data-group="4">Almendrados</div>
+                <div class="item" data-group="5">Pequeños</div>
+                <div class="item" data-group="6">Caídos</div>
+                <div class="item" data-group="7">Grandes</div>
                 <div class="box_end"></div>
               </div>
             </div>
           </div>
         </div>
-
         <div class="subpage">
-          <h3>Clasificar</h3>
-          <p>
-            Permite realizar una actividad donde se clasifican contenidos entre dos posibles valores, como:
-            <strong>Verdadero/Falso</strong> o <strong>Si/No</strong>.
-          </p>
-          <p>
-            Una actividad de clasificar se define agregando la clase <em>jpit-activities-check</em> a un contenedor y
-            dentro de él:
-          </p>
-          <ul class="data_list">
-            <li>Una etiqueta <em>words</em> compuesta por elementos <em>li</em> que contendrán las palabras o
-              elementos
-              a clasificar. Los <em>li</em> que contengan a los incluidos/verdaderos/sí deben tener el atributo
-              <em>data-val</em> establecido en <em>true</em>.
-            </li>
-            <li>La estructura HTML personalizada para dar el contexto deseado, asignando las siguientes clases a los
-              controles en los que se desee mostrar la información correspondiente.
-              <ul class="data_list">
-                <li><em>play</em>: es el contenedor inicial. Se oculta al mostrar los resultados y se vuelve a cargar
-                  al
-                  momento de reintentar la actividad.</li>
-                <li><em>word_content</em>: elemento donde se mostrarán las "palabras" a clasificar. Se encuentra al
-                  interior del contenedor marcado como <em>play</em>.</li>
-                <li><em>yes</em>: elemento que se comporta como el sí o verdadero al clasificar. Suele ser un
-                  <em>button</em> pero puede ser cualquier otro elemento.
-                </li>
-                <li><em>not</em>: elemento que se comporta como el no o falso al clasificar. Suele ser un
-                  <em>button</em> pero puede ser cualquier otro elemento.
-                </li>
-                <li><em>box_conclution</em>: es el contenedor que se muestra al finalizar la clasificación. Si se
-                  desea
-                  que se muestren las respuestas correctamente o incorrectamente clasificadas se debe adicionar una o
-                  las dos siguientes clases, según se desee. El no incluir una de ellas hará que no se muestren esos
-                  tipos de resultados.
-                  <ul class="data_list">
-                    <li><em>correct_words</em> (opcional): contenedor donde se mostrarán las palabras clasificadas
-                      correctamente.</li>
-                    <li><em>wrong_words</em> (opcional): contenedor donde se mostrarán las palabras que fueron
-                      clasificadas incorrectamente.</li>
-                  </ul>
-                </li>
-                <li><em>reload</em> (opcional): elemento que controla el reinicio de la actividad luego de cada ronda
-                  de
-                  clasificación. Si no se adiciona, la actividad tendrá una sola ronda de clasificación. Suele ser un
-                  <em>button</em> pero puede ser cualquier otro elemento.
-                </li>
-                <li><em>hits</em> (opcional): es un contenedor donde se copia la cantidad de aciertos al clasificar.
-                </li>
-                <li><em>miss</em> (opcional): es un contenedor donde se copia la cantidad de clasificaciones
-                  incorrectas.</li>
-              </ul>
-            </li>
-          </ul>
-
-          <div class="box-text box-text--activity" label="Clasificar">
-            <div class="jpit-activities-check">
-              <words>
-                <li data-val="true">Medellín</li>
-                <li data-val="true">Cartagena</li>
-                <li>Turín</li>
-                <li data-val="true">Santa Marta</li>
-                <li>Hong Kong</li>
-                <li>Quito</li>
-                <li data-val="true">Villavicencio</li>
-                <li>Lima</li>
-                <li data-val="true">Pasto</li>
-                <li data-val="true">Armenia</li>
-              </words>
-              <div class="board">
-                <div class="check_left">
-                  <div class="play">
-                    <p>Indique si la siguiente ciudad es o no colombiana:</p>
-                    <div class="word_content">&nbsp;</div>
-                    <div class="buttons">
-                      <button class="yes general">Si</button>
-                      <button class="not general">No</button>
-                    </div>
-                  </div>
-                  <div class="box_conclution">
-                    <h3>¡Has finalizado!</h3>
-                    <p>Al clasificar has tenido los siguientes aciertos y desaciertos:</p>
-                    <p>
-                      <strong>Aciertos:</strong>
-                      <span class="correct_words"></span>
-                    </p>
-                    <p>
-                      <strong>Desaciertos:</strong>
-                      <span class="wrong_words"></span>
-                    </p>
-                    <div class="box_end"></div>
-                    <div class="buttons">
-                      <button class="general reload">Reiniciar actividad</button>
-                    </div>
-                  </div>
-                </div>
-                <div class="check_right">
-                  <div class="box_result">
-                    <div class="correct">
-                      <div class="hits">0</div>
-                      <div class="text">Aciertos</div>
-                    </div>
-                    <div class="wrong">
-                      <div class="miss">0</div>
-                      <div class="text">Desaciertos</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="subpage" id="pag-actividades-view">
-          <h3>Ver - Abrir</h3>
-
-          <p>
-            Esta actividad se define agregando la clase <em>jpit-activities-view</em> a un elemento que ejecuta una
-            acción como mostrar un contenido o abrir una ventana. Al elemento que es "visitado" se le agrega la clase
-            CSS <em>visited</em>.
-          </p>
-          <p>
-            Sirve para controlar que el usuario haya visto un contenido o donde la actividad simplemente sea
-            seleccionar
-            algo. Dado que sólo hay dos estados posibles (sin completar o completada), entonces la posible
-            calificación
-            de la actividad es únicamente "sin completar" o 100%.
-          </p>
-
-          <div class="box-text box-text--activity" label="Ver - Abrir">
-            <p>
-              Vea el siguiente contenido: <button class="w-content-controler general jpit-activities-view"
-                data-content="#ventana_act_ver">Abrir contenido</button>
-            </p>
-            <div id="ventana_act_ver" class="w-content">
-              Acá estaría el contenido. En este momento la actividad ya se marca como completada.
-            </div>
+          <div class="box-text box-text--note"
+            label="Hasta aquí los conceptos fundamentales sobre morfología y visagismo">
+            <p>Recuerda poner en práctica lo aprendido y ¡no olvides disfrutar este proceso!</p>
           </div>
         </div>
       </section>
 
-      <!--Referencias-->
-      <section id="pag-referencias" ptitle="5. Referencias">
-
-        <div class="subpage">
-          <p>
-            Lo siguiente es una guía sugerida para referenciar recursos digitales como imágenes, videos y otros
-            elementos utilizados como parte del contenido en el montaje del documento hipermedial. El contenedor de la
-            referencia debe tener la clase <em>about</em>, además se recomienda que el recurso y su referencia estén
-            en
-            un contenedor con la clase <em>box_media</em>.
-          </p>
-          <div class="box-text box-text--example" label="Código de ejemplo">
-            <pre>
-&lt;div class="box_media"&gt;
-    &lt;img src="content/el_beso_udea.png" /&gt;
-    &lt;div class="about"&gt;
-        &lt;strong&gt;Imagen 1: &lt;/strong&gt;
-        El beso, fotografía con retoque digital (2013).
-    &lt;/div&gt;
-&lt;/div&gt;
-</pre>
-          </div>
-        </div>
-
-        <div class="subpage">
-          <h3>Si la autoría es del proyecto</h3>
-          <p>Si el recurso es de autoría del proyecto, por ejemplo para diseño de vectores, ilustraciones o
-            fotografías
-            de autoría de uno de los miembros del equipo de trabajo, o en general es un archivo producido para la
-            realización del proyecto, se cita de la siguiente manera:</p>
-          <blockquote><strong>Tipo de recurso #.</strong> Nombre del recurso (año).</blockquote>
-          <p>En el pie de foto no se pone el autor, puesto que ya aparecerá en los créditos generales del documento.
-          </p>
-          <div class="box_media">
-            <img src="content/el_beso_udea.png" />
-            <div class="about"><strong>Imagen 1. </strong>El beso, fotografía con retoque digital (2013).</div>
-          </div>
-        </div>
-
-        <div class="subpage">
-          <h3>Si la autoría es de un proveedor ajeno al equipo de trabajo</h3>
-          <p>Si el recurso proviene de la empresa o entidad a quien se le está prestando el servicio de producción, el
-            pie de imagen se usa de la siguiente manera:</p>
-          <blockquote><strong>Tipo de recurso #.</strong> Nombre del recurso.<br /><strong>Fuente:</strong> nombre
-            entidad que suministra la fotografía (año).</blockquote>
-          <div class="box_media">
-            <img src="content/el_beso_udea.png" />
-            <div class="about"><strong>Imagen 2. </strong>El beso, fotografía con retoque digital.
-              <br /><strong>Fuente:</strong> BambuCo (2013).
-            </div>
-          </div>
-        </div>
-
-        <div class="subpage">
-          <h3>Si la autoría es de atribución</h3>
-          <p>Si el recurso tiene derechos de atribución bajo una licencia abierta como la licencia creative commons,
-            se
-            hace la cita del autor de la siguiente manera:</p>
-          <blockquote><strong>Tipo de recurso #.</strong> Nombre del recurso. <br /><strong>Fuente:</strong> <a
-              href="#">Autor</a> (Año).</blockquote>
-          <p><strong>Importante:</strong> el nombre del <em><a href="#">Autor</a> (Año).</em>, deberá estar
-            hipervinculado, siempre que sea posible, al sitio donde se encuentre el recurso en Internet o donde haya
-            información al respecto.</p>
-          <p>Cuando el recurso tiene derechos de <strong>atribución o reconocimiento (Attribution)</strong>, para
-            usarlo
-            se debe hacer referencia a su autor.</p>
-          <div class="box_media">
-            <img src="content/mujer.png" />
-            <div class="about"><strong>Imagen 3.</strong> HASHIGUCHI Mujer enpolvandose.
-              <br /><strong>Fuente:</strong>
-              <a href="https://commons.wikimedia.org/wiki/File:HASHIGUCHI_Mujer_enpolvandose.jpg"
-                target="_blank">Hashiguchi Goyo</a> (1921).
-            </div>
-          </div>
-        </div>
-
-        <div class="subpage">
-          <h3>Si la autoría es de atribución con intervención gráfica o modificaciones</h3>
-          <p>Si el recurso se crea a partir de la modificación de otro, es importante verificar los derechos de
-            atribución y referenciar de la siguiente manera:</p>
-          <blockquote><strong>Tipo de recurso #.</strong> Nombre del recurso, diseño referenciado.
-            <br /><strong>Fuente:</strong> <a href="#">Autor</a> (Año).
-          </blockquote>
-          <p><strong>Importante:</strong> el nombre del <em><a href="#">Autor</a> (Año).</em>, deberá estar
-            hipervinculado, siempre que sea posible, al sitio donde se encuentre el recurso en Internet o donde haya
-            información al respecto.</p>
-          <div class="box_media">
-            <img src="content/mujer2.png" />
-            <div class="about"><strong>Imagen 4.</strong> Mujer "negativa", diseño referenciado.
-              <br /><strong>Fuente:</strong> <a
-                href="https://commons.wikimedia.org/wiki/File:HASHIGUCHI_Mujer_enpolvandose.jpg"
-                target="_blank">Hashiguchi Goyo</a> (1921).
-            </div>
-          </div>
-
-          <p>Si la intención es emplear un recurso para hacer una composición, únicamente se deberían emplear recursos
-            con licencias que lo permitan, respetando las diferentes condiciones particulares de cada una.</p>
-          <ul class="data_list">
-            <li>Dominio público</li>
-            <li>Creative commons, que no tenga la restricción de "sin obra derivada"</li>
-            <li>MIT, GNU/GPL o similares</li>
-          </ul>
-        </div>
-      </section>
-
-      <!--Maquetación-->
-      <section id="pag-maquetacion" ptitle="Maquetación">
-        <div class="subpage">
-          <div class="box-text box-text--important" label="Caso especial">
-            <p>
-              Esta plantilla dispone de una condición especial para reducir el espacio en caso de que se tengan
-              actividades de una sola página. Para ello se debe agregar la clase <em>single</em> a la etiqueta
-              <em>html</em> del contenido.
-            </p>
-          </div>
-
-          <p>
-            La maquetación es la manera en la que se distribuye el contenido del documento por defecto. Algunas partes
-            de ellas hacen parte del comportamiento del documento y otras únicamente se utilizan como parte de la
-            estructura gráfica. Las partes tenidas en cuenta para asociarlas con algún comportamiento, y que por ende
-            deben respetar algunas consideraciones, son:
-          </p>
-          <ul class="data_list">
-            <li>
-              <strong>Barras de navegación:</strong> es opcional y pueden haber múltiples en el documento. Se define
-              con
-              un elemento <em>nav</em> que contenga como hijo de primer nivel un elemento <em>menu</em> compuesto por
-              elementos de tipo <em>menuitem</em>. Dentro de los elementos <em>menuitem</em> pueden haber a su vez
-              otros
-              elementos <em>menu</em>, intentando no generar demasiados anidamientos para no dificultar la navegación.
-              Los items pueden tener un atributo <em>label</em> que determina el texto en el menú o su contenido en el
-              menú puede ser definido en el contenido del elemento. Además, se define la página o acción a la cual
-              están
-              vinculados utilizando el atributo <em>data-page</em> con el identificador de la página con la que se
-              vincula o el atributo <em>data-global-id</em> con el identificador de la acción global que puede ser:
-              <em>results</em> (mostrar ventana de seguimiento), <em>return</em> (de ser posible, entrar o salir de
-              pantalla completa), <em>close_all</em> (salir del documento).<br />
-              Además, si a la etiqueta <em>nav</em> se le define el atributo <em>data-offset</em> en <em>true</em>, la
-              posición del menú se calcula para mantenerlo visible a pesar del scroll.
-            </li>
-            <li><strong>Título de página:</strong> es opcional, pero si se define un elemento con la clase
-              <em>page-title</em>, allí se cargará dinámicamente el contenido definido en el atributo <em>ptitle</em>
-              de
-              cada página, cada que se cambie de página con cualquier método de navegación.
-            </li>
-            <li><strong>Contenido:</strong> el contenido debe estar dentro de un elemento <em>main</em> dentro del
-              cual
-              deben haber elementos <em>section</em> que corresponden a cada una de las páginas de contenido. Las
-              secciones deben tener un <em>id</em> que es el utilizado en los menús para vincularlos y pueden tener un
-              atrinuto <em>ptitle</em> con el texto considerado como título de la página o sección. Las páginas
-              (elementos <em>section</em>), están compuestas por sub-páginas que son elementos con la clase
-              <em>subpage</em>. Una página debe tener como mínimo una sub-página.
-            </li>
-            <li><strong>Botones de navegación:</strong> los siguientes atributos son utilizados para marcar los
-              botones
-              o elementos de navegación:
-              <ul class="data_list">
-                <li><strong>Entre páginas:</strong> se activa asociando a cualquier elemento el atributo
-                  <em>data-page</em> con el identificador de la página que se debe cargar. Siempre se carga la primera
-                  sub-página de la página vinculada.
-                </li>
-                <li><strong>Anterior:</strong> se activa asociando a un elemento el atributo <em>previous-page</em>,
-                  sin
-                  ningún valor, y se encarga de pasar a la página o sub-página previa, según la configuración del
-                  documento, si se encuentra en modo páginas o <em>slides</em>.</li>
-                <li><strong>Siguiente:</strong> se activa asociando a un elemento el atributo <em>next-page</em>, sin
-                  valor, y se encarga de pasar a la siguiente página o sub-página, según la configuración del
-                  documento,
-                  si se encuentra en modo páginas o <em>slides</em>.</li>
-              </ul>
-            </li>
-            <li><strong>Menú de Sub-páginas:</strong> es un contenedor donde se cargan dinámicamente los enlaces de
-              navegación a las sub-páginas cuando se encuentra el documento en modo <em>slides</em>. Se activa
-              adicionando a un elemento contenedor el atributo <em>subpages-menu</em>.</li>
-            <li><strong>Número de página:</strong> si existe un contenedor con el identificador <em>page_number</em>,
-              en
-              ese elemento se carga el número de la página actual y la cantidad de páginas que componen el documento.
-            </li>
-            <li><strong>Resultados:</strong> para la ventana en la que se muestran los resultados, se precisa un
-              contenedor con el identificador <em>results_page</em> y en su interior dos contenedores con
-              identificador
-              <em>results_page_visited</em> y <em>results_page_activities</em>. Se recomienda que este contenedor
-              tenga
-              el atributo <em>style</em> con el valor <em>display:none;</em> para evitar que se vea información
-              innecesaria mientras carga la página.
-            </li>
-            <li><strong>Página de impresión:</strong> se requiere un contenedor con el identificador
-              <em>printent_content</em> para las actividades o contenidos que requieran poner el documento en modo
-              impresión. Dicho contenedor debe tener un boton con identificador <em>printent_back</em> y un contenedor
-              con clase <em>content</em>.
-            </li>
-            <li><strong>Indicador de progreso:</strong> es el elemento que muestra el porcentaje de avance en la
-              revisión del documento, se incluye argegando un contenedor con la clase <em>measuring-progress</em>. Se
-              puede indicar qué tipo de indicador se va a utilizar agregando un atributo <em>data-type</em> con uno de
-              los siguientes valores: <em>default</em>, <em>circle</em>, <em>vertical</em>, <em>horizontal</em>; el
-              tipo
-              es opcional y si no se indica, por defecto se usa el por defecto.
-            </li>
-          </ul>
-        </div>
-      </section>
 
       <!--Créditos-->
       <section id="pag-creditos" ptitle="Créditos">
@@ -1533,12 +730,49 @@
           </div>
 
           <div class="box-text box-text--no-icon" label="Referencias">
-            <h3>Videos</h3>
-            <a href="/">Lorem ipsum</a>
-            <h3>Fotos</h3>
-            <a href="/">Lorem ipsum visazi zamek</a>
-            <h3>Sitios web</h3>
-            <a href="/">Lorem ipsum visazi zamek</a>
+            <h5>Fotos</h5>
+            <ul class="text-list">
+              <li>
+                <a href="https://www.pexels.com/es-es/foto/moda-mujer-modelo-maqueta-4060394/"
+                  target="_blank">https://www.pexels.com/es-es/foto/moda-mujer-modelo-maqueta-4060394/</a>
+              </li>
+              <li>
+                <a href="https://www.pexels.com/es-es/foto/moda-mujer-creativo-modelo-6774983/"
+                  target="_blank">https://www.pexels.com/es-es/foto/moda-mujer-creativo-modelo-6774983/</a>
+              </li>
+              <li>
+                <a href="https://www.pexels.com/es-es/foto/persona-mujer-pincel-cepillo-7290740/" target="_blank">MART
+                  PRODUCTION - persona-mujer-pincel-cepillo</a>
+              </li>
+              <li>
+                <a href="https://www.pexels.com/es-es/foto/rimel-en-las-pestanas-3762663/" target="_blank">Shiny Diamond
+                  - Rímel En Las Pestañas</a>
+              </li>
+              <li>
+                <a href="https://www.pexels.com/es-es/foto/mujer-dentro-frio-habitacion-5231283/" target="_blank">Anna
+                  Shvets - mujer-dentro-frio-habitacion</a>
+              </li>
+              <li>
+                <a href="https://www.pexels.com/es-es/foto/nina-modelo-joven-cara-4153139/" target="_blank">Cottonbro
+                  studio - nina-modelo-joven-cara</a>
+              </li>
+              <li>
+                <a href="https://www.pexels.com/es-es/foto/mujer-llevando-negro-correa-espagueti-top-415829/"
+                  target="_blank">Pixabay - Mujer, Llevando, Negro, Correa Espagueti, Top</a>
+              </li>
+              <li>
+                <a href="https://www.pexels.com/es-es/foto/mujer-en-blanco-camiseta-sin-mangas-sonriente-6476080/"
+                  target="_blank">Anna Nekrashevich - Mujer, En, Blanco, Camiseta Sin Mangas, Sonriente</a>
+              </li>
+              <li>
+                <a href="https://www.pexels.com/es-es/foto/mujer-en-chaqueta-de-mezclilla-azul-sosteniendo-luces-de-cadena-3764119/"
+                  target="_blank">Matheus Bertelli - Mujer En Chaqueta De Mezclilla Azul Sosteniendo Luces De Cadena</a>
+              </li>
+              <li>
+                <a href="https://www.pexels.com/es-es/foto/foto-en-primer-plano-de-mujer-2467389/"
+                  target="_blank">Samantha Garrote - Foto En Primer Plano De Mujer</a>
+              </li>
+            </ul>
           </div>
         </div>
       </section>
@@ -1563,7 +797,7 @@
     <p>En verde, aquellas páginas que ya ha visitado.</p>
     <div id="results_page_visited"></div>
     <br class="clear" />
-    <h3>Actividades de aprendizaje</h3>
+    <h3>Actividades</h3>
     <div id="results_page_activities"></div>
   </div>
 
@@ -1574,10 +808,6 @@
       <button id="printent_back" class="general button">Volver</button>
     </div>
   </div>
-
-  <!-- Add timeline init file if required -->
-  <script src="js/timeline_init.js"></script>
-  <!-- End of timeline init file -->
 </body>
 
 </html>

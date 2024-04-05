@@ -1746,6 +1746,7 @@ dhbgApp.mobile.load_operations = function() {
             question_options.feedbackIfFalse = q_feedbackfalse;
             question_options.feedbackAll = q_feedbackall;
             question_options.weight = question_weight;
+            question_options.imageIncluded = $question.attr('data-question-with-image') == 'true' ? true:false;
 
             switch($question.attr('type')) {
                 case 'simplechoice':
