@@ -79,7 +79,7 @@ ul.text-list > li {
   @include spacer(4, margin, block);
   @include respond-to('large') {
     width: 800px;
-    height: 600px;
+    height: 350px;
   }
 }
 
