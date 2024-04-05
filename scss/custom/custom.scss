@@ -1,19 +1,8 @@
 @import "../utils/all";
 
-.change {
-  color: red;
-}
-
-/********************************************************************************/
-/* SPECIFIC LAYER STYLES
-/********************************************************************************/
-
 /********************************************************************************/
 /* Actividad arrastrar y soltar - muchos a uno
 /********************************************************************************/
-#pag-actividades-arrastrar5 .chalkboard_content {
-  height: auto;
-}
 
 #drag-drop .droppable {
   width: 300px;
@@ -24,57 +13,119 @@
   display: inline-block;
 }
 
-/********************************************************************************/
-/* UTIL CLASSES
-/********************************************************************************/
+#makeup-history-timeline {
+
+
+  &.tl-skinny .tl-slide .tl-slide-content-container .tl-slide-content {
+    align-items: center;
+
+    .tl-text {
+      width: 100%;
+      max-width: 90%;
+    }
+  }
+
+
+  .tl-slide-content {
+    .tl-media {
+      max-width: 240px !important;
+
+      img {
+        max-height: 210px !important;
+
+        @include respond-to('up-to-medium') {
+          max-height: 180px !important;
+        }
+      }
+    }
+
+    .tl-text {
+      width: 68%;
+      max-width: 68%;
+    }
+
+  }
+}
+
+.text-center {
+  text-align: center;
+}
+
+.italic {
+  font-style: italic;
+}
 
 .flex-row {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 24px;
   flex-direction: column;
-  @include respond-to("medium") {
+
+  @include respond-to('medium') {
     flex-direction: row;
   }
-  & > * {
+
+  &>* {
     flex: 1 1 50%;
   }
-  img {
-    border-radius: 16px;
+
+  h5 {
+    margin-block: 12px;
   }
+
+  img {
+    border-radius: 0px;
+  }
+
+ @include respond-to('up-to-medium'){
+   &.activity > .general {
+    margin-block: 16px;
+  }
+ }
+
+  @include respond-to('medium') {
+    &.intro > * {
+    flex: unset;
+  }
+
+  &.activity > * {
+    flex: unset;
+    
+    &.general {
+      flex: 0 0 200px;
+    }
+  }
+  }
+
 }
 
 .flex-center {
   align-items: center;
 }
 
-ul.text-list > li {
+ul>li {
   margin-inline-start: 48px;
 }
 
-.img-container {
-  width: 100%;
-  height: auto;
-  text-align: center;
-  img {
-    width: 100%;
-    height: auto;
-    max-width: 260px;
-  }
-  &--xl {
-    img {
-      max-width: 560px; 
-    }
+.image-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  flex-direction: column;
+  @include spacer(6, padding, block);
+
+  @include respond-to('medium') {
+    flex-direction: row;
   }
 }
 
-.spacer-bottom-2 {
-  @include spacer(2, margin, bottom);
+.flex-info {
+  @include respond-to('large') {
+    max-width: 624px;
+    margin: 0 auto;
+  }
 }
-
-/********************************************************************************/
-/* CREDITS
-/********************************************************************************/
 
 .logo-container {
   display: block;
@@ -83,14 +134,17 @@ ul.text-list > li {
   object-fit: cover;
   margin: 0 auto;
   @include spacer(4, margin, bottom);
+
   &:hover {
     border-bottom: 0;
   }
+
   img {
     height: 100%;
     width: auto;
     transition: all 0.2s ease;
   }
+
   &--mariana {
     img {
       object-fit: cover;
@@ -98,9 +152,71 @@ ul.text-list > li {
       height: 80px;
     }
   }
+
   &:hover {
     img {
       transform: scale(1.1);
     }
   }
+}
+
+.shadow-image {
+  pointer-events: none;
+
+  img {
+    pointer-events: none;
+  }
+}
+
+.img-container {
+  width: 100%;
+  height: auto;
+  text-align: center;
+
+  img {
+    width: 100%;
+    height: auto;
+    max-width: 260px;
+  }
+
+  &--xl {
+    img {
+      max-width: 560px;
+    }
+  }
+}
+
+.spacer-bottom-2 {
+  @include spacer(2, margin, bottom);
+}
+
+.spacer-block-2 {
+  @include spacer(2, margin, block);
+}
+
+.spacer-block-4 {
+  @include spacer(4, margin, block);
+}
+
+.banner {
+  @include spacer(2, margin, bottom);
+}
+
+.audio-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  &__title {
+    font-size: var(--font-size-medium-16);
+    line-height: var(--font-size-large-28);
+    color: var(--color-primary-light);
+    font-weight: bold;
+    @include spacer(2, margin, bottom);
+  }
+}
+
+.subpage {
+  @include spacer(4, margin, bottom);
 }

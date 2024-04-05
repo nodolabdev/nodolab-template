@@ -61,17 +61,13 @@
   .flex-row h5 {
     margin-block: 12px; }
   .flex-row img {
-    border-radius: 0px; }
-  @media (max-width: 600px) {
-    .flex-row.activity > .general {
-      margin-block: 16px; } }
-  @media (min-width: 600px) {
-    .flex-row.intro > * {
-      flex: unset; }
-    .flex-row.activity > * {
-      flex: unset; }
-      .flex-row.activity > *.general {
-        flex: 0 0 200px; } }
+    border-radius: 16px; }
+  .flex-row.intro > * {
+    flex: unset; }
+  .flex-row.activity > * {
+    flex: unset; }
+    .flex-row.activity > *.button {
+      flex: 0 0 200px; }
 
 .flex-center {
   align-items: center; }
