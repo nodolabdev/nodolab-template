@@ -458,13 +458,14 @@ jpit.activities.quiz.question.simplechoice = function (statement, possibles, cor
         "shuffleAnswer" : false,
         "userAnswer" : 0,
         "prefixType" : 0,
-        "displayFeedback" : false,
+        "includesImage": false,
         "feedbackIfTrue" : '',
         "feedbackIfFalse" : '',
         "feedbackAll" : '',
         "control": null,
         "weight":10,
         "key" : null,
+        "imageIncluded": false,
 
         "getAnswerControl" : function () {
             var control = $('<ul class="jpit_activities_quiz_question_answers"></ul>')
@@ -600,9 +601,19 @@ jpit.activities.quiz.question.simplechoice = function (statement, possibles, cor
         },
         "getHtml" : function (prefix) {
             var control = $('<div class="' + ( options.classQuestionContainer != undefined ? options.classQuestionContainer:'' ) + ' jpit_activities_quiz_question_simplechoice"></div>');
-            control.append(this.getStatement(prefix));
-            control.append(this.getAnswerControl());
-
+            if(this.imageDescription) {
+              control.append('<div class="flex-row flex-center"></div>');
+              var flexRow = $(control).find('.flex-row');
+              flexRow.append(`<div class="img-container img-container--xl"><img src="${this.imageDescription}"></img>`);
+              flexRow.append('<div class="description-box"></div>');
+              var descriptionBox = $(flexRow).find('.description-box');
+              descriptionBox.append(this.getStatement(prefix));
+              descriptionBox.append(this.getAnswerControl());
+            } else {
+              control.append(this.getStatement(prefix));
+              control.append(this.getAnswerControl()); 
+            }
+            
             if (this.displayFeedback) {
                 control.append(this.getFeedbackControl());
             }
@@ -641,6 +652,9 @@ jpit.activities.quiz.question.simplechoice = function (statement, possibles, cor
     };
 
     if(typeof(options) == 'object') {
+        if (options.imageDescription != 'undefined' && options.imageDescription != undefined) {
+          obj.imageDescription = options.imageDescription;
+        }
         if (options.shuffleAnswers != 'undefined' && options.shuffleAnswers != undefined) {
             obj.shuffleAnswers = options.shuffleAnswers;
         }
@@ -840,8 +854,18 @@ jpit.activities.quiz.question.multichoice = function (statement, possibles, corr
         },
         "getHtml" : function (prefix) {
             var control = $('<div class="'+ ( options.classQuestionContainer != undefined ? options.classQuestionContainer:'' ) +' jpit_activities_quiz_question_multichoice"></div>');
-            control.append(this.getStatement(prefix));
-            control.append(this.getAnswerControl());
+            if(this.imageDescription) {
+              control.append('<div class="flex-row flex-center"></div>');
+              var flexRow = $(control).find('.flex-row');
+              flexRow.append(`<div class="img-container img-container--xl"><img src="${this.imageDescription}"></img>`);
+              flexRow.append('<div class="description-box"></div>');
+              var descriptionBox = $(flexRow).find('.description-box');
+              descriptionBox.append(this.getStatement(prefix));
+              descriptionBox.append(this.getAnswerControl());
+            } else {
+              control.append(this.getStatement(prefix));
+              control.append(this.getAnswerControl()); 
+            }
 
             if (this.displayFeedback) {
                 control.append(this.getFeedbackControl());
@@ -881,6 +905,9 @@ jpit.activities.quiz.question.multichoice = function (statement, possibles, corr
     };
 
     if(typeof(options) == 'object') {
+        if (options.imageDescription != 'undefined' && options.imageDescription != undefined) {
+          obj.imageDescription = options.imageDescription;
+        }
         if (options.shuffleAnswers != 'undefined' && options.shuffleAnswers != undefined) {
             obj.shuffleAnswers = options.shuffleAnswers;
         }

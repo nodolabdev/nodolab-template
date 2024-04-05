@@ -1674,6 +1674,7 @@ dhbgApp.standard.load_operations = function() {
             question_options.feedbackIfFalse = q_feedbackfalse;
             question_options.feedbackAll = q_feedbackall;
             question_options.weight = question_weight;
+            question_options.imageDescription = $question.attr('data-image-description');
 
             switch($question.attr('type')) {
                 case 'simplechoice':
