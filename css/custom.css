@@ -33,9 +33,12 @@
 #drag-drop .draggable {
   display: inline-block; }
 
-/********************************************************************************/
-/* UTIL CLASSES
-/********************************************************************************/
+.text-center {
+  text-align: center; }
+
+.italic {
+  font-style: italic; }
+
 .flex-row {
   display: flex;
   align-items: flex-start;
@@ -55,6 +58,25 @@
 ul.text-list > li {
   margin-inline-start: 48px; }
 
+.image-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  flex-direction: column;
+  padding-block: 60px; }
+  @media (min-width: 1024px) {
+    .image-content {
+      padding-block: 80px; } }
+  @media (min-width: 600px) {
+    .image-content {
+      flex-direction: row; } }
+
+.shadow-image {
+  pointer-events: none; }
+  .shadow-image img {
+    pointer-events: none; }
+
 .img-container {
   width: 100%;
   height: auto;
@@ -68,6 +90,110 @@ ul.text-list > li {
 
 .spacer-bottom-2 {
   margin-bottom: 16px; }
+
+.spacer-block-4 {
+  margin-block: 36px; }
+
+.cream-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-inline: 8px;
+  gap: 16px; }
+  .cream-box img {
+    max-width: 90px;
+    height: 90px; }
+  .cream-box p {
+    font-size: var(--font-size-medium-16);
+    line-height: var(--font-size-large-28); }
+
+.jpit-activities-check .box_conclution {
+  position: relative; }
+  .jpit-activities-check .box_conclution .box_end {
+    padding: 0; }
+    .jpit-activities-check .box_conclution .box_end > * {
+      position: relative; }
+
+@media (min-width: 1024px) {
+  .flex-info {
+    max-width: 624px;
+    margin: 0 auto; } }
+
+.genially-embed {
+  width: 300px;
+  height: 300px;
+  margin-block: 36px; }
+  @media (min-width: 1024px) {
+    .genially-embed {
+      width: 800px;
+      height: 350px; } }
+
+.infografia {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  justify-content: center; }
+  .infografia__card {
+    align-items: center;
+    background-color: #E5DFF6;
+    border-radius: 20px;
+    display: flex;
+    min-height: 85px;
+    justify-content: center;
+    padding-inline: 52px;
+    position: relative;
+    width: calc(100% - 126px); }
+    @media (min-width: 600px) {
+      .infografia__card {
+        min-height: 174px;
+        padding-inline: 122px; } }
+    .infografia__card--inverse .infografia__icon {
+      left: unset;
+      right: -63px; }
+    .infografia__card--inverse .infografia__photo {
+      right: unset;
+      left: -63px; }
+    .infografia__card--inverse .infografia__text h5 {
+      text-align: right; }
+    .infografia__card--inverse .infografia__text p {
+      text-align: justify; }
+  .infografia__text h5 {
+    margin: 0;
+    margin-bottom: 16px; }
+  .infografia__icon {
+    background-color: white;
+    border-radius: 50%;
+    border: 3px solid #6956A1;
+    box-shadow: 0px 4px 4px 0px #00000040;
+    height: 85px;
+    left: -63px;
+    padding: 21px;
+    position: absolute;
+    transition: all 0.2s ease;
+    width: 85px; }
+    @media (min-width: 600px) {
+      .infografia__icon {
+        width: 174px;
+        height: 174px; } }
+    .infografia__icon img {
+      width: 100%;
+      height: 100%;
+      margin: 0 auto; }
+  .infografia__photo {
+    height: 85px;
+    position: absolute;
+    right: -63px;
+    width: 85px; }
+    @media (min-width: 600px) {
+      .infografia__photo {
+        width: 174px;
+        height: 174px; } }
+    .infografia__photo img {
+      width: 100%;
+      height: 100%;
+      margin: 0 auto; }
 
 /********************************************************************************/
 /* CREDITS
@@ -106,5 +232,9 @@ ul.text-list > li {
   .logo-container:hover img {
     transform: scale(1.05); }
 
-.text-center {
-  text-align: center; }
+.text-box h5 {
+  margin-block: 0;
+  margin-bottom: 16px; }
+
+.horizontal-menu.hide-pills .horizontal-menu__chalkboard-items {
+  display: none; }
