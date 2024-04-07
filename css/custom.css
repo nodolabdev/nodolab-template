@@ -105,25 +105,42 @@ ul > li {
     max-width: 624px;
     margin: 0 auto; } }
 
+/********************************************************************************/
+/* CREDITS
+/********************************************************************************/
+.logos {
+  margin-top: 36px;
+  justify-content: center;
+  column-gap: 64px;
+  flex-wrap: wrap;
+  margin-inline: auto; }
+  @media (min-width: 600px) {
+    .logos {
+      margin-top: 60px; } }
+
 .logo-container {
-  display: block;
+  flex: unset;
+  width: auto;
   border-bottom: 0;
-  width: 250px;
-  object-fit: cover;
-  margin: 0 auto;
-  margin-bottom: 36px; }
+  margin-bottom: 16px; }
+  @media (min-width: 600px) {
+    .logo-container {
+      margin-bottom: 36px; } }
   .logo-container:hover {
     border-bottom: 0; }
   .logo-container img {
     height: 100%;
     width: auto;
-    transition: all 0.2s ease; }
+    transition: all 0.2s ease;
+    object-fit: cover; }
   .logo-container--mariana img {
-    object-fit: cover;
-    width: 250px;
-    height: 80px; }
+    height: 96px; }
+  .logo-container--enlace img {
+    height: 88px; }
+  .logo-container--nodolab img {
+    height: 52px; }
   .logo-container:hover img {
-    transform: scale(1.1); }
+    transform: scale(1.05); }
 
 .shadow-image {
   pointer-events: none; }
@@ -167,3 +184,6 @@ ul > li {
 
 .subpage {
   margin-bottom: 36px; }
+
+.text-center {
+  text-align: center; }
