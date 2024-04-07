@@ -68,7 +68,7 @@
   .flex-row h5 {
     margin-block: 12px; }
   .flex-row img {
-    border-radius: 0px; }
+    border-radius: 16px; }
   @media (max-width: 600px) {
     .flex-row.activity > .general {
       margin-block: 16px; } }
@@ -104,43 +104,6 @@ ul > li {
   .flex-info {
     max-width: 624px;
     margin: 0 auto; } }
-
-/********************************************************************************/
-/* CREDITS
-/********************************************************************************/
-.logos {
-  margin-top: 36px;
-  justify-content: center;
-  column-gap: 64px;
-  flex-wrap: wrap;
-  margin-inline: auto; }
-  @media (min-width: 600px) {
-    .logos {
-      margin-top: 60px; } }
-
-.logo-container {
-  flex: unset;
-  width: auto;
-  border-bottom: 0;
-  margin-bottom: 16px; }
-  @media (min-width: 600px) {
-    .logo-container {
-      margin-bottom: 36px; } }
-  .logo-container:hover {
-    border-bottom: 0; }
-  .logo-container img {
-    height: 100%;
-    width: auto;
-    transition: all 0.2s ease;
-    object-fit: cover; }
-  .logo-container--mariana img {
-    height: 96px; }
-  .logo-container--enlace img {
-    height: 88px; }
-  .logo-container--nodolab img {
-    height: 52px; }
-  .logo-container:hover img {
-    transform: scale(1.05); }
 
 .shadow-image {
   pointer-events: none; }
@@ -184,6 +147,44 @@ ul > li {
 
 .subpage {
   margin-bottom: 36px; }
+
+/********************************************************************************/
+/* CREDITS
+/********************************************************************************/
+.logos {
+  justify-content: center;
+  column-gap: 64px;
+  flex-wrap: wrap;
+  margin-inline: auto;
+  margin: 36px auto 24px; }
+  @media (min-width: 600px) {
+    .logos {
+      margin-top: 60px;
+      margin-bottom: 0; } }
+
+.logo-container {
+  flex: unset;
+  width: auto;
+  border-bottom: 0;
+  margin-bottom: 16px; }
+  @media (min-width: 600px) {
+    .logo-container {
+      margin-bottom: 36px; } }
+  .logo-container:hover {
+    border-bottom: 0; }
+  .logo-container img {
+    height: 100%;
+    width: auto;
+    transition: all 0.2s ease;
+    object-fit: cover; }
+  .logo-container--mariana img {
+    height: 96px; }
+  .logo-container--enlace img {
+    height: 88px; }
+  .logo-container--nodolab img {
+    height: 52px; }
+  .logo-container:hover img {
+    transform: scale(1.05); }
 
 .text-center {
   text-align: center; }
