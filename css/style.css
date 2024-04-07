@@ -1584,6 +1584,12 @@ footer,
         color: var(--white);
         font-size: 26px;
         font-variation-settings: 'wght' 300; }
+      .scorm__globals ul .button .fullscreen .enter {
+        display: none; }
+      .scorm__globals ul .button.minimized .fullscreen .enter {
+        display: inline-block; }
+      .scorm__globals ul .button.minimized .fullscreen .exit {
+        display: none; }
   .scorm__globals:before {
     width: 0;
     height: 0;
