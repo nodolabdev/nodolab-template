@@ -29,7 +29,7 @@ var num = 1000 * Math.random();
 var unique_id = 'window_scorm_' + Math.round(num);
 var w_options = 'location=0, menubar=0, resizable=1, scrollbars=1, status=0, titlebar=0, toolbar=0';
 
-var $css_to_fullpage = $("<style type='text/css'> .scorm_full_page { overflow: hidden; } .scorm_full_page #scorm_object { position: fixed; top: 10px; left: 10px; right: 10px; bottom: 0; z-index: 4030; width: calc(100% - 20px) !important; height: calc(100% - 10px) !important; border: 3px solid #333; } </style>");
+var $css_to_fullpage = $("<style type='text/css'> .scorm_full_page { overflow: hidden; } .scorm_full_page #scorm_object { position: fixed; top: 0; left: 0; right: 0; bottom: 0; z-index: 4030; width: 100% !important; height: 100% !important; border: 3px solid #333; } </style>");
 
 dhbgApp.start = function() {
 

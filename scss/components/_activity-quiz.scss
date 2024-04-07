@@ -272,4 +272,10 @@
       @include button();
     }
   }
+
+  input, select {
+    font-size: var(--font-size-medium-16);
+    line-height: 28px;
+    padding-inline: 4px;
+  }
 }
