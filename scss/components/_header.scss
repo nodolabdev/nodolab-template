@@ -103,6 +103,17 @@
           font-size: 26px;
           font-variation-settings: 'wght' 300;
         }
+
+        .fullscreen {
+          .enter { display: none;}
+        }
+
+        &.minimized {
+          .fullscreen {
+            .enter { display: inline-block;}
+            .exit { display: none;}
+          }
+        }
       }
     }
     &:before {
