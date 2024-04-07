@@ -383,6 +383,18 @@ dhbgApp.standard.start = function() {
             autoOpen: false,
             close: function( event, ui ) {
                 $('body').removeClass('dhbgapp_fullview');
+                const $iframeInContent = $(this).find('iframe');
+                if($iframeInContent.length) {
+                    $iframeInContent.each(function(){
+                        this.contentWindow
+                            .postMessage('{"event":"command","func":"stopVideo","args":""}', '*');
+                    })
+                }
+            }, 
+            open: function(event, ui) { 
+                $('.ui-widget-overlay').bind('click', function() { 
+                    $(this).siblings('.ui-dialog').find('.ui-dialog-content').dialog('close'); 
+                }); 
             }
         };
 
@@ -1780,7 +1792,19 @@ dhbgApp.standard.load_operations = function() {
         var d_answer_buttons = {};
         var ok = dhbgApp.s('accept');
         d_answer_buttons[ok] = function() { $(this).dialog('close'); };
-        var $dialog_answer_required = $('<div>' + dhbgApp.s('answer_required') + '</div>').dialog({ modal: true, autoOpen: false, buttons: d_answer_buttons });
+        var $dialog_answer_required = $('<div>' + dhbgApp.s('answer_required') + '</div>').dialog(
+            {
+                modal: true,
+                autoOpen: false,
+                buttons: d_answer_buttons,
+                close: function () {
+                    $('body').removeClass('dhbgapp_fullview');
+                },
+                open: function () {
+                    $('body').addClass('dhbgapp_fullview');
+                },
+            }
+        );
 
         var $box_questions = $('<div class="box_content"></div>');
         var $box_end = $('<div class="box_end" style="display:none"></div>');
