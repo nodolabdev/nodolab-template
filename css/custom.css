@@ -72,39 +72,6 @@ ul > li {
     .image-content {
       flex-direction: row; } }
 
-@media (min-width: 1024px) {
-  .flex-info {
-    max-width: 624px;
-    margin: 0 auto; } }
-
-.genially-embed {
-  width: 300px;
-  height: 300px; }
-  @media (min-width: 1024px) {
-    .genially-embed {
-      width: 800px;
-      height: 600px; } }
-
-.logo-container {
-  display: block;
-  border-bottom: 0;
-  width: 250px;
-  object-fit: cover;
-  margin: 0 auto;
-  margin-bottom: 36px; }
-  .logo-container:hover {
-    border-bottom: 0; }
-  .logo-container img {
-    height: 100%;
-    width: auto;
-    transition: all 0.2s ease; }
-  .logo-container--mariana img {
-    object-fit: cover;
-    width: 250px;
-    height: 80px; }
-  .logo-container:hover img {
-    transform: scale(1.1); }
-
 .shadow-image {
   pointer-events: none; }
   .shadow-image img {
@@ -307,3 +274,53 @@ ul > li {
 @container (min-width: 600px) {
   .jpit-activities-droppable .col-2 {
     display: flex; } }
+
+@media (min-width: 1024px) {
+  .flex-info {
+    max-width: 624px;
+    margin: 0 auto; } }
+
+.genially-embed {
+  width: 300px;
+  height: 300px; }
+  @media (min-width: 1024px) {
+    .genially-embed {
+      width: 800px;
+      height: 600px; } }
+
+/********************************************************************************/
+/* CREDITS
+/********************************************************************************/
+.logos {
+  margin-top: 36px;
+  justify-content: center;
+  column-gap: 64px;
+  flex-wrap: wrap;
+  margin-inline: auto; }
+  @media (min-width: 600px) {
+    .logos {
+      margin-top: 60px; } }
+
+.logo-container {
+  flex: unset;
+  width: auto;
+  border-bottom: 0;
+  margin-bottom: 16px; }
+  @media (min-width: 600px) {
+    .logo-container {
+      margin-bottom: 36px; } }
+  .logo-container:hover {
+    border-bottom: 0; }
+  .logo-container img {
+    height: 100%;
+    width: auto;
+    transition: all 0.2s ease;
+    object-fit: cover; }
+  .logo-container--mariana img {
+    height: 96px; }
+  .logo-container--enlace img {
+    height: 88px; }
+  .logo-container--nodolab img {
+    height: 52px; }
+  .logo-container:hover img {
+    transform: scale(1.05); }
