@@ -1,0 +1,37 @@
+{
+    "events": [
+      {
+        "media": {
+          "url": "content/timeline/e-learning/tl-img-1.jpg"
+        },
+        "start_date": {
+          "year": "1990"
+        },
+        "text": {
+          "text": "<p>En la <strong>década de 1990</strong>, se iniciaron los primeros esfuerzos para digitalizar contenidos educativos.</p><p>Unidades digitales que permitían almacenar <em>“grandes”</em> cantidades de información.</p>"
+        }
+      },
+      {
+        "media": {
+          "url": "content/timeline/e-learning/tl-img-2.jpg"
+        },
+        "start_date": {
+          "year": "2000"
+        },
+        "text": {
+          "text": "<p>La aparición de plataformas de gestión del aprendizaje (LMS) en la <strong>década de 2000</strong> permitió un acceso más estructurado a los cursos en línea.</p><p>Moodle es un LMS gratuito y de código abierto. Su primera versión en agosto de 2002.</p>"
+        }
+      },
+      {
+        "media": {
+          "url": "content/timeline/e-learning/tl-img-3.jpg"
+        },
+        "start_date": {
+          "year": "2020"
+        },
+        "text": {
+          "text": "<p>La <strong>última década</strong> ha estado marcada por la interactividad, la personalización y la expansión global del e-learning </p><p>RA y RV: mejoran el proceso de aprendizaje de una forma práctica y didáctica.</p>"
+        }
+      }      
+    ]
+}

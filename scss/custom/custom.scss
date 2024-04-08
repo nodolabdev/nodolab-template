@@ -23,20 +23,19 @@
 .text-center {
   text-align: center;
 }
+
 .italic {
   font-style: italic;
 }
+
 .flex-row {
   display: flex;
   align-items: flex-start;
   gap: 24px;
   flex-direction: column;
+
   @include respond-to('medium') {
     flex-direction: row;
-  }
-
-  & > * {
-    flex: 1 1 50%;
   }
 
   img {
@@ -48,10 +47,6 @@
   align-items: center;
 }
 
-ul > li {
-  margin-inline-start: 48px;
-}
-
 .image-content {
   display: flex;
   align-items: center;
@@ -59,6 +54,7 @@ ul > li {
   gap: 24px;
   flex-direction: column;
   @include spacer(6, padding, block);
+
   @include respond-to('medium') {
     flex-direction: row;
   }
@@ -68,12 +64,13 @@ ul > li {
   @include respond-to('large') {
     max-width: 624px;
     margin: 0 auto;
-  }  
+  }
 }
 
 .genially-embed {
   width: 300px;
   height: 300px;
+
   @include respond-to('large') {
     width: 800px;
     height: 600px;
@@ -82,6 +79,7 @@ ul > li {
 
 .shadow-image {
   pointer-events: none;
+
   img {
     pointer-events: none;
   }
@@ -96,7 +94,7 @@ ul > li {
   img {
     width: 100%;
     height: auto;
-    max-width: 260px;
+    max-width: 320px;
   }
 
   &--xl {
@@ -108,4 +106,220 @@ ul > li {
 
 .spacer-bottom-2 {
   @include spacer(2, margin, bottom);
+}
+
+img {
+  border-radius: 16px;
+}
+
+.timeline {
+  min-height: 420px;
+}
+
+#e-learning-timeline {
+
+  &.tl-skinny .tl-slide .tl-slide-content-container .tl-slide-content {
+    align-items: center;
+
+    .tl-text {
+      width: 100%;
+      max-width: 90%;
+    }
+  }
+
+  .tl-slide-content {
+    .tl-media {
+      max-width: 240px !important;
+
+      img {
+        max-height: 210px !important;
+
+        @include respond-to('up-to-medium') {
+          max-height: 180px !important;
+        }
+      }
+    }
+
+    .tl-text {
+      width: 68%;
+      max-width: 68%;
+    }
+
+  }
+}
+
+.links-box {
+  a {
+    margin-top: 8px;
+  }
+}
+
+#pag-definicion {
+  .jpit-activities-quiz .box_content {
+    .jpit_activities_quiz_board {
+      @include respond-to('up-to-medium') {
+        padding-bottom: 30px;
+      }
+    }
+
+    .jpit_activities_quiz_question_multichoice .jpit_activities_quiz_question_answers {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+
+    .jpit_activities_quiz_question_option {
+      margin-bottom: 8px;
+
+      @include respond-to("medium") {
+        margin-bottom: 16px;
+      }
+
+      .jpit_activities_quiz_question_option_answer {
+        padding: 4px;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+      }
+    }
+
+  }
+
+}
+
+#pag-historia {
+  .jpit-activities-droppable {
+    table {
+      min-width: 200px;
+      width: 100%;
+      max-width: 400px;
+    }
+
+    th {
+      width: 40px;
+      border-width: 0;
+    }
+
+    td.droppable {
+      width: calc(100% - 60px);
+    }
+  }
+}
+
+#pag-modalidades {
+  .ctrl-pagination {
+    .flex-row {
+      .img-container img {
+        margin-block: 12px;
+        max-width: 120px;
+
+        @include respond-to('medium') {
+          max-width: 160px;
+        }
+      }
+    }
+  }
+
+  .jpit-activities-droppable {
+
+    .flex-row>* {
+      flex: 1 0 50%;
+
+      &.sources {
+        @include respond-to('medium') {
+          justify-content: flex-start;
+        }
+      }
+    }
+
+    .ctrl-pagination {
+      padding: 0;
+      width: 240px;
+
+      .previous {
+        @include respond-to("medium") {
+          left: -50px;
+        }
+      }
+
+      .next {
+        @include respond-to("medium") {
+          right: -50px;
+        }
+      }
+    }
+
+    .layers-wrapper {
+      border-radius: 24px;
+
+      @include respond-to("medium") {
+        padding-bottom: 12px;
+      }
+    }
+
+    li.layer {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .image {
+      padding: 0;
+
+      p {
+        padding-inline: 8px;
+      }
+    }
+
+    img {
+      max-width: 240px;
+      border-radius: 24px;
+    }
+  }
+
+  .col-2 {
+    margin-bottom: 0;
+  }
+
+  .sources {
+    flex-wrap: wrap;
+    gap: 4px
+  }
+
+  .box_end>div {
+    @include respond-to('medium') {
+      width: 400px;
+    }
+  }
+}
+
+#pag-recursos {
+  .horizontal-menu {
+    @include spacer(2, margin, block);
+
+    &__chalkboard-items {
+      margin-bottom: 8px;
+    }
+
+    &__item-button {
+      --icon-size: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    p {
+      margin-bottom: 0;
+    }
+  }
+}
+
+#pag-creditos {
+  ul>li {
+    margin-inline-start: 24px;
+
+    @include respond-to('large') {
+      margin-inline-start: 48px;
+    }
+  }
 }

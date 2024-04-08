@@ -8,15 +8,15 @@
   overflow: hidden;
 
   @include respond-to('small-large') {
-    height: 70vh;
-  }
-
-  @include respond-to('large') {
     height: 50vh;
   }
 
+  @include respond-to('large') {
+    height: 40vh;
+  }
+
   @include respond-to('extra-large') {
-    height: 36vh;
+    height: 30vh;
   }
 
   .tl-timeline {

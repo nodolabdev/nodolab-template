@@ -1,4 +1,4 @@
-var timeline = new TL.Timeline('makeup-history-timeline', 'content/timeline/makeup-timeline.json', { slide_padding_lr: 80, language: "es", use_bc: true });
+var timeline = new TL.Timeline('e-learning-timeline', 'content/timeline/e-learning-timeline.json', { slide_padding_lr: 80, language: "es", use_bc: true });
 
 
 var observer = new MutationObserver(function (mutations) {

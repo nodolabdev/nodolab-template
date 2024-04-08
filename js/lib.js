@@ -552,6 +552,8 @@ dhbgApp.standard.start = function() {
         $activities.empty();
         $activities.append($ulactivities);
 
+        console.log(dhbgApp.scorm.activities);
+
         for (var activity_key in dhbgApp.scorm.activities) {
             if (dhbgApp.scorm.activities[activity_key]) {
 
@@ -1371,17 +1373,17 @@ dhbgApp.standard.load_operations = function() {
         }
 
         if(npage == 0){
-            $('[previous-page]').css('visibility', 'hidden');
+            $('[previous-page]').css('display', 'none');
         }
         else{
-            $('[previous-page]').css('visibility', 'visible');
+            $('[previous-page]').css('display', 'inherit');
         }
 
         if(npage == dhbgApp.pages.length -1){
-            $('[next-page]').css('visibility', 'hidden');
+            $('[next-page]').css('display', 'none');
         }
         else{
-            $('[next-page]').css('visibility', 'visible');
+            $('[next-page]').css('display', 'inherit');
         }
 
         if (npage != dhbgApp.DB.currentPage) {
@@ -1460,17 +1462,17 @@ dhbgApp.standard.load_operations = function() {
             });
 
             if (nsubpage == 0 && npage == 0) {
-                $('[previous-page]').css('visibility', 'hidden');
+                $('[previous-page]').css('display', 'none');
             }
             else {
-                $('[previous-page]').css('visibility', 'visible');
+                $('[previous-page]').css('display', 'inherit');
             }
 
             if ((nsubpage + 1) >= dhbgApp.pages[npage].subpages && (npage + 1) == dhbgApp.pages.length) {
-                $('[next-page]').css('visibility', 'hidden');
+                $('[next-page]').css('display', 'none');
             }
             else {
-                $('[next-page]').css('visibility', 'visible');
+                $('[next-page]').css('display', 'inherit');
             }
 
             $current_subpage.removeClass('current');
@@ -1545,17 +1547,17 @@ dhbgApp.standard.load_operations = function() {
             }
 
             if (npage == 0) {
-                $('[previous-page]').css('visibility', 'hidden');
+                $('[previous-page]').css('display', 'none');
             }
             else {
-                $('[previous-page]').css('visibility', 'visible');
+                $('[previous-page]').css('display', 'inherit');
             }
 
             if ((npage + 1) == dhbgApp.pages.length) {
-                $('[next-page]').css('visibility', 'hidden');
+                $('[next-page]').css('display', 'none');
             }
             else {
-                $('[next-page]').css('visibility', 'visible');
+                $('[next-page]').css('display', 'inherit');
             }
 
             var $new_page = $('main > section.page_' + npage);

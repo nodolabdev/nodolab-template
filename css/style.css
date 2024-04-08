@@ -5,7 +5,7 @@
   font-weight: normal;
   font-style: normal;
   font-variation-settings: 'OPSZ';
-  font-size: 24px;
+  font-size: var(--icon-size, 24px);
   /* Preferred icon size */
   display: inline-block;
   line-height: 1;
@@ -1767,8 +1767,7 @@ main {
   .ctrl-pagination li.layer {
     margin: 0;
     padding: 5px 10px 0 10px;
-    flex: 0 0 100%;
-    overflow: auto; }
+    flex: 0 0 100%; }
   .ctrl-pagination .position {
     color: var(--color-primary-light-400);
     font-weight: 500;
@@ -2273,13 +2272,13 @@ main {
   overflow: hidden; }
   @media (min-width: 768px) {
     .timeline {
-      height: 70vh; } }
+      height: 50vh; } }
   @media (min-width: 1024px) {
     .timeline {
-      height: 50vh; } }
+      height: 40vh; } }
   @media (min-width: 1440px) {
     .timeline {
-      height: 36vh; } }
+      height: 30vh; } }
   .timeline .tl-timeline {
     background-color: var(--box-bg-color); }
     .timeline .tl-timeline :is(h1, h2, h3, h4, h5, h6, p),

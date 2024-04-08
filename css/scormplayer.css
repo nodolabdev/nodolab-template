@@ -326,23 +326,29 @@ body {
   display: flex;
   flex-direction: column;
   overflow: hidden;
+  height: 100svh;
   max-height: 100vh; }
   @media (min-width: 600px) {
     .content {
       flex-direction: row; } }
   .content__banner {
     background-color: var(--color-nodo);
+    overflow: hidden;
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: flex-start;
     display: flex;
     flex-direction: column;
     position: relative;
-    padding-bottom: 36px; }
+    padding-block: 60px; }
+    @media (min-width: 1024px) {
+      .content__banner {
+        padding-block: 80px; } }
     @media (min-width: 600px) {
       .content__banner {
         height: 100vh;
-        flex-basis: 50%; } }
+        flex-basis: 50%;
+        overflow: visible; } }
     @media (min-width: 1024px) {
       .content__banner::after {
         background-image: url("/content/nodolab-logo-2.svg");
@@ -351,7 +357,7 @@ body {
         height: 100px;
         position: absolute;
         right: -50px;
-        top: 50%;
+        bottom: 0;
         transform: translateY(-50%);
         width: 100px; } }
     .content__banner:before {
@@ -359,31 +365,42 @@ body {
       background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="325.957" height="312.926" viewBox="0 0 325.957 312.926"><defs><clipPath id="clip-path"><path id="Trazado_1008" data-name="Trazado 1008" d="M325.957,834.333H0L.495,521.407H325.957Z" fill="none"/></clipPath><filter id="Trazado_1006" x="-122.772" y="53.596" width="305.811" height="345.032" filterUnits="userSpaceOnUse"><feOffset dx="3.559" dy="3.559" input="SourceAlpha"/><feGaussianBlur stdDeviation="0.593" result="blur"/><feFlood flood-color="%23397884" flood-opacity="0.188"/><feComposite operator="in" in2="blur"/><feComposite in="SourceGraphic"/></filter><filter id="Trazado_1007" x="-175.201" y="183.288" width="305.811" height="345.033" filterUnits="userSpaceOnUse"><feOffset dx="3.559" dy="3.559" input="SourceAlpha"/><feGaussianBlur stdDeviation="0.593" result="blur-2"/><feFlood flood-color="%23397884" flood-opacity="0.188"/><feComposite operator="in" in2="blur-2"/><feComposite in="SourceGraphic"/></filter></defs><g id="Grupo_1104" data-name="Grupo 1104" transform="translate(0 -521.407)" opacity="0.49"><g id="Grupo_1103" data-name="Grupo 1103" clip-path="url(%23clip-path)"><g transform="matrix(1, 0, 0, 1, 0, 521.41)" filter="url(%23Trazado_1006)"><path id="Trazado_1006-2" data-name="Trazado 1006" d="M47.651,591.112c29.6,8.254,64.9,21.761,65.6,55.938.577,28.427-29.851,70.432-15.4,98.973C110,770,143.446,770.393,160.7,789.548c18.646,20.7,20.815,51.649,9.4,74.921-6.519,13.289-17.024,24.407-29.475,32.881-8.416,5.727-28.3,19.977-39.619,16.118l-223.2-76.129,89.281-261.758Z" transform="translate(0 -521.41)" fill="none" stroke="%23707070" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.156"/></g><g transform="matrix(1, 0, 0, 1, 0, 521.41)" filter="url(%23Trazado_1007)"><path id="Trazado_1007-2" data-name="Trazado 1007" d="M-4.778,720.8c29.6,8.254,64.9,21.761,65.6,55.938.577,28.427-29.851,70.431-15.4,98.973,12.144,23.981,45.595,24.37,62.847,43.525,18.646,20.7,20.815,51.649,9.4,74.921-6.519,13.289-17.024,24.407-29.475,32.881-8.416,5.727-28.3,19.976-39.618,16.117l-223.2-76.129,89.281-261.758Z" transform="translate(0 -521.41)" fill="none" stroke="%23707070" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.156"/></g></g></g></svg>');
       background-size: contain;
       position: absolute;
-      bottom: 0;
+      bottom: -36px;
       left: 0;
-      width: 200px;
-      height: 200px; }
+      width: 100%;
+      max-width: 600px;
+      aspect-ratio: 1;
+      opacity: 0.84; }
   .content__title {
-    text-transform: uppercase;
     font-size: var(--font-size-large-32);
     line-height: var(--font-size-large-40);
-    margin-top: 92px; }
+    margin-top: 36px; }
     @media (min-width: 600px) {
       .content__title {
         font-size: var(--font-size-large-38);
         line-height: var(--font-size-large-44); } }
-    @media (min-width: 1024px) {
-      .content__title {
-        margin-top: 120px; } }
   .content__logo {
-    width: 150px;
-    margin-top: 92px; }
-    @media (min-width: 1024px) {
+    margin-top: 60px;
+    width: 60%;
+    max-width: 260px;
+    z-index: 1;
+    margin-bottom: 30px; }
+    @media (min-width: 600px) {
       .content__logo {
-        margin-top: 120px; } }
+        margin-top: 20vh;
+        max-width: 320px; } }
+    .content__logo img {
+      width: 100%; }
   .content__info {
     padding-inline: 16px;
-    overflow: scroll;
+    overflow: auto;
+    max-width: 800px;
+    margin-inline: auto;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
     padding-top: 36px;
     padding-bottom: 48px; }
     @media (min-width: 1024px) {
@@ -391,16 +408,54 @@ body {
         padding-bottom: 60px; } }
     @media (min-width: 600px) {
       .content__info {
+        justify-content: center;
         flex-basis: 50%; } }
     @media (min-width: 1024px) {
       .content__info {
         padding-inline: 60px; } }
+    .content__info h1 {
+      font-size: 28px;
+      font-weight: normal;
+      color: var(--color-primary);
+      line-height: 1.1em;
+      margin-block-end: 12px;
+      font-weight: 400;
+      line-height: 0.95em;
+      letter-spacing: 0.05em; }
+      .content__info h1 strong {
+        font-size: 34px; }
+      @media (min-width: 600px) {
+        .content__info h1 {
+          margin-top: 60%; } }
+      @media (min-width: 768px) {
+        .content__info h1 {
+          margin-top: 40%;
+          font-size: 36px; }
+          .content__info h1 strong {
+            font-size: 42px; } }
+      @media (min-width: 1024px) {
+        .content__info h1 {
+          margin-top: 20%; } }
+    .content__info p {
+      color: var(--text-color); }
+      @media (min-width: 1024px) {
+        .content__info p {
+          font-size: var(--font-size-medium-18); } }
+    .content__info .duration {
+      text-transform: uppercase;
+      color: var(--color-nodo);
+      font-size: var(--font-size-medium-20); }
   .content #play_scorm {
     display: flex;
-    justify-content: center; }
+    justify-content: center;
+    align-self: center;
+    flex-grow: 1;
+    align-items: flex-end; }
     @media (min-width: 600px) {
       .content #play_scorm {
-        justify-content: flex-end; } }
+        justify-content: flex-end;
+        align-self: flex-end;
+        flex-grow: 0; } }
     .content #play_scorm button {
       font-family: var(--default-font-family);
       border-radius: 32px;
@@ -418,7 +473,9 @@ body {
       margin: 0 auto;
       margin-top: 24px;
       padding: 0.4em 2.8em;
-      position: relative; }
+      position: relative;
+      animation: pulse-animation 2s ease-out infinite;
+      border: 1px solid #6956a047; }
       .content #play_scorm button:hover {
         background-color: var(--color-primary-light-400);
         color: var(--white); }
@@ -463,3 +520,9 @@ body {
         @media (min-width: 1024px) {
           .content #play_scorm .loading img {
             width: 128px; } }
+
+@keyframes pulse-animation {
+  0% {
+    box-shadow: 0 0 0 0px rgba(69, 60, 120, 0.3); }
+  100% {
+    box-shadow: 0 0 0 8px rgba(69, 60, 120, 0); } }
