@@ -1,19 +1,20 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-  <meta charset="utf-8">
-  <link rel="shortcut icon" href="img/icon.svg">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-  <title>Ejemplo de elementos para los cursos</title>
-  <link href="components/jquery/css/custom/jquery-ui.min.css" rel="stylesheet" type="text/css">
-  <link href="components/ionicons/css/ionicons.min.css" rel="stylesheet" type="text/css">
-  <link href="components/pit/css/jpit_quiz.css" rel="stylesheet" type="text/css">
-  <link href="components/pit/css/jpit_mark.css" rel="stylesheet" type="text/css">
-  <link href="components/pit/css/jpit_wordpuzzle.css" rel="stylesheet" type="text/css">
-  <link href="components/pit/css/jpit_crossword.css" rel="stylesheet" type="text/css">
-  <link href="components/pit/css/jpit_zoom.css" rel="stylesheet" type="text/css">
-  <link href="components/csscircle/circle.min.css" rel="stylesheet" type="text/css">
+  <head>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="img/icon.svg">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="theme-color" content="#433A78">
+    <title>Ejemplo de elementos para los cursos</title>
+    <link href="components/jquery/css/custom/jquery-ui.min.css" rel="stylesheet" type="text/css">
+    <link href="components/ionicons/css/ionicons.min.css" rel="stylesheet" type="text/css">
+    <link href="components/pit/css/jpit_quiz.css" rel="stylesheet" type="text/css">
+    <link href="components/pit/css/jpit_mark.css" rel="stylesheet" type="text/css">
+    <link href="components/pit/css/jpit_wordpuzzle.css" rel="stylesheet" type="text/css">
+    <link href="components/pit/css/jpit_crossword.css" rel="stylesheet" type="text/css">
+    <link href="components/pit/css/jpit_zoom.css" rel="stylesheet" type="text/css">
+    <link href="components/csscircle/circle.min.css" rel="stylesheet" type="text/css">
 
   <script src="components/jquery/jquery.min.js"></script>
   <script src="components/jquery/jquery-ui.js"></script>
@@ -59,9 +60,9 @@
   <script src="components/timelinejs/timeline.js"> </script>
   <!-- End of timeline files -->
 
-  <style type='text/css'>
-    body {
-      background-color: rgba(242, 242, 242, 0.7);
+    <style type='text/css'>
+      body {
+      background-color: var(--bg-color, #F0F0F5);
     }
 
     body.loading {
@@ -79,11 +80,10 @@
       transform: translate(-50%, -50%);
     }
 
-    body.loading #body {
-      display: none;
-    }
-  </style>
-  <!-- background: url(img/infinity-loader.svg) no-repeat bottom center; -->
+      body.loading #body {
+        display: none;
+      }
+    </style>
 
 </head>
 
@@ -123,7 +123,6 @@
           </menuitem>
         </menu>
       </nav>
-      <!-- <h1 class="page-title"></h1> -->
       <h1 class="scorm-title page-title"></h1>
       <nav label="Características globales" class="globals scorm__globals">
         <menu>
@@ -132,18 +131,19 @@
             <span class="google-symbols-rounded">checklist</span>
           </div>
           </menuitem>
-          <menuitem data-global-id="return" title="Salir de pantalla completa">
-          <div class="return">
-            <span class="google-symbols-rounded">fullscreen_exit</span>
-          </div>
+          <menuitem data-global-id="return" title="Activar/desactivar pantalla completa">
+            <div class="fullscreen">
+              <span class="google-symbols-rounded exit">fullscreen_exit</span>
+              <span class="google-symbols-rounded enter">fullscreen</span>
+            </div>
           </menuitem>
           <menuitem data-global-id="close_all" title="Regresar al curso">
-          <div class="home">
-            <span class="google-symbols-rounded">logout</span>
-          </div>
+            <div class="return">
+              <span class="google-symbols-rounded">logout</span>
+            </div>
           </menuitem>
         </menu>
-      </nav>
+        </nav>
     </header>
 
     <main style="display: none;">
@@ -1535,6 +1535,12 @@
             <h3>Sitios web</h3>
             <a href="/">Lorem ipsum visazi zamek</a>
           </div>
+      </main>
+
+      <footer class="not_print">
+        <div class="measuring-progress" data-type="horizontal"></div>
+        <div class="footer__logo">
+          <img src="content/nodolab-logo.svg" alt="Nodolab Logo">
         </div>
       </section>
 

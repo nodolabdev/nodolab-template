@@ -51,8 +51,8 @@
       }
 
       label {
-        background-color: #556bc6;
-        color: #fff;
+        background-color: var(--color-primary-light-400);
+        color: var(--white);
         padding: 2px 6px;
         border-radius: 30px;
         font-size: 16px;
@@ -141,6 +141,15 @@
     //---------------------------------//
     // Custom styles per question type //
     //---------------------------------//
+
+    .jpit_activities_quiz_question_answers {
+      input[type="text"], select {
+        background-color: var(--box-bg-color);
+        color: var(--color-primary-light-400);
+        border-bottom: 1px solid var(--color-primary-light-400);
+      }
+        
+    }
 
     .jpit_activities_quiz_question_multichoice,
     .jpit_activities_quiz_question_multisetchoice {
@@ -262,5 +271,11 @@
     button {
       @include button();
     }
+  }
+
+  input, select {
+    font-size: var(--font-size-medium-16);
+    line-height: 28px;
+    padding-inline: 4px;
   }
 }

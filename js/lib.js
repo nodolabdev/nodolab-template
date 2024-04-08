@@ -227,6 +227,7 @@ dhbgApp.standard.start = function() {
     const viewportWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
     if (getBreakpoint(viewportWidth) === 'large') {
         $('#drawer-toggle').prop('checked', true);
+        $('body').addClass('panel-open')
     }
 
     $('.scorm__drawer').on('click', function(e) {
@@ -269,7 +270,7 @@ dhbgApp.standard.start = function() {
           <svg viewBox="0 0 24 24">
             <use
               xmlns:xlink="http://www.w3.org/1999/xlink"
-              xlink:href="/content/icons.svg#chevron-left"></use>
+              xlink:href="content/icons.svg#chevron-left"></use>
           </svg>
           Página anterior
         </button>
@@ -278,7 +279,7 @@ dhbgApp.standard.start = function() {
           <svg viewBox="0 0 24 24">
             <use
               xmlns:xlink="http://www.w3.org/1999/xlink"
-              xlink:href="/content/icons.svg#chevron-right"></use>
+              xlink:href="content/icons.svg#chevron-right"></use>
           </svg>
         </button>
       </div>
@@ -323,7 +324,7 @@ dhbgApp.standard.start = function() {
         var $children = $this.children();
         var $box_ribbon = $(`<div class="box-text__ribbon">
           <svg viewBox="0 0 24 24">
-            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/content/icons.svg#ribbon"></use>
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="content/icons.svg#ribbon"></use>
           </svg>
         </div>
         `);
@@ -382,6 +383,18 @@ dhbgApp.standard.start = function() {
             autoOpen: false,
             close: function( event, ui ) {
                 $('body').removeClass('dhbgapp_fullview');
+                const $iframeInContent = $(this).find('iframe');
+                if($iframeInContent.length) {
+                    $iframeInContent.each(function(){
+                        this.contentWindow
+                            .postMessage('{"event":"command","func":"stopVideo","args":""}', '*');
+                    })
+                }
+            }, 
+            open: function(event, ui) { 
+                $('.ui-widget-overlay').bind('click', function() { 
+                    $(this).siblings('.ui-dialog').find('.ui-dialog-content').dialog('close'); 
+                }); 
             }
         };
 
@@ -1237,7 +1250,9 @@ dhbgApp.standard.start = function() {
 
         dhbgApp.pagesNames[v.id] = i;
 
-        if (dhbgApp.scorm) {
+        const skipInScorm = v.id === 'pag-creditos';
+
+        if (dhbgApp.scorm && !skipInScorm) {
             dhbgApp.scorm.indexPages[i] = [];
 
             for (var k = 0; k < v.subpages; k++) {
@@ -1282,6 +1297,35 @@ dhbgApp.standard.start = function() {
     }
     else {
         dhbgApp.loadPage(0, 0);
+    }
+
+    function clearWatermark(iframe,watermarkDone, shareDone) {
+        const iframeBody = $(iframe)[0].contentDocument.body;
+        const waterMark = $(iframeBody).find('a [data-cy="eduWatermark"]');
+        const shareButton = $(iframeBody).find('[data-cy="shareIcon"]');
+        if (waterMark.length) {
+            waterMark.parent().parent().remove();
+            watermarkDone = true;
+        }
+        if (shareButton.length) {
+            shareButton.parent().parent().remove();
+            shareDone = true;
+        }
+        if (!watermarkDone || !shareDone) {
+            setTimeout(() => {
+                clearWatermark(iframe, watermarkDone, shareDone)
+            }, 500);
+        }
+    }
+
+    const $geniallyEmbed = $('.genially-embed');
+    if ($geniallyEmbed.length) {
+        $geniallyEmbed.each(function (){
+            let shareDone = false;
+            let watermarkDone = false;
+            clearWatermark(this,watermarkDone, shareDone)
+
+        })
     }
 };
 
@@ -1468,7 +1512,12 @@ dhbgApp.standard.load_operations = function() {
             }
 
             if (dhbgApp.scorm) {
-                dhbgApp.scorm.saveVisit(dhbgApp.scorm.indexPages[npage][nsubpage]);
+                const index = dhbgApp.scorm.indexPages
+                    && dhbgApp.scorm.indexPages[npage]
+                    && dhbgApp.scorm.indexPages[npage][nsubpage];
+                if (index !== undefined) {
+                    dhbgApp.scorm.saveVisit(dhbgApp.scorm.indexPages[npage][nsubpage]);
+                }
             }
 
             dhbgApp.DB.currentSubPage = nsubpage;
@@ -1533,7 +1582,12 @@ dhbgApp.standard.load_operations = function() {
             }
 
             if (dhbgApp.scorm) {
-                dhbgApp.scorm.saveVisit(dhbgApp.scorm.indexPages[npage][nsubpage]);
+                const index = dhbgApp.scorm.indexPages
+                    && dhbgApp.scorm.indexPages[npage]
+                    && dhbgApp.scorm.indexPages[npage][nsubpage];
+                if (index !== undefined) {
+                    dhbgApp.scorm.saveVisit(dhbgApp.scorm.indexPages[npage][nsubpage]);
+                }
             }
 
         }
@@ -1544,7 +1598,9 @@ dhbgApp.standard.load_operations = function() {
 
         dhbgApp.printProgress();
 
-        if (dhbgApp.scorm && dhbgApp.scorm.indexPages.length > page && dhbgApp.scorm.indexPages[page].length > subpage) {
+        const shouldChangePage =(dhbgApp.scorm && dhbgApp.scorm.indexPages.length > page && dhbgApp.scorm.indexPages[page].length > subpage) || (dhbgApp.pages[page]?.id === "pag-creditos")
+        
+        if (shouldChangePage) {
             var current = dhbgApp.FULL_PAGES ? page : dhbgApp.scorm.indexPages[page][subpage];
             $('#page_number').text((current + 1) + '/' + dhbgApp.DB.totalPages);
         }
@@ -1736,7 +1792,19 @@ dhbgApp.standard.load_operations = function() {
         var d_answer_buttons = {};
         var ok = dhbgApp.s('accept');
         d_answer_buttons[ok] = function() { $(this).dialog('close'); };
-        var $dialog_answer_required = $('<div>' + dhbgApp.s('answer_required') + '</div>').dialog({ modal: true, autoOpen: false, buttons: d_answer_buttons });
+        var $dialog_answer_required = $('<div>' + dhbgApp.s('answer_required') + '</div>').dialog(
+            {
+                modal: true,
+                autoOpen: false,
+                buttons: d_answer_buttons,
+                close: function () {
+                    $('body').removeClass('dhbgapp_fullview');
+                },
+                open: function () {
+                    $('body').addClass('dhbgapp_fullview');
+                },
+            }
+        );
 
         var $box_questions = $('<div class="box_content"></div>');
         var $box_end = $('<div class="box_end" style="display:none"></div>');

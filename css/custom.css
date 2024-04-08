@@ -1,25 +1,102 @@
-.change { color: red; }
+@import url(../components/fonts/google-symbols/material-symbols-rounded.css);
+.google-symbols-rounded {
+  font-family: 'Material Symbols Rounded';
+  font-weight: normal;
+  font-style: normal;
+  font-variation-settings: 'OPSZ';
+  font-size: 24px;
+  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr; }
+
+.change {
+  color: red; }
 
 /********************************************************************************/
 /* SPECIFIC LAYER STYLES
 /********************************************************************************/
-
-
 /********************************************************************************/
 /* Actividad arrastrar y soltar - muchos a uno
 /********************************************************************************/
-#pag-actividades-arrastrar5 .chalkboard_content {
+#drag-drop .droppable {
+  width: 300px;
+  height: 150px; }
+
+#drag-drop .draggable {
+  display: inline-block; }
+
+.text-center {
+  text-align: center; }
+
+.italic {
+  font-style: italic; }
+
+.flex-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  flex-direction: column; }
+  @media (min-width: 600px) {
+    .flex-row {
+      flex-direction: row; } }
+  .flex-row > * {
+    flex: 1 1 50%; }
+  .flex-row img {
+    border-radius: 16px; }
+
+.flex-center {
+  align-items: center; }
+
+ul > li {
+  margin-inline-start: 48px; }
+
+.image-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  flex-direction: column;
+  padding-block: 60px; }
+  @media (min-width: 1024px) {
+    .image-content {
+      padding-block: 80px; } }
+  @media (min-width: 600px) {
+    .image-content {
+      flex-direction: row; } }
+
+@media (min-width: 1024px) {
+  .flex-info {
+    max-width: 624px;
+    margin: 0 auto; } }
+
+.genially-embed {
+  width: 300px;
+  height: 300px; }
+  @media (min-width: 1024px) {
+    .genially-embed {
+      width: 800px;
+      height: 600px; } }
+
+.shadow-image {
+  pointer-events: none; }
+  .shadow-image img {
+    pointer-events: none; }
+
+.img-container {
+  width: 100%;
+  height: auto;
+  text-align: center; }
+  .img-container img {
+    width: 100%;
     height: auto;
-}
+    max-width: 260px; }
+  .img-container--xl img {
+    max-width: 560px; }
 
-#arrastrar5 .droppable {
-    width: 300px;
-    height: 150px;
-}
-
-#arrastrar5 .draggable {
-    display: inline-block;
-}
-
-
-
+.spacer-bottom-2 {
+  margin-bottom: 16px; }

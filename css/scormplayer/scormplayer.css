@@ -101,10 +101,13 @@ body {
   margin: 0;
   padding: 0;
   width: 100%;
-  height: 100%; }
+  height: 100%;
+  background-color: var(--bg-color); }
+  body * {
+    font-family: var(--default-font-family); }
 
 body.dhbgapp_fullview {
-  overflow: hidden; }
+  overflow: hidden  !important; }
 
 #body {
   margin: 0 auto;
@@ -196,6 +199,14 @@ body *::-webkit-scrollbar-track {
 
 body *::-webkit-scrollbar-thumb {
   background: var(--color-primary); }
+
+iframe {
+  border-width: 0;
+  width: 100% !important;
+  max-width: 800px; }
+
+video {
+  border-radius: 20px; }
 
 body {
   color: var(--text-color);

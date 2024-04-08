@@ -18,7 +18,7 @@
     display: flex;
     flex-direction: column;
     position: relative;
-    @include spacer(7, padding, bottom);
+    @include spacer(4, padding, bottom);
     @include respond-to("medium") {
       height: 100vh;
       flex-basis: 50%;
@@ -60,8 +60,8 @@
   &__info {
     padding-inline: 16px;
     overflow: scroll;
-    @include spacer(4, margin, top);
-    @include spacer(7, padding, bottom);
+    @include spacer(4, padding, top);
+    @include spacer(5, padding, bottom);
     @include respond-to("medium") {
       flex-basis: 50%;
     }
@@ -79,6 +79,66 @@
     button {
       @include button();
       text-transform: uppercase;
+      font-size: var(--font-size-large-20);
+      margin: 0 auto;
+      margin-top: 24px;
+      padding: 0.4em 2.8em;
+      position: relative;
+
+       @include respond-to("medium") {
+        padding: 0.4em 4em 0.4em 1em;
+      }
+
+      @include respond-to("small-large") {
+        font-size: var(--font-size-large-26);
+        margin-inline: auto 0;
+        text-align: left;
+      }
+
+      .google-symbols-rounded {
+        font-size: 32px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 8px;
+      }
+
+    }
+
+    .loading {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: var(--font-size-small);
+      height: 100%;
+      margin: 0;
+
+      @include respond-to('medium') {
+        font-size: var(--font-size-common);
+        width: 100%;
+        justify-content: flex-end;
+      }
+
+      @include respond-to('small-large') {
+        font-size: var(--font-size-medium-18);
+      }
+
+      img {
+        aspect-ratio: 3;
+        object-fit: cover;
+
+        @include respond-to("medium") {
+          width: 96px;
+        }
+
+        @include respond-to("small-large") {
+          width: 112px;
+        }
+
+        @include respond-to("large") {
+          width: 128px;
+        }
+      }
     }
   }
 }

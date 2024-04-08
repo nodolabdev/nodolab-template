@@ -5,49 +5,60 @@
 .jpit-activities-droppable .col-2 {
     display: flex;
     justify-content: center;
+    margin-block-end: 16px;
 
     .board.ctrl-pagination {
         min-height: 300px;
-        width: 250px;
+        width: 300px;
         margin: 20px auto;
         position: relative;
         overflow: unset;
         text-align: center;
-        background-color: #D7DDF2;
+        background-color: var(--white);
         height: auto;
+        padding: 16px;
+        border-radius: 24px;
+        box-shadow: 0px 0px 6px #00000029;
+
+        .box_media {
+            margin: 0
+        }
 
         li.layer {
             padding: 0;
         }
 
         .image {
-            background-color: #fff;
-            border-radius: 20px;
-            padding: 15px;
+            border-radius: 16px;
+            padding: 16px 0;
+
+            @include respond-to('medium') {
+                padding-inline: 16px;
+            }
+
+            img {
+                border-radius: 16px;
+            }
         }
 
         .target {
             min-height: 36px;
-            background-color: #fff;
+            background-color: var(--bg-color);
             width: 100%;
             border: none;
             border-radius: 20px;
-            margin: 10px 0;
+            margin: 0 auto 16px;
             position: relative;
+            max-width: 180px;
         }
 
-        .ctrl-pagination.sides .button.next {
-            right: 20px;
-        }
+        .pagination {
 
-        .ctrl-pagination.sides .button.previous {
-            left: 20px;
-        }
-
-        .ctrl-pagination.sides .position {
-            color: #fff;
-            background-color: #556bc6;
-            border: none;
+            .position {
+                color: var(--white);
+                background-color: var(--color-primary-light-400);
+                border: none;
+            }
         }
     }
 

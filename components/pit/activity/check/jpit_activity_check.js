@@ -108,7 +108,7 @@ jpit.activities.check.init = function (container, words, properties) {
             }
 
             this.current_word = this.getRandomWord();
-            this.box_word.text(this.current_word.text);
+            this.box_word.html(this.current_word.text);
             this.current_word.used = true;
         },
 

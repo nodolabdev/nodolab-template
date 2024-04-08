@@ -30,7 +30,7 @@
 
     @include respond-to('extra-large') {
       grid-template-columns: 72px 1fr 196px;
-      gap: 24;
+      gap: 24px;
     }
   }
 
@@ -102,6 +102,17 @@
           color: var(--white);
           font-size: 26px;
           font-variation-settings: 'wght' 300;
+        }
+
+        .fullscreen {
+          .enter { display: none;}
+        }
+
+        &.minimized {
+          .fullscreen {
+            .enter { display: inline-block;}
+            .exit { display: none;}
+          }
         }
       }
     }

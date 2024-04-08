@@ -8,7 +8,6 @@
     color: var(--color-nodo);
     width: 50%;
     border: 1px solid var(--color-borders);
-    ;
     border-radius: 16px;
     padding: 5px 12px;
     text-align: right;
@@ -28,7 +27,7 @@
   }
 
   .draggable {
-    background-color: #ffffff;
+    background-color: var(--white);
     color: var(--color-nodo);
     border: 1px solid var(--color-borders);
     border-radius: 16px;
@@ -76,15 +75,14 @@
     font-weight: bold;
   }
 
-  &:after {
-    content: "";
-    display: inline-block;
-  }
-
   &--multi {
     .droppable {
       background-color: var(--white);
       padding: 12px;
+    }
+
+    .jpit_activities_jpitdroppable_dropped{
+      margin: 2px;
     }
   }
 }
