@@ -87,9 +87,17 @@
 
 
 .img-container {
-  width: 100%;
   height: auto;
   text-align: center;
+  min-width: 280px;
+
+  @include respond-to("small") {
+    min-width: 300px;
+  }
+
+  @include respond-to("small-large") {
+    min-width: 320px;
+  }
 
   img {
     width: 100%;
@@ -112,109 +120,44 @@ img {
   border-radius: 16px;
 }
 
-.timeline {
-  min-height: 420px;
-}
-
-#e-learning-timeline {
-
-  &.tl-skinny .tl-slide .tl-slide-content-container .tl-slide-content {
-    align-items: center;
-
-    .tl-text {
-      width: 100%;
-      max-width: 90%;
-    }
-  }
-
-  .tl-slide-content {
-    .tl-media {
-      max-width: 240px !important;
-
-      img {
-        max-height: 210px !important;
-
-        @include respond-to('up-to-medium') {
-          max-height: 180px !important;
-        }
-      }
-    }
-
-    .tl-text {
-      width: 68%;
-      max-width: 68%;
-    }
-
-  }
-}
-
 .links-box {
   a {
     margin-top: 8px;
   }
+
+  ul>li {
+    margin-inline-start: 24px;
+
+    @include respond-to('large') {
+      margin-inline-start: 48px;
+    }
+  }
+}
+
+video {
+  max-width: 426px;
 }
 
 #pag-definicion {
-  .jpit-activities-quiz .box_content {
-    .jpit_activities_quiz_board {
-      @include respond-to('up-to-medium') {
-        padding-bottom: 30px;
-      }
-    }
 
-    .jpit_activities_quiz_question_multichoice .jpit_activities_quiz_question_answers {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    }
 
-    .jpit_activities_quiz_question_option {
-      margin-bottom: 8px;
+  .cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    @include spacer(4, margin, block);
 
-      @include respond-to("medium") {
-        margin-bottom: 16px;
-      }
-
-      .jpit_activities_quiz_question_option_answer {
-        padding: 4px;
-        display: flex;
-        align-items: center;
-        gap: 6px;
-      }
-    }
-
-  }
-
-}
-
-#pag-historia {
-  .jpit-activities-droppable {
-    table {
-      min-width: 200px;
-      width: 100%;
+    .card {
+      min-width: 300px;
       max-width: 400px;
-    }
 
-    th {
-      width: 40px;
-      border-width: 0;
-    }
-
-    td.droppable {
-      width: calc(100% - 60px);
-    }
-  }
-}
-
-#pag-modalidades {
-  .ctrl-pagination {
-    .flex-row {
-      .img-container img {
-        margin-block: 12px;
-        max-width: 120px;
-
-        @include respond-to('medium') {
-          max-width: 160px;
-        }
+      &__img {
+        aspect-ratio: unset;
+      } 
+    
+      img {
+        max-width: 400px;
+        height: auto;
       }
     }
   }
@@ -233,7 +176,7 @@ img {
 
     .ctrl-pagination {
       padding: 0;
-      width: 240px;
+      width: 280px;
 
       .previous {
         @include respond-to("medium") {
@@ -261,6 +204,7 @@ img {
       flex-direction: column;
       justify-content: space-between;
       align-items: center;
+      gap: 20px;
     }
 
     .image {
@@ -272,9 +216,13 @@ img {
     }
 
     img {
-      max-width: 240px;
+      max-width: 280px;
       border-radius: 24px;
     }
+  }
+
+  .target {
+    margin-bottom: 24px;
   }
 
   .col-2 {
@@ -293,7 +241,9 @@ img {
   }
 }
 
-#pag-recursos {
+
+#pag-beneficios {
+
   .horizontal-menu {
     @include spacer(2, margin, block);
 
@@ -301,25 +251,42 @@ img {
       margin-bottom: 8px;
     }
 
-    &__item-button {
-      --icon-size: 30px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
     p {
       margin-bottom: 0;
+      margin-left: 4px;
+      
+      @include respond-to('medium') {
+        margin-left: 8px;
+      }
     }
   }
-}
 
-#pag-creditos {
-  ul>li {
-    margin-inline-start: 24px;
-
-    @include respond-to('large') {
-      margin-inline-start: 48px;
+  .jpit-activities-quiz .box_content {
+    .jpit_activities_quiz_board {
+      @include respond-to('up-to-medium') {
+        padding-bottom: 30px;
+      }
     }
+
+    .jpit_activities_quiz_question_multichoice .jpit_activities_quiz_question_answers {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+
+    .jpit_activities_quiz_question_option {
+      margin-bottom: 8px;
+
+      @include respond-to("medium") {
+        margin-bottom: 16px;
+      }
+
+      .jpit_activities_quiz_question_option_answer {
+        padding: 4px;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+      }
+    }
+
   }
 }

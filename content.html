@@ -6,7 +6,7 @@
     <link rel="shortcut icon" href="img/icon.svg">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <meta name="theme-color" content="#433A78">
-    <title>El e-learning y su evolución</title>
+    <title>Realidad aumentada y virtual en la educación</title>
     <link href="components/jquery/css/custom/jquery-ui.min.css" rel="stylesheet" type="text/css">
     <link href="components/ionicons/css/ionicons.min.css" rel="stylesheet" type="text/css">
     <link href="components/pit/css/jpit_quiz.css" rel="stylesheet" type="text/css">
@@ -33,11 +33,6 @@
     <script src="js/lib.js"></script>
     <script src="components/scorm/SCORM_12_APIWrapper.js"> </script>
     <script src="components/scorm/scorm_api.js"> </script>
-
-    <!-- Add timeline files if required -->
-    <link rel="stylesheet" href="components/timelinejs/timeline.css" type="text/css" />
-    <script src="components/timelinejs/timeline.js"> </script>
-    <!-- End of timeline files -->
 
     <style type='text/css'>
       body {
@@ -80,14 +75,11 @@
         <input type="checkbox" id="drawer-toggle">
         <nav label="Principal" class="horizontal main scorm__drawer" data-offset="true">
           <menu>
-            <menuitem label="El e-learning y su evolución" type="label"></menuitem>
-            <menuitem label="Definición" data-page="pag-definicion">
+            <menuitem label="Realidad aumentada y virtual en la educación" type="label">
             </menuitem>
-            <menuitem label="Historia" data-page="pag-historia">
+            <menuitem label="Definición y diferencias" data-page="pag-definicion">
             </menuitem>
-            <menuitem label="Modalidades" data-page="pag-modalidades">
-            </menuitem>
-            <menuitem label="Recursos multimedia" data-page="pag-recursos">
+            <menuitem label="Beneficios educativos" data-page="pag-beneficios">
             </menuitem>
             <menuitem label="Conclusión" data-page="pag-conclusion">
             </menuitem>
@@ -120,374 +112,198 @@
 
       <main style="display: none;">
 
-
-        <section id="pag-definicion" ptitle="Definición">
+        <section id="pag-definicion" ptitle="Definición y diferencias">
           <div class="subpage">
 
-            <div class="flex-row flex-center">
-              <div>
-                <p>E-learning, o aprendizaje en línea, se refiere al uso de tecnologías de la información y comunicación
-                  para facilitar procesos de enseñanza y aprendizaje. </p>
-                <p>Es un término amplio que abarca <strong>diversas formas de educación</strong> a distancia
-                  <strong>mediadas por la tecnología</strong>.
-                </p>
-              </div>
-              <div class="img-container img-container">
-                <img src="content/img-1.jpg" alt="">
+
+            <div class="box-text box-text--important" label="Importante">
+              <div class="flex-row flex-center">
+                <div>
+                  <p>La realidad aumentada (RA) superpone elementos digitales en el entorno real.</p>
+                  <p>Por otro lado, larealidad virtual (RV) sumerge al usuario en un entorno completamente digital.</p>
+                </div>
+                <div class="img-container img-container">
+                  <img src="content/img-1.jpg" alt="">
+                </div>
               </div>
             </div>
 
             <br>
 
-            <div class="box-text box-text--activity" label="Actividad 1">
-              <div class="jpit-activities-quiz" data-act-title="Actividad 1 - Definición"
-                data-act-id="1-quiz-definition">
-                <question type="complete">
-                  <description>
-                    <p><strong>Completa el enunciado:</strong></p>
-                    <div class="instruction" type="info">Escribe o selecciona las respuestas correctas</div>
-                  </description>
-                  <p class="item">
-                    Podemos entender el e-Learning como procesos de
-                    <select class="answers">
-                      <option>estrategias didácticas</option>
-                      <option data-response="true">enseñanza y aprendizaje</option>
-                      <option>formas de evaluación</option>
-                    </select>
-                    mediante
-                    <select class="answers">
-                      <option>aprendizaje</option>
-                      <option>educación</option>
-                      <option data-response="true">el uso de las TIC</option>
-                    </select>
-                    .
-                    <br>
-                    <br>
-                    Esto
-                    <select class="answers">
-                      <option>complejiza</option>
-                      <option data-response="true">potencia</option>
-                      <option>ralentiza</option>
-                    </select>
-                    la labor del profesor, además de que
-                    <select class="answers">
-                      <option data-response="true">facilita</option>
-                      <option>dificulta</option>
-                      <option>demora</option>
-                    </select>
-                    el ejercicio
-                    <select class="answers">
-                      <option data-response="true">académico</option>
-                      <option>evaluativo</option>
-                      <option>educativo</option>
-                    </select>
-                    del estudiante.
-                  </p>
-                </question>
+            <p>Con el desarrollo de la tecnología y el metaverso cada vez es más normal hacer uso de ambas, algunos
+              ejemplos de ello son:</p>
+
+            <div class="cards spacer-block-2">
+              <div class="card" img="content/img-2.jpg" img-alt="usando dispositivo móvil">
+                <p>Uso de dispositivos móviles para visualizar información adicional sobre objetos del mundo real.</p>
+              </div>
+              <div class="card" img="content/img-3.jpg" img-alt="uso de realidad aumentada">
+                <p>Simulación de entornos virtuales completos a través de dispositivos como gafas de realidad virtual.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="box-text box-text--activity" label="Actividad 1">
+            <div class="jpit-activities-droppable row" data-act-id="1-droppable-definition"
+              data-act-title="Actividad 1 - Definición y diferencias">
+              <p><strong>Selecciona para cada imagen, el tipo de realidad correcta:</strong></p>
+              <div class="instruction" type="info">Arrastra a cada espacio en blanco, su respuesta correcta.</div>
+              <div class="flex-row flex-center">
+                <div class="col-2">
+                  <div class="board ctrl-pagination" data-orientation="sides">
+                    <li>
+                      <div class="image">
+                        <div class="box_media">
+                          <img src="content/img-act-1.jpg" />
+                        </div>
+                      </div>
+                      <div class="target" data-target-group="1"></div>
+                    </li>
+                    <li>
+                      <div class="image">
+                        <div class="box_media">
+                          <img src="content/img-act-2.jpg" />
+                        </div>
+                      </div>
+                      <div class="target" data-target-group="2"></div>
+                    </li>
+                  </div>
+                </div>
+                <div class="col-2 sources">
+                  <div class="item" data-group="2">Aumentada</div>
+                  <div class="item" data-group="1">Virtual</div>
+                  <div class="box_end"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="pag-beneficios" ptitle="Beneficios educativos">
+          <div class="subpage">
+            <p>El uso de estas realidades en espacios de formación formal y no formal, permite un aprendizaje rápido y
+              efectivo. A continuación, exploramos algunos beneficios del uso de estas herramientas:</p>
+            <div class="instruction" type="info">Toca cada elemento para ver su contenido.</div>
+            <div class="horizontal-menu">
+              <dl>
+                <dt>Visualización</dt>
+                <dd>
+                  <div class="flex-row flex-center">
+                    <div>
+                      <h5>Realidad aumentada</h5>
+                      <p>Convierte conceptos abstractos en experiencias tangibles y visuales.</p>
+                    </div>
+                    <div>
+                      <h5>Realidad virtual</h5>
+                      <p>Transporta a entornos virtuales realistas para una inmersión total en el aprendizaje.</p>
+                    </div>
+                  </div>
+                </dd>
+              </dl>
+              <dl>
+                <dt>Interacción</dt>
+                <dd>
+                  <div class="flex-row flex-center">
+                    <div>
+                      <h5>Realidad aumentada</h5>
+                      <p>Fomenta la participación activa al interactuar con objetos virtuales en el mundo real.</p>
+                    </div>
+                    <div>
+                      <h5>Realidad virtual</h5>
+                      <p>Permite aprender a través de la experiencia, interactuando con entornos virtuales envolventes.
+                      </p>
+                    </div>
+                  </div>
+                </dd>
+              </dl>
+              <dl>
+                <dt>Motivación</dt>
+                <dd>
+                  <div class="flex-row flex-center">
+                    <div>
+                      <h5>Realidad aumentada</h5>
+                      <p>Aumenta la motivación al proporcionar objetos en el espacio que pueden buscar o ver por primera
+                        vez.</p>
+                    </div>
+                    <div>
+                      <h5>Realidad virtual</h5>
+                      <p>Mantiene el interés y la atención de los estudiantes en el tema mediante experiencias
+                        envolventes.
+                      </p>
+                    </div>
+                  </div>
+                </dd>
+              </dl>
+              <dl>
+                <dt>Acceso a recursos</dt>
+                <dd>
+                  <div class="flex-row flex-center">
+                    <div>
+                      <h5>Realidad aumentada</h5>
+                      <p>Amplía las oportunidades de aprendizaje más allá del aula al acceder a recursos educativos
+                        remotos.
+                      </p>
+                    </div>
+                    <div>
+                      <h5>Realidad virtual</h5>
+                      <p>Proporciona acceso a experiencias educativas inaccesibles, como viajes espaciales o exploración
+                        submarina.</p>
+                    </div>
+                  </div>
+                </dd>
+              </dl>
+            </div>
+
+            <br>
+            <p>A continuación encontrarás dos videos para que explores algunas aplicaciones de la realidad aumentada y
+              virtual en la educación.</p>
+
+            <div class="box-text box-text--link links-box" label="Enlace">
+              <div class="flex-row flex-center">
+                <div>
+                  <p>Haz clic en los siguientes enlaces y explora algunos ejemplos.</p>
+                  <ul>
+                    <li>Video: <a href="https://www.youtube.com/watch?v=LKyHg-31jHM" target="_blank">Google
+                        Expeditions</a>
+                    </li>
+                    <li>Video: <a href="https://www.youtube.com/watch?v=uCYG8gcBLHU" target="_blank">10 Ejemplos de
+                        aplicaciones con Realidad Aumentada</a></li>
+                  </ul>
+                </div>
+                <div class="img-container img-container">
+                  <img src="content/img-4.jpg" alt="">
+                </div>
+              </div>
+            </div>
+
+            <div class="box-text box-text--activity" label="Actividad 2">
+              <div class="jpit-activities-quiz" data-act-title="Actividad 2 - Beneficios educativos"
+                data-act-id="2-quiz-benefits">
                 <question type="multichoice">
                   <description>
-                    <p><strong>Algunas características del e-learning son:</strong></p>
+                    <p><strong>¿Cuál es uno de los beneficios educativos de la realidad aumentada?</strong></p>
                     <div class="instruction" type="info">Selecciona las respuestas correctas</div>
                   </description>
                   <ul>
-                    <li data-response="true">No hay barreras espacio-temporales</li>
-                    <li data-response="true">Formación flexible</li>
-                    <li data-response="true">Estudiante mediador de su proceso</li>
-                    <li>El profesor es lo más importante</li>
-                    <li>No fluye la comunicación</li>
+                    <li>Superposición de información en entornos virtuales</li>
+                    <li data-response="true">Mejora de la comprensión de los conceptos</li>
+                    <li>Gracias a sus experiencias envolventes incentiva la participación</li>
+                    <li>Motiva al estudiante al transportarlo a entornos virtuales realistas</li>
                   </ul>
                 </question>
               </div>
-
-            </div>
-
-          </div>
-        </section>
-
-        <section id="pag-historia" ptitle="Historia">
-          <div class="subpage">
-            <p>Desde sus inicios hasta hoy, el e-learning ha experimentado una transformación significativa. Hablemos de
-              algunos hitos clave.</p>
-            <div class="timeline">
-              <div id="e-learning-timeline"></div>
-            </div>
-            <br>
-            <div class="box-text box-text--activity" label="Actividad 2">
-              <div class="jpit-activities-droppable" data-verify-type="target" data-act-id="2-droppable-history"
-                data-act-title="Actividad 2 - Historia">
-                <p><strong>Ordena, del más antiguo al más reciente, los siguientes hitos clave en la evolución del
-                    e-learning:</strong></p>
-                <div class="instruction" type="info">Arrastra la respuesta correcta a cada espacio en blanco</div>
-                <table>
-                  <tr>
-                    <th>1.</th>
-                    <td class="conection"></td>
-                    <td data-target-group="1"></td>
-                  </tr>
-                  <tr>
-                    <th>2.</th>
-                    <td class="conection"></td>
-                    <td data-target-group="2"></td>
-                  </tr>
-                  <tr>
-                    <th>3.</th>
-                    <td class="conection"></td>
-                    <td data-target-group="3"></td>
-                  </tr>
-                </table>
-
-                <h4>Hitos clave:</h4>
-                <div class="options">
-                  <div data-group="1" class="item_1">Recursos educativos digitales</div>
-                  <div data-group="2" class="item_2">Plataformas LMS</div>
-                  <div data-group="3" class="item_3">Globalización del e-learning</div>
-                </div>
-                <br class="clear" />
-
-                <div class="box_end"></div>
-              </div>
-            </div>
-          </div>
-
-        </section>
-
-        <section id="pag-modalidades" ptitle="Modalidades">
-          <div class="subpage">
-            <p>El e-learning ofrece diversos tipos que se adaptan a las necesidades y preferencias de los estudiantes y
-              que han transformado la educación, proporcionando flexibilidad y accesibilidad. Algunos de los más usados
-              son:</p>
-
-            <div class="instruction" type="info">Toca las flechas para pasar entre secciones</div>
-            <div class="ctrl-pagination">
-              <li>
-                <div class="flex-row flex-center">
-                  <div>
-                    <h3>Asincrónico</h3>
-                    <p>Recursos multimediales disponibles en cualquier momento, para que los estudiantes avancen a su
-                      propio ritmo.</p>
-                    <p><em>Fomenta el autoaprendizaje y la autogestión.</em></p>
-                  </div>
-                  <div class="img-container">
-                    <img src="content/img-2.png" alt="">
-                  </div>
-                </div>
-              </li>
-              <li>
-                <div class="flex-row flex-center">
-                  <div>
-                    <h3>Sincrónico</h3>
-                    <p>Interacciones de estudiantes e instructores en tiempo real, mediante videoconferencias, chats en
-                      vivo o sesiones virtuales.</p>
-                    <p><em>Fomenta la colaboración y la discusión grupales.</em></p>
-                  </div>
-                  <div class="img-container">
-                    <img src="content/img-3.png" alt="">
-                  </div>
-                </div>
-              </li>
-              <li>
-                <div class="flex-row flex-center">
-                  <div>
-                    <h3>Híbrido o Blended</h3>
-                    <p>Combina sesiones presenciales y virtuales (sincrónicas y asincrónicas).</p>
-                    <p><em>Aprovecha la cercanía de una interacción cara a cara y la flexibilidad del trabajo en
-                        línea.</em></p>
-                  </div>
-                  <div class="img-container">
-                    <img src="content/img-4.png" alt="">
-                  </div>
-                </div>
-              </li>
-              <li>
-                <div class="flex-row flex-center">
-                  <div>
-                    <h3>Microlearning</h3>
-                    <p>Cápsulas de aprendizaje pequeñas y específicas que se adaptan al tiempo y ritmo propios de cada
-                      estudiante.</p>
-                    <p><em>Promueve la retención de información y la adaptabilidad a horarios ocupados.</em></p>
-                  </div>
-                  <div class="img-container">
-                    <img src="content/img-5.png" alt="">
-                  </div>
-                </div>
-              </li>
-              <li>
-                <div class="flex-row flex-center">
-                  <div>
-                    <h3>MOOC</h3>
-                    <p>Curso Masivo Abierto en Línea que ofrece contenido diverso y permite la participación de personas
-                      de todo el mundo.</p>
-                    <p><em>Permite que cualquier persona tenga acceso al aprendizaje.</em></p>
-                  </div>
-                  <div class="img-container">
-                    <img src="content/img-6.png" alt="">
-                  </div>
-                </div>
-              </li>
-              <li>
-                <div class="flex-row flex-center">
-                  <div>
-                    <h3>Experiencias inmersivas</h3>
-                    <p>Realidad Virtual (RV) y Realidad Aumentada (RA) ofrecen experiencias inmersivas aplicables a
-                      simulación y práctica.</p>
-                    <p><em>Complementan el mundo real con entornos virtuales.</em></p>
-                  </div>
-                  <div class="img-container">
-                    <img src="content/img-7.png" alt="">
-                  </div>
-                </div>
-              </li>
-            </div>
-          </div>
-          <div class="subpage">
-            <div class="box-text box-text--activity" label="Actividad 3">
-              <div class="jpit-activities-droppable row" data-act-id="3-droppable-modes"
-                data-act-title="Actividad 3 - Modalidades">
-                <p><strong>Selecciona para cada característica, la modalidad e-learning de referencia:</strong></p>
-                <div class="instruction" type="info">Arrastra a cada espacio en blanco, su respuesta correcta.</div>
-                <div class="flex-row flex-center">
-                  <div class="col-2">
-                    <div class="board ctrl-pagination" data-orientation="sides">
-                      <li>
-                        <div class="image">
-                          <div class="box_media">
-                            <img src="content/img-act-2.jpg" />
-                            <p>Contenidos socializados en tiempo real</p>
-                          </div>
-                        </div>
-                        <div class="target" data-target-group="1"></div>
-                      </li>
-                      <li>
-                        <div class="image">
-                          <div class="box_media">
-                            <img src="content/img-act-3.jpg" />
-                            <p>Contenidos disponibles en cualquier momento</p>
-                          </div>
-                        </div>
-                        <div class="target" data-target-group="2"></div>
-                      </li>
-                      <li>
-                        <div class="image">
-                          <div class="box_media">
-                            <img src="content/img-act-4.jpg" />
-                            <p>Sesiones presenciales más contenidos en línea</p>
-                          </div>
-                        </div>
-                        <div class="target" data-target-group="3"></div>
-                      </li>
-                      <li>
-                        <div class="image">
-                          <div class="box_media">
-                            <img src="content/img-act-5.jpg" />
-                            <p>Unidades cortas para estudio rápido y en cualquier lugar</p>
-                          </div>
-                        </div>
-                        <div class="target" data-target-group="4"></div>
-                      </li>
-                      <li>
-                        <div class="image">
-                          <div class="box_media">
-                            <img src="content/img-act-6.jpg" />
-                            <p>Contenidos que sumergen a los estudiantes en entornos simulados</p>
-                          </div>
-                        </div>
-                        <div class="target" data-target-group="5"></div>
-                      </li>
-                      <li>
-                        <div class="image">
-                          <div class="box_media">
-                            <img src="content/img-act-7.jpg" />
-                            <p>Contenido diverso y gratuito para un gran número de participantes</p>
-                          </div>
-                        </div>
-                        <div class="target" data-target-group="6"></div>
-                      </li>
-                    </div>
-                  </div>
-                  <div class="col-2 sources">
-                    <div class="item" data-group="1">Sincrónico</div>
-                    <div class="item" data-group="2">Asincrónico</div>
-                    <div class="item" data-group="3">Blended</div>
-                    <div class="item" data-group="4">Microlearning</div>
-                    <div class="item" data-group="5">Experiencias inmersivas</div>
-                    <div class="item" data-group="6">MOOC</div>
-                    <div class="box_end"></div>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         </section>
-
-        <section id="pag-recursos" ptitle="Recursos multimedia">
-          <div class="subpage">
-            <p>De todas estas modalidades se destacan los recursos diseñados para enriquecer la experiencia de
-              aprendizaje, que van desde simples textos hasta videos interactivos, y facilitan la comprensión, así:</p>
-            <div class="flex-row flex-center">
-              <div>
-                <div class="instruction" type="info">Toca cada elemento para ver su contenido.</div>
-                <div class="horizontal-menu">
-                  <dl>
-                    <dt>
-                      <span class="google-symbols-rounded">description</span>
-                    </dt>
-                    <dd>
-                      <p>Los <strong>textos</strong> proporcionan información clave.</p>
-                    </dd>
-                  </dl>
-                  <dl>
-                    <dt>
-                      <span class="google-symbols-rounded">image</span>
-                    </dt>
-                    <dd>
-                      <p>Las <strong>imágenes</strong> y los <strong>gráficos</strong> refuerzan conceptos.</p>
-                    </dd>
-                  </dl>
-                  <dl>
-                    <dt>
-                      <span class="google-symbols-rounded">video_camera_front</span>
-                    </dt>
-                    <dd>
-                      <p>Los <strong>videos</strong>, con su capacidad visual y auditiva, brindan un aprendizaje más
-                        dinámico.</p>
-                    </dd>
-                  </dl>
-                  <dl>
-                    <dt>
-                      <span class="google-symbols-rounded">touch_app</span>
-                    </dt>
-                    <dd>
-                      <p>La <strong>interactividad</strong> se logra con simulaciones y actividades participativas,
-                        involucrando activamente a los estudiantes.</p>
-                    </dd>
-                  </dl>
-                </div>
-              </div>
-
-              <div class="img-container img-container">
-                <img src="content/img-8.jpeg" alt="">
-              </div>
-            </div>
-            <br>
-            <p>Todos ellos, combinados, crean entornos educativos vibrantes y adaptativos, potenciando la retención
-              y comprensión del contenido.</p>
-            <div class="box-text box-text--note" label="Nota">
-              <p>El e-learning, al integrar eficazmente estos elementos multimedia, ofrece una experiencia de
-                aprendizaje más completa y atractiva.</p>
-            </div>
-          </div>
-        </section>
-
 
         <section id="pag-conclusion" ptitle="Conclusión">
           <div class="subpage">
-            <div class="box-text box-text--important" label="El e-learning no es un enfoque único...">
+            <div class="box-text box-text--important" label="La RA y RV no son iguales...">
               <div class="flex-row flex-center">
                 <div>
-                  <p>Hay un conjunto diverso de modalidades que permiten a los estudiantes personalizar su experiencia
-                    educativa según sus necesidades y preferencias.</p>
-                  <p>Esta versatilidad ha hecho del e-learning una herramienta valiosa para la educación contemporánea.
-                  </p>
+                  <p>Recuerda que el primero superpone elementos a la realidad y el segundo simula entornos y sumerge a
+                    la persona en una experiencia completa.</p>
                 </div>
                 <video muted autoplay loop webkit-playsinline playsinline>
                   <source src="content/videos/video-1.mp4" type="video/mp4" />
@@ -496,13 +312,11 @@
             </div>
 
             <div class="box-text box-text--note" label="¡Hemos llegado al final de este contenido!">
-              <p>Esperamos que hayas aprendido más sobre e-learning, su evolución histórica y algunas modalidades
-                disponibles.</p>
-              <p>Sigue explorando estas fascinantes áreas para enriquecer tu experiencia de aprendizaje.</p>
+              <p>Esperamos que hayas comprendido las definiciones, diferencias y beneficios educativos de estas
+                tecnologías.</p>
+              <p>Sigue explorando cómo la RA y la RV transforman la forma en que aprendemos y enseñamos en diversos
+                campos educativos.</p>
             </div>
-          </div>
-
-          <div class="subpage">
           </div>
         </section>
 
@@ -528,37 +342,38 @@
             <div class="box-text box-text--no-icon links-box" label="Referencias">
               <h3>Videos</h3>
               <ul>
-                <li><a href="https://www.pexels.com/es-es/video/persona-ordenador-portatil-sentado-mesa-6671641/"
-                    target="_blank">Tima Miroshnichenko - Video sin descripción</a></li>
+                <li>
+                  <a href="https://www.pexels.com/es-es/video/hombre-jugando-tecnologia-en-pie-7547574/"
+                    target="_blank">SHVETS production - Hombre jugando tecnología en pie</a>
+                </li>
               </ul>
               <h3>Fotos</h3>
               <ul>
-                <li><a
-                    href="https://www.pexels.com/es-es/foto/cuadro-enmarcado-de-madera-blanca-sobre-pared-blanca-6177685/"
-                    target="_blank">Cup of Couple - Cuadro Enmarcado De Madera Blanca Sobre Pared Blanca</a></li>
-                <li><a href="https://www.pexels.com/es-es/foto/nina-sentado-jugando-mesa-4144292/" target="_blank">Julia
-                    M
-                    Cameron - Foto sin descripción</a></li>
-                <li><a
-                    href="https://www.pexels.com/es-es/foto/sonriente-joven-afroamericana-sentada-sobre-el-cesped-y-con-smartphone-5538608/"
-                    target="_blank">Zen Chung - Sonriente Joven Afroamericana Sentada Sobre El Césped Y Con
-                    Smartphone</a></li>
-                <li><a href="https://www.pexels.com/es-es/foto/persona-leyendo-en-el-libro-2380263/"
-                    target="_blank">Oladimeji
-                    Ajegbile - Persona Leyendo En El Libro</a></li>
-                <li><a
-                    href="https://www.pexels.com/es-es/foto/hombre-en-camisa-de-manga-larga-a-rayas-blanco-y-negro-sentado-en-una-silla-mientras-escribe-6325987/"
-                    target="_blank">Vanessa Garcia - Hombre En Camisa De Manga Larga A Rayas Blanco Y Negro Sentado En
-                    Una
-                    Silla Mientras Escribe</a></li>
-                <li><a href="https://www.pexels.com/es-es/foto/foto-de-mujer-mirando-por-ordenador-3059748/"
-                    target="_blank">RF._.studio - Foto De Mujer Mirando Por Ordenador</a></li>
-                <li><a
-                    href="https://www.pexels.com/es-es/foto/persona-vestida-de-negro-vr-box-escrito-en-una-pizarra-blanca-1261816/"
-                    target="_blank">Eugene Capon - Persona Vestida De Negro Vr Box Escrito En Una Pizarra Blanca</a>
+                <li>
+                  <a href="https://pixabay.com/es/illustrations/realidad-aumentada-tablet-plano-4497342/"
+                    target="_blank">geralt - Realidad aumentada tablet plano</a>
                 </li>
-                <li><a href="https://www.pexels.com/es-es/foto/ordenador-blanco-y-negro-vintage-apagado-257881/"
-                    target="_blank">Pixabay - Ordenador Blanco Y Negro Vintage Apagado</a></li>
+                <li>
+                  <a href="https://www.pexels.com/es-es/foto/nino-con-gafas-de-realidad-virtual-en-blanco-y-negro-3391378/"
+                    target="_blank">Jessica Lewis thepaintedsquared - Niño con gafas de realidad virtual en blanco y
+                    negro</a>
+                </li>
+                <li>
+                  <a href="https://www.pexels.com/es-es/foto/mujer-con-ordenador-portatil-con-auriculares-vr-3861458/"
+                    target="_blank">ThisIsEngeneering - Mujer con ordenador portátil con auriculares vr</a>
+                </li>
+                <li>
+                  <a href="https://www.pexels.com/es-es/foto/manos-iphone-telefono-inteligente-aplicacion-6474473/"
+                    target="_blank">Tima Miroshnichenko - Manos Iphone télefono inteligente aplicación</a>
+                </li>
+                <li>
+                  <a href="https://www.pexels.com/es-es/foto/hombre-mujer-nina-sentado-6498303/" target="_blank">Tima
+                    Miroshnichenko - Hombre mujer niña sentado</a>
+                </li>
+                <li>
+                  <a href="https://www.pexels.com/es-es/foto/ligero-nina-tecnologia-reloj-de-pulsera-7869238/"
+                    target="_blank">Vanessa Loring - Ligero niña tecnología reloj de pulsera</a>
+                </li>
               </ul>
             </div>
       </main>
@@ -566,22 +381,12 @@
       <footer class="not_print">
         <div class="measuring-progress" data-type="horizontal"></div>
         <div class="footer__logo">
-          <img src="content/nodolab-logo.svg" alt="Nodolab Logo">
+          <img src="/content/nodolab-logo.svg" alt="Nodolab Logo">
         </div>
-        </section>
-
-        </main>
-
-        <footer class="not_print">
-          <div class="measuring-progress" data-type="horizontal"></div>
-          <div class="footer__logo">
-            <img src="/content/nodolab-logo.svg" alt="Nodolab Logo">
-          </div>
-          <div class="flex">
-            <div id="page_number"></div>
-          </div>
-        </footer>
-
+        <div class="flex">
+          <div id="page_number"></div>
+        </div>
+      </footer>
     </div>
 
     <div id="results_page" style="display:none;">
@@ -592,18 +397,6 @@
       <h3>Actividades</h3>
       <div id="results_page_activities"></div>
     </div>
-
-    <div id="printent_content" style="display:none;">
-      <div class="content"></div>
-      <div class="button_container">
-        <button class="general button" onclick="window.print();">Imprimir</button>
-        <button id="printent_back" class="general button">Volver</button>
-      </div>
-    </div>
-
-    <!-- Add timeline init file if required -->
-    <script src="js/timeline_init.js"></script>
-    <!-- End of timeline init file -->
   </body>
 
 </html>
