@@ -553,8 +553,6 @@ dhbgApp.standard.start = function() {
         $activities.empty();
         $activities.append($ulactivities);
 
-        console.log(dhbgApp.scorm.activities);
-
         for (var activity_key in dhbgApp.scorm.activities) {
             if (dhbgApp.scorm.activities[activity_key]) {
 

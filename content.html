@@ -80,7 +80,8 @@
         <input type="checkbox" id="drawer-toggle">
         <nav label="Principal" class="horizontal main scorm__drawer" data-offset="true">
           <menu>
-            <menuitem label="El e-learning y su evolución" type="label"></menuitem>
+            <menuitem label="El e-learning y su evolución" type="label">
+            </menuitem>
             <menuitem label="Definición" data-page="pag-definicion">
             </menuitem>
             <menuitem label="Historia" data-page="pag-historia">
@@ -566,21 +567,12 @@
       <footer class="not_print">
         <div class="measuring-progress" data-type="horizontal"></div>
         <div class="footer__logo">
-          <img src="content/nodolab-logo.svg" alt="Nodolab Logo">
+          <img src="/content/nodolab-logo.svg" alt="Nodolab Logo">
         </div>
-        </section>
-
-        </main>
-
-        <footer class="not_print">
-          <div class="measuring-progress" data-type="horizontal"></div>
-          <div class="footer__logo">
-            <img src="/content/nodolab-logo.svg" alt="Nodolab Logo">
-          </div>
-          <div class="flex">
-            <div id="page_number"></div>
-          </div>
-        </footer>
+        <div class="flex">
+          <div id="page_number"></div>
+        </div>
+      </footer>
 
     </div>
 
@@ -591,14 +583,6 @@
       <br class="clear" />
       <h3>Actividades</h3>
       <div id="results_page_activities"></div>
-    </div>
-
-    <div id="printent_content" style="display:none;">
-      <div class="content"></div>
-      <div class="button_container">
-        <button class="general button" onclick="window.print();">Imprimir</button>
-        <button id="printent_back" class="general button">Volver</button>
-      </div>
     </div>
 
     <!-- Add timeline init file if required -->
