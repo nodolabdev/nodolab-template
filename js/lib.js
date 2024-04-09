@@ -1372,17 +1372,25 @@ dhbgApp.standard.load_operations = function() {
         }
 
         if(npage == 0){
-            $('[previous-page]').css('display', 'none');
+            setTimeout(() => {
+                $('[previous-page]').css('display', 'none');
+            }, 400);
         }
         else{
-            $('[previous-page]').css('display', 'inherit');
+            setTimeout(() => {
+                $('[previous-page]').css('display', 'inherit');
+            }, 400);
         }
 
         if(npage == dhbgApp.pages.length -1){
-            $('[next-page]').css('display', 'none');
+            setTimeout(() => {
+                $('[next-page]').css('display', 'none');
+            }, 400);
         }
         else{
-            $('[next-page]').css('display', 'inherit');
+            setTimeout(() => {
+                $('[next-page]').css('display', 'inherit');
+            }, 400);
         }
 
         if (npage != dhbgApp.DB.currentPage) {
@@ -1461,17 +1469,25 @@ dhbgApp.standard.load_operations = function() {
             });
 
             if (nsubpage == 0 && npage == 0) {
-                $('[previous-page]').css('display', 'none');
+                setTimeout(() => {
+                    $('[previous-page]').css('display', 'none');
+                }, 400);
             }
             else {
-                $('[previous-page]').css('display', 'inherit');
+                setTimeout(() => {
+                    $('[previous-page]').css('display', 'inherit');
+                }, 400);
             }
 
             if ((nsubpage + 1) >= dhbgApp.pages[npage].subpages && (npage + 1) == dhbgApp.pages.length) {
-                $('[next-page]').css('display', 'none');
+                setTimeout(() => {
+                    $('[next-page]').css('display', 'none');
+                }, 400);
             }
             else {
-                $('[next-page]').css('display', 'inherit');
+                setTimeout(() => {
+                    $('[next-page]').css('display', 'inherit');
+                }, 400);
             }
 
             $current_subpage.removeClass('current');
@@ -1546,17 +1562,25 @@ dhbgApp.standard.load_operations = function() {
             }
 
             if (npage == 0) {
-                $('[previous-page]').css('display', 'none');
+                setTimeout(() => {
+                    $('[previous-page]').css('display', 'none');
+                }, 400);
             }
             else {
-                $('[previous-page]').css('display', 'inherit');
+                setTimeout(() => {
+                    $('[previous-page]').css('display', 'inherit');
+                }, 400);
             }
 
             if ((npage + 1) == dhbgApp.pages.length) {
-                $('[next-page]').css('display', 'none');
+                setTimeout(() => {
+                    $('[next-page]').css('display', 'none');
+                }, 400);
             }
             else {
-                $('[next-page]').css('display', 'inherit');
+                setTimeout(() => {
+                    $('[next-page]').css('display', 'inherit');
+                }, 400);
             }
 
             var $new_page = $('main > section.page_' + npage);
