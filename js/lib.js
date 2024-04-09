@@ -55,7 +55,8 @@ dhbgApp.standard.start = function() {
         };
 
         f_builditem = function($li) {
-            var $item = $('<li role="button" class="button"></li>');
+            const isLabel = ($li.attr('type')) === "label";
+            var $item = isLabel ? $('<li class="label"></li>') : $('<li role="button" class="button"></li>');
 
             if ($li.attr('label')) {
                 $item.html($li.attr('label'));

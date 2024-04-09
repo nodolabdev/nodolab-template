@@ -1,11 +1,26 @@
 .scorm {
   &__drawer {
     color: var(--white);
+
     .menu {
       list-style: none;
     }
+
     .submenu {
       list-style: none;
+    }
+
+    .label {
+      font-size: var(--font-size-medium-20);
+      line-height: var(--font-size-large-28);
+      margin-block-start: 1.1em;
+      margin-block-end: 0.8em;
+      font-weight: 500;
+
+      @include respond-to('medium') {
+        font-size: var(--font-size-medium-20);
+        line-height: var(--font-size-large-30);
+      }
     }
 
     .button {
@@ -18,29 +33,34 @@
         &.current {
           background-color: var(--color-primary-dark);
           color: var(--highlight-blue);
-        } 
+        }
       }
 
       &:hover {
         background-color: var(--color-primary-dark);
       }
-      
+
       &.withsubitems {
         position: relative;
+
         .submenu {
           display: none;
         }
+
         &.open {
           .submenu {
             display: block;
           }
+
           &:hover {
             background-color: var(--color-primary);
           }
+
           &::before {
-            content: 'arrow_drop_up';  
+            content: 'arrow_drop_up';
           }
         }
+
         &::before {
           font-family: var(--icon-font-family);
           content: 'arrow_drop_down';
