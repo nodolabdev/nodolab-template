@@ -352,7 +352,7 @@ body {
         overflow: visible; } }
     @media (min-width: 1024px) {
       .content__banner::after {
-        background-image: url("content/nodolab-logo-2.svg");
+        background-image: url("../content/nodolab-logo-2.svg");
         background-size: contain;
         content: '';
         height: 100px;
@@ -526,4 +526,4 @@ body {
   0% {
     box-shadow: 0 0 0 0px rgba(69, 60, 120, 0.3); }
   100% {
-    box-shadow: 0 0 0 4px rgba(69, 60, 120, 0); } }
+    box-shadow: 0 0 0 8px rgba(69, 60, 120, 0); } }
