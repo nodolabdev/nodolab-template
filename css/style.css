@@ -5,7 +5,7 @@
   font-weight: normal;
   font-style: normal;
   font-variation-settings: 'OPSZ';
-  font-size: 24px;
+  font-size: var(--icon-size, 24px);
   /* Preferred icon size */
   display: inline-block;
   line-height: 1;
@@ -1705,6 +1705,16 @@ main {
     list-style: none; }
   .scorm__drawer .submenu {
     list-style: none; }
+  .scorm__drawer .label {
+    font-size: var(--font-size-medium-20);
+    line-height: var(--font-size-large-28);
+    margin-block-start: 1.1em;
+    margin-block-end: 0.8em;
+    font-weight: 500; }
+    @media (min-width: 600px) {
+      .scorm__drawer .label {
+        font-size: var(--font-size-medium-20);
+        line-height: var(--font-size-large-30); } }
   .scorm__drawer .button {
     padding: 12px;
     border-radius: 25px;
@@ -1771,8 +1781,7 @@ main {
   .ctrl-pagination li.layer {
     margin: 0;
     padding: 5px 10px 0 10px;
-    flex: 0 0 100%;
-    overflow: auto; }
+    flex: 0 0 100%; }
   .ctrl-pagination .position {
     color: var(--color-primary-light-400);
     font-weight: 500;
