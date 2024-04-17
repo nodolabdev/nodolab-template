@@ -55,7 +55,8 @@ dhbgApp.standard.start = function() {
         };
 
         f_builditem = function($li) {
-            var $item = $('<li role="button" class="button"></li>');
+            const isLabel = ($li.attr('type')) === "label";
+            var $item = isLabel ? $('<li class="label"></li>') : $('<li role="button" class="button"></li>');
 
             if ($li.attr('label')) {
                 $item.html($li.attr('label'));
@@ -1371,17 +1372,25 @@ dhbgApp.standard.load_operations = function() {
         }
 
         if(npage == 0){
-            $('[previous-page]').css('visibility', 'hidden');
+            setTimeout(() => {
+                $('[previous-page]').css('display', 'none');
+            }, 400);
         }
         else{
-            $('[previous-page]').css('visibility', 'visible');
+            setTimeout(() => {
+                $('[previous-page]').css('display', 'inherit');
+            }, 400);
         }
 
         if(npage == dhbgApp.pages.length -1){
-            $('[next-page]').css('visibility', 'hidden');
+            setTimeout(() => {
+                $('[next-page]').css('display', 'none');
+            }, 400);
         }
         else{
-            $('[next-page]').css('visibility', 'visible');
+            setTimeout(() => {
+                $('[next-page]').css('display', 'inherit');
+            }, 400);
         }
 
         if (npage != dhbgApp.DB.currentPage) {
@@ -1460,17 +1469,25 @@ dhbgApp.standard.load_operations = function() {
             });
 
             if (nsubpage == 0 && npage == 0) {
-                $('[previous-page]').css('visibility', 'hidden');
+                setTimeout(() => {
+                    $('[previous-page]').css('display', 'none');
+                }, 400);
             }
             else {
-                $('[previous-page]').css('visibility', 'visible');
+                setTimeout(() => {
+                    $('[previous-page]').css('display', 'inherit');
+                }, 400);
             }
 
             if ((nsubpage + 1) >= dhbgApp.pages[npage].subpages && (npage + 1) == dhbgApp.pages.length) {
-                $('[next-page]').css('visibility', 'hidden');
+                setTimeout(() => {
+                    $('[next-page]').css('display', 'none');
+                }, 400);
             }
             else {
-                $('[next-page]').css('visibility', 'visible');
+                setTimeout(() => {
+                    $('[next-page]').css('display', 'inherit');
+                }, 400);
             }
 
             $current_subpage.removeClass('current');
@@ -1545,17 +1562,25 @@ dhbgApp.standard.load_operations = function() {
             }
 
             if (npage == 0) {
-                $('[previous-page]').css('visibility', 'hidden');
+                setTimeout(() => {
+                    $('[previous-page]').css('display', 'none');
+                }, 400);
             }
             else {
-                $('[previous-page]').css('visibility', 'visible');
+                setTimeout(() => {
+                    $('[previous-page]').css('display', 'inherit');
+                }, 400);
             }
 
             if ((npage + 1) == dhbgApp.pages.length) {
-                $('[next-page]').css('visibility', 'hidden');
+                setTimeout(() => {
+                    $('[next-page]').css('display', 'none');
+                }, 400);
             }
             else {
-                $('[next-page]').css('visibility', 'visible');
+                setTimeout(() => {
+                    $('[next-page]').css('display', 'inherit');
+                }, 400);
             }
 
             var $new_page = $('main > section.page_' + npage);

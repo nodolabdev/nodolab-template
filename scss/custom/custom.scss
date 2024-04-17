@@ -69,6 +69,10 @@ ul.text-list > li {
 }
 
 
+.card {
+  max-width: 400px;
+}
+
 .shadow-image {
   pointer-events: none;
   img {
@@ -87,7 +91,7 @@ ul.text-list > li {
   }
   &--xl {
     img {
-      max-width: 560px; 
+      max-width: 480px; 
     }
   }
 }
@@ -204,4 +208,8 @@ ul.text-list > li {
       transform: scale(1.05);
     }
   }
+}
+
+.banner {
+  @include spacer(2, margin, bottom);
 }

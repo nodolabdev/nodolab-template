@@ -4,7 +4,7 @@
   font-weight: normal;
   font-style: normal;
   font-variation-settings: 'OPSZ';
-  font-size: 24px;
+  font-size: var(--icon-size, 24px);
   /* Preferred icon size */
   display: inline-block;
   line-height: 1;
@@ -72,6 +72,9 @@ ul.text-list > li {
     .image-content {
       flex-direction: row; } }
 
+.card {
+  max-width: 400px; }
+
 .shadow-image {
   pointer-events: none; }
   .shadow-image img {
@@ -86,7 +89,7 @@ ul.text-list > li {
     height: auto;
     max-width: 260px; }
   .img-container--xl img {
-    max-width: 560px; }
+    max-width: 480px; }
 
 .spacer-bottom-2 {
   margin-bottom: 16px; }
@@ -165,3 +168,6 @@ ul.text-list > li {
     height: 52px; }
   .logo-container:hover img {
     transform: scale(1.05); }
+
+.banner {
+  margin-bottom: 16px; }

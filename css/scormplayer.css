@@ -5,7 +5,7 @@
   font-weight: normal;
   font-style: normal;
   font-variation-settings: 'OPSZ';
-  font-size: 24px;
+  font-size: var(--icon-size, 24px);
   /* Preferred icon size */
   display: inline-block;
   line-height: 1;
@@ -114,7 +114,7 @@ body {
     font-family: var(--default-font-family); }
 
 body.dhbgapp_fullview {
-  overflow: hidden; }
+  overflow: hidden !important; }
 
 #body {
   margin: 0 auto;
@@ -211,6 +211,10 @@ iframe {
   border-width: 0;
   width: 100% !important;
   max-width: 800px; }
+
+video {
+  border-radius: 20px;
+  max-width: 100%; }
 
 body {
   color: var(--text-color);
