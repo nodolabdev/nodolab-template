@@ -18,6 +18,13 @@
 
 #drag-drop .draggable {
   display: inline-block;
+  width: 80px;
+}
+
+
+
+#pag-inicio .view-first img {
+  width: 270px;
 }
 
 .text-center {
@@ -58,7 +65,7 @@ ul > li {
   justify-content: center;
   gap: 24px;
   flex-direction: column;
-  @include spacer(6, padding, block);
+  @include spacer(5, padding, block);
   @include respond-to('medium') {
     flex-direction: row;
   }
@@ -74,8 +81,13 @@ ul > li {
 .genially-embed {
   width: 300px;
   height: 300px;
+  @include respond-to('small') {
+    height: 360px;
+  }
+  @include respond-to('medium') {
+    height: 400px;
+  }
   @include respond-to('large') {
-    width: 800px;
     height: 600px;
   }
 }
@@ -121,7 +133,7 @@ ul > li {
 
   &--xl {
     img {
-      max-width: 560px;
+      max-width: 480px;
     }
   }
 }
@@ -193,4 +205,8 @@ ul > li {
 
 .text-center {
   text-align: center;
+}
+
+.banner {
+  @include spacer(2, margin, bottom);
 }
