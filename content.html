@@ -6,7 +6,7 @@
   <link rel="shortcut icon" href="img/icon.svg">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   <meta name="theme-color" content="#453C78">
-  <title>Ejemplo de elementos para los cursos</title>
+  <title>Materiales</title>
   <link href="components/jquery/css/custom/jquery-ui.min.css" rel="stylesheet" type="text/css">
   <link href="components/ionicons/css/ionicons.min.css" rel="stylesheet" type="text/css">
   <link href="components/pit/css/jpit_quiz.css" rel="stylesheet" type="text/css">
@@ -55,11 +55,6 @@
   <script src="components/scorm/SCORM_12_APIWrapper.js"> </script>
   <script src="components/scorm/scorm_api.js"> </script>
 
-  <!-- Add timeline files if required -->
-  <link rel="stylesheet" href="components/timelinejs/timeline.css" type="text/css" />
-  <script src="components/timelinejs/timeline.js"> </script>
-  <!-- End of timeline files -->
-
   <style type='text/css'>
     body {
       background-color: var(--bg-color, #EDEDED);
@@ -86,7 +81,7 @@
   </style>
 </head>
 
-<body class="loading" data-debug="true" data-model="scorm" data-display-mode="onlypages" data-approve-limit="65"
+<body class="loading" data-debug="true" data-model="scorm" data-display-mode="onlypages" data-approve-limit="80"
   data-activities-percentaje="60" data-mobile-mode="512">
   <div id="body" class="scorm not_print">
     <div id="not_scorm_msg" style="display: none;"></div>
@@ -100,6 +95,8 @@
       <input type="checkbox" id="drawer-toggle">
       <nav label="Principal" class="horizontal main scorm__drawer" data-offset="true">
         <menu>
+          <menuitem label="Materiales" type="label">
+          </menuitem>
           <menuitem label="Introducción" data-page="pag-intro">
           </menuitem>
           <menuitem label="Materiales básicos" data-page="pag-materiales-basicos">
@@ -114,7 +111,6 @@
           </menuitem>
         </menu>
       </nav>
-      <!-- <h1 class="page-title"></h1> -->
       <h1 class="scorm-title page-title"></h1>
       <nav label="Características globales" class="globals scorm__globals">
         <menu>
@@ -123,7 +119,7 @@
             <span class="google-symbols-rounded">checklist</span>
           </div>
           </menuitem>
-          <menuitem data-global-id="return" title="Salir de pantalla completa">
+          <menuitem data-global-id="return" title="Activar/desactivar pantalla completa">
           <div class="fullscreen">
             <span class="google-symbols-rounded exit">fullscreen_exit</span>
             <span class="google-symbols-rounded enter">fullscreen</span>
@@ -404,7 +400,7 @@
               <dd>
                 <div class="flex-row flex-center">
                   <div class="img-container">
-                    <img src="/content/img-tono-1.png" alt="Base">
+                    <img src="content/img-tono-1.png" alt="Base">
                   </div>
                   <div class="text-box">
                     <h5>Base</h5>
@@ -420,7 +416,7 @@
               <dd>
                 <div class="flex-row flex-center">
                   <div class="img-container">
-                    <img src="/content/img-tono-2.png" alt="Corrector">
+                    <img src="content/img-tono-2.png" alt="Corrector">
                   </div>
                   <div class="text-box">
                     <h5>Corrector</h5>
@@ -436,7 +432,7 @@
               <dd>
                 <div class="flex-row flex-center">
                   <div class="img-container">
-                    <img src="/content/img-tono-3.png" alt="Polvo">
+                    <img src="content/img-tono-3.png" alt="Polvo">
                   </div>
                   <div class="text-box">
                     <h5>Polvo</h5>
@@ -453,7 +449,7 @@
               <dd>
                 <div class="flex-row flex-center">
                   <div class="img-container">
-                    <img src="/content/img-tono-4.png" alt="Polvo traslucido">
+                    <img src="content/img-tono-4.png" alt="Polvo traslucido">
                   </div>
                   <div class="text-box">
                     <h5>Polvo traslucido</h5>
@@ -475,7 +471,7 @@
               <dd>
                 <div class="flex-row flex-center">
                   <div class="img-container">
-                    <img src="/content/img-cejas-1.png" alt="Paleta de cejas">
+                    <img src="content/img-cejas-1.png" alt="Paleta de cejas">
                   </div>
                   <div class="text-box">
                     <h5>Paleta de cejas</h5>
@@ -491,7 +487,7 @@
               <dd>
                 <div class="flex-row flex-center">
                   <div class="img-container">
-                    <img src="/content/img-cejas-2.png" alt="Estilizador de cejas">
+                    <img src="content/img-cejas-2.png" alt="Estilizador de cejas">
                   </div>
                   <div class="text-box">
                     <h5>Estilizador de cejas</h5>
@@ -512,7 +508,7 @@
               <dd>
                 <div class="flex-row flex-center">
                   <div class="img-container">
-                    <img src="/content/img-luces-1.png" alt="Contorno">
+                    <img src="content/img-luces-1.png" alt="Contorno">
                   </div>
                   <div class="text-box">
                     <h5>Contorno</h5>
@@ -528,7 +524,7 @@
               <dd>
                 <div class="flex-row flex-center">
                   <div class="img-container">
-                    <img src="/content/img-luces-2.png" alt="Rubor">
+                    <img src="content/img-luces-2.png" alt="Rubor">
                   </div>
                   <div class="text-box">
                     <h5>Rubor</h5>
@@ -544,7 +540,7 @@
               <dd>
                 <div class="flex-row flex-center">
                   <div class="img-container">
-                    <img src="/content/img-luces-3.png" alt="Iluminador">
+                    <img src="content/img-luces-3.png" alt="Iluminador">
                   </div>
                   <div class="text-box">
                     <h5>Iluminador</h5>
@@ -566,7 +562,7 @@
               <dd>
                 <div class="flex-row flex-center">
                   <div class="img-container">
-                    <img src="/content/img-ojos-1.png" alt="Sombras">
+                    <img src="content/img-ojos-1.png" alt="Sombras">
                   </div>
                   <div class="text-box">
                     <h5>Sombras</h5>
@@ -581,7 +577,7 @@
               <dd>
                 <div class="flex-row flex-center">
                   <div class="img-container">
-                    <img src="/content/img-ojos-2.png" alt="Delineador">
+                    <img src="content/img-ojos-2.png" alt="Delineador">
                   </div>
                   <div class="text-box">
                     <h5>Delineador</h5>
@@ -597,7 +593,7 @@
               <dd>
                 <div class="flex-row flex-center">
                   <div class="img-container">
-                    <img src="/content/img-ojos-3.png" alt="Pestañina">
+                    <img src="content/img-ojos-3.png" alt="Pestañina">
                   </div>
                   <div class="text-box">
                     <h5>Pestañina</h5>
@@ -613,7 +609,7 @@
               <dd>
                 <div class="flex-row flex-center">
                   <div class="img-container">
-                    <img src="/content/img-ojos-4.png" alt="Encrespador de pestañas">
+                    <img src="content/img-ojos-4.png" alt="Encrespador de pestañas">
                   </div>
                   <div class="text-box">
                     <h5>Encrespador de pestañas</h5>
@@ -627,7 +623,7 @@
               <dd>
                 <div class="flex-row flex-center">
                   <div class="img-container">
-                    <img src="/content/img-ojos-5.png" alt="Pestañas postizas">
+                    <img src="content/img-ojos-5.png" alt="Pestañas postizas">
                   </div>
                   <div class="text-box">
                     <h5>Pestañas postizas</h5>
@@ -650,7 +646,7 @@
               <dd>
                 <div class="flex-row flex-center">
                   <div class="img-container">
-                    <img src="/content/img-labios-1.png" alt="Labiales">
+                    <img src="content/img-labios-1.png" alt="Labiales">
                   </div>
                   <div class="text-box">
                     <h5>Labiales</h5>
@@ -671,7 +667,7 @@
               <dd>
                 <div class="flex-row flex-center">
                   <div class="img-container">
-                    <img src="/content/img-fijador-1.png" alt="Fijador de maquillaje">
+                    <img src="content/img-fijador-1.png" alt="Fijador de maquillaje">
                   </div>
                   <div class="text-box">
                     <h5>Fijador de maquillaje</h5>
@@ -697,9 +693,9 @@
                 </p>
               </div>
               <video muted autoplay loop width="360">
-                <source src="/content/video-1.mp4" type="video/mp4" />
+                <source src="content/video-1.mp4" type="video/mp4" />
                 Download the
-                <a href="/content/video-1.mp4">MP4</a>
+                <a href="content/video-1.mp4">MP4</a>
                 video.
               </video>
             </div>
@@ -721,15 +717,15 @@
             <div class="logos flex-row flex-center">
               <a class="logo-container img-container logo-container--mariana"
                 href="https://www.instagram.com/makeupbymarianagarcia/" target="_blank">
-                <img src="/img/mariana-logo.png" alt="Logo Mariana">
+                <img src="img/mariana-logo.png" alt="Logo Mariana">
               </a>
               <a class="logo-container img-container logo-container--enlace" href="https://enlaceestrategico.org.co/"
                 target="_blank">
-                <img src="/img/enlace-logo.png" alt="Logo Enlace">
+                <img src="img/enlace-logo.png" alt="Logo Enlace">
               </a>
               <a class="logo-container img-container logo-container--nodolab" href="https://nodolab.co/"
                 target="_blank">
-                <img src="/img/nodolab-logo.png" alt="Logo Nodolab">
+                <img src="img/nodolab-logo.png" alt="Logo Nodolab">
               </a>
             </div>
             <p class="text-center">2024<br>Derechos reservados ©</p>
@@ -746,7 +742,6 @@
           </div>
         </div>
       </section>
-
     </main>
 
     <footer class="not_print">
@@ -758,30 +753,16 @@
         <div id="page_number"></div>
       </div>
     </footer>
-
   </div>
 
   <div id="results_page" style="display:none;">
-    <h2>Resumen de su avance en la lectura del documento</h2>
+    <h2>Resumen de tu progreso</h2>
     <h3>Páginas visitadas</h3>
-    <p>En verde, aquellas páginas que ya ha visitado.</p>
     <div id="results_page_visited"></div>
     <br class="clear" />
-    <h3>Actividades de aprendizaje</h3>
+    <h3>Actividades</h3>
     <div id="results_page_activities"></div>
   </div>
-
-  <div id="printent_content" style="display:none;">
-    <div class="content"></div>
-    <div class="button_container">
-      <button class="general button" onclick="window.print();">Imprimir</button>
-      <button id="printent_back" class="general button">Volver</button>
-    </div>
-  </div>
-
-  <!-- Add timeline init file if required -->
-  <script src="js/timeline_init.js"></script>
-  <!-- End of timeline init file -->
 </body>
 
 </html>
