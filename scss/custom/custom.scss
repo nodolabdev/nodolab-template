@@ -30,6 +30,29 @@
 .italic {
   font-style: italic;
 }
+
+.flex-row.hands-container {
+  @include respond-to("medium"){
+    flex-direction: column;
+  }
+  @include respond-to("small-large"){
+    flex-direction: row;
+  }
+
+
+  .hands-img-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    img {
+      width: 150px;
+    }
+  }
+}
+
+
 .flex-row {
   display: flex;
   align-items: flex-start;

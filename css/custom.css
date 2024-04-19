@@ -39,6 +39,22 @@
 .italic {
   font-style: italic; }
 
+@media (min-width: 600px) {
+  .flex-row.hands-container {
+    flex-direction: column; } }
+
+@media (min-width: 768px) {
+  .flex-row.hands-container {
+    flex-direction: row; } }
+
+.flex-row.hands-container .hands-img-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap; }
+  .flex-row.hands-container .hands-img-box img {
+    width: 150px; }
+
 .flex-row {
   display: flex;
   align-items: flex-start;
