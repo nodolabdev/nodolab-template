@@ -170,12 +170,19 @@ ul.text-list > li {
         right: unset;
         left: -63px; } }
     .infografia__card--inverse .infografia__text h5 {
-      text-align: right; }
+      text-align: center; }
+      @media (min-width: 600px) {
+        .infografia__card--inverse .infografia__text h5 {
+          text-align: right; } }
     .infografia__card--inverse .infografia__text p {
       text-align: justify; }
   .infografia__text h5 {
     margin: 0;
+    text-align: center;
     margin-bottom: 16px; }
+    @media (min-width: 600px) {
+      .infografia__text h5 {
+        text-align: left; } }
   .infografia__icon {
     background-color: white;
     border-radius: 50%;

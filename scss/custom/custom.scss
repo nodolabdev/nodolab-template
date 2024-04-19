@@ -151,7 +151,7 @@ ul.text-list > li {
   gap: 60px;
   justify-content: center;
   @include spacer(6, margin, top);
-  @include respond-to('medium') {
+  @include respond-to("medium") {
     gap: 24px;
     @include spacer(4, margin, top);
   }
@@ -175,20 +175,23 @@ ul.text-list > li {
     }
     &--inverse {
       .infografia__icon {
-        @include respond-to('medium') {
+        @include respond-to("medium") {
           left: unset;
           right: -63px;
         }
       }
       .infografia__photo {
-        @include respond-to('medium') {
+        @include respond-to("medium") {
           right: unset;
           left: -63px;
         }
       }
       .infografia__text {
         h5 {
-          text-align: right;
+          text-align: center;
+          @include respond-to("medium") {
+            text-align: right;
+          }
         }
         p {
           text-align: justify;
@@ -199,6 +202,10 @@ ul.text-list > li {
   &__text {
     h5 {
       margin: 0;
+      text-align: center;
+      @include respond-to("medium") {
+        text-align: left;
+      }
       @include spacer(2, margin, bottom);
     }
   }
