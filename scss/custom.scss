@@ -1,4 +1,4 @@
-@import "../utils/all";
+@import "./utils/all";
 
 .change {
   color: red;
@@ -48,12 +48,22 @@
   }
 }
 
+.horizontal-menu .flex-center {
+  height: 100%;
+
+  .img-container {
+    flex: 0 0 260px;
+  }
+}
+
 .flex-center {
   align-items: center;
 }
 
-ul > li {
-  margin-inline-start: 48px;
+#pag-creditos, .box-text {
+  ul > li {
+    margin-inline-start: 48px;
+  }
 }
 
 .image-content {
@@ -86,7 +96,7 @@ ul > li {
   }
   &--xl {
     img {
-      max-width: 560px; 
+      max-width: 460px; 
     }
   }
 }
@@ -130,6 +140,10 @@ ul > li {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
+    img {
+      width: 86px;
+    }
   }
 }
 
@@ -242,6 +256,15 @@ ul > li {
 
 .jpit-activities-check{
 
+  .board {
+    align-items: center;
+
+    @include respond-to("large") {
+      row-gap: 24px;
+      flex-wrap: wrap;
+    }
+  }
+
   .word_content {
     background-color: transparent;
     height: 382px;
@@ -338,3 +361,5 @@ ul > li {
     }
   }
 }
+
+

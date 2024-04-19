@@ -6,7 +6,7 @@
   <link rel="shortcut icon" href="img/icon.svg">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   <meta name="theme-color" content="#453C78">
-  <title>Ejemplo de elementos para los cursos</title>
+  <title>Bioseguridad en el maquillaje</title>
   <link href="components/jquery/css/custom/jquery-ui.min.css" rel="stylesheet" type="text/css">
   <link href="components/ionicons/css/ionicons.min.css" rel="stylesheet" type="text/css">
   <link href="components/pit/css/jpit_quiz.css" rel="stylesheet" type="text/css">
@@ -81,7 +81,7 @@
   </style>
 </head>
 
-<body class="loading" data-debug="true" data-model="scorm" data-display-mode="onlypages" data-approve-limit="65"
+<body class="loading" data-debug="true" data-model="scorm" data-display-mode="onlypages" data-approve-limit="80"
   data-activities-percentaje="60" data-mobile-mode="512">
   <div id="body" class="scorm not_print">
     <div id="not_scorm_msg" style="display: none;"></div>
@@ -95,6 +95,8 @@
       <input type="checkbox" id="drawer-toggle">
       <nav label="Principal" class="horizontal main scorm__drawer" data-offset="true">
         <menu>
+          <menuitem label="Bioseguridad en el maquillaje" type="label">
+          </menuitem>
           <menuitem label="Aspectos básicos" data-page="aspectos-basicos">
           </menuitem>
           <menuitem label="Limpieza de implementos" data-page="limpieza">
@@ -103,7 +105,6 @@
           </menuitem>
         </menu>
       </nav>
-      <!-- <h1 class="page-title"></h1> -->
       <h1 class="scorm-title page-title"></h1>
       <nav label="Características globales" class="globals scorm__globals">
         <menu>
@@ -112,7 +113,7 @@
             <span class="google-symbols-rounded">checklist</span>
           </div>
           </menuitem>
-          <menuitem data-global-id="return" title="Salir de pantalla completa">
+          <menuitem data-global-id="return" title="Activar/desactivar pantalla completa">
           <div class="fullscreen">
             <span class="google-symbols-rounded exit">fullscreen_exit</span>
             <span class="google-symbols-rounded enter">fullscreen</span>
@@ -131,9 +132,10 @@
       <section id="aspectos-basicos" ptitle="Aspectos básicos">
 
         <div class="banner"><img src="img/banner.jpg" alt="Banner" /></div>
+        </br>
         <p class="text-center">
-          <span class="italic">¿Sabes qué es buena higiene en tus implementos de maquillaje?</span></br>
-          <span class="italic">¿Conoces la importancia de ello?</span></br>
+          <strong class="italic">¿Sabes qué es buena higiene en tus implementos de maquillaje?</strong></br>
+          <strong class="italic">¿Conoces la importancia de ello?</strong></br></br>
         </p>
         <div class="subpage">
           <p>Desinfectar correctamente tus materiales permite, no solo lograr un buen acabado en tus maquillajes, sino
@@ -148,7 +150,7 @@
               </p>
               <div class="audio-box">
                 <audio class="audio-controls" controls>
-                  <source src="/content/audio-1.mp3" type="audio/mpeg">
+                  <source src="content/audio-1.mp3" type="audio/mpeg">
                   Your browser does not support the audio tag.
                 </audio>
                 <div class="instruction">Puedes leer el texto del audio <a class="w-content-controler general"
@@ -166,9 +168,9 @@
               </div>
             </div>
             <video muted autoplay loop width="360">
-              <source src="/content/video-1.mp4" type="video/mp4" />
+              <source src="content/video-1.mp4" type="video/mp4" />
               Download the
-              <a href="/content/video-1.mp4">MP4</a>
+              <a href="content/video-1.mp4">MP4</a>
               video.
             </video>
           </div>
@@ -187,7 +189,7 @@
           <div class='instruction' type='info'>Toca cada elemento para ver su contenido.</div>
           <div class="infografia">
             <div class="infografia__box">
-              <img src="/content/img-info-1.png" alt="Uñas cortas">
+              <img src="content/img-info-1.png" alt="Uñas cortas">
               <h5>Uñas cortas</h5>
               <button class="w-content-controler general" data-content="#info-1">
                 Ver más +
@@ -198,7 +200,7 @@
               </div>
             </div>
             <div class="infografia__box">
-              <img src="/content/img-info-2.png" alt="Maquillaje">
+              <img src="content/img-info-2.png" alt="Maquillaje">
               <h5>Maquillaje</h5>
               <button class="w-content-controler general" data-content="#info-2">
                 Ver más +
@@ -209,7 +211,7 @@
               </div>
             </div>
             <div class="infografia__box">
-              <img src="/content/img-info-3.png" alt="Cabello">
+              <img src="content/img-info-3.png" alt="Cabello">
               <h5>Cabello</h5>
               <button class="w-content-controler general" data-content="#info-3">
                 Ver más +
@@ -220,7 +222,7 @@
               </div>
             </div>
             <div class="infografia__box">
-              <img src="/content/img-info-4.png" alt="Perfume">
+              <img src="content/img-info-4.png" alt="Perfume">
               <h5>Perfume</h5>
               <button class="w-content-controler general" data-content="#info-4">
                 Ver más +
@@ -230,7 +232,7 @@
               </div>
             </div>
             <div class="infografia__box">
-              <img src="/content/img-info-5.png" alt="Accesorios">
+              <img src="content/img-info-5.png" alt="Accesorios">
               <h5>Accesorios</h5>
               <button class="w-content-controler general" data-content="#info-5">
                 Ver más +
@@ -240,7 +242,7 @@
               </div>
             </div>
             <div class="infografia__box">
-              <img src="/content/img-info-6.png" alt="Outfit">
+              <img src="content/img-info-6.png" alt="Outfit">
               <h5>Outfit</h5>
               <button class="w-content-controler general" data-content="#info-6">
                 Ver más +
@@ -251,7 +253,7 @@
               </div>
             </div>
             <div class="infografia__box">
-              <img src="/content/img-info-7.png" alt="Tapabocas">
+              <img src="content/img-info-7.png" alt="Tapabocas">
               <h5>Tapabocas</h5>
               <button class="w-content-controler general" data-content="#info-7">
                 Ver más +
@@ -261,7 +263,7 @@
               </div>
             </div>
             <div class="infografia__box">
-              <img src="/content/img-info-8.png" alt="Postura">
+              <img src="content/img-info-8.png" alt="Postura">
               <h5>Postura</h5>
               <button class="w-content-controler general" data-content="#info-8">
                 Ver más +
@@ -272,7 +274,7 @@
               </div>
             </div>
             <div class="infografia__box">
-              <img src="/content/img-info-9.png" alt="Medias">
+              <img src="content/img-info-9.png" alt="Medias">
               <h5>Medias</h5>
               <button class="w-content-controler general" data-content="#info-9">
                 Ver más +
@@ -324,25 +326,26 @@
         <div class="subpage">
           <div class="flex-row flex-center spacer-block-2">
             <div class="img-container">
-              <img src="/content/img-1.jpeg" alt="Gratis Mujer Con Lápiz Labial Rojo Y Rímel Negro Foto de stock">
+              <img src="content/img-1.jpeg" alt="Gratis Mujer Con Lápiz Labial Rojo Y Rímel Negro Foto de stock">
             </div>
-            <p>El maquillaje, como la mayoría de los productos cosméticos, tiene una fecha de expiración. <br>
-              El uso de productos de este tipo, pasada su fecha de expiración, puede causar alergias e irritaciones en
-              la piel de tus clientes. <br>
-              Por lo tanto, para evitar el uso de maquillaje vencido, revisa los símbolos que indican el período de
-              validez o la fecha de expiración que tiene el producto una vez ha sido abierto.
+            <div>
+              <p>El maquillaje, como la mayoría de los productos cosméticos, tiene una fecha de expiración. <br>
+              El uso de productos de este tipo, pasada su fecha de expiración, puede causar alergias e irritaciones en la piel de tus clientes.</p>
+              <p>Por lo tanto, para evitar el uso de maquillaje vencido, revisa los símbolos que indican el período de validez o la fecha de expiración que tiene el producto una vez ha sido abierto.
             </p>
+            </div>
           </div>
+          <br>
           <div class="flex-row flex-center spacer-block-2">
-            <p>Para identificar si tu producto está vencido fíjate el símbolo que se muestra a continuación, viene
+            <div>
+              <p>Para identificar si tu producto está vencido fíjate el símbolo que se muestra a continuación, viene
               impreso en todos los productos de maquillaje, y te indica por cuantos meses podrás usarlo después de
-              abierto.
-              <br>
-              Es esencial comprender y aplicar estas medidas de bioseguridad para cuidarte y proteger a tus clientes,
-              garantizando con ello un servicio de alta calidad y seguridad en todo momento.
+              abierto.</p>
+              <p>Es esencial comprender y aplicar estas medidas de bioseguridad para cuidarte y proteger a tus clientes, garantizando con ello un servicio de alta calidad y seguridad en todo momento.
             </p>
+            </div>
             <div class="img-container img-container--xl">
-              <img src="/content/img-2.png" alt="Gratis Mujer Con Lápiz Labial Rojo Y Rímel Negro Foto de stock">
+              <img src="content/img-2.png" alt="Gratis Mujer Con Lápiz Labial Rojo Y Rímel Negro Foto de stock">
             </div>
           </div>
           <div class="box-text box-text--important" label="Para tener presente:">
@@ -360,7 +363,7 @@
             <li>
               <div class="flex-row flex-center">
                 <div class="img-container">
-                  <img src="/content/img-3.jpg" alt="">
+                  <img src="content/img-3.jpg" alt="">
                 </div>
                 <p>Asegúrate de mantener una excelente higiene, implementar las normas de bioseguridad durante el
                   maquillaje te permitirá evitar la transmisión de infecciones a tus clientes.
@@ -373,14 +376,14 @@
                   evites dolores musculares.
                 </p>
                 <div class="img-container">
-                  <img src="/content/img-4.jpg" alt="">
+                  <img src="content/img-4.jpg" alt="">
                 </div>
               </div>
             </li>
             <li>
               <div class="flex-row flex-center">
                 <div class="img-container">
-                  <img src="/content/img-5.jpg" alt="">
+                  <img src="content/img-5.jpg" alt="">
                 </div>
                 <p>Ubica tus productos encima de una toalla desechable o wypall para proteger la parte superior de la
                   mesa donde estés trabajando
@@ -389,26 +392,32 @@
             </li>
             <li>
               <div class="flex-row flex-center">
-                <p>Utiliza una toalla desechable para limpiar la paleta, la espátula y otros utensilios cuando lo
-                  requieras. <br>
+                <div>
+                  <p>Utiliza una toalla desechable para limpiar la paleta, la espátula y otros utensilios cuando lo
+                  requieras. </p>
+                  <p>
                   Recuerda que es importante tener todo desinfectado desde el inicio, para que no hagas perder tiempo a
                   tu cliente.
                 </p>
+                </div>
                 <div class="img-container">
-                  <img src="/content/img-6.jpg" alt="">
+                  <img src="content/img-6.jpg" alt="">
                 </div>
               </div>
             </li>
             <li>
               <div class="flex-row flex-center">
                 <div class="img-container">
-                  <img src="/content/img-7.jpg" alt="">
+                  <img src="content/img-7.jpg" alt="">
                 </div>
-                <p>Organiza tus productos de maquillaje de forma práctica, teniendo en cuenta el orden en que los vas a
-                  utilizar.<br>
+                <div>
+                  <p>Organiza tus productos de maquillaje de forma práctica, teniendo en cuenta el orden en que los vas a
+                  utilizar.</p>
+                  <p>
                   Haz teniendo en cuenta si trabajas más con la mano derecha o con la izquierda, ubicando los elementos
                   en esa orientación.
                 </p>
+                </div>
               </div>
             </li>
             <li>
@@ -418,14 +427,14 @@
                   usaste para limpiarlas
                 </p>
                 <div class="img-container">
-                  <img src="/content/img-8.jpg" alt="">
+                  <img src="content/img-8.jpg" alt="">
                 </div>
               </div>
             </li>
             <li>
               <div class="flex-row flex-center">
                 <div class="img-container">
-                  <img src="/content/img-9.jpg" alt="">
+                  <img src="content/img-9.jpg" alt="">
                 </div>
                 <p>Ubica un basurero cerca del área de maquillaje, para que puedas depositar allí los productos
                   desechables que vayas usando, ello te ayudará a mantener el área limpia.
@@ -437,14 +446,14 @@
                 <p>Utiliza un contenedor pequeño para tener las esponjas y aplicadores de labios a la mano.
                 </p>
                 <div class="img-container">
-                  <img src="/content/img-10.jpg" alt="">
+                  <img src="content/img-10.jpg" alt="">
                 </div>
               </div>
             </li>
             <li>
               <div class="flex-row flex-center">
                 <div class="img-container">
-                  <img src="/content/img-11.jpg" alt="">
+                  <img src="content/img-11.jpg" alt="">
                 </div>
                 <p>Ubica una toallita desinfectante en tu área de trabajo, de modo que la puedas usar para limpiar tus
                   brochas y utensilios a medida que avances, garantizando mantener una higiene adecuada en tu área de
@@ -462,7 +471,7 @@
                 maquillaje, brindando un ambiente seguro y profesional para tus clientes.
               </p>
               <div class="img-container">
-                <img src="/content/img-12.jpg" alt="Fotografía de maquillaje sobre mesa">
+                <img src="content/img-12.jpg" alt="Fotografía de maquillaje sobre mesa">
               </div>
             </div>
           </div>
@@ -473,6 +482,7 @@
             memorable:
           </p>
           <h3>Recomendaciones para servicio a domicilio</h3>
+          <br>
           <div class="instruction" type="info">Toca cada elemento para conocer su descripción.</div>
           <div class="infografia-2">
             <div class="infografia-2__box infografia-2__box--left">
@@ -535,7 +545,8 @@
                 </div>
                 <div id="ventana_desechables" class="w-content">
                   <p>Lleva elementos desechables como: pomos desmaquillantes, hisopos de algodón, espirales para las
-                    pestañas y aplicadores de labial; tenerlos a la mano facilitará tu proceso. <br>
+                    pestañas y aplicadores de labial; tenerlos a la mano facilitará tu proceso. </p>
+                    <p>
                     Ubícalos en un organizador con separadores para que tengas acceso a ellos más fácilmente.
                   </p>
                 </div>
@@ -574,16 +585,20 @@
         </div>
         <div class="subpage">
           <div class="flex-row flex-center">
+          <div>
             <p>
               Ahora, quiero compartirte algunas recomendaciones para la limpieza de los implementos que están en
-              contacto directo con los productos cosméticos. <br>
-              Ten en cuenta que estos cuidados cambian si el producto es fluido o compacto. <br>
+              contacto directo con los productos cosméticos. </p>
+              <p>
+              Ten en cuenta que estos cuidados cambian si el producto es fluido o compacto. </p>
+              <p>
               Pasa a la siguiente página para continuar.
             </p>
+          </div>
             <video muted autoplay loop width="360">
-              <source src="/content/video-2.mp4" type="video/mp4" />
+              <source src="content/video-2.mp4" type="video/mp4" />
               Download the
-              <a href="/content/video-2.mp4">MP4</a>
+              <a href="content/video-2.mp4">MP4</a>
               video.
             </video>
           </div>
@@ -593,20 +608,23 @@
       <section id="limpieza" ptitle="Limpieza de implementos">
 
         <div class="subpage">
-          <div class="horizontal-menu">
+          <div class="horizontal-menu flex-center" >
             <dl>
               <dt>Esponjas y borlas</dt>
               <dd>
                 <div class="flex-row flex-center">
                   <div class="img-container">
-                    <img src="/content/img-13.jpg" alt="Esponjas y borlas">
+                    <img src="content/img-13.jpg" alt="Esponjas y borlas">
                   </div>
-                  <p>Las esponjas y borlas de maquillaje se deben lavar cada que las uses, ya que en ellas se acumulan
+                  <div>
+                    <p>Las esponjas y borlas de maquillaje se deben lavar cada que las uses, ya que en ellas se acumulan
                     una
-                    gran cantidad de hongos y bacterias. <br>
+                    gran cantidad de hongos y bacterias. </p>
+                    <p>
                     Lávalas con jabón líquido de cocina o con uno especializado para ellas, enjuágalas muy bien y luego
                     ponlas a secar antes del próximo uso.
-                  </p>
+                    </p>
+                  </div>
                 </div>
               </dd>
             </dl>
@@ -615,14 +633,15 @@
               <dd>
                 <div class="flex-row flex-center">
                   <div class="img-container">
-                    <img src="/content/img-14.jpg" alt="Brochas">
+                    <img src="content/img-14.jpg" alt="Brochas">
                   </div>
-                  <p>Limpia tus brochas cada vez que finalices un servicio de maquillaje. <br>
+                  <div>
+                    <p>Limpia tus brochas cada vez que finalices un servicio de maquillaje. </p><p>
                     Puedes usar un limpiador de brochas y toallas desechables para realizar de inmediato la limpieza en
-                    seco de las mismas. <br><br>Las brochas se limpian siguiendo siempre una sola dirección para evitar
-                    dañar sus cerdas.
-
-                  </p>
+                    seco de las mismas.</p>
+                    <p>Las brochas se limpian siguiendo siempre una sola dirección para evitar
+                    dañar sus cerdas.</p>
+                  </div>
                 </div>
               </dd>
             </dl>
@@ -631,31 +650,33 @@
               <dd>
                 <div class="flex-row flex-center">
                   <div class="img-container">
-                    <img src="/content/img-15.jpg" alt="Pinceles">
+                    <img src="content/img-15.jpg" alt="Pinceles">
                   </div>
-                  <p>Limpia el pincel para delinear o para cejas en una sola dirección con movimientos suaves. <br>
-                    <em>¡Ojo!</em> Si lo haces en movimientos circulares, lo vas a dañar. <br>
-                    Al limpiar pinceles planos, sigue el mismo movimiento que utilizaste al aplicar el maquillaje en el
-                    rostro. <br>
-                    El pincel para difuminar, puedes limpiarlo haciendo movimientos circulares, ya que así es como se
-                    usa.
+                  <div>
+                     <p>Limpia el pincel para delinear o para cejas en una sola dirección con movimientos suaves. </p><p>
+                    <em>¡Ojo!</em> Si lo haces en movimientos circulares, lo vas a dañar. </p><p>
+                    Al limpiar pinceles planos, sigue el mismo movimiento que utilizaste al aplicar el maquillaje en el rostro. </p><p>
+                    El pincel para difuminar, puedes limpiarlo haciendo movimientos circulares, ya que así es como se usa.
                   </p>
+                  </div>
                 </div>
               </dd>
             </dl>
           </div>
           <div class="flex-row flex-center">
-            <p>Al usar brochas y demás elementos en la aplicación de la base y demás productos fluidos, debes mojarlas
-              ligeramente con agua tibia y jabón suave. <br>
+            <div>
+              <p>Al usar brochas y demás elementos en la aplicación de la base y demás productos fluidos, debes mojarlas
+              ligeramente con agua tibia y jabón suave. </p><p>
               Si atiendes a clientes con problemas de acné lo ideal es usar unas brochas dedicadas exclusivamente para
-              pieles de ese tipo. <br>
+              pieles de ese tipo. </p><p>
               Una vez que, tanto brochas como pinceles estén limpios y sin residuos de maquillaje, ubícalos en una
               toalla desechable y déjalos secar completamente antes de guardarlos.
             </p>
+            </div>
             <video muted autoplay loop width="360">
-              <source src="/content/video-1.mp4" type="video/mp4" />
+              <source src="content/video-1.mp4" type="video/mp4" />
               Download the
-              <a href="/content/video-1.mp4">MP4</a>
+              <a href="content/video-1.mp4">MP4</a>
               video.
             </video>
           </div>
@@ -665,19 +686,20 @@
           </div>
         </div>
         <div class="subpage">
+        <p>No solo es necesario limpiar los instrumentos con los que aplicas los productos, si no también los productos tales como paletas de sombras, contornos y otros productos compactos.</p>
+
+        <p>Te comparto un sencillo truco de cómo hacer una limpieza rápida de tus paletas de productos compactos:</p>
+        <br>
+
           <div class="flex-row flex-center">
             <video muted autoplay loop width="360">
-              <source src="/content/video-1.mp4" type="video/mp4" />
+              <source src="content/video-1.mp4" type="video/mp4" />
               Download the
-              <a href="/content/video-1.mp4">MP4</a>
+              <a href="content/video-1.mp4">MP4</a>
               video.
             </video>
-            <div class="text-box">
-              <p>No solo es necesario limpiar los instrumentos con los que aplicas los productos, si no también los
-                productos tales como paletas de sombras, contornos y otros productos compactos.
-              </p>
-              <p>Te comparto un sencillo truco de cómo hacer una limpieza rápida de tus paletas de productos compactos:
-              </p>
+
+            <div>
               <p><em>Paso 1</em> <br>Envuelve un objeto redondo con un pañito húmedo.
               </p>
               <p><em>Paso 2</em> <br>Abre la paleta o producto que quieres limpiar y desliza sobre ella el objeto
@@ -689,6 +711,7 @@
           </div>
         </div>
         <div class="subpage">
+        <br>
           <div class="flex-row flex-center">
             <p>Sigue estos consejos y te habrás preparado para realizar un trabajo eficiente y sin complicaciones, ya
               que no solo estarás cuidando a tus clientes con tus prácticas bioseguras, sino que también cuidarás de
@@ -697,13 +720,13 @@
               profesional y de calidad.
             </p>
             <div class="img-container img-container--xl">
-              <img src="/content/img-16.jpeg" alt="Mujer maquillando a otra mujer">
+              <img src="content/img-16.jpeg" alt="Mujer maquillando a otra mujer">
             </div>
           </div>
         </div>
         <div class="subpage">
           <div class="box-text box-text--activity" label="Actividad de aprendizaje">
-            <div class="jpit-activities-check" data-act-id="Actividad de aprendizaje 1">
+            <div class="jpit-activities-check" data-act-title="Actividad de aprendizaje" data-act-id="actividad-1">
               <p><strong>Indica si la práctica es adecuada o no en términos de bioseguridad.</strong></p>
               <div class='instruction' type='info'>Selecciona para cada opción, si cumple o no con la condición</div>
               <words>
@@ -755,7 +778,7 @@
                     </div>
                   </div>
                 </div>
-              </div>
+              
               <div class="check_right">
                 <div class="box_result">
                   <div class="correct">
@@ -767,6 +790,7 @@
                     <div class="text">Desaciertos</div>
                   </div>
                 </div>
+              </div>
               </div>
             </div>
           </div>
@@ -793,14 +817,14 @@
             <div class="logos flex-row flex-center">
               <a class="logo-container img-container logo-container--mariana"
                 href="https://www.instagram.com/makeupbymarianagarcia/" target="_blank">
-                <img src="/img/mariana-logo.png" alt="Logo Mariana">
+                <img src="img/mariana-logo.png" alt="Logo Mariana">
               </a>
               <a class="logo-container img-container logo-container--enlace" href="https://enlaceestrategico.org.co/"
                 target="_blank">
-                <img src="/img/enlace-logo.png" alt="Logo Enlace">
+                <img src="img/enlace-logo.png" alt="Logo Enlace">
               </a>
               <a class="logo-container img-container logo-container--nodolab" href="https://nodolab.co/" target="_blank">
-                <img src="/img/nodolab-logo.png" alt="Logo Nodolab">
+                <img src="img/nodolab-logo.png" alt="Logo Nodolab">
               </a>
             </div>
             <p class="text-center">2024<br>Derechos reservados ©</p>
@@ -835,7 +859,7 @@
                   belleza</a>
               </li>
               <li>
-                <a href="https://www.freepik.es/foto-gratis/arreglo-panuelo-blanco-nasal_18037056.htm#fromView=search&page=1&position=1&uuid=23a27805-ee71-460a-81f5-177667bfc141"
+                <a href="https://www.freepik.es/foto-gratis/arreglo-panuelo-blanco-nasal_18037056.htm"
                   target="_blank">Freepik - Arreglo panuelo blanco nasal</a>
               </li>
               <li>
@@ -851,15 +875,15 @@
                   target="_blank">Karolina Grabowska - Mujer mano crema protección de la piel</a>
               </li>
               <li>
-                <a href="https://www.freepik.es/foto-gratis/vista-elevada-polvos-cosmeticos-cepillos-sobre-fondo-blanco_2866173.htm#fromView=search&page=1&position=4&uuid=490562bb-58d1-4af1-88dc-d130babd99b6"
+                <a href="https://www.freepik.es/foto-gratis/vista-elevada-polvos-cosmeticos-cepillos-sobre-fondo-blanco_2866173.htm"
                   target="_blank">Freepik - Vista elevada de polvos cosméticos y cepillos sobre fondo blanco</a>
               </li>
               <li>
-                <a href="https://www.freepik.es/foto-gratis/mujer-joven-recibiendo-tratamiento-belleza_13349065.htm#fromView=search&page=1&position=41&uuid=490562bb-58d1-4af1-88dc-d130babd99b6"
+                <a href="https://www.freepik.es/foto-gratis/mujer-joven-recibiendo-tratamiento-belleza_13349065.htm"
                   target="_blank">Freepik - Mujer joven recibiendo un tratamiento de belleza</a>
               </li>
               <li>
-                <a href="https://www.freepik.es/foto-gratis/mujer-profesional-maquillando-chica_4868293.htm#fromView=search&page=6&position=51&uuid=ce7e50cb-ea85-4175-a885-91c853d5c663"
+                <a href="https://www.freepik.es/foto-gratis/mujer-profesional-maquillando-chica_4868293.htm"
                   target="_blank">Freepik - Mujer profesional maquillando chica</a>
               </li>
             </ul>
@@ -896,10 +920,6 @@
               </li>
               <li>
                 <a href="https://www.flaticon.es/icono-gratis/postura_5064241?term=postura&page=1&position=1&origin=search&related_id=5064241"
-                  target="_blank">Freepik - Vista elevada de polvos cosméticos y cepillos sobre fondo blanco</a>
-              </li>
-              <li>
-                <a href="https://www.freepik.es/foto-gratis/mujer-joven-recibiendo-tratamiento-belleza_13349065.htm#fromView=search&page=1&position=41&uuid=490562bb-58d1-4af1-88dc-d130babd99b6"
                   target="_blank">bsd-Postura</a>
               </li>
               <li>
@@ -909,10 +929,6 @@
               <li>
                 <a href="https://www.flaticon.es/icono-gratis/informacion_906794?term=pregunta&page=1&position=10&origin=search&related_id=906794"
                   target="_blank">Freepik-Información</a>
-              </li>
-              <li>
-                <a href="https://www.flaticon.es/icono-gratis/postura_5064241?term=postura&page=1&position=1&origin=search&related_id=5064241"
-                  target="_blank">bsd-Postura</a>
               </li>
               <li>
                 <a href="https://www.flaticon.es/icono-gratis/tocador_1787320?term=tocador&page=1&position=1&origin=search&related_id=1787320"
@@ -947,22 +963,14 @@
   </div>
 
   <div id="results_page" style="display:none;">
-    <h2>Resumen de su avance en la lectura del documento</h2>
+    <h2>Resumen de tu progreso</h2>
     <h3>Páginas visitadas</h3>
-    <p>En verde, aquellas páginas que ya ha visitado.</p>
     <div id="results_page_visited"></div>
     <br class="clear" />
     <h3>Actividades</h3>
     <div id="results_page_activities"></div>
   </div>
 
-  <div id="printent_content" style="display:none;">
-    <div class="content"></div>
-    <div class="button_container">
-      <button class="general button" onclick="window.print();">Imprimir</button>
-      <button id="printent_back" class="general button">Volver</button>
-    </div>
-  </div>
 </body>
 
 </html>
