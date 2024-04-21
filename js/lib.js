@@ -271,7 +271,7 @@ dhbgApp.standard.start = function() {
           <svg viewBox="0 0 24 24">
             <use
               xmlns:xlink="http://www.w3.org/1999/xlink"
-              xlink:href="content/icons.svg#chevron-left"></use>
+              xlink:href="img/icons.svg#chevron-left"></use>
           </svg>
           Página anterior
         </button>
@@ -280,7 +280,7 @@ dhbgApp.standard.start = function() {
           <svg viewBox="0 0 24 24">
             <use
               xmlns:xlink="http://www.w3.org/1999/xlink"
-              xlink:href="content/icons.svg#chevron-right"></use>
+              xlink:href="img/icons.svg#chevron-right"></use>
           </svg>
         </button>
       </div>
