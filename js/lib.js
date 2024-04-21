@@ -325,7 +325,7 @@ dhbgApp.standard.start = function() {
         var $children = $this.children();
         var $box_ribbon = $(`<div class="box-text__ribbon">
           <svg viewBox="0 0 24 24">
-            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="content/icons.svg#ribbon"></use>
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/icons.svg#ribbon"></use>
           </svg>
         </div>
         `);
