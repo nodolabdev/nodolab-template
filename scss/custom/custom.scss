@@ -28,13 +28,18 @@
 /* UTIL CLASSES
 /********************************************************************************/
 
+.text-center {
+  text-align: center;
+}
+.italic {
+  font-style: italic;
+}
 .flex-row {
   display: flex;
   align-items: flex-start;
   gap: 24px;
   flex-direction: column;
-
-  @include respond-to("medium") {
+  @include respond-to('medium') {
     flex-direction: row;
   }
 
@@ -49,6 +54,67 @@
 
 .flex-center {
   align-items: center;
+}
+
+#pag-creditos ul > li {
+  margin-inline-start: 48px;
+}
+
+.image-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  flex-direction: column;
+  @include spacer(6, padding, block);
+  @include respond-to('medium') {
+    flex-direction: row;
+  }
+}
+
+.shadow-image {
+  pointer-events: none;
+  img {
+    pointer-events: none;
+  }
+}
+
+.img-container {
+  width: 100%;
+  height: auto;
+  text-align: center;
+  img {
+    width: 100%;
+    height: auto;
+    max-width: 260px;
+  }
+  &--xl {
+    img {
+      max-width: 560px; 
+    }
+  }
+  &--xxl {
+    img {
+      max-width: 800px;
+    }
+  }
+}
+
+.subpage {
+  @include spacer(4, margin, block);  
+}
+
+.spacer-bottom-2 {
+  @include spacer(2, margin, bottom);
+}
+.spacer-block-2 {
+  @include spacer(2, margin, block);
+}
+.spacer-block-4 {
+  @include spacer(4, margin, block);
+}
+.banner {
+  @include spacer(2, margin, bottom);
 }
 
 ul.text-list > li {
@@ -138,6 +204,16 @@ ul.text-list > li {
   }
 }
 
-.text-center {
-  text-align: center;
+.audio-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  &__title {
+    font-size: var(  --font-size-medium-16);
+    line-height: var(--font-size-large-28);
+    color: var(--color-primary-light);
+    font-weight: bold;
+    @include spacer(2, margin, bottom);
+  }
 }

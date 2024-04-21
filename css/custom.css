@@ -4,7 +4,7 @@
   font-weight: normal;
   font-style: normal;
   font-variation-settings: 'OPSZ';
-  font-size: 24px;
+  font-size: var(--icon-size, 24px);
   /* Preferred icon size */
   display: inline-block;
   line-height: 1;
@@ -36,6 +36,12 @@
 /********************************************************************************/
 /* UTIL CLASSES
 /********************************************************************************/
+.text-center {
+  text-align: center; }
+
+.italic {
+  font-style: italic; }
+
 .flex-row {
   display: flex;
   align-items: flex-start;
@@ -51,6 +57,56 @@
 
 .flex-center {
   align-items: center; }
+
+#pag-creditos ul > li {
+  margin-inline-start: 48px; }
+
+.image-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  flex-direction: column;
+  padding-block: 60px; }
+  @media (min-width: 1024px) {
+    .image-content {
+      padding-block: 80px; } }
+  @media (min-width: 600px) {
+    .image-content {
+      flex-direction: row; } }
+
+.shadow-image {
+  pointer-events: none; }
+  .shadow-image img {
+    pointer-events: none; }
+
+.img-container {
+  width: 100%;
+  height: auto;
+  text-align: center; }
+  .img-container img {
+    width: 100%;
+    height: auto;
+    max-width: 260px; }
+  .img-container--xl img {
+    max-width: 560px; }
+  .img-container--xxl img {
+    max-width: 800px; }
+
+.subpage {
+  margin-block: 36px; }
+
+.spacer-bottom-2 {
+  margin-bottom: 16px; }
+
+.spacer-block-2 {
+  margin-block: 16px; }
+
+.spacer-block-4 {
+  margin-block: 36px; }
+
+.banner {
+  margin-bottom: 16px; }
 
 ul.text-list > li {
   margin-inline-start: 48px; }
@@ -106,5 +162,14 @@ ul.text-list > li {
   .logo-container:hover img {
     transform: scale(1.05); }
 
-.text-center {
-  text-align: center; }
+.audio-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; }
+  .audio-box__title {
+    font-size: var(--font-size-medium-16);
+    line-height: var(--font-size-large-28);
+    color: var(--color-primary-light);
+    font-weight: bold;
+    margin-bottom: 16px; }
