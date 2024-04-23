@@ -190,3 +190,9 @@ ul.text-list > li {
 
 .subpage {
   margin-bottom: 36px; }
+
+.ctrl-pagination .flex-row {
+  flex-direction: column; }
+  @media (min-width: 1024px) {
+    .ctrl-pagination .flex-row {
+      flex-direction: row; } }

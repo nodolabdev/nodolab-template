@@ -237,3 +237,12 @@ ul.text-list > li {
 .subpage {
   @include spacer(4, margin, bottom);
 }
+
+.ctrl-pagination {
+  .flex-row {
+    flex-direction: column;
+    @include respond-to("large") {
+      flex-direction: row;
+    }
+  }
+}
