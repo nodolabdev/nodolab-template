@@ -16,14 +16,14 @@
   <script src="components/jquery/jquery-ui.js"></script>
   <script type="text/javascript" src="components/jquery-mobile/jquery.ui.touch-punch.min.js"></script>
 
-    <script src="components/interact/interact.min.js"></script>
-    <script src="components/pit/jpit_api.js"></script>
-    <script src="components/pit/utilities/jpit_utilities.js"></script>
-    <script src="components/pit/activity/jpit_activity.js"></script>
-    <script src="components/pit/resources/jpit_resource.js"></script>
-    <script src="components/pit/activity/quiz/jpit_activity_quiz.js"></script>
-    <script src="components/pit/activity/droppable/jpit_activity_droppable.js"></script>
-    <script src="components/pit/activity/check/jpit_activity_check.js"></script>
+  <script src="components/interact/interact.min.js"></script>
+  <script src="components/pit/jpit_api.js"></script>
+  <script src="components/pit/utilities/jpit_utilities.js"></script>
+  <script src="components/pit/activity/jpit_activity.js"></script>
+  <script src="components/pit/resources/jpit_resource.js"></script>
+  <script src="components/pit/activity/quiz/jpit_activity_quiz.js"></script>
+  <script src="components/pit/activity/droppable/jpit_activity_droppable.js"></script>
+  <script src="components/pit/activity/check/jpit_activity_check.js"></script>
 
   <script src="js/app.js"></script>
   <script src="js/init.js"></script>
@@ -72,7 +72,7 @@
       <input type="checkbox" id="drawer-toggle">
       <nav label="Principal" class="horizontal main scorm__drawer" data-offset="true">
         <menu>
-          <menuitem label="Conocimientos básicos de la piel" data-page="pag-inicio">
+          <menuitem label="Estrategias de difusión" data-page="pag-estrategias">
           </menuitem>
           <menuitem label="Créditos y referencias" data-page="pag-creditos">
           </menuitem>
@@ -103,415 +103,76 @@
     </header>
 
     <main style="display: none;">
-      <section id="pag-inicio" ptitle="Conocimientos básicos de la piel">
+      <section id="pag-estrategias" ptitle="Estrategias de difusión">
         <div class="subpage">
           <div class="banner"><img src="img/banner.jpg" alt="Banner" /></div>
           <br>
           <p class="text-center">
-            <strong class="italic">¿Sabías que existen diferentes tipos de piel?</strong></br></br>
-            <strong>A continuación, descubrirás cuáles son y qué cuidados debes tener durante la preparación de cada uno, para
-            lograr un buen acabado y que el maquillaje sea duradero.</strong>
+            <strong class="italic">¿Sabías qué una buena difusión es fundamental para el éxito de tu emprendimiento?
+            </strong></br></br>
           </p>
-          <br>
-          <div class="box-text box-text--important" label="Es muy importante para los maquilladores…">
-            <div class="flex-row flex-center">
-              <p>Tener conocimientos básicos de la piel, ya que un buen acabado y la durabilidad del maquillaje depende
-                de cómo manejan el tipo de piel del cliente.
-              </p>
-              <video muted autoplay loop width="360">
-                <source src="content/video-1.mp4" type="video/mp4" />
-                Download the
-                <a href="content/video-1.mp4">MP4</a>
-                video.
-              </video>
-            </div>
-          </div>
-        </div>
-        <div class="subpage">
-          <p>Aunque no lo vemos, la piel está compuesta por capas y desde afuera solo podemos observar una de ellas; aún
-            así, es fundamental reconocer cuáles son y qué se alberga en cada:
+          <p>Para que puedas darte a conocer, debes tener una buena estrategia de divulgación de lo que haces. Esto será
+            vital, ya que es lo que te va a permitir que otras personas conozcan tu marca, generar interés de posibles
+            clientes, diferenciarte de la competencia y aumentar tus ventas. </br>
+            A continuación, te daré algunas recomendaciones para que logres crear una buena estrategia:
           </p>
-          <div class="instruction" type="info">Toca cada capa de la piel para conocer su descripción.</div>
-          <div class="text-center">
-            <iframe class="genially-embed" src="content/genially/GENIALLY_1/genially.html"></iframe>
-          </div>
         </div>
         <div class="subpage">
-          <p>La piel se puede clasificar en varios tipos. Veamos cuáles son las principales características que te
-            ayudarán a identificar cada uno:
-          </p>
-          <div class="instruction" type="info">Toca cada elemento para ver su contenido.</div>
-          <div class="horizontal-menu">
-            <dl>
-              <dt>Piel normal</dt>
-              <dd>
-                <div class="flex-row flex-center">
-                  <div class="text">
-                    <h5>Piel normal</h5>
-                    <ul class="text-list">
-                      <li>Poros poco visibles.</li>
-                      <li>Textura lisa, suave y agradable al tacto.</li>
-                      <li>Capa de grasa, pero no alcanza a ser brillante.</li>
-                      <li>Color uniforme.</li>
-                      <li>Cuenta con hidratación natural.</li>
-                    </ul>
-                  </div>
-                  <div class="img-container">
-                    <img src="content/img-1.png" alt="Piel normal">
-                  </div>
-                </div>
-              </dd>
-            </dl>
-            <dl>
-              <dt>Piel seca</dt>
-              <dd>
-                <div class="flex-row flex-center">
-                  <div class="text">
-                    <h5>Piel seca</h5>
-                    <ul class="text-list">
-                      <li>Tacto áspero.</li>
-                      <li>Falta de hidratación natural.</li>
-                      <li>Piel reseca o agrietada.</li>
-                      <li>Poros cerrados.</li>
-                    </ul>
-                  </div>
-                  <div class="img-container">
-                    <img src="content/img-2.png" alt="Piel seca">
-                  </div>
-                </div>
-              </dd>
-            </dl>
-            <dl>
-              <dt>Piel grasa</dt>
-              <dd>
-                <div class="flex-row flex-center">
-                  <div class="text">
-                    <h5>Piel grasa</h5>
-                    <ul class="text-list">
-                      <li>Poros dilatados</li>
-                      <li>Secreción sebácea</li>
-                      <li>Aspecto brillante</li>
-                      <li>Más propensa a acné.</li>
-                    </ul>
-                  </div>
-                  <div class="img-container">
-                    <img src="content/img-3.png" alt="Piel grasa">
-                  </div>
-                </div>
-              </dd>
-            </dl>
-            <dl>
-              <dt>Piel mixta</dt>
-              <dd>
-                <div class="flex-row flex-center">
-                  <div class="text">
-                    <h5>Piel mixta</h5>
-                    <ul class="text-list">
-                      <li>La zona T es un poco brillante.</li>
-                      <li>Resequedad en las mejillas.</li>
-                      <li>Frecuente aparición de puntos negros.</li>
-                      <li>Es el tipo de piel más frecuente.</li>
-                    </ul>
-                  </div>
-                  <div class="img-container">
-                    <img src="content/img-4.png" alt="Piel mixta">
-                  </div>
-                </div>
-              </dd>
-            </dl>
-          </div>
-        </div>
-        <div class="subpage">
-          <div class="flex-row flex-center">
-            <div class="text-box">
-              <p>Además del tipo de piel, también es importante que identifiquemos el <em>tono</em>, que es el color de
-                la
-                superficie que vemos en las personas, es decir, el color más predominante que observamos en ellas.</p>
-              <p>Otro aspecto importante a identificar es el <em>subtono</em>, que es una escala de medida de la piel, y
-                va de
-                tonos fríos a cálidos, dependiendo de los pigmentos que esconde la piel.</p>
-            </div>
-            <div class="img-container">
-              <img src="content/img-5.jpeg" alt="Hombre">
-            </div>
-          </div>
-        </div>
-        <div class="subpage">
-          <div class="box-text box-text--note" label="Una forma fácil de determinar el subtono">
-            <div class="flex-row flex-center hands-container">
-              <div class="text-box">
-                <p>Observando los colores de las venas de la muñeca, puedes identificar el subtono de la piel. Se pueden
-                  dividir en 3 grupos: </p>
-                <ul class="text-list">
-                  <li>Azul o morado = subtono frío</li>
-                  <li>Azul - Verde = subtono neutro</li>
-                  <li>Verde u Olivo = subtono cálido</li>
-                </ul>
-              </div>
-              <div class="hands-img-box">
-                <img src="content/img-6-a.png" alt="">
-                <img src="content/img-6-b.png" alt="">
-                <img src="content/img-6-c.png" alt="">
-              </div>
-            </div>
-          </div>
-          <div class="box-text box-text--important" label="Recuerda:">
-            <p>Saber identificar el tono de piel de tu cliente y combinar esta información con lo que sabes sobre el
-              círculo cromático, te ayudará a dar mejores recomendaciones a tus clientes y garantizar que el resultado
-              final sea más armónico.
-            </p>
-          </div>
-        </div>
-        <div class="subpage">
-          <div class="flex-row flex-center flex-1-3">
-            <div class="img-container img-container--xl">
-              <img src="content/img-8.jpg" alt="Maquillaje">
-            </div>
-            <div class="text-box">
-              <p>Para realizar una buena preparación de la piel, es fundamental primero reconocer su tipo, pues de ello
-                dependerá la elección de los productos a aplicar, el orden, e incluso los elementos idóneos para
-                hacerlo.
-              </p>
-              <p>En una <em>correcta preparación de la piel</em> es importante incluir un kit de materiales, de los
-                cuales te sugiero algunos elementos:
-              </p>
-            </div>
-          </div>
-          <div class="cards spacer-block-4">
-            <div class="card" label="Desmaquillante Bifásico" img="content/img-9.jpeg"
-              img-alt="Desmaquillante Bifásico">
-              <p>Por su componente de aceite permite desmaquillar productos a prueba de agua, es ideal para desmaquillar
-                los ojos y retirar los restos de pestañina y/o delineador.</p>
-            </div>
-            <div class="card" label="Agua micelar" img="content/img-10.jpeg" img-alt="Agua micelar">
-              <p>Antes de iniciar un maquillaje es fundamental limpiar la piel del rostro, usa agua micelar para
-                eliminar impurezas, maquillaje que traiga la persona, e incluso los restos del desmaquillante bifásico.
-              </p>
-            </div>
-            <div class="card" label="Gotas osmoclear" img="content/img-11.jpeg" img-alt="Gotas osmoclear">
-              <p>Estas gotas aclaran la esclera del ojo, lo que hace que resalte más el maquillaje, basta con usar una
-                gota en cada ojo.
-                <em>Ten presente</em> consultar antes con la persona que se va a realizar el maquillaje si desea que se
-                le
-                apliquen.
-              </p>
-            </div>
-            <div class="card" label="Tónico facial" img="content/img-12.jpeg" img-alt="Tónico facial">
-              <p>Te sugiero usar agua de rosas, pues calma la piel y ayuda a regular el ph.</p>
-            </div>
-            <div class="card" label="Crema hidratante" img="content/img-13.jpeg" img-alt="Crema hidratante">
-              <p>Esta crema aporta agua a la piel. Es un elemento básico en la rutina de preparación de la piel para
-                cualquier maquillaje, pues se puede aplicar en todos los tipos de piel, y ayudará a lograr un mejor
-                acabado.</p>
-            </div>
-            <div class="card" label="Crema humectante" img="content/img-14.jpeg" img-alt="Crema humectante">
-              <p>Esta crema ayuda a reponer los aceites esenciales de la piel. Es ideal para pieles secas y/o maduras
-                que no producen los aceites naturales esenciales para mantener su nivel de humedad.
-              </p>
-              <p><em>Nota: </em>Este producto no se aplica en pieles grasas ya que por su naturaleza no requieren más
-                producción de grasa.
-              </p>
-            </div>
-            <div class="card" label="Hidratante de labios" img="content/img-15.jpeg" img-alt="Hidratante de labios">
-              <p>Muy importante porque nos prepara los labios para que la aplicación del labial sea duradera y no tenga
-                una apariencia de labios resecos y/o partidos.</p>
-            </div>
-            <div class="card" label="Contorno de ojos" img="content/img-16.jpeg" img-alt="Contorno de ojos">
-              <p>Es una crema que se aplica en el contorno de los ojos para hidratar la zona de la ojera y lograr una
-                aplicación adecuada del corrector de ojeras.</p>
-            </div>
-          </div>
-          <div class="box-text box-text--important" label="¡Recuerda!">
-            <p>Los maquilladores no debemos diagnosticar condiciones de la piel y/o recetar o recomendar productos, ya
-              que el profesional idóneo para hacerlo es un dermatólogo.</p>
-          </div>
-        </div>
-        <div class="subpage">
-          <p>Para finalizar, mencionemos situaciones o comportamientos que te aconsejo evitar a toda costa, a la hora de
-            preparar la piel de un cliente:
-          </p>
-          <div class="instruction" type="info">Toca las flechas para pasar entre secciones.</div>
-          <div class="ctrl-pagination spacer-block-4" data-labelcurrent="true">
+          <div class="ctrl-pagination" data-labelcurrent="true">
             <li>
               <div class="flex-row flex-center">
-                <p><em>Evita rociar productos</em> en aerosol muy cerca o exponiendo los ojos de la persona, ya que
-                  puedes lastimarla o se puede poner nerviosa.
-                </p>
-                <div class="img-container">
-                  <img src="content/img-17.jpeg" alt="Evita rociar productos">
+                <div class="text-box">
+                  <h5>¡Cuéntale a todos!</h5>
+                  <p>La mejor forma de comenzar, siempre será el voz a voz. <br>Hablar de lo que haces, hará que la voz
+                    se pase y las personas le den una primera oportunidad a tu emprendimiento.</p>
+                </div>
+                <div class="img-container img-container--xl">
+                  <img src="content/img-1.jpg" alt="Mujer hablando por megáfono">
                 </div>
               </div>
             </li>
             <li>
               <div class="flex-row flex-center">
-                <div class="img-container">
-                  <img src="content/img-18.jpeg" alt="No depiles">
+                <div class="img-container img-container--xl">
+                  <img src="content/img-2.jpg" alt="Apreton de manos">
                 </div>
-                <p><em>No depiles</em> zonas o áreas completas (a no ser que tengas el conocimiento y esa persona te lo
-                  solicite explícitamente)
-                </p>
-              </div>
-            </li>
-            <li>
-              <div class="flex-row flex-center">
-                <p><em>Jamás presiones espinillas</em>, marcas de acné o relieves, porque puedes lastimar la piel.
-                </p>
-                <div class="img-container">
-                  <img src="content/img-19.jpeg" alt="Jamás presiones espinillas">
+                <div class="text-box">
+                  <h5>Crea alianzas con otras marcas</h5>
+                  <p>Busca aliados cerca del lugar donde esté tu ubicado tu emprendimiento: peluquerías, fotógrafos,
+                    organizadores de eventos, floristerías, peinadoras, casas de banquetes, salones sociales en
+                    alquiler, marcas de ropa, entre otras. <br>Trabajando en llave, podrían ofrecer paquetes de
+                    servicios y brindar una experiencia más completa a los clientes. Además eso te ayudará a
+                    diversificar tus servicios.
+                  </p>
                 </div>
               </div>
             </li>
             <li>
               <div class="flex-row flex-center">
-                <div class="img-container">
-                  <img src="content/img-20.jpeg" alt="No toques o acaricies tu pelo o rostro">
+                <div class="text-box">
+                  <h5>Analiza las estrategias que te pueden funcionar mejor </h5>
+                  <p>Dependiendo del lugar donde vives, puede ser mejor hacer uso de las redes sociales, divulgar
+                    anuncios en emisoras, repartir volantes y tarjetas, entre otras formas… <br>Lo más importante es que
+                    llegues del modo más conveniente a tus posibles clientes.
+                  </p>
                 </div>
-                <p><em>No toques o acaricies tu pelo o rostro</em> mientras manipulas el rostro de tu cliente, es
-                  preferible que recojas tu cabello si te incomoda.
-                </p>
-              </div>
-            </li>
-            <li>
-              <div class="flex-row flex-center">
-                <p><em>Evita soplar los productos, el rostro o los ojos de tu cliente.</em> Si debes retirar algún
-                  producto, sírvete de un pincel o una brocha.
-                </p>
-                <div class="img-container">
-                  <img src="content/img-21.jpeg" alt="Evita soplar los productos, el rostro o los ojos de tu cliente">
+                <div class="img-container img-container--xl">
+                  <img src="content/img-3.jpg" alt="Mirando el celular">
                 </div>
-              </div>
-            </li>
-            <li>
-              <div class="flex-row flex-center">
-                <div class="img-container">
-                  <img src="content/img-22.jpeg" alt="No retires los productos del empaque con tus dedos">
-                </div>
-                <p><em>No retires los productos del empaque con tus dedos</em>, ¡puedes contaminarlos! <br>
-                  Hazlo siempre usando una espátula o una paleta, sin poner en riesgo todo el producto.
-                </p>
-              </div>
-            </li>
-            <li>
-              <div class="flex-row flex-center">
-                <div class="img-container">
-                  <img src="content/img-23.jpeg" alt="No exfolies la piel el mismo día">
-                </div>
-                <p><em>No exfolies la piel el mismo día</em>, pues puede tener el efecto contrario al que deseas.
-                  Además, trata de no tocar o masajear el rostro de tu cliente, puede ser incómodo para esa persona.
-                </p>
               </div>
             </li>
           </div>
         </div>
         <div class="subpage">
-          <p>Espero que toda esta información que te he compartido sea de utilidad y te ayude a orientarte al momento de
-            consolidar tu kit básico de maquillaje, eligiendo inicialmente sólo aquellos productos que pueden ser
-            fundamentales en tu oficio como profesional de maquillaje.
-          </p>
-          <div class="box-text box-text--activity" label="Actividad de aprendizaje">
-          <p>Imagina que Andrea es una clienta que va a tomar tu servicio por primera vez. Al examinar su piel observas lo que se ve en la fotografía. Además, ella te especifica que sus ojos son sensibles, así que debes evitar aplicarles productos en el interior. </p>
-            <br>
-            <div class="flex-row">
-              <div class="img-container">
-                <img src="content/img-24.jpeg" alt="Fotografia para actividad">
-              </div>
-              <div class="jpit-activities-check" data-act-id="actividad-1" data-act-title="Actividad de aprendizaje">
-                <p>
-                  <strong>¿Qué elementos deberíamos utilizar para preparar su piel?</strong>
-                </p>
-                <div class="instruction" type="info">Selecciona para cada opción, si cumple o no con la condición.</div>
-                <words>
-                  <li data-val="true">
-                    <div class="cream-box">
-                      <img src="content/act-img-1.png" alt="Desmaquillante Bifásico">
-                      <p>Desmaquillante Bifásico</p>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="cream-box">
-                      <img src="content/act-img-2.png" alt="Gotas osmoclear">
-                      <p>Gotas osmoclear</p>
-                    </div>
-                  </li>
-                  <li data-val="true">
-                    <div class="cream-box">
-                      <img src="content/act-img-3.png" alt="Crema Hidratante">
-                      <p>Crema Hidratante</p>
-                    </div>
-                  </li>
-                  <li data-val="true">
-                    <div class="cream-box">
-                      <img src="content/act-img-4.png" alt="Hidratante de Labios">
-                      <p>Hidratante de Labios</p>
-                    </div>
-                  </li>
-                  <li data-val="true">
-                    <div class="cream-box">
-                      <img src="content/act-img-5.png" alt="Agua micelar">
-                      <p>Agua micelar</p>
-                    </div>
-                  </li>
-                  <li data-val="true">
-                    <div class="cream-box">
-                      <img src="content/act-img-6.png" alt="Tonico facial">
-                      <p>Tonico facial</p>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="cream-box">
-                      <img src="content/act-img-7.png" alt="Crema humectante">
-                      <p>Crema humectante</p>
-                    </div>
-                  </li>
-                  <li data-val="true">
-                    <div class="cream-box">
-                      <img src="content/act-img-8.png" alt="Contorno ojos">
-                      <p>Contorno ojos</p>
-                    </div>
-                  </li>
-                </words>
-                <div class="board">
-                  <div class="check_left">
-                    <div class="play">
-                      <div class="word_content">&nbsp;</div>
-                      <div class="buttons">
-                        <button class="yes general">Si</button>
-                        <button class="not general">No</button>
-                      </div>
-                    </div>
-                    <div class="box_conclution">
-                      <h3>¡Has finalizado!</h3>
-                      <div class="box_end"></div>
-                      <div class="buttons">
-                        <button class="general reload">Reiniciar actividad</button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="check_right">
-                  <div class="box_result">
-                    <div class="correct">
-                      <div class="hits">0</div>
-                      <div class="text">Aciertos</div>
-                    </div>
-                    <div class="wrong">
-                      <div class="miss">0</div>
-                      <div class="text">Desaciertos</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+          <div class="box-text box-text--important" label="Recuerda que,">
+            <p>Si ejecutas una buena estrategia de difusión podrás aumentar las posibilidades de éxito de tu nuevo
+              emprendimiento.</p>
           </div>
         </div>
-        <div class="subpage">
-          <div class="box-text box-text--note"
-            label="Hemos completado este contenido">
-            <p>Ahora, a poner en práctica lo que aprendiste.</p>
-            <p>¡No olvides disfrutar este proceso!</p>
-          </div>
+        <div class="box-text box-text--note"
+          label="Ahora tienes más conocimiento y algunas herramientas para hacer una estrategia de difusión.">
+          <p>Es tu turno, ¿qué esperas para poner en práctica lo aprendido? <br>¡No olvides disfrutar este proceso! </p>
         </div>
-
       </section>
 
       <!--Créditos-->
@@ -519,12 +180,12 @@
         <div class="subpage" id="credits_subpage">
 
           <div class="box-text box-text--no-icon" label="Créditos">
-              <p>Curaduría de contenidos
-                <br>Gestión pedagógica y diseño instruccional
-                <br>Producción multimedial
-                <br>Desarrollo e implementación
-                <br> Gestión técnica y administrativa
-              </p>
+            <p>Curaduría de contenidos
+              <br>Gestión pedagógica y diseño instruccional
+              <br>Producción multimedial
+              <br>Desarrollo e implementación
+              <br> Gestión técnica y administrativa
+            </p>
             <div class="logos flex-row flex-center">
               <a class="logo-container img-container logo-container--mariana"
                 href="https://www.instagram.com/makeupbymarianagarcia/" target="_blank">
@@ -534,7 +195,8 @@
                 target="_blank">
                 <img src="img/enlace-logo.png" alt="Logo Enlace">
               </a>
-              <a class="logo-container img-container logo-container--nodolab" href="https://nodolab.co/" target="_blank">
+              <a class="logo-container img-container logo-container--nodolab" href="https://nodolab.co/"
+                target="_blank">
                 <img src="img/nodolab-logo.png" alt="Logo Nodolab">
               </a>
             </div>
@@ -542,43 +204,14 @@
           </div>
 
           <div class="box-text box-text--no-icon" label="Referencias">
-            <h4>Videos</h4>
-            <ul class="text-list">
-              <li>
-                <a target="_blank" href="https://www.pexels.com/es-es/video/gente-mujer-amigos-respeto-4769970/">Anna Shvets -
-                  gente-mujer-amigos-respeto</a>
-              </li>
-            </ul>
             <h4>Fotos</h4>
             <ul class="text-list">
-              <li>
-                <a target="_blank"
-                  href="https://www.freepik.es/foto-gratis/combinacion-concepto-rasgos-faciales_36780090.htm">Freepik
-                  - Combinación de concepto de rasgos faciales</a>
-              </li>
-              <li><a target="_blank"
-                  href="https://www.freepik.es/foto-gratis/retrato-nina-expresion-facial-disgustada-pared-blanca-agua-micelar-mujer-maquillaje-contra-uso-cosmeticos_12607361.htm">Shiny
-                  Freepik - Retrato de niña con expresión facial disgustada en pared blanca con agua micelar. mujer sin
-                  maquillaje contra el uso de cosmeticos </a></li>
-              <li><a target="_blank"
-                  href="https://www.freepik.es/foto-gratis/belleza-joven-estresada-cabello-castano-gritando-dolor-mientras-depilaba-cejas-pinzas-aisladas-blanco_6514613.htm">Freepik
-                  - Belleza de la joven estresada con cabello castaño gritando de dolor mientras depilaba las cejas con
-                  unas pinzas, aisladas</a></li>
-              <li><a target="_blank"
-                  href="https://www.freepik.es/foto-gratis/muchacha-triguena-joven-disgusto-su-piel-cara-acne-problema-sobre-fondo-blanco-salud-cosmetologia-cuidado-piel_9028202.htm">Freepik
-                  - La muchacha triguena joven disgustó de su piel de la cara del acné del problema</a></li>
-              <li><a target="_blank"
-                  href="https://www.freepik.es/foto-gratis/retrato-mujer-incomoda-disgustada-muestra-gesto-bloqueo-mano-izquierda-evitando-algo_73410708.htm">Freepik
-                  - Retrato de una mujer incómoda y disgustada muestra un gesto de bloqueo de mano izquierda evitando
-                  algo </a></li>
-              <li><a target="_blank" href="https://www.pexels.com/es-es/foto/productos-de-belleza-en-el-salon-3738363/">Polina
-                  Tankilevitch - Productos De Belleza En El Salón</a>
-              </li>
-              <li><a target="_blank"
-                  href="https://www.freepik.es/foto-gratis/mascara-facial-linea-bronceado-mujer-molesta_13463091.htm">Freepik
-                  - Máscara facial línea de bronceado en una mujer molesta</a></li>
-              <li><a target="_blank" href="https://www.pexels.com/es-es/foto/ligero-persona-curva-curvar-7479955/">Angela Roma -
-                  ligero-persona-curva-curvar </a></li>
+              <li><a href="https://www.pexels.com/es-es/foto/mujer-joven-alegre-gritando-en-megafono-3761509/"
+                  target="_blank">Andrea Piacquadio-Mujer Joven Alegre Gritando En Megáfono</a></li>
+              <li><a href="https://www.pexels.com/es-es/foto/manos-gente-oficina-negocio-8069744/" target="_blank">RDNE
+                  Stock project-Manos gente oficina negocio</a></li>
+              <li><a href="https://www.pexels.com/es-es/foto/manos-gente-iphone-telefono-inteligente-5081918/"
+                  target="_blank">Cottonbro studio - manos-gente-iphone-telefono-inteligente</a></li>
             </ul>
           </div>
         </div>

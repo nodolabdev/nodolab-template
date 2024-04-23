@@ -32,13 +32,12 @@
 }
 
 .flex-row.hands-container {
-  @include respond-to("medium"){
+  @include respond-to("medium") {
     flex-direction: column;
   }
-  @include respond-to("small-large"){
+  @include respond-to("small-large") {
     flex-direction: row;
   }
-
 
   .hands-img-box {
     display: flex;
@@ -52,13 +51,12 @@
   }
 }
 
-
 .flex-row {
   display: flex;
   align-items: flex-start;
   gap: 24px;
   flex-direction: column;
-  @include respond-to('medium') {
+  @include respond-to("medium") {
     flex-direction: row;
   }
 
@@ -86,11 +84,10 @@ ul.text-list > li {
   gap: 24px;
   flex-direction: column;
   @include spacer(6, padding, block);
-  @include respond-to('medium') {
+  @include respond-to("medium") {
     flex-direction: row;
   }
 }
-
 
 .card {
   max-width: 400px;
@@ -114,7 +111,7 @@ ul.text-list > li {
   }
   &--xl {
     img {
-      max-width: 480px; 
+      max-width: 480px;
     }
   }
 }
@@ -139,11 +136,11 @@ ul.text-list > li {
     height: 90px;
   }
   p {
-    font-size: var(  --font-size-medium-16);
+    font-size: var(--font-size-medium-16);
     line-height: var(--font-size-large-28);
   }
 }
-.jpit-activities-check{
+.jpit-activities-check {
   .box_conclution {
     position: relative;
     .box_end {
@@ -156,17 +153,17 @@ ul.text-list > li {
 }
 
 .flex-info {
-  @include respond-to('large') {
+  @include respond-to("large") {
     max-width: 624px;
     margin: 0 auto;
-  }  
+  }
 }
 
 .genially-embed {
   width: 300px;
   height: 300px;
   @include spacer(4, margin, block);
-  @include respond-to('large') {
+  @include respond-to("large") {
     width: 800px;
     height: 350px;
   }
@@ -235,4 +232,8 @@ ul.text-list > li {
 
 .banner {
   @include spacer(2, margin, bottom);
+}
+
+.subpage {
+  @include spacer(4, margin, bottom);
 }
