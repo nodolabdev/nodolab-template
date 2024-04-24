@@ -196,7 +196,11 @@
       left: 0;
       top: 50%;
       transform: translateY(-50%);
-      aspect-ratio: 1; }
+      aspect-ratio: 1;
+      width: 85px; }
+      @media (min-width: 600px) {
+        .infografia-2__box--left .infografia-2__img-container {
+          width: 126px; } }
     .infografia-2__box--left .infografia-2__box-title-container {
       justify-content: flex-end;
       width: 100%; }
@@ -210,7 +214,11 @@
       right: 0;
       top: 50%;
       transform: translateY(-50%);
-      aspect-ratio: 1; }
+      aspect-ratio: 1;
+      width: 85px; }
+      @media (min-width: 600px) {
+        .infografia-2__box--right .infografia-2__img-container {
+          width: 126px; } }
     .infografia-2__box--right .infografia-2__box-title-container {
       justify-content: flex-start;
       width: 100%; }
