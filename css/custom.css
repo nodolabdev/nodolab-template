@@ -60,8 +60,30 @@
 .flex-center {
   align-items: center; }
 
-#pag-creditos ul > li, .box-text ul > li {
+#pag-creditos ul > li,
+.box-text ul > li {
   margin-inline-start: 48px; }
+
+.vertical-video-wrapper {
+  flex-basis: unset;
+  order: 2; }
+  .vertical-video-wrapper video {
+    display: block;
+    max-height: 600px;
+    aspect-ratio: 0.53;
+    margin: 20px auto; }
+    @media (min-width: 600px) {
+      .vertical-video-wrapper video {
+        max-height: 400px; } }
+
+.vertical-video-sibling {
+  order: 1; }
+
+@media (min-width: 600px) {
+  .vertical-video-wrapper {
+    order: 1; }
+  .vertical-video-sibling {
+    order: 2; } }
 
 .image-content {
   display: flex;
@@ -131,7 +153,7 @@
       grid-template-columns: repeat(3, minmax(0, 1fr));
       grid-column-gap: 24px; } }
   .infografia__box {
-    border: 1px solid #827E7E;
+    border: 1px solid #827e7e;
     border-radius: 20px;
     padding: 25px;
     display: flex;
@@ -173,7 +195,8 @@
       position: absolute;
       left: 0;
       top: 50%;
-      transform: translateY(-50%); }
+      transform: translateY(-50%);
+      aspect-ratio: 1; }
     .infografia-2__box--left .infografia-2__box-title-container {
       justify-content: flex-end;
       width: 100%; }
@@ -186,7 +209,8 @@
       position: absolute;
       right: 0;
       top: 50%;
-      transform: translateY(-50%); }
+      transform: translateY(-50%);
+      aspect-ratio: 1; }
     .infografia-2__box--right .infografia-2__box-title-container {
       justify-content: flex-start;
       width: 100%; }
@@ -195,7 +219,7 @@
           justify-content: center; } }
   .infografia-2__link {
     align-items: center;
-    background-color: #E5DFF6;
+    background-color: #e5dff6;
     border-bottom: none;
     border-radius: 20px;
     display: flex;
@@ -212,7 +236,7 @@
         transform: translateY(-50%) scale(1.1); }
   .infografia-2__img-container {
     border-radius: 50%;
-    border: 3px solid #6956A1;
+    border: 3px solid #6956a1;
     padding: 21px;
     background-color: white;
     transition: all 0.2s ease;
