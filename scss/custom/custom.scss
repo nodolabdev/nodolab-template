@@ -91,6 +91,30 @@ ul.text-list > li {
   }
 }
 
+#actividad-1, #actividad-2 {
+  &.jpit-activities-droppable th {
+    width: 50%;
+    line-height: 20px;
+  }
+
+  .draggable {
+    margin-block: 2px
+  }
+}
+
+.cards {
+  .card {
+    max-width: 380px;
+    width: 100%;
+    border-radius: 26px;
+    overflow: hidden;
+
+    &__img {
+      border-radius: 22px
+    }
+  }
+} 
+
 .spacer-bottom-2 {
   @include spacer(2, margin, bottom);
 }
@@ -216,7 +240,7 @@ ul.text-list > li {
     box-shadow: 0px 4px 4px 0px #00000040;
     height: 88px;
     left: 50%;
-    padding: 21px;
+    padding: 16px;
     position: absolute;
     top: -44px;
     transform: translateX(-50%);
@@ -228,6 +252,7 @@ ul.text-list > li {
       left: -63px;
       top: unset;
       transform: unset;
+      padding: 32px;
     }
     img {
       width: 100%;
@@ -246,6 +271,7 @@ ul.text-list > li {
       width: 100%;
       height: 100%;
       margin: 0 auto;
+      border-radius: 20px;
     }
   }
 }
