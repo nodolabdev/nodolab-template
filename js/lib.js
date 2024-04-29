@@ -1328,6 +1328,13 @@ dhbgApp.standard.start = function() {
 
         })
     }
+
+    // Interactive videos play on click if paused
+    $(".interactive-video").on('click', function(){
+        if(this.paused) {
+            this.play()
+        }
+    })
 };
 
 
