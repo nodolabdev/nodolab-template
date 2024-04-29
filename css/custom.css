@@ -285,6 +285,12 @@
     .jpit-activities-check .box_conclution .box_end > * {
       position: relative; }
 
+.hide-in-mobile {
+  display: none; }
+  @media (min-width: 600px) {
+    .hide-in-mobile {
+      display: block; } }
+
 @media (min-width: 1024px) {
   .flex-info {
     max-width: 624px;
