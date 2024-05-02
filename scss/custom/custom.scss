@@ -1,4 +1,4 @@
-@import "../utils/all";
+@import '../utils/all';
 
 .change {
   color: red;
@@ -56,6 +56,14 @@
   align-items: center;
 }
 
+.justify-center {
+  justify-content: center;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
 #pag-creditos ul > li {
   margin-inline-start: 48px;
 }
@@ -79,6 +87,25 @@
   }
 }
 
+.view-first {
+  min-width: 180px;
+  max-width: 320px;
+
+  @include respond-to('medium') {
+    max-width: 200px;
+    flex-basis: 0;
+  }
+
+  img {
+    max-width: 320px;
+    margin-inline: auto;
+
+    @include respond-to('medium') {
+      max-width: 200px;
+    }
+  }
+}
+
 .img-container {
   width: 100%;
   height: auto;
@@ -90,7 +117,7 @@
   }
   &--xl {
     img {
-      max-width: 560px; 
+      max-width: 460px;
     }
   }
   &--xxl {
@@ -101,7 +128,7 @@
 }
 
 .subpage {
-  @include spacer(4, margin, block);  
+  @include spacer(4, margin, block);
 }
 
 .spacer-bottom-2 {
@@ -121,24 +148,6 @@ ul.text-list > li {
   margin-inline-start: 48px;
 }
 
-.img-container {
-  width: 100%;
-  height: auto;
-  text-align: center;
-
-  img {
-    width: 100%;
-    height: auto;
-    max-width: 260px;
-  }
-
-  &--xl {
-    img {
-      max-width: 560px;
-    }
-  }
-}
-
 .spacer-bottom-2 {
   @include spacer(2, margin, bottom);
 }
@@ -154,7 +163,7 @@ ul.text-list > li {
   flex-wrap: wrap;
   margin-inline: auto;
 
-  @include respond-to("medium") {
+  @include respond-to('medium') {
     margin-top: 60px;
   }
 }
@@ -165,7 +174,7 @@ ul.text-list > li {
   border-bottom: 0;
   @include spacer(2, margin, bottom);
 
-  @include respond-to("medium") {
+  @include respond-to('medium') {
     @include spacer(4, margin, bottom);
   }
 
@@ -210,7 +219,7 @@ ul.text-list > li {
   align-items: center;
   justify-content: center;
   &__title {
-    font-size: var(  --font-size-medium-16);
+    font-size: var(--font-size-medium-16);
     line-height: var(--font-size-large-28);
     color: var(--color-primary-light);
     font-weight: bold;
