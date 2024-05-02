@@ -89,7 +89,7 @@
     height: auto;
     max-width: 260px; }
   .img-container--xl img {
-    max-width: 560px; }
+    max-width: 460px; }
   .img-container--xxl img {
     max-width: 800px; }
 
@@ -110,17 +110,6 @@
 
 ul.text-list > li {
   margin-inline-start: 48px; }
-
-.img-container {
-  width: 100%;
-  height: auto;
-  text-align: center; }
-  .img-container img {
-    width: 100%;
-    height: auto;
-    max-width: 260px; }
-  .img-container--xl img {
-    max-width: 560px; }
 
 .spacer-bottom-2 {
   margin-bottom: 16px; }
