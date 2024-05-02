@@ -263,7 +263,10 @@ dhbgApp.standard.start = function() {
         }
     };
 
-    $('main > section').each(function() {
+    const inLMS = window.parent.document != window.document;
+    
+    const $pages = $('main > section');
+    $pages.each(function(index) {
       var $page = $(this);
       $page.append(`
       <div class="scorm__controls">
@@ -283,6 +286,7 @@ dhbgApp.standard.start = function() {
               xlink:href="img/icons.svg#chevron-right"></use>
           </svg>
         </button>
+        ${index === $pages.length -1 && inLMS ? '<button class="button scorm__button scorm__control scorm__control--finish" close-scorm>Regresar al curso</button>' : ''}
       </div>
       `);
   });
@@ -314,6 +318,17 @@ dhbgApp.standard.start = function() {
         }
         else if (dhbgApp.DB.currentPage > 0){
             dhbgApp.loadPage(dhbgApp.DB.currentPage - 1, dhbgApp.pages[dhbgApp.DB.currentPage - 1].subpages - 1);
+        }
+    });
+
+    $('[close-scorm]').on('click', function () {
+        if (!inLMS) {
+            return;
+        }
+        if (dhbgApp.scorm) {
+            dhbgApp.scorm.close(function() {
+                window.parent.document.location.href = dhbgApp.scorm.getReturnUrl();
+            });
         }
     });
 
@@ -1328,6 +1343,13 @@ dhbgApp.standard.start = function() {
 
         })
     }
+
+    // Interactive videos play on click if paused
+    $(".interactive-video").on('click', function(){
+        if(this.paused) {
+            this.play()
+        }
+    })
 };
 
 

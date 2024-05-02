@@ -6,18 +6,24 @@ body {
   background-color: var(--grey-light-200);
 }
 
+#body {
+  height: 100%;
+}
+
 .content {
   display: flex;
   flex-direction: column;
   padding-inline: 24px;
-  min-height: 100vh;
+  height: 100%;
   max-width: 1240px;
   margin-inline: auto;
+  justify-content: flex-end;
 
   @include respond-to("medium") {
     overflow: hidden;
     flex-direction: row;
     max-height: 100vh;
+    justify-content: center;
 
     &:before {
       content: '';
@@ -44,15 +50,13 @@ body {
   }
 
   &__banner {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    display: flex;
-    flex-direction: column;
+    flex-grow: 1;
     position: relative;
 
     @include respond-to("medium") {
+      display: flex;
       height: 100vh;
+      flex-direction: column;
       max-height: unset;
       flex-basis: 50%;
       justify-content: center;
@@ -71,10 +75,11 @@ body {
     position: absolute;
     bottom: 0;
     margin: 0;
-    padding: 42px 32px 26px;
+    padding: 32px 20px 16px;
     font-weight: 400;
     line-height: 0.3em;
     letter-spacing: 0.14em;
+    z-index: 2;
 
     strong {
       line-height: 1.1em;
@@ -85,6 +90,7 @@ body {
       top: 54%;
       bottom: unset;
       left: 1%;
+      font-size: 22px;
     }
 
     @include respond-to("small-large") {
@@ -92,30 +98,44 @@ body {
       line-height: 0.5em;
     
       strong {
-        line-height: 1.1em;
         font-size: 40px;
       }
     }
+
     @include respond-to("large") {
+      font-size: 32px;
+      padding: 42px 32px 26px;
       left: unset;
       right: -32px;
       width: 420px;
+      
+      strong {
+        font-size: 40px;
+      }
     }
   }
 
   &__logo {
+    position: absolute;
+    height: 100%;
     width: 100%;
     line-height: 0;
+    z-index: 1;
 
     img {
       width: 100%;
+      object-fit: cover;
+      object-position: top left;
+      height: 100%;
     }
 
     @include respond-to('medium') {
       max-width: 460px;
+      max-height: 662px;
     }
     @include respond-to('extra-large') {
       max-width: 520px;
+      max-height: 748px;
     }
   }
 
@@ -126,7 +146,6 @@ body {
       @include spacer(4, margin, top);
       @include spacer(7, padding, bottom);
       padding-inline: 24px 16px;
-      overflow: auto;
       flex-basis: 50%;
       display: flex;
       flex-direction: column;
@@ -152,7 +171,7 @@ body {
       margin-block-end: 12px;
       text-transform: uppercase;
       font-weight: 400;
-      line-height: 0.95em;
+      line-height: 1.1em;
       letter-spacing: 0.12em;
 
       strong {
@@ -160,20 +179,24 @@ body {
       }
 
       @include respond-to("medium") {
-        margin-top: 60%;
+        margin-top: 40%;
       }
 
       @include respond-to("small-large") {
-        margin-top: 40%;
-        font-size: 36px;
+        font-size: 32px;
 
         strong {
-          font-size: 42px;
+          font-size: 38px;
         }
       }
 
       @include respond-to("large") {
         margin-top: 20%;
+        font-size: 36px;
+
+        strong {
+          font-size: 42px;
+        }
       }
     }
 
