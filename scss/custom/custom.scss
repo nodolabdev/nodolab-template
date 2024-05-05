@@ -87,10 +87,11 @@
     width: 100%;
     height: auto;
     max-width: 260px;
+    border-radius: 20px;
   }
   &--xl {
     img {
-      max-width: 560px; 
+      max-width: 460px; 
     }
   }
   &--xxl {
@@ -121,26 +122,16 @@ ul.text-list > li {
   margin-inline-start: 48px;
 }
 
-.img-container {
-  width: 100%;
-  height: auto;
-  text-align: center;
-
-  img {
-    width: 100%;
-    height: auto;
-    max-width: 260px;
-  }
-
-  &--xl {
-    img {
-      max-width: 560px;
-    }
-  }
-}
-
 .spacer-bottom-2 {
   @include spacer(2, margin, bottom);
+}
+
+.mt-0 {
+  margin-top: 0;
+}
+
+.ui-widget-content a {
+  color: var(--link-color)
 }
 
 /********************************************************************************/

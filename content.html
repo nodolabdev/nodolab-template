@@ -1,297 +1,295 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-  <meta charset="utf-8">
-  <link rel="shortcut icon" href="img/icon.svg">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-  <meta name="theme-color" content="#453C78">
-  <title>Ejemplo de elementos para los cursos</title>
-  <link href="components/jquery/css/custom/jquery-ui.min.css" rel="stylesheet" type="text/css">
-  <link href="components/ionicons/css/ionicons.min.css" rel="stylesheet" type="text/css">
-  <link href="components/pit/css/jpit_quiz.css" rel="stylesheet" type="text/css">
-  <link href="components/pit/css/jpit_mark.css" rel="stylesheet" type="text/css">
-  <link href="components/pit/css/jpit_wordpuzzle.css" rel="stylesheet" type="text/css">
-  <link href="components/pit/css/jpit_crossword.css" rel="stylesheet" type="text/css">
-  <link href="components/pit/css/jpit_zoom.css" rel="stylesheet" type="text/css">
-  <link href="components/csscircle/circle.min.css" rel="stylesheet" type="text/css">
+  <head>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="img/icon.svg">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="theme-color" content="#453C78">
+    <title>Desarrollo de nombre y logo</title>
+    <link href="components/jquery/css/custom/jquery-ui.min.css" rel="stylesheet" type="text/css">
+    <link href="components/ionicons/css/ionicons.min.css" rel="stylesheet" type="text/css">
+    <link href="components/pit/css/jpit_quiz.css" rel="stylesheet" type="text/css">
+    <link href="components/pit/css/jpit_mark.css" rel="stylesheet" type="text/css">
+    <link href="components/pit/css/jpit_wordpuzzle.css" rel="stylesheet" type="text/css">
+    <link href="components/pit/css/jpit_crossword.css" rel="stylesheet" type="text/css">
+    <link href="components/pit/css/jpit_zoom.css" rel="stylesheet" type="text/css">
+    <link href="components/csscircle/circle.min.css" rel="stylesheet" type="text/css">
 
-  <script src="components/jquery/jquery.min.js"></script>
-  <script src="components/jquery/jquery-ui.js"></script>
-  <script type="text/javascript" src="components/jquery-mobile/jquery.ui.touch-punch.min.js"></script>
+    <script src="components/jquery/jquery.min.js"></script>
+    <script src="components/jquery/jquery-ui.js"></script>
+    <script type="text/javascript" src="components/jquery-mobile/jquery.ui.touch-punch.min.js"></script>
 
-  <!--jQuery components -->
-  <script src="components/twentytwenty/js/jquery.event.move.js" type="text/javascript"></script>
-  <script src="components/twentytwenty/js/jquery.twentytwenty.js" type="text/javascript"></script>
-  <link rel="stylesheet" href="components/twentytwenty/css/twentytwenty.css" type="text/css" media="screen" />
+    <!--jQuery components -->
+    <script src="components/twentytwenty/js/jquery.event.move.js" type="text/javascript"></script>
+    <script src="components/twentytwenty/js/jquery.twentytwenty.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="components/twentytwenty/css/twentytwenty.css" type="text/css" media="screen" />
 
-  <script src="components/mediaelementjs/mediaelement-and-player.min.js" type="text/javascript"></script>
-  <link rel="stylesheet" href="components/mediaelementjs/mediaelementplayer.css" type="text/css" />
+    <script src="components/mediaelementjs/mediaelement-and-player.min.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="components/mediaelementjs/mediaelementplayer.css" type="text/css" />
 
-  <script src="components/maphilight/jquery.maphilight.min.js" type="text/javascript"></script>
-  <!--End jQuery components -->
+    <script src="components/maphilight/jquery.maphilight.min.js" type="text/javascript"></script>
+    <!--End jQuery components -->
 
-  <script src="components/interact/interact.min.js"></script>
-  <script src="components/pit/jpit_api.js"></script>
-  <script src="components/pit/utilities/jpit_utilities.js"></script>
-  <script src="components/pit/activity/jpit_activity.js"></script>
-  <script src="components/pit/resources/jpit_resource.js"></script>
-  <script src="components/pit/activity/quiz/jpit_activity_quiz.js"></script>
-  <script src="components/pit/activity/mark/jpit_activity_mark.js"></script>
-  <script src="components/pit/activity/wordpuzzle/jpit_activity_wordpuzzle.js"></script>
-  <script src="components/pit/activity/droppable/jpit_activity_droppable.js"></script>
-  <script src="components/pit/activity/crossword/jpit_activity_crossword.js"></script>
-  <script src="components/pit/activity/cloze/jpit_activity_cloze.js"></script>
-  <script src="components/pit/activity/form/jpit_activity_form.js"></script>
-  <script src="components/pit/activity/sortable/jpit_activity_sortable.js"></script>
-  <script src="components/pit/activity/check/jpit_activity_check.js"></script>
-  <script src="components/pit/resources/movi/jpit_resource_movi.js"></script>
-  <script src="components/pit/resources/zoom/jpit_resource_zoom.js"></script>
+    <script src="components/interact/interact.min.js"></script>
+    <script src="components/pit/jpit_api.js"></script>
+    <script src="components/pit/utilities/jpit_utilities.js"></script>
+    <script src="components/pit/activity/jpit_activity.js"></script>
+    <script src="components/pit/resources/jpit_resource.js"></script>
+    <script src="components/pit/activity/quiz/jpit_activity_quiz.js"></script>
+    <script src="components/pit/activity/mark/jpit_activity_mark.js"></script>
+    <script src="components/pit/activity/wordpuzzle/jpit_activity_wordpuzzle.js"></script>
+    <script src="components/pit/activity/droppable/jpit_activity_droppable.js"></script>
+    <script src="components/pit/activity/crossword/jpit_activity_crossword.js"></script>
+    <script src="components/pit/activity/cloze/jpit_activity_cloze.js"></script>
+    <script src="components/pit/activity/form/jpit_activity_form.js"></script>
+    <script src="components/pit/activity/sortable/jpit_activity_sortable.js"></script>
+    <script src="components/pit/activity/check/jpit_activity_check.js"></script>
+    <script src="components/pit/resources/movi/jpit_resource_movi.js"></script>
+    <script src="components/pit/resources/zoom/jpit_resource_zoom.js"></script>
 
-  <script src="js/app.js"></script>
-  <script src="js/init.js"></script>
-  <script src="js/lang.es.js"></script>
-  <script src="js/lib.js"></script>
-  <script src="components/scorm/SCORM_12_APIWrapper.js"> </script>
-  <script src="components/scorm/scorm_api.js"> </script>
+    <script src="js/app.js"></script>
+    <script src="js/init.js"></script>
+    <script src="js/lang.es.js"></script>
+    <script src="js/lib.js"></script>
+    <script src="components/scorm/SCORM_12_APIWrapper.js"> </script>
+    <script src="components/scorm/scorm_api.js"> </script>
 
-  <!-- Add timeline files if required -->
-  <link rel="stylesheet" href="components/timelinejs/timeline.css" type="text/css" />
-  <script src="components/timelinejs/timeline.js"> </script>
-  <!-- End of timeline files -->
+    <style type='text/css'>
+      body {
+        background-color: var(--bg-color, #EDEDED);
+      }
 
-  <style type='text/css'>
-    body {
-      background-color: var(--bg-color, #EDEDED);
-    }
+      body.loading {
+        text-align: center;
+      }
 
-    body.loading {
-      text-align: center;
-    }
+      body.loading:after {
+        content: url(img/infinity-loader.svg);
+        display: block;
+        position: absolute;
+        top: 20%;
+        left: 50%;
+        width: 14vw;
+        max-width: 200px;
+        transform: translate(-50%, -50%);
+      }
 
-    body.loading:after {
-      content: url(img/infinity-loader.svg);
-      display: block;
-      position: absolute;
-      top: 20%;
-      left: 50%;
-      width: 14vw;
-      max-width: 200px;
-      transform: translate(-50%, -50%);
-    }
+      body.loading #body {
+        display: none;
+      }
+    </style>
+  </head>
 
-    body.loading #body {
-      display: none;
-    }
-  </style>
-</head>
+  <body class="loading" data-debug="true" data-model="scorm" data-display-mode="onlypages" data-approve-limit="80"
+    data-activities-percentaje="60" data-mobile-mode="512">
+    <div id="body" class="scorm not_print">
+      <div id="not_scorm_msg" style="display: none;"></div>
 
-<body class="loading" data-debug="true" data-model="scorm" data-display-mode="onlypages" data-approve-limit="80"
-  data-activities-percentaje="60" data-mobile-mode="512">
-  <div id="body" class="scorm not_print">
-    <div id="not_scorm_msg" style="display: none;"></div>
-
-    <header class="scorm__header">
-      <div class="drawer__overlay"></div>
-      <label for="drawer-toggle" id="drawer-open" class="scorm__drawer-toggle">
-        <span class="google-symbols-rounded closed">menu</span>
-        <span class="google-symbols-rounded opened">menu_open</span>
-      </label>
-      <input type="checkbox" id="drawer-toggle">
-      <nav label="Principal" class="horizontal main scorm__drawer" data-offset="true">
-        <menu>
-          <menuitem label="Desarrollo de nombre y logo" data-page="pag-desarrollo">
-          </menuitem>
-          <menuitem label="Créditos y referencias" data-page="pag-creditos">
-          </menuitem>
-        </menu>
-      </nav>
-      <h1 class="scorm-title page-title"></h1>
-      <nav label="Características globales" class="globals scorm__globals">
-        <menu>
-          <menuitem data-global-id="results" title="Progreso">
-          <div class="progress">
-            <span class="google-symbols-rounded">checklist</span>
-          </div>
-          </menuitem>
-          <menuitem data-global-id="return" title="Activar/desactivar pantalla completa">
-          <div class="fullscreen">
-            <span class="google-symbols-rounded exit">fullscreen_exit</span>
-            <span class="google-symbols-rounded enter">fullscreen</span>
-          </div>
-          </menuitem>
-          <menuitem data-global-id="close_all" title="Regresar al curso">
-          <div class="return">
-            <span class="google-symbols-rounded">logout</span>
-          </div>
-          </menuitem>
-        </menu>
-      </nav>
-    </header>
-
-    <main style="display: none;">
-      <section id="pag-desarrollo" ptitle="Desarrollo de nombre y logo">
-        <div class="subpage">
-          <div class="banner"><img src="img/banner.png" alt="Banner" /></div>
-          <div class="text-center italic">
-            ¿Sabías que uno de los aspectos más importantes de tu marca es el nombre y un logo? <br> Son el principal
-            identificador para diferenciarte de otros, tener identidad y darle un valor a tu servicio.
-          </div>
-          <div class="text-center">A continuación, te compartiré algunos aspectos que debes tener en cuenta para darle
-            vida a tu marca.
-          </div>
-        </div>
-        <div class="subpage">
-          <div class="flex-row flex-center spacer-block-2">
-            <div class="img-container img-container--xl">
-              <img src="content/img-1.jpg" alt="Mariana maquillando a alguien">
+      <header class="scorm__header">
+        <div class="drawer__overlay"></div>
+        <label for="drawer-toggle" id="drawer-open" class="scorm__drawer-toggle">
+          <span class="google-symbols-rounded closed">menu</span>
+          <span class="google-symbols-rounded opened">menu_open</span>
+        </label>
+        <input type="checkbox" id="drawer-toggle">
+        <nav label="Principal" class="horizontal main scorm__drawer" data-offset="true">
+          <menu>
+            <menuitem label="Desarrollo de nombre y logo" data-page="pag-desarrollo">
+            </menuitem>
+            <menuitem label="Créditos y referencias" data-page="pag-creditos">
+            </menuitem>
+          </menu>
+        </nav>
+        <h1 class="scorm-title page-title"></h1>
+        <nav label="Características globales" class="globals scorm__globals">
+          <menu>
+            <menuitem data-global-id="results" title="Progreso">
+            <div class="progress">
+              <span class="google-symbols-rounded">checklist</span>
             </div>
-            <p>Para que puedas impulsar tu emprendimiento y atraer clientes, es necesario que le des un nombre sonoro y
-              recordable, y que definas un logo que motive a tus clientes, pues ello te dará más profesionalismo y
+            </menuitem>
+            <menuitem data-global-id="return" title="Activar/desactivar pantalla completa">
+            <div class="fullscreen">
+              <span class="google-symbols-rounded exit">fullscreen_exit</span>
+              <span class="google-symbols-rounded enter">fullscreen</span>
+            </div>
+            </menuitem>
+            <menuitem data-global-id="close_all" title="Regresar al curso">
+            <div class="return">
+              <span class="google-symbols-rounded">logout</span>
+            </div>
+            </menuitem>
+          </menu>
+        </nav>
+      </header>
+
+      <main style="display: none;">
+        <section id="pag-desarrollo" ptitle="Desarrollo de nombre y logo">
+          <div class="subpage">
+            <div class="banner"><img src="img/banner.jpeg" alt="Banner" /></div>
+          </div>
+          <div class="subpage">
+            <div class="flex-row flex-center spacer-block-2">
+              <div class="img-container img-container--xl">
+                <img src="content/img-1.jpg" alt="Mariana maquillando a alguien">
+              </div>
+              <div>
+                <div class="text-center italic">
+                  <p><strong> ¿Sabías que uno de los aspectos más importantes de tu marca es el nombre y un
+                      logo?</strong>
+                  </p>
+                  <p>Son el principal identificador para diferenciarte de otros, tener identidad y darle un valor a tu
+                    servicio.</p>
+                  <p>A continuación, te compartiré algunos aspectos que debes tener en cuenta para darle
+                    vida a tu marca.</p>
+                </div>
+              </div>
+            </div>
+            <p>Para que puedas impulsar tu emprendimiento y atraer clientes, es necesario que le des un nombre sonoro
+              y recordable, y que definas un logo que motive a tus clientes, pues ello te dará más profesionalismo y
               brindará confianza a tus posibles clientes.
             </p>
+            <p>Cuando estés ideando nombre y logo para tu emprendimiento, ten en cuenta estas recomendaciones:
+            </p>
           </div>
-          <p>Cuando estés ideando nombre y logo para tu emprendimiento, ten en cuenta estas recomendaciones:
-          </p>
-        </div>
-        <div class="subpage">
-          <div class="infografia">
-            <button class="infografia__box w-content-controler general" data-content="#infografia_1">
-              <p>1. Define un nombre</p>
-            </button>
-            <button class="infografia__box w-content-controler general" data-content="#infografia_2">
-              <p>2. Usa herramientas gratuitas</p>
-            </button>
-            <button class="infografia__box w-content-controler general" data-content="#infografia_3">
-              <p>3. Haz pruebas</p>
-            </button>
-            <div id="infografia_1" class="w-content infografia__box--modal">
-              <h3>Define un nombre</h3>
-              <div class="flex-row flex-center">
-                <div class="img-container img-container--xl">
-                  <img src="content/img-2.jpg" alt="Define un nombre">
+          <div class="subpage">
+            <div class="infografia">
+              <div class="instruction" type="info">Toca cada elemento para conocer su descripción.</div>
+              <button class="infografia__box w-content-controler general" data-content="#infografia_1">
+                <p>1. Define un nombre</p>
+              </button>
+              <button class="infografia__box w-content-controler general" data-content="#infografia_2">
+                <p>2. Usa herramientas gratuitas</p>
+              </button>
+              <button class="infografia__box w-content-controler general" data-content="#infografia_3">
+                <p>3. Haz pruebas</p>
+              </button>
+              <div id="infografia_1" class="w-content infografia__box--modal">
+                <h3 class="mt-0">Define un nombre</h3>
+                <div class="flex-row flex-center">
+                  <div class="img-container img-container--xl">
+                    <img src="content/img-2.jpg" alt="Define un nombre">
+                  </div>
+                  <div class="text-box">
+                    <p>Define un nombre que vaya con tu estilo y personalidad, pero que a la vez sea sonoro.</p>
+                    <div class="box-text box-text--note" label="Una manera de hacerlo… ">
+                      <p>Usa tu nombre y/o apellido, acompañado por expresiones como Maquillador/a, Makeup Artist,
+                        Beauty Artist, Maquillaje por, Makeup By, entre otras.</p>
+                    </div>
+                  </div>
                 </div>
-                <div class="text-box">
-                  <p>Define un nombre que vaya con tu estilo y personalidad, pero que a la vez sea sonoro.</p>
-                  <div class="box-text box-text--note" label="Una manera de hacerlo… ">
-                    <p>Usa tu nombre y/o apellido, acompañado por expresiones como Maquillador/a, Makeup Artist, Beauty
-                      Artist, Maquillaje por, Makeup By, entre otras.</p>
+              </div>
+              <div id="infografia_2" class="w-content infografia__box--modal">
+                <h3 class="mt-0">Usa herramientas gratuitas</h3>
+                <div class="flex-row flex-center">
+                  <div class="img-container img-container--xl">
+                    <img src="content/img-3.jpg" alt="Usa herramientas gratuitas">
+                  </div>
+                  <div class="text-box">
+                    <p>Te recomiendo explorar en internet herramientas de diseño sencillas como <a
+                        href="https://www.canva.com/" target="_blank">Canva</a>, <a href="https://www.gimp.org/"
+                        target="_blank">GIMP</a>, <a href="https://pixlr.com/es/" target="_blank">Pixlr</a>,
+                      <a href="https://inkscape.org/es/" target="_blank">Inkscape</a>, entre otras…</p>
+                      <p>Todas ellas son gratuitas y te permitirán crear fácilmente tu logo, sin incurrir en costos de
+                      diseño
+                      o creación de marca.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div id="infografia_3" class="w-content infografia__box--modal">
+                <h3 class="mt-0">Haz pruebas</h3>
+                <div class="flex-row flex-center">
+                  <div class="img-container img-container--xl">
+                    <img src="content/img-4.jpg" alt="Haz pruebas">
+                  </div>
+                  <div class="text-box">
+                    <p>Haz varias pruebas antes de lanzar tu logo al mercado.</p>
+                    <p>Preséntalo a personas cercanas y trata
+                      de tener en cuenta las recomendaciones que te puedan ayudar a perfeccionarlo.</p>
                   </div>
                 </div>
               </div>
             </div>
-            <div id="infografia_2" class="w-content infografia__box--modal">
-              <h3>Usa herramientas gratuitas</h3>
-              <div class="flex-row flex-center">
-                <div class="img-container img-container--xl">
-                  <img src="content/img-3.jpg" alt="Usa herramientas gratuitas">
-                </div>
-                <div class="text-box">
-                  <p>Te recomiendo explorar en internet herramientas de diseño sencillas como <a
-                      href="https://www.canva.com/" target="_blank">Canva</a>, <a href="https://www.gimp.org/"
-                      target="_blank">GIMP</a>, <a href="https://pixlr.com/es/" target="_blank">Pixlr</a>,
-                    <a href="https://inkscape.org/es/" target="_blank">Inkscape</a>, entre otras… <br>
-                    Todas ellas son gratuitas y te permitirán crear fácilmente tu logo, sin incurrir en costos de diseño
-                    o creación de marca.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div id="infografia_3" class="w-content infografia__box--modal">
-              <h3>Haz pruebas</h3>
-              <div class="flex-row flex-center">
-                <div class="img-container img-container--xl">
-                  <img src="content/img-4.jpg" alt="Haz pruebas">
-                </div>
-                <div class="text-box">
-                  <p>Haz varias pruebas antes de lanzar tu logo al mercado. <br>Preséntalo a personas cercanas y trata
-                    de tener en cuenta las recomendaciones que te puedan ayudar a perfeccionarlo.</p>
-                </div>
+          </div>
+          <div class="subpage">
+            <div class="box-text box-text--example" label="Por ejemplo,">
+              <p>Esta es una muestra de un logo creado con la app <a href="https://www.canva.com/"
+                  target="_blank">Canva</a>:</p>
+              <div class="img-container img-container--xl">
+                <img src="content/img-5.jpg" alt="Logo Mariana García Make Up">
               </div>
             </div>
           </div>
-        </div>
-        <div class="subpage">
-          <div class="box-text box-text--example" label="Por ejemplo,">
-            <p>Esta es una muestra de un logo creado con la app <a href="https://www.canva.com/"
-                target="_blank">Canva</a>:</p>
-            <div class="img-container img-container--xl">
-              <img src="content/img-5.png" alt="Logo Mariana García Make Up">
+          <div class="box-text box-text--note"
+            label="Ahora tienes las principales herramientas para la creación de tu nombre y logo.">
+            <p>¿Qué esperas para poner en práctica lo que aprendiste?</p><p>¡No olvides disfrutar este proceso!</p>
+          </div>
+        </section>
+
+        <!--Créditos-->
+        <section id="pag-creditos" ptitle="Créditos y referencias">
+          <div class="subpage" id="credits_subpage">
+
+            <div class="box-text box-text--no-icon" label="Créditos">
+              <p>Curaduría de contenidos
+                <br>Gestión pedagógica y diseño instruccional
+                <br>Producción multimedial
+                <br>Desarrollo e implementación
+                <br> Gestión técnica y administrativa
+              </p>
+              <div class="logos flex-row flex-center">
+                <a class="logo-container img-container logo-container--mariana"
+                  href="https://www.instagram.com/makeupbymarianagarcia/" target="_blank">
+                  <img src="img/mariana-logo.png" alt="Logo Mariana">
+                </a>
+                <a class="logo-container img-container logo-container--enlace" href="https://enlaceestrategico.org.co/"
+                  target="_blank">
+                  <img src="img/enlace-logo.png" alt="Logo Enlace">
+                </a>
+                <a class="logo-container img-container logo-container--nodolab" href="https://nodolab.co/"
+                  target="_blank">
+                  <img src="img/nodolab-logo.png" alt="Logo Nodolab">
+                </a>
+              </div>
+              <p class="text-center">2024<br>Derechos reservados ©</p>
+            </div>
+
+            <div class="box-text box-text--no-icon" label="Referencias">
+              <h3>Fotos</h3>
+              <ul class="text-list">
+                <li><a href="https://www.pexels.com/es-es/foto/mujer-usando-su-computadora-portatil-3585034/"
+                    target="_blank">Cottonbro Studio - Mujer usando su computadora portatil</a></li>
+                <li><a href="https://www.pexels.com/es-es/foto/cama-habitacion-mirando-adentro-7219559/"
+                    target="_blank">Thirdman - cama-habitacion-mirando-adentro</a></li>
+              </ul>
             </div>
           </div>
+        </section>
+
+      </main>
+
+      <footer class="not_print">
+        <div class="measuring-progress" data-type="horizontal"></div>
+        <div class="footer__logo">
+          <p>El maquillaje como un medio para vivir de<strong> tus pasiones</strong></p>
         </div>
-        <div class="box-text box-text--note"
-          label="Ahora tienes las principales herramientas para la creación de tu nombre y logo.">
-          <p>¿Qué esperas para poner en práctica lo que aprendiste?<br>¡No olvides disfrutar este proceso!</p>
+        <div class="flex">
+          <div id="page_number"></div>
         </div>
-      </section>
+      </footer>
 
-      <!--Créditos-->
-      <section id="pag-creditos" ptitle="Créditos y referencias">
-        <div class="subpage" id="credits_subpage">
+    </div>
 
-          <div class="box-text box-text--no-icon" label="Créditos">
-            <p>Curaduría de contenidos
-              <br>Gestión pedagógica y diseño instruccional
-              <br>Producción multimedial
-              <br>Desarrollo e implementación
-              <br> Gestión técnica y administrativa
-            </p>
-            <div class="logos flex-row flex-center">
-              <a class="logo-container img-container logo-container--mariana"
-                href="https://www.instagram.com/makeupbymarianagarcia/" target="_blank">
-                <img src="img/mariana-logo.png" alt="Logo Mariana">
-              </a>
-              <a class="logo-container img-container logo-container--enlace" href="https://enlaceestrategico.org.co/"
-                target="_blank">
-                <img src="img/enlace-logo.png" alt="Logo Enlace">
-              </a>
-              <a class="logo-container img-container logo-container--nodolab" href="https://nodolab.co/"
-                target="_blank">
-                <img src="img/nodolab-logo.png" alt="Logo Nodolab">
-              </a>
-            </div>
-            <p class="text-center">2024<br>Derechos reservados ©</p>
-          </div>
-
-          <div class="box-text box-text--no-icon" label="Referencias">
-            <h3>Fotos</h3>
-            <ul class="text-list">
-              <li><a href="https://www.pexels.com/es-es/foto/mujer-usando-su-computadora-portatil-3585034/"
-                  target="_blank">Cottonbro Studio - Mujer usando su computadora portatil</a></li>
-              <li><a href="https://www.pexels.com/es-es/foto/cama-habitacion-mirando-adentro-7219559/"
-                  target="_blank">Thirdman - cama-habitacion-mirando-adentro</a></li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-    </main>
-
-    <footer class="not_print">
-      <div class="measuring-progress" data-type="horizontal"></div>
-      <div class="footer__logo">
-        <p>El maquillaje como un medio para vivir de<strong> tus pasiones</strong></p>
-      </div>
-      <div class="flex">
-        <div id="page_number"></div>
-      </div>
-    </footer>
-
-  </div>
-
-  <div id="results_page" style="display:none;">
-    <h2>Resumen de tu progreso</h2>
-    <h3>Páginas visitadas</h3>
-    <div id="results_page_visited"></div>
-    <br class="clear" />
-    <h3>Actividades</h3>
-    <div id="results_page_activities"></div>
-  </div>
-
-  <!-- Add timeline init file if required -->
-  <script src="js/timeline_init.js"></script>
-  <!-- End of timeline init file -->
-</body>
+    <div id="results_page" style="display:none;">
+      <h2>Resumen de tu progreso</h2>
+      <h3>Páginas visitadas</h3>
+      <div id="results_page_visited"></div>
+      <br class="clear" />
+      <h3>Actividades</h3>
+      <div id="results_page_activities"></div>
+    </div>
+  </body>
 
 </html>
