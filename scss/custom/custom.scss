@@ -7,22 +7,18 @@
 /********************************************************************************/
 /* SPECIFIC LAYER STYLES
 /********************************************************************************/
+#actividad-1 {
+  &.jpit-activities-droppable th {
+    width: 50%;
+    line-height: 20px;
+  }
 
-/********************************************************************************/
-/* Actividad arrastrar y soltar - muchos a uno
-/********************************************************************************/
-#pag-actividades-arrastrar5 .chalkboard_content {
-  height: auto;
+  .draggable {
+    margin-block: 2px
+  }
 }
 
-#drag-drop .droppable {
-  width: 300px;
-  height: 150px;
-}
 
-#drag-drop .draggable {
-  display: inline-block;
-}
 
 .text-center {
   text-align: center;
