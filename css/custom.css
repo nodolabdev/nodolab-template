@@ -88,8 +88,13 @@ ul.text-list > li {
     .image-content {
       flex-direction: row; } }
 
-.card {
-  max-width: 400px; }
+.cards .card {
+  max-width: 380px;
+  width: 100%;
+  border-radius: 26px;
+  overflow: hidden; }
+  .cards .card__img {
+    border-radius: 22px; }
 
 .shadow-image {
   pointer-events: none; }
