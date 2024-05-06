@@ -20,18 +20,36 @@
 /********************************************************************************/
 /* SPECIFIC LAYER STYLES
 /********************************************************************************/
-/********************************************************************************/
-/* Actividad arrastrar y soltar - muchos a uno
-/********************************************************************************/
-#pag-actividades-arrastrar5 .chalkboard_content {
-  height: auto; }
+.jpit-activities-check .check_left {
+  flex-basis: 100%; }
 
-#drag-drop .droppable {
-  width: 300px;
-  height: 150px; }
+.jpit-activities-check .word_content {
+  padding: 16px;
+  border-radius: 16px;
+  height: 160px;
+  display: grid;
+  place-content: center; }
+  @media (min-width: 600px) {
+    .jpit-activities-check .word_content {
+      height: 100px; } }
+  .jpit-activities-check .word_content .text-box {
+    font-size: var(--font-size-medium-20);
+    line-height: var(--font-size-large-28); }
+    @media (min-width: 768px) {
+      .jpit-activities-check .word_content .text-box {
+        font-size: var(--font-size-large-24);
+        line-height: var(--font-size-large-32); } }
+    .jpit-activities-check .word_content .text-box p {
+      margin: 0; }
 
-#drag-drop .draggable {
-  display: inline-block; }
+.jpit-activities-check .box_conclution {
+  text-align: center; }
+  @media (min-width: 768px) {
+    .jpit-activities-check .box_conclution .box_end {
+      padding: 0; }
+      .jpit-activities-check .box_conclution .box_end > * {
+        position: relative;
+        margin-inline: auto; } }
 
 /********************************************************************************/
 /* UTIL CLASSES
