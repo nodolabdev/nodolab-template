@@ -1,4 +1,4 @@
-@import "../utils/all";
+@import '../utils/all';
 
 .change {
   color: red;
@@ -32,10 +32,10 @@
 }
 
 .flex-row.hands-container {
-  @include respond-to("medium") {
+  @include respond-to('medium') {
     flex-direction: column;
   }
-  @include respond-to("small-large") {
+  @include respond-to('small-large') {
     flex-direction: row;
   }
 
@@ -56,7 +56,7 @@
   align-items: flex-start;
   gap: 24px;
   flex-direction: column;
-  @include respond-to("medium") {
+  @include respond-to('medium') {
     flex-direction: row;
   }
 
@@ -66,6 +66,30 @@
 
   img {
     border-radius: 16px;
+  }
+
+  &.flex-reverse {
+    @include respond-to('up-to-medium') {
+      flex-direction: column-reverse;
+    }
+  }
+}
+
+.recomendaciones {
+  .flex-row {
+    @include spacer(3, margin, block);
+  }
+  hr {
+    opacity: 0.25;
+    width: 90%;
+    margin-inline: auto;
+  }
+
+  video {
+    aspect-ratio: 1.56;
+    object-fit: cover;
+    max-width: 460px;
+    width: 100%;
   }
 }
 
@@ -84,7 +108,7 @@ ul.text-list > li {
   gap: 24px;
   flex-direction: column;
   @include spacer(6, padding, block);
-  @include respond-to("medium") {
+  @include respond-to('medium') {
     flex-direction: row;
   }
 }
@@ -111,7 +135,7 @@ ul.text-list > li {
   }
   &--xl {
     img {
-      max-width: 480px;
+      max-width: 460px;
     }
   }
 }
@@ -153,7 +177,7 @@ ul.text-list > li {
 }
 
 .flex-info {
-  @include respond-to("large") {
+  @include respond-to('large') {
     max-width: 624px;
     margin: 0 auto;
   }
@@ -163,7 +187,7 @@ ul.text-list > li {
   width: 300px;
   height: 300px;
   @include spacer(4, margin, block);
-  @include respond-to("large") {
+  @include respond-to('large') {
     width: 800px;
     height: 350px;
   }
@@ -180,7 +204,7 @@ ul.text-list > li {
   flex-wrap: wrap;
   margin-inline: auto;
 
-  @include respond-to("medium") {
+  @include respond-to('medium') {
     margin-top: 60px;
   }
 }
@@ -191,7 +215,7 @@ ul.text-list > li {
   border-bottom: 0;
   @include spacer(2, margin, bottom);
 
-  @include respond-to("medium") {
+  @include respond-to('medium') {
     @include spacer(4, margin, bottom);
   }
 
@@ -241,7 +265,7 @@ ul.text-list > li {
 .ctrl-pagination {
   .flex-row {
     flex-direction: column;
-    @include respond-to("large") {
+    @include respond-to('large') {
       flex-direction: row;
     }
   }

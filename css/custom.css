@@ -67,6 +67,23 @@
     flex: 1 1 50%; }
   .flex-row img {
     border-radius: 16px; }
+  @media (max-width: 600px) {
+    .flex-row.flex-reverse {
+      flex-direction: column-reverse; } }
+
+.recomendaciones .flex-row {
+  margin-block: 24px; }
+
+.recomendaciones hr {
+  opacity: 0.25;
+  width: 90%;
+  margin-inline: auto; }
+
+.recomendaciones video {
+  aspect-ratio: 1.56;
+  object-fit: cover;
+  max-width: 460px;
+  width: 100%; }
 
 .flex-center {
   align-items: center; }
@@ -105,7 +122,7 @@ ul.text-list > li {
     height: auto;
     max-width: 260px; }
   .img-container--xl img {
-    max-width: 480px; }
+    max-width: 460px; }
 
 .spacer-bottom-2 {
   margin-bottom: 16px; }
