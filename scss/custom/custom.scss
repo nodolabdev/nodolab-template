@@ -8,20 +8,8 @@
 /* SPECIFIC LAYER STYLES
 /********************************************************************************/
 
-/********************************************************************************/
-/* Actividad arrastrar y soltar - muchos a uno
-/********************************************************************************/
-#pag-actividades-arrastrar5 .chalkboard_content {
-  height: auto;
-}
-
-#drag-drop .droppable {
-  width: 300px;
-  height: 150px;
-}
-
-#drag-drop .draggable {
-  display: inline-block;
+.jpit-activities-quiz .box_content .jpit_activities_quiz_board {
+  align-items: center;
 }
 
 /********************************************************************************/
