@@ -7,21 +7,50 @@
 /********************************************************************************/
 /* SPECIFIC LAYER STYLES
 /********************************************************************************/
+.jpit-activities-check {
+  .check_left {
+    flex-basis: 100%;
+  }
 
-/********************************************************************************/
-/* Actividad arrastrar y soltar - muchos a uno
-/********************************************************************************/
-#pag-actividades-arrastrar5 .chalkboard_content {
-  height: auto;
-}
+  .word_content {
+    padding: 16px;
+    border-radius: 16px;
+    height: 160px;
+    display: grid;
+    place-content: center;
 
-#drag-drop .droppable {
-  width: 300px;
-  height: 150px;
-}
+    @include respond-to('medium') {
+      height: 100px;
+    }
 
-#drag-drop .draggable {
-  display: inline-block;
+    .text-box {
+      font-size: var(--font-size-medium-20);
+      line-height: var(--font-size-large-28);
+
+      @include respond-to('small-large') {
+        font-size: var(--font-size-large-24);
+        line-height: var(--font-size-large-32);
+      }
+
+      p {
+        margin: 0;
+      }
+    }
+  }
+  .box_conclution {
+    text-align: center;
+
+    .box_end {
+      @include respond-to('small-large') {
+        padding: 0;
+
+        & > * {
+          position: relative;
+          margin-inline: auto;
+        }
+      }
+    }
+  }
 }
 
 /********************************************************************************/
