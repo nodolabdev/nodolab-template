@@ -97,7 +97,7 @@ ul.text-list > li {
     overflow: hidden;
 
     &__img {
-      border-radius: 22px
+      border-radius: 22px;
     }
   }
 }
@@ -253,5 +253,16 @@ ul.text-list > li {
     @include respond-to("large") {
       flex-direction: row;
     }
+  }
+}
+
+#arrastrar-soltar {
+  .droppable {
+    height: 120px;
+  }
+
+  .draggable {
+    @include spacer(1, margin, block);
+    @include spacer(1, margin, inline);
   }
 }

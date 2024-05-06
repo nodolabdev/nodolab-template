@@ -201,3 +201,10 @@ ul.text-list > li {
   @media (min-width: 1024px) {
     .ctrl-pagination .flex-row {
       flex-direction: row; } }
+
+#arrastrar-soltar .droppable {
+  height: 120px; }
+
+#arrastrar-soltar .draggable {
+  margin-block: 8px;
+  margin-inline: 8px; }
