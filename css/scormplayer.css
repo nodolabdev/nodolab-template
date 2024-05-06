@@ -426,7 +426,7 @@ body {
     .content__logo img {
       width: 100%;
       object-fit: cover;
-      object-position: top left;
+      object-position: center 10%;
       height: 100%; }
     @media (min-width: 600px) {
       .content__logo {
