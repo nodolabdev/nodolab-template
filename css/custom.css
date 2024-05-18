@@ -260,13 +260,13 @@ ul.text-list > li {
       text-align: right;
       border-radius: 60px 20px 20px 60px; }
       .infografia__box[data-content="#infografia_1"]::before {
-        background-image: url("/content/icon-1.png"); }
+        background-image: url("../content/icon-1.png"); }
     .infografia__box[data-content="#infografia_2"] {
       justify-content: flex-start;
       text-align: left;
       border-radius: 20px 60px 60px 20px; }
       .infografia__box[data-content="#infografia_2"]::before {
-        background-image: url("/content/icon-2.png");
+        background-image: url("../content/icon-2.png");
         left: unset;
         right: 0; }
     .infografia__box[data-content="#infografia_3"] {
@@ -274,7 +274,7 @@ ul.text-list > li {
       text-align: right;
       border-radius: 60px 20px 20px 60px; }
       .infografia__box[data-content="#infografia_3"]::before {
-        background-image: url("/content/icon-3.png"); }
+        background-image: url("../content/icon-3.png"); }
     .infografia__box--left .infografia__link {
       border-radius: 50px 20px 20px 50px; }
     .infografia__box--left .infografia__img-container {

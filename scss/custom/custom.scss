@@ -308,7 +308,7 @@ ul.text-list > li {
       text-align: right;
       border-radius: 60px 20px 20px 60px;
       &::before {
-        background-image: url('/content/icon-1.png');
+        background-image: url('../content/icon-1.png');
       }
     }
     &[data-content="#infografia_2"] {
@@ -316,7 +316,7 @@ ul.text-list > li {
       text-align: left;
       border-radius: 20px 60px 60px 20px;
       &::before {
-        background-image: url('/content/icon-2.png');
+        background-image: url('../content/icon-2.png');
         left: unset;
         right: 0;
       }
@@ -326,7 +326,7 @@ ul.text-list > li {
       text-align: right;
       border-radius: 60px 20px 20px 60px;
       &::before {
-        background-image: url('/content/icon-3.png');
+        background-image: url('../content/icon-3.png');
       }
     }
     &--left {
